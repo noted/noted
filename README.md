@@ -32,4 +32,4 @@ I need to begin by planning out what will be figuring out what exactly a student
 
 ## Technology
 
-I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.org) or [Padrino](http://padrinorb.com)). I intend to use [MongoDB](http://mongodb.org) for a database, [Compass](http://compass-style.com) for a SCSS framework, and [CoffeeScript](http://coffeescript.org) for compiling to JavaScript. See the `Gemfile` for more information.
+I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.org) or [Padrino](http://padrinorb.com)). I intend to use [MongoDB](http://mongodb.org) for a database, [Compass](http://compass-style.com) for a SCSS framework, and [CoffeeScript](http://coffeescript.org) for compiling to JavaScript. See the [`Gemfile`](https://github.com/eturk/noted/blob/master/README.md) for more information.
