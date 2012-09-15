@@ -1,0 +1,16 @@
+defaults: &defaults
+  adapter: mongodb
+  host: localhost
+  port: 27017
+  
+development:
+  <<: *defaults
+  database: noted_development
+  
+test:
+  <<: *defaults
+  database: noted_test
+  
+production:
+  <<: *defaults
+  database: noted_production
