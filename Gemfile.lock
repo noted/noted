@@ -7,12 +7,23 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.3.2)
     barista (1.3.0)
       coffee-script (~> 2.2)
+    bcrypt-ruby (3.0.1)
     bson (1.7.0)
     bson_ext (1.7.0)
       bson (~> 1.7.0)
     builder (3.0.3)
+    capybara (1.1.2)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      selenium-webdriver (~> 2.0)
+      xpath (~> 0.1.4)
+    childprocess (0.3.5)
+      ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
     coffee-script (2.2.0)
       coffee-script-source
@@ -25,6 +36,7 @@ GEM
     diff-lcs (1.1.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.1.5)
     foreman (0.59.0)
       thor (>= 0.13.6)
     fssm (0.2.9)
@@ -34,6 +46,8 @@ GEM
       url_mount (~> 0.2.1)
     i18n (0.6.1)
     libv8 (3.3.10.4)
+    libwebsocket (0.1.5)
+      addressable
     mail (2.3.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -49,6 +63,7 @@ GEM
       activesupport (~> 3.0)
       plucky (~> 0.5.2)
     multi_json (1.3.6)
+    nokogiri (1.5.5)
     padrino (0.10.7)
       padrino-admin (= 0.10.7)
       padrino-cache (= 0.10.7)
@@ -94,13 +109,20 @@ GEM
     rspec-expectations (2.11.3)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.11.2)
+    rubyzip (0.9.9)
     sass (3.2.1)
+    selenium-webdriver (2.25.0)
+      childprocess (>= 0.2.5)
+      libwebsocket (~> 0.1.3)
+      multi_json (~> 1.0)
+      rubyzip
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    spork (0.9.2)
     therubyracer (0.10.2)
       libv8 (~> 3.3.10)
     thor (0.15.4)
@@ -110,13 +132,17 @@ GEM
       polyglot (>= 0.3.1)
     url_mount (0.2.1)
       rack
+    xpath (0.1.4)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   barista
+  bcrypt-ruby
   bson_ext
+  capybara
   compass
   foreman
   haml
@@ -128,4 +154,5 @@ DEPENDENCIES
   redis
   rspec
   sinatra-flash
+  spork
   therubyracer

@@ -1,14 +1,20 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
-require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
-RSpec.configure do |conf|
-  conf.mock_with :mocha
-  conf.include Rack::Test::Methods
+Spork.prefork do
+  require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
+
+  RSpec.configure do |conf|
+    conf.include Rack::Test::Methods
+    conf.include Capybara::DSL
+
+    conf.mock_with :mocha
+  end
+
+  def app
+    Padrino.application
+  end
 end
 
-def app
-  ##
-  # You can handle all padrino applications using instead:
-  #   Padrino.application
-  Noted.tap { |app|  }
+Spork.each_run do
+  # Things that need to run each time...
 end

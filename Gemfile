@@ -12,6 +12,8 @@ gem 'mongo_mapper'
 
 gem 'redis'
 
+gem 'bcrypt-ruby'
+
 gem 'haml'
 
 gem 'compass'
@@ -26,5 +28,8 @@ end
 group :test do
   gem 'rack-test', require: 'rack/test'
   gem 'rspec'
-  gem 'mocha'
+  gem 'mocha', require: 'mocha_standalone'
+  gem 'capybara', require: 'capybara/dsl'
+
+  gem 'spork'
 end
