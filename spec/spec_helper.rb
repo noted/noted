@@ -1,3 +1,5 @@
+require 'spork'
+
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
 Spork.prefork do

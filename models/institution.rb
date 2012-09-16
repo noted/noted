@@ -6,6 +6,8 @@ class Institution
   
   timestamps!
   userstamps!
+
+  many :users
 end
 
 class School < Institution

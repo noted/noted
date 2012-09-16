@@ -15,6 +15,7 @@ gem 'redis'
 gem 'bcrypt-ruby'
 
 gem 'haml'
+gem 'rdiscount'
 
 gem 'compass'
 
@@ -32,4 +33,5 @@ group :test do
   gem 'capybara', require: 'capybara/dsl'
 
   gem 'spork'
+  gem 'factory_girl'
 end

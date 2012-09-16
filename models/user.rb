@@ -12,6 +12,11 @@ class User
 
   timestamps!
 
+  belongs_to :instituton
+
+  many :projects
+  many :notes
+
   def password
     @password ||= Password.new(hash)
   end
