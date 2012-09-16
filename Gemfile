@@ -17,6 +17,7 @@ gem 'bcrypt-ruby'
 gem 'sidekiq'
 gem 'slim'
 gem 'sinatra', require: false
+
 gem 'haml'
 gem 'maruku'
 
