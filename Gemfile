@@ -18,6 +18,11 @@ gem 'compass'
 
 gem 'barista'
 
+group :development do
+  gem 'foreman'
+  gem 'therubyracer'
+end
+
 group :test do
   gem 'rack-test', require: 'rack/test'
   gem 'rspec'
