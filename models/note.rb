@@ -1,10 +1,10 @@
-require 'rdiscount'
+require 'maruku'
 
 class Note
   include MongoMapper::Document
 
   key :title, String
-  key :body, String
+  key :text, String
   key :html, String
   key :sources, Array
   
@@ -14,13 +14,11 @@ class Note
   belongs_to :user
   belongs_to :project
 
-  validates_presence_of :body, :html
-
-  before_save :convert
+  before_save :html!
 
   private
 
-  def convert
-    self.html = RDiscount.new(self.body).to_html
+  def html!
+    self.html = Maruku.new(self.text).to_html
   end
 end

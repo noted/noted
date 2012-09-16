@@ -15,7 +15,7 @@ gem 'redis'
 gem 'bcrypt-ruby'
 
 gem 'haml'
-gem 'rdiscount'
+gem 'maruku'
 
 gem 'compass'
 
