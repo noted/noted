@@ -1,11 +1,7 @@
 require "spec_helper"
 
 describe User do
-  let(:user) do
-    u = User.new
-    u.password = "foobar"
-    u
-  end
+  let(:user) { create(:user) }
   
   it "can be instantiated" do
     user.should_not be_nil
@@ -17,5 +13,9 @@ describe User do
 
   it "returns a Password object" do
     user.password.should be_an_instance_of BCrypt::Password
+  end
+
+  it "can authenticate itself" do
+    User.authenticate(user.email, "foobar").should == user
   end
 end

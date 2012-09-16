@@ -17,6 +17,13 @@ class User
   many :projects
   many :notes
 
+  class << self
+    def authenticate(e, p)
+      u = first(:email => e) if e.present?
+      u && u.password == p ? u : nil
+    end
+  end
+
   def password
     @password ||= Password.new(hash)
   end
