@@ -12,22 +12,6 @@ class Source
   one :annotation
 end
 
-class Book < Source
-  key :title, String
-  key :city, String
-  key :publisher, String
-  key :year, Date
-  key :page_numbers, Boolean
-  key :scholarly_edition, Boolean
-  key :edition, String
-  key :number_volumes, Integer
-  key :volume, Integer
-  key :title_multivolume, String
-  key :series_name, String
-  key :series_number, String
-  key :original_year, Date
-end
-
 class Contributor
   include MongoMapper::EmbeddedDocument
 
