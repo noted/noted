@@ -1,5 +1,8 @@
 class Comment
-  include MongoMapper::Document
+  include MongoMapper::EmbeddedDocument
+
+  plugin MongoMapper::Plugins::Timestamps
+  plugin MongoMapper::Plugins::Userstamps
 
   key :text, String
 
