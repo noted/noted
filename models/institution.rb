@@ -3,6 +3,7 @@ class Institution
 
   key :name, String
   key :location, String
+  key :owner, ObjectId
   
   timestamps!
   userstamps!

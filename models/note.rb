@@ -14,6 +14,8 @@ class Note
   belongs_to :user
   belongs_to :project
 
+  many :comments, :as => :commentable
+
   before_save :html!
 
   private

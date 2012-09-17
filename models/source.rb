@@ -5,6 +5,8 @@ class Source
   userstamps!
 
   belongs_to :project
+
+  many :comments, :as => :commentable
 end
 
 class Book
