@@ -19,9 +19,14 @@ class Contributor
   key :middle, String
   key :last, String
   key :suffix, String
-  key :role, String
 
   embedded_in :source
+end
+
+class Author < Contributor
+end
+
+class Editor < Contributor
 end
 
 class Annotation
