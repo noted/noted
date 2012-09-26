@@ -24,4 +24,8 @@ Spork.prefork do
   def app
     Padrino.application
   end
+
+  def response
+    last_response
+  end
 end
