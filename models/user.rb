@@ -3,6 +3,7 @@ require 'bcrypt'
 class User
   include MongoMapper::Document
   include BCrypt
+  include Canable::Ables
 
   key :name, String
   key :username, String
@@ -16,6 +17,14 @@ class User
 
   many :projects
   many :notes
+
+  def updateable_by?(u)
+    self == u
+  end
+
+  def destroyable_by?(u)
+    self == u
+  end
 
   class << self
     def authenticate(e, p)

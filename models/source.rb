@@ -10,6 +10,34 @@ class Source
 
   many :contributors
   one :annotation
+
+  def creatable_by?(u)
+    result = false
+
+    self.project.collaborators.each do |c|
+      if c == u
+        result = true
+      end
+    end
+
+    result
+  end
+
+  def updateable_by?(u)
+    result = false
+
+    self.project.collaborators.each do |c|
+      if c == u
+        result = true
+      end
+    end
+
+    result
+  end
+
+  def destroyable_by?(u)
+    self.project.creator == u
+  end
 end
 
 class Contributor

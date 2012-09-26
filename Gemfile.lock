@@ -70,13 +70,6 @@ GEM
       activemodel (~> 3.0)
       activesupport (~> 3.0)
       plucky (~> 0.5.2)
-    mongomapper-versioned (0.0.3)
-      bson_ext
-      mongo_mapper (>= 0.10.1)
-      mongomapper_id2
-      yajl-ruby
-    mongomapper_id2 (0.0.5)
-      mongo_mapper
     multi_json (1.3.6)
     nokogiri (1.5.5)
     padrino (0.10.7)
@@ -163,7 +156,6 @@ GEM
       rack
     xpath (0.1.4)
       nokogiri (~> 1.3)
-    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -181,7 +173,6 @@ DEPENDENCIES
   maruku
   mocha
   mongo_mapper
-  mongomapper-versioned
   padrino (= 0.10.7)
   rack-test
   rake
