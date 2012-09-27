@@ -4,6 +4,8 @@ ruby '1.9.3'
 
 gem 'padrino', '0.10.7'
 
+gem 'thin'
+
 gem 'rake'
 gem 'sinatra-flash', require: 'sinatra/flash'
 
@@ -14,6 +16,8 @@ gem 'canable'
 gem 'redis'
 
 gem 'bcrypt-ruby'
+
+gem 'padrino-warden', :git => "https://github.com/eturk/padrino-warden.git"
 
 gem 'sidekiq'
 gem 'slim'
