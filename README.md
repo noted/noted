@@ -18,15 +18,16 @@ I need to begin by planning out who my customers are and what exactly they need 
  
 This project is one I have been wanting to do for a long time. It’s only now with the resources that capstone offers and the connections I’ve made is it possible.
 
+
 ## Roadmap
 
 **September** &mdash; Initial planning and research. Interview potential customers (students, teachers, librarians, etc). Begin preliminary programming.
 
-**October** &mdash; Continue customer research. Start branding and logo design. Finish wireframing all of the site. Explore financial options.
+**October** &mdash;	Continue customer research. Start branding and logo design. Finish wireframing all of the site. Explore financial options.
 
-**November** &ndash; **January** &mdash; Program entire site. Finalize web design and branding.
+**November** &ndash; **January** &mdash;	Program entire site. Finalize web design and branding.
 
-**February** &mdash; Apply design to programmed elements.
+**February** &mdash;	Apply design to programmed elements.
 
 **March** &mdash; Begin beta testing—give access codes out online and to classrooms in Farmington Public Schools.
 
