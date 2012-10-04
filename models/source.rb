@@ -1,6 +1,8 @@
 class Source
   include MongoMapper::Document
   
+  key :medium, String
+
   timestamps!
   userstamps!
 
@@ -40,6 +42,15 @@ class Source
   end
 end
 
+class Annotation
+  include MongoMapper::EmbeddedDocument
+
+  key :text, String
+end
+
+
+### Attributes
+
 class Contributor
   include MongoMapper::EmbeddedDocument
 
@@ -51,16 +62,24 @@ class Contributor
   embedded_in :source
 end
 
-class Author < Contributor
-end
+  class Author < Contributor
+  end
 
-class Editor < Contributor
-end
+  class Editor < Contributor
+  end
 
-class Annotation
+class Publisher
   include MongoMapper::EmbeddedDocument
 
-  key :text, String
+  key :name, String
+  key :location, String
 end
 
-# Completely incomplete.
+
+### Sources
+
+class Book < Source
+  key :title, String
+
+  one :publisher
+end
