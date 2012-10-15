@@ -1,10 +1,3 @@
-GIT
-  remote: https://github.com/eturk/padrino-warden.git
-  revision: 30c798a383ec3f5981f4c7899dabcd744e5b761d
-  specs:
-    padrino-warden (0.1.1)
-      warden (>= 0.10.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -22,7 +15,6 @@ GEM
     bson_ext (1.7.0)
       bson (~> 1.7.0)
     builder (3.0.3)
-    canable (0.3.0)
     capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -30,8 +22,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    celluloid (0.12.0)
-      timers (>= 1.0.0)
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
     chunky_png (1.2.6)
@@ -43,7 +33,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    connection_pool (0.9.2)
     daemons (1.1.9)
     diff-lcs (1.1.3)
     eventmachine (1.0.0)
@@ -67,8 +56,6 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    maruku (0.6.1)
-      syntax (>= 1.0.0)
     metaclass (0.0.1)
     mime-types (1.19)
     mocha (0.12.4)
@@ -118,8 +105,6 @@ GEM
       rack (>= 1.0)
     rake (0.9.2.2)
     redis (3.0.1)
-    redis-namespace (1.2.1)
-      redis (~> 3.0.0)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -135,24 +120,13 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
-    sidekiq (2.3.1)
-      celluloid (~> 0.12.0)
-      connection_pool (~> 0.9.2)
-      multi_json (~> 1)
-      redis (~> 3)
-      redis-namespace
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
-    slim (1.3.0)
-      temple (~> 0.4.1)
-      tilt (~> 1.3.3)
     spork (0.9.2)
-    syntax (1.0.0)
-    temple (0.4.1)
     therubyracer (0.10.2)
       libv8 (~> 3.3.10)
     thin (1.5.0)
@@ -161,14 +135,11 @@ GEM
       rack (>= 1.0.0)
     thor (0.15.4)
     tilt (1.3.3)
-    timers (1.0.1)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
     url_mount (0.2.1)
       rack
-    warden (1.2.1)
-      rack (>= 1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -179,25 +150,19 @@ DEPENDENCIES
   barista
   bcrypt-ruby
   bson_ext
-  canable
   capybara
   compass
   factory_girl
   foreman
   haml
-  maruku
   mocha
   mongo_mapper
   padrino (= 0.10.7)
-  padrino-warden!
   rack-test
   rake
   redis
   rspec
-  sidekiq
-  sinatra
   sinatra-flash
-  slim
   spork
   therubyracer
   thin

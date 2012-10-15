@@ -11,20 +11,12 @@ gem 'sinatra-flash', require: 'sinatra/flash'
 
 gem 'bson_ext', require: 'mongo'
 gem 'mongo_mapper'
-gem 'canable'
 
 gem 'redis'
 
 gem 'bcrypt-ruby'
 
-gem 'padrino-warden', :git => "https://github.com/eturk/padrino-warden.git"
-
-gem 'sidekiq'
-gem 'slim'
-gem 'sinatra', require: false
-
 gem 'haml'
-gem 'maruku'
 
 gem 'compass'
 
