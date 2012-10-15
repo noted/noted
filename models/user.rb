@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class User
   include MongoMapper::Document
-	include BCrypt
+  include BCrypt
 
   key :name, String
   key :username, String
