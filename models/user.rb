@@ -8,14 +8,12 @@ class User
   key :username, String
   key :email, String
   key :hash, String
-  key :staff, Boolean, :default => false
   
   timestamps!
 
   belongs_to :instituton
 
   many :projects
-  many :notes
 
   class << self
     def authenticate(e, p)
