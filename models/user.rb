@@ -14,6 +14,7 @@ class User
   belongs_to :instituton
 
   many :projects
+  many :institutions
 
   class << self
     def authenticate(e, p)

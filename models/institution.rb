@@ -6,5 +6,6 @@ class Institution
 	timestamps!
 	userstamps!
 
+	belongs_to :user
 	many :users
 end
