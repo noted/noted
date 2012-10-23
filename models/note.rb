@@ -1,12 +1,12 @@
 class Note
-	include MongoMapper::Document
+  include MongoMapper::Document
 
-	key :title, String
-	key :body, String
-	key :sources, Array
+  key :title, String
+  key :body, String
+  key :sources, Array
 
-	timestamps!
-	userstamps!
+  timestamps!
+  userstamps!
 
-	belongs_to :project
+  belongs_to :project
 end

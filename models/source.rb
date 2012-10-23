@@ -1,10 +1,10 @@
 class Source
-	include MongoMapper::Document
+  include MongoMapper::Document
 
-	key :attributes, Hash
+  key :attributes, Hash
 
-	timestamps!
-	userstamps!
+  timestamps!
+  userstamps!
 
-	belongs_to :project
+  belongs_to :project
 end

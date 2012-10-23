@@ -1,14 +1,14 @@
 class Project
-	include MongoMapper::Document
+  include MongoMapper::Document
 
-	key :title, String
-	key :description, String
+  key :title, String
+  key :description, String
 
-	timestamps!
-	userstamps!
+  timestamps!
+  userstamps!
 
-	belongs_to :user
+  belongs_to :user
 
-	many :notes
-	many :sources
+  many :notes
+  many :sources
 end

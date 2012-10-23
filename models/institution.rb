@@ -1,11 +1,11 @@
 class Institution
-	include MongoMapper::Document
+  include MongoMapper::Document
 
-	key :name, String
+  key :name, String
 
-	timestamps!
-	userstamps!
+  timestamps!
+  userstamps!
 
-	belongs_to :user
-	many :users
+  belongs_to :user
+  many :users
 end
