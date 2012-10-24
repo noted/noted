@@ -7,5 +7,6 @@ class Institution
   userstamps!
 
   belongs_to :user
+  
   many :users
 end
