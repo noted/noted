@@ -28,4 +28,8 @@ Spork.prefork do
   def response
     last_response
   end
+
+  def site
+    "http://example.org"
+  end
 end
