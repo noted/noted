@@ -4,7 +4,7 @@ Noted is an academic research assistant and social network.
 
 **Authors** &mdash; [Ethan Turkeltaub](http://ethnt.me), [Earl Procko](http://www.fpsct.org/page.cfm?p=83&viewdirid=1166&showFilter=1&keyword=procko).
 
-If you're from FHS, [here's the "Digication e-Portfolio"](https://fps.digication.com/turkeltaub-capstone). Anyone else (or anyone from FHS that is rational) can just read everything here.
+If you're from FHS, [here's the "Digication e-Portfolio"](https://fps.digication.com/turkeltaub-capstone). Anyone else can just read everything here.
 
 ## Proposal
 
