@@ -32,7 +32,7 @@ $base: #DB6363;
 body {
 	background: #fff;
 	color: #444;
-	font: 16px/1.75em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+	font: 16px/1.75em $sans-serif;
 }
 
 a {
@@ -47,7 +47,7 @@ a {
 button {
 	background: none;
 	border: none;
-	font-family: "proxima-nova";
+	font-family: $sans-serif;
 
 	a {
 		display: block;
@@ -57,7 +57,7 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "superclarendon", Georgia, Times, serif;
+	font-family: $serif;
 }
 
 h1 {
@@ -131,7 +131,7 @@ h1 {
 		text-align: center;
 
 		h2 {
-			font: 700 2.5em/1em "proxima-nova";
+			font: 700 2.5em/1em $sans-serif;
 			letter-spacing: 1px;
 			margin-bottom: 0.25em;
 			text-transform: uppercase;
