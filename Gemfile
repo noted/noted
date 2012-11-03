@@ -21,6 +21,7 @@ gem 'bcrypt-ruby'
 gem 'haml'
 
 gem 'compass'
+gem 'susy'
 
 gem 'barista'
 

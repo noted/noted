@@ -3,6 +3,7 @@ class Noted < Padrino::Application
   register Padrino::Helpers
   register Padrino::Mailer
   register Padrino::Rendering
+  
   register BaristaInitializer
   register CompassInitializer
 
