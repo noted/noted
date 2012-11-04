@@ -5,8 +5,9 @@
 
 @import "lib/base";
 
-//$base: #b34d5e;
-$base: #DB6363;
+//$red: #b34d5e;
+$red: #db6363;
+$blue: #63a9db;
 
 
 /*
@@ -36,11 +37,11 @@ body {
 }
 
 a {
-	color: $base;
+	color: $red;
 	text-decoration: none;
 
 	&:hover {
-		color: darken($base, 10%);
+		color: darken($red, 10%);
 	}
 }
 
@@ -61,7 +62,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 1.15em;
+	font-size: 1.25em;
+}
+
+img {
+	max-width: 100%;
 }
 
 
@@ -70,25 +75,15 @@ h1 {
 */
 
 #contain > header {
-	/*background: $base;
-	border-top: 5px solid lighten($base, 10%);*/
-	border-top: 5px solid $base;
+	border-top: 5px solid $red;
 	padding: 1.5em 0;
 
-	/*a {
-		color: #fff;
-
-		&:hover {
-			color: darken(#fff, 10%);
-		}
-	}*/
-
 	hgroup {
-		@include span-columns(6);
+		@include span-columns(7);
 	}
 
 	nav {
-		@include span-columns(18 omega);
+		@include span-columns(17 omega);
 
 		font-size: 0.8125em;
 		font-weight: 600;
@@ -127,6 +122,7 @@ h1 {
 		@include text-shadow(1px 1px 1px rgba(#333, 0.5));
 		
 		background: #333 url("/img/moleskine-blurred.jpg") center center;
+		border-top: 1px solid $blue;
 		color: #fff;
 		text-align: center;
 
@@ -140,10 +136,11 @@ h1 {
 		section {
 			margin-top: 3em;
 
-			button {
+			a {
 				@include border-radius(1px);
+				@include text-shadow(none);
 
-				background: white;
+				background: #fff;
 				display: inline-block;
 				font-size: 1.05em;
 				font-weight: 600;
@@ -152,10 +149,11 @@ h1 {
 				width: 20% !important;
 
 				&.primary {
-					background: lighten($base, 3%);
+					background: lighten($red, 3%);
+					color: #fff;
 
-					a {
-						color: #fff;
+					&:hover {
+						color: darken(#fff, 5%);
 					}
 				}
 			}
@@ -171,16 +169,47 @@ h1 {
 		background: #efefef;
 		padding: 5em 0;
 
-		article {
-			@include span-columns(6);
+		figure {
+			@include span-columns(5);
+			@include suffix(1);
 
-			&:nth-child(4n) {
+			&:last-child {
 				@include omega;
+			}
+
+			figcaption {
+				text-align: center;
 			}
 		}
 
-		.row {
+		.inner {
 			@include container;
+		}
+	}
+}
+
+
+/*
+	V. Footer
+*/
+
+#contain > footer {
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+	section {
+		@include container;
+
+		nav {
+			@include span-columns(6);
+
+			&:last-child {
+				@include omega;
+			}
+
+			header {
+				border-bottom: 1px solid #efefef;
+			}
 		}
 	}
 }
