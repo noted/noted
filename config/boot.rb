@@ -8,4 +8,8 @@ Bundler.require(:default, PADRINO_ENV)
 
 I18n.default_locale = :en
 
+def heroku?
+  ENV["HEROKU"]
+end
+
 Padrino.load!
