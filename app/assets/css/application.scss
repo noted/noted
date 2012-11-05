@@ -65,6 +65,10 @@ h1 {
 	font-size: 1.25em;
 }
 
+h2 {
+	font-size: 2em;
+}
+
 img {
 	max-width: 100%;
 }
@@ -75,6 +79,7 @@ img {
 */
 
 #contain > header {
+	border-bottom: 1px solid #efefef;
 	border-top: 5px solid $red;
 	padding: 1.5em 0;
 
@@ -106,11 +111,12 @@ img {
 			}
 		}
 	}
+
+	.inner {
+		@include container;
+	}
 }
 
-.inner {
-	@include container;
-}
 
 
 /*
@@ -122,7 +128,6 @@ img {
 		@include text-shadow(1px 1px 1px rgba(#333, 0.5));
 		
 		background: #333 url("/img/moleskine-blurred.jpg") center center;
-		border-top: 1px solid $blue;
 		color: #fff;
 		text-align: center;
 
@@ -170,8 +175,7 @@ img {
 		padding: 5em 0;
 
 		figure {
-			@include span-columns(5);
-			@include suffix(1);
+			@include span-columns(6);
 
 			&:last-child {
 				@include omega;
@@ -186,6 +190,10 @@ img {
 			@include container;
 		}
 	}
+
+	.dashboard {
+		margin: 3em 0;
+	}
 }
 
 
@@ -194,21 +202,35 @@ img {
 */
 
 #contain > footer {
-	padding-top: 2em;
-	padding-bottom: 2em;
+	border-top: 1px solid #efefef;
+	padding-top: 4em;
+	padding-bottom: 4em;
 
 	section {
-		@include container;
+		&.links {
+			@include container;
 
-		nav {
-			@include span-columns(6);
+			aside {
+				@include span-columns(8);
 
-			&:last-child {
-				@include omega;
+				h3 {
+					font-size: 1.25em;
+				}
 			}
 
-			header {
-				border-bottom: 1px solid #efefef;
+			nav {
+				@include span-columns(4);
+
+				font-size: 0.85em;
+
+				&:last-child {
+					@include omega;
+				}
+
+				header {
+					border-bottom: 1px solid #efefef;
+					margin-bottom: 0.5em;
+				}
 			}
 		}
 	}
