@@ -38,7 +38,7 @@ This project is one I have been wanting to do for a long time. It’s only now w
 
 ## Technology
 
-I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.org) or [Padrino](http://padrinorb.com)). I intend to use [MongoDB](http://mongodb.org) for a database, [Compass](http://compass-style.com) for a SCSS framework, and [CoffeeScript](http://coffeescript.org) for compiling to JavaScript. See the [`Gemfile`](https://github.com/eturk/noted/blob/master/Gemfile) for more information.
+I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.org) or [Padrino](http://padrinorb.com)). I intend to use [MongoDB](http://mongodb.org) for a database, [Compass](http://compass-style.com) for a SCSS framework, and [CoffeeScript](http://coffeescript.org) for compiling to JavaScript. See the [`Gemfile`](https://github.com/noted/noted/blob/master/Gemfile) for more information.
 
 <hr />
 
