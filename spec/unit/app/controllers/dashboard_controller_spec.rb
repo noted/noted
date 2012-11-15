@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe "Core" do
-  describe "GET /" do
+describe "Dashboard" do
+  describe "GET /dashboard" do
     before do
-      get "/"
+      get "/dashboard"
     end
 
     it "should be ok" do
       response.should be_ok
     end
-  end
+  end 
 end
