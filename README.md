@@ -66,6 +66,12 @@ I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.
 #### Week of 28 October 2012
 * Begun work on basic design
 
+#### Week of 4 November 2012
+* _To do..._
+
+#### Week of 11 November 2012
+* Begun planning of [noted/citation](http://github.com/noted/citation). It will take the handling of turning data into citations and remove it from the primary application.
+
 
 ## Monthly Log
 
