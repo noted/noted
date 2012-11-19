@@ -5,7 +5,6 @@
 
 @import "lib/base";
 
-//$red: #b34d5e;
 $red: #db6363;
 $blue: #63a9db;
 
@@ -90,7 +89,7 @@ img {
 	nav {
 		@include span-columns(17 omega);
 
-		font-size: 0.8125em;
+		font-size: 0.85em;
 		font-weight: 600;
 		text-transform: uppercase;
 

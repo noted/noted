@@ -2,6 +2,7 @@ class Institution
   include MongoMapper::Document
 
   key :name, String
+  key :code, String
 
   timestamps!
   userstamps!

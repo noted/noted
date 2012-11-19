@@ -73,85 +73,85 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
 	II. 
 */
-/* line 33, ../../app/assets/css/application.scss */
+/* line 32, ../../app/assets/css/application.scss */
 body {
   background: #fff;
   color: #444;
   font: 16px/1.75em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 39, ../../app/assets/css/application.scss */
+/* line 38, ../../app/assets/css/application.scss */
 a {
   color: #db6363;
   text-decoration: none; }
-  /* line 43, ../../app/assets/css/application.scss */
+  /* line 42, ../../app/assets/css/application.scss */
   a:hover {
     color: #d13a3a; }
 
-/* line 48, ../../app/assets/css/application.scss */
+/* line 47, ../../app/assets/css/application.scss */
 button {
   background: none;
   border: none;
   font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
-  /* line 53, ../../app/assets/css/application.scss */
+  /* line 52, ../../app/assets/css/application.scss */
   button a {
     display: block;
     height: 100%;
     width: 100%; }
 
-/* line 60, ../../app/assets/css/application.scss */
+/* line 59, ../../app/assets/css/application.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "superclarendon", Georgia, Times, serif; }
 
-/* line 64, ../../app/assets/css/application.scss */
+/* line 63, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.25em; }
 
-/* line 68, ../../app/assets/css/application.scss */
+/* line 67, ../../app/assets/css/application.scss */
 h2 {
   font-size: 2em; }
 
-/* line 72, ../../app/assets/css/application.scss */
+/* line 71, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
 /*
 	III. Header
 */
-/* line 81, ../../app/assets/css/application.scss */
+/* line 80, ../../app/assets/css/application.scss */
 #contain > header {
   border-bottom: 1px solid #efefef;
   border-top: 5px solid #db6363;
   padding: 1.5em 0; }
-  /* line 86, ../../app/assets/css/application.scss */
+  /* line 85, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 28.57143%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 90, ../../app/assets/css/application.scss */
+  /* line 89, ../../app/assets/css/application.scss */
   #contain > header nav {
     width: 70.58824%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline;
-    font-size: 0.8125em;
+    font-size: 0.85em;
     font-weight: 600;
     text-transform: uppercase; }
-    /* line 97, ../../app/assets/css/application.scss */
+    /* line 96, ../../app/assets/css/application.scss */
     #contain > header nav ul {
       display: inline-block; }
-      /* line 100, ../../app/assets/css/application.scss */
+      /* line 99, ../../app/assets/css/application.scss */
       #contain > header nav ul:last-child {
         float: right; }
-      /* line 104, ../../app/assets/css/application.scss */
+      /* line 103, ../../app/assets/css/application.scss */
       #contain > header nav ul li {
         display: inline-block;
         vertical-align: middle; }
-        /* line 108, ../../app/assets/css/application.scss */
+        /* line 107, ../../app/assets/css/application.scss */
         #contain > header nav ul li + li {
           margin-left: 2em; }
-  /* line 115, ../../app/assets/css/application.scss */
+  /* line 114, ../../app/assets/css/application.scss */
   #contain > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -169,22 +169,22 @@ img {
 /*
 	IV. Main
 */
-/* line 127, ../../app/assets/css/application.scss */
+/* line 126, ../../app/assets/css/application.scss */
 #main .hero {
   text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.5);
   background: #333333 url("/img/moleskine-blurred.jpg") center center;
   color: #fff;
   text-align: center; }
-  /* line 134, ../../app/assets/css/application.scss */
+  /* line 133, ../../app/assets/css/application.scss */
   #main .hero h2 {
     font: 700 2.5em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
     text-transform: uppercase; }
-  /* line 141, ../../app/assets/css/application.scss */
+  /* line 140, ../../app/assets/css/application.scss */
   #main .hero section {
     margin-top: 3em; }
-    /* line 144, ../../app/assets/css/application.scss */
+    /* line 143, ../../app/assets/css/application.scss */
     #main .hero section a {
       -webkit-border-radius: 1px;
       -moz-border-radius: 1px;
@@ -199,37 +199,37 @@ img {
       padding: 1.25em 2.5em;
       text-transform: uppercase;
       width: 20% !important; }
-      /* line 156, ../../app/assets/css/application.scss */
+      /* line 155, ../../app/assets/css/application.scss */
       #main .hero section a.primary {
         background: #de6f6f;
         color: #fff; }
-        /* line 160, ../../app/assets/css/application.scss */
+        /* line 159, ../../app/assets/css/application.scss */
         #main .hero section a.primary:hover {
           color: #f2f2f2; }
-  /* line 167, ../../app/assets/css/application.scss */
+  /* line 166, ../../app/assets/css/application.scss */
   #main .hero .inner {
     padding-bottom: 5em;
     padding-top: 6em; }
-/* line 173, ../../app/assets/css/application.scss */
+/* line 172, ../../app/assets/css/application.scss */
 #main .features {
   background: #efefef;
   padding: 5em 0; }
-  /* line 177, ../../app/assets/css/application.scss */
+  /* line 176, ../../app/assets/css/application.scss */
   #main .features figure {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 180, ../../app/assets/css/application.scss */
+    /* line 179, ../../app/assets/css/application.scss */
     #main .features figure:last-child {
       float: right;
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline; }
-    /* line 184, ../../app/assets/css/application.scss */
+    /* line 183, ../../app/assets/css/application.scss */
     #main .features figure figcaption {
       text-align: center; }
-  /* line 189, ../../app/assets/css/application.scss */
+  /* line 188, ../../app/assets/css/application.scss */
   #main .features .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -243,19 +243,19 @@ img {
       content: "";
       display: table;
       clear: both; }
-/* line 194, ../../app/assets/css/application.scss */
+/* line 193, ../../app/assets/css/application.scss */
 #main .dashboard {
   margin: 3em 0; }
 
 /*
 	V. Footer
 */
-/* line 204, ../../app/assets/css/application.scss */
+/* line 203, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #efefef;
   padding-top: 4em;
   padding-bottom: 4em; }
-  /* line 210, ../../app/assets/css/application.scss */
+  /* line 209, ../../app/assets/css/application.scss */
   #contain > footer section.links {
     *zoom: 1;
     max-width: 59.5em;
@@ -269,29 +269,29 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 213, ../../app/assets/css/application.scss */
+    /* line 212, ../../app/assets/css/application.scss */
     #contain > footer section.links aside {
       width: 32.77311%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 216, ../../app/assets/css/application.scss */
+      /* line 215, ../../app/assets/css/application.scss */
       #contain > footer section.links aside h3 {
         font-size: 1.25em; }
-    /* line 221, ../../app/assets/css/application.scss */
+    /* line 220, ../../app/assets/css/application.scss */
     #contain > footer section.links nav {
       width: 15.96639%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       font-size: 0.85em; }
-      /* line 226, ../../app/assets/css/application.scss */
+      /* line 225, ../../app/assets/css/application.scss */
       #contain > footer section.links nav:last-child {
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-      /* line 230, ../../app/assets/css/application.scss */
+      /* line 229, ../../app/assets/css/application.scss */
       #contain > footer section.links nav header {
         border-bottom: 1px solid #efefef;
         margin-bottom: 0.5em; }
