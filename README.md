@@ -23,7 +23,7 @@ This project is one I have been wanting to do for a long time. It’s only now w
 
 **September** &mdash; Initial planning and research. Interview potential customers (students, teachers, librarians, etc). Begin preliminary programming.
 
-**October** &mdash;	Continue customer research. Start branding and logo design. Finish wireframing all of the site. Explore financial options.
+**October** &mdash; Continue customer research. Start branding and logo design. Finish wireframing all of the site. Explore financial options.
 
 **November** &ndash; **January** &mdash;	Program entire site. Finalize web design and branding.
 
@@ -71,6 +71,11 @@ I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.
 
 #### Week of 11 November 2012
 * Begun planning of [noted/citation](http://github.com/noted/citation). It will take the handling of turning data into citations and remove it from the primary application.
+
+#### Week of 18 November 2012
+* I am in the process of trying to figure out how to structure Noted. There are two possibilities:
+  1. A standard, Ruby-based model-view-controller architecture.
+  2. Separate API and browser clients (use Padrino/Grape/Espresso, etc., for server and Ember.js/Backbone/Spine, etc., for client).
 
 
 ## Monthly Log
