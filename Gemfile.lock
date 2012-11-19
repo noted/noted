@@ -98,6 +98,9 @@ GEM
     plucky (0.5.2)
       mongo (~> 1.5)
     polyglot (0.3.3)
+    rabl (0.7.6)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -146,6 +149,7 @@ GEM
       rack
     xpath (0.1.4)
       nokogiri (~> 1.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -162,6 +166,7 @@ DEPENDENCIES
   mocha
   mongo_mapper
   padrino (= 0.10.7)
+  rabl
   rack-test
   rake
   redis
@@ -172,3 +177,4 @@ DEPENDENCIES
   susy
   therubyracer
   thin
+  yajl-ruby

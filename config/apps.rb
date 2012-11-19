@@ -3,3 +3,5 @@ Padrino.configure_apps do
 end
 
 Padrino.mount("Noted").to('/')
+
+Padrino.mount("API").to("/api")

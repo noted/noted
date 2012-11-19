@@ -20,6 +20,9 @@ gem 'bcrypt-ruby'
 
 gem 'haml'
 
+gem 'rabl'
+gem 'yajl-ruby'
+
 gem 'compass'
 gem 'susy'
 
