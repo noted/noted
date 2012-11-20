@@ -73,7 +73,7 @@ I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.
 * _To do..._
 
 #### Week of 11 November 2012
-* Begun planning of [noted/citation](http://github.com/noted/citation). It will take the handling of turning data into citations and remove it from the primary application.
+* _To do..._
 
 
 ## Monthly Log
@@ -82,7 +82,7 @@ I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.
 
 Though the thought processes for this project started months ago, I only began to flesh out specific details this month. My goal for the past four weeks was to see what exactly students, teachers, and librarians required from such a tool. Looking at what we currently use and weighing the pros and cons is especially helpful.
 
-Some of the features I thought would be useful turned out not to be such. For example, I thought it would be helpful to have handwriting recognition — if you weren’t too comfortable with taking notes on a keyboard, you can handwrite them, scan them into the computer and upload it to the site. After some interviewing with people, I’ve come to the conclusion that this is far more trouble than it’s worth, both for me and the user.
+Some of the features I thought would be useful turned out not to be such. For example, I thought it would be helpful to have handwriting recognition&mdash;if you weren’t too comfortable with taking notes on a keyboard, you can handwrite them, scan them into the computer and upload it to the site. After some interviewing with people, I’ve come to the conclusion that this is far more trouble than it’s worth, both for me and the user.
 
 I’ve gotten great feedback on the project, and people seem to be actually excited about the prospect of a better tool. This genuine interest shows me that I might have a user base for this product.
 
