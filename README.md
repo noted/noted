@@ -2,9 +2,10 @@
 
 Noted is an academic research assistant and social network.
 
-**Authors** &mdash; [Ethan Turkeltaub](http://ethnt.me), [Earl Procko](http://www.fpsct.org/page.cfm?p=83&viewdirid=1166&showFilter=1&keyword=procko).
+**Authors** &mdash; [Ethan Turkeltaub](http://ethnt.me), [Earl Procko](http://is.gd/pIAqSy).
 
 If you're from FHS, [here's the "Digication e-Portfolio"](https://fps.digication.com/turkeltaub-capstone). Anyone else can just read everything here.
+
 
 ## Proposal
 
@@ -40,7 +41,9 @@ This project is one I have been wanting to do for a long time. It’s only now w
 
 I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.org) or [Padrino](http://padrinorb.com)). I intend to use [MongoDB](http://mongodb.org) for a database, [Compass](http://compass-style.com) for a SCSS framework, and [CoffeeScript](http://coffeescript.org) for compiling to JavaScript. See the [`Gemfile`](https://github.com/noted/noted/blob/master/Gemfile) for more information.
 
+
 <hr />
+
 
 ## Weekly Log
 
@@ -72,11 +75,6 @@ I will be writing this entirely in Ruby (with either [Rails](http://rubyonrails.
 #### Week of 11 November 2012
 * Begun planning of [noted/citation](http://github.com/noted/citation). It will take the handling of turning data into citations and remove it from the primary application.
 
-#### Week of 18 November 2012
-* I am in the process of trying to figure out how to structure Noted. There are two possibilities:
-  1. A standard, Ruby-based model-view-controller architecture.
-  2. Separate API and browser clients (use Padrino/Grape/Espresso, etc., for server and Ember.js/Backbone/Spine, etc., for client).
-
 
 ## Monthly Log
 
@@ -99,6 +97,6 @@ I also began design work. I posted a screenshot of what I have for the home page
  
 I interviewed Josh from Fanzter, and he brought up many points I hadn't thought of. For example, keeping user data separate and secure, how to sell this product business-to-business, liability, marketing it as a SaaS ("Software-as-a-Service"), insurance, demonstration value, marketing, billing, and support. I also talked to Mrs. Carlson and she gave me more insight as to what librarians need from this product.
  
-I've realized that most of the faculty I've talked to want a more structured system (teachers have more privileges than students, teachers have the ability to organized notecards, etc.), while students want an unstructured, do-it-yourself like system. I believe that it would be better to have everyone on the same level, teachers included. I also would like students to have the flexibility to organize how they'd like to -- often times the way a teacher organizes is not right for me.
+I've realized that most of the faculty I've talked to want a more structured system (teachers have more privileges than students, teachers have the ability to organized notecards, etc.), while students want an unstructured, do-it-yourself like system. I believe that it would be better to have everyone on the same level, teachers included. I also would like students to have the flexibility to organize how they'd like to&mdash;often times the way a teacher organizes is not right for me.
  
-I need to speed up the pace I'm iterating on this project. If I want to have a working version by March, I need to be working faster -- there are many hurdles ahead. Hopefully after this month (and college applications) are over I'll have more time.
+I need to speed up the pace I'm iterating on this project. If I want to have a working version by March, I need to be working faster&mdash;there are many hurdles ahead. Hopefully after this month (and college applications) are over I'll have more time.
