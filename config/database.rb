@@ -7,5 +7,5 @@ if heroku?
   MongoMapper.database = m.path.gsub(/^\//, '')
   MongoMapper.database.authenticate(m.user, m.password)
 else
-  MongoMapper.setup(YAML::load(File.open(File.join(PADRINO_ROOT, ".mongo.yml"))), PADRINO_ENV, :logger => logger)
+  MongoMapper.setup(YAML.load_file(Padrino.root(".mongo.yml")), PADRINO_ENV, :logger => logger)
 end
