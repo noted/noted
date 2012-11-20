@@ -141,10 +141,14 @@ img {
 			margin-top: 3em;
 
 			a {
-				@include border-radius(1px);
-				@include text-shadow(none);
-
-				background: #fff;
+				@include border-radius(3px);
+				@include box-shadow(rgba(255, 255, 255, 0.2) 0 1px 0,inset rgba(255, 255, 255, 0.2) 0 1px 0);
+				@include background(
+					linear-gradient(top, white, darken(white, 3%))
+				);
+				@include text-shadow(rgba(0, 0, 0, 0.15) 0 -1px 0);
+				
+				border: 1px solid rgba(#333, 0.5);
 				display: inline-block;
 				font-size: 1.05em;
 				font-weight: 600;
@@ -152,11 +156,25 @@ img {
 				text-transform: uppercase;
 				width: 20% !important;
 
+				&:hover {
+					@include background(
+						linear-gradient(top, white, darken(white, 2.5%))
+					);
+				}
+
 				&.primary {
-					background: lighten($red, 3%);
+					@include background(
+						linear-gradient(top, lighten($red, 5%), $red)
+					);
+					@include text-shadow(rgba(0, 0, 0, 0.35) 0 -0.5px 0);
+
 					color: #fff;
 
 					&:hover {
+						@include background(
+							linear-gradient(top, lighten($red, 3), darken($red, 1%))
+						);
+					
 						color: darken(#fff, 5%);
 					}
 				}
@@ -196,22 +214,6 @@ img {
 
 	.join {
 		@include container;
-
-		text-align: center;
-
-		form {
-			@include prefix(6);
-			@include span-columns(12);
-			@include suffix(6);
-
-			margin: 4em 0 6em;
-		}
-
-		h2 {
-			font-family: $sans-serif;
-			font-weight: 600;
-			text-transform: uppercase;
-		}
 	}
 }
 

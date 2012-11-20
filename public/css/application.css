@@ -186,50 +186,75 @@ img {
     margin-top: 3em; }
     /* line 143, ../../app/assets/css/application.scss */
     #main .hero section a {
-      -webkit-border-radius: 1px;
-      -moz-border-radius: 1px;
-      -ms-border-radius: 1px;
-      -o-border-radius: 1px;
-      border-radius: 1px;
-      text-shadow: none;
-      background: #fff;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(255, 255, 255, 0.2) 0 1px 0;
+      -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(255, 255, 255, 0.2) 0 1px 0;
+      box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(255, 255, 255, 0.2) 0 1px 0;
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f7f7f7));
+      background: -webkit-linear-gradient(top, #ffffff, #f7f7f7);
+      background: -moz-linear-gradient(top, #ffffff, #f7f7f7);
+      background: -o-linear-gradient(top, #ffffff, #f7f7f7);
+      background: linear-gradient(top, #ffffff, #f7f7f7);
+      text-shadow: rgba(0, 0, 0, 0.15) 0 -1px 0;
+      border: 1px solid rgba(51, 51, 51, 0.5);
       display: inline-block;
       font-size: 1.05em;
       font-weight: 600;
       padding: 1.25em 2.5em;
       text-transform: uppercase;
       width: 20% !important; }
-      /* line 155, ../../app/assets/css/application.scss */
+      /* line 159, ../../app/assets/css/application.scss */
+      #main .hero section a:hover {
+        background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f9f9f9));
+        background: -webkit-linear-gradient(top, #ffffff, #f9f9f9);
+        background: -moz-linear-gradient(top, #ffffff, #f9f9f9);
+        background: -o-linear-gradient(top, #ffffff, #f9f9f9);
+        background: linear-gradient(top, #ffffff, #f9f9f9); }
+      /* line 165, ../../app/assets/css/application.scss */
       #main .hero section a.primary {
-        background: #de6f6f;
+        background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e07878), color-stop(100%, #db6363));
+        background: -webkit-linear-gradient(top, #e07878, #db6363);
+        background: -moz-linear-gradient(top, #e07878, #db6363);
+        background: -o-linear-gradient(top, #e07878, #db6363);
+        background: linear-gradient(top, #e07878, #db6363);
+        text-shadow: rgba(0, 0, 0, 0.35) 0 -0.5px 0;
         color: #fff; }
-        /* line 159, ../../app/assets/css/application.scss */
+        /* line 173, ../../app/assets/css/application.scss */
         #main .hero section a.primary:hover {
+          background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #de6f6f), color-stop(100%, #da5f5f));
+          background: -webkit-linear-gradient(top, #de6f6f, #da5f5f);
+          background: -moz-linear-gradient(top, #de6f6f, #da5f5f);
+          background: -o-linear-gradient(top, #de6f6f, #da5f5f);
+          background: linear-gradient(top, #de6f6f, #da5f5f);
           color: #f2f2f2; }
-  /* line 166, ../../app/assets/css/application.scss */
+  /* line 184, ../../app/assets/css/application.scss */
   #main .hero .inner {
     padding-bottom: 5em;
     padding-top: 6em; }
-/* line 172, ../../app/assets/css/application.scss */
+/* line 190, ../../app/assets/css/application.scss */
 #main .features {
   background: #efefef;
   padding: 5em 0; }
-  /* line 176, ../../app/assets/css/application.scss */
+  /* line 194, ../../app/assets/css/application.scss */
   #main .features figure {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 179, ../../app/assets/css/application.scss */
+    /* line 197, ../../app/assets/css/application.scss */
     #main .features figure:last-child {
       float: right;
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline; }
-    /* line 183, ../../app/assets/css/application.scss */
+    /* line 201, ../../app/assets/css/application.scss */
     #main .features figure figcaption {
       text-align: center; }
-  /* line 188, ../../app/assets/css/application.scss */
+  /* line 206, ../../app/assets/css/application.scss */
   #main .features .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -243,10 +268,10 @@ img {
       content: "";
       display: table;
       clear: both; }
-/* line 193, ../../app/assets/css/application.scss */
+/* line 211, ../../app/assets/css/application.scss */
 #main .dashboard {
   margin: 3em 0; }
-/* line 197, ../../app/assets/css/application.scss */
+/* line 215, ../../app/assets/css/application.scss */
 #main .join {
   *zoom: 1;
   max-width: 59.5em;
@@ -254,37 +279,22 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5em;
-  padding-right: 0.5em;
-  text-align: center; }
+  padding-right: 0.5em; }
   /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #main .join:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 202, ../../app/assets/css/application.scss */
-  #main .join form {
-    padding-left: 25.21008%;
-    width: 49.57983%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline;
-    padding-right: 25.21008%;
-    margin: 4em 0 6em; }
-  /* line 210, ../../app/assets/css/application.scss */
-  #main .join h2 {
-    font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: 600;
-    text-transform: uppercase; }
 
 /*
 	V. Footer
 */
-/* line 223, ../../app/assets/css/application.scss */
+/* line 225, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #efefef;
   padding-top: 4em;
   padding-bottom: 4em; }
-  /* line 229, ../../app/assets/css/application.scss */
+  /* line 231, ../../app/assets/css/application.scss */
   #contain > footer section.links {
     *zoom: 1;
     max-width: 59.5em;
@@ -298,29 +308,29 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 232, ../../app/assets/css/application.scss */
+    /* line 234, ../../app/assets/css/application.scss */
     #contain > footer section.links aside {
       width: 32.77311%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 235, ../../app/assets/css/application.scss */
+      /* line 237, ../../app/assets/css/application.scss */
       #contain > footer section.links aside h3 {
         font-size: 1.25em; }
-    /* line 240, ../../app/assets/css/application.scss */
+    /* line 242, ../../app/assets/css/application.scss */
     #contain > footer section.links nav {
       width: 15.96639%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       font-size: 0.85em; }
-      /* line 245, ../../app/assets/css/application.scss */
+      /* line 247, ../../app/assets/css/application.scss */
       #contain > footer section.links nav:last-child {
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-      /* line 249, ../../app/assets/css/application.scss */
+      /* line 251, ../../app/assets/css/application.scss */
       #contain > footer section.links nav header {
         border-bottom: 1px solid #efefef;
         margin-bottom: 0.5em; }
