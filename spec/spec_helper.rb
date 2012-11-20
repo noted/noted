@@ -19,6 +19,8 @@ Spork.prefork do
         c.remove
       end
     end
+
+    Capybara.app = Padrino.application
   end
 
   def app

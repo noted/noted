@@ -33,7 +33,7 @@ end
 group :test do
   gem 'rack-test', require: 'rack/test'
   gem 'rspec'
-  gem 'mocha', require: 'mocha_standalone'
+  gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
 
   gem 'spork'
