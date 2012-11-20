@@ -193,6 +193,26 @@ img {
 	.dashboard {
 		margin: 3em 0;
 	}
+
+	.join {
+		@include container;
+
+		text-align: center;
+
+		form {
+			@include prefix(6);
+			@include span-columns(12);
+			@include suffix(6);
+
+			margin: 4em 0 6em;
+		}
+
+		h2 {
+			font-family: $sans-serif;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
 }
 
 

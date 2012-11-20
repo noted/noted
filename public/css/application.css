@@ -246,16 +246,45 @@ img {
 /* line 193, ../../app/assets/css/application.scss */
 #main .dashboard {
   margin: 3em 0; }
+/* line 197, ../../app/assets/css/application.scss */
+#main .join {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center; }
+  /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #main .join:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 202, ../../app/assets/css/application.scss */
+  #main .join form {
+    padding-left: 25.21008%;
+    width: 49.57983%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline;
+    padding-right: 25.21008%;
+    margin: 4em 0 6em; }
+  /* line 210, ../../app/assets/css/application.scss */
+  #main .join h2 {
+    font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase; }
 
 /*
 	V. Footer
 */
-/* line 203, ../../app/assets/css/application.scss */
+/* line 223, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #efefef;
   padding-top: 4em;
   padding-bottom: 4em; }
-  /* line 209, ../../app/assets/css/application.scss */
+  /* line 229, ../../app/assets/css/application.scss */
   #contain > footer section.links {
     *zoom: 1;
     max-width: 59.5em;
@@ -269,29 +298,29 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 212, ../../app/assets/css/application.scss */
+    /* line 232, ../../app/assets/css/application.scss */
     #contain > footer section.links aside {
       width: 32.77311%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 215, ../../app/assets/css/application.scss */
+      /* line 235, ../../app/assets/css/application.scss */
       #contain > footer section.links aside h3 {
         font-size: 1.25em; }
-    /* line 220, ../../app/assets/css/application.scss */
+    /* line 240, ../../app/assets/css/application.scss */
     #contain > footer section.links nav {
       width: 15.96639%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       font-size: 0.85em; }
-      /* line 225, ../../app/assets/css/application.scss */
+      /* line 245, ../../app/assets/css/application.scss */
       #contain > footer section.links nav:last-child {
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-      /* line 229, ../../app/assets/css/application.scss */
+      /* line 249, ../../app/assets/css/application.scss */
       #contain > footer section.links nav header {
         border-bottom: 1px solid #efefef;
         margin-bottom: 0.5em; }

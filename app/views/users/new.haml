@@ -1,0 +1,12 @@
+.join
+  - form_tag url(:users, :create), :method => "post" do
+    %header
+      %h2 Join
+      %section
+        %p= text_field_tag "user[name]", :placeholder => "Name"
+        %p= text_field_tag "user[username]", :placeholder => "Username"
+        %p= email_field_tag "user[email]", :placeholder => "you@email.com"
+      %section
+        %p= password_field_tag "password", :placeholder => "password"
+      %footer
+        %p= submit_tag "Join"
