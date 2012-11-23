@@ -77,7 +77,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   background: #fff;
   color: #444;
-  font: 16px/1.75em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font: 16px/1.75em "source-sans-pro", ratio, freight-sans-pro, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 /* line 38, ../../app/assets/css/application.scss */
 a {
@@ -91,7 +91,7 @@ a {
 button {
   background: none;
   border: none;
-  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-family: "source-sans-pro", ratio, freight-sans-pro, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif; }
   /* line 52, ../../app/assets/css/application.scss */
   button a {
     display: block;
@@ -108,7 +108,7 @@ h1 {
 
 /* line 67, ../../app/assets/css/application.scss */
 h2 {
-  font-size: 2em; }
+  font-size: 1.75em; }
 
 /* line 71, ../../app/assets/css/application.scss */
 img {
@@ -172,12 +172,12 @@ img {
 /* line 126, ../../app/assets/css/application.scss */
 #main .hero {
   text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.5);
-  background: #333333 url("/img/moleskine-blurred.jpg") center center;
+  background: #333333 url("/img/bjango-cool.png") center center;
   color: #fff;
   text-align: center; }
   /* line 133, ../../app/assets/css/application.scss */
   #main .hero h2 {
-    font: 700 2.5em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 700 2.5em/1em "source-sans-pro", ratio, freight-sans-pro, proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     margin-bottom: 0.25em;
     text-transform: uppercase; }
@@ -270,8 +270,33 @@ img {
       clear: both; }
 /* line 211, ../../app/assets/css/application.scss */
 #main .dashboard {
-  margin: 3em 0; }
-/* line 215, ../../app/assets/css/application.scss */
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-bottom: 5em;
+  margin-top: 5em; }
+  /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #main .dashboard:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 217, ../../app/assets/css/application.scss */
+  #main .dashboard > header {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1em;
+    margin-bottom: 1em; }
+  /* line 223, ../../app/assets/css/application.scss */
+  #main .dashboard article {
+    padding-bottom: 1em; }
+    /* line 226, ../../app/assets/css/application.scss */
+    #main .dashboard article + article {
+      border-top: 1px solid #efefef;
+      padding-top: 1em; }
+/* line 233, ../../app/assets/css/application.scss */
 #main .join {
   *zoom: 1;
   max-width: 59.5em;
@@ -289,12 +314,12 @@ img {
 /*
 	V. Footer
 */
-/* line 225, ../../app/assets/css/application.scss */
+/* line 243, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #efefef;
   padding-top: 4em;
   padding-bottom: 4em; }
-  /* line 231, ../../app/assets/css/application.scss */
+  /* line 249, ../../app/assets/css/application.scss */
   #contain > footer section.links {
     *zoom: 1;
     max-width: 59.5em;
@@ -308,29 +333,29 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 234, ../../app/assets/css/application.scss */
+    /* line 252, ../../app/assets/css/application.scss */
     #contain > footer section.links aside {
       width: 32.77311%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 237, ../../app/assets/css/application.scss */
+      /* line 255, ../../app/assets/css/application.scss */
       #contain > footer section.links aside h3 {
         font-size: 1.25em; }
-    /* line 242, ../../app/assets/css/application.scss */
+    /* line 260, ../../app/assets/css/application.scss */
     #contain > footer section.links nav {
       width: 15.96639%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       font-size: 0.85em; }
-      /* line 247, ../../app/assets/css/application.scss */
+      /* line 265, ../../app/assets/css/application.scss */
       #contain > footer section.links nav:last-child {
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-      /* line 251, ../../app/assets/css/application.scss */
+      /* line 269, ../../app/assets/css/application.scss */
       #contain > footer section.links nav header {
         border-bottom: 1px solid #efefef;
         margin-bottom: 0.5em; }

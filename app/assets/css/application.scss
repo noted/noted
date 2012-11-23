@@ -65,7 +65,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.75em;
 }
 
 img {
@@ -126,7 +126,7 @@ img {
 	.hero {
 		@include text-shadow(1px 1px 1px rgba(#333, 0.5));
 		
-		background: #333 url("/img/moleskine-blurred.jpg") center center;
+		background: #333 url("/img/bjango-cool.png") center center;
 		color: #fff;
 		text-align: center;
 
@@ -209,7 +209,25 @@ img {
 	}
 
 	.dashboard {
-		margin: 3em 0;
+		@include container;
+
+		margin-bottom: 5em;
+		margin-top: 5em;
+
+		& > header {
+			border-bottom: 1px solid #e0e0e0;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+		}
+
+		article {
+			padding-bottom: 1em;
+
+			& + article {
+				border-top: 1px solid #efefef;
+				padding-top: 1em;
+			}
+		}
 	}
 
 	.join {
