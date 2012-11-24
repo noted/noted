@@ -1,9 +1,9 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe "Core" do
   describe "GET /" do
     before do
-      get "/"
+      get '/'
     end
 
     it "should be ok" do
