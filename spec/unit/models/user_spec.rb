@@ -42,6 +42,48 @@ describe User do
     end
   end
 
+  describe "#upgrade!" do
+    before do
+      user.upgrade!
+    end
+
+    it "should upgrade the User" do
+      user.tier.should == "upgraded"
+    end
+  end
+
+  describe "#downgrade!" do
+    before do
+      user.upgrade!
+      user.downgrade!
+    end
+
+    it "should downgrade the User" do
+      user.tier.should == "free"
+    end
+  end
+
+  describe "#hire!" do
+    before do
+      user.hire!
+    end
+
+    it "should change the User into a staff member" do
+      user.role.should == "staff"
+    end
+  end
+
+  describe "#fire!" do
+    before do
+      user.hire!
+      user.fire!
+    end
+
+    it "should change the User into a regular user" do
+      user.role.should == "user"
+    end
+  end
+
   describe "#destroy_projects!" do
     before do
       user.projects << Project.create(:title => "Foobar")
@@ -51,6 +93,26 @@ describe User do
 
     it "should destroy all Projects associated with User" do
       Project.find(:title => "Foobar").should be_nil
+    end
+  end
+
+  describe "validations" do
+    describe "requirements" do
+      it "should prevent lack of information" do
+        u = User.new
+        u.save.should_not be_true
+      end
+    end
+
+    describe "uniqueness" do
+      it "should prevent the same email" do
+        u = User.new(:email => user.email, :name => "Foobar", :username => "foobar")
+        u.save.should_not be_true
+      end
+
+      it "should prevent the same username" do
+        u = User.new(:username => user.username, :name => "Foobar", :email => "foo@bar.com")
+      end
     end
   end
 end

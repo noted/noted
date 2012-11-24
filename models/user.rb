@@ -8,6 +8,32 @@ class User
   key :username, String
   key :email, String
   key :hash, String
+
+  state_machine :tier, :initial => :free do
+    state :free
+    state :upgraded
+
+    event :upgrade do
+      transition all => :upgraded
+    end
+
+    event :downgrade do
+      transition all => :free
+    end
+  end
+
+  state_machine :role, :initial => :user do
+    state :user
+    state :staff
+
+    event :hire do
+      transition all => :staff
+    end
+
+    event :fire do
+      transition all => :user
+    end
+  end
   
   timestamps!
 
@@ -17,6 +43,7 @@ class User
   many :institutions
 
   validates_presence_of :name, :username, :email
+  validates_uniqueness_of :username, :email
 
   before_destroy :destroy_projects!
 
