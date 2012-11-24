@@ -16,6 +16,10 @@ class User
   many :projects
   many :institutions
 
+  validates_presence_of :name, :username, :email
+
+  before_destroy :destroy_projects!
+
   class << self
     def authenticate(e, p)
       u = first(:email => e) if e.present?
@@ -29,5 +33,13 @@ class User
 
   def password=(new)
     self.hash = Password.create(new)
+  end
+
+  def destroy_projects!
+    self.projects.each do |p|
+      p.destroy
+    end
+
+    self.projects.empty?
   end
 end
