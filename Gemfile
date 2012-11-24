@@ -18,6 +18,8 @@ gem 'redis'
 
 gem 'bcrypt-ruby'
 
+gem 'padrino-warden', :git => 'git://github.com/eturk/padrino-warden.git'
+
 gem 'haml'
 
 gem 'compass'
