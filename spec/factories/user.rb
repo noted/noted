@@ -8,5 +8,16 @@ FactoryGirl.define do
     username "neiltyson"
     password "foobar"
     email
+
+    factory(:staff) do
+      name "Les Grossman"
+      username "les"
+      password "barfoo"
+      email
+
+      after(:create) do |user, evaluator|
+        user.hire!
+      end
+    end
   end
 end
