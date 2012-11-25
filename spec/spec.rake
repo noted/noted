@@ -5,7 +5,7 @@ spec_tasks = Dir['spec/unit/*/'].map { |d| File.basename(d) }
 spec_tasks.each do |folder|
   RSpec::Core::RakeTask.new("spec:#{folder}") do |t|
     t.pattern = "./spec/unit/#{folder}/**/*_spec.rb"
-    t.rspec_opts = %w(-fs --color)
+    t.rspec_opts = %w(-fp --color)
   end
 end
 
