@@ -15,10 +15,12 @@ Spork.prefork do
 
     conf.mock_with :mocha
 
-    conf.after do # This is slightly messy. Mock/stub instead?
+    conf.after do
       MongoMapper.database.collections.each do |c|
         c.remove
       end
+
+      Warden.test_reset!
     end
 
     Capybara.app = Padrino.application

@@ -17,7 +17,7 @@ Noted.controllers :users do
   end
 
   get :edit, :map => '/settings' do
-    @user = params[:current_user]
+    @user = env['warden'].user
 
     if @user
       render 'users/edit'
@@ -27,22 +27,15 @@ Noted.controllers :users do
   end
 
   put :modify do
-    if params[:current_user].id == params[:id]
-      u = params[:current_user]
+    u = User.find(params[:id])
 
-      if u.update_attributes(params[:user])
-        flash[:notice] = "Your profile has been updated."
-        redirect url(:users, :view, :id => u.id)
-      else
-        flash[:error] = "Something has gone wrong. #{u.errors}"
-        redirect url(:users, :edit)
-      end
+    if u && u.update_attributes(params[:user])
+      flash[:notice] = "Your profile has been updated."
+      redirect url(:users, :edit)
     else
-      status 301
-
-      flash[:error] = "Nice try, but you're not authorized to do that."
-      redirect url(:dashboard)
-    end 
+      flash[:error] = "Something has gone wrong. #{u.errors}"
+      redirect url(:users, :edit)
+    end
   end
 
   delete :destroy do
@@ -63,9 +56,9 @@ Noted.controllers :users do
   end
 
   get :view, :map => '/:username' do
-    @user = User.find(:username => params[:username])
+    @user = User.find_by_username(params[:username])
 
-    if @user
+    if !@user.blank?
       render 'users/view'
     else
       status 404

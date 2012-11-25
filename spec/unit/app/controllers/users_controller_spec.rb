@@ -15,7 +15,7 @@ describe "Users" do
 
   describe "POST /users/create" do
     before do
-      post '/join', :user => { :name => "Neil deGrasse Tyson", :email => "neil@hayden.org", :username => "neiltyson" }, :password => "foobar"
+      post '/users/create', :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => "foobar"
     end
 
     it "should redirect correctly" do
@@ -24,7 +24,7 @@ describe "Users" do
     end
 
     it "should create a User" do
-      u = User.find(:username => "neiltyson")
+      u = User.find_by_email("carl@sagan.org")
 
       u.should_not be_nil
       u.password.should == "foobar"
@@ -33,7 +33,8 @@ describe "Users" do
 
   describe "GET /settings" do
     before do
-      get '/settings', :current_user => @user
+      login_as user
+      get '/settings'
     end
 
     it "should be ok" do
@@ -43,27 +44,24 @@ describe "Users" do
 
   describe "PUT /users/modify" do
     before do
-      put '/users/modify', :current_user => @user, :id => @user.id, :user => { :name => "Carl Sagan" }
+      put '/users/modify', :id => user.id, :user => { :name => "Carl Sagan" }
     end
 
     it "should redirect correctly" do
       response.should be_redirect
-      response.location.should == "#{site}/#{@user.username}"
+      response.location.should == "#{site}/settings"
     end
 
     it "should modify a User" do
-      u = User.find(@user.id)
-
-      u.should_not be_nil
+      u = User.find(user.id)
 
       u.name.should == "Carl Sagan"
-      u.name.should_not == "Neil deGrasse Tyson"
     end
   end
 
   describe "DELETE /users/destroy" do
     before do
-      delete "/users/destroy", :id => @user.id
+      delete "/users/destroy", :id => user.id
     end
 
     it "should redirect correctly" do
@@ -72,7 +70,17 @@ describe "Users" do
     end
 
     it "should destroy a User" do
-      User.find(@user.id).should be_nil
+      User.find(user.id).should be_nil
+    end
+  end
+
+  describe "GET /:username" do
+    before do
+      get "/#{user.username}"
+    end
+
+    it "should be ok" do
+      response.should be_ok
     end
   end
 end
