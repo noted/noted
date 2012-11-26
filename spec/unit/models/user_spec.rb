@@ -5,31 +5,21 @@ describe User do
   let(:staff) { create(:staff) }
 
   it "can be instantiated" do
-    user.should_not be_nil
+    user.should be_valid
   end
 
   describe "#authenticate" do
-    before do
-      @authenticated = User.authenticate(user.email, "foobar")
-    end
+    subject { User.authenticate(user.email, "foobar") }
 
-    it "returns a User" do
-      @authenticated.should be_an_instance_of User
-    end
-
-    it "can authenticate itself" do
-      @authenticated.should == user
-    end
+    it { should be_an_instance_of User }
+    it { should == user }
   end
 
   describe "#password" do
-    it "correctly matches a Password" do
-      user.password.should == "foobar"
-    end
+    subject { user.password }
 
-    it "returns a Password object" do
-      user.password.should be_an_instance_of BCrypt::Password
-    end
+    it { should be_an_instance_of BCrypt::Password }
+    it { should == "foobar" }
   end
 
   describe "#password=" do

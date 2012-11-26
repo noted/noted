@@ -40,6 +40,7 @@ group :test do
   gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
 
+  gem 'autotest'
   gem 'fuubar'
 
   gem 'spork'

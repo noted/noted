@@ -4,6 +4,6 @@ describe Institution do
   let(:institution) { create(:institution) }
 
   it "can be instantiated" do
-    institution.should_not be_nil
+    institution.should be_valid
   end
 end

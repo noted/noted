@@ -5,6 +5,6 @@ describe Note do
   let(:note) { create(:note) }
 
   it "can be instantiated" do
-    note.should_not be_nil
+    note.should be_valid
   end
 end
