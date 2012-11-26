@@ -1,4 +1,4 @@
-# Noted. [![Build Status](https://secure.travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted)
+# Noted. [![Build Status](https://secure.travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted) [![Dependency Status](https://gemnasium.com/noted/noted.png)](https://gemnasium.com/noted/noted)
 
 Noted is an academic research assistant and social network.
 
