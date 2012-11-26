@@ -3,6 +3,7 @@ class Project
 
   key :title, String
   key :description, String
+  key :permalink, String
 
   timestamps!
   userstamps!
@@ -11,4 +12,14 @@ class Project
 
   many :notes
   many :sources
+
+  validates_presence_of :title, :permalink
+
+  before_validation :permalink!
+
+  private
+
+  def permalink!
+    self.permalink = self.title.parameterize
+  end
 end
