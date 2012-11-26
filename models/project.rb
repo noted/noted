@@ -22,4 +22,6 @@ class Project
   def permalink!
     self.permalink = self.title.parameterize
   end
+
+  # TO-DO: Check if the same permalink exists for a user.
 end

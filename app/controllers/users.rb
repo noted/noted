@@ -11,7 +11,7 @@ Noted.controllers :users do
       flash[:notice] = "Welcome to Noted."
       redirect url(:index)
     else
-      flash[:error] = "Something went wrong. #{u.errors}"
+      flash[:error] = "Something has gone wrong. #{u.errors}"
       redirect url(:users, :new)
     end
   end
@@ -50,7 +50,7 @@ Noted.controllers :users do
         redirect url(:users, :edit)
       end
     else
-      flash[:notice] = "Something has gone wrong."
+      flash[:notice] = "Something has gone wrong (user not found)."
       redirect url(:users, :edit)
     end
   end
