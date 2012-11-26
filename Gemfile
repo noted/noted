@@ -40,6 +40,8 @@ group :test do
   gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
 
+  gem 'fuubar'
+
   gem 'spork'
   gem 'factory_girl'
 end

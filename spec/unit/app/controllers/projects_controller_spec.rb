@@ -31,6 +31,18 @@ describe "Projects" do
       p.permalink.should == "the-hubble-telescope"
     end
 
+    context "creates a Project" do
+      let(:p) { Project.find_by_title("The Hubble Telescope") }
+
+      it "not nil" do
+        p.should_not be_nil
+      end
+
+      it "has correct data" do
+        p.permalink.should == "the-hubble-telescope"
+      end
+    end
+
     it "should attribute a Project to the User" do
       user.projects.should_not be_nil
       user.projects.should include(Project.find_by_title("The Hubble Telescope"))
