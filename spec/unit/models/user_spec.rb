@@ -11,6 +11,8 @@ describe User do
   it { should validate_uniqueness_of :username }
   it { should validate_uniqueness_of :email }
 
+  it { should_not allow_value("foobar").for(:email) }
+
   it "can be instantiated" do
     user.should be_valid
   end

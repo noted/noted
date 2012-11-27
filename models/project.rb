@@ -14,7 +14,7 @@ class Project
   many :sources
 
   validates_presence_of :title, :permalink
-
+  
   before_validation :permalink!
 
   private
