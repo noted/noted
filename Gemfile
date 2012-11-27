@@ -20,7 +20,7 @@ gem 'redis'
 
 gem 'bcrypt-ruby'
 
-gem 'padrino-warden', :git => 'git://github.com/eturk/padrino-warden.git'
+gem 'padrino-warden', git: 'git://github.com/eturk/padrino-warden.git'
 
 gem 'haml'
 
@@ -36,12 +36,14 @@ end
 
 group :test do
   gem 'rack-test', require: 'rack/test'
+  
   gem 'rspec'
-  gem 'mocha', require: 'mocha/api'
-  gem 'capybara', require: 'capybara/dsl'
-
+  gem 'shoulda-matchers'
   gem 'autotest'
   gem 'fuubar'
+
+  gem 'mocha', require: 'mocha/api'
+  gem 'capybara', require: 'capybara/dsl'
 
   gem 'spork'
   gem 'factory_girl'

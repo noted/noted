@@ -4,6 +4,13 @@ describe User do
   let(:user)  { create(:user) }
   let(:staff) { create(:staff) }
 
+  it { should validate_presence_of :username }
+  it { should validate_presence_of :name }
+  it { should validate_presence_of :email }
+
+  it { should validate_uniqueness_of :username }
+  it { should validate_uniqueness_of :email }
+
   it "can be instantiated" do
     user.should be_valid
   end
@@ -112,33 +119,6 @@ describe User do
 
     it "should allow a User to destroy itself" do
       user.destroyable_by?(user).should be_true
-    end
-  end
-
-  describe "validations" do
-    describe "requirements" do
-      it "should prevent lack of information" do
-        u = User.new
-        u.save.should_not be_true
-      end
-    end
-
-    describe "uniqueness" do
-      it "should prevent the same email" do
-        u = User.new(:email => user.email, :name => "Foobar", :username => "foobar")
-        u.save.should_not be_true
-      end
-
-      it "should prevent the same username" do
-        u = User.new(:username => user.username, :name => "Foobar", :email => "foo@bar.com")
-      end
-    end
-
-    describe "format" do
-      it "should prevent input of an invalid email" do
-        u = User.new(:email => "foobar", :name => "Foobar", :username => "foobar")
-        u.save.should_not be_true
-      end
     end
   end
 end
