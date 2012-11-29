@@ -13,7 +13,7 @@ FactoryGirl.define do
     username
     email
 
-    factory(:staff) do
+    trait(:staff) do
       name "Les Grossman"
       username "les"
       password "barfoo"
@@ -21,7 +21,7 @@ FactoryGirl.define do
 
       after(:create) do |user, evaluator|
         user.hire!
-      end
+      end 
     end
   end
 end
