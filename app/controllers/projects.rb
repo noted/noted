@@ -17,5 +17,9 @@ Noted.controllers :projects do
   end
 
   get :view, :map => "/:username/:project" do
+    @user = User.find_by_username(params[:username])
+    @project = @user.projects.find_by_permalink(params[:project])
+
+    render 'projects/view'
   end
 end

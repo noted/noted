@@ -4,6 +4,16 @@ describe "Projects" do
   let(:user)    { create(:user) }
   let(:project) { create(:project) }
 
+  describe "GET /:username/:project" do
+    before do
+      get "/#{user.username}/#{project.permalink}"
+    end
+
+    it "should be ok" do
+      response.should be_ok
+    end
+  end
+
   describe "GET /projects/new" do
     before do
       get '/projects/new'

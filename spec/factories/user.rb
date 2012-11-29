@@ -3,10 +3,14 @@ FactoryGirl.define do
     "neil#{n}@hyden.org"
   end
 
+  sequence :username do |n|
+    "neiltyson#{n}"
+  end
+
   factory(:user) do
     name "Neil deGrasse Tyson"
-    username "neiltyson"
     password "foobar"
+    username
     email
 
     factory(:staff) do
