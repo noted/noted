@@ -1,4 +1,3 @@
-
 ## Weekly Log
 
 #### Week of 23 September 2012
@@ -24,10 +23,17 @@
 * Begun work on basic design
 
 #### Week of 4 November 2012
-* _To do..._
+* Worked on programming (data modeling)
 
 #### Week of 11 November 2012
-* _To do..._
+* Continuing programming
+
+#### Week of 18 November 2012
+* Modeling nearly complete
+* Refactored unit testing
+
+#### Week of 25 November 2012
+* Finish data modeling and related tests
 
 
 <hr />
