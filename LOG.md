@@ -1,3 +1,5 @@
+# Work Log
+
 ## Weekly Log
 
 #### Week of 23 September 2012
