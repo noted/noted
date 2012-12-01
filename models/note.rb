@@ -9,10 +9,18 @@ class Note
 
   belongs_to :project
 
-  many :boxes
+  many :sections
+
+  after_save :preliminary
+
+  private
+
+  def preliminary
+    self.sections << Section.new
+  end
 end
 
-class Box
+class Section
   include MongoMapper::EmbeddedDocument
 
   key :title, String

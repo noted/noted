@@ -5,11 +5,11 @@ FactoryGirl.define do
     project {|project| project.association(:project)}
 
     after(:create) do |note, evaluator|
-      note.boxes << create(:box)
+      note.sections << create(:section)
     end
   end
 
-  factory(:box) do
+  factory(:section) do
     title "A Star"
     body "Red Giant"
   end

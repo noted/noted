@@ -16,9 +16,5 @@ describe Project do
 
     it { should_not be_nil }
     it { should == "the-cosmos"}
-
-    it "handles duplicate permalinks"
   end
-
-  it "permalink is unique among User's Projects"
 end

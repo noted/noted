@@ -8,15 +8,15 @@ describe Note do
     note.should be_valid
   end
 
-  it "has embedded Boxes" do
-    note.boxes.should_not be_nil
+  it "has embedded Sections" do
+    note.sections.should_not be_blank
   end
 
-  describe Box do
-    let(:box) { create(:box) }
+  describe Section do
+    let(:section) { create(:section) }
 
     it "can be initialized" do
-      box.should be_valid
+      section.should be_valid
     end
   end
 end
