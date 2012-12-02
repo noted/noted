@@ -5,25 +5,25 @@ describe "Users" do
 
   describe "GET /join" do
     before do
-      get '/join'
+      get "/join"
     end
 
-    it "should be ok" do
+    it "is ok" do
       response.should be_ok
     end
   end
 
   describe "POST /users/create" do
     before do
-      post '/users/create', :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => "foobar"
+      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => "foobar"
     end
 
-    it "should redirect correctly" do
+    it "redirects correctly" do
       response.should be_redirect
       response.location.should == "#{site}/"
     end
 
-    it "should create a User" do
+    it "creates a User" do
       u = User.find_by_email("carl@sagan.org")
 
       u.should_not be_nil
@@ -34,25 +34,25 @@ describe "Users" do
   describe "GET /settings" do
     before do
       login_as user
-      get '/settings'
+      get "/settings"
     end
 
-    it "should be ok" do
+    it "is ok" do
       response.should be_ok
     end
   end
 
-  describe "PUT /users/modify" do
+  describe "PATCH /users/modify" do
     before do
-      put '/users/modify', :id => user.id, :user => { :name => "Carl Sagan" }
+      patch "/users/modify", :id => user.id, :user => { :name => "Carl Sagan" }
     end
 
-    it "should redirect correctly" do
+    it "redirects correctly" do
       response.should be_redirect
       response.location.should == "#{site}/settings"
     end
 
-    it "should modify a User" do
+    it "modifies a User" do
       u = User.find(user.id)
 
       u.name.should == "Carl Sagan"
@@ -64,12 +64,12 @@ describe "Users" do
       delete "/users/destroy", :id => user.id
     end
 
-    it "should redirect correctly" do
+    it "redirects correctly" do
       response.should be_redirect
       response.location.should == "#{site}/"
     end
 
-    it "should destroy a User" do
+    it "destroys a User" do
       User.find(user.id).should be_nil
     end
   end
@@ -79,7 +79,7 @@ describe "Users" do
       get "/#{user.username}"
     end
 
-    it "should be ok" do
+    it "is ok" do
       response.should be_ok
     end
   end

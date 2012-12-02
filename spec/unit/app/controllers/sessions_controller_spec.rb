@@ -8,7 +8,7 @@ describe "Sessions" do
       get "/login"
     end
 
-    it "should be ok" do
+    it "is ok" do
       response.should be_ok
     end
   end

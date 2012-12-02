@@ -3,10 +3,10 @@ require 'spec_helper'
 describe "Core" do
   describe "GET /" do
     before do
-      get '/'
+      get "/"
     end
 
-    it "should be ok" do
+    it "is ok" do
       response.should be_ok
     end
   end

@@ -26,7 +26,7 @@ Noted.controllers :users do
     end
   end
 
-  put :modify do
+  patch :modify do
     u = User.find(params[:id])
 
     if u && u.update_attributes(params[:user])
