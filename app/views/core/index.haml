@@ -1,15 +1,8 @@
 .home
   .hero
-    .inner
-      %section
-        %h2 Research together.
-      %aside
-        %nav
-          %li
-            %a.btn{:href => ""} Explore
-          %li
-            %a.btn{:href => url(:users, :new)} Join
-  %section
-    .inner
-      %h3 For students, by students.
-      %p Noted was concieved as a way to save students from the terrible reality of citing sources and attributing notes to them.
+    %header
+      %h2 Research together
+      %h3 Noted allows students to organize and collaborate on their research projects.
+    %section
+      %a.btn{:href => ""} Explore
+      %a.btn.primary{:href => url(:users, :new)} Join

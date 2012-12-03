@@ -27,35 +27,38 @@
             %h1
               %a{:href => "#"} Noted.
           %nav
-            %ul
-              %li
-                %a{:href => ""} Features
-              %li
-                %a{:href => ""} Pricing
-              %li
-                %a{:href => ""} Documentation
-              %li
-                %a{:href => ""} Support
-            %ul
-              %li
-                %a{:href => ""} Sign In
+            %section
+              %ul
+                %li
+                  %a{:href => ""} Features
+                %li
+                  %a{:href => ""} Pricing
+                %li
+                  %a{:href => ""} Documentation
+                %li
+                  %a{:href => ""} Support
+            %section
+              %ul
+                %li
+                  %a{:href => ""} Join
+                %li
+                  %a{:href => ""} Sign In
 
       #main{:role => "main"}
         = yield
-        .footer-push
 
-    %footer
-      .inner
-        %nav
-          %ul
-            %li
-              %a{:href => ""} GitHub
-            %li
-              %a{:href => ""} Dribbble
-            %li
-              %a{:href => ""} Digication
-        %aside
-          %p= "Noted fecit #{Time.now.year}."
+      %footer
+        .inner
+          %nav
+            %ul
+              %li
+                %a{:href => ""} GitHub
+              %li
+                %a{:href => ""} Dribbble
+              %li
+                %a{:href => ""} Digication
+          %aside
+            %p= "Noted fecit #{Time.now.year}."
 
     %script{:src => "http://code.jquery.com/jquery.min.js"}
     %script{:src => "/jsc/application.js"}

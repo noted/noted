@@ -73,110 +73,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
 	II. Universal
 */
-/* line 10, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-html, body {
-  height: 100%; }
-
-/* line 12, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-#contain {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -4em; }
-  /* line 18, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-  #contain .footer-push {
-    height: 4em; }
-
-/* line 20, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
-body > footer {
-  clear: both;
-  position: relative;
-  height: 4em; }
-
-/* line 34, ../../app/assets/css/application.scss */
+/* line 32, ../../app/assets/css/application.scss */
 body {
   background: #fefefe;
+  border-top: 5px solid #db6363;
   color: #444;
-  font: 400 16px/1.75em freight-sans-pro, ratio, proxima-nova, source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font: 16px/1.75em freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
 
-/* line 40, ../../app/assets/css/application.scss */
+/* line 39, ../../app/assets/css/application.scss */
 a {
   color: #db6363;
   text-decoration: none; }
 
-/* line 45, ../../app/assets/css/application.scss */
+/* line 44, ../../app/assets/css/application.scss */
 h1 {
-  text-shadow: 1px 1px 1px rgba(196, 45, 45, 0.5);
-  font-family: "superclarendon", adelle, Georgia, Times, serif;
-  font-size: 1.35em;
-  font-weight: 700; }
+  font-size: 1.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
-/* line 53, ../../app/assets/css/application.scss */
-h2, h4, h5, h6 {
-  font-family: freight-sans-pro, ratio, proxima-nova, source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif; }
+/* line 51, ../../app/assets/css/application.scss */
+h2, h3, h4, h5, h6 {
+  font-family: "source-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 57, ../../app/assets/css/application.scss */
-h3 {
-  font-family: "superclarendon", adelle, Georgia, Times, serif;
-  font-size: 1.5em;
-  margin-bottom: 0.5em; }
-
-/* line 63, ../../app/assets/css/application.scss */
-.inner {
-  *zoom: 1;
-  max-width: 59.5em;
-  _width: 59.5em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5em;
-  padding-right: 0.5em; }
-  /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .inner:after {
-    content: "";
-    display: table;
-    clear: both; }
+/* line 55, ../../app/assets/css/application.scss */
+h2 {
+  color: #726C5F;
+  font-size: 1.65em;
+  font-weight: bold; }
 
 /*
     III. Header
 */
-/* line 72, ../../app/assets/css/application.scss */
+/* line 66, ../../app/assets/css/application.scss */
 #contain > header {
-  background: #db6363; }
-  /* line 75, ../../app/assets/css/application.scss */
-  #contain > header a {
-    color: #fefefe; }
-  /* line 79, ../../app/assets/css/application.scss */
-  #contain > header hgroup {
-    width: 28.57143%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline; }
-  /* line 83, ../../app/assets/css/application.scss */
-  #contain > header nav {
-    width: 70.58824%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline;
-    font-size: 0.95em;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase; }
-    /* line 91, ../../app/assets/css/application.scss */
-    #contain > header nav ul {
-      display: inline-block; }
-      /* line 94, ../../app/assets/css/application.scss */
-      #contain > header nav ul:last-child {
-        float: right; }
-      /* line 98, ../../app/assets/css/application.scss */
-      #contain > header nav ul li {
-        display: inline-block;
-        vertical-align: middle; }
-        /* line 102, ../../app/assets/css/application.scss */
-        #contain > header nav ul li + li {
-          margin-left: 2em; }
-  /* line 109, ../../app/assets/css/application.scss */
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 3em; }
+  /* line 70, ../../app/assets/css/application.scss */
   #contain > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -185,99 +118,127 @@ h3 {
     margin-right: auto;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    padding: 4em 0; }
+    padding: 2em 0; }
     /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #contain > header .inner:after {
       content: "";
       display: table;
       clear: both; }
+  /* line 76, ../../app/assets/css/application.scss */
+  #contain > header a {
+    color: #555; }
+    /* line 79, ../../app/assets/css/application.scss */
+    #contain > header a:hover {
+      color: #222222; }
+  /* line 84, ../../app/assets/css/application.scss */
+  #contain > header hgroup {
+    width: 24.36975%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+  /* line 88, ../../app/assets/css/application.scss */
+  #contain > header nav {
+    font: 200 0.85em "source-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+    /* line 92, ../../app/assets/css/application.scss */
+    #contain > header nav section {
+      width: 49.57983%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+      /* line 95, ../../app/assets/css/application.scss */
+      #contain > header nav section:last-child {
+        width: 24.36975%;
+        float: right;
+        margin-right: 0;
+        #margin-left: -0.5em;
+        display: inline; }
+        /* line 98, ../../app/assets/css/application.scss */
+        #contain > header nav section:last-child ul {
+          float: right; }
+      /* line 103, ../../app/assets/css/application.scss */
+      #contain > header nav section li {
+        display: inline-block;
+        vertical-align: sub; }
+        /* line 107, ../../app/assets/css/application.scss */
+        #contain > header nav section li + li {
+          margin-left: 2em; }
 
 /*
     IV. Main
 */
-/* line 123, ../../app/assets/css/application.scss */
-#main .home .hero {
-  background: #db6363;
-  border-bottom: 1px solid #e58c8c;
-  color: #fefefe;
-  padding: 2em 0 4em; }
-  /* line 129, ../../app/assets/css/application.scss */
-  #main .home .hero h2 {
-    text-shadow: 1px 1px 1px rgba(196, 45, 45, 0.5);
-    font-family: freight-sans-pro, ratio, proxima-nova, source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 2.5em;
-    font-weight: 300; }
-  /* line 137, ../../app/assets/css/application.scss */
-  #main .home .hero a.btn {
-    background: #fefefe;
-    border-bottom: 3px solid #eaeaea;
-    font-size: 0.85em;
-    font-weight: 600;
-    line-height: 1em;
-    padding: 1em;
-    text-transform: uppercase;
-    position: relative;
-    width: 5em;
-    display: block;
-    text-align: center;
-    vertical-align: middle; }
-    /* line 151, ../../app/assets/css/application.scss */
-    #main .home .hero a.btn:active {
-      margin-bottom: 3px;
-      top: 3px;
-      border-bottom: 0 solid transparent; }
-  /* line 158, ../../app/assets/css/application.scss */
-  #main .home .hero li {
-    display: inline-block; }
+/* line 121, ../../app/assets/css/application.scss */
+#main .home {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 2em; }
+  /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #main .home:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 126, ../../app/assets/css/application.scss */
+  #main .home header {
+    margin-bottom: 3em; }
+    /* line 129, ../../app/assets/css/application.scss */
+    #main .home header h3 {
+      color: #aaa;
+      font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
+    /* line 134, ../../app/assets/css/application.scss */
+    #main .home header p {
+      font-weight: 300;
+      margin-top: 1em;
+      font-size: 1.15em; }
+  /* line 141, ../../app/assets/css/application.scss */
+  #main .home a.btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background: #aaa;
+    color: #fefefe;
+    font: 700 1.15em "source-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 0.5em 1em; }
+    /* line 149, ../../app/assets/css/application.scss */
+    #main .home a.btn:hover {
+      background: #b7b7b7; }
+    /* line 153, ../../app/assets/css/application.scss */
+    #main .home a.btn.primary {
+      background: #69B800; }
+      /* line 156, ../../app/assets/css/application.scss */
+      #main .home a.btn.primary:hover {
+        background: #72c700; }
   /* line 162, ../../app/assets/css/application.scss */
-  #main .home .hero nav {
-    float: right; }
-  /* line 167, ../../app/assets/css/application.scss */
-  #main .home .hero .inner aside {
-    width: 49.57983%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline; }
-  /* line 171, ../../app/assets/css/application.scss */
-  #main .home .hero .inner section {
-    width: 49.57983%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline; }
-/* line 177, ../../app/assets/css/application.scss */
-#main .home > section {
-  padding-top: 3em; }
+  #main .home h3 {
+    font-weight: 300;
+    font-size: 1.25em;
+    margin-top: 0.25em; }
 
 /*
     V. Footer
 */
-/* line 188, ../../app/assets/css/application.scss */
-body > footer {
-  background: #cbd4d6;
-  padding: 1.5em 0; }
-  /* line 192, ../../app/assets/css/application.scss */
-  body > footer nav {
-    width: 74.78992%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline;
-    font-weight: 500;
-    font-size: 0.95em;
-    text-transform: uppercase; }
-    /* line 200, ../../app/assets/css/application.scss */
-    body > footer nav ul li {
-      display: inline; }
-      /* line 203, ../../app/assets/css/application.scss */
-      body > footer nav ul li + li {
-        padding-left: 1em; }
-  /* line 210, ../../app/assets/css/application.scss */
-  body > footer aside {
-    width: 24.36975%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline; }
-    /* line 213, ../../app/assets/css/application.scss */
-    body > footer aside p {
-      text-align: right; }
+/* line 175, ../../app/assets/css/application.scss */
+#contain > footer {
+  border-top: 1px solid #efefef;
+  padding-top: 2em;
+  margin-top: 10em; }
+  /* line 180, ../../app/assets/css/application.scss */
+  #contain > footer .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em; }
+    /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #contain > footer .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
