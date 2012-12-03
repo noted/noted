@@ -102,14 +102,18 @@ h2 {
   font-size: 1.65em;
   font-weight: bold; }
 
+/* line 61, ../../app/assets/css/application.scss */
+img {
+  max-width: 100%; }
+
 /*
-    III. Header
+	III. Header
 */
-/* line 66, ../../app/assets/css/application.scss */
+/* line 70, ../../app/assets/css/application.scss */
 #contain > header {
   border-bottom: 1px solid #efefef;
   margin-bottom: 3em; }
-  /* line 70, ../../app/assets/css/application.scss */
+  /* line 74, ../../app/assets/css/application.scss */
   #contain > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -124,51 +128,51 @@ h2 {
       content: "";
       display: table;
       clear: both; }
-  /* line 76, ../../app/assets/css/application.scss */
+  /* line 80, ../../app/assets/css/application.scss */
   #contain > header a {
     color: #555; }
-    /* line 79, ../../app/assets/css/application.scss */
+    /* line 83, ../../app/assets/css/application.scss */
     #contain > header a:hover {
       color: #222222; }
-  /* line 84, ../../app/assets/css/application.scss */
+  /* line 88, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 88, ../../app/assets/css/application.scss */
+  /* line 92, ../../app/assets/css/application.scss */
   #contain > header nav {
     font: 200 0.85em "source-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-    /* line 92, ../../app/assets/css/application.scss */
+    /* line 96, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 95, ../../app/assets/css/application.scss */
+      /* line 99, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 98, ../../app/assets/css/application.scss */
+        /* line 102, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 103, ../../app/assets/css/application.scss */
+      /* line 107, ../../app/assets/css/application.scss */
       #contain > header nav section li {
         display: inline-block;
         vertical-align: sub; }
-        /* line 107, ../../app/assets/css/application.scss */
+        /* line 111, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
-    IV. Main
+	IV. Main
 */
-/* line 121, ../../app/assets/css/application.scss */
-#main .home {
+/* line 126, ../../app/assets/css/application.scss */
+#main .home > section:first-child {
   *zoom: 1;
   max-width: 59.5em;
   _width: 59.5em;
@@ -178,24 +182,24 @@ h2 {
   padding-right: 0.5em;
   padding-top: 2em; }
   /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #main .home:after {
+  #main .home > section:first-child:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 126, ../../app/assets/css/application.scss */
-  #main .home header {
+  /* line 131, ../../app/assets/css/application.scss */
+  #main .home > section:first-child header {
     margin-bottom: 3em; }
-    /* line 129, ../../app/assets/css/application.scss */
-    #main .home header h3 {
+    /* line 134, ../../app/assets/css/application.scss */
+    #main .home > section:first-child header h3 {
       color: #aaa;
       font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
-    /* line 134, ../../app/assets/css/application.scss */
-    #main .home header p {
+    /* line 139, ../../app/assets/css/application.scss */
+    #main .home > section:first-child header p {
       font-weight: 300;
       margin-top: 1em;
       font-size: 1.15em; }
-  /* line 141, ../../app/assets/css/application.scss */
-  #main .home a.btn {
+  /* line 146, ../../app/assets/css/application.scss */
+  #main .home > section:first-child a.btn {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -205,31 +209,33 @@ h2 {
     color: #fefefe;
     font: 700 1.15em "source-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
     padding: 0.5em 1em; }
-    /* line 149, ../../app/assets/css/application.scss */
-    #main .home a.btn:hover {
+    /* line 154, ../../app/assets/css/application.scss */
+    #main .home > section:first-child a.btn:hover {
       background: #b7b7b7; }
-    /* line 153, ../../app/assets/css/application.scss */
-    #main .home a.btn.primary {
+    /* line 158, ../../app/assets/css/application.scss */
+    #main .home > section:first-child a.btn.primary {
       background: #69B800; }
-      /* line 156, ../../app/assets/css/application.scss */
-      #main .home a.btn.primary:hover {
+      /* line 161, ../../app/assets/css/application.scss */
+      #main .home > section:first-child a.btn.primary:hover {
         background: #72c700; }
-  /* line 162, ../../app/assets/css/application.scss */
-  #main .home h3 {
+  /* line 167, ../../app/assets/css/application.scss */
+  #main .home > section:first-child h3 {
     font-weight: 300;
     font-size: 1.25em;
     margin-top: 0.25em; }
-
-/*
-    V. Footer
-*/
-/* line 175, ../../app/assets/css/application.scss */
-#contain > footer {
-  border-top: 1px solid #efefef;
-  padding-top: 2em;
-  margin-top: 10em; }
-  /* line 180, ../../app/assets/css/application.scss */
-  #contain > footer .inner {
+/* line 174, ../../app/assets/css/application.scss */
+#main .home > section {
+  margin-top: 5em;
+  padding: 5em 0; }
+  /* line 175, ../../app/assets/css/application.scss */
+  #main .home > section:nth-child(2n) {
+    background: #F0F2F5; }
+  /* line 182, ../../app/assets/css/application.scss */
+  #main .home > section h3 {
+    font-size: 1.15em;
+    font-weight: 600; }
+  /* line 187, ../../app/assets/css/application.scss */
+  #main .home > section .row {
     *zoom: 1;
     max-width: 59.5em;
     _width: 59.5em;
@@ -237,6 +243,43 @@ h2 {
     margin-right: auto;
     padding-left: 0.5em;
     padding-right: 0.5em; }
+    /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #main .home > section .row:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 190, ../../app/assets/css/application.scss */
+    #main .home > section .row article {
+      width: 24.36975%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+      /* line 193, ../../app/assets/css/application.scss */
+      #main .home > section .row article:last-child {
+        float: right;
+        margin-right: 0;
+        #margin-left: -0.5em;
+        display: inline; }
+
+/*
+	V. Footer
+*/
+/* line 207, ../../app/assets/css/application.scss */
+#contain > footer {
+  border-top: 1px solid #e0e0e0;
+  font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif;
+  color: #a0a0a0;
+  padding: 2em 0; }
+  /* line 214, ../../app/assets/css/application.scss */
+  #contain > footer .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center; }
     /* line 38, ../../../../../../home/ethan/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #contain > footer .inner:after {
       content: "";

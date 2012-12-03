@@ -30,154 +30,190 @@ $blue: #63a9db;
 */
 
 body {
-    background: #fefefe;
-    border-top: 5px solid $red;
-    color: #444;
-    font: 16px/1.75em $serif;
+	background: #fefefe;
+	border-top: 5px solid $red;
+	color: #444;
+	font: 16px/1.75em $serif;
 }
 
 a {
-    color: $red;
-    text-decoration: none;
+	color: $red;
+	text-decoration: none;
 }
 
 h1 {
-    font-size: 1.15em;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+	font-size: 1.15em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: $sans-serif;
+	font-family: $sans-serif;
 }
 
 h2 {
-    color: #726C5F;
-    font-size: 1.65em;
-    font-weight: bold;
+	color: #726C5F;
+	font-size: 1.65em;
+	font-weight: bold;
+}
+
+img {
+	max-width: 100%;
 }
 
 
 /*
-    III. Header
+	III. Header
 */
 
 #contain > header {
-    border-bottom: 1px solid #efefef;
-    margin-bottom: 3em;
-    
-    .inner {
-        @include container;
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 3em;
+	
+	.inner {
+		@include container;
 
-        padding: 2em 0;
-    }
+		padding: 2em 0;
+	}
 
-    a {
-        color: #555;
+	a {
+		color: #555;
 
-        &:hover {
-            color: darken(#555, 20%);
-        }
-    }
+		&:hover {
+			color: darken(#555, 20%);
+		}
+	}
 
-    hgroup {
-        @include span-columns(6);
-    }
+	hgroup {
+		@include span-columns(6);
+	}
 
-    nav {
-        font: 200 0.85em $sans-serif;
-        text-transform: uppercase;
-        
-        section {
-            @include span-columns(12);
+	nav {
+		font: 200 0.85em $sans-serif;
+		text-transform: uppercase;
+		
+		section {
+			@include span-columns(12);
 
-            &:last-child {
-                @include span-columns(6 omega);
+			&:last-child {
+				@include span-columns(6 omega);
 
-                ul {
-                    float: right;
-                }
-            }
+				ul {
+					float: right;
+				}
+			}
 
-            li {
-                display: inline-block;
-                vertical-align: sub;
+			li {
+				display: inline-block;
+				vertical-align: sub;
 
-                & + li {
-                    margin-left: 2em;
-                }
-            }
-        }
-    }
+				& + li {
+					margin-left: 2em;
+				}
+			}
+		}
+	}
 }
 
 
 /*
-    IV. Main
+	IV. Main
 */
 
 #main {
-    .home {
-        @include container;
+	.home {
+		& > section:first-child {
+			@include container;
 
-        padding-top: 2em;
+			padding-top: 2em;
 
-        header {
-            margin-bottom: 3em;
+			header {
+				margin-bottom: 3em;
 
-            h3 {
-                color: #aaa;
-                font-family: $serif;
-            }
+				h3 {
+					color: #aaa;
+					font-family: $serif;
+				}
 
-            p {
-                font-weight: 300;
-                margin-top: 1em;
-                font-size: 1.15em;
-            }
-        }
+				p {
+					font-weight: 300;
+					margin-top: 1em;
+					font-size: 1.15em;
+				}
+			}
 
-        a.btn {
-            @include border-radius(2px);
+			a.btn {
+				@include border-radius(2px);
 
-            background: #aaa;
-            color: #fefefe;
-            font: 700 1.15em $sans-serif;
-            padding: 0.5em 1em;
+				background: #aaa;
+				color: #fefefe;
+				font: 700 1.15em $sans-serif;
+				padding: 0.5em 1em;
 
-            &:hover {
-                background: lighten(#aaa, 5%);
-            }
+				&:hover {
+					background: lighten(#aaa, 5%);
+				}
 
-            &.primary {
-                background: #69B800;
+				&.primary {
+					background: #69B800;
 
-                &:hover {
-                    background: lighten(#69B800, 3%);
-                }
-            }
-        }
+					&:hover {
+						background: lighten(#69B800, 3%);
+					}
+				}
+			}
 
-        h3 {
-            font-weight: 300;
-            font-size: 1.25em;
-            margin-top: 0.25em;
-        }
-    }
+			h3 {
+				font-weight: 300;
+				font-size: 1.25em;
+				margin-top: 0.25em;
+			}
+		}
+
+		& > section {
+			&:nth-child(2n) {
+				background: #F0F2F5;
+			}
+
+			margin-top: 5em;
+			padding: 5em 0;
+
+			h3 {
+				font-size: 1.15em;
+				font-weight: 600;
+			}
+
+			.row {
+				@include container;
+
+				article {
+					@include span-columns(6);
+
+					&:last-child {
+						@include omega;
+					}
+				}
+			}
+		}
+	}
 }
 
 
 /*
-    V. Footer
+	V. Footer
 */
 
 #contain > footer {
-    border-top: 1px solid #efefef;
-    padding-top: 2em;
-    margin-top: 10em;
+	border-top: 1px solid #e0e0e0;
+	font-family: $serif;
+	color: #a0a0a0;
+	padding: 2em 0;
+	//margin-top: 10em;
 
-    .inner {
-        @include container;
-    }
+	.inner {
+		@include container;
+
+		text-align: center;
+	}
 }
