@@ -31,7 +31,7 @@ $blue: #63a9db;
 
 body {
 	background: #fefefe;
-	border-top: 5px solid $red;
+	border-top: 10px solid $red;
 	color: #444;
 	font: 16px/1.75em $serif;
 }
@@ -53,7 +53,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	color: #726C5F;
+	color: #777;
 	font-size: 1.65em;
 	font-weight: bold;
 }
@@ -69,7 +69,6 @@ img {
 
 #contain > header {
 	border-bottom: 1px solid #e0e0e0;
-	margin-bottom: 3em;
 	
 	.inner {
 		@include container;
@@ -123,7 +122,24 @@ img {
 */
 
 #main {
+	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
+
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+
 	.home {
+		& > section:first-child {
+			header {
+				@include span-columns(18 omega);
+				@include suffix(6);
+			}
+		}
+
+		h2 {
+			margin-bottom: 0.5em;
+		}
+
 		& > section:first-child, .join {
 			@include container;
 
@@ -157,10 +173,10 @@ img {
 				}
 
 				&.primary {
-					background: #69B800;
+					background: $blue;
 
 					&:hover {
-						background: lighten(#69B800, 3%);
+						background: lighten($blue, 3%);
 					}
 				}
 			}
@@ -189,7 +205,11 @@ img {
 				@include container;
 
 				article {
-					@include span-columns(6);
+					@include prefix(1);
+					@include span-columns(4);
+					@include suffix(1);
+
+					text-align: center;
 
 					&:last-child {
 						@include omega;
@@ -200,6 +220,7 @@ img {
 
 		.join {
 			text-align: center;
+			margin-bottom: 2em;
 		}
 
 	}
@@ -214,12 +235,40 @@ img {
 	border-top: 1px solid #e0e0e0;
 	font-family: $serif;
 	color: #a0a0a0;
-	padding: 2em 0;
+	padding: 4em 0;
 	//margin-top: 10em;
 
 	.inner {
-		@include container;
+		nav {
+			@include container;
 
-		text-align: center;
+			article {
+				@include span-columns(4);
+
+
+
+
+				h3 {
+					font-size: 0.85em;
+					font-weight: bold;
+					text-transform: uppercase
+				}
+
+				&:first-child {
+					@include prefix(6);
+				}
+
+				&:last-child {
+					@include omega;
+					@include suffix(6);
+				}
+			}
+		}
+
+		section {
+			@include container;
+
+			text-align: center;
+		}
 	}
 }
