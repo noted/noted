@@ -68,7 +68,7 @@ img {
 */
 
 #contain > header {
-	border-bottom: 1px solid #efefef;
+	border-bottom: 1px solid #e0e0e0;
 	margin-bottom: 3em;
 	
 	.inner {
@@ -90,7 +90,7 @@ img {
 	}
 
 	nav {
-		font: 200 0.85em $sans-serif;
+		font: 200 0.78em $sans-serif;
 		text-transform: uppercase;
 		
 		section {
@@ -106,7 +106,8 @@ img {
 
 			li {
 				display: inline-block;
-				vertical-align: sub;
+				position: relative;
+				top: 5px;
 
 				& + li {
 					margin-left: 2em;
@@ -123,7 +124,7 @@ img {
 
 #main {
 	.home {
-		& > section:first-child {
+		& > section:first-child, .join {
 			@include container;
 
 			padding-top: 2em;
@@ -196,6 +197,11 @@ img {
 				}
 			}
 		}
+
+		.join {
+			text-align: center;
+		}
+
 	}
 }
 
