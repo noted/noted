@@ -31,7 +31,7 @@ gem 'barista'
 
 group :development do
   gem 'foreman'
-  gem 'therubyracer'
+  gem 'execjs'
 end
 
 group :test do
