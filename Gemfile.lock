@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/eturk/padrino-warden.git
+  remote: git://github.com/noted/padrino-warden.git
   revision: b489d377606f0a052d97d461d11fcd710e38a5bb
   specs:
     padrino-warden (0.1.1)
