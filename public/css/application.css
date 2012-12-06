@@ -73,46 +73,71 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
 	II. Universal
 */
-/* line 32, ../../app/assets/css/application.scss */
+/* line 34, ../../app/assets/css/application.scss */
 body {
   background: #fefefe;
   border-top: 10px solid #db6363;
-  color: #444;
+  color: #444444;
   font: 16px/1.75em freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
 
-/* line 39, ../../app/assets/css/application.scss */
+/* line 41, ../../app/assets/css/application.scss */
 a {
   color: #db6363;
   text-decoration: none; }
 
-/* line 44, ../../app/assets/css/application.scss */
+/* line 46, ../../app/assets/css/application.scss */
+a.btn, button, input[type="submit"] {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #aaa;
+  color: #fefefe;
+  font-family: "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  padding: 0.5em 1em; }
+  /* line 55, ../../app/assets/css/application.scss */
+  a.btn:hover, button:hover, input[type="submit"]:hover {
+    background: #b7b7b7; }
+  /* line 59, ../../app/assets/css/application.scss */
+  a.btn.large, button.large, input[type="submit"].large {
+    font-size: 1.15em; }
+  /* line 63, ../../app/assets/css/application.scss */
+  a.btn.primary, button.primary, input[type="submit"].primary {
+    background: #63a9db; }
+    /* line 66, ../../app/assets/css/application.scss */
+    a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover {
+      background: #6fb0de; }
+
+/* line 72, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.15em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px; }
 
-/* line 51, ../../app/assets/css/application.scss */
+/* line 79, ../../app/assets/css/application.scss */
 h2, h3, h4, h5, h6 {
   font-family: "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 55, ../../app/assets/css/application.scss */
+/* line 83, ../../app/assets/css/application.scss */
 h2 {
-  color: #777;
+  color: #777777;
   font-size: 1.65em;
   font-weight: bold; }
 
-/* line 61, ../../app/assets/css/application.scss */
+/* line 90, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
 /*
 	III. Header
 */
-/* line 70, ../../app/assets/css/application.scss */
+/* line 99, ../../app/assets/css/application.scss */
 #contain > header {
   border-bottom: 1px solid #e0e0e0; }
-  /* line 73, ../../app/assets/css/application.scss */
+  /* line 102, ../../app/assets/css/application.scss */
   #contain > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -127,57 +152,57 @@ img {
       content: "";
       display: table;
       clear: both; }
-  /* line 79, ../../app/assets/css/application.scss */
+  /* line 108, ../../app/assets/css/application.scss */
   #contain > header a {
     color: #555; }
-    /* line 82, ../../app/assets/css/application.scss */
+    /* line 111, ../../app/assets/css/application.scss */
     #contain > header a:hover {
       color: #222222; }
-  /* line 87, ../../app/assets/css/application.scss */
+  /* line 116, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 91, ../../app/assets/css/application.scss */
+  /* line 120, ../../app/assets/css/application.scss */
   #contain > header nav {
     font: 200 0.78em "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-    /* line 95, ../../app/assets/css/application.scss */
+    /* line 124, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 98, ../../app/assets/css/application.scss */
+      /* line 127, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 101, ../../app/assets/css/application.scss */
+        /* line 130, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 106, ../../app/assets/css/application.scss */
+      /* line 135, ../../app/assets/css/application.scss */
       #contain > header nav section li {
         display: inline-block;
         position: relative;
         top: 5px; }
-        /* line 111, ../../app/assets/css/application.scss */
+        /* line 140, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
 	IV. Main
 */
-/* line 124, ../../app/assets/css/application.scss */
+/* line 153, ../../app/assets/css/application.scss */
 #main {
   border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
   margin-top: 0.25em;
   margin-bottom: 0.25em; }
-  /* line 133, ../../app/assets/css/application.scss */
+  /* line 162, ../../app/assets/css/application.scss */
   #main .home > section:first-child header {
     width: 74.78992%;
     float: right;
@@ -185,10 +210,10 @@ img {
     #margin-left: -0.5em;
     display: inline;
     padding-right: 25.21008%; }
-  /* line 139, ../../app/assets/css/application.scss */
+  /* line 168, ../../app/assets/css/application.scss */
   #main .home h2 {
     margin-bottom: 0.5em; }
-  /* line 143, ../../app/assets/css/application.scss */
+  /* line 172, ../../app/assets/css/application.scss */
   #main .home > section:first-child, #main .home .join {
     *zoom: 1;
     max-width: 59.5em;
@@ -203,55 +228,35 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 148, ../../app/assets/css/application.scss */
+    /* line 177, ../../app/assets/css/application.scss */
     #main .home > section:first-child header, #main .home .join header {
       margin-bottom: 3em; }
-      /* line 151, ../../app/assets/css/application.scss */
+      /* line 180, ../../app/assets/css/application.scss */
       #main .home > section:first-child header h3, #main .home .join header h3 {
         color: #aaa;
         font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
-      /* line 156, ../../app/assets/css/application.scss */
+      /* line 185, ../../app/assets/css/application.scss */
       #main .home > section:first-child header p, #main .home .join header p {
         font-weight: 300;
         margin-top: 1em;
         font-size: 1.15em; }
-    /* line 163, ../../app/assets/css/application.scss */
-    #main .home > section:first-child a.btn, #main .home .join a.btn {
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      -ms-border-radius: 2px;
-      -o-border-radius: 2px;
-      border-radius: 2px;
-      background: #aaa;
-      color: #fefefe;
-      font: 700 1.15em "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-      padding: 0.5em 1em; }
-      /* line 171, ../../app/assets/css/application.scss */
-      #main .home > section:first-child a.btn:hover, #main .home .join a.btn:hover {
-        background: #b7b7b7; }
-      /* line 175, ../../app/assets/css/application.scss */
-      #main .home > section:first-child a.btn.primary, #main .home .join a.btn.primary {
-        background: #63a9db; }
-        /* line 178, ../../app/assets/css/application.scss */
-        #main .home > section:first-child a.btn.primary:hover, #main .home .join a.btn.primary:hover {
-          background: #6fb0de; }
-    /* line 184, ../../app/assets/css/application.scss */
+    /* line 196, ../../app/assets/css/application.scss */
     #main .home > section:first-child h3, #main .home .join h3 {
       font-weight: 300;
       font-size: 1.25em;
       margin-top: 0.25em; }
-  /* line 191, ../../app/assets/css/application.scss */
+  /* line 203, ../../app/assets/css/application.scss */
   #main .home > section {
     margin-top: 5em;
     padding: 5em 0; }
-    /* line 192, ../../app/assets/css/application.scss */
+    /* line 204, ../../app/assets/css/application.scss */
     #main .home > section:nth-child(2n) {
       background: #F0F2F5; }
-    /* line 199, ../../app/assets/css/application.scss */
+    /* line 211, ../../app/assets/css/application.scss */
     #main .home > section h3 {
       font-size: 1.15em;
       font-weight: 600; }
-    /* line 204, ../../app/assets/css/application.scss */
+    /* line 216, ../../app/assets/css/application.scss */
     #main .home > section .row {
       *zoom: 1;
       max-width: 59.5em;
@@ -265,7 +270,7 @@ img {
         content: "";
         display: table;
         clear: both; }
-      /* line 207, ../../app/assets/css/application.scss */
+      /* line 219, ../../app/assets/css/application.scss */
       #main .home > section .row article {
         padding-left: 4.20168%;
         width: 15.96639%;
@@ -274,13 +279,13 @@ img {
         display: inline;
         padding-right: 4.20168%;
         text-align: center; }
-        /* line 214, ../../app/assets/css/application.scss */
+        /* line 226, ../../app/assets/css/application.scss */
         #main .home > section .row article:last-child {
           float: right;
           margin-right: 0;
           #margin-left: -0.5em;
           display: inline; }
-  /* line 221, ../../app/assets/css/application.scss */
+  /* line 233, ../../app/assets/css/application.scss */
   #main .home .join {
     text-align: center;
     margin-bottom: 2em; }
@@ -288,49 +293,14 @@ img {
 /*
 	V. Footer
 */
-/* line 234, ../../app/assets/css/application.scss */
+/* line 246, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #e0e0e0;
   font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif;
   color: #a0a0a0;
   padding: 4em 0; }
-  /* line 242, ../../app/assets/css/application.scss */
-  #contain > footer .inner nav {
-    *zoom: 1;
-    max-width: 59.5em;
-    _width: 59.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto; }
-    /* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #contain > footer .inner nav:after {
-      content: "";
-      display: table;
-      clear: both; }
-    /* line 245, ../../app/assets/css/application.scss */
-    #contain > footer .inner nav article {
-      width: 15.96639%;
-      float: left;
-      margin-right: 0.84034%;
-      display: inline; }
-      /* line 251, ../../app/assets/css/application.scss */
-      #contain > footer .inner nav article h3 {
-        font-size: 0.85em;
-        font-weight: bold;
-        text-transform: uppercase; }
-      /* line 257, ../../app/assets/css/application.scss */
-      #contain > footer .inner nav article:first-child {
-        padding-left: 25.21008%; }
-      /* line 261, ../../app/assets/css/application.scss */
-      #contain > footer .inner nav article:last-child {
-        float: right;
-        margin-right: 0;
-        #margin-left: -0.5em;
-        display: inline;
-        padding-right: 25.21008%; }
-  /* line 268, ../../app/assets/css/application.scss */
-  #contain > footer .inner section {
+  /* line 252, ../../app/assets/css/application.scss */
+  #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;
     _width: 59.5em;
@@ -340,7 +310,7 @@ img {
     margin-right: auto;
     text-align: center; }
     /* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #contain > footer .inner section:after {
+    #contain > footer section:after {
       content: "";
       display: table;
       clear: both; }
