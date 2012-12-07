@@ -152,67 +152,39 @@ img {
 #main {
 	border-bottom: 1px solid #e0e0e0;
 	border-top: 1px solid #e0e0e0;
-
 	margin-top: 0.25em;
 	margin-bottom: 0.25em;
+	padding: 4em 0;
 
-	.home {
-		& > section:first-child {
-			header {
-				@include span-columns(18 omega);
-				@include suffix(6);
+	.hero {
+		& > header {
+			padding: 3em 0;
+
+			header, section {
+				@include container;
 			}
-		}
-
-		h2 {
-			margin-bottom: 0.5em;
-		}
-
-		& > section:first-child, .join {
-			@include container;
-
-			padding-top: 2em;
 
 			header {
 				margin-bottom: 3em;
 
-				h3 {
-					color: #aaa;
-					font-family: $serif;
+				h2 {
+					margin-bottom: 0.25em;
 				}
 
 				p {
+					color: #aaa;
 					font-weight: 300;
-					margin-top: 1em;
-					font-size: 1.15em;
+					font-size: 1.25em;
 				}
-			}
-
-			a.btn {
-				
-			}
-
-			h3 {
-				font-weight: 300;
-				font-size: 1.25em;
-				margin-top: 0.25em;
 			}
 		}
 
 		& > section {
-			&:nth-child(2n) {
-				background: #F0F2F5;
-			}
+			background: #f0f2f5;
+			margin: 6em 0;
+			padding: 5em 0 6em;
 
-			margin-top: 5em;
-			padding: 5em 0;
-
-			h3 {
-				font-size: 1.15em;
-				font-weight: 600;
-			}
-
-			.row {
+			.inner {
 				@include container;
 
 				article {
@@ -225,15 +197,22 @@ img {
 					&:last-child {
 						@include omega;
 					}
+
+					h3 {
+						font-weight: 600;
+					}
 				}
 			}
 		}
 
-		.join {
+		& > footer {
+			padding: 2em 0 3em;
 			text-align: center;
-			margin-bottom: 2em;
-		}
 
+			header {
+				margin-bottom: 2em;
+			}
+		}
 	}
 }
 
