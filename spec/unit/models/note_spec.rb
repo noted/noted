@@ -12,6 +12,12 @@ describe Note do
     note.sections.should_not be_blank
   end
 
+  describe "#permalink!" do
+    subject { note.permalink }
+
+    it { should_not be_blank }
+  end
+
   describe Section do
     let(:section) { create(:section) }
 

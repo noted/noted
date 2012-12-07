@@ -3,6 +3,7 @@ class Note
 
   key :title, String
   key :sources, Array
+  key :permalink, String
 
   timestamps!
   userstamps!
@@ -11,9 +12,14 @@ class Note
 
   many :sections
 
+  after_create :permalink!
   after_save :preliminary
 
   private
+
+  def permalink!
+    self.permalink = Base32::Crockford.encode(self.class.count + 1)
+  end
 
   def preliminary
     self.sections << Section.new
