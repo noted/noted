@@ -26,7 +26,7 @@ describe "Projects" do
 
   describe "POST /projects/create" do
     before do
-      post "/projects/create", :user_id => user.id, :project => { :title => "The Hubble Telescope" }
+      post "/projects/create", :user => user.id, :project => { :title => "The Hubble Telescope" }
     end
 
     context "redirects correctly" do

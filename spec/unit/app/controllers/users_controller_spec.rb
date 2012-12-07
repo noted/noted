@@ -34,6 +34,7 @@ describe "Users" do
   describe "GET /settings" do
     before do
       login_as user
+      
       get "/settings"
     end
 
@@ -42,9 +43,9 @@ describe "Users" do
     end
   end
 
-  describe "PATCH /users/modify" do
+  describe "PATCH /users/update" do
     before do
-      patch "/users/modify", :id => user.id, :user => { :name => "Carl Sagan" }
+      patch "/users/update", :id => user.id, :user => { :name => "Carl Sagan" }
     end
 
     it "redirects correctly" do
