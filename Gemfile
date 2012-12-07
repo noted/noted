@@ -19,6 +19,7 @@ gem 'state_machine'
 gem 'redis'
 
 gem 'bcrypt-ruby'
+gem 'base32-crockford', require: 'base32/crockford'
 
 gem 'padrino-warden', git: 'git://github.com/noted/padrino-warden.git'
 
