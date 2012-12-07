@@ -172,6 +172,9 @@ img {
 				}
 
 				p {
+					@include span-columns(18 omega);
+					@include suffix(6);
+
 					color: #aaa;
 					font-weight: 300;
 					font-size: 1.25em;

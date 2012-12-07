@@ -228,15 +228,21 @@ img {
         margin-bottom: 0.25em; }
       /* line 174, ../../app/assets/css/application.scss */
       #main .hero > header header p {
+        width: 74.78992%;
+        float: right;
+        margin-right: 0;
+        #margin-left: -0.5em;
+        display: inline;
+        padding-right: 25.21008%;
         color: #aaa;
         font-weight: 300;
         font-size: 1.25em; }
-  /* line 182, ../../app/assets/css/application.scss */
+  /* line 185, ../../app/assets/css/application.scss */
   #main .hero > section {
     background: #f0f2f5;
     margin: 6em 0;
     padding: 5em 0 6em; }
-    /* line 187, ../../app/assets/css/application.scss */
+    /* line 190, ../../app/assets/css/application.scss */
     #main .hero > section .inner {
       *zoom: 1;
       max-width: 59.5em;
@@ -250,7 +256,7 @@ img {
         content: "";
         display: table;
         clear: both; }
-      /* line 190, ../../app/assets/css/application.scss */
+      /* line 193, ../../app/assets/css/application.scss */
       #main .hero > section .inner article {
         padding-left: 4.20168%;
         width: 15.96639%;
@@ -259,33 +265,33 @@ img {
         display: inline;
         padding-right: 4.20168%;
         text-align: center; }
-        /* line 197, ../../app/assets/css/application.scss */
+        /* line 200, ../../app/assets/css/application.scss */
         #main .hero > section .inner article:last-child {
           float: right;
           margin-right: 0;
           #margin-left: -0.5em;
           display: inline; }
-        /* line 201, ../../app/assets/css/application.scss */
+        /* line 204, ../../app/assets/css/application.scss */
         #main .hero > section .inner article h3 {
           font-weight: 600; }
-  /* line 208, ../../app/assets/css/application.scss */
+  /* line 211, ../../app/assets/css/application.scss */
   #main .hero > footer {
     padding: 2em 0 3em;
     text-align: center; }
-    /* line 212, ../../app/assets/css/application.scss */
+    /* line 215, ../../app/assets/css/application.scss */
     #main .hero > footer header {
       margin-bottom: 2em; }
 
 /*
 	V. Footer
 */
-/* line 224, ../../app/assets/css/application.scss */
+/* line 227, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #e0e0e0;
   font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif;
   color: #a0a0a0;
   padding: 4em 0; }
-  /* line 230, ../../app/assets/css/application.scss */
+  /* line 233, ../../app/assets/css/application.scss */
   #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;
