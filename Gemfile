@@ -30,6 +30,10 @@ gem 'susy'
 
 gem 'barista'
 
+group :development, :test do
+  gem 'log_buddy'
+end
+
 group :development do
   gem 'foreman'
   gem 'execjs'
