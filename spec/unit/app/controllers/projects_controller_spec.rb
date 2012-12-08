@@ -66,9 +66,9 @@ describe "Projects" do
     end
   end
 
-  describe "PATCH /projects/modify" do
+  describe "PATCH /projects/update" do
     before do
-      patch "/projects/modify", :id => project.id, :project => { :title => "The Hubble Telescope" }
+      patch "/projects/update", :id => project.id, :project => { :title => "The Hubble Telescope" }
 
       project.reload
     end
