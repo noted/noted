@@ -4,4 +4,5 @@ tmp/**/*
 bin/*
 vendor/gems/*
 !vendor/gems/cache/
+.rbx/*
 .sass-cache/*
