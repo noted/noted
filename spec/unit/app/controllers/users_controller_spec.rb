@@ -33,8 +33,6 @@ describe "Users" do
 
   describe "GET /settings" do
     before do
-      login_as user
-      
       get "/settings"
     end
 

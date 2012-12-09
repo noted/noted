@@ -11,7 +11,6 @@ Spork.prefork do
     conf.include Rack::Test::Methods
     conf.include Capybara::DSL
     conf.include FactoryGirl::Syntax::Methods
-    conf.include Warden::Test::Helpers
 
     conf.mock_with :mocha
 
@@ -19,8 +18,6 @@ Spork.prefork do
       MongoMapper.database.collections.each do |c|
         c.remove
       end
-
-      Warden.test_reset!
     end
 
     Capybara.app = Padrino.application

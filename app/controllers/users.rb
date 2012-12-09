@@ -17,13 +17,7 @@ Noted.controllers :users do
   end
 
   get :edit, :map => "/settings" do
-    @user = env["warden"].user
-
-    if @user
-      render 'users/edit'
-    else
-      redirect url(:sessions, :new)
-    end
+    render 'users/edit'
   end
 
   patch :update do
