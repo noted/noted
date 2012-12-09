@@ -10,6 +10,8 @@ class User
   key :username, String
   key :email, String
   key :hash, String
+  
+  timestamps!
 
   state_machine :role, :initial => :user do
     state :user
@@ -36,32 +38,25 @@ class User
       transition all => :free
     end
   end
-  
-  timestamps!
 
   belongs_to :instituton
 
   many :projects
   many :institutions
 
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
   validates_presence_of :name, :username, :email
   validates_uniqueness_of :username, :email
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
 
   before_destroy :clean!
 
-  class << self
-    def authenticate(e, p)
-      u = first(:email => e) if e.present?
-      u && u.password == p ? u : nil
-    end
+  def self.authenticate(e, p)
+    u = first(:email => e) if e.present?
+    u && u.password == p ? u : nil
   end
 
   def clean!
-    self.projects.each do |p|
-      p.destroy
-    end
-
+    self.projects.clear
     self.projects.empty?
   end
 
@@ -74,11 +69,7 @@ class User
   end
 
   def updatable_by?(user)
-    if self == user or user.role == "staff"
-      true
-    else
-      false
-    end
+    self == user || user.role == "staff"
   end
 
   def destroyable_by?(user)
