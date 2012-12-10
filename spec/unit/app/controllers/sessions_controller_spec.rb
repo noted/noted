@@ -18,7 +18,9 @@ describe "Sessions" do
       post "/sessions/create", :user => { :email => user.email, :password => "foobar" }
     end
 
-    it "sets a session"
+    it "sets a session" do
+      pending "find way to retrieve sessions from rack/test"
+    end
 
     it "redirects" do
       response.should be_redirect
@@ -28,11 +30,12 @@ describe "Sessions" do
 
   describe "GET /logout" do
     before do
-      post "/sessions/create", :user => { :email => user.email, :password => "foobar" }
       get "/logout"
     end
 
-    it "unsets a session"
+    it "unsets a session" do
+      pending "find way to retrieve sessions from rack/test"
+    end
 
     it "redirects" do
       response.should be_redirect
