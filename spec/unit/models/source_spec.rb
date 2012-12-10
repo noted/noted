@@ -7,4 +7,7 @@ describe Source do
   it "can be instantiated" do
     source.should be_valid
   end
+
+  describe "#format!" do
+  end
 end
