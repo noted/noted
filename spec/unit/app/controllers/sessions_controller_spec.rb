@@ -14,8 +14,29 @@ describe "Sessions" do
   end
 
   describe "POST /sessions/create" do
+    before do
+      post "/sessions/create", :user => { :email => user.email, :password => "foobar" }
+    end
+
+    it "sets a session"
+
+    it "redirects" do
+      response.should be_redirect
+      response.location.should include("/")
+    end
   end
 
   describe "GET /logout" do
+    before do
+      post "/sessions/create", :user => { :email => user.email, :password => "foobar" }
+      get "/logout"
+    end
+
+    it "unsets a session"
+
+    it "redirects" do
+      response.should be_redirect
+      response.location.should include("/")
+    end
   end
 end

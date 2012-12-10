@@ -31,9 +31,9 @@ Spork.prefork do
     last_response
   end
 
-  def session
-    last_request.env['rack.session']
-  end
+  #def session
+  #  last_request.env['rack.session']
+  #end
 
   def site
     "http://example.org"
