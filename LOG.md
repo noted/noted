@@ -56,7 +56,7 @@ I am right on schedule for my self-imposed due-by dates. I’ve begun the basic 
 
 ### October 2012
 
-This month I seriously began work on the code. I was able to overcome the first technological hurdle: figuring out how to model citations data. I found that using Ruby's Hash class would be easy enough -- it allows for flexibility, while still keeping around the features that MongoMapper provides.
+This month I seriously began work on the code. I was able to overcome the first technological hurdle: figuring out how to model citations data. I found that using Ruby's Hash class would be easy enough — it allows for flexibility, while still keeping around the features that MongoMapper provides.
  
 I also began design work. I posted a screenshot of what I have for the home page so far, and I've recieved good feedback. I think I'll continue designing before I get to the actual programming. This is beneficial because I don't need to write the same code twice.
  
@@ -65,3 +65,18 @@ I interviewed Josh from Fanzter, and he brought up many points I hadn't thought 
 I've realized that most of the faculty I've talked to want a more structured system (teachers have more privileges than students, teachers have the ability to organized notecards, etc.), while students want an unstructured, do-it-yourself like system. I believe that it would be better to have everyone on the same level, teachers included. I also would like students to have the flexibility to organize how they'd like to&mdash;often times the way a teacher organizes is not right for me.
  
 I need to speed up the pace I'm iterating on this project. If I want to have a working version by March, I need to be working faster&mdash;there are many hurdles ahead. Hopefully after this month (and college applications) are over I'll have more time.
+
+
+### November 2012
+
+My biggest concern this month was refactoring my unit tests. Unit tests allow me to run the code I write and see if it does what I expect it to do. It is very important that I have enough test coverage — I need to make sure that each and every aspect of my code works, and I even need to make sure that it behaves correctly when it does fail.
+
+I completely rethought the design of the home page, and Mr. Procko and I agreed that it'd be much better and easy to use. The design of the home page will set the tone for the rest of the site, so getting it right is important.
+
+I looked at possibly making an API-centric application. An API, or "application programming interface" is a part of my website that provides data, essentially. Wikipedia defines it as:
+
+> An application programming interface (API) is a source code based specification intended to be used as an interface by software components to communicate with each other. An API may include specifications for routines, data structures, object classes, and variables.
+
+It isn't a traditional website, per se, but it does do the exact same thing, but with pure data. Making Noted API-centric would make it so that every client, or device (think computer, iPhone, etc.), would be a consumer of that API. The thought is that it is "stateless", where each call to the API is induvidual and not suited to the user — this makes it so the developer focuses more on function, not user-based actions.
+
+I asked my Twitter followers whether I should make Noted API-centric, and a majority of the responses said that it would be good — however, I'd need much more time than I have. I'd essentially be developing two separate applications: the API and the client. I've decided to stick with the more "traditional" application model.
