@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/noted/scholar.git
+  revision: 90d1f6203ebfb0d81b00b9168d085abff014ea1f
+  specs:
+    scholar (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -189,6 +195,7 @@ DEPENDENCIES
   rake
   redis
   rspec
+  scholar!
   shoulda-matchers
   sinatra-flash
   spork
