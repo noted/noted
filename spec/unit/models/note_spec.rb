@@ -8,7 +8,7 @@ describe Note do
     note.should be_valid
   end
 
-  describe "#permalink!" do
+  describe "#create_permalink!" do
     subject { note.permalink }
 
     it { should_not be_blank }

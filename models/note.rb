@@ -11,11 +11,11 @@ class Note
 
   belongs_to :project
 
-  after_create :permalink!
+  after_create :create_permalink!
 
   private
 
-  def permalink!
+  def create_permalink!
     self.permalink = Base32::Crockford.encode(self.class.count + 1)
   end
 end

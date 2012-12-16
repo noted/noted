@@ -15,11 +15,11 @@ class Project
 
   validates_presence_of :title, :permalink
 
-  before_validation :permalink!
+  before_validation :create_permalink!
 
   private
 
-  def permalink!
+  def create_permalink!
     self.permalink = self.title.parameterize
   end
 

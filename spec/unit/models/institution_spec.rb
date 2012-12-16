@@ -7,7 +7,7 @@ describe Institution do
     institution.should be_valid
   end
 
-  describe "#code!" do
+  describe "#create_code!" do
     subject { institution.code }
 
     it { should_not be_blank }
