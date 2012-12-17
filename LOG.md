@@ -37,6 +37,14 @@
 #### Week of 25 November 2012
 * Finish data modeling and related tests
 
+#### Week of 2 December 2012
+* Redesigned home page again (see it on [the beta site](http://beta.getnotedapp.com))
+* Continued writing controllers
+
+#### Week of 9 December 2012
+* Work on user authentication
+* Wrapped up most modeling (except Sources)
+* Started writing tests for [noted/scholar](https://github.com/noted/scholar), an external code library to generate valid MLA citations
 
 <hr />
 
