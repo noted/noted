@@ -1,4 +1,8 @@
 Noted.controllers :users do
+  before :view do
+    current_state
+  end
+
   get :new, :map => '/join' do
     render 'users/new'
   end
@@ -45,8 +49,6 @@ Noted.controllers :users do
   end
 
   get :view, :map => '/:user' do
-    @user = User.find_by_username(params[:username])
-
     render 'users/view'
   end
 end
