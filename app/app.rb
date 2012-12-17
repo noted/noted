@@ -8,4 +8,8 @@ class Noted < Padrino::Application
   register CompassInitializer
 
   enable :sessions
+
+  use BetterErrors::Middleware
+  
+	BetterErrors.application_root = PADRINO_ROOT
 end

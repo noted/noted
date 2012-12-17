@@ -32,6 +32,8 @@ gem 'barista'
 
 group :development, :test do
   gem 'log_buddy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
