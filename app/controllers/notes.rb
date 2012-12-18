@@ -6,7 +6,7 @@ Noted.controllers :notes do
   end
 
   post :create do
-    p = Project.find(params[:project])
+    p = Project.find(params[:project_id])
     n = Note.new
 
     if n.save && p.notes << n
@@ -18,7 +18,7 @@ Noted.controllers :notes do
   end
 
   get :view, :map => "/:user/:project/notes/:note" do
-    @note = Note.find_by_username(:note)
+    @note = Note.find_by_permalink(params[:note])
 
     render 'notes/view'
   end
@@ -37,12 +37,10 @@ Noted.controllers :notes do
 
   delete :destroy do
     n = Note.find(params[:id])
-    p = n.project
-    u = p.user
 
     if n.destroy
       flash[:notice] = "Your note has been deleted."
-      redirect url(:notes, :index, :user => u.username, :project => p.permalink)
+      redirect url(:notes, :index, :user => n.user.username, :project => n.project.permalink)
     else
       flash[:error] = "Something has gone awry. #{n.errors}"
       redirect params[:origin]

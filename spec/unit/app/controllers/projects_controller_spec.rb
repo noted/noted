@@ -26,14 +26,14 @@ describe "Projects" do
 
   describe "POST /projects/create" do
     before do
-      post "/projects/create", :user => user.id, :project => { :title => "The Hubble Telescope" }
+      post "/projects/create", :user_id => user.id, :id => { :title => "The Hubble Telescope" }
     end
 
     context "redirects correctly" do
       subject { response }
 
       it { should be_redirect }
-      it { subject.location.should == "#{site}/#{user.username}/the-hubble-telescope" }
+      it { subject.location.should include("#{user.username}/the-hubble-telescope") }
     end
 
     context "creates a Project" do
@@ -44,7 +44,7 @@ describe "Projects" do
       end
 
       it "has correct data" do
-        p.permalink.should == "the-hubble-telescope"
+        p.permalink.should eql("the-hubble-telescope")
       end
     end
 
@@ -77,11 +77,11 @@ describe "Projects" do
       subject { response }
       
       it { should be_redirect }
-      it { subject.location.should == "#{site}/#{project.user.username}/#{project.permalink}/settings" }
+      it { subject.location.should include("#{project.user.username}/#{project.permalink}/settings") }
     end
 
     it "modifies a Project" do
-      Project.find(project.id).title.should == "The Hubble Telescope"
+      Project.find(project.id).title.should eql("The Hubble Telescope")
     end
   end
 
@@ -98,7 +98,7 @@ describe "Projects" do
       subject { response }
 
       it { should be_redirect }
-      it { subject.location.should == "#{site}/#{project.user.username}" }
+      it { subject.location.should include("#{project.user.username}") }
     end
   end
 end

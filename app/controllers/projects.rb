@@ -4,8 +4,8 @@ Noted.controllers :projects do
   end
 
   post :create do
-    u = User.find(params[:user])
-    p = Project.new(params[:project])
+    u = User.find(params[:user_id])
+    p = Project.new(params[:id])
 
     if p.save && u.projects << p
       flash[:notice] = "#{p.title} has been created."

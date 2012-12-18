@@ -17,7 +17,7 @@ describe "Notes" do
 
   describe "POST /notes/create" do
     before do
-      post "/notes/create", :project => project.id
+      post "/notes/create", :project_id => project.id
     end
 
     it "redirects correctly" do
@@ -44,7 +44,7 @@ describe "Notes" do
 
     it "redirects correctly" do
       response.should be_redirect
-      response.location.should == "#{site}/#{note.project.user.username}/#{project.permalink}/notes"
+      response.location.should include("/#{note.project.user.username}/#{project.permalink}/notes")
     end
 
     it "updates a Note" do

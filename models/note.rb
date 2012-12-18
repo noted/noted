@@ -11,6 +11,8 @@ class Note
 
   belongs_to :project
 
+  validates_uniqueness_of :permalink
+
   after_create :create_permalink!
 
   private
