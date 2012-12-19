@@ -15,6 +15,6 @@ describe Project do
     subject { project.permalink }
 
     it { should_not be_nil }
-    it { should == "the-cosmos"}
+    it { should eql("the-cosmos") }
   end
 end

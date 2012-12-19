@@ -29,7 +29,7 @@ describe "Projects" do
       post "/projects/create", :user_id => user.id, :id => { :title => "The Hubble Telescope" }
     end
 
-    context "redirects correctly" do
+    context "redirects" do
       subject { response }
 
       it { should be_redirect }
@@ -73,7 +73,7 @@ describe "Projects" do
       project.reload
     end
 
-    context "redirects correctly" do
+    context "redirects" do
       subject { response }
       
       it { should be_redirect }
@@ -94,7 +94,7 @@ describe "Projects" do
       Project.find_by_name("The Cosmos").should be_nil
     end
 
-    context "redirects correctly" do
+    context "redirects" do
       subject { response }
 
       it { should be_redirect }
