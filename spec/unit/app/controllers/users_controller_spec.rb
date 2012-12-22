@@ -18,9 +18,9 @@ describe "Users" do
       post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => "foobar"
     end
 
-    it "redirects" do
-      response.should be_redirect
-      response.location.should eql("#{site}/")
+    context "redirects" do
+      it { response.should be_redirect }
+      it { response.location.should eql("#{site}/") }
     end
 
     it "creates a User" do
@@ -46,9 +46,9 @@ describe "Users" do
       patch "/users/update", :id => user.id, :user => { :name => "Carl Sagan" }
     end
 
-    it "redirects" do
-      response.should be_redirect
-      response.location.should include("/settings")
+    context "redirects" do
+      it { response.should be_redirect }
+      it { response.location.should include("/settings") }
     end
 
     it "modifies a User" do
@@ -63,9 +63,9 @@ describe "Users" do
       delete "/users/destroy", :id => user.id
     end
 
-    it "redirects" do
-      response.should be_redirect
-      response.location.should eql("#{site}/")
+    context "redirects" do
+      it { response.should be_redirect }
+      it { response.location.should eql("#{site}/") }
     end
 
     it "destroys a User" do

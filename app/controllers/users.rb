@@ -1,5 +1,5 @@
 Noted.controllers :users do
-  get :new, :map => '/join' do
+  get :new, :map => "/join" do
     render 'users/new'
   end
 
@@ -8,10 +8,9 @@ Noted.controllers :users do
     u.password = params[:password]
 
     if u.save
-      flash[:notice] = "Welcome to Noted!"
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry. #{u.errors}"
+      flash[:error] = "Something has gone awry."
       redirect url(:users, :new)
     end
   end
@@ -27,7 +26,7 @@ Noted.controllers :users do
       flash[:notice] = "Your profile has been updated."
       redirect url(:users, :edit)
     else
-      flash[:error] = "Something has gone awry. #{u.errors}"
+      flash[:error] = "Something has gone awry."
       redirect url(:users, :edit)
     end
   end
@@ -36,15 +35,15 @@ Noted.controllers :users do
     u = User.find(params[:id])
 
     if u.destroy
-      flash[:notice] = "We're sorry to see you go. :("
+      flash[:notice] = "We're sorry to see you go."
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry. #{u.errors}"
+      flash[:error] = "Something has gone awry."
       redirect url(:users, :edit)
     end
   end
 
-  get :view, :map => '/:user' do
+  get :view, :map => "/:user" do
     @user = User.find_by_username(params[:user])
 
     render 'users/view'

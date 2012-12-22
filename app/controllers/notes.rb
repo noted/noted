@@ -7,12 +7,12 @@ Noted.controllers :notes do
 
   post :create do
     p = Project.find(params[:project_id])
-    n = Note.new
+    n = Note.new(:title => "Untitled Note")
 
     if n.save && p.notes << n
       redirect url(:notes, :view, :user => p.user.username, :project => p.permalink, :note => n.permalink)
     else
-      flash[:error] = "Something has gone awry. #{n.errors}"
+      flash[:error] = "Something has gone awry."
       redirect url(:notes, :index, :user => u.username, :project => p.permalink)
     end
   end
@@ -27,11 +27,11 @@ Noted.controllers :notes do
     n = Note.find(params[:id])
 
     if n.update_attributes(params[:note])
-      flash[:notice] = "<em>#{n.title}</em> has been saved."
+      flash[:notice] = "#{n.title} has been saved."
       redirect url(:notes, :index, :user => n.project.user.username, :project => n.project.permalink)
     else
       flash[:error] = "Something has gone awry."
-      redirect params[:origin]
+      redirect url(:notes, :index, :user => n.project.user.username, :project => n.project.permalink, :note => n.permalink)
     end
   end
 
@@ -43,7 +43,7 @@ Noted.controllers :notes do
       redirect url(:notes, :index, :user => n.user.username, :project => n.project.permalink)
     else
       flash[:error] = "Something has gone awry. #{n.errors}"
-      redirect params[:origin]
+      redirect url(:notes, :index, :user => n.project.user.username, :project => n.project.permalink, :note => n.permalink)
     end
   end
 end

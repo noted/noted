@@ -30,10 +30,8 @@ describe "Projects" do
     end
 
     context "redirects" do
-      subject { response }
-
-      it { should be_redirect }
-      it { subject.location.should include("#{user.username}/the-hubble-telescope") }
+      it { response.should be_redirect }
+      it { response.location.should include("#{user.username}/the-hubble-telescope") }
     end
 
     context "creates a Project" do
@@ -74,10 +72,8 @@ describe "Projects" do
     end
 
     context "redirects" do
-      subject { response }
-      
-      it { should be_redirect }
-      it { subject.location.should include("#{project.user.username}/#{project.permalink}/settings") }
+      it { response.should be_redirect }
+      it { response.location.should include("#{project.user.username}/#{project.permalink}/settings") }
     end
 
     it "modifies a Project" do
@@ -95,10 +91,8 @@ describe "Projects" do
     end
 
     context "redirects" do
-      subject { response }
-
-      it { should be_redirect }
-      it { subject.location.should include("#{project.user.username}") }
+      it { response.should be_redirect }
+      it { response.location.should include("#{project.user.username}") }
     end
   end
 end

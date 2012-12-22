@@ -37,7 +37,7 @@ Noted.controllers :projects do
       flash[:notice] = "#{p.title} has been modified."
       redirect url(:projects, :edit, :user => p.user.username, :project => p.permalink)
     else
-      flash[:error] = "Something has gone wrong..."
+      flash[:error] = "Something has gone awry."
       redirect url(:projects, :edit, :user => params[:user_id], :project => p.permalink)
     end
   end
@@ -49,7 +49,7 @@ Noted.controllers :projects do
       flash[:notice] = "Your project has been destroyed."
       redirect url(:users, :view, :user => User.find(params[:user]).username)
     else
-      flash[:error] = "Something went wrong."
+      flash[:error] = "Something has gone awry."
       redirect url(:projects, :edit, :user => p.user.username, :project => p.permalink)
     end
   end
