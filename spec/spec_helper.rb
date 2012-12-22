@@ -3,11 +3,6 @@ require 'spork'
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
 Spork.prefork do
-  unless ENV['DRB']
-    require 'simplecov'
-    SimpleCov.start
-  end
-
   require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
   FactoryGirl.find_definitions
@@ -19,10 +14,17 @@ Spork.prefork do
 
     conf.mock_with :mocha
 
+    conf.before :suite do
+      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    conf.before do
+      DatabaseCleaner.start
+    end
+
     conf.after do
-      MongoMapper.database.collections.each do |c|
-        c.remove
-      end
+      DatabaseCleaner.clean
     end
 
     Capybara.app = Padrino.application
@@ -36,18 +38,7 @@ Spork.prefork do
     last_response
   end
 
-  def session
-    last_request.env['rack.session']
-  end
-
   def site
     "http://example.org"
-  end
-end
-
-Spork.each_run do
-  if ENV['DRB']
-    require 'simplecov'
-    SimpleCov.start
   end
 end
