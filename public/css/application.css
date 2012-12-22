@@ -78,7 +78,7 @@ body {
   background: #fefefe;
   border-top: 10px solid #db6363;
   color: #444444;
-  font: 16px/1.75em freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif; }
+  font: 16px/1.75em ff-meta-serif-web-pro, Georgia, Times, serif; }
 
 /* line 41, ../../app/assets/css/application.scss */
 a {
@@ -94,7 +94,7 @@ a.btn, button, input[type="submit"] {
   border-radius: 2px;
   background: #aaa;
   color: #fefefe;
-  font-family: "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: adelle-sans, source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 700;
   padding: 0.5em 1em; }
   /* line 55, ../../app/assets/css/application.scss */
@@ -119,7 +119,7 @@ h1 {
 
 /* line 79, ../../app/assets/css/application.scss */
 h2, h3, h4, h5, h6 {
-  font-family: "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-family: adelle-sans, source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 /* line 83, ../../app/assets/css/application.scss */
 h2 {
@@ -166,47 +166,49 @@ img {
     display: inline; }
   /* line 119, ../../app/assets/css/application.scss */
   #contain > header nav {
-    font: 200 0.78em "adelle-sans", source-sans-pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-    text-transform: uppercase; }
-    /* line 123, ../../app/assets/css/application.scss */
+    font: 200 0.85em ff-meta-serif-web-pro, Georgia, Times, serif; }
+    /* line 122, ../../app/assets/css/application.scss */
+    #contain > header nav a {
+      color: #7d7d7d; }
+    /* line 126, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 126, ../../app/assets/css/application.scss */
+      /* line 129, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 129, ../../app/assets/css/application.scss */
+        /* line 132, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 134, ../../app/assets/css/application.scss */
+      /* line 137, ../../app/assets/css/application.scss */
       #contain > header nav section li {
         display: inline-block;
         position: relative;
         top: 5px; }
-        /* line 139, ../../app/assets/css/application.scss */
+        /* line 142, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
 	IV. Main
 */
-/* line 152, ../../app/assets/css/application.scss */
+/* line 155, ../../app/assets/css/application.scss */
 #main {
   border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 4em 0; }
-  /* line 160, ../../app/assets/css/application.scss */
+  /* line 163, ../../app/assets/css/application.scss */
   #main .hero > header {
     padding: 3em 0; }
-    /* line 163, ../../app/assets/css/application.scss */
+    /* line 166, ../../app/assets/css/application.scss */
     #main .hero > header header, #main .hero > header section {
       *zoom: 1;
       max-width: 59.5em;
@@ -220,13 +222,13 @@ img {
         content: "";
         display: table;
         clear: both; }
-    /* line 167, ../../app/assets/css/application.scss */
+    /* line 170, ../../app/assets/css/application.scss */
     #main .hero > header header {
       margin-bottom: 3em; }
-      /* line 170, ../../app/assets/css/application.scss */
+      /* line 173, ../../app/assets/css/application.scss */
       #main .hero > header header h2 {
-        margin-bottom: 0.25em; }
-      /* line 174, ../../app/assets/css/application.scss */
+        margin-bottom: 0.5em; }
+      /* line 177, ../../app/assets/css/application.scss */
       #main .hero > header header p {
         width: 74.78992%;
         float: right;
@@ -236,13 +238,13 @@ img {
         padding-right: 25.21008%;
         color: #aaa;
         font-weight: 300;
-        font-size: 1.25em; }
-  /* line 185, ../../app/assets/css/application.scss */
+        font-size: 1.15em; }
+  /* line 188, ../../app/assets/css/application.scss */
   #main .hero > section {
     background: #f0f2f5;
     margin: 6em 0;
     padding: 5em 0 6em; }
-    /* line 190, ../../app/assets/css/application.scss */
+    /* line 193, ../../app/assets/css/application.scss */
     #main .hero > section .inner {
       *zoom: 1;
       max-width: 59.5em;
@@ -256,7 +258,7 @@ img {
         content: "";
         display: table;
         clear: both; }
-      /* line 193, ../../app/assets/css/application.scss */
+      /* line 196, ../../app/assets/css/application.scss */
       #main .hero > section .inner article {
         padding-left: 4.20168%;
         width: 15.96639%;
@@ -265,33 +267,33 @@ img {
         display: inline;
         padding-right: 4.20168%;
         text-align: center; }
-        /* line 200, ../../app/assets/css/application.scss */
+        /* line 203, ../../app/assets/css/application.scss */
         #main .hero > section .inner article:last-child {
           float: right;
           margin-right: 0;
           #margin-left: -0.5em;
           display: inline; }
-        /* line 204, ../../app/assets/css/application.scss */
+        /* line 207, ../../app/assets/css/application.scss */
         #main .hero > section .inner article h3 {
           font-weight: 600; }
-  /* line 211, ../../app/assets/css/application.scss */
+  /* line 214, ../../app/assets/css/application.scss */
   #main .hero > footer {
     padding: 2em 0 3em;
     text-align: center; }
-    /* line 215, ../../app/assets/css/application.scss */
+    /* line 218, ../../app/assets/css/application.scss */
     #main .hero > footer header {
       margin-bottom: 2em; }
 
 /*
 	V. Footer
 */
-/* line 227, ../../app/assets/css/application.scss */
+/* line 230, ../../app/assets/css/application.scss */
 #contain > footer {
   border-top: 1px solid #e0e0e0;
-  font-family: freight-text-pro, ff-meta-serif-web-pro leitura-news, superclarendon, Georgia, Times, serif;
+  font-family: ff-meta-serif-web-pro, Georgia, Times, serif;
   color: #a0a0a0;
   padding: 4em 0; }
-  /* line 233, ../../app/assets/css/application.scss */
+  /* line 236, ../../app/assets/css/application.scss */
   #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;
