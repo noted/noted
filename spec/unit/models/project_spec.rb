@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Project do
-	let(:user)    { create(:user) }
+  let(:user)    { create(:user) }
   let(:project) { create(:project) }
 
   it { validate_presence_of :title }

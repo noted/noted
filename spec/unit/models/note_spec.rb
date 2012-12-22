@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Note do
-	let(:user) { create(:user) }
+  let(:user) { create(:user) }
   let(:note) { create(:note) }
 
   it "can be instantiated" do

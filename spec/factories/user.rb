@@ -21,7 +21,7 @@ FactoryGirl.define do
 
       after(:create) do |user, evaluator|
         user.hire!
-      end 
+      end
     end
   end
 end

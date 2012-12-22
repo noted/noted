@@ -1,3 +1,4 @@
+# The main Noted application.
 class Noted < Padrino::Application
   register Padrino::Cache
   register Padrino::Helpers
@@ -11,7 +12,7 @@ class Noted < Padrino::Application
 
   configure :development do
     use BetterErrors::Middleware
-    
-  	BetterErrors.application_root = PADRINO_ROOT
+
+    BetterErrors.application_root = PADRINO_ROOT
   end
 end

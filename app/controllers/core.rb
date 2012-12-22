@@ -1,5 +1,5 @@
 Noted.controllers do
   get :index do
-  	render 'core/index'
+    render 'core/index'
   end
 end
