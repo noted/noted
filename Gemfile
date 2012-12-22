@@ -4,7 +4,7 @@ ruby '1.9.3'
 
 gem 'padrino', '0.10.7'
 
-gem 'thin'
+gem 'puma'
 
 gem 'rake'
 gem 'sinatra-flash', require: 'sinatra/flash'
