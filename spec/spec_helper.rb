@@ -3,6 +3,11 @@ require 'spork'
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
 Spork.prefork do
+  unless ENV['DRB']
+    require 'simplecov'
+    SimpleCov.start
+  end
+
   require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
   FactoryGirl.find_definitions
@@ -37,5 +42,12 @@ Spork.prefork do
 
   def site
     "http://example.org"
+  end
+end
+
+Spork.each_run do
+  if ENV['DRB']
+    require 'simplecov'
+    SimpleCov.start
   end
 end

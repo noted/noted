@@ -54,4 +54,7 @@ group :test do
 
   gem 'spork'
   gem 'factory_girl'
+
+  gem 'simplecov', require: nil
+  gem 'cane'
 end
