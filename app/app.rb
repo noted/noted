@@ -9,7 +9,9 @@ class Noted < Padrino::Application
 
   enable :sessions
 
-  use BetterErrors::Middleware
-  
-	BetterErrors.application_root = PADRINO_ROOT
+  configure :development do
+    use BetterErrors::Middleware
+    
+  	BetterErrors.application_root = PADRINO_ROOT
+  end
 end
