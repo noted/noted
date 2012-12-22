@@ -3,8 +3,8 @@ require 'bcrypt'
 class User
   include MongoMapper::Document
   include BCrypt
-  include Canable::Cans
   include Canable::Ables
+  include Canable::Cans
 
   key :name, String
   key :username, String

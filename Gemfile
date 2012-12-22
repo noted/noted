@@ -30,8 +30,9 @@ gem 'susy'
 
 gem 'barista'
 
+gem 'log_buddy'
+
 group :development, :test do
-  gem 'log_buddy'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
