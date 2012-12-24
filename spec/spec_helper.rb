@@ -41,4 +41,29 @@ Spork.prefork do
   def site
     "http://example.org"
   end
+
+  class Data
+    class << self
+      def book
+        {
+          :attributes => {
+            :type => "book",
+            :title => "The Hitchhiker's Guide to the Galaxy",
+            :contributors => [
+              {
+                :type => "author",
+                :first => "Douglas",
+                :last => "Adams"
+              }
+            ],
+            :publisher => {
+              :name => "Ballantine",
+              :location => "New York"
+            },
+            :year => "2005"
+          }
+        }
+      end
+    end
+  end
 end

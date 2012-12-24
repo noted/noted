@@ -1,6 +1,19 @@
 FactoryGirl.define do
   @h2g2 = {
-    "title" => "The Hitchhikers Guide to the Galaxy"
+    :type => "book",
+    :title => "The Hitchhiker's Guide to the Galaxy",
+    :contributors => [
+      {
+        :type => "author",
+        :first => "Douglas",
+        :last => "Adams"
+      }
+    ],
+    :publisher => {
+      :name => "Ballantine",
+      :location => "New York"
+    },
+    :year => "2005"
   }
 
   factory(:source) do
