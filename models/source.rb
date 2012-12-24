@@ -4,6 +4,7 @@ class Source
   key :attributes, Hash
   key :markdown, String
   key :html, String
+  key :permalink, String
 
   timestamps!
   userstamps!
@@ -15,5 +16,8 @@ class Source
   private
 
   def format!
+  end
+
+  def create_permalink!
   end
 end

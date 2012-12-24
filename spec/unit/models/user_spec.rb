@@ -42,6 +42,10 @@ describe User do
     end
   end
 
+  describe "#create_url!" do
+    it { user.url.should eql("/#{user.username}") }
+  end
+
   describe "#upgrade!" do
     before do
       user.upgrade!
