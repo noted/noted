@@ -9,8 +9,10 @@ describe Note do
   end
 
   describe "#create_permalink!" do
-    subject { note.permalink }
+    it { note.permalink.should eql(Base32::Crockford.encode(Note.count)) }
+  end
 
-    it { should_not be_blank }
+  describe "#create_url!" do
+    it { note.url.should eql("/#{user.username}/#{project.permalink}/notes/#{note.permalink}") }
   end
 end

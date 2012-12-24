@@ -12,9 +12,10 @@ describe Project do
   end
 
   describe "#create_permalink!" do
-    subject { project.permalink }
+    it { project.permalink.should eql("the-cosmos") }
+  end
 
-    it { should_not be_nil }
-    it { should eql("the-cosmos") }
+  describe "#create_url!" do
+    it { project.url.should eql("/#{user.username}/#{project.permalink}") }
   end
 end
