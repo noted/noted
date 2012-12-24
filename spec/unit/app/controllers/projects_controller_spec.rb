@@ -6,7 +6,7 @@ describe "Projects" do
 
   describe "GET /:username/:project" do
     before do
-      get "/#{user.username}/#{project.permalink}"
+      get "/#{project.url}"
     end
 
     it "is ok" do
@@ -26,32 +26,16 @@ describe "Projects" do
 
   describe "POST /projects/create" do
     before do
-      post "/projects/create", :user_id => user.id, :id => { :title => "The Hubble Telescope" }
+      post "/projects/create", :author => user.id, :project => { :title => "The Hubble Telescope" }
     end
 
     context "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("#{user.username}/the-hubble-telescope") }
+      it { response.location.should include("/#{user.username}/the-hubble-telescope") }
     end
 
-    context "creates a Project" do
-      let(:p) { Project.find_by_title("The Hubble Telescope") }
-
-      it "not nil" do
-        p.should_not be_nil
-      end
-
-      it "has correct data" do
-        p.permalink.should eql("the-hubble-telescope")
-      end
-    end
-
-    context "attributes a Project to the User" do
-      subject { user.projects }
-
-      it { should_not be_nil }
-      it { should include(Project.find_by_title("The Hubble Telescope")) }
-    end
+    it { Project.find_by_title("The Hubble Telescope").should_not be_nil }
+    it { user.projects.should include(Project.find_by_title("The Hubble Telescope")) }
   end
 
   describe "GET /:username/:project/settings" do
@@ -66,7 +50,7 @@ describe "Projects" do
 
   describe "PATCH /projects/update" do
     before do
-      patch "/projects/update", :id => project.id, :project => { :title => "The Hubble Telescope" }
+      patch "/projects/update", :id => project.id, :project => { :title => "Large Hadron Collider" }
 
       project.reload
     end
@@ -76,23 +60,19 @@ describe "Projects" do
       it { response.location.should include("#{project.user.username}/#{project.permalink}/settings") }
     end
 
-    it "modifies a Project" do
-      Project.find(project.id).title.should eql("The Hubble Telescope")
-    end
+    it { project.title.should eql("Large Hadron Collider") }
   end
 
   describe "DELETE /projects/destroy" do
     before do
-      delete "/projects/destroy", :id => project.id, :user => project.user.id
-    end
-
-    it "destroys a Project" do
-      Project.find_by_name("The Cosmos").should be_nil
+      delete "/projects/destroy", :id => project.id, :author => user.id
     end
 
     context "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("#{project.user.username}") }
+      it { response.location.should include("/#{project.user.username}") }
     end
+
+    it { Project.find_by_name("The Cosmos").should be_nil }
   end
 end

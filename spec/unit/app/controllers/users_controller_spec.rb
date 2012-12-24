@@ -15,7 +15,7 @@ describe "Users" do
 
   describe "POST /users/create" do
     before do
-      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => "foobar"
+      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan", :password => "foobar" }
     end
 
     context "redirects" do
@@ -23,12 +23,7 @@ describe "Users" do
       it { response.location.should eql("#{site}/") }
     end
 
-    it "creates a User" do
-      u = User.find_by_email("carl@sagan.org")
-
-      u.should_not be_nil
-      u.password.should == "foobar"
-    end
+    it { User.find_by_email("carl@sagan.org").should_not be_nil }
   end
 
   describe "GET /settings" do
@@ -43,7 +38,9 @@ describe "Users" do
 
   describe "PATCH /users/update" do
     before do
-      patch "/users/update", :id => user.id, :user => { :name => "Carl Sagan" }
+      patch "/users/update", :id => user.id, :author => user.id, :user => { :name => "Neil deGrasse Tyson" }
+
+      user.reload
     end
 
     context "redirects" do
@@ -51,16 +48,12 @@ describe "Users" do
       it { response.location.should include("/settings") }
     end
 
-    it "modifies a User" do
-      u = User.find(user.id)
-
-      u.name.should == "Carl Sagan"
-    end
+    it { user.name.should eql("Neil deGrasse Tyson") }
   end
 
   describe "DELETE /users/destroy" do
     before do
-      delete "/users/destroy", :id => user.id
+      delete "/users/destroy", :id => user.id, :author => user.id
     end
 
     context "redirects" do
@@ -68,9 +61,7 @@ describe "Users" do
       it { response.location.should eql("#{site}/") }
     end
 
-    it "destroys a User" do
-      User.find(user.id).should be_nil
-    end
+    it { User.find_by_name("Neil deGrasse Tyson").should be_nil }
   end
 
   describe "GET /:username" do
