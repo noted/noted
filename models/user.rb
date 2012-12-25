@@ -55,17 +55,12 @@ class User
     u && u.password == p ? u : nil
   end
 
-  def clean!
-    self.projects.clear
-    self.projects.empty?
-  end
-
   def password
     @password ||= Password.new(hash)
   end
 
-  def password=(new)
-    self.hash = Password.create(new)
+  def password=(str)
+    self.hash = Password.create(str)
   end
 
   def updatable_by?(user)
@@ -74,5 +69,16 @@ class User
 
   def destroyable_by?(user)
     updatable_by?(user)
+  end
+
+  def url
+    "/#{user.username}"
+  end
+
+  private
+
+  def clean!
+    self.projects.clear
+    self.projects.empty?
   end
 end

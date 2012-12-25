@@ -1,9 +1,9 @@
 require "spec_helper"
 
 describe Source do
-  let(:user)    { create(:user) }
-  let(:project) { create(:project) }
   let(:source)  { create(:source) }
+  let(:project) { source.project }
+  let(:user)    { project.user }
 
   it "can be instantiated" do
     source.should be_valid
@@ -19,11 +19,11 @@ describe Source do
     end
   end
 
-  describe "#create_permalink!" do
-    it { source.permalink.should eql(Base32::Crockford.encode(Source.count)) }
+  describe "#url" do
+    it { source.url.should eql("/#{user.username}/#{project.permalink}/sources/#{source.permalink}")}
   end
 
-  describe "#create_url!" do
-    it { source.permalink.should eql("/#{user.username}/#{project.permalink}/sources/#{source.permalink}") }
+  describe "#permalink!" do
+    it { source.permalink.should eql(Base32::Crockford.encode(Source.count + 1)) }
   end
 end

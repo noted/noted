@@ -11,11 +11,11 @@ class Institution
   
   many :users
 
-  after_create :create_code!
+  after_create :code!
 
   private
 
-  def create_code!
+  def code!
     self.code = Base32::Crockford.encode(self.class.count + 1)
   end
 end

@@ -3,6 +3,7 @@ class Project
 
   key :title, String
   key :description, String
+  key :collaborators, Array
   key :permalink, String
 
   timestamps!
@@ -15,13 +16,19 @@ class Project
 
   validates_presence_of :title, :permalink
 
-  before_validation :create_permalink!
+  before_validation :permalink!
+
+  def add_collaborator(user)
+    self.collaborators << user
+  end
+
+  def url
+    "/#{self.user.username}/#{self.permalink}"
+  end
 
   private
 
-  def create_permalink!
+  def permalink!
     self.permalink = self.title.parameterize
   end
-
-  # TO-DO: Check if the same permalink exists for a user.
 end

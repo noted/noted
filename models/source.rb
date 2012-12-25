@@ -11,13 +11,18 @@ class Source
 
   belongs_to :project
 
-  after_save :format!
+  after_save :cite!, :permalink!
+
+  def url
+    "#{self.project.url}/sources/#{self.permalink}"
+  end
 
   private
 
-  def format!
+  def cite!
   end
 
-  def create_permalink!
+  def permalink!
+    self.permalink = Base32::Crockford.encode(Source.count + 1)
   end
 end

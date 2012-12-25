@@ -9,15 +9,19 @@ class Note
   timestamps!
   userstamps!
 
-  belongs_to :project
-
   validates_uniqueness_of :permalink
 
-  after_create :create_permalink!
+  belongs_to :project
+
+  after_create :permalink!
+
+  def url
+    "#{self.project.url}/notes/#{self.permalink}"
+  end
 
   private
 
-  def create_permalink!
+  def permalink!
     self.permalink = Base32::Crockford.encode(self.class.count + 1)
   end
 end

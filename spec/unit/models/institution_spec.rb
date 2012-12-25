@@ -7,10 +7,7 @@ describe Institution do
     institution.should be_valid
   end
 
-  describe "#create_code!" do
-    subject { institution.code }
-
-    it { should_not be_blank }
-    it { should == Base32::Crockford.encode(Institution.count + 1) }
+  describe "#code!" do
+    it { institution.code.should == Base32::Crockford.encode(Institution.count + 1) }
   end
 end

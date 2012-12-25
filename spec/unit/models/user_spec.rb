@@ -42,7 +42,7 @@ describe User do
     end
   end
 
-  describe "#create_url!" do
+  describe "#url" do
     it { user.url.should eql("/#{user.username}") }
   end
 
