@@ -1,28 +1,16 @@
 require "spec_helper"
 
 describe "Notes" do
-  let(:user)    { create(:user) }
-  let(:project) { create(:project) }
   let(:note)    { create(:note) }
+  let(:project) { note.project }
+  let(:user)    { project.user }
 
   describe "GET /:user/:project/notes" do
     before do
-      get "/#{project.url}/notes"
+      get "/#{user.username}/#{project.permalink}/notes"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
-  end
-
-  describe "GET /:user/:project/notes/new" do
-    before do
-      get "/#{project.url}/notes/new"
-    end
-
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "POST /notes/create" do
@@ -32,17 +20,18 @@ describe "Notes" do
 
     context "redirects" do
       it { response.should be_redirect }
+      it { response.location.should include("#{project.url}/notes") }
     end
+
+    it { project.notes.should_not be_blank }
   end
 
   describe "GET /:user/:project/notes/:note" do
     before do
-      get "/#{note.url}"
+      get "/#{user.username}/#{project.permalink}/notes/#{note.permalink}"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "PATCH /notes/update" do
@@ -57,12 +46,12 @@ describe "Notes" do
       it { response.location.should include("/#{user.username}/#{project.permalink}/notes") }
     end
 
-    it "updates a Note" do
-      note.title.should eql("Natural History")
-    end
+    it { note.title.should eql("Natural History") }
   end
 
   describe "DELETE /notes/destroy" do
+    let(:id) { note.id }
+
     before do
       delete "/notes/destroy", :id => note.id
     end
@@ -71,5 +60,7 @@ describe "Notes" do
       it { response.should be_redirect }
       it { response.location.should include("/#{user.username}/#{project.permalink}/notes")}
     end
+
+    it { Note.find(id).should be_nil }
   end
 end

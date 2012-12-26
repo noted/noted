@@ -1,17 +1,15 @@
 require 'spec_helper'
 
 describe "Projects" do
-  let(:user)    { create(:user) }
   let(:project) { create(:project) }
+  let(:user)    { project.user }
 
   describe "GET /:username/:project" do
     before do
-      get "/#{project.url}"
+      get "/#{user.username}/#{project.permalink}"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "GET /projects/new" do
@@ -19,14 +17,12 @@ describe "Projects" do
       get "/projects/new"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "POST /projects/create" do
     before do
-      post "/projects/create", :author => user.id, :project => { :title => "The Hubble Telescope" }
+      post "/projects/create", :user => user.id, :author => user.id, :project => { :title => "The Hubble Telescope" }
     end
 
     context "redirects" do
@@ -43,14 +39,12 @@ describe "Projects" do
       get "/#{user.username}/#{project.permalink}/settings"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "PATCH /projects/update" do
     before do
-      patch "/projects/update", :id => project.id, :project => { :title => "Large Hadron Collider" }
+      patch "/projects/update", :id => project.id, :author => user.id, :project => { :title => "Large Hadron Collider" }
 
       project.reload
     end
