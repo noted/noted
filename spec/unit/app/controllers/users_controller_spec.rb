@@ -8,9 +8,7 @@ describe "Users" do
       get "/join"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "POST /users/create" do
@@ -18,12 +16,14 @@ describe "Users" do
       post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan", :password => "foobar" }
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should eql("#{site}/") }
     end
 
-    it { User.find_by_email("carl@sagan.org").should_not be_nil }
+    describe "database" do
+      it { User.find_by_email("carl@sagan.org").should_not be_nil }
+    end
   end
 
   describe "GET /settings" do
@@ -31,37 +31,39 @@ describe "Users" do
       get "/settings"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "PATCH /users/update" do
     before do
-      patch "/users/update", :id => user.id, :author => user.id, :user => { :name => "Neil deGrasse Tyson" }
+      patch "/users/update", :id => user.id, :user => { :name => "Neil deGrasse Tyson" }
 
       user.reload
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should include("/settings") }
     end
 
-    it { user.name.should eql("Neil deGrasse Tyson") }
+    describe "database" do
+      it { user.name.should eql("Neil deGrasse Tyson") }
+    end
   end
 
   describe "DELETE /users/destroy" do
     before do
-      delete "/users/destroy", :id => user.id, :author => user.id
+      delete "/users/destroy", :id => user.id
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should eql("#{site}/") }
     end
 
-    it { User.find_by_name("Neil deGrasse Tyson").should be_nil }
+    describe "database" do
+      it { User.find_by_name("Neil deGrasse Tyson").should be_nil }
+    end
   end
 
   describe "GET /:username" do

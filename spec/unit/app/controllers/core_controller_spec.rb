@@ -6,8 +6,6 @@ describe "Core" do
       get "/"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 end

@@ -8,9 +8,7 @@ describe "Sessions" do
       get "/login"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "POST /sessions/create" do
@@ -22,9 +20,9 @@ describe "Sessions" do
       pending "find way to retrieve sessions from rack/test"
     end
 
-    it "redirects" do
-      response.should be_redirect
-      response.location.should include("/")
+    describe "redirects" do
+      it { response.should be_redirect }
+      it { response.location.should include("/") }
     end
   end
 
@@ -37,9 +35,9 @@ describe "Sessions" do
       pending "find way to retrieve sessions from rack/test"
     end
 
-    it "redirects" do
-      response.should be_redirect
-      response.location.should include("/")
+    describe "redirects" do
+      it { response.should be_redirect }
+      it { response.location.should include("/") }
     end
   end
-end
+end 
