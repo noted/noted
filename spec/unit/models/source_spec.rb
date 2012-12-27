@@ -11,10 +11,14 @@ describe Source do
 
   describe "#format!" do
     it "fills HTML" do
+      pending "make Scholar work first"
+
       source.html.should eql("Adams, Douglas. <em>The Salmon of Doubt</em>. New York: Ballantine, 2005. Print.")
     end
 
     it "fills Markdown" do
+      pending "make Scholar work first"
+
       source.markdown.should eql("Adams, Douglas. _The Salmon of Doubt_. New York: Ballantine, 2005. Print.")
     end
   end

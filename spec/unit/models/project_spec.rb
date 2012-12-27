@@ -20,7 +20,7 @@ describe Project do
   end
 
   describe "#url" do
-    it { project.url.should eql("/#{user.username}/#{project.permalink}") }
+    it { project.url.should eql("/#{project.user.username}/#{project.permalink}") }
   end
 
   describe "#permalink!" do

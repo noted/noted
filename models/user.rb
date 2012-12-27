@@ -71,10 +71,6 @@ class User
     updatable_by?(user)
   end
 
-  def url
-    "/#{user.username}"
-  end
-
   private
 
   def clean!

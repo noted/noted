@@ -11,7 +11,8 @@ class Source
 
   belongs_to :project
 
-  after_save :cite!, :permalink!
+  after_save :cite!
+  after_save :permalink!
 
   def url
     "#{self.project.url}/sources/#{self.permalink}"

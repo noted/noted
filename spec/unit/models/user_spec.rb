@@ -13,9 +13,7 @@ describe User do
 
   it { should_not allow_value("foobar").for(:email) }
 
-  it "can be instantiated" do
-    user.should be_valid
-  end
+  it { user.should be_valid }
 
   describe "#authenticate" do
     subject { User.authenticate(user.email, "foobar") }
@@ -36,14 +34,8 @@ describe User do
       user.password = "barfoo"
       user.save
     end
-
-    it "changes the password" do
-      user.password.should == "barfoo"
-    end
-  end
-
-  describe "#url" do
-    it { user.url.should eql("/#{user.username}") }
+    
+    it { user.password.should == "barfoo" }
   end
 
   describe "#upgrade!" do
@@ -51,9 +43,7 @@ describe User do
       user.upgrade!
     end
 
-    it "should upgrade the User" do
-      user.tier.should == "upgraded"
-    end
+    it { user.tier.should == "upgraded" }
   end
 
   describe "#downgrade!" do
@@ -62,9 +52,7 @@ describe User do
       user.downgrade!
     end
 
-    it "should downgrade the User" do
-      user.tier.should == "free"
-    end
+    it { user.tier.should == "free" }
   end
 
   describe "#hire!" do
@@ -72,9 +60,7 @@ describe User do
       user.hire!
     end
 
-    it "should change the User into a staff member" do
-      user.role.should == "staff"
-    end
+    it { user.role.should == "staff" }
   end
 
   describe "#fire!" do
@@ -83,9 +69,7 @@ describe User do
       user.fire!
     end
 
-    it "should change the User into a regular user" do
-      user.role.should == "user"
-    end
+    it { user.role.should == "user" }
   end
 
   describe "#clean!" do
@@ -95,36 +79,18 @@ describe User do
       user.destroy
     end
 
-    it "should destroy all Projects associated with User" do
-      Project.find(:title => "Foobar").should be_nil
-    end
+    it { Project.find(:title => "Foobar").should be_nil }
   end
 
   describe "#updatable_by?" do
-    it "should allow a staff member to update a User" do
-      user.updatable_by?(staff).should be_true
-    end
-
-    it "should not allow a User to update a staff member" do
-      staff.updatable_by?(user).should be_false
-    end
-
-    it "should allow a User to update itself" do
-      user.updatable_by?(user).should be_true
-    end
+    it { user.updatable_by?(staff).should be_true }
+    it { staff.updatable_by?(user).should be_false }
+    it { user.updatable_by?(user).should be_true }
   end
 
   describe "#destroyable_by?" do
-    it "should allow a staff member to destroy a User" do
-      user.destroyable_by?(staff).should be_true
-    end
-
-    it "should not allow a User to destroy a staff member" do
-      staff.destroyable_by?(user).should be_false
-    end
-
-    it "should allow a User to destroy itself" do
-      user.destroyable_by?(user).should be_true
-    end
+    it { user.destroyable_by?(staff).should be_true }
+    it { staff.destroyable_by?(user).should be_false }
+    it { user.destroyable_by?(user).should be_true }
   end
 end
