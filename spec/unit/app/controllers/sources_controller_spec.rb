@@ -1,28 +1,24 @@
 require "spec_helper"
 
 describe "Sources" do
-  let(:user)    { create(:user) }
-  let(:project) { create(:project) }
   let(:source)  { create(:source) }
+  let(:project) { source.project }
+  let(:user)    { project.user }
 
   describe "GET /:user/:project/sources" do
     before do
-      get "#{project.url}/sources"
+      get "#{user.username}/#{project.permalink}/sources"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "GET /:user/:project/sources/new" do
     before do
-      get "/#{project.url}/sources/new"
+      get "#{user.username}/#{project.permalink}/sources/new"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 
   describe "POST /sources/create" do
@@ -30,19 +26,22 @@ describe "Sources" do
       post "/sources/create", :user => user.id, :project => project.id, :author => user.id, :source => Data.book
     end
 
-    context "redirects" do
+    describe "redirects" do
+      let(:s) { Source.find_by_attributes(Data.book) }
+
       it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/#{project.permalink}/sources/#{source.permalink}") }
+      it { response.location.should include("/#{user.username}/#{project.permalink}/sources/#{s.permalink}") }
     end
 
-    it "creates a Source" do
-      Source.find_by_attributes(Data.book).should_not be_nil
+    describe "database" do
+      it { Source.find_by_attributes(Data.book).should_not be_nil }
+      it { Source.find_by_attributes(Data.book).creator.should eql(user) }
     end
   end
 
   describe "GET /:user/:project/sources/:source" do
     before do
-      get "/#{source.url}"
+      get "/#{user.username}/#{project.permalink}/sources/#{source.permalink}"
     end
 
     it "is ok" do
@@ -53,17 +52,18 @@ describe "Sources" do
   describe "PATCH /sources/update" do
     before do
       patch "/sources/update", :id => source.id, :author => user.id, :source => { :attributes => { :title => "H2G2" } }
-      
+
       source.reload
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should include("/#{user.username}/#{project.permalink}/sources") }
     end
 
-    it "updates the Source" do
-      source.attributes.title.should eql("H2G2")
+    describe "database" do
+      it "updates the attributes within the Source"
+      it { source.updater.should eql(user) }
     end
   end
 
@@ -72,9 +72,9 @@ describe "Sources" do
       delete "/sources/destroy", :id => source.id
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("/#{user.permalink}/#{project.permalink}/sources") }
+      it { response.location.should include("/#{user.username}/#{project.permalink}/sources") }
     end
 
     it "destroys the Source" do
