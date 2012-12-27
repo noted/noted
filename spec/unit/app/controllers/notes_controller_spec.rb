@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe "Notes" do
   let(:note)    { create(:note) }
@@ -18,12 +18,15 @@ describe "Notes" do
       post "/notes/create", :project => project.id, :author => user.id
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should include("#{project.url}/notes") }
     end
 
-    it { project.notes.should_not be_blank }
+    describe "database" do
+      it { project.notes.should_not be_blank }
+      it "check for notes content"
+    end
   end
 
   describe "GET /:user/:project/notes/:note" do
@@ -41,26 +44,29 @@ describe "Notes" do
       note.reload
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should include("/#{user.username}/#{project.permalink}/notes") }
     end
 
-    it { note.title.should eql("Natural History") }
+    describe "database" do
+      it { note.title.should eql("Natural History") }
+      it { note.updater.should eql(user) }
+    end
   end
 
   describe "DELETE /notes/destroy" do
-    let(:id) { note.id }
-
     before do
       delete "/notes/destroy", :id => note.id
     end
 
-    context "redirects" do
+    describe "redirects" do
       it { response.should be_redirect }
       it { response.location.should include("/#{user.username}/#{project.permalink}/notes")}
     end
 
-    it { Note.find(id).should be_nil }
+    describe "database" do
+      it { Note.find_by_title("Alpha Centauri").should be_nil }
+    end
   end
 end

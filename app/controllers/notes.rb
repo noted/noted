@@ -15,7 +15,7 @@ Noted.controllers :notes do
   post :create do
     p = Project.find(params[:project])
 
-    n = Note.new(:title => "Untitled Note")
+    n = Note.new(:title => "Untitled")
     n.creator = User.find(params[:author])
 
     if n.save && p.notes << n
@@ -34,6 +34,7 @@ Noted.controllers :notes do
 
   patch :update do
     n = Note.find(params[:id])
+    n.updater = User.find(params[:author])
 
     if n.update_attributes(params[:note])
       redirect url(:notes, :index, :user => n.project.user.username, :project => n.project.permalink)
