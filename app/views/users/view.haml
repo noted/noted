@@ -1,0 +1,7 @@
+%header
+  %h2= @user.name
+%section
+  - @user.projects.each do |project|
+    %article
+      %h3
+        %a{:href => url(:projects, :view, :user => @user.username, :project => project.permalink)}= project.title

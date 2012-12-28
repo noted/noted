@@ -2,7 +2,7 @@ Noted.controllers :sources do
   before :except => [:create, :update, :destroy] do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
-      @project = @user.projects.find_by_permalink(params[:project])
+      @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
     end
   end
 
@@ -30,7 +30,7 @@ Noted.controllers :sources do
   end
 
   get :view, :map => "/:user/:project/sources/:source" do
-    @source = @project.sources.find_by_permalink(params[:source])
+    @source = Source.where(:project_id => @project.id, :permalink => params[:source])
 
     render 'sources/view'
   end

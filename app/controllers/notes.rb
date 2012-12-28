@@ -2,7 +2,7 @@ Noted.controllers :notes do
   before do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
-      @project = @user.projects.find_by_permalink(params[:project])
+      @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
     end
   end
 
@@ -27,7 +27,7 @@ Noted.controllers :notes do
   end
 
   get :view, :map => "/:user/:project/notes/:note" do
-    @note = @project.notes.find_by_permalink(params[:note])
+    @note = Note.where(:project_id => @project.id, :permalink => params[:note])
 
     render 'notes/view'
   end

@@ -19,7 +19,7 @@ Noted.controllers :projects do
 
   get :view, :map => "/:user/:project" do
     @user = User.find_by_username(params[:user])
-    @project = @user.projects.find_by_permalink(params[:permalink])
+    @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
 
     render 'projects/view'
   end
