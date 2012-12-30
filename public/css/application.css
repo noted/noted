@@ -119,24 +119,25 @@ a.btn {
 h1 {
   font-size: 1.15em;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  text-shadow: 0 2px 0 rgba(218, 74, 74, 0.5);
+  text-transform: uppercase; }
 
-/* line 85, ../../app/assets/css/application.scss */
+/* line 86, ../../app/assets/css/application.scss */
 h2, h3, h4, h5, h6 {
   font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 89, ../../app/assets/css/application.scss */
+/* line 90, ../../app/assets/css/application.scss */
 h2 {
   color: #777777;
   font-size: 1.75em;
   font-weight: bold; }
 
-/* line 95, ../../app/assets/css/application.scss */
+/* line 96, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
-/* line 99, ../../app/assets/css/application.scss */
+/* line 100, ../../app/assets/css/application.scss */
 #contain {
   min-height: 100%;
   position: relative; }
@@ -144,11 +145,11 @@ img {
 /*
 	III. Header
 */
-/* line 109, ../../app/assets/css/application.scss */
+/* line 110, ../../app/assets/css/application.scss */
 #contain > header {
   background: #e37474;
   border-bottom: 1px solid #df5f5f; }
-  /* line 113, ../../app/assets/css/application.scss */
+  /* line 114, ../../app/assets/css/application.scss */
   #contain > header > section {
     *zoom: 1;
     max-width: 59.5em;
@@ -163,59 +164,57 @@ img {
       content: "";
       display: table;
       clear: both; }
-  /* line 119, ../../app/assets/css/application.scss */
+  /* line 120, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 123, ../../app/assets/css/application.scss */
+    /* line 124, ../../app/assets/css/application.scss */
     #contain > header hgroup h1 a {
       color: #fff; }
-      /* line 126, ../../app/assets/css/application.scss */
+      /* line 127, ../../app/assets/css/application.scss */
       #contain > header hgroup h1 a:hover {
         color: #f2f2f2; }
-  /* line 133, ../../app/assets/css/application.scss */
+  /* line 134, ../../app/assets/css/application.scss */
   #contain > header nav {
-    font: 200 0.85em ff-meta-serif-web-pro, Georgia, Times, serif; }
-    /* line 136, ../../app/assets/css/application.scss */
+    font-size: 0.85em; }
+    /* line 137, ../../app/assets/css/application.scss */
     #contain > header nav a {
       color: #fefefe; }
-      /* line 139, ../../app/assets/css/application.scss */
+      /* line 140, ../../app/assets/css/application.scss */
       #contain > header nav a:hover {
         color: #f1f1f1; }
-    /* line 144, ../../app/assets/css/application.scss */
+    /* line 145, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 147, ../../app/assets/css/application.scss */
+      /* line 148, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 150, ../../app/assets/css/application.scss */
+        /* line 151, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 155, ../../app/assets/css/application.scss */
+      /* line 156, ../../app/assets/css/application.scss */
       #contain > header nav section li {
-        display: inline-block;
-        position: relative;
-        top: 5px; }
-        /* line 160, ../../app/assets/css/application.scss */
+        display: inline-block; }
+        /* line 159, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
 	IV. Main
 */
-/* line 173, ../../app/assets/css/application.scss */
+/* line 172, ../../app/assets/css/application.scss */
 #main {
   padding: 4em 0; }
-  /* line 176, ../../app/assets/css/application.scss */
+  /* line 175, ../../app/assets/css/application.scss */
   #main .hero {
     *zoom: 1;
     max-width: 59.5em;
@@ -230,15 +229,15 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 181, ../../app/assets/css/application.scss */
+    /* line 180, ../../app/assets/css/application.scss */
     #main .hero header {
       overflow: hidden;
       *zoom: 1;
       margin-bottom: 3em; }
-      /* line 186, ../../app/assets/css/application.scss */
+      /* line 185, ../../app/assets/css/application.scss */
       #main .hero header h2 {
         margin-bottom: 0.5em; }
-      /* line 190, ../../app/assets/css/application.scss */
+      /* line 189, ../../app/assets/css/application.scss */
       #main .hero header p {
         width: 74.78992%;
         float: right;
@@ -253,7 +252,7 @@ img {
 /*
 	V. Footer
 */
-/* line 207, ../../app/assets/css/application.scss */
+/* line 206, ../../app/assets/css/application.scss */
 #contain > footer {
   background: #eceef1;
   border-top: 1px solid #e0e0e0;
@@ -262,7 +261,7 @@ img {
   height: 8em;
   position: absolute;
   width: 100%; }
-  /* line 216, ../../app/assets/css/application.scss */
+  /* line 215, ../../app/assets/css/application.scss */
   #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;

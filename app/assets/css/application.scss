@@ -78,8 +78,9 @@ a.btn {
 h1 {
 	font-size: 1.15em;
 	font-weight: 600;
-	text-transform: uppercase;
 	letter-spacing: 1px;
+	text-shadow: 0 2px 0 rgba(darken($red, 10%), 0.5);
+	text-transform: uppercase;
 }
 
 h2, h3, h4, h5, h6 {
@@ -154,8 +155,6 @@ img {
 
 			li {
 				display: inline-block;
-				position: relative;
-				top: 5px;
 
 				& + li {
 					margin-left: 2em;
