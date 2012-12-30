@@ -1,0 +1,153 @@
+/*
+	Noted.
+		file: css/individual/session.css
+*/
+/* line 17, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/*
+	= Appendix
+		I. Media Queries
+		II.
+*/
+/*
+	I. Media Queries
+*/
+@media handheld, only screen and (max-width: 767px) {
+  /* Handheld devices. */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* iPhone 4 */ }
+/*
+	II. Universal
+*/
+/* line 29, ../../../app/assets/css/individual/session.scss */
+body {
+  background: #e37474;
+  color: #eceef1;
+  font: 200 16px/1.75em ff-meta-serif-web-pro, Georgia, Times, serif;
+  margin-top: 6em;
+  text-align: center; }
+
+/* line 37, ../../../app/assets/css/individual/session.scss */
+a {
+  text-decoration: none; }
+
+/* line 41, ../../../app/assets/css/individual/session.scss */
+a.btn, button, input[type="submit"], input[type="button"] {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #aaa;
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+  font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 0.5em 1em; }
+  /* line 53, ../../../app/assets/css/individual/session.scss */
+  a.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background: #b7b7b7; }
+  /* line 57, ../../../app/assets/css/individual/session.scss */
+  a.btn.large, button.large, input[type="submit"].large, input[type="button"].large {
+    font-size: 1.15em; }
+  /* line 61, ../../../app/assets/css/individual/session.scss */
+  a.btn.primary, button.primary, input[type="submit"].primary, input[type="button"].primary {
+    background: #63a9db; }
+    /* line 64, ../../../app/assets/css/individual/session.scss */
+    a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover, input[type="button"].primary:hover {
+      background: #6fb0de; }
+  /* line 69, ../../../app/assets/css/individual/session.scss */
+  a.btn.green, button.green, input[type="submit"].green, input[type="button"].green {
+    background: #77cf70; }
+    /* line 72, ../../../app/assets/css/individual/session.scss */
+    a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, input[type="button"].green:hover {
+      background: #82d37b; }
+
+/* line 78, ../../../app/assets/css/individual/session.scss */
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.25em;
+  text-shadow: 0 2px 0 rgba(218, 74, 74, 0.5);
+  text-transform: uppercase; }
+  /* line 86, ../../../app/assets/css/individual/session.scss */
+  h1 a {
+    color: #fff; }
+    /* line 89, ../../../app/assets/css/individual/session.scss */
+    h1 a:hover {
+      color: #f2f2f2; }
+
+/* line 95, ../../../app/assets/css/individual/session.scss */
+input[type="text"], input[type="password"] {
+  background: #f5f6f7;
+  border: none;
+  border-radius: 2px;
+  color: #444444;
+  font: 1em/1em "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0.5em;
+  width: 20%;
+  outline: none; }
+  /* line 105, ../../../app/assets/css/individual/session.scss */
+  input[type="text"]:focus, input[type="password"]:focus {
+    background: #fefefe; }
+
+/* line 110, ../../../app/assets/css/individual/session.scss */
+p.buttons {
+  margin-top: 0.75em; }

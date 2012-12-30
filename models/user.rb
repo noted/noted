@@ -9,6 +9,7 @@ class User
   key :name, String
   key :username, String
   key :email, String
+  key :location, String
   key :hash, String
   
   timestamps!

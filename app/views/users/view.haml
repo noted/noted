@@ -1,7 +1,14 @@
-%header
-  %h2= @user.name
-%section
-  - @user.projects.each do |project|
-    %article
-      %h3
-        %a{:href => url(:projects, :view, :user => @user.username, :project => project.permalink)}= project.title
+.user
+  %aside
+    %header
+      %p
+        %img{:src => "https://twimg0-a.akamaihd.net/profile_images/2403148340/3m29x8x8k0aqt285jvnx.jpeg"}
+      %h2= @user.name
+    %section
+      %p= @user.email
+      %p= @user.location
+  %section
+    - @user.projects.each do |project|
+      %article
+        %h3= project.title
+        %p= project.description

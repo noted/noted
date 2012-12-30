@@ -27,24 +27,24 @@
         %section
           %hgroup
             %h1
-              %a{:href => "#"} Noted.
+              %a{:href => url(:index)} Noted.
           %nav
             %section
               %ul
                 %li
-                  %a{:href => ""} Features
+                  %a{:href => url(:features)} Features
                 %li
-                  %a{:href => ""} Pricing
+                  %a{:href => url(:pricing)} Pricing
                 %li
-                  %a{:href => ""} Documentation
+                  %a{:href => url(:documentation)} Documentation
                 %li
-                  %a{:href => ""} Support
+                  %a{:href => url(:support)} Support
             %section
               %ul
                 %li
-                  %a{:href => ""} Join
+                  %a{:href => url(:users, :new)} Join
                 %li
-                  %a{:href => ""} Sign In
+                  %a{:href => url(:sessions, :new)} Sign In
 
       #main{:role => "main"}
         = yield

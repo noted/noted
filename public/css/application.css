@@ -73,71 +73,86 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /*
 	II. Universal
 */
-/* line 35, ../../app/assets/css/application.scss */
+/* line 29, ../../app/assets/css/application.scss */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0; }
 
-/* line 41, ../../app/assets/css/application.scss */
+/* line 35, ../../app/assets/css/application.scss */
 body {
   background: #fefefe;
   color: #444444;
   font: 200 16px/1.75em ff-meta-serif-web-pro, Georgia, Times, serif; }
 
-/* line 47, ../../app/assets/css/application.scss */
+/* line 41, ../../app/assets/css/application.scss */
 a {
   color: #e37474;
   text-decoration: none; }
 
-/* line 52, ../../app/assets/css/application.scss */
-a.btn {
+/* line 46, ../../app/assets/css/application.scss */
+a.btn, button, input[type="submit"], input[type="button"] {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
   background: #aaa;
+  border: none;
   color: #fefefe;
+  cursor: pointer;
   font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 700;
+  font-size: 1em;
   padding: 0.5em 1em; }
-  /* line 61, ../../app/assets/css/application.scss */
-  a.btn:hover {
+  /* line 58, ../../app/assets/css/application.scss */
+  a.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
     background: #b7b7b7; }
-  /* line 65, ../../app/assets/css/application.scss */
-  a.btn.large {
+  /* line 62, ../../app/assets/css/application.scss */
+  a.btn.large, button.large, input[type="submit"].large, input[type="button"].large {
     font-size: 1.15em; }
-  /* line 69, ../../app/assets/css/application.scss */
-  a.btn.primary {
+  /* line 66, ../../app/assets/css/application.scss */
+  a.btn.primary, button.primary, input[type="submit"].primary, input[type="button"].primary {
     background: #63a9db; }
-    /* line 72, ../../app/assets/css/application.scss */
-    a.btn.primary:hover {
+    /* line 69, ../../app/assets/css/application.scss */
+    a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover, input[type="button"].primary:hover {
       background: #6fb0de; }
+  /* line 74, ../../app/assets/css/application.scss */
+  a.btn.green, button.green, input[type="submit"].green, input[type="button"].green {
+    background: #77cf70; }
+    /* line 77, ../../app/assets/css/application.scss */
+    a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, input[type="button"].green:hover {
+      background: #82d37b; }
 
-/* line 78, ../../app/assets/css/application.scss */
+/* line 83, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.15em;
   font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 0 2px 0 rgba(218, 74, 74, 0.5);
   text-transform: uppercase; }
+  /* line 90, ../../app/assets/css/application.scss */
+  h1 a {
+    color: #fff; }
+    /* line 93, ../../app/assets/css/application.scss */
+    h1 a:hover {
+      color: #f2f2f2; }
 
-/* line 86, ../../app/assets/css/application.scss */
+/* line 99, ../../app/assets/css/application.scss */
 h2, h3, h4, h5, h6 {
   font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 90, ../../app/assets/css/application.scss */
+/* line 103, ../../app/assets/css/application.scss */
 h2 {
   color: #777777;
   font-size: 1.75em;
   font-weight: bold; }
 
-/* line 96, ../../app/assets/css/application.scss */
+/* line 109, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
-/* line 100, ../../app/assets/css/application.scss */
+/* line 113, ../../app/assets/css/application.scss */
 #contain {
   min-height: 100%;
   position: relative; }
@@ -145,11 +160,11 @@ img {
 /*
 	III. Header
 */
-/* line 110, ../../app/assets/css/application.scss */
+/* line 123, ../../app/assets/css/application.scss */
 #contain > header {
   background: #e37474;
   border-bottom: 1px solid #df5f5f; }
-  /* line 114, ../../app/assets/css/application.scss */
+  /* line 127, ../../app/assets/css/application.scss */
   #contain > header > section {
     *zoom: 1;
     max-width: 59.5em;
@@ -164,58 +179,54 @@ img {
       content: "";
       display: table;
       clear: both; }
-  /* line 120, ../../app/assets/css/application.scss */
+  /* line 133, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 124, ../../app/assets/css/application.scss */
-    #contain > header hgroup h1 a {
-      color: #fff; }
-      /* line 127, ../../app/assets/css/application.scss */
-      #contain > header hgroup h1 a:hover {
-        color: #f2f2f2; }
-  /* line 134, ../../app/assets/css/application.scss */
+  /* line 137, ../../app/assets/css/application.scss */
   #contain > header nav {
     font-size: 0.85em; }
-    /* line 137, ../../app/assets/css/application.scss */
+    /* line 140, ../../app/assets/css/application.scss */
     #contain > header nav a {
       color: #fefefe; }
-      /* line 140, ../../app/assets/css/application.scss */
+      /* line 143, ../../app/assets/css/application.scss */
       #contain > header nav a:hover {
         color: #f1f1f1; }
-    /* line 145, ../../app/assets/css/application.scss */
+    /* line 148, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 148, ../../app/assets/css/application.scss */
+      /* line 151, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 151, ../../app/assets/css/application.scss */
+        /* line 154, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 156, ../../app/assets/css/application.scss */
+      /* line 159, ../../app/assets/css/application.scss */
       #contain > header nav section li {
         display: inline-block; }
-        /* line 159, ../../app/assets/css/application.scss */
+        /* line 162, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
 	IV. Main
 */
-/* line 172, ../../app/assets/css/application.scss */
+/* line 175, ../../app/assets/css/application.scss */
 #main {
-  padding: 4em 0; }
-  /* line 175, ../../app/assets/css/application.scss */
+  margin-top: 3em;
+  padding-bottom: 5em; }
+  /* line 179, ../../app/assets/css/application.scss */
   #main .hero {
+    /* / */
     *zoom: 1;
     max-width: 59.5em;
     _width: 59.5em;
@@ -229,15 +240,15 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 180, ../../app/assets/css/application.scss */
+    /* line 184, ../../app/assets/css/application.scss */
     #main .hero header {
       overflow: hidden;
       *zoom: 1;
       margin-bottom: 3em; }
-      /* line 185, ../../app/assets/css/application.scss */
+      /* line 189, ../../app/assets/css/application.scss */
       #main .hero header h2 {
         margin-bottom: 0.5em; }
-      /* line 189, ../../app/assets/css/application.scss */
+      /* line 193, ../../app/assets/css/application.scss */
       #main .hero header p {
         width: 74.78992%;
         float: right;
@@ -248,11 +259,75 @@ img {
         color: #aaa;
         font-weight: 300;
         font-size: 1.15em; }
+  /* line 204, ../../app/assets/css/application.scss */
+  #main .user {
+    /* /:user */
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #main .user:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 207, ../../app/assets/css/application.scss */
+    #main .user > aside {
+      width: 20.16807%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 4.20168%; }
+      /* line 211, ../../app/assets/css/application.scss */
+      #main .user > aside header {
+        overflow: hidden;
+        *zoom: 1; }
+        /* line 214, ../../app/assets/css/application.scss */
+        #main .user > aside header h2 {
+          font-size: 1.5em; }
+      /* line 219, ../../app/assets/css/application.scss */
+      #main .user > aside section {
+        border-top: 1px solid #efefef;
+        font-size: 0.85em;
+        margin-top: 1em;
+        padding-top: 1em; }
+    /* line 227, ../../app/assets/css/application.scss */
+    #main .user > section {
+      width: 74.78992%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline; }
+      /* line 230, ../../app/assets/css/application.scss */
+      #main .user > section h3 {
+        font-weight: bold;
+        font-size: 1.15em; }
+  /* line 237, ../../app/assets/css/application.scss */
+  #main .join {
+    /* /join */
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #main .join:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 245, ../../app/assets/css/application.scss */
+  #main .login {
+    text-align: center; }
 
 /*
 	V. Footer
 */
-/* line 206, ../../app/assets/css/application.scss */
+/* line 255, ../../app/assets/css/application.scss */
 #contain > footer {
   background: #eceef1;
   border-top: 1px solid #e0e0e0;
@@ -261,7 +336,7 @@ img {
   height: 8em;
   position: absolute;
   width: 100%; }
-  /* line 215, ../../app/assets/css/application.scss */
+  /* line 264, ../../app/assets/css/application.scss */
   #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;

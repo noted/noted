@@ -1,6 +1,6 @@
 Noted.controllers :sessions do
   get :new, :map => "/login" do
-    render 'sessions/new'
+    render 'sessions/new', layout: false
   end
 
   post :create do
