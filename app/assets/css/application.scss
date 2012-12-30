@@ -7,8 +7,9 @@
 
 $base: #fefefe;
 $text: #444;
-$red: #db6363;
+$red: #e37474;
 $blue: #63a9db;
+$grey: #eceef1;
 
 
 /*
@@ -31,11 +32,16 @@ $blue: #63a9db;
 	II. Universal
 */
 
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background: $base;
-	border-top: 10px solid $red;
 	color: $text;
-	font: 16px/1.75em $serif;
+	font: 200 16px/1.75em $serif;
 }
 
 a {
@@ -43,7 +49,7 @@ a {
 	text-decoration: none;
 }
 
-a.btn, button, input[type="submit"] {
+a.btn {
 	@include border-radius(2px);
 
 	background: #aaa;
@@ -82,12 +88,17 @@ h2, h3, h4, h5, h6 {
 
 h2 {
 	color: lighten($text, 20%);
-	font-size: 1.65em;
+	font-size: 1.75em;
 	font-weight: bold;
 }
 
 img {
 	max-width: 100%;
+}
+
+#contain {
+	min-height:100%;
+	position:relative;
 }
 
 
@@ -96,31 +107,38 @@ img {
 */
 
 #contain > header {
-	border-bottom: 1px solid #e0e0e0;
+	background: $red;
+	border-bottom: 1px solid darken($red, 5%);
 	
-	.inner {
+	& > section {
 		@include container;
 
 		padding: 2em 0;
 	}
 
-	a {
-		color: #555;
+	hgroup {
+		@include span-columns(6);
 
-		&:hover {
-			color: darken(#555, 20%);
+		h1 {
+			a {
+				color: #fff;
+
+				&:hover {
+					color: darken(#fff, 5%);
+				}
+			}
 		}
 	}
 
-	hgroup {
-		@include span-columns(6);
-	}
-
 	nav {
-		font: 200 0.85em $serif;
+		font-size: 0.85em;
 		
 		a {
-			color: #7d7d7d;
+			color: #fefefe;
+
+			&:hover {
+				color: darken(#fefefe, 5%);
+			}
 		}
 
 		section {
@@ -153,70 +171,29 @@ img {
 */
 
 #main {
-	border-bottom: 1px solid #e0e0e0;
-	border-top: 1px solid #e0e0e0;
-	margin-top: 0.25em;
-	margin-bottom: 0.25em;
 	padding: 4em 0;
 
 	.hero {
-		& > header {
-			padding: 3em 0;
+		@include container;
 
-			header, section {
-				@include container;
+		padding: 2.5em 0 3em;
+
+		header {
+			@include clearfix;
+
+			margin-bottom: 3em;
+
+			h2 {
+				margin-bottom: 0.5em;
 			}
 
-			header {
-				margin-bottom: 3em;
+			p {
+				@include span-columns(18 omega);
+				@include suffix(6);
 
-				h2 {
-					margin-bottom: 0.5em;
-				}
-
-				p {
-					@include span-columns(18 omega);
-					@include suffix(6);
-
-					color: #aaa;
-					font-weight: 300;
-					font-size: 1.15em;
-				}
-			}
-		}
-
-		& > section {
-			background: #f0f2f5;
-			margin: 6em 0;
-			padding: 5em 0 6em;
-
-			.inner {
-				@include container;
-
-				article {
-					@include prefix(1);
-					@include span-columns(4);
-					@include suffix(1);
-
-					text-align: center;
-
-					&:last-child {
-						@include omega;
-					}
-
-					h3 {
-						font-weight: 600;
-					}
-				}
-			}
-		}
-
-		& > footer {
-			padding: 2em 0 3em;
-			text-align: center;
-
-			header {
-				margin-bottom: 2em;
+				color: #aaa;
+				font-weight: 300;
+				font-size: 1.15em;
 			}
 		}
 	}
@@ -228,14 +205,18 @@ img {
 */
 
 #contain > footer {
+	background: $grey;
 	border-top: 1px solid #e0e0e0;
-	font-family: $serif;
+	bottom: 0;
 	color: #a0a0a0;
-	padding: 4em 0;
+	height: 8em;
+	position: absolute;
+	width: 100%;
 
 	section {
 		@include container;
 
+		padding: 3em 0;
 		text-align: center;
 	}
 }
