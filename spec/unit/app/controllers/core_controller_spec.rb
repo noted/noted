@@ -43,7 +43,7 @@ describe "Core" do
 
   describe "GET /support" do
     before do
-      get "/spoort"
+      get "/support"
     end
 
     it { response.should be_ok }
