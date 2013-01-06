@@ -29,7 +29,7 @@ gem 'barista'
 gem 'log_buddy'
 
 group :development, :test do
-  gem 'better_errors'
+  gem 'better_errors', '0.3.0'
   gem 'binding_of_caller'
 end
 
