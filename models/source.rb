@@ -1,7 +1,7 @@
 class Source
   include MongoMapper::Document
 
-  key :attributes, Hash
+  key :data, Hash
   key :markdown, String
   key :html, String
   key :permalink, String
