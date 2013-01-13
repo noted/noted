@@ -23,7 +23,9 @@ describe "Sources" do
 
   describe "POST /sources/create" do
     before do
-      post "/sources/create", :user => user.id, :project => project.id, :author => user.id, :source => { :data => { :title => "The Space Chronicles" } }
+      data = { :data => { :title => "The Space Chronicles" } }
+
+      post "/sources/create", :user => user.id, :project => project.id, :author => user.id, :source => data
     end
 
     let(:s) { Source.where(:data => {:title => "The Space Chronicles"}).first }

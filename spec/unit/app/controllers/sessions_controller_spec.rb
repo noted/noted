@@ -38,4 +38,4 @@ describe "Sessions" do
       it { response.location.should eql("#{site}/") }
     end
   end
-end 
+end

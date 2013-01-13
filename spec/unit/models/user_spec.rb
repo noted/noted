@@ -34,7 +34,7 @@ describe User do
       user.password = "barfoo"
       user.save
     end
-    
+
     it { user.password.should == "barfoo" }
   end
 
