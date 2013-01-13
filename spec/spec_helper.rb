@@ -46,7 +46,7 @@ Spork.prefork do
     class << self
       def book
         {
-          :attributes => {
+          :data => {
             :type => "book",
             :title => "The Hitchhiker's Guide to the Galaxy",
             :contributors => [

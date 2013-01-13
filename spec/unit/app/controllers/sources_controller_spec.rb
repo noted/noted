@@ -23,19 +23,20 @@ describe "Sources" do
 
   describe "POST /sources/create" do
     before do
-      post "/sources/create", :user => user.id, :project => project.id, :author => user.id, :source => Data.book
+      post "/sources/create", :user => user.id, :project => project.id, :author => user.id, :source => { :data => { :title => "The Space Chronicles" } }
     end
 
+    let(:s) { Source.where(:data => {:title => "The Space Chronicles"}).first }
+
     describe "redirects" do
-      let(:s) { Source.find_by_attributes(Data.book) }
 
       it { response.should be_redirect }
       it { response.location.should include("/#{user.username}/#{project.permalink}/sources/#{s.permalink}") }
     end
 
     describe "database" do
-      it { Source.find_by_attributes(Data.book).should_not be_nil }
-      it { Source.find_by_attributes(Data.book).creator.should eql(user) }
+      it { s.should_not be_nil }
+      it { s.creator.should eql(user) }
     end
   end
 
@@ -51,7 +52,7 @@ describe "Sources" do
 
   describe "PATCH /sources/update" do
     before do
-      patch "/sources/update", :id => source.id, :author => user.id, :source => { :attributes => { :title => "H2G2" } }
+      patch "/sources/update", :id => source.id, :author => user.id, :source => { :data => { :title => "H2G2" } }
 
       source.reload
     end
@@ -62,7 +63,7 @@ describe "Sources" do
     end
 
     describe "database" do
-      it "updates the attributes within the Source"
+      it { source.data[:title].should eql("H2G2") }
       it { source.updater.should eql(user) }
     end
   end

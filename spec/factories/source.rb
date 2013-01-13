@@ -17,7 +17,7 @@ FactoryGirl.define do
   }
 
   factory(:source) do
-    attributes @h2g2
+    data {{ :title => "The Hitchhiker's Guide to the Galaxy" }}
 
     project {|project| project.association(:project)}
   end

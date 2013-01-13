@@ -25,7 +25,6 @@ describe "Notes" do
 
     describe "database" do
       it { project.notes.should_not be_blank }
-      it "check for notes content"
     end
   end
 
