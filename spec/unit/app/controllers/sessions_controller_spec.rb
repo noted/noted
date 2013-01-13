@@ -16,13 +16,12 @@ describe "Sessions" do
       post "/sessions/create", :user => { :email => user.email, :password => "foobar" }
     end
 
-    it "sets a session" do
-      pending "find way to retrieve sessions from rack/test"
+    describe "session" do
     end
 
     describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("/") }
+      it { response.location.should eql("#{site}/") }
     end
   end
 
@@ -31,13 +30,12 @@ describe "Sessions" do
       get "/logout"
     end
 
-    it "unsets a session" do
-      pending "find way to retrieve sessions from rack/test"
+    describe "session" do
     end
 
     describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("/") }
+      it { response.location.should eql("#{site}/") }
     end
   end
 end 
