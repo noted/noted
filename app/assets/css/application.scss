@@ -82,6 +82,19 @@ a.btn, button, input[type="submit"], input[type="button"] {
 	}
 }
 
+form {
+	input {
+		border: 1px solid #efefef;
+		font-family: $sans-serif;
+		padding: 0.15em;
+		outline: none;
+
+		&:focus {
+			border: 1px solid #e0e0e0;
+		}
+	}
+}
+
 h1 {
 	font-size: 1.15em;
 	font-weight: 600;

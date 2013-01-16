@@ -58,6 +58,42 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+/* line 3, ../../app/assets/css/lib/modules/_join.scss */
+.join form header {
+  margin-bottom: 1em; }
+/* line 7, ../../app/assets/css/lib/modules/_join.scss */
+.join form footer {
+  margin-top: 0.5em; }
+/* line 12, ../../app/assets/css/lib/modules/_join.scss */
+.join input {
+  border: 3px solid #efefef;
+  font-size: 1.15em;
+  padding: 1em; }
+  /* line 17, ../../app/assets/css/lib/modules/_join.scss */
+  .join input:focus {
+    border: 3px solid #efefef; }
+  /* line 21, ../../app/assets/css/lib/modules/_join.scss */
+  .join input[type="text"], .join input[type="email"], .join input[type="password"] {
+    width: 50%; }
+
+/* line 1, ../../app/assets/css/lib/partials/_flash.scss */
+.flash {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  padding: 1em; }
+  /* line 6, ../../app/assets/css/lib/partials/_flash.scss */
+  .flash.notice {
+    background: green; }
+  /* line 10, ../../app/assets/css/lib/partials/_flash.scss */
+  .flash.warning {
+    background: yellow; }
+  /* line 14, ../../app/assets/css/lib/partials/_flash.scss */
+  .flash.error {
+    background: red; }
+
 /*
 	= Appendix
 		I. Media Queries
@@ -124,35 +160,45 @@ a.btn, button, input[type="submit"], input[type="button"] {
     a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, input[type="button"].green:hover {
       background: #82d37b; }
 
-/* line 85, ../../app/assets/css/application.scss */
+/* line 86, ../../app/assets/css/application.scss */
+form input {
+  border: 1px solid #efefef;
+  font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0.15em;
+  outline: none; }
+  /* line 92, ../../app/assets/css/application.scss */
+  form input:focus {
+    border: 1px solid #e0e0e0; }
+
+/* line 98, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.15em;
   font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 0 2px 0 rgba(218, 74, 74, 0.5);
   text-transform: uppercase; }
-  /* line 92, ../../app/assets/css/application.scss */
+  /* line 105, ../../app/assets/css/application.scss */
   h1 a {
     color: #fff; }
-    /* line 95, ../../app/assets/css/application.scss */
+    /* line 108, ../../app/assets/css/application.scss */
     h1 a:hover {
       color: #f2f2f2; }
 
-/* line 101, ../../app/assets/css/application.scss */
+/* line 114, ../../app/assets/css/application.scss */
 h2, h3, h4, h5, h6 {
   font-family: "franklin-gothic-urw", adelle-sans, Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-/* line 105, ../../app/assets/css/application.scss */
+/* line 118, ../../app/assets/css/application.scss */
 h2 {
   color: #777777;
   font-size: 1.75em;
   font-weight: bold; }
 
-/* line 111, ../../app/assets/css/application.scss */
+/* line 124, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
-/* line 115, ../../app/assets/css/application.scss */
+/* line 128, ../../app/assets/css/application.scss */
 #contain {
   min-height: 100%;
   position: relative; }
@@ -160,11 +206,11 @@ img {
 /*
 	III. Header
 */
-/* line 125, ../../app/assets/css/application.scss */
+/* line 138, ../../app/assets/css/application.scss */
 #contain > header {
   background: #e37474;
   border-bottom: 1px solid #df5f5f; }
-  /* line 129, ../../app/assets/css/application.scss */
+  /* line 142, ../../app/assets/css/application.scss */
   #contain > header > section {
     *zoom: 1;
     max-width: 59.5em;
@@ -179,52 +225,52 @@ img {
       content: "";
       display: table;
       clear: both; }
-  /* line 135, ../../app/assets/css/application.scss */
+  /* line 148, ../../app/assets/css/application.scss */
   #contain > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 139, ../../app/assets/css/application.scss */
+  /* line 152, ../../app/assets/css/application.scss */
   #contain > header nav {
     font-size: 0.85em; }
-    /* line 142, ../../app/assets/css/application.scss */
+    /* line 155, ../../app/assets/css/application.scss */
     #contain > header nav a {
       color: #fefefe; }
-      /* line 145, ../../app/assets/css/application.scss */
+      /* line 158, ../../app/assets/css/application.scss */
       #contain > header nav a:hover {
         color: #f1f1f1; }
-    /* line 150, ../../app/assets/css/application.scss */
+    /* line 163, ../../app/assets/css/application.scss */
     #contain > header nav section {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-      /* line 153, ../../app/assets/css/application.scss */
+      /* line 166, ../../app/assets/css/application.scss */
       #contain > header nav section:last-child {
         width: 24.36975%;
         float: right;
         margin-right: 0;
         #margin-left: -0.5em;
         display: inline; }
-        /* line 156, ../../app/assets/css/application.scss */
+        /* line 169, ../../app/assets/css/application.scss */
         #contain > header nav section:last-child ul {
           float: right; }
-      /* line 161, ../../app/assets/css/application.scss */
+      /* line 174, ../../app/assets/css/application.scss */
       #contain > header nav section li {
         display: inline-block; }
-        /* line 164, ../../app/assets/css/application.scss */
+        /* line 177, ../../app/assets/css/application.scss */
         #contain > header nav section li + li {
           margin-left: 2em; }
 
 /*
 	IV. Main
 */
-/* line 177, ../../app/assets/css/application.scss */
+/* line 190, ../../app/assets/css/application.scss */
 #main {
   margin-top: 3em;
   padding-bottom: 5em; }
-  /* line 181, ../../app/assets/css/application.scss */
+  /* line 194, ../../app/assets/css/application.scss */
   #main .hero {
     /* / */
     *zoom: 1;
@@ -240,15 +286,15 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 186, ../../app/assets/css/application.scss */
+    /* line 199, ../../app/assets/css/application.scss */
     #main .hero header {
       overflow: hidden;
       *zoom: 1;
       margin-bottom: 3em; }
-      /* line 191, ../../app/assets/css/application.scss */
+      /* line 204, ../../app/assets/css/application.scss */
       #main .hero header h2 {
         margin-bottom: 0.5em; }
-      /* line 195, ../../app/assets/css/application.scss */
+      /* line 208, ../../app/assets/css/application.scss */
       #main .hero header p {
         width: 74.78992%;
         float: right;
@@ -259,7 +305,7 @@ img {
         color: #aaa;
         font-weight: 300;
         font-size: 1.15em; }
-  /* line 206, ../../app/assets/css/application.scss */
+  /* line 219, ../../app/assets/css/application.scss */
   #main .user {
     /* /:user */
     *zoom: 1;
@@ -274,38 +320,38 @@ img {
       content: "";
       display: table;
       clear: both; }
-    /* line 209, ../../app/assets/css/application.scss */
+    /* line 222, ../../app/assets/css/application.scss */
     #main .user > aside {
       width: 20.16807%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       padding-right: 4.20168%; }
-      /* line 213, ../../app/assets/css/application.scss */
+      /* line 226, ../../app/assets/css/application.scss */
       #main .user > aside header {
         overflow: hidden;
         *zoom: 1; }
-        /* line 216, ../../app/assets/css/application.scss */
+        /* line 229, ../../app/assets/css/application.scss */
         #main .user > aside header h2 {
           font-size: 1.5em; }
-      /* line 221, ../../app/assets/css/application.scss */
+      /* line 234, ../../app/assets/css/application.scss */
       #main .user > aside section {
         border-top: 1px solid #efefef;
         font-size: 0.85em;
         margin-top: 1em;
         padding-top: 1em; }
-    /* line 229, ../../app/assets/css/application.scss */
+    /* line 242, ../../app/assets/css/application.scss */
     #main .user > section {
       width: 74.78992%;
       float: right;
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline; }
-      /* line 232, ../../app/assets/css/application.scss */
+      /* line 245, ../../app/assets/css/application.scss */
       #main .user > section h3 {
         font-weight: bold;
         font-size: 1.15em; }
-  /* line 239, ../../app/assets/css/application.scss */
+  /* line 252, ../../app/assets/css/application.scss */
   #main .join {
     /* /join */
     *zoom: 1;
@@ -320,14 +366,14 @@ img {
       content: "";
       display: table;
       clear: both; }
-  /* line 247, ../../app/assets/css/application.scss */
+  /* line 260, ../../app/assets/css/application.scss */
   #main .login {
     text-align: center; }
 
 /*
 	V. Footer
 */
-/* line 257, ../../app/assets/css/application.scss */
+/* line 270, ../../app/assets/css/application.scss */
 #contain > footer {
   background: #eceef1;
   border-top: 1px solid #e0e0e0;
@@ -336,7 +382,7 @@ img {
   height: 8em;
   position: absolute;
   width: 100%; }
-  /* line 266, ../../app/assets/css/application.scss */
+  /* line 279, ../../app/assets/css/application.scss */
   #contain > footer section {
     *zoom: 1;
     max-width: 59.5em;

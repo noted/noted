@@ -1,4 +1,5 @@
 .join
+  = partial 'partials/flash', :locals => { :flash => flash }
   - form_tag url(:users, :create), :method => "post" do
     %header
       %h2 Join

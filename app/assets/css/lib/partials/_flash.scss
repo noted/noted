@@ -1,0 +1,17 @@
+.flash {
+	@include border-radius(1px);
+
+	padding: 1em;
+
+	&.notice {
+		background: green;
+	}
+
+	&.warning {
+		background: yellow;
+	}
+
+	&.error {
+		background: red;
+	}
+}
