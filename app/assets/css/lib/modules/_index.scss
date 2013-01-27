@@ -1,0 +1,43 @@
+/*
+	Noted.
+		file: css/modules/_index.scss
+*/
+
+#index {
+	.hero {
+		background: $red;
+		color: $base;
+		padding: 4em 0;
+		margin-bottom: 4em;
+		text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.5);
+
+		header {
+			margin-bottom: 2em;
+
+			h2 {
+				margin-bottom: 0.75em;
+			}
+		}
+
+		section {
+
+		}
+	}
+
+	.features {
+		section {
+			@include container;
+
+			figure {
+				@include prefix(6);
+				@include span-columns(4);
+				@include suffix(2);
+			}
+
+			aside {
+				@include span-columns(10 omega);
+				@include suffix(2);
+			}
+		}
+	}
+}

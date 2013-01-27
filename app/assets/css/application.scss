@@ -16,5 +16,148 @@
 */
 
 body {
-	
+	font: 16px/1.5em $serif;
+}
+
+a {
+	color: $red;
+	text-decoration: none;
+
+	&:hover {
+		color: $dark-red;
+	}
+}
+
+a.btn, button, input[type="submit"] {
+	@include border-radius(2px);
+
+	background: darken($grey, 20%);
+	color: $base;
+	display: inline-block;
+	font: bold 1em $sans-serif;
+	padding: 0.5em 0.75em;
+	text-transform: uppercase;
+	text-shadow: none;
+
+	&:hover {
+		background: darken($grey, 25%);
+	}
+
+	&.primary {
+		background: $aqua;
+
+		&:hover {
+			background: $dark-aqua;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sans-serif;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 1.25em;
+	font-weight: bold;
+	text-shadow: 0 2px 0 rgba(darken($red, 10%), 0.5);
+	//letter-spacing: 1px;
+	text-transform: none;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.contain {
+	@include container;
+}
+
+
+/*
+	II. Header
+*/
+
+body > header {
+	background: $red;
+
+	a {
+		color: lighten($grey, 5%);
+
+		&:hover {
+			color: $grey;
+		}
+	}
+
+	hgroup {
+		@include span-columns(6);
+	}
+
+	nav {
+		font-size: 0.85em;
+
+		li {
+			text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.5);
+		}
+
+		section {
+			&:first-child {
+				@include span-columns(12);
+
+				li {
+					padding-right: 2em;
+				}
+			}
+
+			&:last-child {
+				@include span-columns(6 omega);
+
+				ul {
+					float: right;
+
+					li {
+						padding-left: 1.5em;
+					}
+				}
+			}
+
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+	.contain {
+		padding: 1.5em 0;
+	}
+}
+
+
+/*
+	III. Main
+*/
+
+#main {
+
+}
+
+
+/*
+	IV. Footer
+*/
+
+body > footer {
+	background: $grey;
+
+	ul {
+		li {
+			display: inline-block;
+		}
+	}
 }
