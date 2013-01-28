@@ -80,47 +80,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /* line 7, ../../app/assets/css/lib/modules/_index.scss */
 #index .hero {
-  background: #dd4a38;
+  background: #d24130;
   color: #fefefe;
   padding: 4em 0;
   margin-bottom: 4em;
   text-shadow: 0 1px 0 rgba(193, 50, 33, 0.5); }
-  /* line 14, ../../app/assets/css/lib/modules/_index.scss */
+  /* line 15, ../../app/assets/css/lib/modules/_index.scss */
   #index .hero header {
     margin-bottom: 2em; }
-    /* line 17, ../../app/assets/css/lib/modules/_index.scss */
+    /* line 18, ../../app/assets/css/lib/modules/_index.scss */
     #index .hero header h2 {
       margin-bottom: 0.75em; }
 /* line 28, ../../app/assets/css/lib/modules/_index.scss */
-#index .features section {
-  *zoom: 1;
-  max-width: 59.5em;
-  _width: 59.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: auto;
-  margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #index .features section:after {
-    content: "";
-    display: table;
-    clear: both; }
+#index .information {
+  margin-bottom: 4em; }
   /* line 31, ../../app/assets/css/lib/modules/_index.scss */
-  #index .features section figure {
-    padding-left: 25.21008%;
-    width: 15.96639%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline;
-    padding-right: 8.40336%; }
-  /* line 37, ../../app/assets/css/lib/modules/_index.scss */
-  #index .features section aside {
-    width: 41.17647%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline;
-    padding-right: 8.40336%; }
+  #index .information h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em; }
+  /* line 36, ../../app/assets/css/lib/modules/_index.scss */
+  #index .information header {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #eceef1;
+    margin-bottom: 4em;
+    padding-bottom: 4em;
+    text-align: center; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #index .information header:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 45, ../../app/assets/css/lib/modules/_index.scss */
+  #index .information section {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #index .information section:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 48, ../../app/assets/css/lib/modules/_index.scss */
+    #index .information section .paragraph {
+      width: 70.58824%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+    /* line 52, ../../app/assets/css/lib/modules/_index.scss */
+    #index .information section aside {
+      width: 24.36975%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline; }
+      /* line 55, ../../app/assets/css/lib/modules/_index.scss */
+      #index .information section aside a {
+        font-size: 1.25em;
+        padding-bottom: 0.85em;
+        padding-top: 0.85em;
+        text-align: center;
+        width: 100%;
+        vertical-align: center; }
 
 /*
 	= Appendix
@@ -131,17 +161,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /* line 18, ../../app/assets/css/application.scss */
 body {
+  color: #444444;
   font: 16px/1.5em "ff-meta-serif-web-pro", kepler-std, Georgia, Times New Roman, serif; }
 
-/* line 22, ../../app/assets/css/application.scss */
+/* line 23, ../../app/assets/css/application.scss */
 a {
   color: #dd4a38;
   text-decoration: none; }
-  /* line 26, ../../app/assets/css/application.scss */
+  /* line 27, ../../app/assets/css/application.scss */
   a:hover {
     color: #aa3325; }
 
-/* line 31, ../../app/assets/css/application.scss */
+/* line 32, ../../app/assets/css/application.scss */
 a.btn, button, input[type="submit"] {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -151,43 +182,65 @@ a.btn, button, input[type="submit"] {
   background: #b1b9c6;
   color: #fefefe;
   display: inline-block;
-  font: bold 1em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: bold 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0.5em 0.75em;
   text-transform: uppercase;
   text-shadow: none; }
-  /* line 42, ../../app/assets/css/application.scss */
+  /* line 43, ../../app/assets/css/application.scss */
   a.btn:hover, button:hover, input[type="submit"]:hover {
     background: #a3acbb; }
-  /* line 46, ../../app/assets/css/application.scss */
+  /* line 47, ../../app/assets/css/application.scss */
   a.btn.primary, button.primary, input[type="submit"].primary {
-    background: #48dcbc; }
-    /* line 49, ../../app/assets/css/application.scss */
+    background: #63a9db; }
+    /* line 50, ../../app/assets/css/application.scss */
     a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover {
-      background: #25ae90; }
+      background: #4e9ed6; }
+  /* line 55, ../../app/assets/css/application.scss */
+  a.btn.aqua, button.aqua, input[type="submit"].aqua {
+    background: #48dcbc; }
+    /* line 58, ../../app/assets/css/application.scss */
+    a.btn.aqua:hover, button.aqua:hover, input[type="submit"].aqua:hover {
+      background: #33d8b4; }
+  /* line 63, ../../app/assets/css/application.scss */
+  a.btn.large, button.large, input[type="submit"].large {
+    font-size: 1em; }
 
-/* line 55, ../../app/assets/css/application.scss */
+/* line 68, ../../app/assets/css/application.scss */
+em {
+  font-style: italic; }
+
+/* line 72, ../../app/assets/css/application.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
   text-transform: uppercase; }
 
-/* line 60, ../../app/assets/css/application.scss */
+/* line 78, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.25em;
-  font-weight: bold;
   text-shadow: 0 2px 0 rgba(193, 50, 33, 0.5);
   text-transform: none; }
 
-/* line 68, ../../app/assets/css/application.scss */
+/* line 84, ../../app/assets/css/application.scss */
 h2 {
   font-size: 2em;
-  font-weight: bold;
+  line-height: 1em;
   letter-spacing: 1px; }
 
-/* line 74, ../../app/assets/css/application.scss */
+/* line 90, ../../app/assets/css/application.scss */
+h3 {
+  font-size: 1.35em;
+  text-transform: none; }
+
+/* line 95, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
-/* line 78, ../../app/assets/css/application.scss */
+/* line 99, ../../app/assets/css/application.scss */
+strong {
+  font-weight: bold; }
+
+/* line 103, ../../app/assets/css/application.scss */
 .contain {
   *zoom: 1;
   max-width: 59.5em;
@@ -205,53 +258,54 @@ img {
 /*
 	II. Header
 */
-/* line 87, ../../app/assets/css/application.scss */
+/* line 112, ../../app/assets/css/application.scss */
 body > header {
   background: #dd4a38; }
-  /* line 90, ../../app/assets/css/application.scss */
+  /* line 115, ../../app/assets/css/application.scss */
   body > header a {
     color: #fbfbfc; }
-    /* line 93, ../../app/assets/css/application.scss */
+    /* line 118, ../../app/assets/css/application.scss */
     body > header a:hover {
       color: #eceef1; }
-  /* line 98, ../../app/assets/css/application.scss */
+  /* line 123, ../../app/assets/css/application.scss */
   body > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 102, ../../app/assets/css/application.scss */
+  /* line 127, ../../app/assets/css/application.scss */
   body > header nav {
-    font-size: 0.85em; }
-    /* line 105, ../../app/assets/css/application.scss */
+    font: 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif; }
+    /* line 130, ../../app/assets/css/application.scss */
     body > header nav li {
       text-shadow: 0 1px 0 rgba(193, 50, 33, 0.5); }
-    /* line 110, ../../app/assets/css/application.scss */
+    /* line 135, ../../app/assets/css/application.scss */
     body > header nav section:first-child {
       width: 49.57983%;
       float: left;
       margin-right: 0.84034%;
-      display: inline; }
-      /* line 113, ../../app/assets/css/application.scss */
+      display: inline;
+      margin-top: 0.35em; }
+      /* line 140, ../../app/assets/css/application.scss */
       body > header nav section:first-child li {
         padding-right: 2em; }
-    /* line 118, ../../app/assets/css/application.scss */
+    /* line 145, ../../app/assets/css/application.scss */
     body > header nav section:last-child {
       width: 24.36975%;
       float: right;
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline; }
-      /* line 121, ../../app/assets/css/application.scss */
+      /* line 148, ../../app/assets/css/application.scss */
       body > header nav section:last-child ul {
         float: right; }
-        /* line 124, ../../app/assets/css/application.scss */
+        /* line 151, ../../app/assets/css/application.scss */
         body > header nav section:last-child ul li {
-          padding-left: 1.5em; }
-    /* line 130, ../../app/assets/css/application.scss */
+          padding-left: 0.75em; }
+    /* line 157, ../../app/assets/css/application.scss */
     body > header nav section li {
       display: inline-block; }
-  /* line 136, ../../app/assets/css/application.scss */
+  /* line 163, ../../app/assets/css/application.scss */
   body > header .contain {
     padding: 1.5em 0; }
 
@@ -261,9 +315,12 @@ body > header {
 /*
 	IV. Footer
 */
-/* line 155, ../../app/assets/css/application.scss */
+/* line 182, ../../app/assets/css/application.scss */
 body > footer {
-  background: #eceef1; }
-  /* line 159, ../../app/assets/css/application.scss */
+  background: #eceef1;
+  font: 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 2em 0;
+  text-align: center; }
+  /* line 189, ../../app/assets/css/application.scss */
   body > footer ul li {
     display: inline-block; }

@@ -5,7 +5,8 @@
 
 #index {
 	.hero {
-		background: $red;
+		//background: lighten($red, 5%);
+		background: lighten($dark-red, 10%);
 		color: $base;
 		padding: 4em 0;
 		margin-bottom: 4em;
@@ -24,19 +25,41 @@
 		}
 	}
 
-	.features {
+	.information {
+		margin-bottom: 4em;
+
+		h3 {
+			font-size: 1.5em;
+			margin-bottom: 0.5em;
+		}
+
+		header {
+			@include container;
+
+			border-bottom: 1px solid $grey;
+			margin-bottom: 4em;
+			padding-bottom: 4em;
+			text-align: center;
+		}
+
 		section {
 			@include container;
 
-			figure {
-				@include prefix(6);
-				@include span-columns(4);
-				@include suffix(2);
+			.paragraph {
+				@include span-columns(17);
 			}
 
 			aside {
-				@include span-columns(10 omega);
-				@include suffix(2);
+				@include span-columns(6 omega);
+
+				a {
+					font-size: 1.25em;
+					padding-bottom: 0.85em;
+					padding-top: 0.85em;
+					text-align: center;
+					width: 100%;
+					vertical-align: center
+				}
 			}
 		}
 	}

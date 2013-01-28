@@ -38,9 +38,9 @@
           %section
             %ul
               %li
-                %a{:href => url(:users, :new)} Join
+                %a.btn.primary{:href => url(:users, :new)} Join
               %li
-                %a{:href => url(:sessions, :new)} Login
+                %a.btn{:href => url(:sessions, :new)} Login
     
     #main{:role => "main"}
       = yield
@@ -50,7 +50,7 @@
         %nav
           %ul
             %li
-              %a{:href => ""} Noted.
+              %a{:href => ""} About
             %li
               %a{:href => ""} Pricing
             %li
