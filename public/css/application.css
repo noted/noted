@@ -162,7 +162,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 18, ../../app/assets/css/application.scss */
 body {
   color: #444444;
-  font: 16px/1.5em "ff-meta-serif-web-pro", kepler-std, Georgia, Times New Roman, serif; }
+  font: 300 16px/1.5em utopia-std, ff-meta-serif-web-pro, adelle, Georgia, Times New Roman, serif; }
 
 /* line 23, ../../app/assets/css/application.scss */
 a {
@@ -182,7 +182,7 @@ a.btn, button, input[type="submit"] {
   background: #b1b9c6;
   color: #fefefe;
   display: inline-block;
-  font: bold 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: bold 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0.5em 0.75em;
   text-transform: uppercase;
   text-shadow: none; }
@@ -211,7 +211,7 @@ em {
 
 /* line 72, ../../app/assets/css/application.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
 
@@ -238,7 +238,7 @@ img {
 
 /* line 99, ../../app/assets/css/application.scss */
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 /* line 103, ../../app/assets/css/application.scss */
 .contain {
@@ -275,7 +275,7 @@ body > header {
     display: inline; }
   /* line 127, ../../app/assets/css/application.scss */
   body > header nav {
-    font: 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif; }
+    font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
     /* line 130, ../../app/assets/css/application.scss */
     body > header nav li {
       text-shadow: 0 1px 0 rgba(193, 50, 33, 0.5); }
@@ -318,9 +318,16 @@ body > header {
 /* line 182, ../../app/assets/css/application.scss */
 body > footer {
   background: #eceef1;
-  font: 0.85em "proxima-nova", franklin-gothic-urw, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #b1b9c6;
+  font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 2em 0;
   text-align: center; }
   /* line 189, ../../app/assets/css/application.scss */
-  body > footer ul li {
-    display: inline-block; }
+  body > footer ul {
+    margin-bottom: 1em; }
+    /* line 192, ../../app/assets/css/application.scss */
+    body > footer ul li {
+      display: inline-block; }
+      /* line 195, ../../app/assets/css/application.scss */
+      body > footer ul li + li {
+        padding-left: 1em; }
