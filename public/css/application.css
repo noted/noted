@@ -94,20 +94,27 @@ a.btn, button, input[type="submit"] {
   text-shadow: none; }
   /* line 17, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn:hover, button:hover, input[type="submit"]:hover {
-    background: #a3acbb; }
-  /* line 21, ../../app/assets/css/lib/modules/_buttons.scss */
+    background: #a3acbb;
+    color: #fefefe; }
+  /* line 22, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.primary, button.primary, input[type="submit"].primary {
     background: #63a9db; }
-    /* line 24, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 25, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover {
       background: #4e9ed6; }
-  /* line 29, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 30, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.aqua, button.aqua, input[type="submit"].aqua {
     background: #48dcbc; }
-    /* line 32, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 33, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.aqua:hover, button.aqua:hover, input[type="submit"].aqua:hover {
       background: #33d8b4; }
-  /* line 37, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 38, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.orange, button.orange, input[type="submit"].orange {
+    background: #ebb845; }
+    /* line 41, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover {
+      background: #e9af2e; }
+  /* line 46, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large {
     font-size: 1em; }
 
@@ -204,6 +211,114 @@ form input {
         text-align: center;
         width: 100%;
         vertical-align: center; }
+
+/*
+	Noted.
+		file: css/pages/_index.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_user.scss */
+#user {
+  margin-bottom: 4em; }
+  /* line 9, ../../app/assets/css/lib/pages/_user.scss */
+  #user > header {
+    background: #fffde3;
+    margin-bottom: 3em;
+    padding: 1em; }
+    /* line 14, ../../app/assets/css/lib/pages/_user.scss */
+    #user > header .inner {
+      *zoom: 1;
+      max-width: 59.5em;
+      _width: 59.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+      #user > header .inner:after {
+        content: "";
+        display: table;
+        clear: both; }
+    /* line 18, ../../app/assets/css/lib/pages/_user.scss */
+    #user > header section {
+      width: 87.39496%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+      /* line 21, ../../app/assets/css/lib/pages/_user.scss */
+      #user > header section figure {
+        width: 13.46154%;
+        float: left;
+        margin-right: 0.96154%;
+        display: inline;
+        padding-right: 4.80769%; }
+        /* line 25, ../../app/assets/css/lib/pages/_user.scss */
+        #user > header section figure img {
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          border-radius: 50%; }
+      /* line 30, ../../app/assets/css/lib/pages/_user.scss */
+      #user > header section hgroup {
+        width: 80.76923%;
+        float: right;
+        margin-right: 0;
+        #margin-left: -0.5em;
+        display: inline;
+        margin-top: 2em; }
+        /* line 35, ../../app/assets/css/lib/pages/_user.scss */
+        #user > header section hgroup h2 {
+          font-size: 1.5em;
+          margin-bottom: 0.25em; }
+    /* line 42, ../../app/assets/css/lib/pages/_user.scss */
+    #user > header aside {
+      width: 11.76471%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline;
+      margin-top: 2em; }
+      /* line 47, ../../app/assets/css/lib/pages/_user.scss */
+      #user > header aside a {
+        float: right; }
+  /* line 54, ../../app/assets/css/lib/pages/_user.scss */
+  #user .projects article {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    background: #f1f1f1;
+    padding: 0.5em 0; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #user .projects article:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 61, ../../app/assets/css/lib/pages/_user.scss */
+    #user .projects article + article {
+      margin-top: 1em; }
+    /* line 65, ../../app/assets/css/lib/pages/_user.scss */
+    #user .projects article .inner {
+      margin: 0 1.5em;
+      padding: 1em 0; }
+    /* line 70, ../../app/assets/css/lib/pages/_user.scss */
+    #user .projects article header {
+      border-bottom: 1px solid #fefefe; }
+      /* line 73, ../../app/assets/css/lib/pages/_user.scss */
+      #user .projects article header p {
+        font-style: italic;
+        margin-top: 0.25em; }
+        /* line 77, ../../app/assets/css/lib/pages/_user.scss */
+        #user .projects article header p a {
+          font-style: normal; }
 
 /*
 	= Appendix

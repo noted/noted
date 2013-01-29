@@ -32,15 +32,15 @@
               %li
                 %a{:href => url(:explore)} Explore
               %li
-                %a{:href => url(:features)} Features
+                %a{:href => url(:features)} Blog
               %li
-                %a{:href => url(:support)} Pricing
+                %a{:href => url(:support)} Help
           %section
             %ul
               %li
-                %a.btn.primary{:href => url(:users, :new)} Join
+                %a.btn{:href => url(:users, :new)} Account
               %li
-                %a.btn{:href => url(:sessions, :new)} Login
+                %a.btn.orange{:href => url(:sessions, :new)} Logout
     
     #main{:role => "main"}
       = yield

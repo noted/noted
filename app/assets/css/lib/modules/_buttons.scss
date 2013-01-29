@@ -16,6 +16,7 @@ a.btn, button, input[type="submit"] {
 
 	&:hover {
 		background: darken($grey, 25%);
+		color: $base;
 	}
 
 	&.primary {
@@ -31,6 +32,14 @@ a.btn, button, input[type="submit"] {
 
 		&:hover {
 			background: darken($aqua, 5%);
+		}
+	}
+
+	&.orange {
+		background: $orange;
+
+		&:hover {
+			background: darken($orange, 5%);
 		}
 	}
 

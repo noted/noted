@@ -1,0 +1,22 @@
+#user
+  %header
+    .inner
+      %section
+        %figure
+          %img{:src => "http://www.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
+        %hgroup
+          %h2= @user.name
+          %p= @user.location
+      %aside
+        %a.btn{:href => url(:users, :edit)} Settings
+  .projects
+    - @user.projects.each do |project|
+      %article
+        %header
+          .inner
+            %h3
+              %a{:href => project.permalink}= project.title
+            %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
+        %section
+          .inner
+            %p= project.description
