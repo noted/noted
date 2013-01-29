@@ -1,0 +1,103 @@
+/*
+	Noted.
+		file: css/lib/layouts/sessions.scss
+*/
+
+@import "lib/base";
+
+$total-columns: 24;
+$column-width: 1em;
+$gutter-width: 0.25em;
+$grid-padding: $gutter-width;
+
+/*
+	= Appendix
+		I. Universal
+*/
+
+
+/*
+	I. Universal
+*/
+
+body {
+	background: $grey;
+	color: $text;
+	font: 300 16px/1.5em $serif;
+}
+
+a {
+	color: lighten($grey, 5%);
+	text-decoration: none;
+
+	&:hover {
+		color: $grey;
+	}
+}
+
+form {
+	input {
+		background: $grey;
+		border: none;
+		width: 65%;
+
+		&:focus {
+			background: $base;
+		}
+	}
+
+	nav {
+		margin: 0 auto;
+		width: 45%;
+
+		li {
+			display: inline-block;
+
+			&:first-child {
+				float: left;
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
+
+h1 {
+	font: bold 1.25em $sans-serif;
+	text-shadow: 0 2px 0 rgba(darken($red, 10%), 0.5);
+}
+
+#contain {
+	@include border-radius(2px);
+	@include container;
+
+	background: $red;
+	margin-top: 4em;
+	padding: 4em 2em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+/*
+	III. Header
+*/
+
+header {
+	margin-bottom: 1em;
+}
+
+
+/*
+	IV. Main
+*/
+
+#main {
+	form {
+		nav {
+			margin-top: 1em;
+		}
+	}
+}

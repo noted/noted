@@ -1,0 +1,40 @@
+/*
+	Noted.
+		file: css/lib/modules/_buttons.scss
+*/
+
+a.btn, button, input[type="submit"] {
+	@include border-radius(2px);
+
+	background: darken($grey, 20%);
+	color: $base;
+	display: inline-block;
+	font: bold 0.85em $sans-serif;
+	padding: 0.5em 0.75em;
+	text-transform: uppercase;
+	text-shadow: none;
+
+	&:hover {
+		background: darken($grey, 25%);
+	}
+
+	&.primary {
+		background: $blue;
+
+		&:hover {
+			background: darken($blue, 5%);
+		}
+	}
+
+	&.aqua {
+		background: $aqua;
+
+		&:hover {
+			background: darken($aqua, 5%);
+		}
+	}
+
+	&.large {
+		font-size: 1em;
+	}
+}

@@ -1,0 +1,15 @@
+/*
+	Noted.
+		file: css/lib/modules/_forms.scss
+*/
+
+form {
+	input {
+		@include border-radius(1px);
+
+		color: $text;
+		font: 1em/1em $sans-serif;
+		outline: none;
+		padding: 0.5em;
+	}
+}
