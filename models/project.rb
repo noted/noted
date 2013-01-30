@@ -14,9 +14,9 @@ class Project
   many :notes
   many :sources
 
-  validates_presence_of :title, :permalink
+  validates_presence_of :title#, :permalink
 
-  before_validation :permalink!
+  before_save :permalink!
 
   def add_collaborator(user)
     self.collaborators << user
