@@ -9,14 +9,12 @@
           %p= @user.location
       %aside
         %a.btn{:href => url(:users, :edit)} Settings
-  .projects
+  %section
     - @user.projects.each do |project|
       %article
         %header
-          .inner
-            %h3
-              %a{:href => project.permalink}= project.title
-            %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
+          %h3
+            %a{:href => project.permalink}= project.title
+          %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
         %section
-          .inner
-            %p= project.description
+          %p= project.description

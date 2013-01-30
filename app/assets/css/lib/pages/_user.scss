@@ -4,8 +4,6 @@
 */
 
 #user {
-	margin-bottom: 4em;
-
 	& > header {
 		background: $pale-yellow;
 		margin-bottom: 3em;
@@ -50,21 +48,20 @@
 		}
 	}
 
-	.projects {
+	& > section {
 		article {
 			@include border-radius(2px);
 			@include container;
 
-			background: darken($base, 5%);
-			padding: 0.5em 0;
+			background: lighten($grey, 3%);
+			padding: 0;
 
 			& + article {
 				margin-top: 1em;
 			}
 
-			.inner {
-				margin: 0 1.5em;
-				padding: 1em 0;
+			header, section {
+				padding: 2em;
 			}
 
 			header {
