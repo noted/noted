@@ -1,6 +1,10 @@
 Noted.controllers :sessions do
   get :new, :map => "/login" do
-    render 'sessions/new', layout: :sessions
+    if current_user
+      redirect url(:index)
+    else
+      render 'sessions/new', layout: :sessions
+    end
   end
 
   post :create do

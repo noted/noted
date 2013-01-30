@@ -7,7 +7,9 @@ a.btn, button, input[type="submit"] {
 	@include border-radius(2px);
 
 	background: darken($grey, 20%);
+	border: none;
 	color: $base;
+	cursor: pointer;
 	display: inline-block;
 	font: bold 0.85em $sans-serif;
 	padding: 0.5em 0.75em;

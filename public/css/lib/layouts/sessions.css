@@ -86,35 +86,37 @@ a.btn, button, input[type="submit"] {
   -o-border-radius: 2px;
   border-radius: 2px;
   background: #b1b9c6;
+  border: none;
   color: #fefefe;
+  cursor: pointer;
   display: inline-block;
   font: bold 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0.5em 0.75em;
   text-transform: uppercase;
   text-shadow: none; }
-  /* line 17, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 19, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn:hover, button:hover, input[type="submit"]:hover {
     background: #a3acbb;
     color: #fefefe; }
-  /* line 22, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 24, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.primary, button.primary, input[type="submit"].primary {
     background: #63a9db; }
-    /* line 25, ../../../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 27, ../../../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover {
       background: #4e9ed6; }
-  /* line 30, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 32, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.aqua, button.aqua, input[type="submit"].aqua {
     background: #48dcbc; }
-    /* line 33, ../../../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 35, ../../../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.aqua:hover, button.aqua:hover, input[type="submit"].aqua:hover {
       background: #33d8b4; }
-  /* line 38, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 40, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.orange, button.orange, input[type="submit"].orange {
     background: #ebb845; }
-    /* line 41, ../../../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 43, ../../../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover {
       background: #e9af2e; }
-  /* line 46, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 48, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large {
     font-size: 1em; }
 
@@ -336,7 +338,7 @@ form input {
 */
 /* line 23, ../../../../app/assets/css/lib/layouts/sessions.scss */
 body {
-  background: #eceef1;
+  background: #f5f6f7;
   color: #444444;
   font: 300 16px/1.5em "utopia-std", ff-meta-serif-web-pro, adelle, Georgia, Times New Roman, serif; }
 
@@ -349,12 +351,12 @@ a {
     color: #eceef1; }
 
 /* line 39, ../../../../app/assets/css/lib/layouts/sessions.scss */
-form input {
-  background: #eceef1;
+form input[type="email"], form input[type="password"] {
+  background: #f5f6f7;
   border: none;
   width: 65%; }
   /* line 44, ../../../../app/assets/css/lib/layouts/sessions.scss */
-  form input:focus {
+  form input[type="email"]:focus, form input[type="password"]:focus {
     background: #fefefe; }
 /* line 49, ../../../../app/assets/css/lib/layouts/sessions.scss */
 form nav {
@@ -391,7 +393,7 @@ h1 {
   margin-right: auto;
   background: #dd4a38;
   margin-top: 4em;
-  padding: 4em 2em;
+  padding: 0;
   text-align: center;
   vertical-align: middle; }
   /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -405,11 +407,20 @@ h1 {
 */
 /* line 88, ../../../../app/assets/css/lib/layouts/sessions.scss */
 header {
-  margin-bottom: 1em; }
+  background: #d24130;
+  padding: 1.5em; }
 
 /*
 	IV. Main
 */
 /* line 99, ../../../../app/assets/css/lib/layouts/sessions.scss */
-#main form nav {
-  margin-top: 1em; }
+#main {
+  margin: 3em 0; }
+  /* line 103, ../../../../app/assets/css/lib/layouts/sessions.scss */
+  #main form input:first-child {
+    margin-bottom: 0.5em; }
+  /* line 107, ../../../../app/assets/css/lib/layouts/sessions.scss */
+  #main form nav {
+    overflow: hidden;
+    *zoom: 1;
+    margin-top: 1.5em; }

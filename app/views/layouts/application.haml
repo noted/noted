@@ -40,7 +40,7 @@
               %li
                 %a.btn{:href => url(:users, :new)} Account
               %li
-                %a.btn.orange{:href => url(:sessions, :new)} Logout
+                %a.btn.orange{:href => url(:sessions, :destroy)} Logout
     
     #main{:role => "main"}
       = yield

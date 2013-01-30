@@ -1,10 +1,10 @@
 Noted.controllers do
   get :index do
-    render 'core/index'
-  end
-
-  get :dashboard do
-    render 'core/dashboard'
+    if current_user
+      render 'core/dashboard'
+    else
+      render 'core/index'
+    end
   end
 
   get :explore do

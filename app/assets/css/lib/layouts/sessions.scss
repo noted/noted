@@ -21,7 +21,7 @@ $grid-padding: $gutter-width;
 */
 
 body {
-	background: $grey;
+	background: lighten($grey, 3%);
 	color: $text;
 	font: 300 16px/1.5em $serif;
 }
@@ -36,8 +36,8 @@ a {
 }
 
 form {
-	input {
-		background: $grey;
+	input[type="email"], input[type="password"] {
+		background: lighten($grey, 3%);
 		border: none;
 		width: 65%;
 
@@ -75,7 +75,7 @@ h1 {
 
 	background: $red;
 	margin-top: 4em;
-	padding: 4em 2em;
+	padding: 0;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -86,7 +86,9 @@ h1 {
 */
 
 header {
-	margin-bottom: 1em;
+	background: lighten($dark-red, 10%);
+
+	padding: 1.5em;
 }
 
 
@@ -95,9 +97,17 @@ header {
 */
 
 #main {
+	margin: 3em 0;
+
 	form {
+		input:first-child {
+			margin-bottom: 0.5em;
+		}
+
 		nav {
-			margin-top: 1em;
+			@include clearfix;
+
+			margin-top: 1.5em;
 		}
 	}
 }
