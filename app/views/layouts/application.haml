@@ -27,21 +27,37 @@
           %h1
             %a{:href => url(:index)} Noted.
         %nav
-          %section
-            %ul
-              %li
-                %a{:href => url(:explore)} Explore
-              %li
-                %a{:href => url(:features)} Blog
-              %li
-                %a{:href => url(:support)} Help
-          %section
-            %ul
-              %li
-                %a.btn{:href => url(:users, :new)} Account
-              %li
-                %a.btn.orange{:href => url(:sessions, :destroy)} Logout
-    
+          - if current_user
+            %section
+              %ul
+                %li
+                  %a{:href => url(:explore)} Explore
+                %li
+                  %a{:href => url(:features)} Blog
+                %li
+                  %a{:href => url(:support)} Help
+            %section
+              %ul
+                %li
+                  %a.btn{:href => url(:users, :new)}= current_user.name
+                %li
+                  %a.btn.orange{:href => url(:sessions, :destroy)} Logout
+          - else
+            %section
+              %ul
+                %li
+                  %a{:href => url(:explore)} Explore
+                %li
+                  %a{:href => url(:features)} Features
+                %li
+                  %a{:href => url(:support)} Pricing
+            %section
+              %ul
+                %li
+                  %a.btn.primary{:href => url(:users, :new)} Join
+                %li
+                  %a.btn{:href => url(:sessions, :new)} Login
+
     #main{:role => "main"}
       = yield
     

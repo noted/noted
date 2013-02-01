@@ -21,7 +21,7 @@ $grid-padding: $gutter-width;
 */
 
 body {
-	background: lighten($grey, 3%);
+	background: $base;
 	color: $text;
 	font: 300 16px/1.5em $serif;
 }
