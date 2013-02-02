@@ -6,8 +6,8 @@
 #user {
 	& > header {
 		background: $pale-yellow;
-		margin-bottom: 3em;
-		padding: 1em;
+		margin-bottom: 4em;
+		padding: 1.5em;
 
 		.inner {
 			@include container;

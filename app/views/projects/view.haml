@@ -1,0 +1,11 @@
+#project
+  %header
+    .inner
+      %section
+        %figure
+          %img{:src => "/img/placeholder.jpg"}
+        %hgroup
+          %h2= @user.name
+          %p= @user.location
+      %aside
+        %a.btn{:href => url(:users, :edit)} Settings
