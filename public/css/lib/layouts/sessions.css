@@ -275,23 +275,54 @@ form input {
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline;
-      margin-top: 2em; }
+      margin-top: 1em; }
       /* line 33, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > header section hgroup h2 {
         font-size: 1.5em;
         margin-bottom: 0.25em; }
-  /* line 40, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 43, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > header aside {
     width: 11.76471%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline;
-    margin-top: 2em; }
-    /* line 45, ../../../../app/assets/css/lib/pages/_user.scss */
+    margin-top: 1.25em; }
+    /* line 48, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > header aside a {
       float: right; }
-/* line 52, ../../../../app/assets/css/lib/pages/_user.scss */
+/* line 55, ../../../../app/assets/css/lib/pages/_user.scss */
+#user > section header {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em; }
+  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #user > section header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 60, ../../../../app/assets/css/lib/pages/_user.scss */
+  #user > section header hgroup {
+    width: 49.57983%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+  /* line 64, ../../../../app/assets/css/lib/pages/_user.scss */
+  #user > section header aside {
+    width: 49.57983%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline;
+    position: relative;
+    bottom: 0.5em;
+    text-align: right; }
+/* line 73, ../../../../app/assets/css/lib/pages/_user.scss */
 #user > section article {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -312,20 +343,20 @@ form input {
     content: "";
     display: table;
     clear: both; }
-  /* line 59, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 80, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article + article {
     margin-top: 1em; }
-  /* line 63, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 84, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article header, #user > section article section {
     padding: 2em; }
-  /* line 67, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 88, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article header {
     border-bottom: 1px solid #fefefe; }
-    /* line 70, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 91, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > section article header p {
       font-style: italic;
       margin-top: 0.25em; }
-      /* line 74, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 95, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article header p a {
         font-style: normal; }
 

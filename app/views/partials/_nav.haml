@@ -11,7 +11,7 @@
     %section
       %ul
         %li
-          %a.btn{:href => url(:users, :edit)}= current_user.name
+          %a.btn{:href => url(:users, :view, :user => current_user.username)}= current_user.name
         %li
           %a.btn.orange{:href => url(:sessions, :destroy)} Logout
   - else

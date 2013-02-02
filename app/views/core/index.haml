@@ -5,8 +5,8 @@
         %h2 Research together
         %p Noted allows students to organize and collaborate on their research projects. Ease the pain of creating citations and organize however you want. When you're done, share your project with the world.
       %section
-        %a.btn.large{:href => ""} Explore
-        %a.btn.primary.large{:href => ""} Join
+        %a.btn.large{:href => url(:explore)} Explore
+        %a.btn.primary.large{:href => url(:users, :new)} Join
   .information
     %header
       %h3 Research management that doesn't suck
@@ -16,4 +16,4 @@
         %p
           <strong>Noted</strong> is a research-management tool built for students and researchers alike. Organize your sources and notes, keep track of related files, write a paper, collaborate with others, and publish your findings for others to see.
       %aside
-        %a.btn.primary{:href => ""} Join
+        %a.btn.primary{:href => url(:users, :new)} Join

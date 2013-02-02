@@ -3,18 +3,28 @@
     .inner
       %section
         %figure
-          %img{:src => "http://www.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
+          %img{:src => @user.gravatar}
         %hgroup
           %h2= @user.name
           %p= @user.location
       %aside
         %a.btn{:href => url(:users, :edit)} Settings
   %section
-    - @user.projects.each do |project|
+    %header
+      %hgroup
+        %h3 Projects
+      %aside
+        %a.btn{:href => url(:projects, :new)} New Project
+    - if !@user.projects.blank?
+      - @user.projects.each do |project|
+        %article
+          %header
+            %h3
+              %a{:href => project.permalink}= project.title
+            %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
+          %section
+            %p= project.description
+    - else
       %article
-        %header
-          %h3
-            %a{:href => project.permalink}= project.title
-          %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
         %section
-          %p= project.description
+          %p No projects!

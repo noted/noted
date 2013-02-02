@@ -28,11 +28,14 @@
 			hgroup {
 				@include span-columns(17 omega, 21);
 
-				margin-top: 2em;
+				margin-top: 1em;
 
 				h2 {
 					font-size: 1.5em;
 					margin-bottom: 0.25em;
+				}
+
+				p {
 				}
 			}
 		}
@@ -40,7 +43,7 @@
 		aside {
 			@include span-columns(3 omega);
 
-			margin-top: 2em;
+			margin-top: 1.25em;
 
 			a {
 				float: right;
@@ -49,6 +52,24 @@
 	}
 
 	& > section {
+		header {
+			@include container;
+
+			margin-bottom: 1em;
+
+			hgroup {
+				@include span-columns(12);
+			}
+
+			aside {
+				@include span-columns(12 omega);
+
+				position: relative;
+				bottom: 0.5em; // FIX
+				text-align: right;
+			}
+		}
+
 		article {
 			@include border-radius(2px);
 			@include container;

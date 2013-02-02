@@ -8,6 +8,7 @@ Noted.controllers :users do
     u.password = params[:password]
 
     if u.save
+      login(u)
       redirect url(:index)
     else
       flash[:error] = "Something has gone awry."

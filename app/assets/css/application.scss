@@ -98,7 +98,7 @@ body > header {
 
 		section {
 			&:first-child {
-				@include span-columns(14);
+				@include span-columns(12);
 
 				margin-top: 0.35em;
 
@@ -108,7 +108,7 @@ body > header {
 			}
 
 			&:last-child {
-				@include span-columns(6 omega);
+				@include span-columns(8 omega);
 
 				ul {
 					float: right;
