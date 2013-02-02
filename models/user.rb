@@ -1,4 +1,5 @@
 require 'bcrypt'
+require 'digest/md5'
 
 class User
   include MongoMapper::Document
@@ -54,6 +55,14 @@ class User
   def self.authenticate(e, p)
     u = first(:email => e) if e.present?
     u && u.password == p ? u : nil
+  end
+
+  def gravatar
+    str = self.email.strip
+    str = str.downcase
+    str = Digest::MD5.hexdigest(str)
+
+    "http://www.gravatar.com/avatar/#{str}"
   end
 
   def password
