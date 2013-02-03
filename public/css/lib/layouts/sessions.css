@@ -135,6 +135,48 @@ form input {
   font: 1em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   outline: none;
   padding: 0.5em; }
+/* line 17, ../../../../app/assets/css/lib/modules/_forms.scss */
+form input[type=text], form input[type=email], form input[type=password], form textarea {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #eceef1; }
+  /* line 22, ../../../../app/assets/css/lib/modules/_forms.scss */
+  form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus {
+    border: 2px solid #cfd4db; }
+
+/*
+	Noted.
+		file: css/lib/modules/_flash.scss
+*/
+/* line 6, ../../../../app/assets/css/lib/modules/_flash.scss */
+.flash {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 1em;
+  padding: 0.75em;
+  width: 50%; }
+  /* line 14, ../../../../app/assets/css/lib/modules/_flash.scss */
+  .flash.error {
+    background-color: #f2dede;
+    border: 1px solid #eed3d7;
+    color: #b14454; }
+  /* line 20, ../../../../app/assets/css/lib/modules/_flash.scss */
+  .flash.notice {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #6da43f; }
+  /* line 26, ../../../../app/assets/css/lib/modules/_flash.scss */
+  .flash.warning {
+    background: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #e9a31b; }
 
 /*
 	Noted.

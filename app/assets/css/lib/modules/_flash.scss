@@ -1,0 +1,31 @@
+/*
+	Noted.
+		file: css/lib/modules/_flash.scss
+*/
+
+.flash {
+	@include border-radius(2px);
+
+	font-family: $sans-serif;
+	margin-bottom: 1em;
+	padding: 0.75em;
+	width: 50%;
+
+	&.error {
+		background-color: $flash-red;
+		border: 1px solid $flash-dark-red;
+		color: darken($flash-dark-red, 40%);
+	}
+
+	&.notice {
+		background-color: $green;
+		border: 1px solid $dark-green;
+		color: darken($dark-green, 40%);
+	}
+
+	&.warning {
+		background: $yellow;
+		border: 1px solid $dark-yellow;
+		color: darken($dark-yellow, 40%);
+	}
+}
