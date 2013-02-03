@@ -20,7 +20,7 @@
         %article
           %header
             %h3
-              %a{:href => project.permalink}= project.title
+              %a{:href => project.url}= project.title
             %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
           %section
             %p= project.description
