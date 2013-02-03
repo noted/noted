@@ -1,0 +1,63 @@
+/*
+	Noted.
+		file: css/pages/_user.scss
+*/
+
+#project {
+	& > header {
+		margin-bottom: 4em;
+
+		.inner {
+			@include container;
+
+			padding: 1.5em;
+		}
+
+		& > hgroup {
+			&:first-child {
+				background: darken($pale-yellow, 3%);
+			}
+
+			&:last-child {
+				background: $pale-yellow;
+			}
+		}
+
+		section {
+			@include span-columns(21);
+
+			figure {
+				@include span-columns(3, 21);
+				@include suffix(1, 21);
+
+				img {
+					@include border-radius(50%);
+				}
+			}
+
+			hgroup {
+				@include span-columns(17 omega, 21);
+
+				margin-top: 1em;
+
+				h2 {
+					font-size: 1.5em;
+					margin-bottom: 0.25em;
+				}
+
+				p {
+				}
+			}
+		}
+
+		aside {
+			@include span-columns(3 omega);
+
+			margin-top: 1.25em;
+
+			a {
+				float: right;
+			}
+		}
+	}
+}

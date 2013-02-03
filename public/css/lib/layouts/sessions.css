@@ -462,6 +462,78 @@ form input[type=text], form input[type=email], form input[type=password], form t
     margin-top: 0.5em; }
 
 /*
+	Noted.
+		file: css/pages/_user.scss
+*/
+/* line 7, ../../../../app/assets/css/lib/pages/_project.scss */
+#project > header {
+  margin-bottom: 4em; }
+  /* line 10, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > header .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em; }
+    /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > header .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 17, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > header > hgroup:first-child {
+    background: #fffcd4; }
+  /* line 21, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > header > hgroup:last-child {
+    background: #fffde3; }
+  /* line 26, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > header section {
+    width: 87.39496%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 29, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > header section figure {
+      width: 13.46154%;
+      float: left;
+      margin-right: 0.96154%;
+      display: inline;
+      padding-right: 4.80769%; }
+      /* line 33, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > header section figure img {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%; }
+    /* line 38, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > header section hgroup {
+      width: 80.76923%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline;
+      margin-top: 1em; }
+      /* line 43, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > header section hgroup h2 {
+        font-size: 1.5em;
+        margin-bottom: 0.25em; }
+  /* line 53, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > header aside {
+    width: 11.76471%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline;
+    margin-top: 1.25em; }
+    /* line 58, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > header aside a {
+      float: right; }
+
+/*
 	= Appendix
 		I. Universal
 */

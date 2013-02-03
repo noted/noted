@@ -1,11 +1,34 @@
 #project
   %header
-    .inner
-      %section
-        %figure
-          %img{:src => "/img/placeholder.jpg"}
+    %hgroup
+      .inner
+        %section
+          %figure
+            %img{:src => "/img/globe.svg"}
+          %hgroup
+            %h2= @project.title
+            %p= @project.user.name
+        %aside
+          %a.btn{:href => url(:users, :edit)} Settings
+    %hgroup
+      .inner
+        %p= @project.description
+  %section
+    .notes
+      %header
         %hgroup
-          %h2= @user.name
-          %p= @user.location
-      %aside
-        %a.btn{:href => url(:users, :edit)} Settings
+          %h3 Notes
+        %aside
+          %a.btn{:href => ""} New
+      %section
+        - @project.notes.each do |note|
+          %article
+            %header
+              %h4= note.title
+            %section
+              = note.body
+            %footer
+              %ul
+                - note.sources each do |source|
+                  %li= source.html
+                
