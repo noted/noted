@@ -1,0 +1,10 @@
+#new-project
+  %header
+    %h2 New Project
+  - form_tag url(:projects, :create), :method => "post" do
+    %p= text_field_tag :"project[title]", :placeholder => "Title"
+    %p= text_area_tag :"project[description]", :placeholder => "What is your project about?"
+    %footer
+      = hidden_field_tag :user, :value => current_user.id
+      = hidden_field_tag :author, :value => current_user.id
+      %p= button_tag "Create", :type => "submit", :class => "btn primary"
