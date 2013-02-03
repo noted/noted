@@ -1,0 +1,8 @@
+- form_tag url(:sessions, :create) do
+  %p= email_field_tag :"user[email]", :placeholder => "Email"
+  %p= password_field_tag :"user[password]", :placeholder => "Password"
+  %nav
+    %ul
+      %li
+        %a.btn{:href => ""} Help
+      %li= button_tag "Login", :class => "btn primary", :type => "submit"
