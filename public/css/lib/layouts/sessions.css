@@ -125,7 +125,7 @@ a.btn, button, input[type="submit"] {
 		file: css/lib/modules/_forms.scss
 */
 /* line 7, ../../../../app/assets/css/lib/modules/_forms.scss */
-form input {
+form input, form textarea {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -269,7 +269,7 @@ form input[type=text], form input[type=email], form input[type=password], form t
 
 /*
 	Noted.
-		file: css/pages/_index.scss
+		file: css/pages/_user.scss
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_user.scss */
 #user > header {
@@ -403,6 +403,64 @@ form input[type=text], form input[type=email], form input[type=password], form t
         font-style: normal; }
 
 /*
+	Noted.
+		file: css/pages/_join.scss
+*/
+/* line 6, ../../../../app/assets/css/lib/pages/_join.scss */
+#join {
+  margin-top: 3em;
+  text-align: center; }
+  /* line 10, ../../../../app/assets/css/lib/pages/_join.scss */
+  #join header {
+    margin-bottom: 2em; }
+    /* line 13, ../../../../app/assets/css/lib/pages/_join.scss */
+    #join header h2 {
+      margin-bottom: 0.5em; }
+  /* line 20, ../../../../app/assets/css/lib/pages/_join.scss */
+  #join section input[type=text], #join section input[type=email], #join section input[type=password] {
+    width: 35%; }
+  /* line 25, ../../../../app/assets/css/lib/pages/_join.scss */
+  #join section footer {
+    margin-top: 1em; }
+  /* line 30, ../../../../app/assets/css/lib/pages/_join.scss */
+  #join .flash {
+    margin: 0 auto 1em; }
+
+/*
+	Noted.
+		file: css/lib/pages/_new-project.scss
+*/
+/* line 6, ../../../../app/assets/css/lib/pages/_new-project.scss */
+#new-project {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4em auto; }
+  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #new-project:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 12, ../../../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project header h2 {
+    margin-bottom: 1rem; }
+  /* line 17, ../../../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project input[type=text] {
+    margin-bottom: 0.5em;
+    width: 45%; }
+  /* line 22, ../../../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project textarea {
+    height: 6rem;
+    width: 65%; }
+  /* line 27, ../../../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project footer {
+    margin-top: 0.5em; }
+
+/*
 	= Appendix
 		I. Universal
 */
@@ -430,27 +488,28 @@ form input[type="email"], form input[type="password"] {
   width: 65%; }
   /* line 44, ../../../../app/assets/css/lib/layouts/sessions.scss */
   form input[type="email"]:focus, form input[type="password"]:focus {
-    background: #fefefe; }
-/* line 49, ../../../../app/assets/css/lib/layouts/sessions.scss */
+    background: #fefefe;
+    border: none; }
+/* line 50, ../../../../app/assets/css/lib/layouts/sessions.scss */
 form nav {
   margin: 0 auto;
   width: 45%; }
-  /* line 53, ../../../../app/assets/css/lib/layouts/sessions.scss */
+  /* line 54, ../../../../app/assets/css/lib/layouts/sessions.scss */
   form nav li {
     display: inline-block; }
-    /* line 56, ../../../../app/assets/css/lib/layouts/sessions.scss */
+    /* line 57, ../../../../app/assets/css/lib/layouts/sessions.scss */
     form nav li:first-child {
       float: left; }
-    /* line 60, ../../../../app/assets/css/lib/layouts/sessions.scss */
+    /* line 61, ../../../../app/assets/css/lib/layouts/sessions.scss */
     form nav li:last-child {
       float: right; }
 
-/* line 67, ../../../../app/assets/css/lib/layouts/sessions.scss */
+/* line 68, ../../../../app/assets/css/lib/layouts/sessions.scss */
 h1 {
   font: bold 1.25em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 2px 0 rgba(193, 50, 33, 0.5); }
 
-/* line 72, ../../../../app/assets/css/lib/layouts/sessions.scss */
+/* line 73, ../../../../app/assets/css/lib/layouts/sessions.scss */
 #contain {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -478,7 +537,7 @@ h1 {
 /*
 	III. Header
 */
-/* line 88, ../../../../app/assets/css/lib/layouts/sessions.scss */
+/* line 89, ../../../../app/assets/css/lib/layouts/sessions.scss */
 header {
   background: #d24130;
   padding: 1.5em; }
@@ -486,13 +545,13 @@ header {
 /*
 	IV. Main
 */
-/* line 99, ../../../../app/assets/css/lib/layouts/sessions.scss */
+/* line 100, ../../../../app/assets/css/lib/layouts/sessions.scss */
 #main {
   margin: 3em 0; }
-  /* line 103, ../../../../app/assets/css/lib/layouts/sessions.scss */
+  /* line 104, ../../../../app/assets/css/lib/layouts/sessions.scss */
   #main form input:first-child {
     margin-bottom: 0.5em; }
-  /* line 107, ../../../../app/assets/css/lib/layouts/sessions.scss */
+  /* line 108, ../../../../app/assets/css/lib/layouts/sessions.scss */
   #main form nav {
     overflow: hidden;
     *zoom: 1;
