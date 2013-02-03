@@ -1,12 +1,13 @@
 #join
   %header
     %h2 Join
+    %p Joining is free. <a href="">Upgrade later</a> to get more features!
   %section
-    %aside
-      - form_tag url(:users, :create), :method => "post" do
-        %p= text_field_tag :"user[name]", :placeholder => "Name"
-        %p= text_field_tag :"user[username]", :placeholder => "Username"
-        %p= email_field_tag :"user[email]", :placeholder => "Email"
-        %p= password_field_tag :"user[password]", :placeholder => "Password"
-        %footer
-          %p= button_tag "Join", :class => "btn primary", :type => "submit"
+    = partial 'partials/flash', :locals => { :flash => flash }
+    - form_tag url(:users, :create), :method => "post" do
+      %p= text_field_tag :"user[name]", :placeholder => "Name"
+      %p= text_field_tag :"user[username]", :placeholder => "Username"
+      %p= email_field_tag :"user[email]", :placeholder => "Email"
+      %p= password_field_tag :"user[password]", :placeholder => "Password"
+      %footer
+        %p= button_tag "Join", :class => "btn primary", :type => "submit"

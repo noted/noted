@@ -125,7 +125,7 @@ a.btn, button, input[type="submit"] {
 		file: css/lib/modules/_forms.scss
 */
 /* line 7, ../../app/assets/css/lib/modules/_forms.scss */
-form input {
+form input, form textarea {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -135,6 +135,48 @@ form input {
   font: 1em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   outline: none;
   padding: 0.5em; }
+/* line 17, ../../app/assets/css/lib/modules/_forms.scss */
+form input[type=text], form input[type=email], form input[type=password], form textarea {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #eceef1; }
+  /* line 22, ../../app/assets/css/lib/modules/_forms.scss */
+  form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus {
+    border: 2px solid #cfd4db; }
+
+/*
+	Noted.
+		file: css/lib/modules/_flash.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_flash.scss */
+.flash {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 1em;
+  padding: 0.75em;
+  width: 50%; }
+  /* line 14, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.error {
+    background-color: #f2dede;
+    border: 1px solid #eed3d7;
+    color: #b14454; }
+  /* line 20, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.notice {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #6da43f; }
+  /* line 26, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.warning {
+    background: #fcf8e3;
+    border: 1px solid #fbeed5;
+    color: #e9a31b; }
 
 /*
 	Noted.
@@ -227,7 +269,7 @@ form input {
 
 /*
 	Noted.
-		file: css/pages/_index.scss
+		file: css/pages/_user.scss
 */
 /* line 7, ../../app/assets/css/lib/pages/_user.scss */
 #user > header {
@@ -359,6 +401,64 @@ form input {
       /* line 95, ../../app/assets/css/lib/pages/_user.scss */
       #user > section article header p a {
         font-style: normal; }
+
+/*
+	Noted.
+		file: css/pages/_join.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_join.scss */
+#join {
+  margin-top: 3em;
+  text-align: center; }
+  /* line 10, ../../app/assets/css/lib/pages/_join.scss */
+  #join header {
+    margin-bottom: 2em; }
+    /* line 13, ../../app/assets/css/lib/pages/_join.scss */
+    #join header h2 {
+      margin-bottom: 0.5em; }
+  /* line 20, ../../app/assets/css/lib/pages/_join.scss */
+  #join section input[type=text], #join section input[type=email], #join section input[type=password] {
+    width: 35%; }
+  /* line 25, ../../app/assets/css/lib/pages/_join.scss */
+  #join section footer {
+    margin-top: 1em; }
+  /* line 30, ../../app/assets/css/lib/pages/_join.scss */
+  #join .flash {
+    margin: 0 auto 1em; }
+
+/*
+	Noted.
+		file: css/lib/pages/_new-project.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_new-project.scss */
+#new-project {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4em auto; }
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #new-project:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 12, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project header h2 {
+    margin-bottom: 1rem; }
+  /* line 17, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project input[type=text] {
+    margin-bottom: 0.5em;
+    width: 45%; }
+  /* line 22, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project textarea {
+    height: 6rem;
+    width: 65%; }
+  /* line 27, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project footer {
+    margin-top: 0.5em; }
 
 /*
 	= Appendix
