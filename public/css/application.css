@@ -334,7 +334,7 @@ form input[type=text], form input[type=email], form input[type=password], form t
     #user > header aside a {
       float: right; }
 /* line 55, ../../app/assets/css/lib/pages/_user.scss */
-#user > section header {
+#user > section > header {
   *zoom: 1;
   max-width: 59.5em;
   _width: 59.5em;
@@ -344,18 +344,18 @@ form input[type=text], form input[type=email], form input[type=password], form t
   margin-right: auto;
   margin-bottom: 1em; }
   /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #user > section header:after {
+  #user > section > header:after {
     content: "";
     display: table;
     clear: both; }
   /* line 60, ../../app/assets/css/lib/pages/_user.scss */
-  #user > section header hgroup {
+  #user > section > header hgroup {
     width: 49.57983%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
   /* line 64, ../../app/assets/css/lib/pages/_user.scss */
-  #user > section header aside {
+  #user > section > header aside {
     width: 49.57983%;
     float: right;
     margin-right: 0;
@@ -389,18 +389,19 @@ form input[type=text], form input[type=email], form input[type=password], form t
   #user > section article + article {
     margin-top: 1em; }
   /* line 84, ../../app/assets/css/lib/pages/_user.scss */
-  #user > section article header, #user > section article section {
-    padding: 2em; }
-  /* line 88, ../../app/assets/css/lib/pages/_user.scss */
   #user > section article header {
-    border-bottom: 1px solid #fefefe; }
-    /* line 91, ../../app/assets/css/lib/pages/_user.scss */
+    border-bottom: 1px solid #fefefe;
+    padding: 2em 2em 1em; }
+    /* line 88, ../../app/assets/css/lib/pages/_user.scss */
     #user > section article header p {
       font-style: italic;
       margin-top: 0.25em; }
-      /* line 95, ../../app/assets/css/lib/pages/_user.scss */
+      /* line 92, ../../app/assets/css/lib/pages/_user.scss */
       #user > section article header p a {
         font-style: normal; }
+  /* line 98, ../../app/assets/css/lib/pages/_user.scss */
+  #user > section article section {
+    padding: 1em 2em 2em; }
 
 /*
 	Noted.

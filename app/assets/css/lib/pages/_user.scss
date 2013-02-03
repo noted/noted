@@ -52,7 +52,7 @@
 	}
 
 	& > section {
-		header {
+		& > header {
 			@include container;
 
 			margin-bottom: 1em;
@@ -81,12 +81,9 @@
 				margin-top: 1em;
 			}
 
-			header, section {
-				padding: 2em;
-			}
-
 			header {
 				border-bottom: 1px solid $base;
+				padding: 2em 2em 1em;
 
 				p {
 					font-style: italic;
@@ -96,6 +93,10 @@
 						font-style: normal;
 					}
 				}
+			}
+
+			section {
+				padding: 1em 2em 2em;
 			}
 		}
 	}

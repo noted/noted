@@ -46,6 +46,7 @@ Noted.controllers :users do
 
   get :view, :map => "/:user" do
     @user = User.find_by_username(params[:user])
+    @projects = Project.where(:user_id => @user.id).order("updated_at dsc")
 
     render 'users/view'
   end

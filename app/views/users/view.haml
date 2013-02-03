@@ -16,10 +16,10 @@
       %aside
         %a.btn{:href => url(:projects, :new)} New Project
     - if !@user.projects.blank?
-      - @user.projects.each do |project|
+      - @projects.each do |project|
         %article
           %header
-            %h3
+            %h4
               %a{:href => project.url}= project.title
             %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
           %section
