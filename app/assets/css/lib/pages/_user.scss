@@ -6,6 +6,7 @@
 #user {
 	& > header {
 		background: $pale-yellow;
+		font-family: $sans-serif;
 		margin-bottom: 4em;
 		padding: 1.5em;
 
@@ -99,5 +100,10 @@
 				padding: 1em 2em 2em;
 			}
 		}
+	}
+
+	i {
+		color: lighten($text, 10%);
+		padding-right: 0.5em;
 	}
 }

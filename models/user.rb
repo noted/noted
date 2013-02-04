@@ -62,7 +62,7 @@ class User
     str = str.downcase
     str = Digest::MD5.hexdigest(str)
 
-    "http://www.gravatar.com/avatar/#{str}"
+    "http://www.gravatar.com/avatar/#{str}?s=300"
   end
 
   def password

@@ -26,7 +26,39 @@
         %hgroup
           %h1
             %a{:href => url(:index)} Noted.
-        = partial 'partials/nav', :locals => { :current_user => current_user }
+        %nav
+          - if current_user
+            %section
+              %ul
+                %li
+                  %a{:href => url(:explore)} Explore
+                %li
+                  %a{:href => url(:features)} Blog
+                %li
+                  %a{:href => url(:support)} Help
+            %section
+              %ul
+                %li
+                  %a.btn{:href => url(:users, :view, :user => current_user.username)}
+                    %i.ss-icon user
+                %li
+                  %a.btn.orange{:href => url(:sessions, :destroy)} Logout
+          - else
+            %section
+              %ul
+                %li
+                  %a{:href => url(:explore)} Explore
+                %li
+                  %a{:href => url(:features)} Features
+                %li
+                  %a{:href => url(:support)} Pricing
+            %section
+              %ul
+                %li
+                  %a.btn.primary{:href => url(:users, :new)} Join
+                %li
+                  %a.btn{:href => url(:sessions, :new)} Login
+
 
     #main{:role => "main"}
       = yield

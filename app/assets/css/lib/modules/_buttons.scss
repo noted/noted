@@ -48,4 +48,9 @@ a.btn, button, input[type="submit"] {
 	&.large {
 		font-size: 1em;
 	}
+
+	i {
+		position: relative;
+		top: 1px;
+	}
 }

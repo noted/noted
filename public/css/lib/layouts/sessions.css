@@ -1,3 +1,4 @@
+@import url(/webfonts/ss-standard/ss-standard.css);
 /*
 	Noted.
 		file: css/lib/layouts/sessions.scss
@@ -76,6 +77,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /*
 	Noted.
+		file: css/lib/includes/_icons.scss
+*/
+/* line 6, ../../../../app/assets/css/lib/includes/_icons.scss */
+i {
+  font-size: 0.85em;
+  position: relative;
+  top: 1px; }
+
+/*
+	Noted.
 		file: css/lib/modules/_buttons.scss
 */
 /* line 6, ../../../../app/assets/css/lib/modules/_buttons.scss */
@@ -119,6 +130,10 @@ a.btn, button, input[type="submit"] {
   /* line 48, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large {
     font-size: 1em; }
+  /* line 52, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn i, button i, input[type="submit"] i {
+    position: relative;
+    top: 1px; }
 
 /*
 	Noted.
@@ -274,9 +289,10 @@ form input[type=text], form input[type=email], form input[type=password], form t
 /* line 7, ../../../../app/assets/css/lib/pages/_user.scss */
 #user > header {
   background: #fffde3;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   margin-bottom: 4em;
   padding: 1.5em; }
-  /* line 12, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 13, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -290,27 +306,27 @@ form input[type=text], form input[type=email], form input[type=password], form t
       content: "";
       display: table;
       clear: both; }
-  /* line 16, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 17, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > header section {
     width: 87.39496%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 19, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 20, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > header section figure {
       width: 13.46154%;
       float: left;
       margin-right: 0.96154%;
       display: inline;
       padding-right: 4.80769%; }
-      /* line 23, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 24, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > header section figure img {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
         border-radius: 50%; }
-    /* line 28, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 29, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > header section hgroup {
       width: 80.76923%;
       float: right;
@@ -318,11 +334,11 @@ form input[type=text], form input[type=email], form input[type=password], form t
       #margin-left: -0.5em;
       display: inline;
       margin-top: 1em; }
-      /* line 33, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 34, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > header section hgroup h2 {
         font-size: 1.5em;
         margin-bottom: 0.25em; }
-  /* line 43, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 44, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > header aside {
     width: 11.76471%;
     float: right;
@@ -330,10 +346,10 @@ form input[type=text], form input[type=email], form input[type=password], form t
     #margin-left: -0.5em;
     display: inline;
     margin-top: 1.25em; }
-    /* line 48, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 49, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > header aside a {
       float: right; }
-/* line 55, ../../../../app/assets/css/lib/pages/_user.scss */
+/* line 56, ../../../../app/assets/css/lib/pages/_user.scss */
 #user > section > header {
   *zoom: 1;
   max-width: 59.5em;
@@ -348,13 +364,13 @@ form input[type=text], form input[type=email], form input[type=password], form t
     content: "";
     display: table;
     clear: both; }
-  /* line 60, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 61, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section > header hgroup {
     width: 49.57983%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 64, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 65, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section > header aside {
     width: 49.57983%;
     float: right;
@@ -364,7 +380,7 @@ form input[type=text], form input[type=email], form input[type=password], form t
     position: relative;
     bottom: 0.5em;
     text-align: right; }
-/* line 73, ../../../../app/assets/css/lib/pages/_user.scss */
+/* line 74, ../../../../app/assets/css/lib/pages/_user.scss */
 #user > section article {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -385,23 +401,27 @@ form input[type=text], form input[type=email], form input[type=password], form t
     content: "";
     display: table;
     clear: both; }
-  /* line 80, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 81, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article + article {
     margin-top: 1em; }
-  /* line 84, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 85, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article header {
     border-bottom: 1px solid #fefefe;
     padding: 2em 2em 1em; }
-    /* line 88, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 89, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > section article header p {
       font-style: italic;
       margin-top: 0.25em; }
-      /* line 92, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 93, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article header p a {
         font-style: normal; }
-  /* line 98, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 99, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section article section {
     padding: 1em 2em 2em; }
+/* line 105, ../../../../app/assets/css/lib/pages/_user.scss */
+#user i {
+  color: #5e5e5e;
+  padding-right: 0.5em; }
 
 /*
 	Noted.
