@@ -286,142 +286,60 @@ form input[type=text], form input[type=email], form input[type=password], form t
 	Noted.
 		file: css/pages/_user.scss
 */
-/* line 7, ../../../../app/assets/css/lib/pages/_user.scss */
-#user > header {
-  background: #fffde3;
-  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-bottom: 4em;
-  padding: 1.5em; }
-  /* line 13, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > header .inner {
-    *zoom: 1;
-    max-width: 59.5em;
-    _width: 59.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto; }
-    /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #user > header .inner:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 17, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > header section {
-    width: 87.39496%;
+/* line 6, ../../../../app/assets/css/lib/pages/_user.scss */
+#user {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem; }
+  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #user:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 11, ../../../../app/assets/css/lib/pages/_user.scss */
+  #user > aside {
+    width: 20.16807%;
     float: left;
     margin-right: 0.84034%;
-    display: inline; }
-    /* line 20, ../../../../app/assets/css/lib/pages/_user.scss */
-    #user > header section figure {
-      width: 13.46154%;
-      float: left;
-      margin-right: 0.96154%;
-      display: inline;
-      padding-right: 4.80769%; }
-      /* line 24, ../../../../app/assets/css/lib/pages/_user.scss */
-      #user > header section figure img {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%; }
-    /* line 29, ../../../../app/assets/css/lib/pages/_user.scss */
-    #user > header section hgroup {
-      width: 80.76923%;
-      float: right;
-      margin-right: 0;
-      #margin-left: -0.5em;
-      display: inline;
+    display: inline;
+    font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+    /* line 17, ../../../../app/assets/css/lib/pages/_user.scss */
+    #user > aside figure img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    /* line 22, ../../../../app/assets/css/lib/pages/_user.scss */
+    #user > aside h2 {
+      border-top: 1px solid #eceef1;
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      text-align: center; }
+    /* line 30, ../../../../app/assets/css/lib/pages/_user.scss */
+    #user > aside hgroup {
       margin-top: 1em; }
-      /* line 34, ../../../../app/assets/css/lib/pages/_user.scss */
-      #user > header section hgroup h2 {
-        font-size: 1.5em;
-        margin-bottom: 0.25em; }
-  /* line 44, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > header aside {
-    width: 11.76471%;
+      /* line 33, ../../../../app/assets/css/lib/pages/_user.scss */
+      #user > aside hgroup ul {
+        font-size: 0.85rem; }
+        /* line 37, ../../../../app/assets/css/lib/pages/_user.scss */
+        #user > aside hgroup ul li i {
+          margin-right: 2px;
+          position: relative;
+          top: 2px; }
+  /* line 47, ../../../../app/assets/css/lib/pages/_user.scss */
+  #user > section {
+    width: 74.78992%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
-    display: inline;
-    margin-top: 1.25em; }
-    /* line 49, ../../../../app/assets/css/lib/pages/_user.scss */
-    #user > header aside a {
-      float: right; }
-/* line 56, ../../../../app/assets/css/lib/pages/_user.scss */
-#user > section > header {
-  *zoom: 1;
-  max-width: 59.5em;
-  _width: 59.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em; }
-  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #user > section > header:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 61, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > section > header hgroup {
-    width: 49.57983%;
-    float: left;
-    margin-right: 0.84034%;
     display: inline; }
-  /* line 65, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > section > header aside {
-    width: 49.57983%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline;
-    position: relative;
-    bottom: 0.5em;
-    text-align: right; }
-/* line 74, ../../../../app/assets/css/lib/pages/_user.scss */
-#user > section article {
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  *zoom: 1;
-  max-width: 59.5em;
-  _width: 59.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  background: #f5f6f7;
-  padding: 0; }
-  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #user > section article:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 81, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > section article + article {
-    margin-top: 1em; }
-  /* line 85, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > section article header {
-    border-bottom: 1px solid #fefefe;
-    padding: 2em 2em 1em; }
-    /* line 89, ../../../../app/assets/css/lib/pages/_user.scss */
-    #user > section article header p {
-      font-style: italic;
-      margin-top: 0.25em; }
-      /* line 93, ../../../../app/assets/css/lib/pages/_user.scss */
-      #user > section article header p a {
-        font-style: normal; }
-  /* line 99, ../../../../app/assets/css/lib/pages/_user.scss */
-  #user > section article section {
-    padding: 1em 2em 2em; }
-/* line 105, ../../../../app/assets/css/lib/pages/_user.scss */
-#user i {
-  color: #5e5e5e;
-  padding-right: 0.5em; }
 
 /*
 	Noted.

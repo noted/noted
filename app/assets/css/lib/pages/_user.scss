@@ -4,106 +4,47 @@
 */
 
 #user {
-	& > header {
-		background: $pale-yellow;
+	@include container;
+
+	margin-top: 3rem;
+
+	& > aside {
+		@include span-columns(5);
+
 		font-family: $sans-serif;
-		margin-bottom: 4em;
-		padding: 1.5em;
 
-		.inner {
-			@include container;
-		}
-
-		section {
-			@include span-columns(21);
-
-			figure {
-				@include span-columns(3, 21);
-				@include suffix(1, 21);
-
-				img {
-					@include border-radius(50%);
-				}
-			}
-
-			hgroup {
-				@include span-columns(17 omega, 21);
-
-				margin-top: 1em;
-
-				h2 {
-					font-size: 1.5em;
-					margin-bottom: 0.25em;
-				}
-
-				p {
-				}
+		figure {
+			img {
+				@include border-radius(50%);
 			}
 		}
 
-		aside {
-			@include span-columns(3 omega);
+		h2 {
+			border-top: 1px solid $grey;
+			font-size: 1rem;
+			margin-top: 1rem;
+			padding-top: 1rem;
+			text-align: center;
+		}
 
-			margin-top: 1.25em;
+		hgroup {
+			margin-top: 1em;
 
-			a {
-				float: right;
+			ul {
+				font-size: 0.85rem;
+
+				li {
+					i {
+						margin-right: 2px;
+						position: relative;
+						top: 2px;
+					}
+				}
 			}
 		}
 	}
 
 	& > section {
-		& > header {
-			@include container;
-
-			margin-bottom: 1em;
-
-			hgroup {
-				@include span-columns(12);
-			}
-
-			aside {
-				@include span-columns(12 omega);
-
-				position: relative;
-				bottom: 0.5em; // FIX
-				text-align: right;
-			}
-		}
-
-		article {
-			@include border-radius(2px);
-			@include container;
-
-			background: lighten($grey, 3%);
-			padding: 0;
-
-			& + article {
-				margin-top: 1em;
-			}
-
-			header {
-				border-bottom: 1px solid $base;
-				padding: 2em 2em 1em;
-
-				p {
-					font-style: italic;
-					margin-top: 0.25em;
-
-					a {
-						font-style: normal;
-					}
-				}
-			}
-
-			section {
-				padding: 1em 2em 2em;
-			}
-		}
-	}
-
-	i {
-		color: lighten($text, 10%);
-		padding-right: 0.5em;
+		@include span-columns(18 omega);
 	}
 }

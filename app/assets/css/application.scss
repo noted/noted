@@ -86,7 +86,7 @@ body > header {
 	}
 
 	hgroup {
-		@include span-columns(4);
+		@include span-columns(6);
 	}
 
 	nav {
@@ -98,7 +98,7 @@ body > header {
 
 		section {
 			&:first-child {
-				@include span-columns(12);
+				@include span-columns(10);
 
 				margin-top: 0.35em;
 

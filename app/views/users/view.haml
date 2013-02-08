@@ -1,35 +1,23 @@
 #user
-  %header
-    .inner
-      %section
-        %figure
-          %img{:src => @user.gravatar}
-        %hgroup
-          %h2= @user.name
-          %p
+  %aside
+    %header
+      %figure
+        %img{:alt => "", :src => @user.gravatar}
+      %h2= @user.name
+      %hgroup
+        %ul
+          %li
             %i.ss-icon location
             = @user.location
-          %p
+          %li
             %i.ss-icon globe
-            %a{:href => ""} ethnt.me
-      %aside
-        %a.btn{:href => url(:users, :edit)} Settings
+            ethnt.me
   %section
-    %header
-      %hgroup
-        %h3 Projects
-      %aside
-        %a.btn{:href => url(:projects, :new)} New Project
-    - if !@user.projects.blank?
-      - @projects.each do |project|
-        %article
-          %header
-            %h4
-              %a{:href => project.url}= project.title
-            %p= "by <a href='#{url(:users, :view, :user => project.user.username)}'>#{project.user.name}</a>"
-          %section
-            %p= project.description
-    - else
+    - @projects.each do |project|
       %article
+        %header
+          %h3= project.title
         %section
-          %p No projects!
+          = project.description
+        %footer
+          %p= project.updated_at
