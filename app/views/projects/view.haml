@@ -2,33 +2,13 @@
   %header
     %hgroup
       .inner
-        %section
-          %figure
-            %img{:src => "/img/globe.svg"}
-          %hgroup
-            %h2= @project.title
-            %p= @project.user.name
+        %hgroup
+          %h2= @project.title
+          %p= @project.user.name
         %aside
-          %a.btn{:href => url(:users, :edit)} Settings
+          %a.btn{:href => url(:projects, :edit, :user => @user.username, :project => @project.permalink)}
+            %i.ss-icon gear
     %hgroup
       .inner
-        %p= @project.description
-  %section
-    .notes
-      %header
-        %hgroup
-          %h3 Notes
-        %aside
-          %a.btn{:href => ""} New
-      %section
-        - @project.notes.each do |note|
-          %article
-            %header
-              %h4= note.title
-            %section
-              = note.body
-            %footer
-              %ul
-                - note.sources each do |source|
-                  %li= source.html
-                
+        .inner-two
+          = @project.description

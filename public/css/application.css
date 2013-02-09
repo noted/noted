@@ -84,6 +84,9 @@ i {
   font-size: 0.85em;
   position: relative;
   top: 1px; }
+  /* line 11, ../../app/assets/css/lib/includes/_icons.scss */
+  i.huge {
+    font-size: 4em; }
 
 /*
 	Noted.
@@ -440,11 +443,30 @@ form input[type=text], form input[type=email], form input[type=password], form t
 	Noted.
 		file: css/pages/_user.scss
 */
-/* line 7, ../../app/assets/css/lib/pages/_project.scss */
-#project > header {
-  margin-bottom: 4em; }
-  /* line 10, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header .inner {
+/* line 9, ../../app/assets/css/lib/pages/_project.scss */
+#project > header hgroup:first-child {
+  background: #fffde3; }
+  /* line 12, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup:first-child hgroup {
+    width: 83.19328%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 15, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup:first-child hgroup h2 {
+      margin-bottom: 1rem; }
+  /* line 20, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup:first-child aside {
+    width: 15.96639%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline; }
+    /* line 23, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup:first-child aside a {
+      float: right; }
+  /* line 28, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup:first-child .inner {
     *zoom: 1;
     max-width: 59.5em;
     _width: 59.5em;
@@ -452,61 +474,38 @@ form input[type=text], form input[type=email], form input[type=password], form t
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.5em; }
+    padding: 2rem 0; }
     /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #project > header .inner:after {
+    #project > header hgroup:first-child .inner:after {
       content: "";
       display: table;
       clear: both; }
-  /* line 17, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header > hgroup:first-child {
-    background: #fffcd4; }
-  /* line 21, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header > hgroup:last-child {
-    background: #fffde3; }
-  /* line 26, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header section {
-    width: 87.39496%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline; }
-    /* line 29, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header section figure {
-      width: 13.46154%;
-      float: left;
-      margin-right: 0.96154%;
-      display: inline;
-      padding-right: 4.80769%; }
-      /* line 33, ../../app/assets/css/lib/pages/_project.scss */
-      #project > header section figure img {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%; }
-    /* line 38, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header section hgroup {
-      width: 80.76923%;
-      float: right;
-      margin-right: 0;
-      #margin-left: -0.5em;
-      display: inline;
-      margin-top: 1em; }
-      /* line 43, ../../app/assets/css/lib/pages/_project.scss */
-      #project > header section hgroup h2 {
-        font-size: 1.5em;
-        margin-bottom: 0.25em; }
-  /* line 53, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header aside {
-    width: 11.76471%;
+/* line 35, ../../app/assets/css/lib/pages/_project.scss */
+#project > header hgroup:last-child {
+  background: #fffeed; }
+  /* line 38, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup:last-child .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 0; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > header hgroup:last-child .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 44, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup:last-child .inner-two {
+    width: 74.78992%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline;
-    margin-top: 1.25em; }
-    /* line 58, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header aside a {
-      float: right; }
+    padding-right: 25.21008%; }
 
 /*
 	= Appendix

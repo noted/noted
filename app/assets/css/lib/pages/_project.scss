@@ -5,58 +5,46 @@
 
 #project {
 	& > header {
-		margin-bottom: 4em;
-
-		.inner {
-			@include container;
-
-			padding: 1.5em;
-		}
-
-		& > hgroup {
+		hgroup {
 			&:first-child {
-				background: darken($pale-yellow, 3%);
+				background: $pale-yellow;
+
+				hgroup {
+					@include span-columns(20);
+
+					h2 {
+						margin-bottom: 1rem;
+					}
+				}
+
+				aside {
+					@include span-columns(4 omega);
+
+					a {
+						float: right;
+					}
+				}
+
+				.inner {
+					@include container;
+
+					padding: 2rem 0;
+				}
 			}
 
 			&:last-child {
-				background: $pale-yellow;
-			}
-		}
+				background: lighten($pale-yellow, 2%);
 
-		section {
-			@include span-columns(21);
+				.inner {
+					@include container;
 
-			figure {
-				@include span-columns(3, 21);
-				@include suffix(1, 21);
-
-				img {
-					@include border-radius(50%);
-				}
-			}
-
-			hgroup {
-				@include span-columns(17 omega, 21);
-
-				margin-top: 1em;
-
-				h2 {
-					font-size: 1.5em;
-					margin-bottom: 0.25em;
+					padding: 1.5rem 0;
 				}
 
-				p {
+				.inner-two {
+					@include span-columns(18 omega);
+					@include suffix(6);
 				}
-			}
-		}
-
-		aside {
-			@include span-columns(3 omega);
-
-			margin-top: 1.25em;
-
-			a {
-				float: right;
 			}
 		}
 	}
