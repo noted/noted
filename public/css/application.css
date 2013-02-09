@@ -194,6 +194,17 @@ form input[type=text], form input[type=email], form input[type=password], form t
     color: #e9a31b; }
 
 /*
+    Noted.
+        file: css/lib/modules/_text.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_text.scss */
+.text {
+  font-family: "utopia-std", ff-meta-serif-web-pro, adelle, Georgia, Times New Roman, serif; }
+  /* line 10, ../../app/assets/css/lib/modules/_text.scss */
+  .text p:first-child {
+    text-indent: 1em; }
+
+/*
 	Noted.
 		file: css/pages/_index.scss
 */
@@ -320,26 +331,54 @@ form input[type=text], form input[type=email], form input[type=password], form t
       border-top: 1px solid #eceef1;
       font-size: 1rem;
       margin-top: 1rem;
-      padding-top: 1rem;
-      text-align: center; }
-    /* line 30, ../../app/assets/css/lib/pages/_user.scss */
+      padding-top: 1rem; }
+    /* line 29, ../../app/assets/css/lib/pages/_user.scss */
     #user > aside hgroup {
       margin-top: 1em; }
-      /* line 33, ../../app/assets/css/lib/pages/_user.scss */
+      /* line 32, ../../app/assets/css/lib/pages/_user.scss */
       #user > aside hgroup ul {
         font-size: 0.85rem; }
-        /* line 37, ../../app/assets/css/lib/pages/_user.scss */
+        /* line 36, ../../app/assets/css/lib/pages/_user.scss */
         #user > aside hgroup ul li i {
           margin-right: 2px;
           position: relative;
           top: 2px; }
-  /* line 47, ../../app/assets/css/lib/pages/_user.scss */
+  /* line 46, ../../app/assets/css/lib/pages/_user.scss */
   #user > section {
     width: 74.78992%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline; }
+    /* line 49, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #f2f3f5; }
+      /* line 54, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article + article {
+        margin-top: 1.5em; }
+      /* line 58, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article header {
+        background: #f2f3f5; }
+        /* line 61, ../../app/assets/css/lib/pages/_user.scss */
+        #user > section article header h3 {
+          font-size: 1.25rem; }
+        /* line 65, ../../app/assets/css/lib/pages/_user.scss */
+        #user > section article header .inner {
+          padding: 0.5em 0.65em; }
+      /* line 70, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 75, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article footer {
+        border-top: 1px solid #f2f3f5;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
 
 /*
 	Noted.
@@ -482,7 +521,7 @@ form input[type=text], form input[type=email], form input[type=password], form t
 body {
   background: #fefefe;
   color: #444444;
-  font: 300 16px/1.5em "utopia-std", ff-meta-serif-web-pro, adelle, Georgia, Times New Roman, serif; }
+  font: 300 16px/1.5em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 /* line 24, ../../app/assets/css/application.scss */
 a {

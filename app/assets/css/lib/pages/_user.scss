@@ -24,7 +24,6 @@
 			font-size: 1rem;
 			margin-top: 1rem;
 			padding-top: 1rem;
-			text-align: center;
 		}
 
 		hgroup {
@@ -46,5 +45,38 @@
 
 	& > section {
 		@include span-columns(18 omega);
+
+		article {
+			@include border-radius(2px);
+
+			border: 2px solid $light-grey;
+
+			& + article {
+				margin-top: 1.5em;
+			}
+
+			header {
+				background: $light-grey;
+
+				h3 {
+					font-size: 1.25rem;
+				}
+
+				.inner {
+					padding: 0.5em 0.65em;
+				}
+			}
+
+			section {
+				margin: 1em 0;
+				padding: 0 0.65em;
+			}
+
+			footer {
+				border-top: 1px solid $light-grey;
+				font-size: 0.85em;
+				padding: 0.25em 0.65em;
+			}
+		}
 	}
 }

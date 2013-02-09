@@ -16,8 +16,11 @@
     - @projects.each do |project|
       %article
         %header
-          %h3= project.title
-        %section
-          = project.description
+          .inner
+            %h3= project.title
+        %section.text
+          .inner
+            = to_html(project.description)
         %footer
-          %p= project.updated_at
+          .inner
+            %p= project.updated_at
