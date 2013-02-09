@@ -17,10 +17,11 @@
       %article
         %header
           .inner
-            %h3= project.title
+            %a{:href => project.url}
+              %h3= project.title
         %section.text
           .inner
-            = to_html(project.description)
+            = project.description
         %footer
           .inner
-            %p= project.updated_at
+            %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")

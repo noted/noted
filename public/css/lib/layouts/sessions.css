@@ -377,6 +377,7 @@ form input[type=text], form input[type=email], form input[type=password], form t
       /* line 75, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article footer {
         border-top: 1px solid #f2f3f5;
+        color: #dde1e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
 

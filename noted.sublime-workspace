@@ -1,0 +1,893 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"upat",
+				"updated"
+			],
+			[
+				"flash-",
+				"flash-dark-red"
+			],
+			[
+				"dark",
+				"dark-green"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"MA",
+				"MAILCHIMP_API_KEY"
+			],
+			[
+				"req",
+				"require_relative"
+			],
+			[
+				"cont",
+				"contributors"
+			],
+			[
+				"Sinatra",
+				"SinatraStaticServer"
+			],
+			[
+				"AM",
+				"AMERICANO_ROOT"
+			],
+			[
+				"create",
+				"creatable_by"
+			],
+			[
+				"create_",
+				"create_permalink"
+			],
+			[
+				"f",
+				"find_by_permalink"
+			],
+			[
+				"shou",
+				"should_not"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"T",
+				"Telescope"
+			],
+			[
+				"dir",
+				"dirname"
+			],
+			[
+				"j",
+				"join"
+			],
+			[
+				"be_",
+				"be_an_instance_of"
+			],
+			[
+				"P",
+				"Password"
+			],
+			[
+				"sh",
+				"should_not"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"up",
+				"updatable_by"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"authent",
+				"authenticated"
+			],
+			[
+				"neil",
+				"neiltyson"
+			],
+			[
+				"app",
+				"application"
+			],
+			[
+				"require",
+				"require_dependencies"
+			],
+			[
+				"demo",
+				"demo_items_controller_spec"
+			],
+			[
+				"acc",
+				"acceptance_contents"
+			],
+			[
+				"control",
+				"controller_acceptance_path"
+			],
+			[
+				"des",
+				"destination_root"
+			],
+			[
+				"STEAK_",
+				"STEAK_CONTROLLER_ACCEPTANCE_TEST"
+			],
+			[
+				"PADRIN",
+				"PADRINO_ROOT"
+			],
+			[
+				"aws",
+				"aws_secret_access_key"
+			],
+			[
+				"A",
+				"AWS"
+			],
+			[
+				"p",
+				"provider"
+			],
+			[
+				"PADRI",
+				"PADRINO_ENV"
+			],
+			[
+				"Pad",
+				"PADRINO_ENV"
+			],
+			[
+				"sec",
+				"secret_access_key"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"default",
+				"default_external"
+			],
+			[
+				"get",
+				"getMilliseconds"
+			],
+			[
+				"sub",
+				"subscribe"
+			],
+			[
+				"in",
+				"in_time_zone"
+			],
+			[
+				"col",
+				"collections"
+			],
+			[
+				"Mongo",
+				"MongoMapper"
+			],
+			[
+				"backgroun",
+				"background-size"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"sched",
+				"schedule_id"
+			],
+			[
+				"authentic",
+				"authenticator"
+			],
+			[
+				"M",
+				"MongoMapper"
+			],
+			[
+				"sce",
+				"schedule_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/assets/css/lib/pages/_user.scss",
+			"settings":
+			{
+				"buffer_size": 1000,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/view.haml",
+			"settings":
+			{
+				"buffer_size": 551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/formatters.rb",
+			"settings":
+			{
+				"buffer_size": 90,
+				"line_ending": "Unix",
+				"name": "Noted.helpers do"
+			}
+		},
+		{
+			"file": "app/assets/css/application.scss",
+			"settings":
+			{
+				"buffer_size": 1669,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/css/lib/modules/_text.scss",
+			"settings":
+			{
+				"buffer_size": 172,
+				"line_ending": "Unix",
+				"name": "/*"
+			}
+		},
+		{
+			"file": "app/assets/css/lib/includes/_colors.scss",
+			"settings":
+			{
+				"buffer_size": 417,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 285.0,
+		"selected_items":
+		[
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Markd",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"",
+				"Indentation: Convert to Spaces"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/noted/noted/Gemfile",
+		"/var/www/noted/noted/app/assets/css/lib/_base.scss",
+		"/home/ethan/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/var/www/noted/noted/models/user.rb",
+		"/var/www/noted/noted/app/assets/css/application.scss",
+		"/var/www/noted/noted/app/views/layouts/application.haml",
+		"/var/www/noted/noted/app/assets/jsc/application.coffee",
+		"/var/www/noted/noted/app/controllers/users.rb",
+		"/var/www/noted/noted/.gitignore",
+		"/var/www/noted/noted/noted.sublime-workspace"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"span-",
+			"{:src => \"\"}",
+			"s",
+			"clock",
+			"source",
+			"/\"",
+			"\"",
+			"attributes",
+			"test",
+			"dotenv",
+			"thor",
+			"      \n",
+			"	",
+			"gem.add_development_dependency ",
+			"  ",
+			"put :modify",
+			"context",
+			":username",
+			"context",
+			"AMERICANO",
+			"@m",
+			"\"#{site",
+			"es",
+			"rethink",
+			"response.subject",
+			"filtered_examples",
+			"summary_line",
+			"else",
+			"\"",
+			"  gem.add_development_dependency",
+			"'",
+			"rvm",
+			"config.",
+			":username",
+			": ",
+			":;",
+			"client",
+			"@client",
+			"@cheddar",
+			"    ",
+			"'",
+			"should be ",
+			"staff",
+			"went",
+			"bold",
+			"  ",
+			"destroy",
+			"@user",
+			"ENV",
+			"\"",
+			"    ",
+			" — ",
+			"mongo",
+			"STEAK_SETUP",
+			"RSPEC_",
+			"@schedule",
+			"—",
+			"’",
+			"  \n",
+			"—",
+			"“",
+			"”",
+			"’",
+			"—",
+			"	",
+			"S3",
+			"colour",
+			"section",
+			"aside",
+			"$base",
+			"’",
+			"form",
+			"apple-st",
+			"/ip",
+			"resources",
+			"\n    ",
+			"@schedule",
+			"@notices",
+			"@marquees",
+			"root.d",
+			"	",
+			"d.",
+			"	",
+			"redis",
+			"marquee",
+			"Marquee Items",
+			"m =",
+			"marquee",
+			"m.",
+			"marquees",
+			"Marquee Items",
+			"m.",
+			"Marquee",
+			"marquee",
+			"@marquee",
+			"marquees",
+			"Marquee",
+			"marquee",
+			"@m",
+			"marquee",
+			"Marquee",
+			"transition",
+			"    ",
+			"media",
+			"h3",
+			"stylesheets",
+			"project",
+			"Project",
+			"'",
+			"student",
+			"Student",
+			"student",
+			"'",
+			"\"",
+			" :require => ",
+			", :group => \"test\"",
+			"require:",
+			"\"",
+			"     ",
+			"red",
+			"</li>",
+			"<li>",
+			"'",
+			"@t",
+			"themes",
+			"Theme",
+			":text => \"Carl Saga",
+			"marquee"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"{:src => \"/img/placeholder.jpg\"}",
+			"grades",
+			"\\\"",
+			"/\"",
+			"data",
+			"  ",
+			"gem ",
+			"	",
+			"patch :update",
+			"describe",
+			":user",
+			"describe",
+			"A",
+			"marquee",
+			"us",
+			"response",
+			"'",
+			"gem",
+			"\"",
+			"conf.",
+			":user",
+			"credentials",
+			"client",
+			"cheddar",
+			"	",
+			"\"",
+			"is ",
+			"has gone",
+			"	",
+			"user",
+			"env",
+			"'",
+			"	",
+			"&mdash;",
+			"STEAK_RSPEC_SETUP",
+			"STEAK_",
+			"@s",
+			" -- ",
+			"'",
+			"&mdash;",
+			"\"",
+			"'",
+			"  ",
+			"AWS::S3::S3Object",
+			"base",
+			"nav",
+			"section",
+			"$red",
+			"'",
+			"apple-touch-st",
+			"/apple-startup-image-ip",
+			"/img",
+			"@s",
+			"@n",
+			"@m",
+			"d",
+			"  ",
+			"root.d.",
+			"  ",
+			"r",
+			"notice",
+			"Notices",
+			"n =",
+			"notice",
+			"n.",
+			"notices",
+			"Notices",
+			"n.",
+			"Notice",
+			"notice",
+			"@notice",
+			"notices",
+			"Notice",
+			"notice",
+			"@n",
+			"notice",
+			"Notice",
+			"	",
+			"css",
+			"source",
+			"Source",
+			"\"",
+			"researcher",
+			"Researcher",
+			"Instructor",
+			"instructor",
+			"\"",
+			"'",
+			" require: ",
+			"",
+			"'",
+			"",
+			"</a></li>",
+			"<li><a href=\"#\">",
+			"\"",
+			"@s",
+			"schedules",
+			"Schedule",
+			"theme",
+			"@t",
+			"themes",
+			"Theme",
+			"	",
+			"crypted_password",
+			"d",
+			"@time.",
+			"",
+			"u =",
+			"u.name",
+			"user",
+			"User",
+			"users",
+			"s, :view",
+			"view",
+			"Theme",
+			"theme",
+			"@s.id",
+			"sublime"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/assets/css/lib/pages/_user.scss",
+					"settings":
+					{
+						"buffer_size": 1000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								854,
+								854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 808.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/users/view.haml",
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								482,
+								482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/helpers/formatters.rb",
+					"settings":
+					{
+						"buffer_size": 90,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Noted.helpers do",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/css/application.scss",
+					"settings":
+					{
+						"buffer_size": 1669,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/css/lib/modules/_text.scss",
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								170
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/*",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/css/lib/includes/_colors.scss",
+					"settings":
+					{
+						"buffer_size": 417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"h3",
+				".sass-cache/7330882b1e861dfc2c78cae086802c91bc2a7cb5/_regions.scssc"
+			],
+			[
+				"",
+				"/var/www/ethan/source/_posts/2012-08-29-the-newsroom-tea-party.markdown"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 155.0,
+	"status_bar_visible": true
+}
