@@ -20,8 +20,10 @@ Noted.controllers :projects do
   get :view, :map => "/:user/:project" do
     @user = User.find_by_username(params[:user])
     @project = Project.where(:user_id => @user.id, :permalink => params[:project]).order("updated_at dsc").first
+    @notes = Note.where(:project_id => @project.id).order("updated_at dsc").all
+    @sources = Source.where(:project_id => @project.id).order("updated_at dsc").all
 
-    render 'projects/view'
+    render 'projects/view', layout: 'project'
   end
 
   get :edit, :map => "/:user/:project/settings" do

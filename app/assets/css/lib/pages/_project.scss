@@ -4,48 +4,75 @@
 */
 
 #project {
-	& > header {
-		hgroup {
-			&:first-child {
-				background: $pale-yellow;
+	.description {
+		background: lighten($pale-yellow, 2%);
+		margin-bottom: 2rem;
+		padding: 2rem 0;
+
+		.inner {
+			@include container;
+		}
+	}
+
+	& > section {
+		@include container;
+
+		.notes, .sources {
+			header {
+				@include container; // Fix this.
+
+				margin-bottom: 1rem;
+				padding: 0;
 
 				hgroup {
 					@include span-columns(20);
-
-					h2 {
-						margin-bottom: 1rem;
-					}
 				}
 
 				aside {
 					@include span-columns(4 omega);
 
-					a {
-						float: right;
+					font-size: 0.85rem;
+					text-align: right;
+				}
+			}
+		}
+
+		.notes {
+			@include span-columns(14);
+
+			article {
+				@include border-radius(2px);
+
+				border: 2px solid $light-grey;
+
+				& + article {
+					margin-top: 1.5em;
+				}
+
+				header {
+					background: $light-grey;
+
+					.inner {
+						padding: 0.5em 0.65em;
 					}
 				}
 
-				.inner {
-					@include container;
+				section {
+					margin: 1em 0;
+					padding: 0 0.65em;
+				}
 
-					padding: 2rem 0;
+				footer {
+					border-top: 1px solid $light-grey;
+					color: darken($grey, 5%);
+					font-size: 0.85em;
+					padding: 0.25em 0.65em;
 				}
 			}
+		}
 
-			&:last-child {
-				background: lighten($pale-yellow, 2%);
-
-				.inner {
-					@include container;
-
-					padding: 1.5rem 0;
-				}
-
-				.inner-two {
-					@include span-columns(18 omega);
-					@include suffix(6);
-				}
-			}
+		.sources {
+			@include span-columns(8 omega);
 		}
 	}
 }

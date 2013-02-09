@@ -1,14 +1,41 @@
-#project
-  %header
-    %hgroup
-      .inner
-        %hgroup
-          %h2= @project.title
-          %p= @project.user.name
-        %aside
-          %a.btn{:href => url(:projects, :edit, :user => @user.username, :project => @project.permalink)}
-            %i.ss-icon gear
-    %hgroup
-      .inner
-        .inner-two
-          = @project.description
+.description
+  .inner
+    = @project.description
+%section
+  .notes
+    %header
+      %hgroup
+        %h3 Notes
+      %aside
+        - form_tag url(:notes, :create), :method => "post" do
+          = hidden_field_tag :project, :value => @project.id
+          = hidden_field_tag :author, :value => current_user.id
+          %button{:type => "submit"}
+            %i.ss-icon plus
+    %section
+      - @notes.each do |note|
+        %article
+          %header
+            .inner
+              %h4
+                %a{:href => note.url}= note.title
+          %section
+            .inner.text
+              = truncate_words(note.body, :length => 40)
+          %footer
+            .inner
+              %p= note.updated_at
+  .sources
+    %header
+      %hgroup
+        %h3 Sources
+      %aside
+        %a.btn{:href => "#{@project.url}/sources/new"}
+          %i.ss-icon plus
+    %section
+      - @sources.each do |source|
+        %article
+          %section
+            %p= source.data.to_s
+          %footer
+            %p= source.updated_at

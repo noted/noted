@@ -1,0 +1,32 @@
+/*
+    Noted.
+        file: css/lib/layouts/project.scss
+*/
+
+#project {
+    & > header {
+        background: $pale-yellow;
+
+        hgroup {
+            @include span-columns(20);
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        aside {
+            @include span-columns(4 omega);
+
+            a {
+                float: right;
+            }
+        }
+
+        .inner {
+            @include container;
+
+            padding: 3rem 0;
+        }
+    }
+}
