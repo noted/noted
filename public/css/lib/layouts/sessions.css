@@ -164,6 +164,10 @@ form input[type=text], form input[type=email], form input[type=password], form t
   /* line 22, ../../../../app/assets/css/lib/modules/_forms.scss */
   form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus {
     border: 2px solid #cfd4db; }
+/* line 27, ../../../../app/assets/css/lib/modules/_forms.scss */
+form textarea {
+  color: #444444;
+  font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace; }
 
 /*
 	Noted.
@@ -443,30 +447,175 @@ form input[type=text], form input[type=email], form input[type=password], form t
 	Noted.
 		file: css/pages/_user.scss
 */
-/* line 9, ../../../../app/assets/css/lib/pages/_project.scss */
-#project > header hgroup:first-child {
-  background: #fffde3; }
+/* line 7, ../../../../app/assets/css/lib/pages/_project.scss */
+#project .description {
+  background: #fffeed;
+  margin-bottom: 2rem;
+  padding: 2rem 0; }
   /* line 12, ../../../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup:first-child hgroup {
+  #project .description .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project .description .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+/* line 17, ../../../../app/assets/css/lib/pages/_project.scss */
+#project > section {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #project > section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 21, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > section .notes header, #project > section .sources header {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 0; }
+    /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > section .notes header:after, #project > section .sources header:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 27, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header hgroup, #project > section .sources header hgroup {
+      width: 83.19328%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+    /* line 31, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header aside, #project > section .sources header aside {
+      width: 15.96639%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline;
+      font-size: 0.85rem;
+      text-align: right; }
+  /* line 40, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > section .notes {
+    width: 57.98319%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 43, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #f2f3f5; }
+      /* line 48, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article + article {
+        margin-top: 1.5em; }
+      /* line 52, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article header {
+        background: #f2f3f5; }
+        /* line 55, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header .inner {
+          padding: 0.5em 0.65em; }
+      /* line 60, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 65, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article footer {
+        border-top: 1px solid #f2f3f5;
+        color: #dde1e6;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
+  /* line 74, ../../../../app/assets/css/lib/pages/_project.scss */
+  #project > section .sources {
+    width: 32.77311%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline; }
+
+/* line 1, ../../../../app/assets/css/lib/pages/_note.scss */
+form.note {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #f2f3f5;
+  margin-top: 2rem; }
+  /* line 7, ../../../../app/assets/css/lib/pages/_note.scss */
+  form.note + article {
+    margin-top: 1.5em; }
+  /* line 11, ../../../../app/assets/css/lib/pages/_note.scss */
+  form.note header {
+    background: #f2f3f5; }
+    /* line 14, ../../../../app/assets/css/lib/pages/_note.scss */
+    form.note header input {
+      border: none;
+      width: 60%; }
+      /* line 18, ../../../../app/assets/css/lib/pages/_note.scss */
+      form.note header input:focus {
+        border: none; }
+  /* line 28, ../../../../app/assets/css/lib/pages/_note.scss */
+  form.note textarea {
+    border: none;
+    height: 10rem;
+    padding: 1rem 0.65em;
+    resize: none;
+    width: 95%; }
+  /* line 36, ../../../../app/assets/css/lib/pages/_note.scss */
+  form.note footer {
+    border-top: 1px solid #f2f3f5;
+    color: #dde1e6;
+    font-size: 0.85em;
+    padding: 0.25em 0.65em; }
+
+/*
+    Noted.
+        file: css/lib/layouts/project.scss
+*/
+/* line 7, ../../../../app/assets/css/lib/layouts/project.scss */
+#project > header {
+  background: #fffde3; }
+  /* line 10, ../../../../app/assets/css/lib/layouts/project.scss */
+  #project > header hgroup {
     width: 83.19328%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 15, ../../../../app/assets/css/lib/pages/_project.scss */
-    #project > header hgroup:first-child hgroup h2 {
+    /* line 13, ../../../../app/assets/css/lib/layouts/project.scss */
+    #project > header hgroup h2 {
       margin-bottom: 1rem; }
-  /* line 20, ../../../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup:first-child aside {
+  /* line 18, ../../../../app/assets/css/lib/layouts/project.scss */
+  #project > header aside {
     width: 15.96639%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline; }
-    /* line 23, ../../../../app/assets/css/lib/pages/_project.scss */
-    #project > header hgroup:first-child aside a {
+    /* line 21, ../../../../app/assets/css/lib/layouts/project.scss */
+    #project > header aside a {
       float: right; }
-  /* line 28, ../../../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup:first-child .inner {
+  /* line 26, ../../../../app/assets/css/lib/layouts/project.scss */
+  #project > header .inner {
     *zoom: 1;
     max-width: 59.5em;
     _width: 59.5em;
@@ -474,38 +623,12 @@ form input[type=text], form input[type=email], form input[type=password], form t
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 0; }
+    padding: 3rem 0; }
     /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #project > header hgroup:first-child .inner:after {
+    #project > header .inner:after {
       content: "";
       display: table;
       clear: both; }
-/* line 35, ../../../../app/assets/css/lib/pages/_project.scss */
-#project > header hgroup:last-child {
-  background: #fffeed; }
-  /* line 38, ../../../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup:last-child .inner {
-    *zoom: 1;
-    max-width: 59.5em;
-    _width: 59.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5rem 0; }
-    /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #project > header hgroup:last-child .inner:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 44, ../../../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup:last-child .inner-two {
-    width: 74.78992%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline;
-    padding-right: 25.21008%; }
 
 /*
 	= Appendix

@@ -6,12 +6,6 @@ Noted.controllers :notes do
     end
   end
 
-  get :index, :map => "/:user/:project/notes" do
-    @notes = @project.notes.all
-
-    render 'notes/index'
-  end
-
   post :create do
     p = Project.find(params[:project])
 
@@ -27,20 +21,22 @@ Noted.controllers :notes do
   end
 
   get :view, :map => "/:user/:project/notes/:note" do
-    @note = Note.where(:project_id => @project.id, :permalink => params[:note])
+    @note = Note.where(:project_id => @project.id, :permalink => params[:note]).first
 
-    render 'notes/view'
+    render 'notes/view', layout: 'project'
   end
 
   patch :update do
     n = Note.find(params[:id])
     n.updater = User.find(params[:author])
 
+    p = n.project
+
     if n.update_attributes(params[:note])
-      redirect url(:notes, :index, :user => n.project.user.username, :project => n.project.permalink)
+      redirect p.url
     else
       flash[:error] = "Somethng has gone awry."
-      redirect url(:notes, :view, :user => n.project.user.username, :project => n.project.permalink, :note => n.permalink)
+      redirect n.url
     end
   end
 
@@ -50,7 +46,7 @@ Noted.controllers :notes do
     u = p.user
 
     if n.destroy
-      redirect url(:notes, :index, :user => u.username, :project => p.permalink)
+      redirect url(:project, :view, :user => u.username, :project => p.permalink)
     else
       flash[:error] = "Somethng has gone awry."
       redirect url(:notes, :view, :user => u.username, :project => p.permalink)

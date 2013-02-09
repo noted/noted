@@ -23,4 +23,9 @@ form {
 			border: 2px solid darken($grey, 10%);
 		}
 	}
+
+	textarea {
+		color: $text;
+		font: 13px/2em $mono;
+	}
 }

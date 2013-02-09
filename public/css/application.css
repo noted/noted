@@ -164,6 +164,10 @@ form input[type=text], form input[type=email], form input[type=password], form t
   /* line 22, ../../app/assets/css/lib/modules/_forms.scss */
   form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus {
     border: 2px solid #cfd4db; }
+/* line 27, ../../app/assets/css/lib/modules/_forms.scss */
+form textarea {
+  color: #444444;
+  font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace; }
 
 /*
 	Noted.
