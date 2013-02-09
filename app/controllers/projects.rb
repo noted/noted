@@ -1,5 +1,5 @@
 Noted.controllers :projects do
-  get :new do
+  get :new, :map => "/new" do
     render 'projects/new'
   end
 

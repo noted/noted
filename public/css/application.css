@@ -365,16 +365,13 @@ form input[type=text], form input[type=email], form input[type=password], form t
       #user > section article header {
         background: #f2f3f5; }
         /* line 61, ../../app/assets/css/lib/pages/_user.scss */
-        #user > section article header h3 {
-          font-size: 1.25rem; }
-        /* line 65, ../../app/assets/css/lib/pages/_user.scss */
         #user > section article header .inner {
           padding: 0.5em 0.65em; }
-      /* line 70, ../../app/assets/css/lib/pages/_user.scss */
+      /* line 66, ../../app/assets/css/lib/pages/_user.scss */
       #user > section article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 75, ../../app/assets/css/lib/pages/_user.scss */
+      /* line 71, ../../app/assets/css/lib/pages/_user.scss */
       #user > section article footer {
         border-top: 1px solid #f2f3f5;
         color: #dde1e6;
