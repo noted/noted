@@ -21,6 +21,8 @@ gem 'base32-crockford', require: 'base32/crockford'
 
 gem 'haml'
 
+gem 'rdiscount'
+
 gem 'compass'
 gem 'susy'
 
