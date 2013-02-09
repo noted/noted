@@ -1,0 +1,14 @@
+/*
+    Noted.
+        file: css/lib/modules/_text.scss
+*/
+
+.text {
+    font-family: $serif;
+
+    p {
+        &:first-child {
+            text-indent: 1em;
+        }
+    }
+}
