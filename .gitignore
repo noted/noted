@@ -4,7 +4,9 @@ tmp/**/*
 bin/*
 vendor/gems/*
 !vendor/gems/cache/
+.bundle/*
 .rbx/*
 .sass-cache/*
 coverage/*
+vendor/ruby/*
 *.sublime*
