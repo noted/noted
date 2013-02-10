@@ -23,7 +23,7 @@ Noted.controllers :notes do
   get :view, :map => "/:user/:project/notes/:note" do
     @note = Note.where(:project_id => @project.id, :permalink => params[:note]).first
 
-    render 'notes/view', layout: 'project'
+    render 'notes/view'
   end
 
   patch :update do

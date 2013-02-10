@@ -23,7 +23,7 @@ Noted.controllers :projects do
     @notes = Note.where(:project_id => @project.id).order("updated_at dsc").all
     @sources = Source.where(:project_id => @project.id).order("updated_at dsc").all
 
-    render 'projects/view', layout: 'project'
+    render 'projects/view'
   end
 
   get :edit, :map => "/:user/:project/settings" do

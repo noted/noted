@@ -1,7 +1,6 @@
 Noted.controllers do
   get :index do
     if current_user
-      #render 'core/dashboard'
       redirect url(:users, :view, :user => current_user.username)
     else
       render 'core/index'

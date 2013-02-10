@@ -1,0 +1,9 @@
+%header
+  .inner
+    %hgroup
+      %h2
+        %a{:href => project.url}= project.title
+      %p= project.user.name
+    %aside
+      %a.btn{:href => url(:projects, :edit, :user => user.username, :project => project.permalink)}
+        %i.ss-icon gear

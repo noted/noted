@@ -4,8 +4,39 @@
 */
 
 #project {
+	   & > header {
+        background: $pale-yellow;
+
+        hgroup {
+            @include span-columns(20);
+
+            h2 {
+            	font-size: 1.35em;
+                margin-bottom: 1rem;
+            }
+
+            img {
+            	max-width: 10%;
+            }
+        }
+
+        aside {
+            @include span-columns(4 omega);
+
+            a {
+                float: right;
+            }
+        }
+
+        .inner {
+            @include container;
+
+            padding: 3rem 0;
+        }
+    }
+
 	.description {
-		background: lighten($pale-yellow, 2%);
+		background: $pale-yellow;
 		margin-bottom: 2rem;
 		padding: 2rem 0;
 

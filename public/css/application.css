@@ -448,11 +448,52 @@ form textarea {
 		file: css/pages/_user.scss
 */
 /* line 7, ../../app/assets/css/lib/pages/_project.scss */
+#project > header {
+  background: #fffde3; }
+  /* line 10, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup {
+    width: 83.19328%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 13, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup h2 {
+      font-size: 1.35em;
+      margin-bottom: 1rem; }
+    /* line 18, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup img {
+      max-width: 10%; }
+  /* line 23, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header aside {
+    width: 15.96639%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline; }
+    /* line 26, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header aside a {
+      float: right; }
+  /* line 31, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > header .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+/* line 38, ../../app/assets/css/lib/pages/_project.scss */
 #project .description {
-  background: #fffeed;
+  background: #fffde3;
   margin-bottom: 2rem;
   padding: 2rem 0; }
-  /* line 12, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 43, ../../app/assets/css/lib/pages/_project.scss */
   #project .description .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -466,7 +507,7 @@ form textarea {
       content: "";
       display: table;
       clear: both; }
-/* line 17, ../../app/assets/css/lib/pages/_project.scss */
+/* line 48, ../../app/assets/css/lib/pages/_project.scss */
 #project > section {
   *zoom: 1;
   max-width: 59.5em;
@@ -480,7 +521,7 @@ form textarea {
     content: "";
     display: table;
     clear: both; }
-  /* line 21, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 52, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes header, #project > section .sources header {
     *zoom: 1;
     max-width: 59.5em;
@@ -496,13 +537,13 @@ form textarea {
       content: "";
       display: table;
       clear: both; }
-    /* line 27, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 58, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header hgroup, #project > section .sources header hgroup {
       width: 83.19328%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-    /* line 31, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 62, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header aside, #project > section .sources header aside {
       width: 15.96639%;
       float: right;
@@ -511,13 +552,13 @@ form textarea {
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
-  /* line 40, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 71, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes {
     width: 57.98319%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 43, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 74, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -525,26 +566,26 @@ form textarea {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #f2f3f5; }
-      /* line 48, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 79, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 52, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 83, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #f2f3f5; }
-        /* line 55, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 86, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-      /* line 60, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 91, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 65, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 96, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #f2f3f5;
         color: #dde1e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-  /* line 74, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 105, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;
@@ -587,48 +628,6 @@ form.note {
     color: #dde1e6;
     font-size: 0.85em;
     padding: 0.25em 0.65em; }
-
-/*
-    Noted.
-        file: css/lib/layouts/project.scss
-*/
-/* line 7, ../../app/assets/css/lib/layouts/project.scss */
-#project > header {
-  background: #fffde3; }
-  /* line 10, ../../app/assets/css/lib/layouts/project.scss */
-  #project > header hgroup {
-    width: 83.19328%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline; }
-    /* line 13, ../../app/assets/css/lib/layouts/project.scss */
-    #project > header hgroup h2 {
-      margin-bottom: 1rem; }
-  /* line 18, ../../app/assets/css/lib/layouts/project.scss */
-  #project > header aside {
-    width: 15.96639%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline; }
-    /* line 21, ../../app/assets/css/lib/layouts/project.scss */
-    #project > header aside a {
-      float: right; }
-  /* line 26, ../../app/assets/css/lib/layouts/project.scss */
-  #project > header .inner {
-    *zoom: 1;
-    max-width: 59.5em;
-    _width: 59.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem 0; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    #project > header .inner:after {
-      content: "";
-      display: table;
-      clear: both; }
 
 /*
 	= Appendix
