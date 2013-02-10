@@ -6,19 +6,29 @@
       %h2= @user.name
       %hgroup
         %ul
-          %li
-            %i.ss-icon location
-            = @user.location
-          %li
-            %i.ss-icon globe
-            ethnt.me
+          - if @user.staff?
+            %li
+              %i.ss-icon star
+              %strong Staff
+          - if @user.location
+            %li
+              %i.ss-icon location
+              = @user.location
+          - if @user.website
+            %li
+              %i.ss-icon globe
+              %a{:href => @user.website, :target => "_blank"}= format(:url, @user.website)
+          - if @user.twitter
+            %li
+              %i.ss-icon.ss-social twitter
+              %a{:href => "http://twitter.com/#{@user.twitter}"}= format(:twitter, @user.twitter)
   %section
     - @projects.each do |project|
       %article
         %header
           .inner
-            %a{:href => project.url}
-              %h4= project.title
+            %h4
+              %a{:href => project.url}= project.title
         %section.text
           .inner
             = project.description

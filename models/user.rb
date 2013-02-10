@@ -10,9 +10,12 @@ class User
   key :name, String
   key :username, String
   key :email, String
-  key :location, String
   key :hash, String
-  
+
+  key :location, String
+  key :website, String
+  key :twitter, String
+
   timestamps!
 
   state_machine :role, :initial => :user do

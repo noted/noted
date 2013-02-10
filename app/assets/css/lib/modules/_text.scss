@@ -4,7 +4,7 @@
 */
 
 .text {
-    font-family: $serif;
+    font: 16px/1.75em $serif;
 
     p {
         &:first-child {
