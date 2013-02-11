@@ -13,7 +13,7 @@ form {
 		padding: 0.5em;
 
 	}
-	
+
 	input[type=text], input[type=email], input[type=password], textarea {
 		@include border-radius(2px);
 
@@ -27,5 +27,9 @@ form {
 	textarea {
 		color: $text;
 		font: 13px/2em $mono;
+	}
+
+	&.inline {
+		display: inline;
 	}
 }

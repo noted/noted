@@ -2,7 +2,8 @@
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   .description
     .inner
-      = @project.description
+      .text
+        = @project.description
   %section
     .notes
       %header
@@ -19,8 +20,16 @@
           %article
             %header
               .inner
-                %h4
-                  %a{:href => note.url}= note.title
+                %hgroup
+                  %h4
+                    %a{:href => note.url}= note.title
+                %aside
+                  %a.btn.edit{:href => note.url}
+                    %i.ss-icon edit
+                  - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
+                    = hidden_field_tag :id, :value => note.id
+                    %button.trash{:href => ""}
+                      %i.ss-icon trash
             %section
               .inner.text
                 = truncate_words(note.body, :length => 40)

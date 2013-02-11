@@ -134,6 +134,21 @@ a.btn, button, input[type="submit"] {
   a.btn.large, button.large, input[type="submit"].large {
     font-size: 1em; }
   /* line 52, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg {
+    background: transparent;
+    font-size: 1em;
+    padding: 0; }
+    /* line 57, ../../../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red {
+      color: #dd4a38; }
+      /* line 60, ../../../../app/assets/css/lib/modules/_buttons.scss */
+      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover {
+        color: #aa3325; }
+    /* line 65, ../../../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i {
+      position: relative;
+      top: 0; }
+  /* line 71, ../../../../app/assets/css/lib/modules/_buttons.scss */
   a.btn i, button i, input[type="submit"] i {
     position: relative;
     top: 1px; }
@@ -168,6 +183,9 @@ form input[type=text], form input[type=email], form input[type=password], form t
 form textarea {
   color: #444444;
   font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace; }
+/* line 32, ../../../../app/assets/css/lib/modules/_forms.scss */
+form.inline {
+  display: inline; }
 
 /*
 	Noted.
@@ -449,7 +467,7 @@ form textarea {
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_project.scss */
 #project > header {
-  background: #fffde3; }
+  background: #f2f3f5; }
   /* line 10, ../../../../app/assets/css/lib/pages/_project.scss */
   #project > header hgroup {
     width: 83.19328%;
@@ -472,8 +490,10 @@ form textarea {
     display: inline; }
     /* line 26, ../../../../app/assets/css/lib/pages/_project.scss */
     #project > header aside a {
-      float: right; }
-  /* line 31, ../../../../app/assets/css/lib/pages/_project.scss */
+      float: right;
+      position: relative;
+      bottom: 0.5rem; }
+  /* line 33, ../../../../app/assets/css/lib/pages/_project.scss */
   #project > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -488,12 +508,12 @@ form textarea {
       content: "";
       display: table;
       clear: both; }
-/* line 38, ../../../../app/assets/css/lib/pages/_project.scss */
+/* line 40, ../../../../app/assets/css/lib/pages/_project.scss */
 #project .description {
-  background: #fffde3;
+  background: #f8f9fa;
   margin-bottom: 2rem;
   padding: 2rem 0; }
-  /* line 43, ../../../../app/assets/css/lib/pages/_project.scss */
+  /* line 45, ../../../../app/assets/css/lib/pages/_project.scss */
   #project .description .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -507,7 +527,14 @@ form textarea {
       content: "";
       display: table;
       clear: both; }
-/* line 48, ../../../../app/assets/css/lib/pages/_project.scss */
+    /* line 48, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project .description .inner .text {
+      width: 74.78992%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 25.21008%; }
+/* line 55, ../../../../app/assets/css/lib/pages/_project.scss */
 #project > section {
   *zoom: 1;
   max-width: 59.5em;
@@ -515,13 +542,15 @@ form textarea {
   padding-left: 0.5em;
   padding-right: 0.5em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 6em;
+  margin-top: 5em; }
   /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #project > section:after {
     content: "";
     display: table;
     clear: both; }
-  /* line 52, ../../../../app/assets/css/lib/pages/_project.scss */
+  /* line 62, ../../../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes header, #project > section .sources header {
     *zoom: 1;
     max-width: 59.5em;
@@ -537,13 +566,13 @@ form textarea {
       content: "";
       display: table;
       clear: both; }
-    /* line 58, ../../../../app/assets/css/lib/pages/_project.scss */
+    /* line 68, ../../../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header hgroup, #project > section .sources header hgroup {
       width: 83.19328%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-    /* line 62, ../../../../app/assets/css/lib/pages/_project.scss */
+    /* line 72, ../../../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header aside, #project > section .sources header aside {
       width: 15.96639%;
       float: right;
@@ -552,13 +581,13 @@ form textarea {
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
-  /* line 71, ../../../../app/assets/css/lib/pages/_project.scss */
+  /* line 81, ../../../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes {
     width: 57.98319%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 74, ../../../../app/assets/css/lib/pages/_project.scss */
+    /* line 84, ../../../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -566,26 +595,44 @@ form textarea {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #f2f3f5; }
-      /* line 79, ../../../../app/assets/css/lib/pages/_project.scss */
+      /* line 89, ../../../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 83, ../../../../app/assets/css/lib/pages/_project.scss */
+      /* line 93, ../../../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #f2f3f5; }
-        /* line 86, ../../../../app/assets/css/lib/pages/_project.scss */
+        /* line 96, ../../../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-      /* line 91, ../../../../app/assets/css/lib/pages/_project.scss */
+        /* line 100, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header hgroup {
+          padding-bottom: 0.5em; }
+        /* line 104, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header a.btn, #project > section .notes article header button {
+          background: transparent;
+          color: #dde1e6;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 110, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
+            margin-left: 0.5em; }
+          /* line 115, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
+            color: #48dcbc; }
+          /* line 121, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
+            color: #dd4a38; }
+      /* line 128, ../../../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 96, ../../../../app/assets/css/lib/pages/_project.scss */
+      /* line 133, ../../../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #f2f3f5;
         color: #dde1e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-  /* line 105, ../../../../app/assets/css/lib/pages/_project.scss */
+  /* line 142, ../../../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;

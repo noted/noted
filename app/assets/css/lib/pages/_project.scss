@@ -5,7 +5,7 @@
 
 #project {
 	   & > header {
-        background: $pale-yellow;
+        background: $light-grey;
 
         hgroup {
             @include span-columns(20);
@@ -25,6 +25,8 @@
 
             a {
                 float: right;
+                position: relative;
+                bottom: 0.5rem;
             }
         }
 
@@ -36,17 +38,25 @@
     }
 
 	.description {
-		background: $pale-yellow;
+		background: lighten($light-grey, 2%);
 		margin-bottom: 2rem;
 		padding: 2rem 0;
 
 		.inner {
 			@include container;
+
+            .text {
+            	@include span-columns(18);
+            	@include suffix(6);
+            }
 		}
 	}
 
 	& > section {
 		@include container;
+
+		margin-bottom: 6em;
+		margin-top: 5em;
 
 		.notes, .sources {
 			header {
@@ -85,6 +95,33 @@
 
 					.inner {
 						padding: 0.5em 0.65em;
+					}
+
+					hgroup {
+						padding-bottom: 0.5em;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.edit {
+							&:hover {
+								color: $aqua;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
 					}
 				}
 

@@ -49,6 +49,25 @@ a.btn, button, input[type="submit"] {
 		font-size: 1em;
 	}
 
+	&.no-bg {
+		background: transparent;
+		font-size: 1em;
+		padding: 0;
+
+		&.red {
+			color: $red;
+
+			&:hover {
+				color: $dark-red;
+			}
+		}
+
+		i {
+			position: relative;
+			top: 0;
+		}
+	}
+
 	i {
 		position: relative;
 		top: 1px;
