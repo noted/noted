@@ -16,7 +16,7 @@ Noted.controllers :notes do
       redirect url(:notes, :view, :user => p.user.username, :project => p.permalink, :note => n.permalink)
     else
       flash[:error] = "Something has gone awry."
-      redirect url(:notes, :index, :user => p.user.username, :project => p.permalink)
+      redirect p.url
     end
   end
 
@@ -46,7 +46,7 @@ Noted.controllers :notes do
     u = p.user
 
     if n.destroy
-      redirect url(:project, :view, :user => u.username, :project => p.permalink)
+      redirect p.url
     else
       flash[:error] = "Somethng has gone awry."
       redirect url(:notes, :view, :user => u.username, :project => p.permalink)
