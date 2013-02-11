@@ -16,6 +16,9 @@
             %button{:type => "submit"}
               %i.ss-icon plus
       %section
+        - if @notes.blank?
+          %p
+            You don't have any notes yet!
         - @notes.each do |note|
           %article
             %header
@@ -44,6 +47,8 @@
           %a.btn{:href => "#{@project.url}/sources/new"}
             %i.ss-icon plus
       %section
+        - if @sources.blank?
+          %p You don't have any sources yet!
         - @sources.each do |source|
           %article
             %section
