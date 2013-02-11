@@ -402,6 +402,13 @@ form.inline {
         color: #dde1e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
+    /* line 79, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section .empty {
+      font-size: 1.25em; }
+      /* line 82, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section .empty p.go {
+        font-size: 1rem;
+        margin-top: 1rem; }
 
 /*
 	Noted.
