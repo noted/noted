@@ -11,6 +11,9 @@ Noted.controllers :sessions do
     if u = User.authenticate(params[:user][:email], params[:user][:password])
       login(u)
       redirect url(:index)
+    else
+      flash[:error] = "That isn't the right email or password."
+      redirect url(:sessions, :new)
     end
   end
 

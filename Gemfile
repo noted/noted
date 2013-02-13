@@ -38,11 +38,12 @@ end
 group :development do
   gem 'foreman'
   gem 'execjs'
+  gem 'pry'
 end
 
 group :test do
   gem 'rack-test', require: 'rack/test'
-  
+
   gem 'rspec'
   gem 'shoulda-matchers'
   gem 'autotest'
