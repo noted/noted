@@ -6,7 +6,7 @@
       = hidden_field_tag :author, :value => current_user.id
       %header
         = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
-      = text_area_tag :"note[body]", :value => @note.body, :placeholder => "Begin writing your note here..."
+      = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
       %footer
         %p
           %a.btn.orange{:href => ""} Cancel
