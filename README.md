@@ -10,6 +10,10 @@ _If you're from FHS, here is the [Digication e-Portfolio](https://fps.digication
 
 For more information, visit the [wiki](https://github.com/noted/noted/wiki/_pages) or see the [changes](https://github.com/noted/noted/blob/master/LOG.md).
 
+## Description
+
+Noted is an academic research assistant and management tool. It is meant to allow students to ease the research workflow through source search tools and collaboration. Students can sign up for free with some features limit or with a small monthly fee for full access. They can also get access through their institution.
+
 ## Overview
 
 For my senior year at high school, I decided to do a capstone project. Students are given a (relatively) large amount of freedom to do whatever they’d like with this project, whether it be academic, charitable, or innovative.
