@@ -31,5 +31,3 @@ Noted is more than a research management tool, but a collaboration, discovery, a
 This project is still in its infancy. I’ve never created a business before—that will be difficult. There is an entire course at my school that does exactly that (e-commerce), so learning it all by myself and in half the time will be a challenge.
 
 I look forward to working on this project, as it is something I’m genuinely interested in. I have one foot in academics, and another in the career of my choice. Combining the two will be a great experience not only for me, but hopefully for the students I help with the results.
-
-_Also, Fezz is cool._
