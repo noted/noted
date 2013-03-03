@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-%w{cache core gen helpers mailer}.each do |p|
+%w{cache core gen helpers}.each do |p|
   gem "padrino-#{p}", '0.10.7'
 end
 
