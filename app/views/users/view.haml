@@ -22,6 +22,9 @@
             %li
               %i.ss-icon.ss-social twitter
               %a{:href => "http://twitter.com/#{@user.twitter}"}= format(:twitter, @user.twitter)
+    %footer
+      - if @user == current_user
+        %a.btn{:href => url(:users, :edit)} Edit Profile
   %section
     - if @projects.blank?
       .empty

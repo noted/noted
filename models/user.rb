@@ -61,9 +61,7 @@ class User
   end
 
   def gravatar
-    str = self.email.strip
-    str = str.downcase
-    str = Digest::MD5.hexdigest(str)
+    str = Digest::MD5.hexdigest(self.email.strip.downcase)
 
     "http://www.gravatar.com/avatar/#{str}?s=200"
   end

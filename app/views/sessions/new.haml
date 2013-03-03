@@ -1,4 +1,5 @@
 - form_tag url(:sessions, :create) do
+  = partial 'partials/flash', :locals => { :flash => flash }
   %p= email_field_tag :"user[email]", :placeholder => "Email"
   %p= password_field_tag :"user[password]", :placeholder => "Password"
   %nav

@@ -17,6 +17,8 @@ Noted.controllers :users do
   end
 
   get :edit, :map => "/settings" do
+    @user = current_user
+
     render 'users/edit'
   end
 

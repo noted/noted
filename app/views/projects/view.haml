@@ -10,15 +10,19 @@
         %hgroup
           %h3 Notes
         %aside
-          - form_tag url(:notes, :create), :method => "post" do
-            = hidden_field_tag :project, :value => @project.id
-            = hidden_field_tag :author, :value => current_user.id
-            %button{:type => "submit"}
-              %i.ss-icon plus
+          - if current_user
+            - form_tag url(:notes, :create), :method => "post" do
+              = hidden_field_tag :project, :value => @project.id
+              = hidden_field_tag :author, :value => current_user.id
+              %button{:type => "submit"}
+                %i.ss-icon plus
       %section
         - if @notes.blank?
           %p
-            You don't have any notes yet!
+            - if current_user
+              You don't have any notes yet!
+            - else
+              Nothing to see here, move along...
         - @notes.each do |note|
           %article
             %header
@@ -27,12 +31,13 @@
                   %h4
                     %a{:href => note.url}= note.title
                 %aside
-                  %a.btn.edit{:href => note.url}
-                    %i.ss-icon edit
-                  - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
-                    = hidden_field_tag :id, :value => note.id
-                    %button.trash{:href => ""}
-                      %i.ss-icon trash
+                  - if current_user
+                    %a.btn.edit{:href => note.url}
+                      %i.ss-icon edit
+                    - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
+                      = hidden_field_tag :id, :value => note.id
+                      %button.trash{:href => ""}
+                        %i.ss-icon trash
             %section
               .inner.text
                 = truncate_words(note.body, :length => 40)
@@ -44,11 +49,16 @@
         %hgroup
           %h3 Sources
         %aside
-          %a.btn{:href => "#{@project.url}/sources/new"}
-            %i.ss-icon plus
+          - if current_user
+            %a.btn{:href => "#{@project.url}/sources/new"}
+              %i.ss-icon plus
       %section
         - if @sources.blank?
-          %p You don't have any sources yet!
+          %p
+            - if current_user
+              You don't have any sources yet!
+            - else
+              Nothing to see here, move along...
         - @sources.each do |source|
           %article
             %section
