@@ -1,6 +1,8 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'padrino', '0.10.7'
+%w{cache core gen helpers mailer}.each do |p|
+  gem "padrino-#{p}", '0.10.7'
+end
 
 gem 'puma'
 
@@ -31,7 +33,7 @@ gem 'barista'
 gem 'log_buddy'
 
 group :development, :test do
-  gem 'better_errors', '0.3.0'
+  gem 'better_errors'
   gem 'binding_of_caller'
 end
 
