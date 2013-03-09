@@ -48,7 +48,6 @@ group :test do
 
   gem 'rspec'
   gem 'shoulda-matchers'
-  gem 'autotest'
   gem 'fuubar'
 
   gem 'mocha', require: 'mocha/api'
