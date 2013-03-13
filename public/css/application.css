@@ -140,10 +140,10 @@ a.btn, button, input[type="submit"] {
     padding: 0; }
     /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red {
-      color: #dd4a38; }
+      color: #e74c3c; }
       /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
       a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover {
-        color: #aa3325; }
+        color: #c0392b; }
     /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i {
       position: relative;
@@ -235,11 +235,11 @@ form.inline {
 */
 /* line 7, ../../app/assets/css/lib/pages/_index.scss */
 #index .hero {
-  background: #d24130;
+  background: #d65548;
   color: #fefefe;
   padding: 4em 0;
   margin-bottom: 4em;
-  text-shadow: 0 1px 0 rgba(193, 50, 33, 0.5); }
+  text-shadow: 0 1px 0 rgba(214, 44, 26, 0.5); }
   /* line 14, ../../app/assets/css/lib/pages/_index.scss */
   #index .hero header {
     margin-bottom: 2em; }
@@ -628,7 +628,7 @@ form.inline {
             color: #48dcbc; }
           /* line 121, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
-            color: #dd4a38; }
+            color: #e74c3c; }
       /* line 128, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
@@ -650,7 +650,7 @@ form.inline {
 /* line 1, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_box {
   position: relative;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   overflow: visible; }
 
 /* line 6, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -660,7 +660,7 @@ form.inline {
 /* line 10, ../../app/assets/css/lib/vendor/_redactor.scss */
 body .redactor_air {
   position: absolute;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-bottom: none;
   z-index: 2; }
 
@@ -736,13 +736,13 @@ body .redactor_box_fullscreen {
   padding: 15px !important;
   margin: 0 !important;
   background: none;
-  background: white !important;
+  background: #fff !important;
   overflow: auto;
   white-space: normal; }
 
 /* line 92, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_editor a {
-  color: #1155cc !important;
+  color: #15c !important;
   text-decoration: underline !important; }
 
 /* line 100, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -815,13 +815,13 @@ body .redactor_box_fullscreen {
 
 /* line 153, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_editor table td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding: 5px !important;
   vertical-align: top; }
 
 /* line 158, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_editor table thead td {
-  border-bottom: 2px solid black !important;
+  border-bottom: 2px solid #000 !important;
   font-weight: bold !important; }
 
 /* line 162, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -832,7 +832,7 @@ body .redactor_box_fullscreen {
 .redactor_editor pre {
   font-size: 90% !important;
   background: #f8f8f8 !important;
-  border: 1px solid #dddddd !important;
+  border: 1px solid #ddd !important;
   border-radius: 3px !important;
   padding: 1em !important;
   white-space: pre;
@@ -843,7 +843,7 @@ body .redactor_box_fullscreen {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #ccc; }
 
 /* line 185, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_editor h1,
@@ -905,7 +905,7 @@ body .redactor_box_fullscreen {
 .redactor_editor_wym h4,
 .redactor_editor_wym h5,
 .redactor_editor_wym blockquote {
-  background-color: white !important;
+  background-color: #fff !important;
   border: 1px solid #e4e4e4 !important;
   padding: 10px !important;
   margin: 10px 0 !important; }
@@ -940,7 +940,7 @@ body .redactor_box_fullscreen {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#e2e2e2',GradientType=0 );
   overflow: hidden !important;
   height: 32px !important;
-  border-bottom: 1px solid #bbbbbb; }
+  border-bottom: 1px solid #bbb; }
 
 /* line 272, ../../app/assets/css/lib/vendor/_redactor.scss */
 body .redactor_air .redactor_toolbar {
@@ -959,7 +959,7 @@ body .redactor_air .redactor_toolbar {
 .redactor_toolbar li.redactor_separator {
   float: left;
   height: 34px;
-  border-left: 1px solid lightgrey;
+  border-left: 1px solid #d3d3d3;
   border-right: 1px solid #f1f1f1;
   padding: 0;
   margin: 0 2px 0 3px !important; }
@@ -969,7 +969,7 @@ body .redactor_air .redactor_toolbar {
   width: 25px;
   height: 25px;
   border: 1px solid transparent;
-  * border: 1px solid #eeeeee;
+  * border: 1px solid #eee;
   display: block;
   line-height: 0;
   font-size: 0;
@@ -1122,7 +1122,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
 /* line 372, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_format_blockquote {
   font-style: italic;
-  color: #666666 !important;
+  color: #666 !important;
   padding-left: 10px; }
 
 /* line 377, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -1165,17 +1165,17 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   position: absolute;
   width: 200px;
   background-color: #fff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   font-size: 13px;
-  -webkit-box-shadow: 0 2px 4px #cccccc;
-  -moz-box-shadow: 0 2px 4px #cccccc;
-  box-shadow: 0 2px 4px #cccccc;
+  -webkit-box-shadow: 0 2px 4px #ccc;
+  -moz-box-shadow: 0 2px 4px #ccc;
+  box-shadow: 0 2px 4px #ccc;
   line-height: 21px;
   padding: 10px; }
 
 /* line 419, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_separator_drop {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
   padding: 0 !important;
   line-height: 0;
   font-size: 0; }
@@ -1189,7 +1189,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
 
 /* line 431, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_dropdown a:hover {
-  color: #444444 !important;
+  color: #444 !important;
   text-decoration: none;
   background-color: #dde4ef; }
 
@@ -1202,7 +1202,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset !important;
   border-radius: 4px !important;
   float: left !important;
-  border: 2px solid white !important;
+  border: 2px solid #fff !important;
   font-size: 0; }
 
 /* line 448, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -1222,7 +1222,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   opacity: 0.50;
-  background-color: #333333 !important; }
+  background-color: #333 !important; }
 
 /* line 471, ../../app/assets/css/lib/vendor/_redactor.scss */
 #redactor_modal {
@@ -1234,12 +1234,12 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   background: -ms-linear-gradient(top, #f7f7f7 0%, #e2e2e2 100%);
   background: linear-gradient(to bottom, #f7f7f7 0%, #e2e2e2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e2e2e2',GradientType=0 );
-  text-shadow: 0 1px 0 white;
+  text-shadow: 0 1px 0 #fff;
   padding: 0;
   position: fixed;
   top: 50%;
   left: 50%;
-  box-shadow: 0px 5px 60px black;
+  box-shadow: 0px 5px 60px #000;
   border-radius: 3px;
   z-index: 50001;
   font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
@@ -1337,8 +1337,8 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   padding: 5px 15px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
   border: none;
-  text-shadow: 0 1px 0 #eeeeee;
-  color: #777777 !important;
+  text-shadow: 0 1px 0 #eee;
+  color: #777 !important;
   text-decoration: none !important; }
 
 /* line 574, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -1362,7 +1362,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   z-index: 2;
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   height: 23px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   margin: 0;
   padding: 1px 2px;
   background-color: white;
@@ -1411,10 +1411,10 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   background-image: -o-linear-gradient(top, white, #e1e1e1);
   background-image: linear-gradient(top, #ffffff, #e1e1e1);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=0);
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-bottom-color: #aaa;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-shadow: 0 1px 0px white;
+  text-shadow: 0 1px 0px #ffffff;
   color: #000; }
 
 /* line 646, ../../app/assets/css/lib/vendor/_redactor.scss */
@@ -1445,7 +1445,7 @@ body .redactor_toolbar li a.redactor_btn_alignment {
   width: 99%;
   background-color: #fff;
   padding: 60px 0;
-  border: 2px dashed #bbbbbb; }
+  border: 2px dashed #bbb; }
 
 /* line 674, ../../app/assets/css/lib/vendor/_redactor.scss */
 .redactor_droparea .redactor_dropareabox, .redactor_dropalternative {
@@ -1486,11 +1486,11 @@ body {
 
 /* line 24, ../../app/assets/css/application.scss */
 a {
-  color: #dd4a38;
+  color: #e74c3c;
   text-decoration: none; }
   /* line 28, ../../app/assets/css/application.scss */
   a:hover {
-    color: #aa3325; }
+    color: #c0392b; }
 
 /* line 33, ../../app/assets/css/application.scss */
 em {
@@ -1505,7 +1505,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 43, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.25em;
-  text-shadow: 0 2px 0 rgba(193, 50, 33, 0.5);
+  text-shadow: 0 2px 0 rgba(214, 44, 26, 0.5);
   text-transform: none; }
 
 /* line 49, ../../app/assets/css/application.scss */
@@ -1547,7 +1547,7 @@ strong {
 */
 /* line 77, ../../app/assets/css/application.scss */
 body > header {
-  background: #dd4a38; }
+  background: #e74c3c; }
   /* line 80, ../../app/assets/css/application.scss */
   body > header a {
     color: #fbfbfc; }
@@ -1565,7 +1565,7 @@ body > header {
     font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
     /* line 95, ../../app/assets/css/application.scss */
     body > header nav li {
-      text-shadow: 0 1px 0 rgba(193, 50, 33, 0.5); }
+      text-shadow: 0 1px 0 rgba(214, 44, 26, 0.5); }
     /* line 100, ../../app/assets/css/application.scss */
     body > header nav section:first-child {
       width: 41.17647%;
