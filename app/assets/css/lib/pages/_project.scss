@@ -5,7 +5,7 @@
 
 #project {
 	   & > header {
-        background: $light-grey;
+        background: $grey;
 
         hgroup {
             @include span-columns(20);
@@ -38,7 +38,7 @@
     }
 
 	.description {
-		background: lighten($light-grey, 2%);
+		background: lighten($grey, 2%);
 		margin-bottom: 2rem;
 		padding: 2rem 0;
 
@@ -84,14 +84,14 @@
 			article {
 				@include border-radius(2px);
 
-				border: 2px solid $light-grey;
+				border: 2px solid $grey;
 
 				& + article {
 					margin-top: 1.5em;
 				}
 
 				header {
-					background: $light-grey;
+					background: $grey;
 
 					.inner {
 						padding: 0.5em 0.65em;
@@ -113,7 +113,7 @@
 
 						&.edit {
 							&:hover {
-								color: $aqua;
+								color: $turquoise;
 							}
 						}
 
@@ -131,7 +131,7 @@
 				}
 
 				footer {
-					border-top: 1px solid $light-grey;
+					border-top: 1px solid $grey;
 					color: darken($grey, 5%);
 					font-size: 0.85em;
 					padding: 0.25em 0.65em;

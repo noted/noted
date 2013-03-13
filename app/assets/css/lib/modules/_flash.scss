@@ -12,9 +12,9 @@
 	width: 50%;
 
 	&.error {
-		background-color: $flash-red;
-		border: 1px solid $flash-dark-red;
-		color: darken($flash-dark-red, 40%);
+		background-color: lighten($red, 10%);
+		border: 1px solid lighten($dark-red, 10%);
+		color: darken(lighten($dark-red, 10%), 40%);
 	}
 
 	&.notice {
