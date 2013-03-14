@@ -1,0 +1,39 @@
+/*
+	Noted.
+		file: css/pages/_note.scss
+*/
+
+section#note {
+	form {
+		@include border-radius(2px);
+
+		border: 2px solid $grey;
+		padding: 0;
+
+		input, textarea {
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			border-bottom: 2px solid $grey;
+
+			input {
+				padding: 1rem;
+				width: 95%;
+			}
+		}
+
+		section {
+			textarea {
+				padding: 1rem;
+				width: 95%;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 1em;
+	}
+}

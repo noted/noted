@@ -27,6 +27,7 @@ form {
 	textarea {
 		color: $text;
 		font: 13px/2em $mono;
+		line-height: 2rem;
 	}
 
 	&.inline {

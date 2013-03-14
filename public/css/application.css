@@ -188,8 +188,9 @@ form input[type=text], form input[type=email], form input[type=password], form t
 /* line 27, ../../app/assets/css/lib/modules/_forms.scss */
 form textarea {
   color: #444444;
-  font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace; }
-/* line 32, ../../app/assets/css/lib/modules/_forms.scss */
+  font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
+  line-height: 2rem; }
+/* line 33, ../../app/assets/css/lib/modules/_forms.scss */
 form.inline {
   display: inline; }
 
@@ -652,6 +653,39 @@ form.inline {
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline; }
+
+/*
+	Noted.
+		file: css/pages/_note.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_note.scss */
+section#note form {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #ecf0f1;
+  padding: 0; }
+  /* line 13, ../../app/assets/css/lib/pages/_note.scss */
+  section#note form input, section#note form textarea {
+    border: none;
+    margin: 0;
+    padding: 0; }
+  /* line 19, ../../app/assets/css/lib/pages/_note.scss */
+  section#note form header {
+    border-bottom: 2px solid #ecf0f1; }
+    /* line 22, ../../app/assets/css/lib/pages/_note.scss */
+    section#note form header input {
+      padding: 1rem;
+      width: 95%; }
+  /* line 29, ../../app/assets/css/lib/pages/_note.scss */
+  section#note form section textarea {
+    padding: 1rem;
+    width: 95%; }
+/* line 36, ../../app/assets/css/lib/pages/_note.scss */
+section#note footer {
+  margin-top: 1em; }
 
 /*
 	= Appendix
