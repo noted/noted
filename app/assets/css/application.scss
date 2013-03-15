@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 1.25em;
-	text-shadow: 0 2px 0 rgba(darken($red, 10%), 0.5);
+	text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.2);
 	text-transform: none;
 }
 
@@ -76,15 +76,16 @@ strong {
 
 body > header {
 	background: $red;
+	border-bottom: 2px solid $grey;
 
-	a {
-		color: lighten($grey, 5%);
+			a {
+				color: $base;
+				//color: $dark-deep-grey;
 
-		&:hover {
-			color: $grey;
-		}
-	}
-
+				&:hover {
+					color: $red;
+				}
+			}
 	hgroup {
 		@include span-columns(6);
 	}
@@ -93,7 +94,7 @@ body > header {
 		font: 0.85em $sans-serif;
 
 		li {
-			text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.5);
+			//text-shadow: 0 1px 0 rgba(darken($base, 10%), 0.5);
 		}
 
 		section {

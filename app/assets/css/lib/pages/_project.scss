@@ -4,51 +4,54 @@
 */
 
 #project {
-	   & > header {
-        background: $grey;
+	& > header {
+		background: lighten($grey, 3%);
 
-        hgroup {
-            @include span-columns(20);
+		.inner {
+			@include container;
 
-            h2 {
-            	font-size: 1.35em;
-                margin-bottom: 1rem;
-            }
+			padding: 2.5em 0;
+		}
 
-            img {
-            	max-width: 10%;
-            }
-        }
+		hgroup {
+			@include span-columns(18);
 
-        aside {
-            @include span-columns(4 omega);
+			h2 {
+				font-family: $serif;
+				margin-bottom: 1rem;
+			}
 
-            a {
-                float: right;
-                position: relative;
-                bottom: 0.5rem;
-            }
-        }
+			img {
+				@include border-radius(50%);
 
-        .inner {
-            @include container;
+				border: 3px solid $grey;
+				max-width: 4%;
 
-            padding: 3rem 0;
-        }
-    }
+				&:hover {
+					border: 3px solid darken($grey, 4%);
+				}
+			}
+		}
+
+		aside {
+			@include span-columns(6 omega);
+
+			text-align: right;
+		}
+	}
 
 	.description {
-		background: lighten($grey, 2%);
+		background: lighten($grey, 4.5%);
 		margin-bottom: 2rem;
 		padding: 2rem 0;
 
 		.inner {
 			@include container;
 
-            .text {
-            	@include span-columns(18);
-            	@include suffix(6);
-            }
+			.text {
+				@include span-columns(18);
+				@include suffix(6);
+			}
 		}
 	}
 

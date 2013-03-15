@@ -3,7 +3,11 @@
     %hgroup
       %h2
         %a{:href => project.url}= project.title
-      %p= project.user.name
+      %ul
+        %li
+          %a{:href => url(:users, :view, :user => project.creator.username)}
+            %img{:src => project.creator.gravatar}
     %aside
-      %a.btn{:href => url(:projects, :edit, :user => user.username, :project => project.permalink)}
-        %i.ss-icon gear
+      %p
+        %a.btn{:href => "#{project.url}/settings"}
+          %i.ss-icon settings

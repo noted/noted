@@ -99,6 +99,9 @@ a.btn, button, input[type="submit"] {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
+  -moz-box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
+  box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
   background: #b1c2c6;
   border: none;
   color: #fefefe;
@@ -108,53 +111,53 @@ a.btn, button, input[type="submit"] {
   padding: 0.5em 0.75em;
   text-transform: uppercase;
   text-shadow: none; }
-  /* line 19, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 20, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn:hover, button:hover, input[type="submit"]:hover {
     background: #a3b6bb;
     color: #fefefe; }
-  /* line 24, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.primary, button.primary, input[type="submit"].primary {
+  /* line 25, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue {
     background: #3498db; }
-    /* line 27, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.primary:hover, button.primary:hover, input[type="submit"].primary:hover {
+    /* line 28, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover {
       background: #258cd1; }
-  /* line 32, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.aqua, button.aqua, input[type="submit"].aqua {
+  /* line 33, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise {
     background: #1abc9c; }
-    /* line 35, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.aqua:hover, button.aqua:hover, input[type="submit"].aqua:hover {
+    /* line 36, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover {
       background: #17a689; }
-  /* line 40, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 41, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.orange, button.orange, input[type="submit"].orange {
     background: #e67e22; }
-    /* line 43, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 44, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover {
       background: #d67118; }
-  /* line 48, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 49, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.yellow, button.yellow, input[type="submit"].yellow {
     background: #f1c40f; }
-    /* line 51, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 52, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover {
       background: #f39c12; }
-  /* line 56, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large {
     font-size: 1em; }
-  /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 61, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.no-bg, button.no-bg, input[type="submit"].no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
-    /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 66, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red {
       color: #e74c3c; }
-      /* line 68, ../../app/assets/css/lib/modules/_buttons.scss */
+      /* line 69, ../../app/assets/css/lib/modules/_buttons.scss */
       a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover {
         color: #c0392b; }
-    /* line 73, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 74, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i {
       position: relative;
       top: 0; }
-  /* line 79, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 80, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn i, button i, input[type="submit"] i {
     position: relative;
     top: 1px; }
@@ -242,7 +245,7 @@ form.inline {
 */
 /* line 7, ../../app/assets/css/lib/pages/_index.scss */
 #index .hero {
-  background: #d65548;
+  background: #e9594a;
   color: #fefefe;
   padding: 4em 0;
   margin-bottom: 4em;
@@ -481,33 +484,8 @@ form.inline {
 */
 /* line 7, ../../app/assets/css/lib/pages/_project.scss */
 #project > header {
-  background: #ecf0f1; }
+  background: #f5f7f7; }
   /* line 10, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header hgroup {
-    width: 83.19328%;
-    float: left;
-    margin-right: 0.84034%;
-    display: inline; }
-    /* line 13, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header hgroup h2 {
-      font-size: 1.35em;
-      margin-bottom: 1rem; }
-    /* line 18, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header hgroup img {
-      max-width: 10%; }
-  /* line 23, ../../app/assets/css/lib/pages/_project.scss */
-  #project > header aside {
-    width: 15.96639%;
-    float: right;
-    margin-right: 0;
-    #margin-left: -0.5em;
-    display: inline; }
-    /* line 26, ../../app/assets/css/lib/pages/_project.scss */
-    #project > header aside a {
-      float: right;
-      position: relative;
-      bottom: 0.5rem; }
-  /* line 33, ../../app/assets/css/lib/pages/_project.scss */
   #project > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -516,18 +494,48 @@ form.inline {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem 0; }
+    padding: 2.5em 0; }
     /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project > header .inner:after {
       content: "";
       display: table;
       clear: both; }
-/* line 40, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 16, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup {
+    width: 74.78992%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 19, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup h2 {
+      font-family: "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif;
+      margin-bottom: 1rem; }
+    /* line 24, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 3px solid #ecf0f1;
+      max-width: 4%; }
+      /* line 30, ../../app/assets/css/lib/pages/_project.scss */
+      #project > header hgroup img:hover {
+        border: 3px solid #e0e7e8; }
+  /* line 36, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header aside {
+    width: 24.36975%;
+    float: right;
+    margin-right: 0;
+    #margin-left: -0.5em;
+    display: inline;
+    text-align: right; }
+/* line 43, ../../app/assets/css/lib/pages/_project.scss */
 #project .description {
-  background: #f2f5f5;
+  background: #f9fafb;
   margin-bottom: 2rem;
   padding: 2rem 0; }
-  /* line 45, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 48, ../../app/assets/css/lib/pages/_project.scss */
   #project .description .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -541,14 +549,14 @@ form.inline {
       content: "";
       display: table;
       clear: both; }
-    /* line 48, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 51, ../../app/assets/css/lib/pages/_project.scss */
     #project .description .inner .text {
       width: 74.78992%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       padding-right: 25.21008%; }
-/* line 55, ../../app/assets/css/lib/pages/_project.scss */
+/* line 58, ../../app/assets/css/lib/pages/_project.scss */
 #project > section {
   *zoom: 1;
   max-width: 59.5em;
@@ -564,7 +572,7 @@ form.inline {
     content: "";
     display: table;
     clear: both; }
-  /* line 62, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 65, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes header, #project > section .sources header {
     *zoom: 1;
     max-width: 59.5em;
@@ -580,13 +588,13 @@ form.inline {
       content: "";
       display: table;
       clear: both; }
-    /* line 68, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 71, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header hgroup, #project > section .sources header hgroup {
       width: 83.19328%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-    /* line 72, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 75, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header aside, #project > section .sources header aside {
       width: 15.96639%;
       float: right;
@@ -595,13 +603,13 @@ form.inline {
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
-  /* line 81, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 84, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes {
     width: 57.98319%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 84, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 87, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -609,44 +617,44 @@ form.inline {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 89, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 92, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 93, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 96, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #ecf0f1; }
-        /* line 96, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 99, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-        /* line 100, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 103, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header hgroup {
           padding-bottom: 0.5em; }
-        /* line 104, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 107, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header a.btn, #project > section .notes article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 110, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 113, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
-          /* line 115, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 118, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
             color: #1abc9c; }
-          /* line 121, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 124, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
             color: #e74c3c; }
-      /* line 128, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 131, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 133, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 136, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-  /* line 142, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 145, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;
@@ -721,7 +729,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 43, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.25em;
-  text-shadow: 0 2px 0 rgba(214, 44, 26, 0.5);
+  text-shadow: 0 1px 0 rgba(214, 44, 26, 0.2);
   text-transform: none; }
 
 /* line 49, ../../app/assets/css/application.scss */
@@ -763,52 +771,50 @@ strong {
 */
 /* line 77, ../../app/assets/css/application.scss */
 body > header {
-  background: #e74c3c; }
-  /* line 80, ../../app/assets/css/application.scss */
+  background: #e74c3c;
+  border-bottom: 2px solid #ecf0f1; }
+  /* line 81, ../../app/assets/css/application.scss */
   body > header a {
-    color: #fbfcfc; }
-    /* line 83, ../../app/assets/css/application.scss */
+    color: #fefefe; }
+    /* line 85, ../../app/assets/css/application.scss */
     body > header a:hover {
-      color: #ecf0f1; }
-  /* line 88, ../../app/assets/css/application.scss */
+      color: #e74c3c; }
+  /* line 89, ../../app/assets/css/application.scss */
   body > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 92, ../../app/assets/css/application.scss */
+  /* line 93, ../../app/assets/css/application.scss */
   body > header nav {
     font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
-    /* line 95, ../../app/assets/css/application.scss */
-    body > header nav li {
-      text-shadow: 0 1px 0 rgba(214, 44, 26, 0.5); }
-    /* line 100, ../../app/assets/css/application.scss */
+    /* line 101, ../../app/assets/css/application.scss */
     body > header nav section:first-child {
       width: 41.17647%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       margin-top: 0.35em; }
-      /* line 105, ../../app/assets/css/application.scss */
+      /* line 106, ../../app/assets/css/application.scss */
       body > header nav section:first-child li {
         padding-right: 2em; }
-    /* line 110, ../../app/assets/css/application.scss */
+    /* line 111, ../../app/assets/css/application.scss */
     body > header nav section:last-child {
       width: 32.77311%;
       float: right;
       margin-right: 0;
       #margin-left: -0.5em;
       display: inline; }
-      /* line 113, ../../app/assets/css/application.scss */
+      /* line 114, ../../app/assets/css/application.scss */
       body > header nav section:last-child ul {
         float: right; }
-        /* line 116, ../../app/assets/css/application.scss */
+        /* line 117, ../../app/assets/css/application.scss */
         body > header nav section:last-child ul li {
           padding-left: 0.75em; }
-    /* line 122, ../../app/assets/css/application.scss */
+    /* line 123, ../../app/assets/css/application.scss */
     body > header nav section li {
       display: inline-block; }
-  /* line 128, ../../app/assets/css/application.scss */
+  /* line 129, ../../app/assets/css/application.scss */
   body > header .contain {
     padding: 1.5em 0; }
 
@@ -818,7 +824,7 @@ body > header {
 /*
 	IV. Footer
 */
-/* line 147, ../../app/assets/css/application.scss */
+/* line 148, ../../app/assets/css/application.scss */
 body > footer {
   background: #ecf0f1;
   color: #b1c2c6;
@@ -826,12 +832,12 @@ body > footer {
   margin-top: 6em;
   padding: 4em 0;
   text-align: center; }
-  /* line 155, ../../app/assets/css/application.scss */
+  /* line 156, ../../app/assets/css/application.scss */
   body > footer ul {
     margin-bottom: 1em; }
-    /* line 158, ../../app/assets/css/application.scss */
+    /* line 159, ../../app/assets/css/application.scss */
     body > footer ul li {
       display: inline-block; }
-      /* line 161, ../../app/assets/css/application.scss */
+      /* line 162, ../../app/assets/css/application.scss */
       body > footer ul li + li {
         padding-left: 1em; }
