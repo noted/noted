@@ -13,4 +13,6 @@ class Noted < Padrino::Application
 
     BetterErrors.application_root = PADRINO_ROOT
   end
+
+  Dir[Padrino.root("app/mutations/**/*.rb")].each {|f| require f }
 end
