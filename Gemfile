@@ -21,6 +21,8 @@ gem 'redis'
 gem 'bcrypt-ruby'
 gem 'base32-crockford', require: 'base32/crockford'
 
+gem 'mutations'
+
 gem 'haml'
 
 gem 'maruku'
