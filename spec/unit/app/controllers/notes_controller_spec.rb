@@ -5,14 +5,6 @@ describe "Notes" do
   let(:project) { note.project }
   let(:user)    { project.user }
 
-  describe "GET /:user/:project/notes" do
-    before do
-      get "/#{user.username}/#{project.permalink}/notes"
-    end
-
-    it { response.should be_ok }
-  end
-
   describe "POST /notes/create" do
     before do
       post "/notes/create", :project => project.id, :author => user.id
@@ -20,7 +12,7 @@ describe "Notes" do
 
     describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("#{project.url}/notes") }
+      it { response.location.should include("#{project.url}") }
     end
 
     describe "database" do
@@ -45,7 +37,7 @@ describe "Notes" do
 
     describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/#{project.permalink}/notes") }
+      it { response.location.should include("/#{user.username}/#{project.permalink}") }
     end
 
     describe "database" do
@@ -61,7 +53,7 @@ describe "Notes" do
 
     describe "redirects" do
       it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/#{project.permalink}/notes")}
+      it { response.location.should include("/#{user.username}/#{project.permalink}")}
     end
 
     describe "database" do
