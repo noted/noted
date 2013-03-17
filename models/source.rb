@@ -1,9 +1,7 @@
 class Source
   include MongoMapper::Document
 
-  key :data, Hash
-  key :markdown, String
-  key :html, String
+  key :binary, Binary
   key :permalink, String
 
   timestamps!
@@ -14,14 +12,19 @@ class Source
   after_save :cite!
   after_save :permalink!
 
+  def citation=(obj)
+    self.binary = Marshal::dump(obj)
+  end
+
+  def citation
+    Marshal::load(self.binary.to_s)
+  end
+
   def url
     "#{self.project.url}/sources/#{self.permalink}"
   end
 
   private
-
-  def cite!
-  end
 
   def permalink!
     self.permalink = Base32::Crockford.encode(Source.count + 1)
