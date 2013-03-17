@@ -40,7 +40,7 @@
                         %i.ss-icon trash
             %section
               .inner.text
-                = truncate_words(note.body, :length => 40)
+                = truncate_words(note.html, :length => 40)
             %footer
               .inner
                 %p= note.updated_at

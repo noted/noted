@@ -19,6 +19,10 @@ class Note
     "#{self.project.url}/notes/#{self.permalink}"
   end
 
+  def html
+    Maruku.new(self.body).to_html
+  end
+
   private
 
   def permalink!

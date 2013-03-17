@@ -4,7 +4,7 @@
 */
 
 section#note {
-	form {
+	.textbox {
 		@include border-radius(2px);
 
 		border: 2px solid $grey;
@@ -29,11 +29,28 @@ section#note {
 			textarea {
 				padding: 1rem;
 				width: 95%;
+				max-width: 95%;
+				min-height: 20em;
 			}
 		}
 	}
 
 	footer {
 		margin-top: 1em;
+
+		p {
+			text-align: right;
+		}
+
+		a.btn {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	.text {
+		margin-top: 4em;
+		padding-top: 4em;
+		border-top: 1px solid $grey;
 	}
 }
