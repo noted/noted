@@ -485,8 +485,8 @@ form.inline {
 */
 /* line 7, ../../app/assets/css/lib/pages/_project.scss */
 #project > header {
-  background: #f5f7f7; }
-  /* line 10, ../../app/assets/css/lib/pages/_project.scss */
+  border-bottom: 5px solid #f5f7f7; }
+  /* line 11, ../../app/assets/css/lib/pages/_project.scss */
   #project > header .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -501,17 +501,17 @@ form.inline {
       content: "";
       display: table;
       clear: both; }
-  /* line 16, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 17, ../../app/assets/css/lib/pages/_project.scss */
   #project > header hgroup {
     width: 74.78992%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 19, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 20, ../../app/assets/css/lib/pages/_project.scss */
     #project > header hgroup h2 {
       font-family: "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif;
       margin-bottom: 1rem; }
-    /* line 24, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 25, ../../app/assets/css/lib/pages/_project.scss */
     #project > header hgroup img {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -520,10 +520,10 @@ form.inline {
       border-radius: 50%;
       border: 3px solid #ecf0f1;
       max-width: 4%; }
-      /* line 30, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 31, ../../app/assets/css/lib/pages/_project.scss */
       #project > header hgroup img:hover {
         border: 3px solid #e0e7e8; }
-  /* line 36, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 37, ../../app/assets/css/lib/pages/_project.scss */
   #project > header aside {
     width: 24.36975%;
     float: right;
@@ -531,12 +531,12 @@ form.inline {
     #margin-left: -0.5em;
     display: inline;
     text-align: right; }
-/* line 43, ../../app/assets/css/lib/pages/_project.scss */
+/* line 44, ../../app/assets/css/lib/pages/_project.scss */
 #project .description {
-  background: #f9fafb;
+  background: #f5f7f7;
   margin-bottom: 2rem;
   padding: 2rem 0; }
-  /* line 48, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 49, ../../app/assets/css/lib/pages/_project.scss */
   #project .description .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -550,14 +550,14 @@ form.inline {
       content: "";
       display: table;
       clear: both; }
-    /* line 51, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 52, ../../app/assets/css/lib/pages/_project.scss */
     #project .description .inner .text {
       width: 74.78992%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       padding-right: 25.21008%; }
-/* line 58, ../../app/assets/css/lib/pages/_project.scss */
+/* line 59, ../../app/assets/css/lib/pages/_project.scss */
 #project > section {
   *zoom: 1;
   max-width: 59.5em;
@@ -573,7 +573,7 @@ form.inline {
     content: "";
     display: table;
     clear: both; }
-  /* line 65, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 66, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes header, #project > section .sources header {
     *zoom: 1;
     max-width: 59.5em;
@@ -589,13 +589,13 @@ form.inline {
       content: "";
       display: table;
       clear: both; }
-    /* line 71, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 72, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header hgroup, #project > section .sources header hgroup {
       width: 83.19328%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-    /* line 75, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 76, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header aside, #project > section .sources header aside {
       width: 15.96639%;
       float: right;
@@ -604,13 +604,13 @@ form.inline {
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
-  /* line 84, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 85, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes {
     width: 57.98319%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 87, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 88, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -618,44 +618,44 @@ form.inline {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 92, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 93, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 96, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 97, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #ecf0f1; }
-        /* line 99, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 100, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-        /* line 103, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 104, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header hgroup {
           padding-bottom: 0.5em; }
-        /* line 107, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 108, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header a.btn, #project > section .notes article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 113, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 114, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
-          /* line 118, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 119, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
             color: #1abc9c; }
-          /* line 124, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 125, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
             color: #e74c3c; }
-      /* line 131, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 132, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 136, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 137, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-  /* line 145, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 146, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;
@@ -791,9 +791,9 @@ body > header {
   /* line 81, ../../app/assets/css/application.scss */
   body > header a {
     color: #fefefe; }
-    /* line 85, ../../app/assets/css/application.scss */
+    /* line 84, ../../app/assets/css/application.scss */
     body > header a:hover {
-      color: #e74c3c; }
+      color: #ecf0f1; }
   /* line 89, ../../app/assets/css/application.scss */
   body > header hgroup {
     width: 24.36975%;
