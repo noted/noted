@@ -28,14 +28,14 @@ Noted.controllers :projects do
 
   get :edit, :map => "/:user/:project/settings" do
     @user = User.find_by_username(params[:user])
-    @project = @user.projects.find_by_permalink(params[:permalink])
+    @project = @user.projects.find_by_permalink(params[:project])
 
     render 'projects/edit'
   end
 
   patch :update do
     p = Project.find(params[:id])
-    p.updater = User.find(params[:author])
+    #p.updator = User.find(params[:author])
 
     if p.update_attributes(params[:project])
       redirect url(:projects, :view, :user => p.user.username, :project => p.permalink)

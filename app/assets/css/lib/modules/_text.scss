@@ -7,8 +7,10 @@
     font: 16px/1.75em $serif;
 
     p {
-        &:first-child {
-            text-indent: 1em;
-        }
-    }
+        text-indent: 1em;
+
+		&:first-child {
+			text-indent: 0 !important;
+		}
+	}
 }

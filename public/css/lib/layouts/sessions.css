@@ -99,9 +99,6 @@ a.btn, button, input[type="submit"] {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  -webkit-box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
-  -moz-box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
-  box-shadow: rgba(51, 51, 51, 0.5) 0 1px 3px -2px;
   background: #b1c2c6;
   border: none;
   color: #fefefe;
@@ -235,9 +232,12 @@ form.inline {
 /* line 6, ../../../../app/assets/css/lib/modules/_text.scss */
 .text {
   font: 16px/1.75em "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif; }
-  /* line 10, ../../../../app/assets/css/lib/modules/_text.scss */
-  .text p:first-child {
+  /* line 9, ../../../../app/assets/css/lib/modules/_text.scss */
+  .text p {
     text-indent: 1em; }
+    /* line 12, ../../../../app/assets/css/lib/modules/_text.scss */
+    .text p:first-child {
+      text-indent: 0 !important; }
 
 /*
 	Noted.
@@ -372,20 +372,21 @@ form.inline {
       margin-top: 1em; }
       /* line 32, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > aside hgroup ul {
+        margin-bottom: 1em;
         font-size: 0.85rem; }
-        /* line 36, ../../../../app/assets/css/lib/pages/_user.scss */
+        /* line 37, ../../../../app/assets/css/lib/pages/_user.scss */
         #user > aside hgroup ul li i {
           margin-right: 2px;
           position: relative;
           top: 2px; }
-  /* line 46, ../../../../app/assets/css/lib/pages/_user.scss */
+  /* line 47, ../../../../app/assets/css/lib/pages/_user.scss */
   #user > section {
     width: 74.78992%;
     float: right;
     margin-right: 0;
     #margin-left: -0.5em;
     display: inline; }
-    /* line 49, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 50, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > section article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -393,29 +394,29 @@ form.inline {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 54, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 55, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article + article {
         margin-top: 1.5em; }
-      /* line 58, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 59, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article header {
         background: #ecf0f1; }
-        /* line 61, ../../../../app/assets/css/lib/pages/_user.scss */
+        /* line 62, ../../../../app/assets/css/lib/pages/_user.scss */
         #user > section article header .inner {
           padding: 0.5em 0.65em; }
-      /* line 66, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 67, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 71, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 72, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-    /* line 79, ../../../../app/assets/css/lib/pages/_user.scss */
+    /* line 80, ../../../../app/assets/css/lib/pages/_user.scss */
     #user > section .empty {
       font-size: 1.25em; }
-      /* line 82, ../../../../app/assets/css/lib/pages/_user.scss */
+      /* line 83, ../../../../app/assets/css/lib/pages/_user.scss */
       #user > section .empty p.go {
         font-size: 1rem;
         margin-top: 1rem; }
@@ -667,7 +668,7 @@ form.inline {
 		file: css/pages/_note.scss
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_note.scss */
-section#note form {
+section#note .textbox {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -676,22 +677,24 @@ section#note form {
   border: 2px solid #ecf0f1;
   padding: 0; }
   /* line 13, ../../../../app/assets/css/lib/pages/_note.scss */
-  section#note form input, section#note form textarea {
+  section#note .textbox input, section#note .textbox textarea {
     border: none;
     margin: 0;
     padding: 0; }
   /* line 19, ../../../../app/assets/css/lib/pages/_note.scss */
-  section#note form header {
+  section#note .textbox header {
     border-bottom: 2px solid #ecf0f1; }
     /* line 22, ../../../../app/assets/css/lib/pages/_note.scss */
-    section#note form header input {
+    section#note .textbox header input {
       padding: 1rem;
       width: 95%; }
   /* line 29, ../../../../app/assets/css/lib/pages/_note.scss */
-  section#note form section textarea {
+  section#note .textbox section textarea {
     padding: 1rem;
-    width: 95%; }
-/* line 36, ../../../../app/assets/css/lib/pages/_note.scss */
+    width: 95%;
+    max-width: 95%;
+    min-height: 20em; }
+/* line 38, ../../../../app/assets/css/lib/pages/_note.scss */
 section#note footer {
   margin-top: 1em; }
 

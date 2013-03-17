@@ -1,0 +1,13 @@
+#project
+  = partial 'projects/header', :locals => { :project => @project, :user => @user }
+  %section
+    - form_tag url(:projects, :update), :method => "patch" do
+      %p
+        = label_tag "project[title]"
+        = text_field_tag "project[title]", :value => @project.title
+      %p
+        = label_tag "project[description]"
+        = text_area_tag "project[description]", :value => @project.description
+      %footer
+        = hidden_field_tag :id, :value => @project.id
+        = submit_tag "Save", :class => "btn primary"

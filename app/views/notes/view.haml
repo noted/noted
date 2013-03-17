@@ -1,14 +1,21 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#note
+    %a{:href => @project.url}
+      = "&larr; Back to &#8220;#{@project.title}&#8221;"
     - form_tag url(:notes, :update), :method => "patch", :class => "note" do
-      = hidden_field_tag :id, :value => @note.id
-      = hidden_field_tag :author, :value => @user.id
-      %header
-        = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
-      %section
-        = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
-    %footer
-      %p
-        %a.btn.orange{:href => ""} Cancel
-        %button.primary{:type => "submit"} Save
+      .textbox
+        = hidden_field_tag :id, :value => @note.id
+        = hidden_field_tag :author, :value => @user.id
+        %header
+          = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
+        %section
+          = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
+      %footer
+        %p
+          %button.primary{:type => "submit"}
+            %i.ss-icon check
+          %a.btn.orange{:href => ""}
+            %i.ss-icon close
+    .text
+      = @note.html
