@@ -78,14 +78,14 @@ body > header {
 	background: $red;
 	border-bottom: 2px solid $grey;
 
-			a {
-				color: $base;
-				//color: $dark-deep-grey;
+	a {
+		color: $base;
 
-				&:hover {
-					color: $red;
-				}
-			}
+		&:hover {
+			color: $grey;
+		}
+	}
+
 	hgroup {
 		@include span-columns(6);
 	}
