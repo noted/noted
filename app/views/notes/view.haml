@@ -1,8 +1,6 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#note
-    %a{:href => @project.url}
-      = "&larr; Back to &#8220;#{@project.title}&#8221;"
     - form_tag url(:notes, :update), :method => "patch", :class => "note" do
       .textbox
         = hidden_field_tag :id, :value => @note.id
