@@ -4,14 +4,13 @@ Noted.controllers :users do
   end
 
   post :create do
-    u = User.new(params[:user])
-    u.password = params[:password]
+    u = UserCreate.run(params[:user])
 
-    if u.save
-      login(u)
+    if u.success?
+      login(u.result)
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = "Something has gone awry. #{u.errors.messages}"
       redirect url(:users, :new)
     end
   end
