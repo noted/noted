@@ -9,7 +9,6 @@ class Source
 
   belongs_to :project
 
-  after_save :cite!
   after_save :permalink!
 
   def citation=(obj)
