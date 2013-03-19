@@ -1,4 +1,3 @@
-# A command to create a new User.
 class User
   class Create < Mutations::Command
     required do

@@ -1,4 +1,3 @@
-# Create a Source with included Citation.
 class Source
   class Create < Mutations::Command
     required do
