@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SourceCreate do
+describe Source::Create do
   let(:project) { create(:project) }
   let(:user)    { project.user }
 
@@ -23,7 +23,7 @@ describe SourceCreate do
   end
 
   let(:source) do
-    SourceCreate.run({
+    Source::Create.run({
       :author => user.id,
       :project => project.id,
       :attributes => attributes

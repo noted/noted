@@ -1,20 +1,22 @@
 # Create a Source with included Citation.
-class SourceCreate < Mutations::Command
-  required do
-    model :attributes, class: Hash
-    model :author, class: BSON::ObjectId
-    model :project, class: BSON::ObjectId
-  end
+class Source
+  class Create < Mutations::Command
+    required do
+      model :attributes, class: Hash
+      model :author, class: BSON::ObjectId
+      model :project, class: BSON::ObjectId
+    end
 
-  def execute
-    s = Source.new
-    s.citation = Scholar::Citation.new(attributes)
-    s.creator = User.find(author)
-    s.save
+    def execute
+      s = Source.new
+      s.citation = Scholar::Citation.new(attributes)
+      s.creator = User.find(author)
+      s.save
 
-    p = Project.find(project)
-    p.sources << s
+      p = Project.find(project)
+      p.sources << s
 
-    s
+      s
+    end
   end
 end

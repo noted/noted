@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe UserCreate do
+describe User::Update do
   let(:user) do
     create(:user)
   end
 
   let(:action) do
-    UserUpdate.run({:id => user.id, :name => "Neil deGrasse Tyson"})
+    User::Update.run({:id => user.id, :name => "Neil deGrasse Tyson"})
   end
 
   before do
