@@ -5,8 +5,7 @@ class Project
     end
 
     def execute
-      p = Project.find(project)
-      p.destroy
+      p = Project.find(project).destroy
     end
   end
 end

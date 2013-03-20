@@ -1,7 +1,7 @@
 class User
   class Update < Mutations::Command
     required do
-      model :id, class: BSON::ObjectId
+      model :user, class: BSON::ObjectId
     end
 
     optional do
@@ -13,8 +13,9 @@ class User
     end
 
     def execute
-      u = User.find(self.inputs[:id])
-      u.update_attributes(self.inputs)
+      u = User.find(user)
+
+      u.update_attributes(inputs)
 
       u
     end

@@ -1,19 +1,21 @@
 class Source
   class Create < Mutations::Command
     required do
-      model :attributes, class: Hash
-      model :author, class: BSON::ObjectId
       model :project, class: BSON::ObjectId
+      model :author, class: BSON::ObjectId
+
+      model :attributes, class: Hash
     end
 
     def execute
-      s = Source.new
-      s.citation = Scholar::Citation.new(attributes)
-      s.creator = User.find(author)
-      s.save
+      s = Source.new(
+        :citation => Scholar::Citation.new(attributes),
+        :creator => User.find(author)
+      )
 
-      p = Project.find(project)
-      p.sources << s
+      Project.find(project).sources << s
+
+      s.save
 
       s
     end

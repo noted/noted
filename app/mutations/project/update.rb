@@ -13,12 +13,13 @@ class Project
 
     def execute
       p = Project.find(project)
+
       p.update_attributes(
         :title => title,
-        :description => description
-      )
+        :description => description,
 
-      p.updater = User.find(author)
+        :updater => User.find(author)
+      )
 
       p.save
 

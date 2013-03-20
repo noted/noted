@@ -6,7 +6,10 @@ describe User::Update do
   end
 
   let(:action) do
-    User::Update.run({:id => user.id, :name => "Neil deGrasse Tyson"})
+    User::Update.run({
+      :user => user.id,
+      :name => "Neil deGrasse Tyson"
+    })
   end
 
   before do

@@ -9,6 +9,7 @@ class Source
       s = Source.find(source)
 
       s.project.updater = User.find(author)
+
       s.destroy
     end
   end

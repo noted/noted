@@ -14,14 +14,14 @@ class User
     def execute
       u = User.create!(inputs)
 
-      if self.institution_present?
-        i = Institution.where(:code => self.institution).first
+      if institution_present?
+        i = Institution.where(:code => institution).first
         i.users << u
       end
 
       u.save
 
-      return u
+      u
     end
   end
 end

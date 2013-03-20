@@ -8,7 +8,10 @@ class Source
 
     def execute
       s = Source.find(source)
-      s.citation = Scholar::Citation.new(attributes)
+
+      s.update_attributes(
+        :citation => Scholar::Citation.new(attributes),
+      )
 
       s.updater = User.find(author)
       s.project.updater = User.find(author)

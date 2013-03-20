@@ -30,10 +30,6 @@ describe Source::Create do
     })
   end
 
-  let(:citation) do
-    "Green, John. <em>The Fault in Our Stars</em>. New York: Penguin, 2012. Print."
-  end
-
   before do
     user.reload
     project.reload
@@ -44,5 +40,5 @@ describe Source::Create do
   it { source.result.creator.should eql user }
   it { source.result.project.should eql project }
   it { source.result.citation.should be_an_instance_of Scholar::Citation }
-  it { source.result.citation.html.should eql citation }
+  it { source.result.citation.html.should eql "Green, John. <em>The Fault in Our Stars</em>. New York: Penguin, 2012. Print." }
 end

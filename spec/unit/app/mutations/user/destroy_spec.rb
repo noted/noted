@@ -6,7 +6,7 @@ describe User::Destroy do
   end
 
   let(:action) do
-    User::Destroy.run({:id => user.id})
+    User::Destroy.run({:user => user.id})
   end
 
   it { action.success?.should be_true }
