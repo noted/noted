@@ -1,21 +1,23 @@
 class User
   class Update < Mutations::Command
     required do
-      model :user, class: BSON::ObjectId
+      model :id, class: BSON::ObjectId
     end
 
     optional do
-      string :username
-      string :email
-      string :name
-      string :location
-      string :website
+      hash :user do
+        string :username
+        string :email
+        string :name
+        string :location
+        string :website
+      end
     end
 
     def execute
-      u = User.find(user)
+      u = User.find(id)
 
-      u.update_attributes(inputs)
+      u.update_attributes(user)
 
       u
     end

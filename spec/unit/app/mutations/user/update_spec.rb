@@ -7,8 +7,10 @@ describe User::Update do
 
   let(:action) do
     User::Update.run({
-      :user => user.id,
-      :name => "Neil deGrasse Tyson"
+      :id => user.id,
+      :user => {
+        :name => "Neil deGrasse Tyson"
+      }
     })
   end
 
