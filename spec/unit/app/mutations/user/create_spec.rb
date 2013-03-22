@@ -3,10 +3,12 @@ require 'spec_helper'
 describe User::Create do
   let(:user) do
     User::Create.run({
-      :name => "Carl Sagan",
-      :email => "carl@sagan.org",
-      :username => "carl",
-      :password => "foobar"
+      :user => {
+        :name => "Carl Sagan",
+        :email => "carl@sagan.org",
+        :username => "carl",
+        :password => "foobar"
+      }
     })
   end
 

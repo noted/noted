@@ -1,20 +1,24 @@
 class User
   class Create < Mutations::Command
     required do
-      string :username
-      string :email
-      string :name
-      string :password
-    end
+      hash :user do
+        required do
+          string :username
+          string :email
+          string :name
+          string :password
+        end
 
-    optional do
-      string :institution
+        optional do
+          string :institution
+        end
+      end
     end
 
     def execute
-      u = User.create!(inputs)
+      u = User.create!(user)
 
-      if institution_present?
+      unless user[:institution].blank?
         i = Institution.where(:code => institution).first
         i.users << u
       end

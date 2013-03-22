@@ -1,11 +1,15 @@
 class User
   class Destroy < Mutations::Command
     required do
-      model :id, class: BSON::ObjectId
+      hash :user do
+        required do
+          model :id, class: BSON::ObjectId
+        end
+      end
     end
 
     def execute
-      User.find(id).destroy
+      User.find(user[:id]).destroy
     end
   end
 end
