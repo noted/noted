@@ -1,11 +1,11 @@
 class Note
   class Update < Mutations::Command
     required do
-      model :author, class: BSON::ObjectId
+      string :author
 
       hash :note do
         required do
-          model :id, class: BSON::ObjectId
+          string :id
           string :title
         end
 

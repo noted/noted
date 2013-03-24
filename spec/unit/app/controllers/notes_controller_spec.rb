@@ -10,19 +10,15 @@ describe "Notes" do
       post "/notes/create", :project => project.id, :author => user.id
     end
 
-    describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should include("#{project.url}") }
-    end
+    it { response.should be_redirect }
+    it { response.location.should include("#{project.url}") }
 
-    describe "database" do
-      it { project.notes.should_not be_blank }
-    end
+    it { project.notes.should_not be_blank }
   end
 
   describe "GET /:user/:project/notes/:note" do
     before do
-      get "/#{user.username}/#{project.permalink}/notes/#{note.permalink}"
+      get note.url
     end
 
     it { response.should be_ok }
@@ -30,34 +26,28 @@ describe "Notes" do
 
   describe "PATCH /notes/update" do
     before do
-      patch "/notes/update", :id => note.id, :author => user.id, :note => { :title => "Natural History" }
+      patch "/notes/update", :author => user.id, :note => { :id => note.id, :title => "Natural History" }
 
       note.reload
     end
 
-    describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/#{project.permalink}") }
-    end
+    it { response.should be_redirect }
+    it { response.location.should include("/#{user.username}/#{project.permalink}") }
 
-    describe "database" do
-      it { note.title.should eql("Natural History") }
-      it { note.updater.should eql(user) }
-    end
+    it { note.title.should eql("Natural History") }
+    it { note.updater.should eql(user) }
   end
 
   describe "DELETE /notes/destroy" do
+    let(:id) { note.id }
+
     before do
-      delete "/notes/destroy", :id => note.id
+      delete "/notes/destroy", :author => user.id, :note => { :id => note.id }
     end
 
-    describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/#{project.permalink}")}
-    end
+    it { response.should be_redirect }
+    it { response.location.should include("/#{user.username}/#{project.permalink}")}
 
-    describe "database" do
-      it { Note.find_by_title("Alpha Centauri").should be_nil }
-    end
+    it { Note.find(id).should be_nil }
   end
 end

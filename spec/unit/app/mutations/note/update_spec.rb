@@ -6,9 +6,9 @@ describe Note::Update do
 
   let(:action) do
     Note::Update.run({
-      :author => user.id,
+      :author => user.id.to_s,
       :note => {
-        :id => note.id,
+        :id => note.id.to_s,
         :title => "Alpha Centauri",
         :body => "Foo to the bar to the foo."
       }

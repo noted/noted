@@ -6,9 +6,9 @@ describe Note::Update do
 
   let(:action) do
     Note::Destroy.run({
-      :author => user.id,
+      :author => user.id.to_s,
       :note => {
-        :id => note.id
+        :id => note.id.to_s
       }
     })
   end
