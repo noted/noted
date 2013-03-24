@@ -3,19 +3,23 @@ class Project
     required do
       model :user, class: BSON::ObjectId
 
-      string :title
-    end
+      hash :project do
+        required do
+          string :title
+        end
 
-    optional do
-      string :description
+        optional do
+          string :description
+        end
+      end
     end
 
     def execute
       u = User.find(user)
 
       p = Project.new(
-        :title => title,
-        :description => description,
+        :title => project[:title],
+        :description => project[:description],
         :creator => u
       )
 

@@ -5,7 +5,9 @@ describe Project::Destroy do
 
   let(:action) do
     Project::Destroy.run({
-      :project => project.id,
+      :project => {
+        :id => project.id,
+      }
     })
   end
 

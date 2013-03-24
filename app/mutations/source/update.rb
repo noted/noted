@@ -1,10 +1,10 @@
 class Source
   class Update < Mutations::Command
     required do
+      model :author, class: BSON::ObjectId
+
       hash :source do
         model :id, class: BSON::ObjectId
-        model :author, class: BSON::ObjectId
-
         model :attributes, class: Hash
       end
     end
@@ -16,7 +16,7 @@ class Source
         :citation => Scholar::Citation.new(source[:attributes]),
       )
 
-      a = User.find(source[:author])
+      a = User.find(author)
 
       s.updater = a
       s.project.updater = a

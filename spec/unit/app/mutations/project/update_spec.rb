@@ -6,10 +6,12 @@ describe Project::Update do
 
   let(:action) do
     Project::Update.run({
-      :project => project.id,
       :author => user.id,
-      :title => "Hayden Planetarium",
-      :description => "Foobar."
+      :project => {
+        :id => project.id,
+        :title => "Hayden Planetarium",
+        :description => "Foobar."
+      }
     })
   end
 

@@ -7,8 +7,10 @@ describe Project::Create do
     Project::Create.run({
       :user => user.id,
 
-      :title => "The Cosmos",
-      :description => "Foo to the bar to the foo."
+      :project => {
+        :title => "The Cosmos",
+        :description => "Foo to the bar to the foo."
+      }
     })
   end
 

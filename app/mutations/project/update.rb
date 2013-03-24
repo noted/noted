@@ -1,22 +1,26 @@
 class Project
   class Update < Mutations::Command
     required do
-      model :project, class: BSON::ObjectId
       model :author, class: BSON::ObjectId
 
-      string :title
-    end
+      hash :project do
+        required do
+          model :id, class: BSON::ObjectId
+          string :title
+        end
 
-    optional do
-      string :description
+        optional do
+          string :description
+        end
+      end
     end
 
     def execute
-      p = Project.find(project)
+      p = Project.find(project[:id])
 
       p.update_attributes(
-        :title => title,
-        :description => description,
+        :title => project[:title],
+        :description => project[:description],
 
         :updater => User.find(author)
       )

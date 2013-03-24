@@ -1,11 +1,13 @@
 class Project
   class Destroy < Mutations::Command
     required do
-      model :project, class: BSON::ObjectId
+      hash :project do
+        model :id, class: BSON::ObjectId
+      end
     end
 
     def execute
-      p = Project.find(project).destroy
+      p = Project.find(project[:id]).destroy
     end
   end
 end
