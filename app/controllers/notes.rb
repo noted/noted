@@ -15,7 +15,7 @@ Noted.controllers :notes do
     if n.success?
       redirect n.result.url
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = n.errors.message_list
       redirect Project.find(params[:project]).url
     end
   end
@@ -51,7 +51,7 @@ Noted.controllers :notes do
     if n.success?
       redirect project.url
     else
-      flash[:error] = "Somethng has gone awry."
+      flash[:error] = n.errors.message_list
       redirect project.url
     end
   end

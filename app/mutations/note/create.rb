@@ -1,8 +1,8 @@
 class Note
   class Create < Mutations::Command
     required do
-      model :project, class: BSON::ObjectId
-      model :author, class: BSON::ObjectId
+      string :project
+      string :author
     end
 
     def execute
