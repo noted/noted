@@ -24,8 +24,8 @@ describe Source::Create do
 
   let(:source) do
     Source::Create.run({
-      :author => user.id,
-      :project => project.id,
+      :author => user.id.to_s,
+      :project => project.id.to_s,
       :source => {
         :attributes => attributes
       }

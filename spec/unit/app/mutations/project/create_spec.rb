@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Project::Create do
-  let(:user)    { create(:user) }
+  let(:user) { create(:user) }
 
   let(:project) do
     Project::Create.run({
-      :user => user.id,
+      :user => user.id.to_s,
 
       :project => {
         :title => "The Cosmos",

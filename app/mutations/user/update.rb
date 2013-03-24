@@ -3,7 +3,7 @@ class User
     required do
       hash :user do
         required do
-          model :id, class: BSON::ObjectId
+          string :id
         end
 
         optional do

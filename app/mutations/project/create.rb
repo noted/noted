@@ -1,7 +1,7 @@
 class Project
   class Create < Mutations::Command
     required do
-      model :user, class: BSON::ObjectId
+      string :user
 
       hash :project do
         required do

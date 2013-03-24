@@ -6,9 +6,9 @@ describe Project::Update do
 
   let(:action) do
     Project::Update.run({
-      :author => user.id,
+      :author => user.id.to_s,
       :project => {
-        :id => project.id,
+        :id => project.id.to_s,
         :title => "Hayden Planetarium",
         :description => "Foobar."
       }

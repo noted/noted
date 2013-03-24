@@ -1,8 +1,8 @@
 class Source
   class Create < Mutations::Command
     required do
-      model :project, class: BSON::ObjectId
-      model :author, class: BSON::ObjectId
+      string :project
+      string :author
 
       hash :source do
         model :attributes, class: Hash

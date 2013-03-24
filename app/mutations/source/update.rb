@@ -1,10 +1,11 @@
 class Source
   class Update < Mutations::Command
     required do
-      model :author, class: BSON::ObjectId
+      string :author
 
       hash :source do
-        model :id, class: BSON::ObjectId
+        string :id
+
         model :attributes, class: Hash
       end
     end

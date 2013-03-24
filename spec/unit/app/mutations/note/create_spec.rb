@@ -6,8 +6,8 @@ describe Note::Create do
 
   let(:note) do
     Note::Create.run({
-      :project => project.id,
-      :author => user.id,
+      :project => project.id.to_s,
+      :author => user.id.to_s,
     })
   end
 

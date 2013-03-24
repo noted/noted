@@ -2,7 +2,7 @@ class Project
   class Destroy < Mutations::Command
     required do
       hash :project do
-        model :id, class: BSON::ObjectId
+        string :id
       end
     end
 
