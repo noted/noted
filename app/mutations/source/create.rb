@@ -4,12 +4,14 @@ class Source
       model :project, class: BSON::ObjectId
       model :author, class: BSON::ObjectId
 
-      model :attributes, class: Hash
+      hash :source do
+        model :attributes, class: Hash
+      end
     end
 
     def execute
       s = Source.new(
-        :citation => Scholar::Citation.new(attributes),
+        :citation => Scholar::Citation.new(source[:attributes]),
         :creator => User.find(author)
       )
 

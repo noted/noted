@@ -26,7 +26,9 @@ describe Source::Create do
     Source::Create.run({
       :author => user.id,
       :project => project.id,
-      :attributes => attributes
+      :source => {
+        :attributes => attributes
+      }
     })
   end
 

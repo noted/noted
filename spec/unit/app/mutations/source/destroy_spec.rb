@@ -6,8 +6,10 @@ describe Source::Destroy do
 
   let(:action) do
     Source::Destroy.run({
-      :source => source.id,
-      :author => user.id
+      :source => {
+        :id => source.id,
+        :author => user.id
+      }
     })
   end
 

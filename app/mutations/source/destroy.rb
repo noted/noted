@@ -1,14 +1,16 @@
 class Source
   class Destroy < Mutations::Command
     required do
-      model :source, class: BSON::ObjectId
-      model :author, class: BSON::ObjectId
+      hash :source do
+        model :id, class: BSON::ObjectId
+        model :author, class: BSON::ObjectId
+      end
     end
 
     def execute
-      s = Source.find(source)
+      s = Source.find(source[:id])
 
-      s.project.updater = User.find(author)
+      s.project.updater = User.find(source[:author])
 
       s.destroy
     end

@@ -25,9 +25,11 @@ describe Source::Update do
 
   let(:source) do
     Source::Update.run({
-      :source => old.id,
-      :author => user.id,
-      :attributes => attributes
+      :source => {
+        :id => old.id,
+        :author => user.id,
+        :attributes => attributes
+      }
     })
   end
 
