@@ -32,7 +32,7 @@ Noted.controllers :users do
       flash[:notice] = "Your profile has been updated."
       redirect url(:users, :edit)
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = u.errors.message_list
       redirect url(:users, :edit)
     end
   end

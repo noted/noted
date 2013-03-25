@@ -2,6 +2,7 @@
   %header
     %h2 Account
   %section
+    = partial 'partials/flash', :locals => { :flash => flash }
     - form_tag url(:users, :update), :method => "patch" do
       %p
         = label_tag "user[name]"

@@ -1,5 +1,6 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
+  = partial 'partials/flash', :locals => { :flash => flash }
   %section
     - form_tag url(:projects, :update), :method => "patch" do
       %p
@@ -10,4 +11,5 @@
         = text_area_tag "project[description]", :value => @project.description
       %footer
         = hidden_field_tag :"project[id]", :value => @project.id
+        = hidden_field_tag :author, :value => current_user.id
         = submit_tag "Save", :class => "btn primary"

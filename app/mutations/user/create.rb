@@ -16,7 +16,7 @@ class User
     end
 
     def execute
-      u = User.create!(user)
+      u = User.new(user)
 
       unless user[:institution].blank?
         i = Institution.where(:code => institution).first

@@ -42,8 +42,8 @@ Noted.controllers :projects do
     if p.success?
       redirect p.result.url
     else
-      flash[:error] = "Something has gone awry."
-      redirect "#{Project.find(params[:project][:id])}/settings"
+      flash[:error] = p.errors.message
+      redirect "#{Project.find(params[:project][:id]).url}/settings"
     end
   end
 
