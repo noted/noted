@@ -4,13 +4,13 @@ Noted.controllers :projects do
   end
 
   post :create do
-    u = User.find(params[:user])
+    p = Project::Create.run({
+      :user => params[:user],
+      :project => params[:project]
+    })
 
-    p = Project.new(params[:project])
-    p.creator = User.find(params[:author])
-
-    if p.save && u.projects << p
-      redirect url(:projects, :view, :user => u.username, :project => p.permalink)
+    if p.success?
+      redirect p.result.url
     else
       flash[:error] = "Something has gone awry."
       redirect url(:projects, :new)
@@ -34,26 +34,30 @@ Noted.controllers :projects do
   end
 
   patch :update do
-    p = Project.find(params[:id])
-    #p.updator = User.find(params[:author])
+    p = Project::Update.run({
+      :author => params[:author],
+      :project => params[:project]
+    })
 
-    if p.update_attributes(params[:project])
-      redirect url(:projects, :view, :user => p.user.username, :project => p.permalink)
+    if p.success?
+      redirect p.result.url
     else
       flash[:error] = "Something has gone awry."
-      redirect url(:project, :edit, :user => p.user.username, :project => p.permalink)
+      redirect "#{Project.find(params[:project][:id])}/settings"
     end
   end
 
   delete :destroy do
-    p = Project.find(params[:id])
-    u = p.user
+    p = Project::Destroy.run({
+      :author => params[:author],
+      :project => params[:project]
+    })
 
-    if p.destroy
-      redirect url(:users, :view, :user => u.username)
+    if p.success?
+      redirect "/#{User.find(params[:author]).username}"
     else
       flash[:error] = "Something has gone awry."
-      redirect url(:projects, :edit, :user => p.user.username, :project => p.permalink)
+      redirect Project.find(params[:project][:id]).url
     end
   end
 end

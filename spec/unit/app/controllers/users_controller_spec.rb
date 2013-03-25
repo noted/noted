@@ -36,7 +36,7 @@ describe "Users" do
 
   describe "PATCH /users/update" do
     before do
-      patch "/users/update", :id => user.id, :user => { :name => "Neil deGrasse Tyson" }
+      patch "/users/update", :user => { :id => user.id, :name => "Neil deGrasse Tyson" }
 
       user.reload
     end
@@ -53,7 +53,7 @@ describe "Users" do
 
   describe "DELETE /users/destroy" do
     before do
-      delete "/users/destroy", :id => user.id
+      delete "/users/destroy", :user => { :id => user.id }
     end
 
     describe "redirects" do

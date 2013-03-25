@@ -22,10 +22,16 @@ Noted.controllers :sources do
     s = Source.new(params[:source])
     s.creator = User.find(params[:author])
 
-    if s.save && p.sources << s
-      redirect url(:sources, :view, :user => p.user.username, :project => p.permalink, :source => s.permalink)
+    s = Source::Create.run({
+      :project => params[:project],
+      :author => params[:author],
+      :source => params[:source]
+    })
+
+    if s.success?
+      redirect s.result.url
     else
-      redirect url(:sources, :new, :user => p.user.username, :project => p.permalink)
+      redirect Project.find(params[:project]).url
     end
   end
 
@@ -36,27 +42,32 @@ Noted.controllers :sources do
   end
 
   patch :update do
-    s = Source.find(params[:id])
-    s.updater = User.find(params[:author])
+    s = Source::Update({
+      :author => params[:author],
+      :source => params[:source]
+    })
 
-    if s.update_attributes(params[:source])
-      redirect url(:sources, :view, :user => s.project.user.username, :project => s.project.permalink, :source => s.permalink)
+    if s.success?
+      redirect s.result.url
     else
       flash[:error] = "Something has gone awry."
-      redirect url(:sources, :view, :user => s.project.user.username, :project => s.project.permalink, :source => s.permalink)
+      redirect Source.find(params[:source][:id]).url
     end
   end
 
   delete :destroy do
-    s = Source.find(params[:id])
-    p = s.project
-    u = p.user
+    project = Source.find(params[:note][:id]).project
 
-    if s.destroy
-      redirect url(:sources, :index, :user => u.username, :project => p.permalink)
+    s = Source::Destroy.run({
+      :author => params[:author],
+      :source => params[:source]
+    })
+
+    if s.success?
+      redirect project.url
     else
       flash[:error] = "Something has gone awry."
-      redirect url(:sources, :view, :user => u.username, :project => p.permalink, :source => s.permalink)
+      redirect project.url
     end
   end
 end

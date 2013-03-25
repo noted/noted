@@ -4,11 +4,12 @@ Noted.controllers :users do
   end
 
   post :create do
-    u = User.new(params[:user])
-    u.password = params[:password]
+    u = User::Create.run({
+      :user => params[:user]
+    })
 
-    if u.save
-      login(u)
+    if u.success?
+      login(u.result)
       redirect url(:index)
     else
       flash[:error] = "Something has gone awry."
@@ -23,9 +24,11 @@ Noted.controllers :users do
   end
 
   patch :update do
-    u = User.find(params[:id])
+    u = User::Update.run({
+      :user => params[:user]
+    })
 
-    if u.update_attributes(params[:user])
+    if u.success?
       flash[:notice] = "Your profile has been updated."
       redirect url(:users, :edit)
     else
@@ -35,9 +38,11 @@ Noted.controllers :users do
   end
 
   delete :destroy do
-    u = User.find(params[:id])
+    u = User::Destroy.run({
+      :user => params[:user]
+    })
 
-    if u.destroy
+    if u.success?
       flash[:notice] = "We're sorry to see you go."
       redirect url(:index)
     else
