@@ -13,6 +13,8 @@ class Note
 
   belongs_to :project
 
+  many :tags, :as => :taggable
+
   after_create :permalink!
 
   def url
