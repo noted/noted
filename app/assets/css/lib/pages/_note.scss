@@ -33,6 +33,24 @@ section#note {
 				min-height: 20em;
 			}
 		}
+
+		footer {
+			border-top: 2px solid $grey;
+			padding: 0.5em;
+			cursor: text;
+
+			* {
+				display: inline-block;
+			}
+
+			span.btn {
+				font-size: 0.75em;
+			}
+
+			input {
+				width: 15%;
+			}
+		}
 	}
 
 	footer {
@@ -54,3 +72,6 @@ section#note {
 		border-top: 1px solid $grey;
 	}
 }
+
+
+

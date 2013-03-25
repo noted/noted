@@ -10,6 +10,8 @@
           = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
         %section
           = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
+        %footer
+          = text_field_tag :"tags", :class => "tags", :placeholder => ""
       %footer
         %p
           %button.primary{:type => "submit"}

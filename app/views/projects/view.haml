@@ -51,7 +51,22 @@
                 = truncate_words(note.html, :length => 40)
             %footer
               .inner
-                %p= note.updated_at
+                %aside
+                  %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
+                %section
+                  %ul
+                    %li
+                      %a.btn{:href => "#"}
+                        %i.ss-icon tag
+                        foobar
+                    %li
+                      %a.btn{:href => "#"}
+                        %i.ss-icon tag
+                        foobar
+                    %li
+                      %a.btn{:href => "#"}
+                        %i.ss-icon tag
+                        foobar
     .sources
       %header
         %hgroup

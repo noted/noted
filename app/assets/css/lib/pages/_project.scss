@@ -162,6 +162,35 @@
 					color: darken($grey, 5%);
 					font-size: 0.85em;
 					padding: 0.25em 0.65em;
+
+					.inner {
+						@include clearfix;
+					}
+
+					aside {
+						float: left;
+					}
+
+					section {
+						font-size: 0.85em;
+						float: right;
+						margin: 0;
+						text-align: right;
+
+						ul {
+							li {
+								display: inline-block;
+
+								&:after {
+									//content: ", ";
+								}
+
+								a:before {
+									//content: "#";
+								}
+							}
+						}
+					}
 				}
 			}
 		}
