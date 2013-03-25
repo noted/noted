@@ -5,7 +5,8 @@
 
 #project {
 	& > header {
-		border-bottom: 5px solid lighten($grey, 3%);
+		background: lighten($blue-grey, 3%);
+		border-bottom: 5px solid lighten($dark-blue-grey, 1%);
 
 		.inner {
 			@include container;
@@ -46,7 +47,7 @@
 	}
 
 	.description {
-		background: lighten($grey, 3%);
+		background: lighten($dark-blue-grey, 1%);
 		margin-bottom: 2rem;
 		padding: 2rem 0;
 
