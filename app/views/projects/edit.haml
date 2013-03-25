@@ -9,5 +9,5 @@
         = label_tag "project[description]"
         = text_area_tag "project[description]", :value => @project.description
       %footer
-        = hidden_field_tag :id, :value => @project.id
+        = hidden_field_tag :"project[id]", :value => @project.id
         = submit_tag "Save", :class => "btn primary"

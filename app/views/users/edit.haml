@@ -19,5 +19,5 @@
         = label_tag "user[location]"
         = text_field_tag "user[location]", :value => @user.location
       %footer
-        = hidden_field_tag :id, :value => @user.id
+        = hidden_field_tag :"user[id]", :value => @user.id
         = submit_tag "Save", :class => "btn primary"

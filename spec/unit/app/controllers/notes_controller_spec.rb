@@ -20,7 +20,7 @@ describe "Notes" do
     before do
       get note.url
     end
-    d note.url
+
     it { response.should be_ok }
   end
 
