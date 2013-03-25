@@ -739,20 +739,23 @@ section#note .textbox {
     /* line 46, ../../app/assets/css/lib/pages/_note.scss */
     section#note .textbox footer span.btn {
       font-size: 0.75em; }
-    /* line 50, ../../app/assets/css/lib/pages/_note.scss */
+      /* line 49, ../../app/assets/css/lib/pages/_note.scss */
+      section#note .textbox footer span.btn a:hover {
+        color: #e74c3c; }
+    /* line 54, ../../app/assets/css/lib/pages/_note.scss */
     section#note .textbox footer input {
       width: 15%; }
-/* line 56, ../../app/assets/css/lib/pages/_note.scss */
+/* line 60, ../../app/assets/css/lib/pages/_note.scss */
 section#note footer {
   margin-top: 1em; }
-  /* line 59, ../../app/assets/css/lib/pages/_note.scss */
+  /* line 63, ../../app/assets/css/lib/pages/_note.scss */
   section#note footer p {
     text-align: right; }
-  /* line 63, ../../app/assets/css/lib/pages/_note.scss */
+  /* line 67, ../../app/assets/css/lib/pages/_note.scss */
   section#note footer a.btn {
     position: relative;
     top: 1px; }
-/* line 69, ../../app/assets/css/lib/pages/_note.scss */
+/* line 73, ../../app/assets/css/lib/pages/_note.scss */
 section#note .text {
   margin-top: 4em;
   padding-top: 4em;

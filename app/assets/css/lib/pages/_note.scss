@@ -45,6 +45,10 @@ section#note {
 
 			span.btn {
 				font-size: 0.75em;
+
+				a:hover {
+					color: $red;
+				}
 			}
 
 			input {

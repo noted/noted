@@ -15,7 +15,7 @@
     $("input.tags").autoGrowInput({
       comfortZone: 20,
       minWidth: 200,
-      maxWidth: 960
+      maxWidth: 900
     });
     return $(".textbox footer").click(function() {
       return $(".textbox footer input").focus();
