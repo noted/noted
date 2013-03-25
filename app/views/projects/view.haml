@@ -2,7 +2,13 @@
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   .description
     .inner
-      .text
+      %header
+        %h4
+          %a.expand
+            %i.ss-icon dropdown
+            Description
+
+      .text.hidden
         = @project.description
   %section
     = partial 'partials/flash', :locals => { :flash => flash }

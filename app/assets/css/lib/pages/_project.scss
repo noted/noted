@@ -10,7 +10,7 @@
 		.inner {
 			@include container;
 
-			padding: 2.5em 0;
+			padding: 3em 0;
 		}
 
 		hgroup {
@@ -18,7 +18,7 @@
 
 			h2 {
 				font-family: $serif;
-				margin-bottom: 1rem;
+				//margin-bottom: 1rem;
 			}
 
 			img {
@@ -37,6 +37,11 @@
 			@include span-columns(6 omega);
 
 			text-align: right;
+
+			p {
+				position: relative;
+				bottom: 3px;
+			}
 		}
 	}
 
@@ -48,9 +53,28 @@
 		.inner {
 			@include container;
 
+			i {
+				font-size: 0.75em;
+				margin-right: 0.25em;
+				position: relative;
+			}
+
+			a:hover {
+				cursor: pointer;
+			}
+
 			.text {
 				@include span-columns(18);
 				@include suffix(6);
+
+				&.hidden {
+					display: none;
+				}
+
+				&.display {
+					display: block;
+					margin-top: 1em;
+				}
 			}
 		}
 	}

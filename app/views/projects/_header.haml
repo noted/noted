@@ -3,10 +3,7 @@
     %hgroup
       %h2
         %a{:href => project.url}= project.title
-      %ul
-        %li
-          %a{:href => url(:users, :view, :user => project.user.username)}
-            %img{:src => project.user.gravatar}
+
     %aside
       %p
         %a.btn{:href => "#{project.url}/settings"}
