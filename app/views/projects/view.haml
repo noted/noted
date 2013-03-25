@@ -5,6 +5,7 @@
       .text
         = @project.description
   %section
+    = partial 'partials/flash', :locals => { :flash => flash }
     .notes
       %header
         %hgroup
@@ -35,7 +36,8 @@
                     %a.btn.edit{:href => note.url}
                       %i.ss-icon edit
                     - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
-                      = hidden_field_tag :id, :value => note.id
+                      = hidden_field_tag :author, :value => current_user.id
+                      = hidden_field_tag :"note[id]", :value => note.id
                       %button.trash{:href => ""}
                         %i.ss-icon trash
             %section

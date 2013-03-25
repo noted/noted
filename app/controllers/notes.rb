@@ -7,16 +7,16 @@ Noted.controllers :notes do
   end
 
   post :create do
-    p = Project.find(params[:project])
+    n = Note::Create.run({
+      :project => params[:project],
+      :author => params[:author],
+    })
 
-    n = Note.new(:title => "Untitled")
-    n.creator = User.find(params[:author])
-
-    if n.save && p.notes << n
-      redirect url(:notes, :view, :user => p.user.username, :project => p.permalink, :note => n.permalink)
+    if n.success?
+      redirect n.result.url
     else
-      flash[:error] = "Something has gone awry."
-      redirect p.url
+      flash[:error] = n.errors.message_list
+      redirect Project.find(params[:project]).url
     end
   end
 
@@ -27,29 +27,32 @@ Noted.controllers :notes do
   end
 
   patch :update do
-    n = Note.find(params[:id])
-    n.updater = User.find(params[:author])
+    n = Note::Update.run({
+      :author => params[:author],
+      :note => params[:note]
+    })
 
-    p = n.project
-
-    if n.update_attributes(params[:note])
-      redirect p.url
+    if n.success?
+      redirect n.result.project.url
     else
-      flash[:error] = "Somethng has gone awry."
-      redirect n.url
+      flash[:error] = n.errors.message_list.to_s
+      redirect Note.find(params[:note][:id]).url
     end
   end
 
   delete :destroy do
-    n = Note.find(params[:id])
-    p = n.project
-    u = p.user
+    project = Note.find(params[:note][:id]).project
 
-    if n.destroy
-      redirect p.url
+    n = Note::Destroy.run({
+      :author => params[:author],
+      :note => params[:note]
+    })
+
+    if n.success?
+      redirect project.url
     else
-      flash[:error] = "Somethng has gone awry."
-      redirect url(:notes, :view, :user => u.username, :project => p.permalink)
+      flash[:error] = n.errors.message_list
+      redirect project.url
     end
   end
 end

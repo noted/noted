@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/noted/scholar.git
+  revision: 231a27aa4358feccd21d50a318426173234653c7
+  specs:
+    scholar (0.1.0)
+      activesupport (~> 3.2.11)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,6 +88,8 @@ GEM
       activesupport (~> 3.0)
       plucky (~> 0.5.2)
     multi_json (1.6.1)
+    mutations (0.5.12)
+      activesupport
     nokogiri (1.5.6)
     padrino-cache (0.10.7)
       padrino-core (= 0.10.7)
@@ -177,6 +186,7 @@ DEPENDENCIES
   maruku
   mocha
   mongo_mapper
+  mutations
   padrino-cache (= 0.10.7)
   padrino-core (= 0.10.7)
   padrino-gen (= 0.10.7)
@@ -187,6 +197,7 @@ DEPENDENCIES
   rake
   redis
   rspec
+  scholar!
   shoulda-matchers
   sinatra-flash
   spork

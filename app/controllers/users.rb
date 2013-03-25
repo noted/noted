@@ -4,7 +4,9 @@ Noted.controllers :users do
   end
 
   post :create do
-    u = UserCreate.run(params[:user])
+    u = User::Create.run({
+      :user => params[:user]
+    })
 
     if u.success?
       login(u.result)
@@ -22,21 +24,25 @@ Noted.controllers :users do
   end
 
   patch :update do
-    u = User.find(params[:id])
+    u = User::Update.run({
+      :user => params[:user]
+    })
 
-    if u.update_attributes(params[:user])
+    if u.success?
       flash[:notice] = "Your profile has been updated."
       redirect url(:users, :edit)
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = u.errors.message_list
       redirect url(:users, :edit)
     end
   end
 
   delete :destroy do
-    u = User.find(params[:id])
+    u = User::Destroy.run({
+      :user => params[:user]
+    })
 
-    if u.destroy
+    if u.success?
       flash[:notice] = "We're sorry to see you go."
       redirect url(:index)
     else

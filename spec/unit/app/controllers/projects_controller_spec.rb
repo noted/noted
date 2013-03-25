@@ -17,16 +17,12 @@ describe "Projects" do
       post "/projects/create", :user => user.id, :author => user.id, :project => { :title => "The Hubble Telescope" }
     end
 
-    describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should include("/#{user.username}/the-hubble-telescope") }
-    end
+    it { response.should be_redirect }
+    it { response.location.should include("/#{user.username}/the-hubble-telescope") }
 
-    describe "database" do
-      it { Project.find_by_title("The Hubble Telescope").should_not be_nil }
-      it { Project.find_by_title("The Hubble Telescope").creator.should eql(user) }
-      it { user.projects.should include(Project.find_by_title("The Hubble Telescope")) }
-    end
+    it { Project.find_by_title("The Hubble Telescope").should_not be_nil }
+    it { Project.find_by_title("The Hubble Telescope").creator.should eql(user) }
+    it { user.projects.should include(Project.find_by_title("The Hubble Telescope")) }
   end
 
   describe "GET /:username/:project" do
@@ -47,7 +43,7 @@ describe "Projects" do
 
   describe "PATCH /projects/update" do
     before do
-      patch "/projects/update", :id => project.id, :author => user.id, :project => { :title => "Large Hadron Collider" }
+      patch "/projects/update", :author => user.id, :project => { :id => project.id, :title => "Large Hadron Collider" }
 
       project.reload
     end
@@ -65,16 +61,11 @@ describe "Projects" do
 
   describe "DELETE /projects/destroy" do
     before do
-      delete "/projects/destroy", :id => project.id
+      delete "/projects/destroy", :author => user.id, :project => { :id => project.id }
     end
 
-    describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should include("/#{project.user.username}") }
-    end
-
-    describe "database" do
-      it { Project.find_by_name("The Cosmos").should be_nil }
-    end
+    it { response.should be_redirect }
+    it { response.location.should include("/#{project.user.username}") }
+    it { Project.find_by_name("The Cosmos").should be_nil }
   end
 end
