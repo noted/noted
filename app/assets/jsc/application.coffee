@@ -36,7 +36,8 @@ $(document).ready ->
       tags.push($(this).text())
 
       # Put it in the header
-      $("header ul.tags").append '<li data-value="' + $(this).text() + '"><span class="btn">' + $(this).text() + ' <a><i class="ss-icon">close</i></a></span></li>'
+      for tag in tags
+        $("header ul.tags").append '<li data-value="' + tag + '"><span class="btn">' + tag + ' <a><i class="ss-icon">close</i></a></span></li>'
 
       # Loop through each note
       $("article.note").each ->
@@ -51,7 +52,6 @@ $(document).ready ->
         if num < 0
           $(this).hide()
 
-
   # If tag in header is clicked
   $("header ul.tags").on 'click', 'li span', ->
     tag = $(this).parent().attr("data-value")
@@ -59,11 +59,23 @@ $(document).ready ->
     # Remove from array
     tags = _.without tags, tag
 
-    # Remove from header list
-    $(this).parent().parent().remove()
+    # Rebuild list in header
+    $("header ul.tags").empty()
+    for tag in tags
+      $("header ul.tags").append '<li data-value="' + tag + '"><span class="btn">' + tag + ' <a><i class="ss-icon">close</i></a></span></li>'
 
     # Un-hide hidden elements
-    if tags.length == 0
-      $("article.notes").each ->
-        $(this).show()
+    $("article.note").each ->
+      $(this).show()
+
+      # Build array of that note's tags
+      noteTags = $(this).attr("data-tags").split(",") unless $(this).attr("data-tags") == ""
+
+      # If noteTags does not include an element in tags, hide it
+      num = 0
+      for tag in tags
+        num = num + noteTags.indexOf(tag)
+
+      if num < 0
+        $(this).hide()
 

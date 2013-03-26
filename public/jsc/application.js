@@ -30,17 +30,21 @@
     });
     tags = [];
     $("footer ul.tags li a").on('click', function() {
+      var tag, _i, _len;
       if (tags.indexOf($(this).text()) === -1) {
         tags.push($(this).text());
-        $("header ul.tags").append('<li data-value="' + $(this).text() + '"><span class="btn">' + $(this).text() + ' <a><i class="ss-icon">close</i></a></span></li>');
+        for (_i = 0, _len = tags.length; _i < _len; _i++) {
+          tag = tags[_i];
+          $("header ul.tags").append('<li data-value="' + tag + '"><span class="btn">' + tag + ' <a><i class="ss-icon">close</i></a></span></li>');
+        }
         return $("article.note").each(function() {
-          var noteTags, num, tag, _i, _len;
+          var noteTags, num, _j, _len1;
           if ($(this).attr("data-tags") !== "") {
             noteTags = $(this).attr("data-tags").split(",");
           }
           num = 0;
-          for (_i = 0, _len = tags.length; _i < _len; _i++) {
-            tag = tags[_i];
+          for (_j = 0, _len1 = tags.length; _j < _len1; _j++) {
+            tag = tags[_j];
             num = num + noteTags.indexOf(tag);
           }
           if (num < 0) {
@@ -50,15 +54,29 @@
       }
     });
     return $("header ul.tags").on('click', 'li span', function() {
-      var tag;
+      var tag, _i, _len;
       tag = $(this).parent().attr("data-value");
       tags = _.without(tags, tag);
-      $(this).parent().parent().remove();
-      if (tags.length === 0) {
-        return $("article.notes").each(function() {
-          return $(this).show();
-        });
+      $("header ul.tags").empty();
+      for (_i = 0, _len = tags.length; _i < _len; _i++) {
+        tag = tags[_i];
+        $("header ul.tags").append('<li data-value="' + tag + '"><span class="btn">' + tag + ' <a><i class="ss-icon">close</i></a></span></li>');
       }
+      return $("article.note").each(function() {
+        var noteTags, num, _j, _len1;
+        $(this).show();
+        if ($(this).attr("data-tags") !== "") {
+          noteTags = $(this).attr("data-tags").split(",");
+        }
+        num = 0;
+        for (_j = 0, _len1 = tags.length; _j < _len1; _j++) {
+          tag = tags[_j];
+          num = num + noteTags.indexOf(tag);
+        }
+        if (num < 0) {
+          return $(this).hide();
+        }
+      });
     });
   });
 
