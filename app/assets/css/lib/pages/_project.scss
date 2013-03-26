@@ -109,6 +109,26 @@
 		.notes {
 			@include span-columns(14);
 
+			header {
+				h3 , ul {
+					display: inline-block;
+					float: left;
+				}
+
+				h3 {
+					padding-right: 0.5em;
+				}
+
+				ul {
+					font-size: 0.75em;
+
+					li {
+						display: inline-block;
+						padding-left: 0.25em;
+					}
+				}
+			}
+
 			article {
 				@include border-radius(2px);
 
@@ -163,6 +183,35 @@
 					color: darken($grey, 5%);
 					font-size: 0.85em;
 					padding: 0.25em 0.65em;
+
+					.inner {
+						@include clearfix;
+					}
+
+					aside {
+						float: left;
+					}
+
+					section {
+						font-size: 0.85em;
+						float: right;
+						margin: 0;
+						text-align: right;
+
+						ul {
+							li {
+								display: inline-block;
+
+								&:after {
+									//content: ", ";
+								}
+
+								a:before {
+									//content: "#";
+								}
+							}
+						}
+					}
 				}
 			}
 		}

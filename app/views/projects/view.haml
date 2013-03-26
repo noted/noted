@@ -16,6 +16,7 @@
       %header
         %hgroup
           %h3 Notes
+          %ul.tags
         %aside
           - if current_user
             - form_tag url(:notes, :create), :method => "post" do
@@ -31,7 +32,7 @@
             - else
               Nothing to see here, move along...
         - @notes.each do |note|
-          %article
+          %article.note{:"data-tags" => note.tags_str}
             %header
               .inner
                 %hgroup
@@ -51,7 +52,13 @@
                 = truncate_words(note.html, :length => 40)
             %footer
               .inner
-                %p= note.updated_at
+                %aside
+                  %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
+                %section
+                  %ul.tags
+                    - note.tags.each do |t|
+                      %li{:"data-value" => t.text}
+                        %a.btn= t.text
     .sources
       %header
         %hgroup

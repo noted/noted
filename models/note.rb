@@ -13,6 +13,8 @@ class Note
 
   belongs_to :project
 
+  many :tags, :as => :taggable
+
   after_create :permalink!
 
   def url
@@ -21,6 +23,13 @@ class Note
 
   def html
     Maruku.new(self.body).to_html
+  end
+
+  def tags_str
+    arr = []
+    tags.each {|t| arr << t.text }
+
+    arr.compact.join(",").squish
   end
 
   private

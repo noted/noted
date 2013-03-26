@@ -93,7 +93,7 @@ i {
 		file: css/lib/modules/_buttons.scss
 */
 /* line 6, ../../../../app/assets/css/lib/modules/_buttons.scss */
-a.btn, button, input[type="submit"] {
+a.btn, button, input[type="submit"], span.btn {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -109,53 +109,53 @@ a.btn, button, input[type="submit"] {
   text-transform: uppercase;
   text-shadow: none; }
   /* line 20, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn:hover, button:hover, input[type="submit"]:hover {
+  a.btn:hover, button:hover, input[type="submit"]:hover, span.btn:hover {
     background: #a3b6bb;
     color: #fefefe; }
   /* line 25, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue {
+  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue, span.btn.primary, span.btn.blue {
     background: #3498db; }
     /* line 28, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover {
+    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover, span.btn.primary:hover, span.btn.blue:hover {
       background: #258cd1; }
   /* line 33, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise {
+  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise, span.btn.turquoise {
     background: #1abc9c; }
     /* line 36, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover {
+    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover, span.btn.turquoise:hover {
       background: #17a689; }
   /* line 41, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.orange, button.orange, input[type="submit"].orange {
+  a.btn.orange, button.orange, input[type="submit"].orange, span.btn.orange {
     background: #e67e22; }
     /* line 44, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover {
+    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover, span.btn.orange:hover {
       background: #d67118; }
   /* line 49, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.yellow, button.yellow, input[type="submit"].yellow {
+  a.btn.yellow, button.yellow, input[type="submit"].yellow, span.btn.yellow {
     background: #f1c40f; }
     /* line 52, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover {
+    a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover {
       background: #f39c12; }
   /* line 57, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.large, button.large, input[type="submit"].large {
+  a.btn.large, button.large, input[type="submit"].large, span.btn.large {
     font-size: 1em; }
   /* line 61, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg {
+  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
     /* line 66, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red {
+    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red {
       color: #e74c3c; }
       /* line 69, ../../../../app/assets/css/lib/modules/_buttons.scss */
-      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover {
+      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover {
         color: #c0392b; }
     /* line 74, ../../../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i {
+    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i {
       position: relative;
       top: 0; }
   /* line 80, ../../../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn i, button i, input[type="submit"] i {
+  a.btn i, button i, input[type="submit"] i, span.btn i {
     position: relative;
     top: 1px; }
 
@@ -630,6 +630,23 @@ form.inline {
     margin-right: 0.84034%;
     display: inline; }
     /* line 112, ../../../../app/assets/css/lib/pages/_project.scss */
+<<<<<<< HEAD
+=======
+    #project > section .notes header h3, #project > section .notes header ul {
+      display: inline-block;
+      float: left; }
+    /* line 117, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header h3 {
+      padding-right: 0.5em; }
+    /* line 121, ../../../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header ul {
+      font-size: 0.75em; }
+      /* line 124, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes header ul li {
+        display: inline-block;
+        padding-left: 0.25em; }
+    /* line 131, ../../../../app/assets/css/lib/pages/_project.scss */
+>>>>>>> 16-tags
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -637,6 +654,7 @@ form.inline {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
+<<<<<<< HEAD
       /* line 117, ../../../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
@@ -650,11 +668,27 @@ form.inline {
         #project > section .notes article header hgroup {
           padding-bottom: 0.5em; }
         /* line 132, ../../../../app/assets/css/lib/pages/_project.scss */
+=======
+      /* line 136, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article + article {
+        margin-top: 1.5em; }
+      /* line 140, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article header {
+        background: #ecf0f1; }
+        /* line 143, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header .inner {
+          padding: 0.5em 0.65em; }
+        /* line 147, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header hgroup {
+          padding-bottom: 0.5em; }
+        /* line 151, ../../../../app/assets/css/lib/pages/_project.scss */
+>>>>>>> 16-tags
         #project > section .notes article header a.btn, #project > section .notes article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
+<<<<<<< HEAD
           /* line 138, ../../../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
@@ -669,12 +703,48 @@ form.inline {
         margin: 1em 0;
         padding: 0 0.65em; }
       /* line 161, ../../../../app/assets/css/lib/pages/_project.scss */
+=======
+          /* line 157, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
+            margin-left: 0.5em; }
+          /* line 162, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
+            color: #1abc9c; }
+          /* line 168, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
+            color: #e74c3c; }
+      /* line 175, ../../../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 180, ../../../../app/assets/css/lib/pages/_project.scss */
+>>>>>>> 16-tags
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
+<<<<<<< HEAD
   /* line 170, ../../../../app/assets/css/lib/pages/_project.scss */
+=======
+        /* line 186, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer .inner {
+          overflow: hidden;
+          *zoom: 1; }
+        /* line 190, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer aside {
+          float: left; }
+        /* line 194, ../../../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer section {
+          font-size: 0.85em;
+          float: right;
+          margin: 0;
+          text-align: right; }
+          /* line 201, ../../../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article footer section ul li {
+            display: inline-block; }
+  /* line 218, ../../../../app/assets/css/lib/pages/_project.scss */
+>>>>>>> 16-tags
   #project > section .sources {
     width: 32.77311%;
     float: right;
@@ -713,17 +783,34 @@ section#note .textbox {
     width: 95%;
     max-width: 95%;
     min-height: 20em; }
-/* line 38, ../../../../app/assets/css/lib/pages/_note.scss */
+  /* line 37, ../../../../app/assets/css/lib/pages/_note.scss */
+  section#note .textbox footer {
+    border-top: 2px solid #ecf0f1;
+    padding: 0.5em;
+    cursor: text; }
+    /* line 42, ../../../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer * {
+      display: inline-block; }
+    /* line 46, ../../../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer span.btn {
+      font-size: 0.75em; }
+      /* line 49, ../../../../app/assets/css/lib/pages/_note.scss */
+      section#note .textbox footer span.btn a:hover {
+        color: #e74c3c; }
+    /* line 54, ../../../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer input {
+      width: 15%; }
+/* line 60, ../../../../app/assets/css/lib/pages/_note.scss */
 section#note footer {
   margin-top: 1em; }
-  /* line 41, ../../../../app/assets/css/lib/pages/_note.scss */
+  /* line 63, ../../../../app/assets/css/lib/pages/_note.scss */
   section#note footer p {
     text-align: right; }
-  /* line 45, ../../../../app/assets/css/lib/pages/_note.scss */
+  /* line 67, ../../../../app/assets/css/lib/pages/_note.scss */
   section#note footer a.btn {
     position: relative;
     top: 1px; }
-/* line 51, ../../../../app/assets/css/lib/pages/_note.scss */
+/* line 73, ../../../../app/assets/css/lib/pages/_note.scss */
 section#note .text {
   margin-top: 4em;
   padding-top: 4em;

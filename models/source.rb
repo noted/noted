@@ -9,6 +9,8 @@ class Source
 
   belongs_to :project
 
+  many :tags, :as => :taggable
+
   after_save :permalink!
 
   def citation=(obj)
