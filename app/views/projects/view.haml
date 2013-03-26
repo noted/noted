@@ -32,7 +32,7 @@
             - else
               Nothing to see here, move along...
         - @notes.each do |note|
-          %article{:"data-tags" => note.tags_str}
+          %article.note{:"data-tags" => note.tags_str}
             %header
               .inner
                 %hgroup

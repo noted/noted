@@ -32,15 +32,33 @@
     $("footer ul.tags li a").on('click', function() {
       if (tags.indexOf($(this).text()) === -1) {
         tags.push($(this).text());
-        $("header ul.tags").append('<li data-value="' + $(this).text() + '"><span class="btn">' + $(this).text() + ' <a href="#"><i class="ss-icon">close</i></a></span></li>');
+        $("header ul.tags").append('<li data-value="' + $(this).text() + '"><span class="btn">' + $(this).text() + ' <a><i class="ss-icon">close</i></a></span></li>');
+        return $("article.note").each(function() {
+          var noteTags, num, tag, _i, _len;
+          if ($(this).attr("data-tags") !== "") {
+            noteTags = $(this).attr("data-tags").split(",");
+          }
+          num = 0;
+          for (_i = 0, _len = tags.length; _i < _len; _i++) {
+            tag = tags[_i];
+            num = num + noteTags.indexOf(tag);
+          }
+          if (num < 0) {
+            return $(this).hide();
+          }
+        });
       }
-      return console.log(tags);
     });
     return $("header ul.tags").on('click', 'li span', function() {
       var tag;
       tag = $(this).parent().attr("data-value");
       tags = _.without(tags, tag);
-      return $(this).parent().parent().remove();
+      $(this).parent().parent().remove();
+      if (tags.length === 0) {
+        return $("article.notes").each(function() {
+          return $(this).show();
+        });
+      }
     });
   });
 
