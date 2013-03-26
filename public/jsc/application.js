@@ -1,11 +1,5 @@
 (function() {
 
-  jQuery.removeFromArray = function(value, arr) {
-    return jQuery.grep(arr, function(elem, index) {
-      return elem !== value;
-    });
-  };
-
   $(document).ready(function() {
     var arr, i, tags;
     $("#user aside h2").fitText(1.1);
@@ -42,17 +36,11 @@
       }
       return console.log(tags);
     });
-    $("header ul.tags a").on('click', function() {
-      console.log("go");
-      $.removeFromArray($(this).attr("data-value"), tags);
-      console.log(tags);
+    return $("header ul.tags").on('click', 'li span', function() {
+      var tag;
+      tag = $(this).parent().attr("data-value");
+      tags = _.without(tags, tag);
       return $(this).parent().parent().remove();
-    });
-    $("header ul.tags li span").on('click', "header ul.tags li span", function() {
-      return console.log("foo");
-    });
-    return $("a").on("click", function() {
-      return console.log("fo");
     });
   });
 

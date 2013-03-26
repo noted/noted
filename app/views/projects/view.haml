@@ -32,7 +32,7 @@
             - else
               Nothing to see here, move along...
         - @notes.each do |note|
-          %article
+          %article{:"data-tags" => note.tags_str}
             %header
               .inner
                 %hgroup
@@ -58,7 +58,7 @@
                   %ul.tags
                     - note.tags.each do |t|
                       %li{:"data-value" => t.text}
-                        %a.btn{:href => "#"}= t.text
+                        %a.btn= t.text
     .sources
       %header
         %hgroup

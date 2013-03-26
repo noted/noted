@@ -1,7 +1,3 @@
-jQuery.removeFromArray = (value, arr) ->
-  jQuery.grep arr, (elem, index) ->
-    elem isnt value
-
 $(document).ready ->
   $("#user aside h2").fitText 1.1
 
@@ -45,19 +41,12 @@ $(document).ready ->
     console.log tags
 
   # If tag in header is clicked
-  $("header ul.tags a").on 'click', ->
-    console.log "go"
+  $("header ul.tags").on 'click', 'li span', ->
+    tag = $(this).parent().attr("data-value")
 
     # Remove from array
-    $.removeFromArray(($(this).attr("data-value")), tags)
-
-    console.log tags
+    tags = _.without tags, tag
 
     # Remove from header list
     $(this).parent().parent().remove()
 
-  $("header ul.tags li span").on 'click', "header ul.tags li span", ->
-    console.log "foo"
-
-  $("a").on "click", ->
-    console.log "fo"
