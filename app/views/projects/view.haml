@@ -55,15 +55,9 @@
                   %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
                 %section
                   %ul
-                    %li
-                      %a.btn{:href => "#"}
-                        foobar
-                    %li
-                      %a.btn{:href => "#"}
-                        foobar
-                    %li
-                      %a.btn{:href => "#"}
-                        foobar
+                    - note.tags.each do |t|
+                      %li
+                        %a.btn{:href => ""}= t.text
     .sources
       %header
         %hgroup

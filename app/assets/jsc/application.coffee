@@ -10,6 +10,10 @@ $(document).ready ->
   $('input.tags').tagsManager
     hiddenTagListName: 'note[tags]'
 
+  arr = $('input[name="existing-tags"]').attr('value').split(",")
+  for i of arr
+    $('input.tags').tagsManager('pushTag', arr[i])
+
   $("input.tags").autoGrowInput
     comfortZone: 20
     minWidth: 200
@@ -18,3 +22,4 @@ $(document).ready ->
 
   $(".textbox footer").click ->
     $(".textbox footer input").focus()
+

@@ -11,7 +11,8 @@
         %section
           = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
         %footer
-          = text_field_tag :"tags", :class => "tags", :placeholder => ""
+          = hidden_field_tag :"existing-tags", :value => @note.tags_str
+          = text_field_tag :"tags", :class => "tags"
       %footer
         %p
           %button.primary{:type => "submit"}

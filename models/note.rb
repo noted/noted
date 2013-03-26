@@ -25,6 +25,13 @@ class Note
     Maruku.new(self.body).to_html
   end
 
+  def tags_str
+    arr = []
+    tags.each {|t| arr << t.text }
+
+    arr.compact.join(",").squish
+  end
+
   private
 
   def permalink!

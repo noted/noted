@@ -11,6 +11,7 @@ class Note
 
         optional do
           string :body
+          string :tags
         end
       end
     end
@@ -23,11 +24,29 @@ class Note
         :body => note[:body]
       )
 
+      n.tags.each do |t|
+        t.destroy
+        n.tags.clear
+      end
+
+      n.tags = create_tags(note[:tags])
+
       n.updater = User.find(author)
 
       n.save
 
       n
+    end
+
+    def create_tags(str)
+      raw = str.split(",")
+
+      tags = []
+      raw.each do |t|
+        tags << Tag.new(:text => t)
+      end
+
+      tags
     end
   end
 end
