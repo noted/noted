@@ -13,6 +13,7 @@ class Note
 
   belongs_to :project
 
+  many :comments, :as => :commentable
   many :tags, :as => :taggable
 
   after_create :permalink!

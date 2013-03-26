@@ -9,6 +9,7 @@ class Source
 
   belongs_to :project
 
+  many :comments, :as => :commentable
   many :tags, :as => :taggable
 
   after_save :permalink!
