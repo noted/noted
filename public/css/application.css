@@ -628,7 +628,21 @@ form.inline {
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 111, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 112, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header h3, #project > section .notes header ul {
+      display: inline-block;
+      float: left; }
+    /* line 117, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header h3 {
+      padding-right: 0.5em; }
+    /* line 121, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header ul {
+      font-size: 0.75em; }
+      /* line 124, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes header ul li {
+        display: inline-block;
+        padding-left: 0.25em; }
+    /* line 131, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -636,60 +650,60 @@ form.inline {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 116, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 136, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 120, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 140, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #ecf0f1; }
-        /* line 123, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 143, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-        /* line 127, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 147, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header hgroup {
           padding-bottom: 0.5em; }
-        /* line 131, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 151, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header a.btn, #project > section .notes article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 137, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 157, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
-          /* line 142, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 162, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
             color: #1abc9c; }
-          /* line 148, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 168, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
             color: #e74c3c; }
-      /* line 155, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 175, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 160, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 180, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-        /* line 166, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 186, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer .inner {
           overflow: hidden;
           *zoom: 1; }
-        /* line 170, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 190, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer aside {
           float: left; }
-        /* line 174, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 194, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer section {
           font-size: 0.85em;
           float: right;
           margin: 0;
           text-align: right; }
-          /* line 181, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 201, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article footer section ul li {
             display: inline-block; }
-  /* line 198, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 218, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;

@@ -16,6 +16,7 @@
       %header
         %hgroup
           %h3 Notes
+          %ul.tags
         %aside
           - if current_user
             - form_tag url(:notes, :create), :method => "post" do
@@ -54,10 +55,10 @@
                 %aside
                   %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
                 %section
-                  %ul
+                  %ul.tags
                     - note.tags.each do |t|
-                      %li
-                        %a.btn{:href => ""}= t.text
+                      %li{:"data-value" => t.text}
+                        %a.btn{:href => "#"}= t.text
     .sources
       %header
         %hgroup
