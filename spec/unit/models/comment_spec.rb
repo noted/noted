@@ -2,14 +2,12 @@ require 'spec_helper'
 
 describe Comment do
   let(:comment) { create(:comment) }
-  let(:user)    { create(:user) }
   let(:note)    { create(:note) }
 
   before do
     note.comments << comment
     note.save
 
-    comment.user = user
     comment.save
   end
 
