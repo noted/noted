@@ -137,24 +137,30 @@ a.btn, button, input[type="submit"], span.btn {
     a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover {
       background: #f39c12; }
   /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.red, button.red, input[type="submit"].red, span.btn.red {
+    background: #e74c3c; }
+    /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover {
+      background: #c0392b; }
+  /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large, span.btn.large {
     font-size: 1em; }
-  /* line 61, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 69, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
-    /* line 66, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 74, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red {
       color: #e74c3c; }
-      /* line 69, ../../app/assets/css/lib/modules/_buttons.scss */
+      /* line 77, ../../app/assets/css/lib/modules/_buttons.scss */
       a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover {
         color: #c0392b; }
-    /* line 74, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 82, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i {
       position: relative;
       top: 0; }
-  /* line 80, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 88, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn i, button i, input[type="submit"] i, span.btn i {
     position: relative;
     top: 1px; }
@@ -297,16 +303,24 @@ footer.comments {
       /* line 36, ../../app/assets/css/lib/modules/_comments.scss */
       footer.comments article section footer {
         margin-top: 1em; }
-      /* line 40, ../../app/assets/css/lib/modules/_comments.scss */
+        /* line 39, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer span, footer.comments article section footer form {
+          display: inline-block; }
+        /* line 43, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer form {
+          font-size: 0.75em;
+          float: right;
+          text-align: right; }
+      /* line 50, ../../app/assets/css/lib/modules/_comments.scss */
       footer.comments article section .inner {
         padding: 1em; }
-  /* line 47, ../../app/assets/css/lib/modules/_comments.scss */
+  /* line 57, ../../app/assets/css/lib/modules/_comments.scss */
   footer.comments form textarea {
     width: 98%; }
-  /* line 53, ../../app/assets/css/lib/modules/_comments.scss */
+  /* line 63, ../../app/assets/css/lib/modules/_comments.scss */
   footer.comments form section footer * {
     display: inline-block; }
-  /* line 57, ../../app/assets/css/lib/modules/_comments.scss */
+  /* line 67, ../../app/assets/css/lib/modules/_comments.scss */
   footer.comments form section footer button {
     float: right; }
 

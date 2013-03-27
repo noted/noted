@@ -54,6 +54,14 @@ a.btn, button, input[type="submit"], span.btn {
 		}
 	}
 
+	&.red {
+		background: $red;
+
+		&:hover {
+			background: $dark-red;
+		}
+	}
+
 	&.large {
 		font-size: 1em;
 	}

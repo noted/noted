@@ -35,6 +35,16 @@ footer.comments {
 
 			footer {
 				margin-top: 1em;
+
+				span, form {
+					display: inline-block;
+				}
+
+				form {
+					font-size: 0.75em;
+					float: right;
+					text-align: right;
+				}
 			}
 
 			.inner {
