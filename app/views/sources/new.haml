@@ -1,0 +1,22 @@
+#project
+  = partial 'projects/header', :locals => { :project => @project, :user => @user }
+  %section#source
+    - form_tag url(:sources, :create), :method => "post" do
+      %aside
+        %p= select_tag :"source[type]", :options => [ ["Book", "book"], ["Website", "website" ] ]
+      %section
+        .types
+          %article{:"data-type" => "book"}
+            .field
+              = label_tag :"book[contributors][]"
+              %ul.contributors
+                %li
+                  %p= select_tag :"book[contributor][1][role]", :options => [ ["Author", "author"], ["Editor", "editor"], ["Compiler", "compiler"], ["Translator", "translator"] ]
+                  %p= text_field_tag :"book[contributor][1][first]", :placeholder => "First"
+                  %p= text_field_tag :"book[contributor][1][middle]", :placeholder => "Middle"
+                  %p= text_field_tag :"book[contributor][1][last]", :placeholder => "Last"
+                  %p= text_field_tag :"book[contributor][1][suffix]", :placeholder => "Suffix"
+
+            .field
+              = label_tag :"book[title]"
+              = text_field_tag :"book[title]", :placeholder => "Title"
