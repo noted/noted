@@ -1,9 +1,8 @@
 class Comment
   class Create < Mutations::Command
     required do
-      string :author
-
       hash :comment do
+        string :author
         string :body
         string :_type
         string :_id
@@ -12,7 +11,7 @@ class Comment
 
     def execute
       c = Comment.new(:body => comment[:body])
-      c.user = User.find(author)
+      c.user = User.find(comment[:author])
 
       comment[:_type].constantize.find(comment[:_id]).comments << c
 

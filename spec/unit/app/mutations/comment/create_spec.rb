@@ -6,8 +6,8 @@ describe Comment::Create do
 
   let(:comment) do
     Comment::Create.run({
-      :author => user.id.to_s,
       :comment => {
+        :author => user.id.to_s,
         :body => "Foo to the bar to the foo.",
         :_id => note.id.to_s,
         :_type => "Note"
