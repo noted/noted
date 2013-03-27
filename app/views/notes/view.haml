@@ -21,3 +21,5 @@
             %i.ss-icon close
     .text
       = @note.html
+  = partial "partials/comments", :locals => { :comments => @note.comments, :source => { :type => "Note", :id => @note.id } }
+

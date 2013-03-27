@@ -81,41 +81,4 @@
             %footer
               %p= source.updated_at
 
-  %footer.comments
-    %article
-      %aside
-        %img{:src => current_user.gravatar}
-      %section.text
-        .inner
-          %p We are the legacy of 15 billion years of cosmic evolution. We have a choice. We can enhance life and come to know the universe that made us, or we can squander our 15 billion year heritage in meaningless self-destruction. What happens in the first second of the next cosmic year depends on what we do, here and now, with our intelligence, and our knowledge of the cosmos.
-          %footer
-            %p= "<strong>#{current_user.name}</strong> on 29 March 2013 at 19:32"
-    %article
-      %aside
-        %img{:src => current_user.gravatar}
-      %section.text
-        .inner
-          %p We are the legacy of 15 billion years of cosmic evolution. We have a choice. We can enhance life and come to know the universe that made us, or we can squander our 15 billion year heritage in meaningless self-destruction. What happens in the first second of the next cosmic year depends on what we do, here and now, with our intelligence, and our knowledge of the cosmos.
-          %footer
-            %p= "<strong>#{current_user.name}</strong> on 29 March 2013 at 19:32"
-
-    - @project.comments.each do |comment|
-      %article
-        %aside
-          %img{:src => comment.user.gravatar}
-        %section
-          = comment.body
-    - if current_user
-      - form_tag url(:comments, :create), :method => "post" do
-        = hidden_field_tag :"comment[_type]", :value => "Project"
-        = hidden_field_tag :"comment[_id]", :value => @project.id
-        = hidden_field_tag :author, :value => current_user.id.to_s
-        = hidden_field_tag :redirect, :value => request.path
-        %aside
-          %img{:src => current_user.gravatar}
-        %section
-          %p= text_area_tag :"comment[body]", :placeholder => "Your comment..."
-          %footer
-            %p= "<strong>#{current_user.name}</strong>"
-            %button.primary{:type => "submit"}
-              %i.ss-icon check
+  = partial "partials/comments", :locals => { :comments => @project.comments, :source => { :type => "Project", :id => @project.id } }
