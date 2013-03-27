@@ -5,6 +5,6 @@ class Comment
 
   timestamps!
 
-  one :user
+  belongs_to :user
   belongs_to :commentable, :polymorphic => true
 end

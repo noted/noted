@@ -8,10 +8,21 @@ Noted.controllers :comments do
     if comment.success?
       redirect params[:redirect]
     else
-
+      flash[:error] = comment.error.message_list
+      redirect params[:redirect]
     end
   end
 
   delete :destroy do
+    c = Comment::Destroy.run({
+      :comment => params[:comment]
+    })
+
+    if c.success?
+      redirect params[:redirect]
+    else
+      flash[:error] = comment.error.message_list
+      redirect params[:redirect]
+    end
   end
 end
