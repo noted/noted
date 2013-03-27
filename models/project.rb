@@ -14,6 +14,8 @@ class Project
   many :notes
   many :sources
 
+  many :comments, :as => :commentable
+
   validates_presence_of :title#, :permalink
 
   before_save :permalink!

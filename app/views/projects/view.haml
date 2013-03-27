@@ -80,3 +80,5 @@
               %p= source.data.to_s
             %footer
               %p= source.updated_at
+
+  = partial "partials/comments", :locals => { :comments => @project.comments, :source => { :type => "Project", :id => @project.id } }
