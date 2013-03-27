@@ -1,0 +1,30 @@
+%footer.comments
+  - comments.each do |comment|
+    %article
+      %aside
+        %img{:src => comment.user.gravatar}
+      %section.text
+        .inner
+          = comment.body
+          %footer
+            %span= "<strong>#{current_user.name}</strong> on #{comment.created_at.strftime("%e %b. %Y, %l:%M%P")}"
+            - if comment.user == current_user
+              - form_tag url(:comments, :destroy), :method => "delete" do
+                = hidden_field_tag :redirect, :value => request.path
+                = hidden_field_tag :"comment[id]", :value => comment.id
+                %button.red{:type => "submit"}
+                  %i.ss-icon trash
+  - if current_user
+    - form_tag url(:comments, :create), :method => "post" do
+      = hidden_field_tag :"comment[_type]", :value => source[:type]
+      = hidden_field_tag :"comment[_id]", :value => source[:id]
+      = hidden_field_tag :"comment[author]", :value => current_user.id.to_s
+      = hidden_field_tag :redirect, :value => request.path
+      %aside
+        %img{:src => current_user.gravatar}
+      %section
+        %p= text_area_tag :"comment[body]", :placeholder => "Your comment..."
+        %footer
+          %p= "<strong>#{current_user.name}</strong>"
+          %button.primary{:type => "submit"}
+            %i.ss-icon check

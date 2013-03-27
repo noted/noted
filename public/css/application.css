@@ -137,24 +137,30 @@ a.btn, button, input[type="submit"], span.btn {
     a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover {
       background: #f39c12; }
   /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.red, button.red, input[type="submit"].red, span.btn.red {
+    background: #e74c3c; }
+    /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover {
+      background: #c0392b; }
+  /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large, span.btn.large {
     font-size: 1em; }
-  /* line 61, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 69, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
-    /* line 66, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 74, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red {
       color: #e74c3c; }
-      /* line 69, ../../app/assets/css/lib/modules/_buttons.scss */
+      /* line 77, ../../app/assets/css/lib/modules/_buttons.scss */
       a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover {
         color: #c0392b; }
-    /* line 74, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 82, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i {
       position: relative;
       top: 0; }
-  /* line 80, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 88, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn i, button i, input[type="submit"] i, span.btn i {
     position: relative;
     top: 1px; }
@@ -238,6 +244,85 @@ form.inline {
     /* line 12, ../../app/assets/css/lib/modules/_text.scss */
     .text p:first-child {
       text-indent: 0 !important; }
+
+/*
+	Noted.
+		file: lib/modules/_comments.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_comments.scss */
+footer.comments {
+  border-top: 2px solid #ecf0f1;
+  margin-top: 4em;
+  padding-top: 4em; }
+  /* line 11, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+  /* line 15, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form, footer.comments article {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    footer.comments form:after, footer.comments article:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 18, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form aside, footer.comments article aside {
+      width: 11.76471%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 4.20168%; }
+    /* line 23, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form section, footer.comments article section {
+      width: 83.19328%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline; }
+  /* line 28, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments article {
+    margin-bottom: 2em; }
+    /* line 31, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments article section {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      background: #f2f5f5; }
+      /* line 36, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section footer {
+        margin-top: 1em; }
+        /* line 39, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer span, footer.comments article section footer form {
+          display: inline-block; }
+        /* line 43, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer form {
+          font-size: 0.75em;
+          float: right;
+          text-align: right; }
+      /* line 50, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section .inner {
+        padding: 1em; }
+  /* line 57, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form textarea {
+    width: 98%; }
+  /* line 63, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form section footer * {
+    display: inline-block; }
+  /* line 67, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form section footer button {
+    float: right; }
 
 /*
 	Noted.
