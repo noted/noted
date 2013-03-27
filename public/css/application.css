@@ -241,6 +241,77 @@ form.inline {
 
 /*
 	Noted.
+		file: lib/modules/_comments.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_comments.scss */
+footer.comments {
+  border-top: 2px solid #ecf0f1;
+  margin-top: 4em;
+  padding-top: 4em; }
+  /* line 11, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+  /* line 15, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form, footer.comments article {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    footer.comments form:after, footer.comments article:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 18, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form aside, footer.comments article aside {
+      width: 11.76471%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 4.20168%; }
+    /* line 23, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form section, footer.comments article section {
+      width: 83.19328%;
+      float: right;
+      margin-right: 0;
+      #margin-left: -0.5em;
+      display: inline; }
+  /* line 28, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments article {
+    margin-bottom: 2em; }
+    /* line 31, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments article section {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      background: #f2f5f5; }
+      /* line 36, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section footer {
+        margin-top: 1em; }
+      /* line 40, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section .inner {
+        padding: 1em; }
+  /* line 47, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form textarea {
+    width: 98%; }
+  /* line 53, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form section footer * {
+    display: inline-block; }
+  /* line 57, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form section footer button {
+    float: right; }
+
+/*
+	Noted.
 		file: css/pages/_index.scss
 */
 /* line 7, ../../app/assets/css/lib/pages/_index.scss */
