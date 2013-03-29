@@ -32,6 +32,11 @@
 					border: 3px solid darken($grey, 4%);
 				}
 			}
+
+			p {
+				font-family: $serif;
+				margin-top: 0.5em;
+			}
 		}
 
 		aside {

@@ -630,7 +630,11 @@ footer.comments {
       /* line 31, ../../app/assets/css/lib/pages/_project.scss */
       #project > header hgroup img:hover {
         border: 3px solid #e0e7e8; }
-  /* line 37, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 36, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup p {
+      font-family: "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif;
+      margin-top: 0.5em; }
+  /* line 42, ../../app/assets/css/lib/pages/_project.scss */
   #project > header aside {
     width: 24.36975%;
     float: right;
@@ -638,16 +642,16 @@ footer.comments {
     #margin-left: -0.5em;
     display: inline;
     text-align: right; }
-    /* line 42, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 47, ../../app/assets/css/lib/pages/_project.scss */
     #project > header aside p {
       position: relative;
       bottom: 3px; }
-/* line 49, ../../app/assets/css/lib/pages/_project.scss */
+/* line 54, ../../app/assets/css/lib/pages/_project.scss */
 #project .description {
   background: #e3edea;
   margin-bottom: 2rem;
   padding: 2rem 0; }
-  /* line 54, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 59, ../../app/assets/css/lib/pages/_project.scss */
   #project .description .inner {
     *zoom: 1;
     max-width: 59.5em;
@@ -661,29 +665,29 @@ footer.comments {
       content: "";
       display: table;
       clear: both; }
-    /* line 57, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 62, ../../app/assets/css/lib/pages/_project.scss */
     #project .description .inner i {
       font-size: 0.75em;
       margin-right: 0.25em;
       position: relative; }
-    /* line 63, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 68, ../../app/assets/css/lib/pages/_project.scss */
     #project .description .inner a:hover {
       cursor: pointer; }
-    /* line 67, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 72, ../../app/assets/css/lib/pages/_project.scss */
     #project .description .inner .text {
       width: 74.78992%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       padding-right: 25.21008%; }
-      /* line 71, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 76, ../../app/assets/css/lib/pages/_project.scss */
       #project .description .inner .text.hidden {
         display: none; }
-      /* line 75, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 80, ../../app/assets/css/lib/pages/_project.scss */
       #project .description .inner .text.display {
         display: block;
         margin-top: 1em; }
-/* line 83, ../../app/assets/css/lib/pages/_project.scss */
+/* line 88, ../../app/assets/css/lib/pages/_project.scss */
 #project > section {
   *zoom: 1;
   max-width: 59.5em;
@@ -699,7 +703,7 @@ footer.comments {
     content: "";
     display: table;
     clear: both; }
-  /* line 90, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 95, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes header, #project > section .sources header {
     *zoom: 1;
     max-width: 59.5em;
@@ -715,13 +719,13 @@ footer.comments {
       content: "";
       display: table;
       clear: both; }
-    /* line 96, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 101, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header hgroup, #project > section .sources header hgroup {
       width: 83.19328%;
       float: left;
       margin-right: 0.84034%;
       display: inline; }
-    /* line 100, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 105, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header aside, #project > section .sources header aside {
       width: 15.96639%;
       float: right;
@@ -730,27 +734,27 @@ footer.comments {
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
-  /* line 109, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 114, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .notes {
     width: 57.98319%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-    /* line 113, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 118, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header h3, #project > section .notes header ul {
       display: inline-block;
       float: left; }
-    /* line 118, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 123, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header h3 {
       padding-right: 0.5em; }
-    /* line 122, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 127, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes header ul {
       font-size: 0.75em; }
-      /* line 125, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 130, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes header ul li {
         display: inline-block;
         padding-left: 0.25em; }
-    /* line 132, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 137, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .notes article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -758,60 +762,60 @@ footer.comments {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 137, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 142, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article + article {
         margin-top: 1.5em; }
-      /* line 141, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 146, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article header {
         background: #ecf0f1; }
-        /* line 144, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 149, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header .inner {
           padding: 0.5em 0.65em; }
-        /* line 148, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 153, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header hgroup {
           padding-bottom: 0.5em; }
-        /* line 152, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 157, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article header a.btn, #project > section .notes article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 158, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 163, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
-          /* line 163, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 168, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
             color: #1abc9c; }
-          /* line 169, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 174, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
             color: #e74c3c; }
-      /* line 176, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 181, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 181, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 186, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-        /* line 187, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 192, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer .inner {
           overflow: hidden;
           *zoom: 1; }
-        /* line 191, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 196, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer aside {
           float: left; }
-        /* line 195, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 200, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer section {
           font-size: 0.85em;
           float: right;
           margin: 0;
           text-align: right; }
-          /* line 202, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 207, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article footer section ul li {
             display: inline-block; }
-  /* line 219, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 224, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;
