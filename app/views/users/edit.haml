@@ -1,24 +1,63 @@
-#generic
-  %header
-    %h2 Account
+#user
+  %aside
+    %header
+      %figure
+        %img{:alt => "", :src => @user.gravatar}
+      %h2= @user.name
+      %hgroup
+        %ul
+          - if @user.staff?
+            %li
+              %i.ss-icon star
+              %strong Staff
+          - if @user.location
+            %li
+              %i.ss-icon location
+              = @user.location
+          - if @user.website
+            %li
+              %i.ss-icon globe
+              %a{:href => @user.website, :target => "_blank"}= format(:url, @user.website)
+          - if @user.twitter
+            %li
+              %i.ss-icon.ss-social twitter
+              %a{:href => "http://twitter.com/#{@user.twitter}"}= format(:twitter, @user.twitter)
   %section
-    = partial 'partials/flash', :locals => { :flash => flash }
+    %header
+      %h3
+        Account
+        %span / Settings
+    = partial "partials/flash", :locals => { :flash => flash }
     - form_tag url(:users, :update), :method => "patch" do
-      %p
-        = label_tag "user[name]"
-        = text_field_tag "user[name]", :value => @user.name
-      %p
-        = label_tag "user[email]"
-        = email_field_tag "user[email]", :value => @user.email
-      %p
-        = label_tag "user[username]"
-        = text_field_tag "user[username]", :value => @user.username
-      %p
-        = label_tag "user[website]"
-        = text_field_tag "user[website]", :value => @user.website
-      %p
-        = label_tag "user[location]"
-        = text_field_tag "user[location]", :value => @user.location
-      %footer
-        = hidden_field_tag :"user[id]", :value => @user.id
-        = submit_tag "Save", :class => "btn primary"
+      = hidden_field_tag :"user[id]", :value => @user.id
+      %table
+        %tr
+          %td
+            %label{:for => "user[name]"} Name
+          %td
+            = text_field_tag :"user[name]", :placeholder => "Name", :value => @user.name
+        %tr
+          %td
+            %label{:for => "user[username]"} Username
+          %td
+            = text_field_tag :"user[username]", :disabled => true, :placeholder => "Username", :value => @user.username
+        %tr
+          %td
+            %label{:for => "user[email]"} Email
+          %td
+            = email_field_tag :"user[email]", :placeholder => "Email", :value => @user.email
+        %tr
+          %td
+            %label{:for => "user[location]"} Location
+          %td
+            = text_field_tag :"user[location]", :placeholder => "Location", :value => @user.location
+        %tr
+          %td
+            %label{:for => "user[website]"} Website
+          %td
+            = text_field_tag :"user[website]", :placeholder => "Website", :value => @user.website
+        %tr
+          %td
+          %td
+            %button.btn.green{:type => "submit"}
+              Save

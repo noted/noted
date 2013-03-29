@@ -24,6 +24,26 @@ form {
 		}
 	}
 
+	table {
+		width: 100%;
+
+		tr {
+			td {
+				padding: 0.25em 0.5em;
+
+				&:first-child {
+					font-weight: bold;
+					width: 10%;
+					text-align: right;
+				}
+			}
+		}
+
+		input {
+			width: 75%;
+		}
+	}
+
 	textarea {
 		color: $text;
 		font: 13px/2em $mono;

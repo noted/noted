@@ -47,6 +47,10 @@
 	& > section {
 		@include span-columns(18 omega);
 
+		& > header {
+			margin-bottom: 1rem;
+		}
+
 		article {
 			@include border-radius(2px);
 
