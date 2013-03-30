@@ -62,4 +62,6 @@ group :test do
   gem 'database_cleaner'
 
   gem 'cane'
+
+  gem 'coveralls', require: false
 end
