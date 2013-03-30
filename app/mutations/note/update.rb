@@ -24,12 +24,14 @@ class Note
         :body => note[:body]
       )
 
-      n.tags.each do |t|
-        t.destroy
-        n.tags.clear
-      end
+      if note[:tags]
+        n.tags.each do |t|
+          t.destroy
+          n.tags.clear
+        end
 
-      n.tags = create_tags(note[:tags])
+        n.tags = create_tags(note[:tags])
+      end
 
       n.updater = User.find(author)
 

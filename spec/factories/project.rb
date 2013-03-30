@@ -4,5 +4,7 @@ FactoryGirl.define do
     description "Exploring the cosmos, one star system at a time."
 
     user {|user| user.association(:user)}
+
+    creator {|user| user.association(:user)}
   end
 end
