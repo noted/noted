@@ -13,6 +13,5 @@ describe Comment do
 
   it { comment.should be_valid }
   it { comment.commentable.should eql note }
-  it { comment.user.should eql user }
   it { note.comments.should include comment }
 end
