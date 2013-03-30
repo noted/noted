@@ -6,5 +6,9 @@ FactoryGirl.define do
     user {|user| user.association(:user)}
 
     creator {|user| user.association(:user)}
+
+    after(:create) do |project, evalulator|
+      project.user.projects << project
+    end
   end
 end
