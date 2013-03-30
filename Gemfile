@@ -21,7 +21,7 @@ gem 'redis'
 gem 'bcrypt-ruby'
 gem 'base32-crockford', require: 'base32/crockford'
 
-gem 'scholar', git: 'git://github.com/noted/scholar.git'
+gem 'scholar', '0.1.1'
 
 gem 'mutations'
 
