@@ -1,4 +1,4 @@
-Noted.controllers :notes do
+Noted::Web.controllers :notes do
   before do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
