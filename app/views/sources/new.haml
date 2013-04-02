@@ -1,22 +1,39 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#source
-    - form_tag url(:sources, :create), :method => "post" do
+    - form_tag url(:sources, :search), :class => "search", :method => "post" do
+      .field
+        %p
+          %input{:name => "query", :results => "5", :type => "text"}
+          %button.primary{:type => "submit"} Search
+    - form_tag url(:sources, :create), :class => "manual", :method => "post" do
       %aside
-        %p= select_tag :"source[type]", :options => [ ["Book", "book"], ["Website", "website" ] ]
+        %p= select_tag :"source[type]", :options => Source.options
       %section
-        .types
-          %article{:"data-type" => "book"}
-            .field
-              = label_tag :"book[contributors][]"
-              %ul.contributors
-                %li
-                  %p= select_tag :"book[contributor][1][role]", :options => [ ["Author", "author"], ["Editor", "editor"], ["Compiler", "compiler"], ["Translator", "translator"] ]
-                  %p= text_field_tag :"book[contributor][1][first]", :placeholder => "First"
-                  %p= text_field_tag :"book[contributor][1][middle]", :placeholder => "Middle"
-                  %p= text_field_tag :"book[contributor][1][last]", :placeholder => "Last"
-                  %p= text_field_tag :"book[contributor][1][suffix]", :placeholder => "Suffix"
-
-            .field
-              = label_tag :"book[title]"
-              = text_field_tag :"book[title]", :placeholder => "Title"
+        %article{:"data-type" => "book"}
+          %table
+            %tr
+              %td Contributors
+              %td
+                %ul.contributors
+                  %li
+                    = select_tag :"book[contributors][0][role]", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]]
+                    = text_field_tag :"book[contributors][0][first]", :placeholder => "First"
+                    = text_field_tag :"book[contributors][0][middle]", :class => "small", :placeholder => "Middle"
+                    = text_field_tag :"book[contributors][0][last]", :placeholder => "Last"
+                    = text_field_tag :"book[contributors][0][suffix]", :class => "small", :placeholder => "Suffix"
+            %tr
+              %td Title
+              %td= text_field_tag :"book[title]"
+            %tr
+              %td Publication
+              %td
+                = text_field_tag :"book[publisher]", :placeholder => "Publisher"
+                = text_field_tag :"book[city]", :placeholder => "City"
+                = text_field_tag :"book[year]", :placeholder => "Year"
+            %tr
+              %td Advanced
+              %td
+                = text_field_tag :"book[volume]", :placeholder => "Volume"
+                = text_field_tag :"book[edition]", :placeholder => "Edition"
+                = text_field_tag :"book[series]", :placeholder => "Series"

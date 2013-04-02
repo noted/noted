@@ -180,7 +180,10 @@ form input, form textarea {
   font: 1em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   outline: none;
   padding: 0.5em; }
-/* line 17, ../../app/assets/css/lib/modules/_forms.scss */
+  /* line 15, ../../app/assets/css/lib/modules/_forms.scss */
+  form input.small, form textarea.small {
+    width: 1em; }
+/* line 20, ../../app/assets/css/lib/modules/_forms.scss */
 form input[type=text], form input[type=email], form input[type=password], form textarea {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -188,15 +191,15 @@ form input[type=text], form input[type=email], form input[type=password], form t
   -o-border-radius: 2px;
   border-radius: 2px;
   border: 2px solid #ecf0f1; }
-  /* line 22, ../../app/assets/css/lib/modules/_forms.scss */
+  /* line 25, ../../app/assets/css/lib/modules/_forms.scss */
   form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus {
     border: 2px solid #cfd9db; }
-/* line 27, ../../app/assets/css/lib/modules/_forms.scss */
+/* line 30, ../../app/assets/css/lib/modules/_forms.scss */
 form textarea {
   color: #444444;
   font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
   line-height: 2rem; }
-/* line 33, ../../app/assets/css/lib/modules/_forms.scss */
+/* line 36, ../../app/assets/css/lib/modules/_forms.scss */
 form.inline {
   display: inline; }
 
@@ -287,7 +290,7 @@ footer.comments {
       width: 83.19328%;
       float: right;
       margin-right: 0;
-      #margin-left: -0.5em;
+      *margin-left: -0.5em;
       display: inline; }
   /* line 28, ../../app/assets/css/lib/modules/_comments.scss */
   footer.comments article {
@@ -402,7 +405,7 @@ footer.comments {
     width: 24.36975%;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    *margin-left: -0.5em;
     display: inline; }
     /* line 52, ../../app/assets/css/lib/pages/_index.scss */
     #index .information section aside a {
@@ -469,7 +472,7 @@ footer.comments {
     width: 74.78992%;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    *margin-left: -0.5em;
     display: inline; }
     /* line 50, ../../app/assets/css/lib/pages/_user.scss */
     #user > section article {
@@ -613,7 +616,7 @@ footer.comments {
     width: 24.36975%;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    *margin-left: -0.5em;
     display: inline;
     text-align: right; }
     /* line 42, ../../app/assets/css/lib/pages/_project.scss */
@@ -704,7 +707,7 @@ footer.comments {
       width: 15.96639%;
       float: right;
       margin-right: 0;
-      #margin-left: -0.5em;
+      *margin-left: -0.5em;
       display: inline;
       font-size: 0.85rem;
       text-align: right; }
@@ -794,7 +797,7 @@ footer.comments {
     width: 32.77311%;
     float: right;
     margin-right: 0;
-    #margin-left: -0.5em;
+    *margin-left: -0.5em;
     display: inline; }
 
 /*
@@ -860,6 +863,73 @@ section#note .text {
   margin-top: 4em;
   padding-top: 4em;
   border-top: 1px solid #ecf0f1; }
+
+/*
+	Noted.
+		file: css/pages/_source.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_source.scss */
+section#source form.search {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #ecf0f1;
+  margin-bottom: 4em;
+  padding-bottom: 4em; }
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  section#source form.search:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 14, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.search .field {
+    font-size: 1.15em;
+    margin: 0 auto;
+    width: 75%; }
+    /* line 20, ../../app/assets/css/lib/pages/_source.scss */
+    section#source form.search .field p {
+      display: block; }
+      /* line 23, ../../app/assets/css/lib/pages/_source.scss */
+      section#source form.search .field p button, section#source form.search .field p input {
+        display: inline-block; }
+      /* line 27, ../../app/assets/css/lib/pages/_source.scss */
+      section#source form.search .field p button {
+        padding: 1.25em; }
+      /* line 31, ../../app/assets/css/lib/pages/_source.scss */
+      section#source form.search .field p input {
+        padding: 1em;
+        width: 75%; }
+/* line 39, ../../app/assets/css/lib/pages/_source.scss */
+section#source form.manual {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  section#source form.manual:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 42, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual > aside {
+    width: 15.96639%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+  /* line 46, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual > section {
+    width: 83.19328%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline; }
 
 /*
 	= Appendix
@@ -968,7 +1038,7 @@ body > header {
       width: 32.77311%;
       float: right;
       margin-right: 0;
-      #margin-left: -0.5em;
+      *margin-left: -0.5em;
       display: inline; }
       /* line 114, ../../app/assets/css/application.scss */
       body > header nav section:last-child ul {

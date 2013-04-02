@@ -16,6 +16,9 @@ Noted.controllers :sources do
     render 'sources/new'
   end
 
+  post :search do
+  end
+
   post :create do
     p = Project.find(params[:project])
 

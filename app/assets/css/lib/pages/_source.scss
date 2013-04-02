@@ -1,0 +1,50 @@
+/*
+	Noted.
+		file: css/pages/_source.scss
+*/
+
+section#source {
+	form.search {
+		@include container;
+
+		border-bottom: 2px solid $grey;
+		margin-bottom: 4em;
+		padding-bottom: 4em;
+
+		.field {
+
+			font-size: 1.15em;
+			margin: 0 auto;
+			width: 75%;
+
+			p {
+				display: block;
+
+				button, input {
+					display: inline-block;
+				}
+
+				button {
+					padding: 1.25em;
+				}
+
+				input {
+					padding: 1em;
+					width: 75%;
+				}
+			}
+		}
+	}
+
+	form.manual {
+		@include container;
+
+		& > aside {
+			@include span-columns(4);
+		}
+
+		& > section {
+			@include span-columns(20 omega);
+		}
+	}
+}

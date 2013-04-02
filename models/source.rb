@@ -22,6 +22,13 @@ class Source
     Marshal::load(self.binary.to_s)
   end
 
+  def self.options
+    [
+      ["Book", "book"],
+      ["Website", "website"]
+    ]
+  end
+
   def url
     "#{self.project.url}/sources/#{self.permalink}"
   end
