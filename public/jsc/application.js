@@ -1,8 +1,9 @@
 (function() {
-
   $(document).ready(function() {
     var arr, i, tags;
+
     $("#user aside h2").fitText(1.1);
+    $("select.chosen").chosen();
     $(".description h4 a.expand").on("click", function() {
       if ($(".description .text").hasClass("hidden")) {
         return $(".description .text").removeClass("hidden").addClass("display");
@@ -31,6 +32,7 @@
     tags = [];
     $("footer ul.tags li a").on('click', function() {
       var tag, _i, _len;
+
       if (tags.indexOf($(this).text()) === -1) {
         tags.push($(this).text());
         for (_i = 0, _len = tags.length; _i < _len; _i++) {
@@ -39,6 +41,7 @@
         }
         return $("article.note").each(function() {
           var noteTags, num, _j, _len1;
+
           if ($(this).attr("data-tags") !== "") {
             noteTags = $(this).attr("data-tags").split(",");
           }
@@ -55,6 +58,7 @@
     });
     return $("header ul.tags").on('click', 'li span', function() {
       var tag, _i, _len;
+
       tag = $(this).parent().attr("data-value");
       tags = _.without(tags, tag);
       $("header ul.tags").empty();
@@ -64,6 +68,7 @@
       }
       return $("article.note").each(function() {
         var noteTags, num, _j, _len1;
+
         $(this).show();
         if ($(this).attr("data-tags") !== "") {
           noteTags = $(this).attr("data-tags").split(",");
