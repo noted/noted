@@ -55,6 +55,10 @@ h2 {
 h3 {
 	font-size: 1.35em;
 	text-transform: none;
+
+	span {
+		color: $dark-grey;
+	}
 }
 
 img {

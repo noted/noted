@@ -1,3 +1,7 @@
+require 'coveralls'
+
+Coveralls.wear!
+
 require 'spork'
 
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)

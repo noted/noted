@@ -8,7 +8,7 @@
           %button.primary{:type => "submit"} Search
     - form_tag url(:sources, :create), :class => "manual", :method => "post" do
       %aside
-        %p= select_tag :"source[type]", :"data-placeholder" => "Type", :class => "chosen", :options => Source.options
+        %p= select_tag :"source[type]", :placeholder => "Source Type", :options => Source.options
       %section
         %article{:"data-type" => "book"}
           %table
@@ -17,14 +17,16 @@
               %td
                 %ul.contributors
                   %li
-                    = select_tag :"book[contributors][0][role]", :class => "chosen", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]]
+                    = select_tag :"book[contributors][0][role]", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]]
                     = text_field_tag :"book[contributors][0][first]", :placeholder => "First"
                     = text_field_tag :"book[contributors][0][middle]", :class => "small", :placeholder => "Middle"
                     = text_field_tag :"book[contributors][0][last]", :placeholder => "Last"
                     = text_field_tag :"book[contributors][0][suffix]", :class => "small", :placeholder => "Suffix"
+                    %a.btn
+                      %i.ss-icon plus
             %tr
               %td Title
-              %td= text_field_tag :"book[title]"
+              %td= text_field_tag :"book[title]", :class => "large"
             %tr
               %td Publication
               %td

@@ -1,4 +1,6 @@
-# Noted. [![Build Status](https://secure.travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted) [![Dependency Status](https://gemnasium.com/noted/noted.png)](https://gemnasium.com/noted/noted)
+# Noted.
+
+[![Build Status](https://secure.travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted) [![Dependency Status](https://gemnasium.com/noted/noted.png)](https://gemnasium.com/noted/noted) [![Code Climate](https://codeclimate.com/github/noted/noted.png)](https://codeclimate.com/github/noted/noted) [![Coverage Status](https://coveralls.io/repos/noted/noted/badge.png?branch=master)](https://coveralls.io/r/noted/noted)
 
 Noted is an academic research assistant and social network.
 

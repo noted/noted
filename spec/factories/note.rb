@@ -4,5 +4,9 @@ FactoryGirl.define do
     body "Lorem ipsum."
 
     project {|project| project.association(:project)}
+
+    after(:create) do |note, evaluator|
+      note.project.notes << note
+    end
   end
 end

@@ -8,9 +8,6 @@ describe User do
   it { should validate_presence_of :name }
   it { should validate_presence_of :email }
 
-  it { should validate_uniqueness_of :username }
-  it { should validate_uniqueness_of :email }
-
   it { should_not allow_value("foobar").for(:email) }
 
   it { user.should be_valid }
