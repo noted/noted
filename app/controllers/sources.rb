@@ -16,7 +16,8 @@ Noted.controllers :sources do
     render 'sources/new'
   end
 
-  post :search do
+  get :search, :provides => [:json] do
+    Scholar::Search.new(params[:q]).to_hash.to_json
   end
 
   post :create do
