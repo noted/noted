@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-%w{cache core gen helpers}.each do |p|
-  gem "padrino-#{p}", '0.10.7'
+%w(cache core gen helpers).each do |p|
+  gem 'padrino-' + p, '0.10.7'
 end
 
 gem 'puma'
@@ -9,24 +9,23 @@ gem 'puma'
 gem 'rake'
 gem 'sinatra-flash', require: 'sinatra/flash'
 
-gem 'bson_ext', require: 'mongo'
+gem 'bson_ext'
 gem 'mongo_mapper'
 
 gem 'canable'
-
 gem 'state_machine'
 
 gem 'redis'
+gem 'von'
 
 gem 'bcrypt-ruby'
 gem 'base32-crockford', require: 'base32/crockford'
 
-gem 'scholar', git: 'git://github.com/noted/scholar.git'
-
 gem 'mutations'
 
-gem 'haml'
+gem 'scholar', git: 'git://github.com/noted/scholar.git'
 
+gem 'haml'
 gem 'maruku'
 
 gem 'compass'
