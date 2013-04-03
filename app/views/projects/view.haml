@@ -77,8 +77,20 @@
         - @sources.each do |source|
           %article
             %section
-              %p= source.citation.html
+              %p.text
+                = source.citation.html
             %footer
-              %p= source.updated_at
+              .inner
+                %aside
+                  %p= source.updated_at.strftime("%e %b. %Y, %l:%M%P")
+                %section
+                  - if current_user
+                    %a.btn.edit{:href => source.url}
+                      %i.ss-icon edit
+                    - form_tag url(:sources, :destroy), :method => "delete", :class => "inline" do
+                      = hidden_field_tag :author, :value => current_user.id
+                      = hidden_field_tag :"source[id]", :value => source.id
+                      %button.trash{:href => ""}
+                        %i.ss-icon trash
 
   = partial "partials/comments", :locals => { :comments => @project.comments, :source => { :type => "Project", :id => @project.id } }

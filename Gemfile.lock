@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/noted/scholar.git
-  revision: 68fdcc8f659518f889228d77f14343af80ce2b9e
+  revision: ae93d668f2cde6df68b86322ec29117794dabd0b
   specs:
     scholar (0.1.1)
       activesupport (~> 3.2.11)

@@ -826,6 +826,96 @@ footer.comments {
     margin-right: 0;
     *margin-left: -0.5em;
     display: inline; }
+    /* line 228, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header h3, #project > section .sources header ul {
+      display: inline-block;
+      float: left; }
+    /* line 233, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header h3 {
+      padding-right: 0.5em; }
+    /* line 237, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header ul {
+      font-size: 0.75em; }
+      /* line 240, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources header ul li {
+        display: inline-block;
+        padding-left: 0.25em; }
+    /* line 247, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #ecf0f1; }
+      /* line 252, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article + article {
+        margin-top: 1.5em; }
+      /* line 256, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article header {
+        background: #ecf0f1; }
+        /* line 259, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header .inner {
+          padding: 0.5em 0.65em; }
+        /* line 263, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header hgroup {
+          padding-bottom: 0.5em; }
+        /* line 267, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header a.btn, #project > section .sources article header button {
+          background: transparent;
+          color: #dde4e6;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 273, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn + a, #project > section .sources article header button + a {
+            margin-left: 0.5em; }
+          /* line 278, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn.edit:hover, #project > section .sources article header button.edit:hover {
+            color: #1abc9c; }
+          /* line 284, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn.trash:hover, #project > section .sources article header button.trash:hover {
+            color: #e74c3c; }
+      /* line 291, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 296, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article footer {
+        border-top: 1px solid #ecf0f1;
+        color: #dde4e6;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
+        /* line 302, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer .inner {
+          overflow: hidden;
+          *zoom: 1; }
+        /* line 306, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer a.btn, #project > section .sources article footer button {
+          background: transparent;
+          color: #dde4e6;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 312, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn + a, #project > section .sources article footer button + a {
+            margin-left: 0.5em; }
+          /* line 317, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn.edit:hover, #project > section .sources article footer button.edit:hover {
+            color: #1abc9c; }
+          /* line 323, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn.trash:hover, #project > section .sources article footer button.trash:hover {
+            color: #e74c3c; }
+        /* line 329, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer aside {
+          float: left; }
+        /* line 333, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer section {
+          font-size: 0.85em;
+          float: right;
+          margin: 0;
+          text-align: right; }
+          /* line 340, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer section ul li {
+            display: inline-block; }
 
 /*
 	Noted.
