@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-%w{cache core gen helpers}.each do |p|
-  gem "padrino-#{p}", '0.10.7'
-end
+gem 'padrino', git: 'git://github.com/padrino/padrino-framework.git', :ref => '6e7561686c'
 
 gem 'puma'
 
