@@ -9,8 +9,6 @@ class Note
   timestamps!
   userstamps!
 
-  validates_uniqueness_of :permalink
-
   belongs_to :project
 
   many :comments, :as => :commentable
@@ -36,6 +34,6 @@ class Note
   private
 
   def permalink!
-    self.permalink = Base32::Crockford.encode(self.class.count + 1)
+    self.permalink = Base32::Crockford.encode(Von.increment('notes'))
   end
 end
