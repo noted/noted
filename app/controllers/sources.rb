@@ -21,19 +21,20 @@ Noted.controllers :sources do
   end
 
   post :create do
-    p = Project.find(params[:project])
-
-    s = Source.new(params[:source])
-    s.creator = User.find(params[:author])
+    type = "#{params[:source][:type]}"
+    d type
+    attributes = params[type]
+    attributes.merge({:type => type.to_sym})
+    d attributes
 
     s = Source::Create.run({
       :project => params[:project],
       :author => params[:author],
-      :source => params[:source]
+      :source => { :attributes => attributes }
     })
 
     if s.success?
-      redirect s.result.url
+      redirect Project.find(params[:project]).url
     else
       redirect Project.find(params[:project]).url
     end

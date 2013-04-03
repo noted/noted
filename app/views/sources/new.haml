@@ -7,10 +7,13 @@
           %input{:name => "query", :results => "5", :type => "text"}
           %button.primary{:type => "submit"} Search
     - form_tag url(:sources, :create), :class => "manual", :method => "post" do
+      = hidden_field_tag :project, :value => @project.id
+      = hidden_field_tag :author, :value => current_user.id
       %aside
         %p= select_tag :"source[type]", :placeholder => "Source Type", :options => Source.options
       %section
         %article{:"data-type" => "book"}
+          = hidden_field_tag :"book[type]", :value => "book"
           %table
             %tr
               %td Contributors
@@ -39,3 +42,5 @@
                 = text_field_tag :"book[volume]", :placeholder => "Volume"
                 = text_field_tag :"book[edition]", :placeholder => "Edition"
                 = text_field_tag :"book[series]", :placeholder => "Series"
+          %p
+            %button.primary{:type => "submit"} Cite
