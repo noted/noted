@@ -29,6 +29,6 @@ class Source
   private
 
   def permalink!
-    self.permalink = Base32::Crockford.encode(Source.count + 1)
+    self.permalink = Base32::Crockford.encode(Von.increment('notes'))
   end
 end

@@ -9,3 +9,8 @@ if heroku?
 else
   MongoMapper.setup(YAML.load_file(Padrino.root(".mongo.yml")), PADRINO_ENV, :logger => logger)
 end
+
+Von.configure do |c|
+  c.redis = { :host => 'localhost', :port => 6379 }
+  c.namespace = 'von'
+end
