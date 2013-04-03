@@ -1,4 +1,4 @@
-Noted.controllers :sessions do
+Noted::Web.controllers :sessions do
   get :new, :map => "/login" do
     if current_user
       redirect url(:index)

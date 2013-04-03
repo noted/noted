@@ -1,4 +1,4 @@
-Noted.controllers :comments do
+Noted::Web.controllers :comments do
   post :create do
     comment = Comment::Create.run({
       :author => params[:author],

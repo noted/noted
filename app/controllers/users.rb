@@ -1,4 +1,4 @@
-Noted.controllers :users do
+Noted::Web.controllers :users do
   get :new, :map => "/join" do
     render 'users/new'
   end

@@ -1,4 +1,4 @@
-Noted.controllers :sources do
+Noted::Web.controllers :sources do
   before :except => [:create, :update, :destroy] do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])

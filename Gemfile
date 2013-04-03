@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'padrino', git: 'git://github.com/padrino/padrino-framework.git', :ref => '6e7561686c'
+gem 'padrino', git: 'git://github.com/padrino/padrino-framework.git'
 
 gem 'puma'
 
 gem 'rake'
-gem 'sinatra-flash', require: 'sinatra/flash'
 
 gem 'bson_ext', require: 'mongo'
 gem 'mongo_mapper'
