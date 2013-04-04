@@ -30,6 +30,16 @@ a {
 	}
 }
 
+blockquote {
+	border-left: 3px solid $grey;
+	color: $deep-grey;
+	padding-left: 1em;
+
+	& + p {
+		margin-top: 1em
+	}
+}
+
 em {
 	font-style: italic;
 }
