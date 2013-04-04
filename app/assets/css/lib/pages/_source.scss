@@ -4,38 +4,6 @@
 */
 
 section#source {
-	form.search {
-		@include container;
-
-		border-bottom: 2px solid $grey;
-		margin-bottom: 4em;
-		padding-bottom: 4em;
-
-		.field {
-
-			font-size: 1.15em;
-			margin: 0 auto;
-			width: 75%;
-
-			p {
-				display: block;
-
-				button, input {
-					display: inline-block;
-				}
-
-				button {
-					padding: 1.25em;
-				}
-
-				input {
-					padding: 1em;
-					width: 75%;
-				}
-			}
-		}
-	}
-
 	form.manual {
 		@include container;
 
@@ -45,6 +13,45 @@ section#source {
 
 		& > section {
 			@include span-columns(20 omega);
+		}
+
+		table {
+			tr {
+				&.border {
+					border-bottom: 2px solid $grey;
+					padding-bottom: 1rem;
+					margin-bottom: 1rem;
+				}
+			}
+
+			a.btn[data-action] {
+				font-size: 0.65em;
+				margin-top: 0.5em;
+			}
+		}
+
+		ul.contributors {
+			select {
+				width: 16%;
+			}
+
+			input {
+				&.first {
+					width: 25%;
+				}
+
+				&.middle {
+					width: 7%;
+				}
+
+				&.last {
+					width: 30%;
+				}
+
+				&.suffix {
+					width: 7%;
+				}
+			}
 		}
 	}
 }

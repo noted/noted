@@ -16,16 +16,11 @@ Noted.controllers :sources do
     render 'sources/new'
   end
 
-  get :search, :with => :q, :provides => :json do
-    Scholar::Search.new(params[:q]).to_hash.to_json
-  end
-
-  post :create do
+  post :create do # Fix me!
     type = "#{params[:source][:type]}"
-    d type
+
     attributes = params[type]
     attributes.merge({:type => type.to_sym})
-    d attributes
 
     s = Source::Create.run({
       :project => params[:project],
@@ -61,7 +56,7 @@ Noted.controllers :sources do
   end
 
   delete :destroy do
-    project = Source.find(params[:note][:id]).project
+    project = Source.find(params[:source][:id]).project
 
     s = Source::Destroy.run({
       :author => params[:author],

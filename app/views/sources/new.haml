@@ -1,11 +1,6 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#source
-    - form_tag url(:sources, :search), :class => "search", :method => "post" do
-      .field
-        %p
-          %input{:name => "query", :results => "5", :type => "text"}
-          %button.primary{:type => "submit"} Search
     - form_tag url(:sources, :create), :class => "manual", :method => "post" do
       = hidden_field_tag :project, :value => @project.id
       = hidden_field_tag :author, :value => current_user.id
@@ -15,18 +10,19 @@
         %article{:"data-type" => "book"}
           = hidden_field_tag :"book[type]", :value => "book"
           %table
-            %tr
+            %tr.border
               %td Contributors
               %td
                 %ul.contributors
-                  %li
+                  %li{:"data-num" => "0", :"data-type" => "book"}
                     = select_tag :"book[contributors][0][role]", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]]
-                    = text_field_tag :"book[contributors][0][first]", :placeholder => "First"
-                    = text_field_tag :"book[contributors][0][middle]", :class => "small", :placeholder => "Middle"
-                    = text_field_tag :"book[contributors][0][last]", :placeholder => "Last"
-                    = text_field_tag :"book[contributors][0][suffix]", :class => "small", :placeholder => "Suffix"
-                    %a.btn
-                      %i.ss-icon plus
+                    = text_field_tag :"book[contributors][0][first]", :class => "first", :placeholder => "John"
+                    = text_field_tag :"book[contributors][0][middle]", :class => "middle", :placeholder => "Q", :maxlength => "1"
+                    = text_field_tag :"book[contributors][0][last]", :class => "last", :placeholder => "Sample"
+                    = text_field_tag :"book[contributors][0][suffix]", :class => "suffix", :placeholder => "Jr"
+                %a.btn.add{:"data-action" => "add-contributor"}
+                  %i.ss-icon plus
+                  Contributor
             %tr
               %td Title
               %td= text_field_tag :"book[title]", :class => "large"

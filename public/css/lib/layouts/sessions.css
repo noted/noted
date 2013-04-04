@@ -986,41 +986,6 @@ section#note .text {
 		file: css/pages/_source.scss
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_source.scss */
-section#source form.search {
-  *zoom: 1;
-  max-width: 59.5em;
-  _width: 59.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 2px solid #ecf0f1;
-  margin-bottom: 4em;
-  padding-bottom: 4em; }
-  /* line 38, ../../../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  section#source form.search:after {
-    content: "";
-    display: table;
-    clear: both; }
-  /* line 14, ../../../../app/assets/css/lib/pages/_source.scss */
-  section#source form.search .field {
-    font-size: 1.15em;
-    margin: 0 auto;
-    width: 75%; }
-    /* line 20, ../../../../app/assets/css/lib/pages/_source.scss */
-    section#source form.search .field p {
-      display: block; }
-      /* line 23, ../../../../app/assets/css/lib/pages/_source.scss */
-      section#source form.search .field p button, section#source form.search .field p input {
-        display: inline-block; }
-      /* line 27, ../../../../app/assets/css/lib/pages/_source.scss */
-      section#source form.search .field p button {
-        padding: 1.25em; }
-      /* line 31, ../../../../app/assets/css/lib/pages/_source.scss */
-      section#source form.search .field p input {
-        padding: 1em;
-        width: 75%; }
-/* line 39, ../../../../app/assets/css/lib/pages/_source.scss */
 section#source form.manual {
   *zoom: 1;
   max-width: 59.5em;
@@ -1034,19 +999,43 @@ section#source form.manual {
     content: "";
     display: table;
     clear: both; }
-  /* line 42, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 10, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual > aside {
     width: 15.96639%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 46, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 14, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual > section {
     width: 83.19328%;
     float: right;
     margin-right: 0;
     *margin-left: -0.5em;
     display: inline; }
+  /* line 20, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table tr.border {
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem; }
+  /* line 27, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table a.btn[data-action] {
+    font-size: 0.65em;
+    margin-top: 0.5em; }
+  /* line 34, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors select {
+    width: 16%; }
+  /* line 39, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.first {
+    width: 25%; }
+  /* line 43, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.middle {
+    width: 7%; }
+  /* line 47, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.last {
+    width: 30%; }
+  /* line 51, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.suffix {
+    width: 7%; }
 
 /* @group Base */
 /* line 2, ../../../../app/assets/css/lib/vendor/chosen.scss */
