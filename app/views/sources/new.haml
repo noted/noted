@@ -25,18 +25,21 @@
                   Contributor
             %tr
               %td Title
-              %td= text_field_tag :"book[title]", :class => "large"
+              %td= text_field_tag :"book[title]", :class => "full"
             %tr
               %td Publication
               %td
-                = text_field_tag :"book[publisher]", :placeholder => "Publisher"
-                = text_field_tag :"book[city]", :placeholder => "City"
-                = text_field_tag :"book[year]", :placeholder => "Year"
+                = text_field_tag :"book[publisher]", :class => "third", :placeholder => "Publisher"
+                = text_field_tag :"book[city]", :class => "third", :placeholder => "City"
+                = text_field_tag :"book[year]", :class => "third", :placeholder => "Year"
             %tr
               %td Advanced
               %td
-                = text_field_tag :"book[volume]", :placeholder => "Volume"
-                = text_field_tag :"book[edition]", :placeholder => "Edition"
-                = text_field_tag :"book[series]", :placeholder => "Series"
-          %p
-            %button.primary{:type => "submit"} Cite
+                = text_field_tag :"book[volume]", :class => "third", :placeholder => "Volume"
+                = text_field_tag :"book[edition]", :class => "third", :placeholder => "Edition"
+                = text_field_tag :"book[series]", :class => "third", :placeholder => "Series"
+            %tr
+              %td
+              %td
+                %a.btn{:href => @project.url} Cancel
+                %button.primary{:type => "submit"} Cite

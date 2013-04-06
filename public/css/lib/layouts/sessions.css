@@ -986,6 +986,11 @@ section#note .text {
 		file: css/pages/_source.scss
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_source.scss */
+section#source > article {
+  border-bottom: 2px solid #e0ebe8;
+  padding-bottom: 2em;
+  margin-bottom: 2em; }
+/* line 13, ../../../../app/assets/css/lib/pages/_source.scss */
 section#source form.manual {
   *zoom: 1;
   max-width: 59.5em;
@@ -999,43 +1004,57 @@ section#source form.manual {
     content: "";
     display: table;
     clear: both; }
-  /* line 10, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 16, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual > aside {
     width: 15.96639%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 14, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 20, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual > section {
     width: 83.19328%;
     float: right;
     margin-right: 0;
     *margin-left: -0.5em;
     display: inline; }
-  /* line 20, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 26, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual table tr.border {
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem; }
-  /* line 27, ../../../../app/assets/css/lib/pages/_source.scss */
+    border-bottom: 2px solid #ecf0f1; }
+    /* line 29, ../../../../app/assets/css/lib/pages/_source.scss */
+    section#source form.manual table tr.border td {
+      padding-bottom: 1em; }
+    /* line 34, ../../../../app/assets/css/lib/pages/_source.scss */
+    section#source form.manual table tr.border + tr td {
+      padding-top: 1em; }
+  /* line 41, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual table a.btn[data-action] {
     font-size: 0.65em;
     margin-top: 0.5em; }
-  /* line 34, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 47, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table input.full {
+    width: 92.5%; }
+  /* line 51, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table input.third {
+    width: 28.4%; }
+  /* line 58, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual ul.contributors select {
     width: 16%; }
-  /* line 39, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 63, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual ul.contributors input.first {
     width: 25%; }
-  /* line 43, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 67, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual ul.contributors input.middle {
-    width: 7%; }
-  /* line 47, ../../../../app/assets/css/lib/pages/_source.scss */
+    width: 5%; }
+  /* line 71, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual ul.contributors input.last {
     width: 30%; }
-  /* line 51, ../../../../app/assets/css/lib/pages/_source.scss */
+  /* line 75, ../../../../app/assets/css/lib/pages/_source.scss */
   section#source form.manual ul.contributors input.suffix {
-    width: 7%; }
+    width: 5%; }
+  /* line 80, ../../../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors a {
+    font-size: 0.5em;
+    margin-left: 0.25em; }
 
 /* @group Base */
 /* line 2, ../../../../app/assets/css/lib/vendor/chosen.scss */

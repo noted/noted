@@ -4,6 +4,12 @@
 */
 
 section#source {
+	& > article {
+		border-bottom: 2px solid $dark-blue-grey;
+		padding-bottom: 2em;
+		margin-bottom: 2em;
+	}
+
 	form.manual {
 		@include container;
 
@@ -19,14 +25,32 @@ section#source {
 			tr {
 				&.border {
 					border-bottom: 2px solid $grey;
-					padding-bottom: 1rem;
-					margin-bottom: 1rem;
+
+					td {
+						padding-bottom: 1em;
+					}
+
+					& + tr {
+						td {
+							padding-top: 1em;
+						}
+					}
 				}
 			}
 
 			a.btn[data-action] {
 				font-size: 0.65em;
 				margin-top: 0.5em;
+			}
+
+			input {
+				&.full {
+					width: 92.5%;
+				}
+
+				&.third {
+					width: 28.4%;
+				}
 			}
 		}
 
@@ -41,7 +65,7 @@ section#source {
 				}
 
 				&.middle {
-					width: 7%;
+					width: 5%;
 				}
 
 				&.last {
@@ -49,8 +73,13 @@ section#source {
 				}
 
 				&.suffix {
-					width: 7%;
+					width: 5%;
 				}
+			}
+
+			a {
+				font-size: 0.5em;
+				margin-left: 0.25em;
 			}
 		}
 	}

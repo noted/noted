@@ -86,7 +86,7 @@
                 %section
                   - if current_user
                     %a.btn.edit{:href => source.url}
-                      %i.ss-icon edit
+                      %i.ss-icon view
                     - form_tag url(:sources, :destroy), :method => "delete", :class => "inline" do
                       = hidden_field_tag :author, :value => current_user.id
                       = hidden_field_tag :"source[id]", :value => source.id

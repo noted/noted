@@ -30,19 +30,28 @@ Noted.controllers :sources do
   end
 
   get :view, :map => "/:user/:project/sources/:source" do
-    @source = Source.where(:project_id => @project.id, :permalink => params[:source])
+    @source = Source.where(:project_id => @project.id, :permalink => params[:source]).first
+    @citation = @source.citation
 
     render 'sources/view'
   end
 
   patch :update do
-    s = Source::Update({
+    type = "#{params[:source][:type]}"
+
+    attributes = params[type]
+    attributes.merge({:type => type.to_sym})
+
+    s = Source::Update.run({
       :author => params[:author],
-      :source => params[:source]
+      :source => {
+        :id => params[:source][:id],
+        :attributes => attributes
+      }
     })
 
     if s.success?
-      redirect s.result.url
+      redirect s.result.project.url
     else
       flash[:error] = "Something has gone awry."
       redirect Source.find(params[:source][:id]).url

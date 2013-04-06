@@ -30,6 +30,10 @@ $(document).ready ->
                                   <input class='suffix' placeholder='Jr' name='#{param}[suffix]' type='text' />
                                 </li>")
 
+  $("ul.contributors a.remove").on "click", ->
+    console.log $(this).parent()
+    $(this).parent().remove()
+
   # TAGS
   $('input.tags').tagsManager
     hiddenTagListName: 'note[tags]'

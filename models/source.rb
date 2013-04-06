@@ -12,7 +12,7 @@ class Source
   many :comments, :as => :commentable
   many :tags, :as => :taggable
 
-  after_save :permalink!
+  after_create :permalink!
 
   def citation=(obj)
     self.binary = Marshal::dump(obj)
@@ -24,8 +24,7 @@ class Source
 
   def self.options
     [
-      ["Book", "book"],
-      ["Website", "website"]
+      ["Book", "book"]
     ]
   end
 
