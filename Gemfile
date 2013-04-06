@@ -21,9 +21,9 @@ gem 'von'
 gem 'bcrypt-ruby'
 gem 'base32-crockford', require: 'base32/crockford'
 
-gem 'mutations'
+gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
-gem 'scholar', git: 'git://github.com/noted/scholar.git'
+gem 'mutations'
 
 gem 'haml'
 gem 'maruku'
