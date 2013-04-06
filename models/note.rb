@@ -24,6 +24,16 @@ class Note
     Maruku.new(self.body).to_html
   end
 
+  def tags=(str)
+    self.tags.each {|t| t.destroy }
+    self.tags.clear
+
+    arr = str.split(",")
+    arr.each do |t|
+      self.tags << Tag.new(:text => t)
+    end
+  end
+
   def tags_str
     arr = []
     tags.each {|t| arr << t.text }
