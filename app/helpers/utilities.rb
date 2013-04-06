@@ -5,6 +5,10 @@ Noted.helpers do
       str.sub(/^https?\:\/\//, '').sub(/^www./,'')
     when :twitter
       str.insert(0, "@")
+    when :search
+      str.downcase.gsub(/[^a-z ]/, '').gsub(/ /, '+')
+    when :unsearch
+      str.replace("+", " ")
     else
       str
     end

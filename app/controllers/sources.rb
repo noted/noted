@@ -6,49 +6,52 @@ Noted.controllers :sources do
     end
   end
 
-  get :index, :map => "/:user/:project/sources" do
-    @sources = @project.sources.all
-
-    render 'sources/index'
-  end
-
   get :new, :map => "/:user/:project/sources/new" do
     render 'sources/new'
   end
 
-  post :create do
-    p = Project.find(params[:project])
+  post :create do # Fix me!
+    type = "#{params[:source][:type]}"
 
-    s = Source.new(params[:source])
-    s.creator = User.find(params[:author])
+    attributes = params[type]
+    attributes.merge({:type => type.to_sym})
 
     s = Source::Create.run({
       :project => params[:project],
       :author => params[:author],
-      :source => params[:source]
+      :source => { :attributes => attributes }
     })
 
     if s.success?
-      redirect s.result.url
+      redirect Project.find(params[:project]).url
     else
       redirect Project.find(params[:project]).url
     end
   end
 
   get :view, :map => "/:user/:project/sources/:source" do
-    @source = Source.where(:project_id => @project.id, :permalink => params[:source])
+    @source = Source.where(:project_id => @project.id, :permalink => params[:source]).first
+    @citation = @source.citation
 
     render 'sources/view'
   end
 
   patch :update do
-    s = Source::Update({
+    type = "#{params[:source][:type]}"
+
+    attributes = params[type]
+    attributes.merge({:type => type.to_sym})
+
+    s = Source::Update.run({
       :author => params[:author],
-      :source => params[:source]
+      :source => {
+        :id => params[:source][:id],
+        :attributes => attributes
+      }
     })
 
     if s.success?
-      redirect s.result.url
+      redirect s.result.project.url
     else
       flash[:error] = "Something has gone awry."
       redirect Source.find(params[:source][:id]).url
@@ -56,7 +59,7 @@ Noted.controllers :sources do
   end
 
   delete :destroy do
-    project = Source.find(params[:note][:id]).project
+    project = Source.find(params[:source][:id]).project
 
     s = Source::Destroy.run({
       :author => params[:author],
