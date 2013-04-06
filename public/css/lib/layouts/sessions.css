@@ -963,7 +963,7 @@ section#note .textbox {
         color: #e74c3c; }
     /* line 54, ../../../../app/assets/css/lib/pages/_note.scss */
     section#note .textbox footer input {
-      width: 15%; }
+      width: 25%; }
 /* line 60, ../../../../app/assets/css/lib/pages/_note.scss */
 section#note footer {
   margin-top: 1em; }

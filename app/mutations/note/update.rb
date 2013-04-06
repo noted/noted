@@ -12,6 +12,7 @@ class Note
         optional do
           string :body
           string :tags
+          array :sources
         end
       end
     end

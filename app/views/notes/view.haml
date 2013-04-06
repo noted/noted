@@ -15,6 +15,11 @@
           = text_field_tag :"tags", :class => "tags"
       %footer
         %p
+          /= select_tag :"note[sources]", :multiple => true, :options => @source_arr
+          %select{:multiple => true, :name => "note[sources][]"}
+            - @sources.each do |s|
+              %option{:value => s[:id], :selected => s[:selected]}= s[:text]
+        %p
           %button.primary{:type => "submit"}
             %i.ss-icon check
           %a.btn.orange{:href => ""}

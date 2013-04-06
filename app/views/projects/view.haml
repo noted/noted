@@ -41,7 +41,7 @@
                 %aside
                   - if current_user
                     %a.btn.edit{:href => note.url}
-                      %i.ss-icon edit
+                      %i.ss-icon view
                     - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
                       = hidden_field_tag :author, :value => current_user.id
                       = hidden_field_tag :"note[id]", :value => note.id

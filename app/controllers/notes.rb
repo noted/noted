@@ -23,6 +23,16 @@ Noted.controllers :notes do
   get :view, :map => "/:user/:project/notes/:note" do
     @note = Note.where(:project_id => @project.id, :permalink => params[:note]).first
 
+    @sources = []
+    Source.where(:project_id => @project.id).each do |s|
+      hash = {}
+      hash[:id] = s.id.to_s
+      hash[:text] = s.citation.html
+      hash[:selected] = @note.sources.include?(s)
+
+      @sources << hash
+    end
+
     render 'notes/view'
   end
 
@@ -31,6 +41,8 @@ Noted.controllers :notes do
       :author => params[:author],
       :note => params[:note]
     })
+
+    d { params[:sources] }
 
     if n.success?
       redirect n.result.project.url
