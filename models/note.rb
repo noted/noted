@@ -3,13 +3,14 @@ class Note
 
   key :title, String
   key :body, String
-  key :sources, Array
   key :permalink, String
 
   timestamps!
   userstamps!
 
   belongs_to :project
+
+  many :sources
 
   many :comments, :as => :commentable
   many :tags, :as => :taggable
@@ -24,6 +25,16 @@ class Note
     Maruku.new(self.body).to_html
   end
 
+  def sources=(arr) # Array of IDs
+    self.sources.clear
+
+    arr.each do |id|
+      sources << Source.find(id)
+    end
+
+    self.sources
+  end
+
   def tags=(str)
     self.tags.each {|t| t.destroy }
     self.tags.clear
@@ -32,6 +43,8 @@ class Note
     arr.each do |t|
       self.tags << Tag.new(:text => t)
     end
+
+    self.tags
   end
 
   def tags_str
