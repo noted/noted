@@ -48,3 +48,4 @@
               %td
                 %a.btn{:href => @project.url} Cancel
                 %button.primary{:type => "submit"} Update
+  = partial "partials/comments", :locals => { :comments => @source.comments, :source => { :type => "Source", :id => @source.id } }
