@@ -1,6 +1,6 @@
 require 'yaml'
 
-if heroku?
+if ENV['MONGOLAB_URI']
   m = URI.parse(ENV['MONGOLAB_URI'])
 
   MongoMapper.connection = Mongo::Connection.new(m.host, m.port, :logger => logger)
@@ -11,6 +11,12 @@ else
 end
 
 Von.configure do |c|
-  c.redis = { :host => 'localhost', :port => 6379 }
+  if ENV['REDISTOGO_URL']
+    r = URI.parse(ENV['REDISTOGO_URL'])
+
+    c.redis = { :host => r.host, :port => r.port, :password => r.password }
+  else
+    c.redis = { :host => 'localhost', :port => 6379 }
+  end
   c.namespace = 'von'
 end
