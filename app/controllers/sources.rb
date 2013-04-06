@@ -6,12 +6,6 @@ Noted.controllers :sources do
     end
   end
 
-  get :index, :map => "/:user/:project/sources" do
-    @sources = @project.sources.all
-
-    render 'sources/index'
-  end
-
   get :new, :map => "/:user/:project/sources/new" do
     render 'sources/new'
   end
