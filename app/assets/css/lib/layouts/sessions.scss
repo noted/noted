@@ -21,7 +21,7 @@ $grid-padding: $gutter-width;
 */
 
 body {
-	background: $base;
+	background: lighten($grey, 5%);
 	color: $text;
 	font: 300 16px/1.5em $serif;
 }
@@ -37,7 +37,7 @@ a {
 
 form {
 	input[type="email"], input[type="password"] {
-		background: lighten($grey, 3%);
+		background: lighten($grey, 4%);
 		border: none;
 		width: 65%;
 
@@ -74,7 +74,7 @@ h1 {
 	@include border-radius(2px);
 	@include container;
 
-	background: $red;
+	background: $dark-blue-grey;
 	margin-top: 4em;
 	padding: 0;
 	text-align: center;
@@ -87,7 +87,7 @@ h1 {
 */
 
 header {
-	background: lighten($dark-red, 10%);
+	background: $red;
 
 	padding: 1.5em;
 }

@@ -349,11 +349,10 @@ footer.comments {
 */
 /* line 7, ../../../../app/assets/css/lib/pages/_index.scss */
 #index .hero {
-  background: #ea6557;
-  color: #fefefe;
+  background: #e0ebe8;
+  color: #2c3e50;
   padding: 4em 0;
-  margin-bottom: 4em;
-  text-shadow: 0 1px 0 rgba(214, 44, 26, 0.5); }
+  margin-bottom: 4em; }
   /* line 14, ../../../../app/assets/css/lib/pages/_index.scss */
   #index .hero header {
     margin-bottom: 2em; }
@@ -896,7 +895,7 @@ section#note .text {
 */
 /* line 23, ../../../../app/assets/css/lib/layouts/sessions.scss */
 body {
-  background: #fefefe;
+  background: #fbfcfc;
   color: #444444;
   font: 300 16px/1.5em "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif; }
 
@@ -910,7 +909,7 @@ a {
 
 /* line 39, ../../../../app/assets/css/lib/layouts/sessions.scss */
 form input[type="email"], form input[type="password"] {
-  background: #f5f7f7;
+  background: #f8f9fa;
   border: none;
   width: 65%; }
   /* line 44, ../../../../app/assets/css/lib/layouts/sessions.scss */
@@ -950,7 +949,7 @@ h1 {
   padding-right: 0.25em;
   margin-left: auto;
   margin-right: auto;
-  background: #e74c3c;
+  background: #e0ebe8;
   margin-top: 4em;
   padding: 0;
   text-align: center;
@@ -966,7 +965,7 @@ h1 {
 */
 /* line 89, ../../../../app/assets/css/lib/layouts/sessions.scss */
 header {
-  background: #d65548;
+  background: #e74c3c;
   padding: 1.5em; }
 
 /*
