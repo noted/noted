@@ -93,7 +93,7 @@ i {
 		file: css/lib/modules/_buttons.scss
 */
 /* line 6, ../../app/assets/css/lib/modules/_buttons.scss */
-a.btn, button, input[type="submit"], span.btn {
+a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choices .search-choice {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -109,65 +109,65 @@ a.btn, button, input[type="submit"], span.btn {
   text-transform: uppercase;
   text-shadow: none; }
   /* line 20, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn:hover, button:hover, input[type="submit"]:hover, span.btn:hover {
+  a.btn:hover, button:hover, input[type="submit"]:hover, span.btn:hover, .chzn-container-multi .chzn-choices .search-choice:hover {
     background: #a3b6bb;
     color: #fefefe; }
   /* line 25, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue, span.btn.primary, span.btn.blue {
+  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue, span.btn.primary, span.btn.blue, .chzn-container-multi .chzn-choices .search-choice.primary, .chzn-container-multi .chzn-choices .search-choice.blue {
     background: #3498db; }
     /* line 28, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover, span.btn.primary:hover, span.btn.blue:hover {
+    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover, span.btn.primary:hover, span.btn.blue:hover, .chzn-container-multi .chzn-choices .search-choice.primary:hover, .chzn-container-multi .chzn-choices .search-choice.blue:hover {
       background: #258cd1; }
   /* line 33, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise, span.btn.turquoise {
+  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise, span.btn.turquoise, .chzn-container-multi .chzn-choices .search-choice.turquoise {
     background: #1abc9c; }
     /* line 36, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover, span.btn.turquoise:hover {
+    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover, span.btn.turquoise:hover, .chzn-container-multi .chzn-choices .search-choice.turquoise:hover {
       background: #17a689; }
   /* line 41, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.orange, button.orange, input[type="submit"].orange, span.btn.orange {
+  a.btn.orange, button.orange, input[type="submit"].orange, span.btn.orange, .chzn-container-multi .chzn-choices .search-choice.orange {
     background: #e67e22; }
     /* line 44, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover, span.btn.orange:hover {
+    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover, span.btn.orange:hover, .chzn-container-multi .chzn-choices .search-choice.orange:hover {
       background: #d67118; }
   /* line 49, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.yellow, button.yellow, input[type="submit"].yellow, span.btn.yellow {
+  a.btn.yellow, button.yellow, input[type="submit"].yellow, span.btn.yellow, .chzn-container-multi .chzn-choices .search-choice.yellow {
     background: #f1c40f; }
     /* line 52, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover {
+    a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover, .chzn-container-multi .chzn-choices .search-choice.yellow:hover {
       background: #f39c12; }
   /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.red, button.red, input[type="submit"].red, span.btn.red {
+  a.btn.red, button.red, input[type="submit"].red, span.btn.red, .chzn-container-multi .chzn-choices .search-choice.red {
     background: #e74c3c; }
     /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover {
+    a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover, .chzn-container-multi .chzn-choices .search-choice.red:hover {
       background: #c0392b; }
   /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.green, button.green, input[type="submit"].green, span.btn.green {
+  a.btn.green, button.green, input[type="submit"].green, span.btn.green, .chzn-container-multi .chzn-choices .search-choice.green {
     background: #2ecc71; }
     /* line 68, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, span.btn.green:hover {
+    a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, span.btn.green:hover, .chzn-container-multi .chzn-choices .search-choice.green:hover {
       background: #27ae60; }
   /* line 73, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.large, button.large, input[type="submit"].large, span.btn.large {
+  a.btn.large, button.large, input[type="submit"].large, span.btn.large, .chzn-container-multi .chzn-choices .search-choice.large {
     font-size: 1em; }
   /* line 77, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg {
+  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg, .chzn-container-multi .chzn-choices .search-choice.no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
     /* line 82, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red {
+    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red, .chzn-container-multi .chzn-choices .search-choice.no-bg.red {
       color: #e74c3c; }
       /* line 85, ../../app/assets/css/lib/modules/_buttons.scss */
-      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover {
+      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover, .chzn-container-multi .chzn-choices .search-choice.no-bg.red:hover {
         color: #c0392b; }
     /* line 90, ../../app/assets/css/lib/modules/_buttons.scss */
-    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i {
+    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i, .chzn-container-multi .chzn-choices .search-choice.no-bg i {
       position: relative;
       top: 0; }
   /* line 96, ../../app/assets/css/lib/modules/_buttons.scss */
-  a.btn i, button i, input[type="submit"] i, span.btn i {
+  a.btn i, button i, input[type="submit"] i, span.btn i, .chzn-container-multi .chzn-choices .search-choice i {
     position: relative;
     top: 1px; }
 
@@ -176,7 +176,7 @@ a.btn, button, input[type="submit"], span.btn {
 		file: css/lib/modules/_forms.scss
 */
 /* line 7, ../../app/assets/css/lib/modules/_forms.scss */
-form input, form textarea, form select {
+form input, form textarea, form select, form .chzn-container-multi .chzn-choices {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -188,7 +188,7 @@ form input, form textarea, form select {
   outline: none;
   padding: 0.5em; }
   /* line 16, ../../app/assets/css/lib/modules/_forms.scss */
-  form input.small, form textarea.small, form select.small {
+  form input.small, form textarea.small, form select.small, form .chzn-container-multi .chzn-choices.small {
     width: 1em; }
 /* line 21, ../../app/assets/css/lib/modules/_forms.scss */
 form input[type=text], form input[type=email], form input[type=password], form textarea, form select {
@@ -963,18 +963,24 @@ section#note .textbox {
         color: #e74c3c; }
     /* line 54, ../../app/assets/css/lib/pages/_note.scss */
     section#note .textbox footer input {
-      width: 15%; }
+      width: 25%; }
 /* line 60, ../../app/assets/css/lib/pages/_note.scss */
 section#note footer {
   margin-top: 1em; }
-  /* line 63, ../../app/assets/css/lib/pages/_note.scss */
-  section#note footer p {
+  /* line 64, ../../app/assets/css/lib/pages/_note.scss */
+  section#note footer p:first-child {
+    margin-bottom: 1em; }
+    /* line 67, ../../app/assets/css/lib/pages/_note.scss */
+    section#note footer p:first-child select {
+      width: 100%; }
+  /* line 72, ../../app/assets/css/lib/pages/_note.scss */
+  section#note footer p:last-child {
     text-align: right; }
-  /* line 67, ../../app/assets/css/lib/pages/_note.scss */
+  /* line 77, ../../app/assets/css/lib/pages/_note.scss */
   section#note footer a.btn {
     position: relative;
     top: 1px; }
-/* line 73, ../../app/assets/css/lib/pages/_note.scss */
+/* line 83, ../../app/assets/css/lib/pages/_note.scss */
 section#note .text {
   margin-top: 4em;
   padding-top: 4em;
@@ -1067,7 +1073,7 @@ section#source form.manual {
 /* line 9, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container .chzn-drop {
   background: #fff;
-  border: 1px solid #aaa;
+  border: 1px solid #ecf0f1;
   border-top: 0;
   position: absolute;
   top: 29px;
@@ -1198,13 +1204,13 @@ section#source form.manual {
 /* @group Multi Chosen */
 /* line 131, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container-multi .chzn-choices {
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
-  background-image: -webkit-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: -moz-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: -o-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);
-  border: 1px solid #aaa;
+  /*background-color: #fff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);*/
+  border: 2px solid #ecf0f1;
   margin: 0;
   padding: 0;
   cursor: text;
@@ -1245,27 +1251,23 @@ section#source form.manual {
 
 /* line 173, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -moz-background-clip: padding;
+  /*-webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+  -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  background-clip        : padding-box;
   background-color: #e4e4e4;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
   background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  -webkit-box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
-  color: #333;
-  border: 1px solid #aaaaaa;
-  line-height: 13px;
-  padding: 3px 20px 3px 5px;
-  margin: 3px 0 3px 5px;
+  -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  -moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);*/
+  padding-right: 20px;
   position: relative;
   cursor: default; }
 
@@ -1292,7 +1294,7 @@ section#source form.manual {
   display: block;
   position: absolute;
   right: 3px;
-  top: 4px;
+  top: 6px;
   width: 12px;
   height: 12px;
   font-size: 1px;
@@ -1338,14 +1340,14 @@ section#source form.manual {
 
 /* line 257, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container .chzn-results .highlighted {
-  background-color: #3875d7;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
+  /*background-color: #3875d7;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
   background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
-  color: #fff; }
+  color: #fff;*/ }
 
 /* line 267, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container .chzn-results li em {
@@ -1444,10 +1446,10 @@ section#source form.manual {
 
 /* line 347, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container-active .chzn-choices {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border: 1px solid #5897fb; }
+  /*-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  border: 1px solid #5897fb;*/ }
 
 /* line 353, ../../app/assets/css/lib/vendor/chosen.scss */
 .chzn-container-active .chzn-choices .search-field input {
