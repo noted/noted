@@ -91,6 +91,29 @@
 		margin-bottom: 6em;
 		margin-top: 5em;
 
+		h3 {
+			margin-bottom: 1em;
+		}
+
+		table {
+			input {
+				width: 65%;
+			}
+
+			textarea {
+				height: 10em;
+				width: 95%;
+			}
+		}
+
+		form:last-child {
+			margin-top: 4em;
+
+			p {
+				margin-bottom: 0.5em;
+			}
+		}
+
 		.notes, .sources {
 			header {
 				@include container; // Fix this.
