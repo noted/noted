@@ -12,7 +12,7 @@ class Note
         optional do
           string :body
           string :tags
-          array :sources
+          array :source_ids, :nils => true
         end
       end
     end

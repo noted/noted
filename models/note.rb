@@ -3,6 +3,7 @@ class Note
 
   key :title, String
   key :body, String
+  key :source_ids, Array # Array of Source IDs as strings
   key :permalink, String
 
   timestamps!
@@ -25,14 +26,13 @@ class Note
     Maruku.new(self.body).to_html
   end
 
-  def sources=(arr) # Array of IDs
-    self.sources.clear
-
-    arr.each do |id|
-      sources << Source.find(id)
+  def sources
+    arr = []
+    source_ids.each do |id|
+      arr << Source.find(id)
     end
 
-    self.sources
+    arr
   end
 
   def tags=(str)

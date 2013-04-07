@@ -23,7 +23,7 @@ Noted.controllers :notes do
   get :view, :map => "/:user/:project/notes/:note" do
     @note = Note.where(:project_id => @project.id, :permalink => params[:note]).first
 
-    @sources = []
+    @sources = [] # Fix me.
     Source.where(:project_id => @project.id).each do |s|
       hash = {}
       hash[:id] = s.id.to_s
@@ -37,12 +37,14 @@ Noted.controllers :notes do
   end
 
   patch :update do
+    if params[:note][:source_ids].nil? # Fix me.
+      params[:note][:source_ids] = []
+    end
+
     n = Note::Update.run({
       :author => params[:author],
       :note => params[:note]
     })
-
-    d { params[:sources] }
 
     if n.success?
       redirect n.result.project.url
