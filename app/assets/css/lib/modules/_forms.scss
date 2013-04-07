@@ -4,7 +4,7 @@
 */
 
 form {
-	input, textarea, select {
+	input, textarea, select, .chzn-container-multi .chzn-choices {
 		@include border-radius(1px);
 
 		background: $base;
