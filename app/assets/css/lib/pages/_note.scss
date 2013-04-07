@@ -61,7 +61,17 @@ section#note {
 		margin-top: 1em;
 
 		p {
-			text-align: right;
+			&:first-child {
+				margin-bottom: 1em;
+
+				select {
+					width: 100%;
+				}
+			}
+
+			&:last-child {
+				text-align: right;
+			}
 		}
 
 		a.btn {
