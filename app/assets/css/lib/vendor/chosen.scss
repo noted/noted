@@ -8,7 +8,7 @@
 }
 .chzn-container .chzn-drop {
   background: #fff;
-  border: 1px solid #aaa;
+  border: 1px solid $grey;
   border-top: 0;
   position: absolute;
   top: 29px;
@@ -129,13 +129,13 @@
 
 /* @group Multi Chosen */
 .chzn-container-multi .chzn-choices {
-  background-color: #fff;
+  /*background-color: #fff;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
   background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
   background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
   background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
-  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);
-  border: 1px solid #aaa;
+  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);*/
+  border: 2px solid $grey;
   margin: 0;
   padding: 0;
   cursor: text;
@@ -171,7 +171,7 @@
   color: #999;
 }
 .chzn-container-multi .chzn-choices .search-choice {
-  -webkit-border-radius: 3px;
+  /*-webkit-border-radius: 3px;
   -moz-border-radius   : 3px;
   border-radius        : 3px;
   -moz-background-clip   : padding;
@@ -186,12 +186,12 @@
   background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
   -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
   -moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
-  box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
-  color: #333;
-  border: 1px solid #aaaaaa;
-  line-height: 13px;
-  padding: 3px 20px 3px 5px;
-  margin: 3px 0 3px 5px;
+  box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);*/
+  //color: #333;
+  //border: 1px solid #aaaaaa;
+  //line-height: 13px;
+  padding-right: 20px;
+  //margin: 3px 0 3px 5px;
   position: relative;
   cursor: default;
 }
@@ -215,7 +215,7 @@
   display: block;
   position: absolute;
   right: 3px;
-  top: 4px;
+  top: 6px;
   width: 12px;
   height: 12px;
   font-size: 1px;
@@ -255,14 +255,14 @@
   display: list-item;
 }
 .chzn-container .chzn-results .highlighted {
-  background-color: #3875d7;
+  /*background-color: #3875d7;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
   background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
   background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
-  color: #fff;
+  color: #fff;*/
 }
 .chzn-container .chzn-results li em {
   background: #feffde;
@@ -345,10 +345,10 @@
   background-position: -18px 2px;
 }
 .chzn-container-active .chzn-choices {
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  /*-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
   -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
   box-shadow        : 0 0 5px rgba(0,0,0,.3);
-  border: 1px solid #5897fb;
+  border: 1px solid #5897fb;*/
 }
 .chzn-container-active .chzn-choices .search-field input {
   color: #111 !important;

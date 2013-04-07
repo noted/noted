@@ -3,7 +3,7 @@
 		file: css/lib/modules/_buttons.scss
 */
 
-a.btn, button, input[type="submit"], span.btn {
+a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choices .search-choice {
 	@include border-radius(2px);
 	//@include box-shadow(rgba(#333, 0.5) 0 1px 3px -2px);
 
