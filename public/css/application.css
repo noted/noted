@@ -1661,48 +1661,48 @@ strong {
 /* line 91, ../../app/assets/css/application.scss */
 body > header {
   background: #e74c3c; }
-  /* line 95, ../../app/assets/css/application.scss */
+  /* line 94, ../../app/assets/css/application.scss */
   body > header a {
     color: #fefefe; }
-    /* line 98, ../../app/assets/css/application.scss */
+    /* line 97, ../../app/assets/css/application.scss */
     body > header a:hover {
       color: #ecf0f1; }
-  /* line 103, ../../app/assets/css/application.scss */
+  /* line 102, ../../app/assets/css/application.scss */
   body > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 107, ../../app/assets/css/application.scss */
+  /* line 106, ../../app/assets/css/application.scss */
   body > header nav {
     font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
-    /* line 115, ../../app/assets/css/application.scss */
+    /* line 114, ../../app/assets/css/application.scss */
     body > header nav section:first-child {
       width: 41.17647%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       margin-top: 0.35em; }
-      /* line 120, ../../app/assets/css/application.scss */
+      /* line 119, ../../app/assets/css/application.scss */
       body > header nav section:first-child li {
         padding-right: 2em; }
-    /* line 125, ../../app/assets/css/application.scss */
+    /* line 124, ../../app/assets/css/application.scss */
     body > header nav section:last-child {
       width: 32.77311%;
       float: right;
       margin-right: 0;
       *margin-left: -0.5em;
       display: inline; }
-      /* line 128, ../../app/assets/css/application.scss */
+      /* line 127, ../../app/assets/css/application.scss */
       body > header nav section:last-child ul {
         float: right; }
-        /* line 131, ../../app/assets/css/application.scss */
+        /* line 130, ../../app/assets/css/application.scss */
         body > header nav section:last-child ul li {
           padding-left: 0.75em; }
-    /* line 137, ../../app/assets/css/application.scss */
+    /* line 136, ../../app/assets/css/application.scss */
     body > header nav section li {
       display: inline-block; }
-  /* line 143, ../../app/assets/css/application.scss */
+  /* line 142, ../../app/assets/css/application.scss */
   body > header .contain {
     padding: 1.5em 0; }
 
@@ -1712,20 +1712,22 @@ body > header {
 /*
 	IV. Footer
 */
-/* line 162, ../../app/assets/css/application.scss */
+/* line 161, ../../app/assets/css/application.scss */
 body > footer {
-  background: #ecf0f1;
-  color: #b1c2c6;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: #edf4ef;
+  border-top: 5px solid #e0ebe8;
+  color: #34495e;
+  margin-top: 8em;
   font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-top: 6em;
-  padding: 4em 0;
+  padding: 6em 0;
   text-align: center; }
-  /* line 170, ../../app/assets/css/application.scss */
+  /* line 172, ../../app/assets/css/application.scss */
   body > footer ul {
-    margin-bottom: 1em; }
-    /* line 173, ../../app/assets/css/application.scss */
+    margin-bottom: 2em; }
+    /* line 175, ../../app/assets/css/application.scss */
     body > footer ul li {
       display: inline-block; }
-      /* line 176, ../../app/assets/css/application.scss */
+      /* line 178, ../../app/assets/css/application.scss */
       body > footer ul li + li {
         padding-left: 1em; }
