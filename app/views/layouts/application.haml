@@ -15,14 +15,8 @@
     %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}
     %link{:href => "/css/application.css", :rel => "stylesheet"}
 
-    %script{:src => "http://code.jquery.com/jquery-1.9.1.min.js"}
-    %script{:src => "http://underscorejs.org/underscore-min.js"}
-    %script{:src => "/jsc/lib/jquery.fittext.js"}
-    %script{:src => "/jsc/lib/autoresize.jquery.js"}
-    %script{:src => "/jsc/lib/autogrow.jquery.js"}
-    %script{:src => "/jsc/lib/jquery.tags.js"}
-    %script{:src => "/jsc/lib/jquery.chosen.js"}
-    %script{:src => "/jsc/application.js"}
+    %script{:"data-main" => "/jsc/lib/main", :src => "/jsc/lib/require-jquery.js"}
+
     %script{:src => "//use.typekit.net/rau7fcj.js", :type => "text/javascript"}
     :coffeescript
       try
