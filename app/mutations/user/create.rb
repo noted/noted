@@ -6,17 +6,27 @@ class User
           string :username
           string :email
           string :name
-          string :password
-        end
-
-        optional do
-          string :institution
         end
       end
+
+      hash :password do
+        string :password
+        string :confirm
+      end
+    end
+
+    optional do
+      string :institution
     end
 
     def execute
       u = User.new(user)
+
+      if password[:password] == password[:confirm]
+        u.password = password[:password]
+      else
+        add_error(:password, :doesnt_match, "Your passwords don't match")
+      end
 
       unless user[:institution].blank?
         i = Institution.where(:code => institution).first
