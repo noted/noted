@@ -6,6 +6,7 @@ dependencies = [
   "jquery.autogrow"
   "jquery.tags"
   "jquery.chosen"
+  "jquery.tipsy"
   "noted.tags"
   "noted.contributors"
 ]
@@ -24,6 +25,4 @@ require dependencies, ($) ->
           $(".description .text").removeClass("display").addClass "hidden"
 
 
-
-
-
+      $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS

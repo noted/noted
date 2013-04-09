@@ -1572,6 +1572,131 @@ section#source form.manual {
     background-repeat: no-repeat !important;
     background-size: 52px 37px !important; } }
 /* @end */
+/* line 1, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy {
+  font: 12px "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: absolute;
+  padding: 5px;
+  z-index: 100000; }
+
+/* line 2, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-inner {
+  background-color: #000;
+  color: #FFF;
+  max-width: 200px;
+  padding: 5px 8px 4px 8px;
+  text-align: center; }
+
+/* Rounded corners */
+/* line 5, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-inner {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+
+/* Uncomment for shadow */
+/*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+/* line 10, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: 5px solid #000; }
+
+/* Rules to colour arrows */
+/* line 13, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-n {
+  border-bottom-color: #000; }
+
+/* line 14, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-s {
+  border-top-color: #000; }
+
+/* line 15, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-e {
+  border-left-color: #000; }
+
+/* line 16, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-w {
+  border-right-color: #000; }
+
+/* line 18, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-n .tipsy-arrow {
+  top: 0px;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 19, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-nw .tipsy-arrow {
+  top: 0;
+  left: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 20, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-ne .tipsy-arrow {
+  top: 0;
+  right: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 21, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-s .tipsy-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 22, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-sw .tipsy-arrow {
+  bottom: 0;
+  left: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 23, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-se .tipsy-arrow {
+  bottom: 0;
+  right: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 24, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-e .tipsy-arrow {
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-left-style: solid;
+  border-right: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+/* line 25, ../../../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-w .tipsy-arrow {
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-right-style: solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
 /*
 	= Appendix
 		I. Universal
