@@ -364,6 +364,51 @@ footer.comments {
   footer.comments form section footer button {
     float: right; }
 
+/* line 2, ../../app/assets/css/lib/modules/_tabs.scss */
+.tabs ul {
+  margin-bottom: 3em; }
+  /* line 5, ../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs ul li {
+    display: inline-block;
+    margin: 0; }
+    /* line 10, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs ul li:first-child a {
+      -moz-border-radius-topleft: 3px;
+      -webkit-border-top-left-radius: 3px;
+      border-top-left-radius: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    /* line 17, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs ul li:last-child a {
+      -moz-border-radius-topright: 3px;
+      -webkit-border-top-right-radius: 3px;
+      border-top-right-radius: 3px;
+      -moz-border-radius-bottomright: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+    /* line 23, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs ul li a {
+      background: #b1c2c6;
+      border: none;
+      color: #fefefe;
+      cursor: pointer;
+      display: block;
+      font: bold 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+      margin: 0;
+      outline: none;
+      padding: 0.5em 0.75em;
+      text-transform: uppercase;
+      text-shadow: none; }
+      /* line 36, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs ul li a:hover {
+        background: #a3b6bb;
+        color: #fefefe; }
+      /* line 41, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs ul li a i {
+        position: relative;
+        top: 1px; }
+
 /*
 	Noted.
 		file: css/pages/_index.scss
@@ -1014,11 +1059,9 @@ section#note footer {
   section#note footer a.btn {
     position: relative;
     top: 1px; }
-/* line 83, ../../app/assets/css/lib/pages/_note.scss */
-section#note .text {
-  margin-top: 4em;
-  padding-top: 4em;
-  border-top: 1px solid #ecf0f1; }
+/* line 87, ../../app/assets/css/lib/pages/_note.scss */
+section#note #view header {
+  margin-bottom: 1em; }
 
 /*
 	Noted.
