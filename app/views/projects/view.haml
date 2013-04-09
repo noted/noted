@@ -51,13 +51,15 @@
                     - note.tags.each do |t|
                       %li{:"data-value" => t.text}
                         %a.btn= t.text
-      %foooter
+      %footer
         - if current_user
-          - form_tag url(:notes, :create), :class => "full", :method => "post" do
-            = hidden_field_tag :project, :value => @project.id
-            = hidden_field_tag :author, :value => current_user.id
-            %button.full.subtle{:type => "submit"}
-              %i.ss-icon plus
+          /- form_tag url(:notes, :create), :class => "full", :method => "post" do
+          /  = hidden_field_tag :project, :value => @project.id
+          /  = hidden_field_tag :author, :value => current_user.id
+          /  %button.full.subtle{:type => "submit"}
+          /    %i.ss-icon plus
+          %a.btn.full.subtle{:href => "/notes/new?project=#{@project.id}&author=#{current_user.id}"}
+            %i.ss-icon plus
     .sources
       %header
         %h3 Sources

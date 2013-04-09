@@ -114,79 +114,114 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
     color: #fefefe; }
   /* line 25, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.full, button.full, input[type="submit"].full, span.btn.full, .chzn-container-multi .chzn-choices .search-choice.full {
-    display: block;
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    width: 50%; }
-  /* line 33, ../../app/assets/css/lib/modules/_buttons.scss */
+    display: block;
+    text-align: center; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    a.btn.full:after, button.full:after, input[type="submit"].full:after, span.btn.full:after, .chzn-container-multi .chzn-choices .search-choice.full:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 35, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.subtle, button.subtle, input[type="submit"].subtle, span.btn.subtle, .chzn-container-multi .chzn-choices .search-choice.subtle {
     background: #ecf0f1; }
-    /* line 36, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 38, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.subtle:hover, button.subtle:hover, input[type="submit"].subtle:hover, span.btn.subtle:hover, .chzn-container-multi .chzn-choices .search-choice.subtle:hover {
       background: #1abc9c; }
-  /* line 41, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 43, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue, span.btn.primary, span.btn.blue, .chzn-container-multi .chzn-choices .search-choice.primary, .chzn-container-multi .chzn-choices .search-choice.blue {
     background: #3498db; }
-    /* line 44, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 46, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover, span.btn.primary:hover, span.btn.blue:hover, .chzn-container-multi .chzn-choices .search-choice.primary:hover, .chzn-container-multi .chzn-choices .search-choice.blue:hover {
       background: #258cd1; }
-  /* line 49, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 51, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.turquoise, button.turquoise, input[type="submit"].turquoise, span.btn.turquoise, .chzn-container-multi .chzn-choices .search-choice.turquoise {
     background: #1abc9c; }
-    /* line 52, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 54, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover, span.btn.turquoise:hover, .chzn-container-multi .chzn-choices .search-choice.turquoise:hover {
       background: #17a689; }
-  /* line 57, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 59, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.orange, button.orange, input[type="submit"].orange, span.btn.orange, .chzn-container-multi .chzn-choices .search-choice.orange {
     background: #e67e22; }
-    /* line 60, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 62, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover, span.btn.orange:hover, .chzn-container-multi .chzn-choices .search-choice.orange:hover {
       background: #d67118; }
-  /* line 65, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 67, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.yellow, button.yellow, input[type="submit"].yellow, span.btn.yellow, .chzn-container-multi .chzn-choices .search-choice.yellow {
     background: #f1c40f; }
-    /* line 68, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 70, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover, .chzn-container-multi .chzn-choices .search-choice.yellow:hover {
       background: #f39c12; }
-  /* line 73, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 75, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.red, button.red, input[type="submit"].red, span.btn.red, .chzn-container-multi .chzn-choices .search-choice.red {
     background: #e74c3c; }
-    /* line 76, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 78, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover, .chzn-container-multi .chzn-choices .search-choice.red:hover {
       background: #c0392b; }
-  /* line 81, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 83, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.green, button.green, input[type="submit"].green, span.btn.green, .chzn-container-multi .chzn-choices .search-choice.green {
     background: #2ecc71; }
-    /* line 84, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 86, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, span.btn.green:hover, .chzn-container-multi .chzn-choices .search-choice.green:hover {
       background: #27ae60; }
-  /* line 89, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 91, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.large, button.large, input[type="submit"].large, span.btn.large, .chzn-container-multi .chzn-choices .search-choice.large {
     font-size: 1em; }
-  /* line 93, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 95, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg, .chzn-container-multi .chzn-choices .search-choice.no-bg {
     background: transparent;
     font-size: 1em;
     padding: 0; }
-    /* line 98, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 100, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red, .chzn-container-multi .chzn-choices .search-choice.no-bg.red {
       color: #e74c3c; }
-      /* line 101, ../../app/assets/css/lib/modules/_buttons.scss */
+      /* line 103, ../../app/assets/css/lib/modules/_buttons.scss */
       a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover, .chzn-container-multi .chzn-choices .search-choice.no-bg.red:hover {
         color: #c0392b; }
-    /* line 106, ../../app/assets/css/lib/modules/_buttons.scss */
+    /* line 108, ../../app/assets/css/lib/modules/_buttons.scss */
     a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i, .chzn-container-multi .chzn-choices .search-choice.no-bg i {
       position: relative;
       top: 0; }
-  /* line 112, ../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 114, ../../app/assets/css/lib/modules/_buttons.scss */
   a.btn i, button i, input[type="submit"] i, span.btn i, .chzn-container-multi .chzn-choices .search-choice i {
     position: relative;
     top: 1px; }
 
-/* line 118, ../../app/assets/css/lib/modules/_buttons.scss */
+/* line 120, ../../app/assets/css/lib/modules/_buttons.scss */
 form.full {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 1em; }
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  form.full:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 125, ../../app/assets/css/lib/modules/_buttons.scss */
+  form.full > .full {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    form.full > .full:after {
+      content: "";
+      display: table;
+      clear: both; }
 
 /*
 	Noted.

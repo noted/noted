@@ -6,6 +6,20 @@ Noted.controllers :notes do
     end
   end
 
+  get :new do
+    n = Note::Create.run({
+      :project => params[:project],
+      :author => params[:author],
+    })
+
+    if n.success?
+      redirect n.result.url
+    else
+      flash[:error] = n.errors.message_list
+      redirect Project.find(params[:project]).url
+    end
+  end
+
   post :create do
     n = Note::Create.run({
       :project => params[:project],

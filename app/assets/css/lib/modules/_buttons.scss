@@ -23,11 +23,13 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 	}
 
 	&.full {
+		@include container;
+
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		//margin-left: auto;
+		//margin-right: auto;
 		text-align: center;
-		width: 50%;
+		//width: 50%;
 	}
 
 	&.subtle {
@@ -116,5 +118,11 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 }
 
 form.full {
+	@include container;
+
 	margin-top: 1em;
+
+	& > .full {
+		@include container;
+	}
 }
