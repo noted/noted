@@ -14,16 +14,8 @@
     = partial 'partials/flash', :locals => { :flash => flash }
     .notes
       %header
-        %hgroup
-          %h3 Notes
-          %ul.tags
-        %aside
-          - if current_user
-            - form_tag url(:notes, :create), :method => "post" do
-              = hidden_field_tag :project, :value => @project.id
-              = hidden_field_tag :author, :value => current_user.id
-              %button{:type => "submit"}
-                %i.ss-icon plus
+        %h3 Notes
+        %ul.tags
       %section
         - if @notes.blank?
           %p
@@ -59,14 +51,16 @@
                     - note.tags.each do |t|
                       %li{:"data-value" => t.text}
                         %a.btn= t.text
+      %foooter
+        - if current_user
+          - form_tag url(:notes, :create), :class => "full", :method => "post" do
+            = hidden_field_tag :project, :value => @project.id
+            = hidden_field_tag :author, :value => current_user.id
+            %button.full.subtle{:type => "submit"}
+              %i.ss-icon plus
     .sources
       %header
-        %hgroup
-          %h3 Sources
-        %aside
-          - if current_user
-            %a.btn{:href => "#{@project.url}/sources/new"}
-              %i.ss-icon plus
+        %h3 Sources
       %section
         - if @sources.blank?
           %p
@@ -92,5 +86,9 @@
                       = hidden_field_tag :"source[id]", :value => source.id
                       %button.trash{:href => ""}
                         %i.ss-icon trash
+      %footer
+        - if current_user
+          %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}
+            %i.ss-icon plus
 
   = partial "partials/comments", :locals => { :comments => @project.comments, :source => { :type => "Project", :id => @project.id } }

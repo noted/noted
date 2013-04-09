@@ -7,6 +7,9 @@ Noted.controllers do
     end
   end
 
+  get :blog do
+  end
+
   get :explore do
   end
 

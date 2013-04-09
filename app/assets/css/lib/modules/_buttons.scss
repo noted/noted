@@ -22,6 +22,22 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 		color: $base;
 	}
 
+	&.full {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		width: 50%;
+	}
+
+	&.subtle {
+		background: $grey;
+
+		&:hover {
+			background: $turquoise;
+		}
+	}
+
 	&.primary, &.blue {
 		background: $blue;
 
@@ -97,4 +113,8 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 		position: relative;
 		top: 1px;
 	}
+}
+
+form.full {
+	margin-top: 1em;
 }

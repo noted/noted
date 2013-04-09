@@ -107,7 +107,7 @@
 		}
 
 		form:last-child {
-			margin-top: 4em;
+			//margin-top: 4em;
 
 			p {
 				margin-bottom: 0.5em;
@@ -131,6 +131,10 @@
 					font-size: 0.85rem;
 					text-align: right;
 				}
+			}
+
+			footer {
+				margin-top: 1em;
 			}
 		}
 
@@ -247,7 +251,7 @@
 		.sources {
 			@include span-columns(8 omega);
 
-						header {
+			header {
 				h3 , ul {
 					display: inline-block;
 					float: left;
