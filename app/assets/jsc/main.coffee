@@ -1,6 +1,7 @@
 dependencies = [
   "jquery"
   "underscore"
+  "jquery.ui"
   "jquery.fittext"
   "jquery.autoresize"
   "jquery.autogrow"
@@ -24,5 +25,6 @@ require dependencies, ($) ->
         else
           $(".description .text").removeClass("display").addClass "hidden"
 
+      $(".tabs").tabs()
 
       $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS

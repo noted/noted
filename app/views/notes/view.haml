@@ -2,28 +2,40 @@
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#note
     = partial 'partials/flash', :locals => { :flash => flash }
-    - form_tag url(:notes, :update), :method => "patch", :class => "note" do
-      .textbox
-        = hidden_field_tag :"note[id]", :value => @note.id
-        = hidden_field_tag :author, :value => @user.id
+    .tabs
+      %ul
+        %li
+          %a{:href => "#view"}
+            %i.ss-icon view
+        %li
+          %a{:href => "#edit"}
+            %i.ss-icon edit
+      #view
         %header
-          = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
-        %section
-          = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
-        %footer
-          = hidden_field_tag :"existing-tags", :value => @note.tags_str
-          = text_field_tag :"tags", :class => "tags"
-      %footer
-        %p
-          %select.chosen{:"data-placeholder" => "Attach some sources", :multiple => true, :name => "note[source_ids][]"}
-            - @sources.each do |s|
-              %option{:value => s[:id], :selected => s[:selected]}= s[:text]
-        %p
-          %button.primary{:type => "submit"}
-            %i.ss-icon check
-          %a.btn.orange{:href => ""}
-            %i.ss-icon close
-    .text
-      = @note.html
+          %h2= @note.title
+        .text
+          = @note.html
+      #edit
+        - form_tag url(:notes, :update), :method => "patch", :class => "note" do
+          .textbox
+            = hidden_field_tag :"note[id]", :value => @note.id
+            = hidden_field_tag :author, :value => @user.id
+            %header
+              = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
+            %section
+              = text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
+            %footer
+              = hidden_field_tag :"existing-tags", :value => @note.tags_str
+              = text_field_tag :"tags", :class => "tags"
+          %footer
+            %p
+              %select.chosen{:"data-placeholder" => "Attach some sources", :multiple => true, :name => "note[source_ids][]"}
+                - @sources.each do |s|
+                  %option{:value => s[:id], :selected => s[:selected]}= s[:text]
+            %p
+              %button.primary{:type => "submit"}
+                %i.ss-icon check
+              %a.btn.orange{:href => ""}
+                %i.ss-icon close
   = partial "partials/comments", :locals => { :comments => @note.comments, :source => { :type => "Note", :id => @note.id } }
 
