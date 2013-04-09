@@ -1,7 +1,7 @@
 (function() {
   var dependencies;
 
-  dependencies = ["jquery", "underscore", "jquery.fittext", "jquery.autoresize", "jquery.autogrow", "jquery.tags", "jquery.chosen", "jquery.tipsy", "noted.tags", "noted.contributors"];
+  dependencies = ["jquery", "underscore", "jquery.ui", "jquery.fittext", "jquery.autoresize", "jquery.autogrow", "jquery.tags", "jquery.chosen", "jquery.tipsy", "noted.tags", "noted.contributors"];
 
   require(dependencies, function($) {
     return $(function() {
@@ -15,6 +15,7 @@
             return $(".description .text").removeClass("display").addClass("hidden");
           }
         });
+        $(".tabs").tabs();
         return $(".tooltip").tipsy({
           gravity: $.fn.tipsy.autoNS
         });

@@ -1,0 +1,58 @@
+.tabs {
+	ul {
+		margin-bottom: 3em;
+
+		li {
+			display: inline-block;
+			margin: 0;
+
+			&:first-child {
+				a {
+					@include border-top-left-radius(3px);
+					@include border-bottom-left-radius(3px);
+				}
+			}
+
+			&:last-child {
+				a {
+					@include border-top-right-radius(3px);
+					@include border-bottom-right-radius(3px);
+				}
+			}
+
+			&.ui-state-active {
+				a {
+					background: $turquoise;
+
+					&:hover {
+						background: $dark-turquoise;
+					}
+				}
+			}
+
+			a {
+				background: darken($grey, 20%);
+				border: none;
+				color: $base;
+				cursor: pointer;
+				display: block;
+				font: bold 0.85em $sans-serif;
+				margin: 0;
+				outline: none;
+				padding: 0.5em 0.75em;
+				text-transform: uppercase;
+				text-shadow: none;
+
+				&:hover {
+					background: darken($grey, 25%);
+					color: $base;
+				}
+
+				i {
+					position: relative;
+					top: 1px;
+				}
+			}
+		}
+	}
+}
