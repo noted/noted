@@ -1,51 +1,60 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#source
-    %article
-      %p.text= @source.citation.html
-    - form_tag url(:sources, :update), :class => "manual", :method => "patch" do
-      = hidden_field_tag :"source[id]", :value => @source.id
-      = hidden_field_tag :project, :value => @project.id
-      = hidden_field_tag :author, :value => current_user.id
-      - case @citation.raw[:type]
-      - when "book"
-        = hidden_field_tag :"source[type]", :value => "book"
-        %article{:"data-type" => "book"}
-          = hidden_field_tag :"book[type]", :value => "book"
-          %table
-            %tr.border
-              %td Contributors
-              %td
-                %ul.contributors
-                  - @citation.raw[:contributors].each do |c|
-                    - num = @citation.raw[:contributors].index(c)
-                    %li{:"data-num" => num, :"data-type" => "book"}
-                      = select_tag :"book[contributors][#{num}][role]", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]], :selected => c[:role].upcase
-                      = text_field_tag :"book[contributors][#{num}][first]", :class => "first", :placeholder => "John", :value => c[:first]
-                      = text_field_tag :"book[contributors][#{num}][middle]", :class => "middle", :placeholder => "Q", :maxlength => "1", :value => c[:middle]
-                      = text_field_tag :"book[contributors][#{num}][last]", :class => "last", :placeholder => "Sample", :value => c[:last]
-                      = text_field_tag :"book[contributors][#{num}][suffix]", :class => "suffix", :placeholder => "Jr", :value => c[:suffix]
-                %a.btn.add{:"data-action" => "add-contributor"}
-                  %i.ss-icon plus
-                  Contributor
-            %tr
-              %td Title
-              %td= text_field_tag :"book[title]", :class => "full", :value => @citation.raw[:title]
-            %tr
-              %td Publication
-              %td
-                = text_field_tag :"book[publisher]", :class => "third", :placeholder => "Publisher", :value => @citation.raw[:publisher]
-                = text_field_tag :"book[city]", :class => "third", :placeholder => "City", :value => @citation.raw[:city]
-                = text_field_tag :"book[year]", :class => "third", :placeholder => "Year", :value => @citation.raw[:year]
-            %tr
-              %td Advanced
-              %td
-                = text_field_tag :"book[volume]", :class => "third", :placeholder => "Volume", :value => @citation.raw[:volume]
-                = text_field_tag :"book[edition]", :class => "third", :placeholder => "Edition", :value => @citation.raw[:edition]
-                = text_field_tag :"book[series]", :class => "third", :placeholder => "Series", :value => @citation.raw[:series]
-            %tr
-              %td
-              %td
-                %a.btn{:href => @project.url} Cancel
-                %button.primary{:type => "submit"} Update
+    .tabs
+      %ul
+        %li
+          %a{:href => "#view"}
+            %i.ss-icon view
+        %li
+          %a{:href => "#edit"}
+            %i.ss-icon edit
+      %article#view
+        %p.text= @source.citation.html
+      #edit
+        - form_tag url(:sources, :update), :class => "manual", :method => "patch" do
+          = hidden_field_tag :"source[id]", :value => @source.id
+          = hidden_field_tag :project, :value => @project.id
+          = hidden_field_tag :author, :value => current_user.id
+          - case @citation.raw[:type]
+          - when "book"
+            = hidden_field_tag :"source[type]", :value => "book"
+            %article{:"data-type" => "book"}
+              = hidden_field_tag :"book[type]", :value => "book"
+              %table
+                %tr.border
+                  %td Contributors
+                  %td
+                    %ul.contributors
+                      - @citation.raw[:contributors].each do |c|
+                        - num = @citation.raw[:contributors].index(c)
+                        %li{:"data-num" => num, :"data-type" => "book"}
+                          = select_tag :"book[contributors][#{num}][role]", :options => [["Author", "author"], ["Editor", "editor"], ["Translator", "translator"], ["Compiler", "compiler"]], :selected => c[:role].upcase
+                          = text_field_tag :"book[contributors][#{num}][first]", :class => "first", :placeholder => "John", :value => c[:first]
+                          = text_field_tag :"book[contributors][#{num}][middle]", :class => "middle", :placeholder => "Q", :maxlength => "1", :value => c[:middle]
+                          = text_field_tag :"book[contributors][#{num}][last]", :class => "last", :placeholder => "Sample", :value => c[:last]
+                          = text_field_tag :"book[contributors][#{num}][suffix]", :class => "suffix", :placeholder => "Jr", :value => c[:suffix]
+                    %a.btn.add{:"data-action" => "add-contributor"}
+                      %i.ss-icon plus
+                      Contributor
+                %tr
+                  %td Title
+                  %td= text_field_tag :"book[title]", :class => "full", :value => @citation.raw[:title]
+                %tr
+                  %td Publication
+                  %td
+                    = text_field_tag :"book[publisher]", :class => "third", :placeholder => "Publisher", :value => @citation.raw[:publisher]
+                    = text_field_tag :"book[city]", :class => "third", :placeholder => "City", :value => @citation.raw[:city]
+                    = text_field_tag :"book[year]", :class => "third", :placeholder => "Year", :value => @citation.raw[:year]
+                %tr
+                  %td Advanced
+                  %td
+                    = text_field_tag :"book[volume]", :class => "third", :placeholder => "Volume", :value => @citation.raw[:volume]
+                    = text_field_tag :"book[edition]", :class => "third", :placeholder => "Edition", :value => @citation.raw[:edition]
+                    = text_field_tag :"book[series]", :class => "third", :placeholder => "Series", :value => @citation.raw[:series]
+                %tr
+                  %td
+                  %td
+                    %a.btn{:href => @project.url} Cancel
+                    %button.primary{:type => "submit"} Update
   = partial "partials/comments", :locals => { :comments => @source.comments, :source => { :type => "Source", :id => @source.id } }
