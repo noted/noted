@@ -20,6 +20,16 @@
 				}
 			}
 
+			&.ui-state-active {
+				a {
+					background: $turquoise;
+
+					&:hover {
+						background: $dark-turquoise;
+					}
+				}
+			}
+
 			a {
 				background: darken($grey, 20%);
 				border: none;

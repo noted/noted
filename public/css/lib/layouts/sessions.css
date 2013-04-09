@@ -387,7 +387,13 @@ footer.comments {
       -moz-border-radius-bottomright: 3px;
       -webkit-border-bottom-right-radius: 3px;
       border-bottom-right-radius: 3px; }
-    /* line 23, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    /* line 24, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs ul li.ui-state-active a {
+      background: #1abc9c; }
+      /* line 27, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs ul li.ui-state-active a:hover {
+        background: #16a085; }
+    /* line 33, ../../../../app/assets/css/lib/modules/_tabs.scss */
     .tabs ul li a {
       background: #b1c2c6;
       border: none;
@@ -400,11 +406,11 @@ footer.comments {
       padding: 0.5em 0.75em;
       text-transform: uppercase;
       text-shadow: none; }
-      /* line 36, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      /* line 46, ../../../../app/assets/css/lib/modules/_tabs.scss */
       .tabs ul li a:hover {
         background: #a3b6bb;
         color: #fefefe; }
-      /* line 41, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      /* line 51, ../../../../app/assets/css/lib/modules/_tabs.scss */
       .tabs ul li a i {
         position: relative;
         top: 1px; }

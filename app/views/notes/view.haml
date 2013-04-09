@@ -5,11 +5,16 @@
     .tabs
       %ul
         %li
-          %a{:href => "#edit"}
-            %i.ss-icon edit
-        %li
           %a{:href => "#view"}
             %i.ss-icon view
+        %li
+          %a{:href => "#edit"}
+            %i.ss-icon edit
+      #view
+        %header
+          %h2= @note.title
+        .text
+          = @note.html
       #edit
         - form_tag url(:notes, :update), :method => "patch", :class => "note" do
           .textbox
@@ -32,10 +37,5 @@
                 %i.ss-icon check
               %a.btn.orange{:href => ""}
                 %i.ss-icon close
-      #view
-        %header
-          %h2= @note.title
-        .text
-          = @note.html
   = partial "partials/comments", :locals => { :comments => @note.comments, :source => { :type => "Note", :id => @note.id } }
 
