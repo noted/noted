@@ -15,10 +15,11 @@ Von.configure do |c|
     r = URI.parse(ENV['REDISTOGO_URL'])
 
     c.redis = { :host => r.host, :port => r.port, :password => r.password }
-  elsif PADRINO_ENV == "test"
-    c.redis = { :host => 'localhost', :port => 6379, :db => Random.rand(2) }
   else
-    c.redis = { :host => 'localhost', :port => 6379 }
+    y = YAML.load_file(Padrino.root(".redis.yml"))
+    y = y[PADRINO_ENV]
+
+    c.redis = { :host => y["host"], :port => y["port"], :db => y["db"] }
   end
 
   c.namespace = 'von'
