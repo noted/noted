@@ -43,8 +43,15 @@ form {
 			}
 		}
 
-		input.large {
-			width: 75%;
+		input {
+			width: 11.75em;
+
+			&.large {
+				width: 25em;
+			}
+
+			& + input {
+			}
 		}
 	}
 

@@ -265,14 +265,17 @@ form table {
       width: 10%;
       text-align: right; }
   /* line 46, ../../../../app/assets/css/lib/modules/_forms.scss */
-  form table input.large {
-    width: 75%; }
-/* line 51, ../../../../app/assets/css/lib/modules/_forms.scss */
+  form table input {
+    width: 11.75em; }
+    /* line 49, ../../../../app/assets/css/lib/modules/_forms.scss */
+    form table input.large {
+      width: 25em; }
+/* line 58, ../../../../app/assets/css/lib/modules/_forms.scss */
 form textarea {
   color: #444444;
   font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
   line-height: 2rem; }
-/* line 57, ../../../../app/assets/css/lib/modules/_forms.scss */
+/* line 64, ../../../../app/assets/css/lib/modules/_forms.scss */
 form.inline {
   display: inline; }
 

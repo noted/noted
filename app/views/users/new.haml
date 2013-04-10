@@ -11,23 +11,23 @@
           %td
             %label{:for => "user[name]"} Name
           %td
-            = text_field_tag :"user[name]", :placeholder => "Name"
+            = text_field_tag :"user[name]", :class => "large", :placeholder => "Neil deGrasse Tyson"
         %tr
           %td
             %label{:for => "user[username]"} Username
           %td
-            = text_field_tag :"user[username]", :placeholder => "Username"
+            = text_field_tag :"user[username]", :class => "large", :placeholder => "neiltyson"
         %tr
           %td
             %label{:for => "user[email]"} Email
           %td
-            = email_field_tag :"user[email]", :placeholder => "Email"
+            = email_field_tag :"user[email]", :class => "large", :placeholder => "your@email.edu"
         %tr
           %td
             %label{:for => "user[password]"} Password
           %td
-            = password_field_tag :"password[password]", :placeholder => "Password"
-            = password_field_tag :"password[confirm]", :placeholder => "Confirm"
+            = password_field_tag :"password[password]", :placeholder => "secret"
+            = password_field_tag :"password[confirm]", :placeholder => "again"
         %tr
           %td
           %td
