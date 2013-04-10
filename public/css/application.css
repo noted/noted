@@ -282,6 +282,13 @@ form.inline {
 */
 /* line 6, ../../app/assets/css/lib/modules/_flash.scss */
 .flash {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -289,22 +296,24 @@ form.inline {
   border-radius: 2px;
   font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: bold;
-  margin-bottom: 1em;
-  padding: 0.75em;
-  width: 85%; }
+  margin-bottom: 1.75em;
+  padding: 0.75em; }
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .flash:after {
+    content: "";
+    display: table;
+    clear: both; }
   /* line 15, ../../app/assets/css/lib/modules/_flash.scss */
   .flash.error {
-    background-color: #ed7669;
-    color: #43140f; }
-  /* line 20, ../../app/assets/css/lib/modules/_flash.scss */
+    background-color: #f29f97; }
+  /* line 19, ../../app/assets/css/lib/modules/_flash.scss */
   .flash.notice {
     background-color: #2ecc71;
     color: #f5f7f7; }
-  /* line 25, ../../app/assets/css/lib/modules/_flash.scss */
+  /* line 24, ../../app/assets/css/lib/modules/_flash.scss */
   .flash.warning {
     background: #f1c40f;
-    border: 1px solid #f39c12;
-    color: #362203; }
+    border: 1px solid #f39c12; }
 
 /*
     Noted.
