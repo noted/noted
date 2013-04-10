@@ -1,10 +1,26 @@
-#new-project
-  %header
-    %h2 New Project
-  - form_tag url(:projects, :create), :method => "post" do
-    %p= text_field_tag :"project[title]", :placeholder => "Title"
-    %p= text_area_tag :"project[description]", :placeholder => "What is your project about?"
-    %footer
+#project
+  %section
+    %header
+      %h3
+        = Project
+        %span / New
+    = partial "partials/flash", :locals => { :flash => flash }
+    - form_tag url(:projects, :create), :method => "post" do
       = hidden_field_tag :user, :value => current_user.id
-      = hidden_field_tag :author, :value => current_user.id
-      %p= button_tag "Create", :type => "submit", :class => "btn primary"
+      %table
+        %tr
+          %td
+            %label{:for => "project[title]"} Title
+          %td
+            = text_field_tag :"project[title]", :required => true
+        %tr
+          %td
+            %label{:for => "project[description]"} Description
+          %td
+            = text_area_tag :"project[description]"
+        %tr
+          %td
+          %td
+            %button.primary{:type => "submit"}
+              %i.ss-icon check
+

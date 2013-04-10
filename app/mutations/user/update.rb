@@ -10,8 +10,8 @@ class User
           string :username
           string :email
           string :name
-          string :location
-          string :website
+          string :location, empty: true
+          string :website, empty: true
         end
       end
     end

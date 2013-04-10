@@ -1844,42 +1844,45 @@ blockquote {
 /* line 43, ../../app/assets/css/application.scss */
 em {
   font-style: italic; }
+  /* line 46, ../../app/assets/css/application.scss */
+  em.subtle {
+    color: #bdc3c7; }
 
-/* line 47, ../../app/assets/css/application.scss */
+/* line 51, ../../app/assets/css/application.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 53, ../../app/assets/css/application.scss */
+/* line 57, ../../app/assets/css/application.scss */
 h1 {
   font-size: 1.25em;
   text-shadow: 0 1px 0 rgba(214, 44, 26, 0.2);
   text-transform: none; }
 
-/* line 59, ../../app/assets/css/application.scss */
+/* line 63, ../../app/assets/css/application.scss */
 h2 {
   font-size: 2em;
   line-height: 1em;
   letter-spacing: 1px; }
 
-/* line 65, ../../app/assets/css/application.scss */
+/* line 69, ../../app/assets/css/application.scss */
 h3 {
   font-size: 1.35em;
   text-transform: none; }
-  /* line 69, ../../app/assets/css/application.scss */
+  /* line 73, ../../app/assets/css/application.scss */
   h3 span {
     color: #bdc3c7; }
 
-/* line 74, ../../app/assets/css/application.scss */
+/* line 78, ../../app/assets/css/application.scss */
 img {
   max-width: 100%; }
 
-/* line 78, ../../app/assets/css/application.scss */
+/* line 82, ../../app/assets/css/application.scss */
 strong {
   font-weight: 600; }
 
-/* line 82, ../../app/assets/css/application.scss */
+/* line 86, ../../app/assets/css/application.scss */
 .contain {
   *zoom: 1;
   max-width: 59.5em;
@@ -1897,51 +1900,51 @@ strong {
 /*
 	II. Header
 */
-/* line 91, ../../app/assets/css/application.scss */
+/* line 95, ../../app/assets/css/application.scss */
 body > header {
   background: #e74c3c; }
-  /* line 94, ../../app/assets/css/application.scss */
+  /* line 98, ../../app/assets/css/application.scss */
   body > header a {
     color: #fefefe; }
-    /* line 97, ../../app/assets/css/application.scss */
+    /* line 101, ../../app/assets/css/application.scss */
     body > header a:hover {
       color: #ecf0f1; }
-  /* line 102, ../../app/assets/css/application.scss */
+  /* line 106, ../../app/assets/css/application.scss */
   body > header hgroup {
     width: 24.36975%;
     float: left;
     margin-right: 0.84034%;
     display: inline; }
-  /* line 106, ../../app/assets/css/application.scss */
+  /* line 110, ../../app/assets/css/application.scss */
   body > header nav {
     font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
-    /* line 114, ../../app/assets/css/application.scss */
+    /* line 118, ../../app/assets/css/application.scss */
     body > header nav section:first-child {
       width: 41.17647%;
       float: left;
       margin-right: 0.84034%;
       display: inline;
       margin-top: 0.35em; }
-      /* line 119, ../../app/assets/css/application.scss */
+      /* line 123, ../../app/assets/css/application.scss */
       body > header nav section:first-child li {
         padding-right: 2em; }
-    /* line 124, ../../app/assets/css/application.scss */
+    /* line 128, ../../app/assets/css/application.scss */
     body > header nav section:last-child {
       width: 32.77311%;
       float: right;
       margin-right: 0;
       *margin-left: -0.5em;
       display: inline; }
-      /* line 127, ../../app/assets/css/application.scss */
+      /* line 131, ../../app/assets/css/application.scss */
       body > header nav section:last-child ul {
         float: right; }
-        /* line 130, ../../app/assets/css/application.scss */
+        /* line 134, ../../app/assets/css/application.scss */
         body > header nav section:last-child ul li {
           padding-left: 0.75em; }
-    /* line 136, ../../app/assets/css/application.scss */
+    /* line 140, ../../app/assets/css/application.scss */
     body > header nav section li {
       display: inline-block; }
-  /* line 142, ../../app/assets/css/application.scss */
+  /* line 146, ../../app/assets/css/application.scss */
   body > header .contain {
     padding: 1.5em 0; }
 
@@ -1951,7 +1954,7 @@ body > header {
 /*
 	IV. Footer
 */
-/* line 161, ../../app/assets/css/application.scss */
+/* line 165, ../../app/assets/css/application.scss */
 body > footer {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background: #edf4ef;
@@ -1961,12 +1964,12 @@ body > footer {
   font: 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 6em 0;
   text-align: center; }
-  /* line 172, ../../app/assets/css/application.scss */
+  /* line 176, ../../app/assets/css/application.scss */
   body > footer ul {
     margin-bottom: 2em; }
-    /* line 175, ../../app/assets/css/application.scss */
+    /* line 179, ../../app/assets/css/application.scss */
     body > footer ul li {
       display: inline-block; }
-      /* line 178, ../../app/assets/css/application.scss */
+      /* line 182, ../../app/assets/css/application.scss */
       body > footer ul li + li {
         padding-left: 1em; }

@@ -41,7 +41,10 @@
                         %i.ss-icon trash
             %section
               .inner.text
-                = truncate_words(note.html, :length => 40)
+                - if note.html.blank?
+                  %em.subtle This note is blank!
+                - else
+                  = truncate_words(note.html, :length => 40)
             %footer
               .inner
                 %aside

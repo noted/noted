@@ -9,7 +9,7 @@ class Project
         end
 
         optional do
-          string :description
+          string :description, empty: true
         end
       end
     end

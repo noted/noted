@@ -10,8 +10,8 @@ class Note
         end
 
         optional do
-          string :body
-          string :tags
+          string :body, empty: true
+          string :tags, empty: true
           array :source_ids, :nils => true
         end
       end

@@ -12,7 +12,7 @@ Noted.controllers :projects do
     if p.success?
       redirect p.result.url
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = "Something has gone awry. #{p.errors.message_list}"
       redirect url(:projects, :new)
     end
   end
