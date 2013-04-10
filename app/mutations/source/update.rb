@@ -31,10 +31,9 @@ class Source
 
       contributors = []
       contributors_raw.each do |k, v|
-        contributors << v.symbolize_keys
+        contributors << v
       end
 
-      hash = hash.symbolize_keys
       hash[:contributors] = contributors
 
       hash

@@ -7,19 +7,23 @@ describe Source::Update do
 
   let(:attributes) do
     {
-      :type => :book,
-      :title => "Looking for Alaska",
-      :contributors => [
-        {
-          :role => :author,
-          :first => "John",
-          :last => "Green"
+      "type" => "book",
+      "contributors" => {
+        "0" => {
+          "role" => "author",
+          "first" => "Neil",
+          "middle"=> "",
+          "last" => "deGrasse Tyson",
+          "suffix" => ""
         }
-      ],
-      :publisher => "Penguin",
-      :city => "New York",
-      :year => "2002",
-      :media => :print
+      },
+      "title" => "The Space Chronicles",
+      "publisher" => "W. W. Norton & Company",
+      "city" => "New York",
+      "year" => "2012",
+      "volume" => "",
+      "edition" => "",
+      "series" => ""
     }
   end
 
@@ -38,11 +42,10 @@ describe Source::Update do
     project.reload
   end
 
-
   it { source.success?.should be_true }
   it { source.result.should be_an_instance_of Source }
   it { source.result.updater.should eql user }
   it { source.result.project.should eql project }
   it { source.result.citation.should be_an_instance_of Scholar::Citation }
-  it { source.result.citation.html.should eql "Green, John. <em>Looking for Alaska</em>. New York: Penguin, 2002. Print." }
+  it { source.result.citation.html.should eql "deGrasse Tyson, Neil. <em>The Space Chronicles</em>. New York: W. W. Norton & Company, 2012." }
 end
