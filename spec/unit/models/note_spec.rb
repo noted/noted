@@ -13,7 +13,15 @@ describe Note do
   end
 
   describe "#permalink!" do
-    it { note.permalink.should eql(Base32::Crockford.encode(Note.count + 1)) }
+    it { note.permalink.should eql(Base32::Crockford.encode(Von.count('notes').total)) }
+  end
+
+  describe "#tags=" do
+    before do
+      note.tags = "foo,bar"
+    end
+
+    it { note.tags_str.should eql "foo,bar" }
   end
 
   describe "#tags_str" do

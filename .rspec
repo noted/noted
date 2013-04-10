@@ -1,1 +1,4 @@
---format Fuubar --color --drb
+--format Fuubar
+--color
+--order random
+--drb

@@ -15,13 +15,8 @@
     %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}
     %link{:href => "/css/application.css", :rel => "stylesheet"}
 
-    %script{:src => "http://code.jquery.com/jquery-1.9.1.min.js"}
-    %script{:src => "http://underscorejs.org/underscore-min.js"}
-    %script{:src => "/jsc/lib/jquery.fittext.js"}
-    %script{:src => "/jsc/lib/autoresize.jquery.js"}
-    %script{:src => "/jsc/lib/autogrow.jquery.js"}
-    %script{:src => "/jsc/lib/jquery.tags.js"}
-    %script{:src => "/jsc/application.js"}
+    %script{:"data-main" => "/jsc/main", :src => "/jsc/require-jquery.js"}
+
     %script{:src => "//use.typekit.net/rau7fcj.js", :type => "text/javascript"}
     :coffeescript
       try
@@ -40,16 +35,16 @@
                 %li
                   %a{:href => url(:explore)} Explore
                 %li
-                  %a{:href => url(:features)} Blog
+                  %a{:href => url(:blog)} Blog
                 %li
                   %a{:href => url(:support)} Help
             %section
               %ul
                 %li
-                  %a.btn.blue{:href => url(:projects, :new)}
+                  %a.btn.blue.tooltip{:href => url(:projects, :new), :title => "New Project"}
                     %i.ss-icon plus
                 %li
-                  %a.btn.turquoise{:href => url(:users, :view, :user => current_user.username)}
+                  %a.btn.turquoise.tooltip{:href => url(:users, :view, :user => current_user.username), :title => "Profile"}
                     %i.ss-icon user
                 %li
                   %a.btn.yellow{:href => url(:sessions, :destroy)} Logout
@@ -68,7 +63,6 @@
                   %a.btn.primary{:href => url(:users, :new)} Join
                 %li
                   %a.btn{:href => url(:sessions, :new)} Login
-
 
     #main{:role => "main"}
       = yield

@@ -11,5 +11,5 @@
           %a{:href => url(:users, :view, :user => c.username)} c.name
     %aside
       %p
-        %a.btn{:href => "#{project.url}/settings"}
+        %a.btn.tooltip{:href => "#{project.url}/settings", :title => "Settings"}
           %i.ss-icon settings

@@ -13,9 +13,7 @@ class Source
     def execute
       s = Source.find(source[:id])
 
-      s.update_attributes(
-        :citation => Scholar::Citation.new(source[:attributes]),
-      )
+      s.citation = Scholar::Citation.new(attributes!(source[:attributes]))
 
       a = User.find(author)
 
@@ -25,6 +23,20 @@ class Source
       s.save
 
       s
+    end
+
+    def attributes!(hash)
+      contributors_raw = hash["contributors"]
+      hash.delete("contributors")
+
+      contributors = []
+      contributors_raw.each do |k, v|
+        contributors << v
+      end
+
+      hash[:contributors] = contributors
+
+      hash
     end
   end
 end

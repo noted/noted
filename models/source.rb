@@ -12,7 +12,7 @@ class Source
   many :comments, :as => :commentable
   many :tags, :as => :taggable
 
-  after_save :permalink!
+  after_create :permalink!
 
   def citation=(obj)
     self.binary = Marshal::dump(obj)
@@ -22,6 +22,12 @@ class Source
     Marshal::load(self.binary.to_s)
   end
 
+  def self.options
+    [
+      ["Book", "book"]
+    ]
+  end
+
   def url
     "#{self.project.url}/sources/#{self.permalink}"
   end
@@ -29,6 +35,6 @@ class Source
   private
 
   def permalink!
-    self.permalink = Base32::Crockford.encode(Source.count + 1)
+    self.permalink = Base32::Crockford.encode(Von.increment('sources'))
   end
 end

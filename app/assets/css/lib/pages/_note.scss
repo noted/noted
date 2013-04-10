@@ -52,7 +52,7 @@ section#note {
 			}
 
 			input {
-				width: 15%;
+				width: 25%;
 			}
 		}
 	}
@@ -61,7 +61,17 @@ section#note {
 		margin-top: 1em;
 
 		p {
-			text-align: right;
+			&:first-child {
+				margin-bottom: 1em;
+
+				select {
+					width: 100%;
+				}
+			}
+
+			&:last-child {
+				text-align: right;
+			}
 		}
 
 		a.btn {
@@ -71,9 +81,12 @@ section#note {
 	}
 
 	.text {
-		margin-top: 4em;
-		padding-top: 4em;
-		border-top: 1px solid $grey;
+	}
+
+	#view {
+		header {
+			margin-bottom: 1em;
+		}
 	}
 }
 

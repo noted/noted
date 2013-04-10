@@ -14,4 +14,4 @@ module Gatekeeper
   end
 end
 
-Noted.helpers Gatekeeper
+Noted::Web.helpers Gatekeeper

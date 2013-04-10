@@ -1,30 +1,33 @@
 source 'https://rubygems.org'
 
-gem 'padrino', git: 'git://github.com/padrino/padrino-framework.git'
+%w(cache core gen helpers).each do |c|
+  gem 'padrino-' + c, '0.11.1'
+end
 
 gem 'puma'
 
 gem 'rake'
 
-gem 'bson_ext', require: 'mongo'
+gem 'bson_ext'
 gem 'mongo_mapper'
 
 gem 'canable'
-
 gem 'state_machine'
 
 gem 'redis'
+gem 'von'
 
 gem 'bcrypt-ruby'
 gem 'base32-crockford', require: 'base32/crockford'
 
-gem 'scholar', git: 'git://github.com/noted/scholar.git'
+gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations'
 
-gem 'haml'
-
+gem 'haml', '4.0.1'
 gem 'maruku'
+
+gem 'erubis'
 
 gem 'compass'
 gem 'susy'
@@ -59,6 +62,4 @@ group :test do
   gem 'database_cleaner'
 
   gem 'cane'
-
-  gem 'coveralls', require: false
 end

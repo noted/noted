@@ -1,0 +1,79 @@
+/*
+Syntax error: Undefined variable: "$sans-serif".
+        on line 1 of /var/www/noted/noted/app/assets/css/lib/vendor/tipsy.scss
+
+1: .tipsy { font: 12px $sans-serif; position: absolute; padding: 5px; z-index: 100000; }
+2:   .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+3: 
+4:   /* Rounded corners */
+5:   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+6: 
+
+Backtrace:
+/var/www/noted/noted/app/assets/css/lib/vendor/tipsy.scss:1
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/variable.rb:49:in `_perform'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/node.rb:40:in `perform'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/list.rb:70:in `block in _perform'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/list.rb:70:in `map'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/list.rb:70:in `_perform'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/script/node.rb:40:in `perform'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin.rb:81:in `update_stylesheets'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin.rb:54:in `check_for_updates'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/rack.rb:51:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/barista-1.3.0/lib/barista/server.rb:33:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/barista-1.3.0/lib/barista/filter.rb:16:in `_call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/barista-1.3.0/lib/barista/filter.rb:9:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/padrino-core-0.10.7/lib/padrino-core/reloader.rb:250:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/padrino-core-0.10.7/lib/padrino-core/logger.rb:388:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sinatra-1.3.6/lib/sinatra/showexceptions.rb:21:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `block in call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sinatra-1.3.6/lib/sinatra/base.rb:1499:in `synchronize'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/sinatra-1.3.6/lib/sinatra/base.rb:1417:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:83:in `block in call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:76:in `each'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/padrino-core-0.10.7/lib/padrino-core/router.rb:76:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/puma-1.6.3/lib/puma/server.rb:412:in `handle_request'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/puma-1.6.3/lib/puma/server.rb:306:in `process_client'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/puma-1.6.3/lib/puma/server.rb:215:in `block in run'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/puma-1.6.3/lib/puma/thread_pool.rb:94:in `call'
+/home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/puma-1.6.3/lib/puma/thread_pool.rb:94:in `block in spawn_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$sans-serif\".\A         on line 1 of /var/www/noted/noted/app/assets/css/lib/vendor/tipsy.scss\A \A 1: .tipsy { font: 12px $sans-serif; position: absolute; padding: 5px; z-index: 100000; }\A 2:   .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }\A 3: \A 4:   /* Rounded corners */\A 5:   .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }\A 6: "; }

@@ -4,17 +4,16 @@
 */
 
 .flash {
+	@include container;
 	@include border-radius(2px);
 
 	font-family: $sans-serif;
 	font-weight: bold;
-	margin-bottom: 1em;
+	margin-bottom: 1.75em;
 	padding: 0.75em;
-	width: 85%;
 
 	&.error {
-		background-color: lighten($red, 10%);
-		color: darken(lighten($dark-red, 10%), 40%);
+		background-color: lighten($red, 20%);
 	}
 
 	&.notice {
@@ -25,6 +24,5 @@
 	&.warning {
 		background: $yellow;
 		border: 1px solid $dark-yellow;
-		color: darken($dark-yellow, 40%);
 	}
 }

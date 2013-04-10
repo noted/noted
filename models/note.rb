@@ -3,15 +3,15 @@ class Note
 
   key :title, String
   key :body, String
-  key :sources, Array
+  key :source_ids, Array # Array of Source IDs as strings
   key :permalink, String
 
   timestamps!
   userstamps!
 
-  validates_uniqueness_of :permalink
-
   belongs_to :project
+
+  many :sources
 
   many :comments, :as => :commentable
   many :tags, :as => :taggable
@@ -26,6 +26,27 @@ class Note
     Maruku.new(self.body).to_html
   end
 
+  def sources
+    arr = []
+    source_ids.each do |id|
+      arr << Source.find(id)
+    end
+
+    arr
+  end
+
+  def tags=(str)
+    self.tags.each {|t| t.destroy }
+    self.tags.clear
+
+    arr = str.split(",")
+    arr.each do |t|
+      self.tags << Tag.new(:text => t)
+    end
+
+    self.tags
+  end
+
   def tags_str
     arr = []
     tags.each {|t| arr << t.text }
@@ -36,6 +57,6 @@ class Note
   private
 
   def permalink!
-    self.permalink = Base32::Crockford.encode(self.class.count + 1)
+    self.permalink = Base32::Crockford.encode(Von.increment('notes'))
   end
 end

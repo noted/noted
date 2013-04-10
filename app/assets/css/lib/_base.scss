@@ -16,6 +16,7 @@
 @import "modules/flash";
 @import "modules/text";
 @import "modules/comments";
+@import "modules/tabs";
 
 @import "pages/index";
 @import "pages/user";
@@ -23,3 +24,7 @@
 @import "pages/new-project";
 @import "pages/project";
 @import "pages/note";
+@import "pages/source";
+
+@import "vendor/chosen";
+@import "vendor/tipsy";

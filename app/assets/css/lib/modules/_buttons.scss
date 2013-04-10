@@ -3,7 +3,7 @@
 		file: css/lib/modules/_buttons.scss
 */
 
-a.btn, button, input[type="submit"], span.btn {
+a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choices .search-choice {
 	@include border-radius(2px);
 	//@include box-shadow(rgba(#333, 0.5) 0 1px 3px -2px);
 
@@ -20,6 +20,24 @@ a.btn, button, input[type="submit"], span.btn {
 	&:hover {
 		background: darken($grey, 25%);
 		color: $base;
+	}
+
+	&.full {
+		@include container;
+
+		display: block;
+		//margin-left: auto;
+		//margin-right: auto;
+		text-align: center;
+		//width: 50%;
+	}
+
+	&.subtle {
+		background: $grey;
+
+		&:hover {
+			background: $turquoise;
+		}
 	}
 
 	&.primary, &.blue {
@@ -96,5 +114,15 @@ a.btn, button, input[type="submit"], span.btn {
 	i {
 		position: relative;
 		top: 1px;
+	}
+}
+
+form.full {
+	@include container;
+
+	margin-top: 1em;
+
+	& > .full {
+		@include container;
 	}
 }

@@ -91,6 +91,29 @@
 		margin-bottom: 6em;
 		margin-top: 5em;
 
+		h3 {
+			margin-bottom: 1em;
+		}
+
+		table {
+			input {
+				width: 65%;
+			}
+
+			textarea {
+				height: 10em;
+				width: 95%;
+			}
+		}
+
+		form:last-child {
+			//margin-top: 4em;
+
+			p {
+				margin-bottom: 0.5em;
+			}
+		}
+
 		.notes, .sources {
 			header {
 				@include container; // Fix this.
@@ -108,6 +131,10 @@
 					font-size: 0.85rem;
 					text-align: right;
 				}
+			}
+
+			footer {
+				margin-top: 1em;
 			}
 		}
 
@@ -201,6 +228,7 @@
 						font-size: 0.85em;
 						float: right;
 						margin: 0;
+						padding-right: 0;
 						text-align: right;
 
 						ul {
@@ -223,6 +251,135 @@
 
 		.sources {
 			@include span-columns(8 omega);
+
+			header {
+				h3 , ul {
+					display: inline-block;
+					float: left;
+				}
+
+				h3 {
+					padding-right: 0.5em;
+				}
+
+				ul {
+					font-size: 0.75em;
+
+					li {
+						display: inline-block;
+						padding-left: 0.25em;
+					}
+				}
+			}
+
+			article {
+				@include border-radius(2px);
+
+				border: 2px solid $grey;
+
+				& + article {
+					margin-top: 1.5em;
+				}
+
+				header {
+					background: $grey;
+
+					.inner {
+						padding: 0.5em 0.65em;
+					}
+
+					hgroup {
+						padding-bottom: 0.5em;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.edit {
+							&:hover {
+								color: $turquoise;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
+					}
+				}
+
+				section {
+					margin: 1em 0;
+					padding: 0 0.65em;
+				}
+
+				footer {
+					border-top: 1px solid $grey;
+					color: darken($grey, 5%);
+					font-size: 0.85em;
+					padding: 0.25em 0.65em;
+
+					.inner {
+						@include clearfix;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.edit {
+							&:hover {
+								color: $turquoise;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
+					}
+
+					aside {
+						float: left;
+					}
+
+					section {
+						font-size: 0.85em;
+						float: right;
+						margin: 0;
+						text-align: right;
+
+						ul {
+							li {
+								display: inline-block;
+
+								&:after {
+									//content: ", ";
+								}
+
+								a:before {
+									//content: "#";
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

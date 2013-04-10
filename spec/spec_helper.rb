@@ -1,7 +1,3 @@
-require 'coveralls'
-
-Coveralls.wear!
-
 require 'spork'
 
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
@@ -29,6 +25,8 @@ Spork.prefork do
 
     conf.after do
       DatabaseCleaner.clean
+
+      Von.connection.flushdb
     end
 
     Capybara.app = Padrino.application
@@ -44,30 +42,5 @@ Spork.prefork do
 
   def site
     "http://example.org"
-  end
-
-  class Data
-    class << self
-      def book
-        {
-          :data => {
-            :type => "book",
-            :title => "The Hitchhiker's Guide to the Galaxy",
-            :contributors => [
-              {
-                :type => "author",
-                :first => "Douglas",
-                :last => "Adams"
-              }
-            ],
-            :publisher => {
-              :name => "Ballantine",
-              :location => "New York"
-            },
-            :year => "2005"
-          }
-        }
-      end
-    end
   end
 end

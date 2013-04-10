@@ -2,14 +2,36 @@
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   = partial 'partials/flash', :locals => { :flash => flash }
   %section
+    %header
+      %h3
+        = @project.title
+        %span / Settings
+    = partial "partials/flash", :locals => { :flash => flash }
     - form_tag url(:projects, :update), :method => "patch" do
-      %p
-        = label_tag "project[title]"
-        = text_field_tag "project[title]", :value => @project.title
-      %p
-        = label_tag "project[description]"
-        = text_area_tag "project[description]", :value => @project.description
-      %footer
-        = hidden_field_tag :"project[id]", :value => @project.id
-        = hidden_field_tag :author, :value => current_user.id
-        = submit_tag "Save", :class => "btn primary"
+      = hidden_field_tag :"project[id]", :value => @project.id
+      = hidden_field_tag :author, :value => current_user
+      %table
+        %tr
+          %td
+            %label{:for => "project[title]"} Title
+          %td
+            = text_field_tag :"project[title]", :value => @project.title
+        %tr
+          %td
+            %label{:for => "project[description]"} Description
+          %td
+            = text_area_tag :"project[description]", :value => @project.description
+        %tr
+          %td
+          %td
+            %button.green{:type => "submit"} Save
+    - form_tag url(:projects, :destroy), :method => "delete" do
+      = hidden_field_tag :"project[id]", :value => @project.id
+      = hidden_field_tag :author, :value => @user.id
+      %table
+        %tr
+          %td
+          %td
+            %p Please be sure if you want to actually delete your project.
+            %button.red{:type => "submit"} Destroy
+

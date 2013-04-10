@@ -5,14 +5,15 @@ Noted::Web.controllers :users do
 
   post :create do
     u = User::Create.run({
-      :user => params[:user]
+      :user => params[:user],
+      :password => params[:password]
     })
 
     if u.success?
       login(u.result)
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry. #{u.errors.messages}"
+      flash[:error] = "Something has gone awry. #{u.errors.message}"
       redirect url(:users, :new)
     end
   end
@@ -32,7 +33,7 @@ Noted::Web.controllers :users do
       flash[:notice] = "Your profile has been updated."
       redirect url(:users, :edit)
     else
-      flash[:error] = u.errors.message_list
+      flash[:error] = u.errors.message
       redirect url(:users, :edit)
     end
   end
