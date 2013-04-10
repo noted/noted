@@ -14,6 +14,6 @@ describe Source do
   end
 
   describe "#permalink!" do
-    it { source.permalink.should eql(Base32::Crockford.encode(Source.count + 1)) }
+    it { source.permalink.should eql((Base32::Crockford.encode(Von.count('sources').total))) }
   end
 end

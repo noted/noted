@@ -25,6 +25,8 @@ Spork.prefork do
 
     conf.after do
       DatabaseCleaner.clean
+
+      Von.connection.flushdb
     end
 
     Capybara.app = Padrino.application

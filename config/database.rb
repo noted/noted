@@ -15,8 +15,11 @@ Von.configure do |c|
     r = URI.parse(ENV['REDISTOGO_URL'])
 
     c.redis = { :host => r.host, :port => r.port, :password => r.password }
+  elsif PADRINO_ENV == "test"
+    c.redis = { :host => 'localhost', :port => 6379, :db => Random.rand(2) }
   else
     c.redis = { :host => 'localhost', :port => 6379 }
   end
+
   c.namespace = 'von'
 end
