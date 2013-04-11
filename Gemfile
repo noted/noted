@@ -46,6 +46,11 @@ group :development do
   gem 'pry'
 end
 
+group :production do
+  gem 'execjs'
+  gem 'therubyracer'
+end
+
 group :test do
   gem 'rack-test', require: 'rack/test'
 
