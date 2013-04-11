@@ -5,7 +5,7 @@
         Join
         %span / Free
     = partial "partials/flash", :locals => { :flash => flash }
-    - form_tag url(:users, :create), :method => "post" do
+    - form_tag url(:users, :create), :autocomplete => "off", :method => "post" do
       %table
         %tr
           %td

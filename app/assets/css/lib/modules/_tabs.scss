@@ -1,58 +1,76 @@
 .tabs {
-	ul {
+	header {
 		margin-bottom: 3em;
 
-		li {
+		ul, p {
 			display: inline-block;
-			margin: 0;
+		}
 
-			&:first-child {
-				a {
-					@include border-top-left-radius(3px);
-					@include border-bottom-left-radius(3px);
+		ul {
+			li {
+				display: inline-block;
+				margin: 0;
+
+				&:first-child {
+					a {
+						@include border-top-left-radius(3px);
+						@include border-bottom-left-radius(3px);
+					}
 				}
-			}
 
-			&:last-child {
-				a {
-					@include border-top-right-radius(3px);
-					@include border-bottom-right-radius(3px);
+				&:last-child {
+					a {
+						@include border-top-right-radius(3px);
+						@include border-bottom-right-radius(3px);
+					}
 				}
-			}
 
-			&.ui-state-active {
+				&.ui-state-active {
+					a {
+						background: $turquoise;
+
+						&:hover {
+							background: $dark-turquoise;
+						}
+
+						span {
+							display: inline-block;
+						}
+					}
+				}
+
 				a {
-					background: $turquoise;
+					background: darken($grey, 20%);
+					border: none;
+					color: $base;
+					cursor: pointer;
+					display: block;
+					font: bold 0.85em $sans-serif;
+					margin: 0;
+					outline: none;
+					padding: 0.5em 0.75em;
+					text-transform: uppercase;
+					text-shadow: none;
 
 					&:hover {
-						background: $dark-turquoise;
+						background: darken($grey, 25%);
+						color: $base;
+					}
+
+					i {
+						position: relative;
+						top: 1px;
+					}
+
+					span {
+						display: none;
 					}
 				}
 			}
+		}
 
-			a {
-				background: darken($grey, 20%);
-				border: none;
-				color: $base;
-				cursor: pointer;
-				display: block;
-				font: bold 0.85em $sans-serif;
-				margin: 0;
-				outline: none;
-				padding: 0.5em 0.75em;
-				text-transform: uppercase;
-				text-shadow: none;
-
-				&:hover {
-					background: darken($grey, 25%);
-					color: $base;
-				}
-
-				i {
-					position: relative;
-					top: 1px;
-				}
-			}
+		p {
+			margin-left: 0.5em;
 		}
 	}
 }

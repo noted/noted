@@ -115,6 +115,10 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 		position: relative;
 		top: 1px;
 	}
+
+	span {
+		padding-left: 0.25em;
+	}
 }
 
 form.full {

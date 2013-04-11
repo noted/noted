@@ -3,13 +3,16 @@
   %section#note
     = partial 'partials/flash', :locals => { :flash => flash }
     .tabs
-      %ul
-        %li
-          %a{:href => "#view"}
-            %i.ss-icon view
-        %li
-          %a{:href => "#edit"}
-            %i.ss-icon edit
+      %header
+        %ul
+          %li
+            %a{:href => "#view"}
+              %i.ss-icon view
+              %span View
+          %li
+            %a{:href => "#edit"}
+              %i.ss-icon edit
+              %span Edit
       #view
         %header
           %h2= @note.title
