@@ -415,17 +415,17 @@ footer.comments {
     float: right; }
 
 /* line 2, ../../../../app/assets/css/lib/modules/_tabs.scss */
-.tabs header {
+.tabs > header {
   margin-bottom: 3em; }
   /* line 5, ../../../../app/assets/css/lib/modules/_tabs.scss */
-  .tabs header ul, .tabs header p {
+  .tabs > header ul, .tabs > header p {
     display: inline-block; }
   /* line 10, ../../../../app/assets/css/lib/modules/_tabs.scss */
-  .tabs header ul li {
+  .tabs > header ul li {
     display: inline-block;
     margin: 0; }
     /* line 15, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs header ul li:first-child a {
+    .tabs > header ul li:first-child a {
       -moz-border-radius-topleft: 3px;
       -webkit-border-top-left-radius: 3px;
       border-top-left-radius: 3px;
@@ -433,7 +433,7 @@ footer.comments {
       -webkit-border-bottom-left-radius: 3px;
       border-bottom-left-radius: 3px; }
     /* line 22, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs header ul li:last-child a {
+    .tabs > header ul li:last-child a {
       -moz-border-radius-topright: 3px;
       -webkit-border-top-right-radius: 3px;
       border-top-right-radius: 3px;
@@ -441,16 +441,16 @@ footer.comments {
       -webkit-border-bottom-right-radius: 3px;
       border-bottom-right-radius: 3px; }
     /* line 29, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs header ul li.ui-state-active a {
+    .tabs > header ul li.ui-state-active a {
       background: #1abc9c; }
       /* line 32, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs header ul li.ui-state-active a:hover {
+      .tabs > header ul li.ui-state-active a:hover {
         background: #16a085; }
       /* line 36, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs header ul li.ui-state-active a span {
+      .tabs > header ul li.ui-state-active a span {
         display: inline-block; }
     /* line 42, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs header ul li a {
+    .tabs > header ul li a {
       background: #b1c2c6;
       border: none;
       color: #fefefe;
@@ -463,18 +463,18 @@ footer.comments {
       text-transform: uppercase;
       text-shadow: none; }
       /* line 55, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs header ul li a:hover {
+      .tabs > header ul li a:hover {
         background: #a3b6bb;
         color: #fefefe; }
       /* line 60, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs header ul li a i {
+      .tabs > header ul li a i {
         position: relative;
         top: 1px; }
       /* line 65, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs header ul li a span {
+      .tabs > header ul li a span {
         display: none; }
   /* line 72, ../../../../app/assets/css/lib/modules/_tabs.scss */
-  .tabs header p {
+  .tabs > header p {
     margin-left: 0.5em; }
 
 /*
