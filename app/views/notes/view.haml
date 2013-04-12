@@ -17,7 +17,7 @@
         %header
           %h2= @note.title
         .text
-          = @note.html
+          = safe(@note.html)
       #edit
         - form_tag url(:notes, :update), :method => "patch", :class => "note" do
           .textbox

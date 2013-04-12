@@ -25,6 +25,6 @@
       %section
         %p= text_area_tag :"comment[body]", :placeholder => "Your comment..."
         %footer
-          %p= "<strong>#{current_user.name}</strong>"
+          %p= safe("<strong>#{current_user.name}</strong>")
           %button.primary{:type => "submit"}
             %i.ss-icon check

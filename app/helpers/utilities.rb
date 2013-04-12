@@ -13,4 +13,8 @@ Noted::Web.helpers do
       str
     end
   end
+
+  def safe(str)
+    str.html_safe
+  end
 end
