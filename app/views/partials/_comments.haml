@@ -5,9 +5,9 @@
         %img{:src => comment.user.gravatar}
       %section.text
         .inner
-          = comment.body
+          = safe(comment.html)
           %footer
-            %span= "<strong>#{current_user.name}</strong> on #{comment.created_at.strftime("%e %b. %Y, %l:%M%P")}"
+            %span= safe("<strong>#{current_user.name}</strong> on #{comment.created_at.strftime("%e %b. %Y, %l:%M%P")}")
             - if comment.user == current_user
               - form_tag url(:comments, :destroy), :method => "delete" do
                 = hidden_field_tag :redirect, :value => request.path
@@ -23,7 +23,7 @@
       %aside
         %img{:src => current_user.gravatar}
       %section
-        %p= text_area_tag :"comment[body]", :placeholder => "Your comment..."
+        %p= find_and_preserve text_area_tag :"comment[body]", :placeholder => "Your comment..."
         %footer
           %p= safe("<strong>#{current_user.name}</strong>")
           %button.primary{:type => "submit"}

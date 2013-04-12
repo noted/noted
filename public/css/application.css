@@ -8,7 +8,7 @@
 	Noted.
 		file: css/lib/_base.scss
 */
-/* line 17, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,38 +29,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -123,7 +123,7 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
     margin-right: auto;
     display: block;
     text-align: center; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     a.btn.full:after, button.full:after, input[type="submit"].full:after, span.btn.full:after, .chzn-container-multi .chzn-choices .search-choice.full:after {
       content: "";
       display: table;
@@ -206,7 +206,7 @@ form.full {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   form.full:after {
     content: "";
     display: table;
@@ -220,7 +220,7 @@ form.full {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     form.full > .full:after {
       content: "";
       display: table;
@@ -304,7 +304,7 @@ form.inline {
   font-weight: bold;
   margin-bottom: 1.75em;
   padding: 0.75em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .flash:after {
     content: "";
     display: table;
@@ -329,11 +329,36 @@ form.inline {
 .text {
   font: 16px/1.75em "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif; }
   /* line 9, ../../app/assets/css/lib/modules/_text.scss */
+  .text h1, .text h2, .text h3, .text h4, .text h5, .text h6 {
+    margin: 1.5em 0; }
+  /* line 13, ../../app/assets/css/lib/modules/_text.scss */
+  .text h1 {
+    font-size: 1.65em;
+    text-shadow: none; }
+  /* line 18, ../../app/assets/css/lib/modules/_text.scss */
+  .text h2 {
+    font-size: 1.5em; }
+  /* line 22, ../../app/assets/css/lib/modules/_text.scss */
   .text p {
-    text-indent: 1em; }
-    /* line 12, ../../app/assets/css/lib/modules/_text.scss */
-    .text p:first-child {
-      text-indent: 0 !important; }
+    margin-bottom: 1.5em; }
+  /* line 26, ../../app/assets/css/lib/modules/_text.scss */
+  .text pre {
+    background: #ecf0f1;
+    font: 0.75em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
+    padding: 1em; }
+  /* line 32, ../../app/assets/css/lib/modules/_text.scss */
+  .text ol, .text ul {
+    margin-bottom: 1.5em; }
+    /* line 35, ../../app/assets/css/lib/modules/_text.scss */
+    .text ol li, .text ul li {
+      margin-left: 1.5em;
+      padding-left: 0.5em; }
+  /* line 42, ../../app/assets/css/lib/modules/_text.scss */
+  .text ol li {
+    list-style-type: decimal; }
+  /* line 48, ../../app/assets/css/lib/modules/_text.scss */
+  .text ul li {
+    list-style-type: disc; }
 
 /*
 	Noted.
@@ -360,7 +385,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     footer.comments form:after, footer.comments article:after {
       content: "";
       display: table;
@@ -502,7 +527,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #index .hero .inner:after {
       content: "";
       display: table;
@@ -524,7 +549,7 @@ footer.comments {
   margin-bottom: 4em;
   padding-bottom: 4em;
   text-align: center; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #index .information header:after {
     content: "";
     display: table;
@@ -538,7 +563,7 @@ footer.comments {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #index .information section:after {
     content: "";
     display: table;
@@ -579,7 +604,7 @@ footer.comments {
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #user:after {
     content: "";
     display: table;
@@ -699,7 +724,7 @@ footer.comments {
   margin-left: auto;
   margin-right: auto;
   margin: 4em auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #new-project:after {
     content: "";
     display: table;
@@ -737,7 +762,7 @@ footer.comments {
     margin-left: auto;
     margin-right: auto;
     padding: 3em 0; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project > header .inner:after {
       content: "";
       display: table;
@@ -793,7 +818,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project .description .inner:after {
       content: "";
       display: table;
@@ -831,7 +856,7 @@ footer.comments {
   margin-right: auto;
   margin-bottom: 6em;
   margin-top: 5em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #project > section:after {
     content: "";
     display: table;
@@ -860,7 +885,7 @@ footer.comments {
     margin-right: auto;
     margin-bottom: 1rem;
     padding: 0; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project > section .notes header:after, #project > section .sources header:after {
       content: "";
       display: table;
@@ -933,60 +958,63 @@ footer.comments {
           #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
             margin-left: 0.5em; }
           /* line 195, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.view:hover, #project > section .notes article header button.view:hover {
+            color: #9b59b6; }
+          /* line 201, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
             color: #1abc9c; }
-          /* line 201, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 207, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
             color: #e74c3c; }
-      /* line 208, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 214, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 213, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 219, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .notes article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-        /* line 219, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 225, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer .inner {
           overflow: hidden;
           *zoom: 1; }
-        /* line 223, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 229, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer aside {
           float: left; }
-        /* line 227, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 233, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .notes article footer section {
           font-size: 0.85em;
           float: right;
           margin: 0;
           padding-right: 0;
           text-align: right; }
-          /* line 235, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 241, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .notes article footer section ul li {
             display: inline-block; }
-  /* line 252, ../../app/assets/css/lib/pages/_project.scss */
+  /* line 258, ../../app/assets/css/lib/pages/_project.scss */
   #project > section .sources {
     width: 32.77311%;
     float: right;
     margin-right: 0;
     *margin-left: -0.5em;
     display: inline; }
-    /* line 256, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 262, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .sources header h3, #project > section .sources header ul {
       display: inline-block;
       float: left; }
-    /* line 261, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 267, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .sources header h3 {
       padding-right: 0.5em; }
-    /* line 265, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 271, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .sources header ul {
       font-size: 0.75em; }
-      /* line 268, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 274, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .sources header ul li {
         display: inline-block;
         padding-left: 0.25em; }
-    /* line 275, ../../app/assets/css/lib/pages/_project.scss */
+    /* line 281, ../../app/assets/css/lib/pages/_project.scss */
     #project > section .sources article {
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -994,72 +1022,72 @@ footer.comments {
       -o-border-radius: 2px;
       border-radius: 2px;
       border: 2px solid #ecf0f1; }
-      /* line 280, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 286, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .sources article + article {
         margin-top: 1.5em; }
-      /* line 284, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 290, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .sources article header {
         background: #ecf0f1; }
-        /* line 287, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 293, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article header .inner {
           padding: 0.5em 0.65em; }
-        /* line 291, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 297, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article header hgroup {
           padding-bottom: 0.5em; }
-        /* line 295, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 301, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article header a.btn, #project > section .sources article header button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 301, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 307, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article header a.btn + a, #project > section .sources article header button + a {
             margin-left: 0.5em; }
-          /* line 306, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 312, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article header a.btn.edit:hover, #project > section .sources article header button.edit:hover {
             color: #1abc9c; }
-          /* line 312, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 318, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article header a.btn.trash:hover, #project > section .sources article header button.trash:hover {
             color: #e74c3c; }
-      /* line 319, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 325, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .sources article section {
         margin: 1em 0;
         padding: 0 0.65em; }
-      /* line 324, ../../app/assets/css/lib/pages/_project.scss */
+      /* line 330, ../../app/assets/css/lib/pages/_project.scss */
       #project > section .sources article footer {
         border-top: 1px solid #ecf0f1;
         color: #dde4e6;
         font-size: 0.85em;
         padding: 0.25em 0.65em; }
-        /* line 330, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 336, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article footer .inner {
           overflow: hidden;
           *zoom: 1; }
-        /* line 334, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 340, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article footer a.btn, #project > section .sources article footer button {
           background: transparent;
           color: #dde4e6;
           font-size: 1.05rem;
           padding: 0; }
-          /* line 340, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 346, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article footer a.btn + a, #project > section .sources article footer button + a {
             margin-left: 0.5em; }
-          /* line 345, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 351, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article footer a.btn.edit:hover, #project > section .sources article footer button.edit:hover {
             color: #1abc9c; }
-          /* line 351, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 357, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article footer a.btn.trash:hover, #project > section .sources article footer button.trash:hover {
             color: #e74c3c; }
-        /* line 357, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 363, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article footer aside {
           float: left; }
-        /* line 361, ../../app/assets/css/lib/pages/_project.scss */
+        /* line 367, ../../app/assets/css/lib/pages/_project.scss */
         #project > section .sources article footer section {
           font-size: 0.85em;
           float: right;
           margin: 0;
           text-align: right; }
-          /* line 368, ../../app/assets/css/lib/pages/_project.scss */
+          /* line 374, ../../app/assets/css/lib/pages/_project.scss */
           #project > section .sources article footer section ul li {
             display: inline-block; }
 
@@ -1149,7 +1177,7 @@ section#source form.manual {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   section#source form.manual:after {
     content: "";
     display: table;
@@ -1906,7 +1934,7 @@ strong {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .contain:after {
     content: "";
     display: table;

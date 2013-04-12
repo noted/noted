@@ -31,9 +31,11 @@
                   %h4
                     %a{:href => note.url}= note.title
                 %aside
+                  %a.btn.view{:href => "#{note.url}/#view"}
+                    %i.ss-icon view
                   - if current_user
-                    %a.btn.edit{:href => note.url}
-                      %i.ss-icon view
+                    %a.btn.edit{:href => "#{note.url}/#edit"}
+                      %i.ss-icon edit
                     - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
                       = hidden_field_tag :author, :value => current_user.id
                       = hidden_field_tag :"note[id]", :value => note.id

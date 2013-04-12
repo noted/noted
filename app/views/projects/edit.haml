@@ -20,7 +20,7 @@
           %td
             %label{:for => "project[description]"} Description
           %td
-            = text_area_tag :"project[description]", :value => @project.description
+            = find_and_preserve text_area_tag :"project[description]", :value => @project.description
         %tr
           %td
           %td

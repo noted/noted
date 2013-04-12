@@ -191,6 +191,12 @@
 							margin-left: 0.5em;
 						}
 
+						&.view {
+							&:hover {
+								color: $purple;
+							}
+						}
+
 						&.edit {
 							&:hover {
 								color: $turquoise;
