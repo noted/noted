@@ -1,4 +1,4 @@
-Noted.controllers do
+Noted::Web.controllers do
   get :index do
     if current_user
       redirect url(:users, :view, :user => current_user.username)

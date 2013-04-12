@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
-%w(cache core gen helpers).each do |p|
-  gem 'padrino-' + p, '0.10.7'
+%w(cache core gen helpers).each do |c|
+  gem 'padrino-' + c, '0.11.1'
 end
 
 gem 'puma'
 
 gem 'rake'
-gem 'sinatra-flash', require: 'sinatra/flash'
 
 gem 'bson_ext'
 gem 'mongo_mapper'
@@ -25,8 +24,10 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations'
 
-gem 'haml'
+gem 'haml', '4.0.1'
 gem 'maruku'
+
+gem 'erubis'
 
 gem 'compass'
 gem 'susy'

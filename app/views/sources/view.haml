@@ -2,15 +2,18 @@
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
   %section#source
     .tabs
-      %ul
-        %li
-          %a{:href => "#view"}
-            %i.ss-icon view
-        %li
-          %a{:href => "#edit"}
-            %i.ss-icon edit
-      %article#view
-        %p.text= @source.citation.html
+      %header
+        %ul
+          %li
+            %a{:href => "#view"}
+              %i.ss-icon view
+              %span View
+          %li
+            %a{:href => "#edit"}
+              %i.ss-icon edit
+              %span Edit
+      #view
+        %p.text= safe(@source.citation.html)
       #edit
         - form_tag url(:sources, :update), :class => "manual", :method => "patch" do
           = hidden_field_tag :"source[id]", :value => @source.id

@@ -1,4 +1,4 @@
-Noted.helpers do
+Noted::Web.helpers do
   def format(type, str)
     case type
     when :url
@@ -12,5 +12,9 @@ Noted.helpers do
     else
       str
     end
+  end
+
+  def safe(str)
+    str.html_safe
   end
 end
