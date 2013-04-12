@@ -41,7 +41,10 @@
                         %i.ss-icon trash
             %section
               .inner.text
-                = truncate_words(note.html, :length => 40)
+                - if note.html.blank?
+                  %em.subtle This note is blank!
+                - else
+                  = truncate_words(note.html, :length => 40)
             %footer
               .inner
                 %aside
@@ -76,13 +79,16 @@
                   %p= source.updated_at.strftime("%e %b. %Y, %l:%M%P")
                 %section
                   - if current_user
-                    %a.btn.edit{:href => source.url}
+                    %a.btn.edit.tooltip{:href => source.url, :title => "Edit"}
                       %i.ss-icon view
                     - form_tag url(:sources, :destroy), :method => "delete", :class => "inline" do
                       = hidden_field_tag :author, :value => current_user.id
                       = hidden_field_tag :"source[id]", :value => source.id
-                      %button.trash{:href => ""}
+                      %button.trash.tooltip{:href => "", :title => "Delete"}
                         %i.ss-icon trash
+                  - else
+                    %a.btn.edit.tooltip{:href => source.url, :title => "View"}
+                      %i.ss-icon view
       %footer
         - if current_user
           %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}

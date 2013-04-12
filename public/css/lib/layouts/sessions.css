@@ -192,8 +192,11 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
   a.btn i, button i, input[type="submit"] i, span.btn i, .chzn-container-multi .chzn-choices .search-choice i {
     position: relative;
     top: 1px; }
+  /* line 119, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn span, button span, input[type="submit"] span, span.btn span, .chzn-container-multi .chzn-choices .search-choice span {
+    padding-left: 0.25em; }
 
-/* line 120, ../../../../app/assets/css/lib/modules/_buttons.scss */
+/* line 124, ../../../../app/assets/css/lib/modules/_buttons.scss */
 form.full {
   *zoom: 1;
   max-width: 59.5em;
@@ -208,7 +211,7 @@ form.full {
     content: "";
     display: table;
     clear: both; }
-  /* line 125, ../../../../app/assets/css/lib/modules/_buttons.scss */
+  /* line 129, ../../../../app/assets/css/lib/modules/_buttons.scss */
   form.full > .full {
     *zoom: 1;
     max-width: 59.5em;
@@ -265,14 +268,17 @@ form table {
       width: 10%;
       text-align: right; }
   /* line 46, ../../../../app/assets/css/lib/modules/_forms.scss */
-  form table input.large {
-    width: 75%; }
-/* line 51, ../../../../app/assets/css/lib/modules/_forms.scss */
+  form table input {
+    width: 11.75em; }
+    /* line 49, ../../../../app/assets/css/lib/modules/_forms.scss */
+    form table input.large {
+      width: 25em; }
+/* line 58, ../../../../app/assets/css/lib/modules/_forms.scss */
 form textarea {
   color: #444444;
   font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
   line-height: 2rem; }
-/* line 57, ../../../../app/assets/css/lib/modules/_forms.scss */
+/* line 64, ../../../../app/assets/css/lib/modules/_forms.scss */
 form.inline {
   display: inline; }
 
@@ -409,36 +415,42 @@ footer.comments {
     float: right; }
 
 /* line 2, ../../../../app/assets/css/lib/modules/_tabs.scss */
-.tabs ul {
+.tabs > header {
   margin-bottom: 3em; }
   /* line 5, ../../../../app/assets/css/lib/modules/_tabs.scss */
-  .tabs ul li {
+  .tabs > header ul, .tabs > header p {
+    display: inline-block; }
+  /* line 10, ../../../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs > header ul li {
     display: inline-block;
     margin: 0; }
-    /* line 10, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs ul li:first-child a {
+    /* line 15, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li:first-child a {
       -moz-border-radius-topleft: 3px;
       -webkit-border-top-left-radius: 3px;
       border-top-left-radius: 3px;
       -moz-border-radius-bottomleft: 3px;
       -webkit-border-bottom-left-radius: 3px;
       border-bottom-left-radius: 3px; }
-    /* line 17, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs ul li:last-child a {
+    /* line 22, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li:last-child a {
       -moz-border-radius-topright: 3px;
       -webkit-border-top-right-radius: 3px;
       border-top-right-radius: 3px;
       -moz-border-radius-bottomright: 3px;
       -webkit-border-bottom-right-radius: 3px;
       border-bottom-right-radius: 3px; }
-    /* line 24, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs ul li.ui-state-active a {
+    /* line 29, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li.ui-state-active a {
       background: #1abc9c; }
-      /* line 27, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs ul li.ui-state-active a:hover {
+      /* line 32, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li.ui-state-active a:hover {
         background: #16a085; }
-    /* line 33, ../../../../app/assets/css/lib/modules/_tabs.scss */
-    .tabs ul li a {
+      /* line 36, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li.ui-state-active a span {
+        display: inline-block; }
+    /* line 42, ../../../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li a {
       background: #b1c2c6;
       border: none;
       color: #fefefe;
@@ -450,14 +462,20 @@ footer.comments {
       padding: 0.5em 0.75em;
       text-transform: uppercase;
       text-shadow: none; }
-      /* line 46, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs ul li a:hover {
+      /* line 55, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a:hover {
         background: #a3b6bb;
         color: #fefefe; }
-      /* line 51, ../../../../app/assets/css/lib/modules/_tabs.scss */
-      .tabs ul li a i {
+      /* line 60, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a i {
         position: relative;
         top: 1px; }
+      /* line 65, ../../../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a span {
+        display: none; }
+  /* line 72, ../../../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs > header p {
+    margin-left: 0.5em; }
 
 /*
 	Noted.
