@@ -1,4 +1,4 @@
-Noted.controllers :projects do
+Noted::Web.controllers :projects do
   get :new, :map => "/new" do
     render 'projects/new'
   end

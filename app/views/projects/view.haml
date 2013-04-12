@@ -9,7 +9,7 @@
             Description
 
       .text.hidden
-        = @project.description
+        = @project.description.html_safe
   %section
     = partial 'partials/flash', :locals => { :flash => flash }
     .notes
@@ -44,7 +44,7 @@
                 - if note.html.blank?
                   %em.subtle This note is blank!
                 - else
-                  = truncate_words(note.html, :length => 40)
+                  = safe(truncate_words(note.html, :length => 40))
             %footer
               .inner
                 %aside
@@ -72,7 +72,7 @@
           %article
             %section
               %p.text
-                = source.citation.html
+                = safe(source.citation.html)
             %footer
               .inner
                 %aside

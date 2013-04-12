@@ -3,5 +3,5 @@
 :test: rspec
 :mock: mocha
 :script: jquery
-:renderer: haml
+:renderer: liquid
 :stylesheet: compass
