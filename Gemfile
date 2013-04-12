@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-%w(cache core gen helpers).each do |c|
-  gem 'padrino-' + c, '0.11.1'
-end
+gem 'padrino', '~> 0.11.1'
 
 gem 'puma'
 
@@ -50,6 +48,8 @@ end
 group :production do
   gem 'execjs'
   gem 'therubyracer'
+
+  gem 'cijoe', git: 'git://github.com/nvloff/cijoe.git'
 end
 
 group :test do
