@@ -6,8 +6,11 @@ describe User::Create do
       :user => {
         :name => "Carl Sagan",
         :email => "carl@sagan.org",
-        :username => "carl",
-        :password => "foobar"
+        :username => "carl"
+      },
+      :password => {
+          :password => "foobar",
+          :confirm => "foobar"
       }
     })
   end

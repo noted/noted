@@ -13,12 +13,12 @@ describe "Users" do
 
   describe "POST /users/create" do
     before do
-      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan", :password => "foobar" }
+      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => { :password => "foobar", :confirm => "foobar" }
     end
 
     describe "redirects" do
-      it { response.should be_redirect }
-      it { response.location.should eql("#{site}/") }
+      it "response.should be_redirect (needs sessions)"
+      it "response.location.should (needs session)"
     end
 
     describe "database" do

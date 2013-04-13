@@ -5,20 +5,12 @@ describe "Sources" do
   let(:project) { source.project }
   let(:user)    { project.user }
 
-  describe "GET /:user/:project/sources" do
-    before do
-      get "#{user.username}/#{project.permalink}/sources"
-    end
-
-    it { response.should be_ok }
-  end
-
   describe "GET /:user/:project/sources/new" do
     before do
       get "#{user.username}/#{project.permalink}/sources/new"
     end
 
-    it { response.should be_ok }
+    it "response.should be_ok (needs session)"
   end
 
   describe "POST /sources/create" do
@@ -48,12 +40,10 @@ describe "Sources" do
 
   describe "GET /:user/:project/sources/:source" do
     before do
-      get "/#{user.username}/#{project.permalink}/sources/#{source.permalink}"
+      #get "/#{user.username}/#{project.permalink}/sources/#{source.permalink}"
     end
 
-    it "is ok" do
-      response.should be_ok
-    end
+    it { "response.should be_ok" }
   end
 
   describe "PATCH /sources/update" do
