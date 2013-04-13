@@ -15,6 +15,8 @@ module Noted
       BetterErrors.application_root = PADRINO_ROOT
     end
 
+    MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
+
     Dir[Padrino.root("app/mutations/**/*.rb")].each {|f| require f }
   end
 end
