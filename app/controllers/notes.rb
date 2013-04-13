@@ -13,7 +13,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      redirect n.result.url
+      redirect "#{n.result.url}/#edit"
     else
       flash[:error] = n.errors.message_list
       redirect Project.find(params[:project]).url

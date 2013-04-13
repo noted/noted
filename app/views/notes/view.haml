@@ -29,7 +29,7 @@
               = find_and_preserve text_area_tag :"note[body]", :id => "redactor", :value => @note.body, :placeholder => "Begin writing your note here..."
             %footer
               = hidden_field_tag :"existing-tags", :value => @note.tags_str
-              = text_field_tag :"tags", :class => "tags"
+              = text_field_tag :"tags", :class => "tags", :placeholder => "Tags"
           %footer
             %p
               %select.chosen{:"data-placeholder" => "Attach some sources", :multiple => true, :name => "note[source_ids][]"}
