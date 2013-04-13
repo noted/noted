@@ -8,7 +8,7 @@
 	Noted.
 		file: css/lib/_base.scss
 */
-/* line 17, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,38 +29,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
@@ -123,7 +123,7 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
     margin-right: auto;
     display: block;
     text-align: center; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     a.btn.full:after, button.full:after, input[type="submit"].full:after, span.btn.full:after, .chzn-container-multi .chzn-choices .search-choice.full:after {
       content: "";
       display: table;
@@ -206,7 +206,7 @@ form.full {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   form.full:after {
     content: "";
     display: table;
@@ -220,7 +220,7 @@ form.full {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     form.full > .full:after {
       content: "";
       display: table;
@@ -304,7 +304,7 @@ form.inline {
   font-weight: bold;
   margin-bottom: 1.75em;
   padding: 0.75em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .flash:after {
     content: "";
     display: table;
@@ -385,7 +385,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     footer.comments form:after, footer.comments article:after {
       content: "";
       display: table;
@@ -527,7 +527,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #index .hero .inner:after {
       content: "";
       display: table;
@@ -549,7 +549,7 @@ footer.comments {
   margin-bottom: 4em;
   padding-bottom: 4em;
   text-align: center; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #index .information header:after {
     content: "";
     display: table;
@@ -563,7 +563,7 @@ footer.comments {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #index .information section:after {
     content: "";
     display: table;
@@ -604,7 +604,7 @@ footer.comments {
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #user:after {
     content: "";
     display: table;
@@ -724,7 +724,7 @@ footer.comments {
   margin-left: auto;
   margin-right: auto;
   margin: 4em auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #new-project:after {
     content: "";
     display: table;
@@ -762,7 +762,7 @@ footer.comments {
     margin-left: auto;
     margin-right: auto;
     padding: 3em 0; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project > header .inner:after {
       content: "";
       display: table;
@@ -818,7 +818,7 @@ footer.comments {
     padding-right: 0.5em;
     margin-left: auto;
     margin-right: auto; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project .description .inner:after {
       content: "";
       display: table;
@@ -856,7 +856,7 @@ footer.comments {
   margin-right: auto;
   margin-bottom: 6em;
   margin-top: 5em; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #project > section:after {
     content: "";
     display: table;
@@ -885,7 +885,7 @@ footer.comments {
     margin-right: auto;
     margin-bottom: 1rem;
     padding: 0; }
-    /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
     #project > section .notes header:after, #project > section .sources header:after {
       content: "";
       display: table;
@@ -1177,7 +1177,7 @@ section#source form.manual {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   section#source form.manual:after {
     content: "";
     display: table;
@@ -1441,6 +1441,7 @@ section#source form.manual {
   -moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
   box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);*/
   padding-right: 20px;
+  margin: 3px 0 3px 5px;
   position: relative;
   cursor: default; }
 
@@ -1934,7 +1935,7 @@ strong {
   padding-right: 0.5em;
   margin-left: auto;
   margin-right: auto; }
-  /* line 38, ../../../../../../home/ethan/.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../home/ethan/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .contain:after {
     content: "";
     display: table;
