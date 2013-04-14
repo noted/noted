@@ -9,7 +9,7 @@
             Description
 
       .text.hidden
-        = @project.description.html_safe
+        = safe(@project.description.html)
   %section
     = partial 'partials/flash', :locals => { :flash => flash }
     .notes
@@ -43,10 +43,10 @@
                         %i.ss-icon trash
             %section
               .inner.text
-                - if note.html.blank?
+                - if note.body.html.blank?
                   %em.subtle This note is blank!
                 - else
-                  = safe(truncate_words(note.html, :length => 40))
+                  = safe(truncate_words(note.body.html, :length => 40))
             %footer
               .inner
                 %aside

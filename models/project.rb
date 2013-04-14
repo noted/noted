@@ -2,7 +2,7 @@ class Project
   include MongoMapper::Document
 
   key :title, String
-  key :description, String
+  key :description, Markdown
   key :collaborators, Array
   key :permalink, String
 

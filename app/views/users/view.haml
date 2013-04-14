@@ -41,7 +41,7 @@
               %a{:href => project.url}= project.title
         %section.text
           .inner
-            = project.description
+            = safe(project.description.html)
         %footer
           .inner
             %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")
