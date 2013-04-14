@@ -2,7 +2,7 @@ class Note
   include MongoMapper::Document
 
   key :title, String
-  key :body, String
+  key :body, Markdown
   key :source_ids, Array # Array of Source IDs as strings
   key :permalink, String
 
@@ -20,10 +20,6 @@ class Note
 
   def url
     "#{self.project.url}/notes/#{self.permalink}"
-  end
-
-  def html
-    Maruku.new(self.body).to_html
   end
 
   def sources
