@@ -1,0 +1,35 @@
+.sources
+  %header
+    %h3 Sources
+  %section
+    - if @s.blank?
+      %p
+        - if current_user
+          You don't have any sources yet!
+        - else
+          Nothing to see here, move along...
+    - @s.each do |source|
+      %article
+        %section
+          %p.text
+            = safe(source.citation.html)
+        %footer
+          .inner
+            %aside
+              %p= source.updated_at.strftime("%e %b. %Y, %l:%M%P")
+            %section
+              - if current_user
+                %a.btn.edit.tooltip{:href => source.url, :title => "Edit"}
+                  %i.ss-icon view
+                - form_tag url(:sources, :destroy), :method => "delete", :class => "inline" do
+                  = hidden_field_tag :author, :value => current_user.id
+                  = hidden_field_tag :"source[id]", :value => source.id
+                  %button.trash.tooltip{:href => "", :title => "Delete"}
+                    %i.ss-icon trash
+              - else
+                %a.btn.edit.tooltip{:href => source.url, :title => "View"}
+                  %i.ss-icon view
+  %footer
+    - if current_user
+      %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}
+        %i.ss-icon plus

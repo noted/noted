@@ -20,8 +20,18 @@ Noted::Web.controllers :projects do
   get :view, :map => "/:user/:project" do
     @user = User.find_by_username(params[:user])
     @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
-    @notes = Note.where(:project_id => @project.id).order("updated_at dsc").all
-    @sources = Source.where(:project_id => @project.id).order("updated_at dsc").all
+
+    @notes = cache("#{@project.id}_notes", :expires_in => 60) do
+      @n = Note.where(:project_id => @project.id).order("updated_at dsc").all
+
+      partial 'projects/notes'
+    end
+
+    @sources = cache("#{@project.id}_sources", :expires_in => 60) do
+      @s = Source.where(:project_id => @project.id).order("updated_at dsc").all
+
+      partial 'projects/sources'
+    end
 
     render 'projects/view'
   end

@@ -24,24 +24,4 @@
           %i.ss-icon gear
           %span
             Profile
-  %section
-    - if @projects.blank?
-      .empty
-        - if @user == current_user
-          %p You don't have any projects yet!
-          %p.go
-            %a.btn.primary{:href => url(:projects, :new)} Make a Project
-        - else
-          %p Nothing to see here, move along.
-    - @projects.each do |project|
-      %article
-        %header
-          .inner
-            %h4
-              %a{:href => project.url}= project.title
-        %section.text
-          .inner
-            = safe(project.description.html)
-        %footer
-          .inner
-            %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")
+  = @projects
