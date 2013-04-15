@@ -13,6 +13,8 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
+      expire("#{n.result.project.id}_notes")
+
       redirect "#{n.result.url}/#edit"
     else
       flash[:error] = n.errors.message_list
@@ -27,6 +29,8 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
+      expire("#{n.result.project.id}_notes")
+
       redirect n.result.url
     else
       flash[:error] = n.errors.message_list
@@ -61,6 +65,8 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
+      expire("#{n.project.id}_notes")
+
       redirect n.result.project.url
     else
       flash[:error] = n.errors.message_list.to_s
@@ -77,6 +83,8 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
+      expire("#{project.id}_notes")
+
       redirect project.url
     else
       flash[:error] = n.errors.message_list

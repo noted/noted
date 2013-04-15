@@ -23,6 +23,8 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
+      expire("#{s.result.project.id}_sources")
+
       redirect Project.find(params[:project]).url
     else
       redirect Project.find(params[:project]).url
@@ -51,6 +53,8 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
+      expire("#{s.result.project.id}_sources")
+
       redirect s.result.project.url
     else
       flash[:error] = "Something has gone awry."
@@ -67,6 +71,8 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
+      expire("#{project.id}_sources")
+
       redirect project.url
     else
       flash[:error] = "Something has gone awry."
