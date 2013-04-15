@@ -54,7 +54,11 @@ Noted::Web.controllers :users do
 
   get :view, :map => "/:user" do
     @user = User.find_by_username(params[:user])
-    @projects = Project.where(:user_id => @user.id).order("updated_at dsc")
+    @projects = cache("#{@user.id}_projects", :expires_in => 60) do
+      @p = Project.where(:user_id => @user.id).order("updated_at dsc")
+
+      partial 'users/projects'
+    end
 
     render 'users/view'
   end

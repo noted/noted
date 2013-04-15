@@ -14,6 +14,8 @@ gem 'mongo_mapper'
 gem 'canable'
 gem 'state_machine'
 
+gem 'memcached'
+
 gem 'redis'
 gem 'von'
 

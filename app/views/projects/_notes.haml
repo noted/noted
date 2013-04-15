@@ -1,0 +1,48 @@
+.notes
+  %header
+    %h3 Notes
+    %ul.tags
+  %section
+    - if @n.blank?
+      %p
+        - if current_user
+          You don't have any notes yet!
+        - else
+          Nothing to see here, move along...
+    - @n.each do |note|
+      %article.note{:"data-tags" => note.tags_str}
+        %header
+          .inner
+            %hgroup
+              %h4
+                %a{:href => note.url}= note.title
+            %aside
+              %a.btn.view{:href => "#{note.url}/#view"}
+                %i.ss-icon view
+              - if current_user
+                %a.btn.edit{:href => "#{note.url}/#edit"}
+                  %i.ss-icon edit
+                - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
+                  = hidden_field_tag :author, :value => current_user.id
+                  = hidden_field_tag :"note[id]", :value => note.id
+                  %button.trash{:href => ""}
+                    %i.ss-icon trash
+        %section
+          .inner.text
+            - if note.body.html.blank?
+              %em.subtle This note is blank!
+            - else
+              = safe(truncate_words(note.body.html, :length => 40))
+        %footer
+          .inner
+            %aside
+              %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
+            %section
+              %ul.tags
+                - note.tags.each do |t|
+                  %li{:"data-value" => t.text}
+                    %a.btn= t.text
+  %footer
+    - if current_user
+      %a.btn.full.subtle{:href => "/notes/new?project=#{@project.id}&author=#{current_user.id}"}
+        %i.ss-icon plus
