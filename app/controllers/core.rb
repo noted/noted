@@ -1,7 +1,5 @@
 Noted::Web.controllers do
-  get :index, :cache => true do
-    expires_in 3600
-
+  get :index do
     if current_user
       redirect url(:users, :view, :user => current_user.username)
     else
