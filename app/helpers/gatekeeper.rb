@@ -3,12 +3,12 @@ module Gatekeeper
     User.find_by_hash(session[:noted])
   end
 
-  def login(user)
+  def authorize(user)
     session[:noted] ||= 0
     session[:noted] = user.hash
   end
 
-  def logout!
+  def deauthorize!
     session[:noted] = nil
     session[:noted].nil?
   end

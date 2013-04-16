@@ -9,7 +9,7 @@ Noted::Web.controllers :sessions do
 
   post :create do
     if u = User.authenticate(params[:user][:email], params[:user][:password])
-      login(u)
+      authorize(u)
       redirect url(:index)
     else
       flash[:error] = "That isn't the right email or password."
@@ -18,7 +18,7 @@ Noted::Web.controllers :sessions do
   end
 
   get :destroy, :map => "/logout" do
-    if logout!
+    if deauthorize!
       redirect url(:index)
     end
   end
