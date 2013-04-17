@@ -10,3 +10,4 @@ vendor/gems/*
 coverage/*
 vendor/ruby/*
 *.sublime*
+.s3.yml
