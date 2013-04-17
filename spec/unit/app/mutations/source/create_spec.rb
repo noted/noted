@@ -6,19 +6,23 @@ describe Source::Create do
 
   let(:attributes) do
     {
-      :type => :book,
-      :title => "The Fault in Our Stars",
-      :contributors => [
-        {
-          :role => :author,
-          :first => "John",
-          :last => "Green"
+      "type" => "book",
+      "contributors" => {
+        "0" => {
+          "role" => "author",
+          "first" => "J",
+          "middle" => "K",
+          "last" => "Rowling",
+          "suffix" => ""
         }
-      ],
-      :publisher => "Penguin",
-      :city => "New York",
-      :year => "2012",
-      :media => :print
+      },
+      "title" => "Harry Potter and the Deathly Hallows",
+      "publisher" => "Scholastic",
+      "city" => "New York",
+      "year" => "2008",
+      "volume" => "",
+      "edition" => "",
+      "series" => ""
     }
   end
 
@@ -42,5 +46,5 @@ describe Source::Create do
   it { source.result.creator.should eql user }
   it { source.result.project.should eql project }
   it { source.result.citation.should be_an_instance_of Scholar::Citation }
-  it { source.result.citation.html.should eql "Green, John. <em>The Fault in Our Stars</em>. New York: Penguin, 2012. Print." }
+  it { source.result.citation.html.should eql "Rowling, J. K. <em>Harry Potter and the Deathly Hallows</em>. New York: Scholastic, 2008." }
 end

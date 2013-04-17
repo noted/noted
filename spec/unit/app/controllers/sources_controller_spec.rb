@@ -5,6 +5,10 @@ describe "Sources" do
   let(:project) { source.project }
   let(:user)    { project.user }
 
+  before do
+    get project.url
+  end
+
   describe "GET /:user/:project/sources/new" do
     before do
       get "#{user.username}/#{project.permalink}/sources/new"

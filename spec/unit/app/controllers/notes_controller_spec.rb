@@ -5,6 +5,10 @@ describe "Notes" do
   let(:project) { note.project }
   let(:user)    { project.user }
 
+  before do
+    get project.url # Set the cache.
+  end
+
   describe "POST /notes/create" do
     before do
       post "/notes/create", :project => project.id, :author => user.id

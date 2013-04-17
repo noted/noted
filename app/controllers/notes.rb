@@ -65,7 +65,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      expire("#{n.project.id}_notes")
+      expire("#{n.result.project.id}_notes")
 
       redirect n.result.project.url
     else

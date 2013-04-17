@@ -4,6 +4,10 @@ describe "Projects" do
   let(:project) { create(:project) }
   let(:user)    { project.user }
 
+  before do
+    get "/#{user.username}"
+  end
+
   describe "GET /projects/new" do
     before do
       #get "/projects/new"

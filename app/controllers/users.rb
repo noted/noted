@@ -10,7 +10,7 @@ Noted::Web.controllers :users do
     })
 
     if u.success?
-      login(u.result)
+      authorize(u.result)
       redirect url(:index)
     else
       flash[:error] = "Something has gone awry. #{u.errors.message}"

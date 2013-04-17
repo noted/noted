@@ -22,6 +22,6 @@ describe Project::Update do
   it { action.success?.should be_true }
   it { action.result.should be_an_instance_of Project }
   it { action.result.title.should eql "Hayden Planetarium" }
-  it { action.result.description.should eql "Foobar." }
+  it { action.result.description.markdown.should eql "Foobar." }
   it { action.result.updater.should eql user }
 end
