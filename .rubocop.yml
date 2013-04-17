@@ -1,0 +1,8 @@
+Encoding:
+  Enabled: false
+
+HashSyntax:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
