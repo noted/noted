@@ -11,11 +11,7 @@ module CompassInitializer
       config.images_dir = "public/img"
       config.javascripts_dir = "public/jsc"
 
-      if Padrino.env == :production
-        config.output_style = :compressed
-      else
-        config.output_style = :nested
-      end
+      config.output_style = :compressed
     end
 
     Sass::Plugin.options[:never_update] = true if Padrino.env == :production
