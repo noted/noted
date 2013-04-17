@@ -26,7 +26,7 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations'
 
-gem 'haml', '4.0.1'
+gem 'haml'
 gem 'maruku'
 
 gem 'erubis'

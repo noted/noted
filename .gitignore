@@ -1,7 +1,7 @@
 coverage/*
 log/**/*
 tmp/**/*
-vendor/**/*
+vendor/ruby/*
 !vendor/gems/cache/
 .bundle/*
 .rbx/*
