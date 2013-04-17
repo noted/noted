@@ -59,7 +59,6 @@ group :test do
 
   gem 'rspec'
   gem 'shoulda-matchers'
-  gem 'fuubar'
 
   gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
