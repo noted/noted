@@ -14,12 +14,12 @@ preload_app true
 timeout 30
 
 # Store the PID
-pid File.join(padrino_root, 'tmp', 'unicorn.pid')
+pid File.join(padrino_root, 'tmp', 'pids', 'unicorn.pid')
 
 # Where to listen
 if padrino_env == 'production'
   # Listen on a Unix data socket in production
-  listen File.join(padrino_root + '/tmp/unicorn.sock'), :backlog => 2048
+  listen File.join(padrino_root, 'tmp', 'sockets', 'unicorn.sock'), :backlog => 2048
 else
   # Listen on port 5000 in development
   listen 5000
@@ -27,8 +27,8 @@ end
 
 # Log stuff here
 if padrino_env == 'production'
-  stderr_path File.join(padrino_root, '/log/unicorn.stderr.log')
-  stdout_path File.join(padrino_root, '/log/unicorn.stderr.log')
+  stderr_path File.join(padrino_root, 'log', 'unicorn.stderr.log')
+  stdout_path File.join(padrino_root, 'log', 'unicorn.stderr.log')
 end
 
 
@@ -44,7 +44,7 @@ before_fork do |server, worker|
   #
   # Using this method we get 0 downtime deploys.
 
-  old_pid = File.join(padrino_root + '/tmp/unicorn.pid.old')
+  old_pid = File.join(padrino_root, 'tmp', 'pids', 'unicorn.pid.old')
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
