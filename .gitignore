@@ -1,6 +1,6 @@
 coverage/*
-log/**/*
-tmp/**/*
+log/
+tmp/
 vendor/ruby/*
 !vendor/gems/cache/
 .bundle/*
