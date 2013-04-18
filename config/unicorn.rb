@@ -19,7 +19,8 @@ pid File.join(padrino_root, 'tmp', 'pids', 'unicorn.pid')
 # Where to listen
 if padrino_env == 'production'
   # Listen on a Unix data socket in production
-  listen File.join(padrino_root, 'tmp', 'sockets', 'unicorn.sock'), :backlog => 2048
+  #listen File.join(padrino_root, 'tmp', 'sockets', 'unicorn.sock'), :backlog => 2048
+  listen 80
 else
   # Listen on port 5000 in development
   listen 5000
