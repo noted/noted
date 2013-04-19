@@ -1,0 +1,132 @@
+/*
+	Noted.
+		file: css/lib/modules/_buttons.scss
+*/
+
+a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choices .search-choice {
+	@include border-radius(2px);
+	//@include box-shadow(rgba(#333, 0.5) 0 1px 3px -2px);
+
+	background: darken($grey, 20%);
+	border: none;
+	color: $base;
+	cursor: pointer;
+	display: inline-block;
+	font: bold 0.85em $sans-serif;
+	padding: 0.5em 0.75em;
+	text-transform: uppercase;
+	text-shadow: none;
+
+	&:hover {
+		background: darken($grey, 25%);
+		color: $base;
+	}
+
+	&.full {
+		@include container;
+
+		display: block;
+		//margin-left: auto;
+		//margin-right: auto;
+		text-align: center;
+		//width: 50%;
+	}
+
+	&.subtle {
+		background: $grey;
+
+		&:hover {
+			background: $turquoise;
+		}
+	}
+
+	&.primary, &.blue {
+		background: $blue;
+
+		&:hover {
+			background: darken($blue, 5%);
+		}
+	}
+
+	&.turquoise {
+		background: $turquoise;
+
+		&:hover {
+			background: darken($turquoise, 5%);
+		}
+	}
+
+	&.orange {
+		background: $orange;
+
+		&:hover {
+			background: darken($orange, 5%);
+		}
+	}
+
+	&.yellow {
+		background: $yellow;
+
+		&:hover {
+			background: $dark-yellow;
+		}
+	}
+
+	&.red {
+		background: $red;
+
+		&:hover {
+			background: $dark-red;
+		}
+	}
+
+	&.green {
+		background: $green;
+
+		&:hover {
+			background: $dark-green;
+		}
+	}
+
+	&.large {
+		font-size: 1em;
+	}
+
+	&.no-bg {
+		background: transparent;
+		font-size: 1em;
+		padding: 0;
+
+		&.red {
+			color: $red;
+
+			&:hover {
+				color: $dark-red;
+			}
+		}
+
+		i {
+			position: relative;
+			top: 0;
+		}
+	}
+
+	i {
+		position: relative;
+		top: 1px;
+	}
+
+	span {
+		padding-left: 0.25em;
+	}
+}
+
+form.full {
+	@include container;
+
+	margin-top: 1em;
+
+	& > .full {
+		@include container;
+	}
+}

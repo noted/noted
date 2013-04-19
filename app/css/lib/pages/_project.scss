@@ -1,0 +1,391 @@
+/*
+	Noted.
+		file: css/pages/_user.scss
+*/
+
+#project {
+	& > header {
+		background: lighten($blue-grey, 3%);
+		border-bottom: 5px solid lighten($dark-blue-grey, 1%);
+
+		.inner {
+			@include container;
+
+			padding: 3em 0;
+		}
+
+		hgroup {
+			@include span-columns(18);
+
+			h2 {
+				font-family: $serif;
+				//margin-bottom: 1rem;
+			}
+
+			img {
+				@include border-radius(50%);
+
+				border: 3px solid $grey;
+				max-width: 4%;
+
+				&:hover {
+					border: 3px solid darken($grey, 4%);
+				}
+			}
+
+			p {
+				font-family: $serif;
+				margin-top: 0.5em;
+			}
+		}
+
+		aside {
+			@include span-columns(6 omega);
+
+			text-align: right;
+
+			p {
+				position: relative;
+				bottom: 3px;
+			}
+		}
+	}
+
+	.description {
+		background: lighten($dark-blue-grey, 1%);
+		margin-bottom: 2rem;
+		padding: 2rem 0;
+
+		.inner {
+			@include container;
+
+			i {
+				font-size: 0.75em;
+				margin-right: 0.25em;
+				position: relative;
+			}
+
+			a:hover {
+				cursor: pointer;
+			}
+
+			.text {
+				@include span-columns(18);
+				@include suffix(6);
+
+				&.hidden {
+					display: none;
+				}
+
+				&.display {
+					display: block;
+					margin-top: 1em;
+				}
+			}
+		}
+	}
+
+	& > section {
+		@include container;
+
+		margin-bottom: 6em;
+		margin-top: 5em;
+
+		h3 {
+			margin-bottom: 1em;
+		}
+
+		table {
+			input {
+				width: 65%;
+			}
+
+			textarea {
+				height: 10em;
+				width: 95%;
+			}
+		}
+
+		form:last-child {
+			//margin-top: 4em;
+
+			p {
+				margin-bottom: 0.5em;
+			}
+		}
+
+		.notes, .sources {
+			header {
+				@include container; // Fix this.
+
+				margin-bottom: 1rem;
+				padding: 0;
+
+				hgroup {
+					@include span-columns(20);
+				}
+
+				aside {
+					@include span-columns(4 omega);
+
+					font-size: 0.85rem;
+					text-align: right;
+				}
+			}
+
+			footer {
+				margin-top: 1em;
+			}
+		}
+
+		.notes {
+			@include span-columns(14);
+
+			header {
+				h3 , ul {
+					display: inline-block;
+					float: left;
+				}
+
+				h3 {
+					padding-right: 0.5em;
+				}
+
+				ul {
+					font-size: 0.75em;
+
+					li {
+						display: inline-block;
+						padding-left: 0.25em;
+					}
+				}
+			}
+
+			article {
+				@include border-radius(2px);
+
+				border: 2px solid $grey;
+
+				& + article {
+					margin-top: 1.5em;
+				}
+
+				header {
+					background: $grey;
+
+					.inner {
+						padding: 0.5em 0.65em;
+					}
+
+					hgroup {
+						padding-bottom: 0.5em;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.view {
+							&:hover {
+								color: $purple;
+							}
+						}
+
+						&.edit {
+							&:hover {
+								color: $turquoise;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
+					}
+				}
+
+				section {
+					margin: 1em 0;
+					padding: 0 0.65em;
+				}
+
+				footer {
+					border-top: 1px solid $grey;
+					color: darken($grey, 5%);
+					font-size: 0.85em;
+					padding: 0.25em 0.65em;
+
+					.inner {
+						@include clearfix;
+					}
+
+					aside {
+						float: left;
+					}
+
+					section {
+						font-size: 0.85em;
+						float: right;
+						margin: 0;
+						padding-right: 0;
+						text-align: right;
+
+						ul {
+							li {
+								display: inline-block;
+
+								&:after {
+									//content: ", ";
+								}
+
+								a:before {
+									//content: "#";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sources {
+			@include span-columns(8 omega);
+
+			header {
+				h3 , ul {
+					display: inline-block;
+					float: left;
+				}
+
+				h3 {
+					padding-right: 0.5em;
+				}
+
+				ul {
+					font-size: 0.75em;
+
+					li {
+						display: inline-block;
+						padding-left: 0.25em;
+					}
+				}
+			}
+
+			article {
+				@include border-radius(2px);
+
+				border: 2px solid $grey;
+
+				& + article {
+					margin-top: 1.5em;
+				}
+
+				header {
+					background: $grey;
+
+					.inner {
+						padding: 0.5em 0.65em;
+					}
+
+					hgroup {
+						padding-bottom: 0.5em;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.edit {
+							&:hover {
+								color: $turquoise;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
+					}
+				}
+
+				section {
+					margin: 1em 0;
+					padding: 0 0.65em;
+				}
+
+				footer {
+					border-top: 1px solid $grey;
+					color: darken($grey, 5%);
+					font-size: 0.85em;
+					padding: 0.25em 0.65em;
+
+					.inner {
+						@include clearfix;
+					}
+
+					a.btn, button {
+						background: transparent;
+						color: darken($grey, 5%);
+						font-size: 1.05rem;
+						padding: 0;
+
+						& + a {
+							margin-left: 0.5em;
+						}
+
+						&.edit {
+							&:hover {
+								color: $turquoise;
+							}
+						}
+
+						&.trash {
+							&:hover {
+								color: $red;
+							}
+						}
+					}
+
+					aside {
+						float: left;
+					}
+
+					section {
+						font-size: 0.85em;
+						float: right;
+						margin: 0;
+						text-align: right;
+
+						ul {
+							li {
+								display: inline-block;
+
+								&:after {
+									//content: ", ";
+								}
+
+								a:before {
+									//content: "#";
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

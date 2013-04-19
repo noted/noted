@@ -1,0 +1,67 @@
+/*
+	Noted.
+		file: css/lib/modules/_forms.scss
+*/
+
+form {
+	input, textarea, select, .chzn-container-multi .chzn-choices {
+		@include border-radius(1px);
+
+		background: $base;
+		color: $text;
+		font: 1em/1em $sans-serif;
+		outline: none;
+		padding: 0.5em;
+
+		&.small {
+			width: 1em;
+		}
+	}
+
+	input[type=text], input[type=email], input[type=password], textarea, select {
+		@include border-radius(2px);
+
+		border: 2px solid $grey;
+
+		&:focus {
+			border: 2px solid darken($grey, 10%);
+		}
+	}
+
+	table {
+		width: 100%;
+
+		tr {
+			td {
+				padding: 0.25em 0.5em;
+
+				&:first-child {
+					font-weight: bold;
+					width: 10%;
+					text-align: right;
+				}
+			}
+		}
+
+		input {
+			width: 11.75em;
+
+			&.large {
+				width: 25em;
+			}
+
+			& + input {
+			}
+		}
+	}
+
+	textarea {
+		color: $text;
+		font: 13px/2em $mono;
+		line-height: 2rem;
+	}
+
+	&.inline {
+		display: inline;
+	}
+}

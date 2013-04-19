@@ -1,0 +1,187 @@
+/*
+	Noted.
+		file: css/application.scss
+*/
+
+@import "lib/base";
+
+/*
+	= Appendix
+		I. Universal
+*/
+
+
+/*
+	I. Universal
+*/
+
+body {
+	background: $base;
+	color: $text;
+	font: 300 16px/1.5em $sans-serif;
+}
+
+a {
+	color: $red;
+	text-decoration: none;
+
+	&:hover {
+		color: $dark-red;
+	}
+}
+
+blockquote {
+	border-left: 3px solid $grey;
+	color: $deep-grey;
+	padding-left: 1em;
+
+	& + p {
+		margin-top: 1em
+	}
+}
+
+em {
+	font-style: italic;
+
+	&.subtle {
+		color: $dark-grey;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 1.25em;
+	text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.2);
+	text-transform: none;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: 1em;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-size: 1.35em;
+	text-transform: none;
+
+	span {
+		color: $dark-grey;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+strong {
+	font-weight: 600;
+}
+
+.contain {
+	@include container;
+}
+
+
+/*
+	II. Header
+*/
+
+body > header {
+	background: $red;
+
+	a {
+		color: $base;
+
+		&:hover {
+			color: $grey;
+		}
+	}
+
+	hgroup {
+		@include span-columns(6);
+	}
+
+	nav {
+		font: 0.85em $sans-serif;
+
+		li {
+			//text-shadow: 0 1px 0 rgba(darken($base, 10%), 0.5);
+		}
+
+		section {
+			&:first-child {
+				@include span-columns(10);
+
+				margin-top: 0.35em;
+
+				li {
+					padding-right: 2em;
+				}
+			}
+
+			&:last-child {
+				@include span-columns(8 omega);
+
+				ul {
+					float: right;
+
+					li {
+						padding-left: 0.75em;
+					}
+				}
+			}
+
+			li {
+				display: inline-block;
+			}
+		}
+	}
+
+	.contain {
+		padding: 1.5em 0;
+	}
+}
+
+
+/*
+	III. Main
+*/
+
+#main {
+
+}
+
+
+/*
+	IV. Footer
+*/
+
+body > footer {
+	text-shadow: 0 1px 0 rgba(lighten($blue-grey, 10%), 0.5);
+
+	background: $blue-grey;
+	border-top: 5px solid $dark-blue-grey;
+	color: $deep-blue;
+	margin-top: 8em;
+	font: 0.85em $sans-serif;
+	padding: 6em 0;
+	text-align: center;
+
+	ul {
+		margin-bottom: 2em;
+
+		li {
+			display: inline-block;
+
+			& + li {
+				padding-left: 1em;
+			}
+		}
+	}
+}

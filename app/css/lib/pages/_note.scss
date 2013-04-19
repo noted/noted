@@ -1,0 +1,94 @@
+/*
+	Noted.
+		file: css/pages/_note.scss
+*/
+
+section#note {
+	.textbox {
+		@include border-radius(2px);
+
+		border: 2px solid $grey;
+		padding: 0;
+
+		input, textarea {
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			border-bottom: 2px solid $grey;
+
+			input {
+				padding: 1rem;
+				width: 95%;
+			}
+		}
+
+		section {
+			textarea {
+				padding: 1rem;
+				width: 95%;
+				max-width: 95%;
+				min-height: 20em;
+			}
+		}
+
+		footer {
+			border-top: 2px solid $grey;
+			padding: 0.5em;
+			cursor: text;
+
+			* {
+				display: inline-block;
+			}
+
+			span.btn {
+				font-size: 0.75em;
+
+				a:hover {
+					color: $red;
+				}
+			}
+
+			input {
+				width: 25%;
+			}
+		}
+	}
+
+	footer {
+		margin-top: 1em;
+
+		p {
+			&:first-child {
+				margin-bottom: 1em;
+
+				select {
+					width: 100%;
+				}
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+
+		a.btn {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	.text {
+	}
+
+	#view {
+		header {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+
+
