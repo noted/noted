@@ -53,6 +53,7 @@ group :production do
   gem 'unicorn'
   gem 'execjs'
   gem 'therubyracer'
+  gem 'cijoe', :git => 'https://github.com/nvloff/cijoe.git'
 end
 
 group :test do
