@@ -1,5 +1,5 @@
 PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
-PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(directory)
+PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
 require 'fileutils'
 require 'yaml'
@@ -7,10 +7,10 @@ require 'yaml'
 # Create log/ and tmp/ if in production.
 if PADRINO_ENV == 'production'
   directories = [
-    File.join(directory, 'log'),
-    File.join(directory, 'tmp'),
-    File.join(directory, 'tmp', 'pids'),
-    File.join(directory, 'tmp', 'sockets')
+    File.join(PADRINO_ROOT, 'log'),
+    File.join(PADRINO_ROOT, 'tmp'),
+    File.join(PADRINO_ROOT, 'tmp', 'pids'),
+    File.join(PADRINO_ROOT, 'tmp', 'sockets')
   ]
 
   directories.each do |d|
@@ -18,9 +18,9 @@ if PADRINO_ENV == 'production'
   end
 end
 
-# The directory to operate out of.
+# The PADRINO_ROOT to operate out of.
 #
-# The default is the current directory.
+# The default is the current PADRINO_ROOT.
 #
 directory PADRINO_ROOT
 
@@ -39,7 +39,7 @@ directory PADRINO_ROOT
 #
 # The default is “config.ru”.
 #
-rackup File.join(directory, 'config.ru')
+rackup File.join(PADRINO_ROOT, 'config.ru')
 
 # Set the environment in which the rack's app will run.
 #
@@ -58,20 +58,20 @@ end
 
 # Store the pid of the server in the file at “path”.
 #
-pidfile File.join(directory, 'tmp', 'pids', 'puma.pid')
+pidfile File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.pid')
 
 # Use “path” as the file to store the server info state. This is
 # used by “pumactl” to query and control the server.
 #
-state_path File.join(directory, 'tmp', 'pids', 'puma.state')
+state_path File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.state')
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # (“append”) specifies whether the output is appended, the default is
 # “false”.
 #
 if environment == :production
-  stdout = File.join(directory, 'log', 'stdout.log')
-  stderr = File.join(directory, 'log', 'stderr.log')
+  stdout = File.join(PADRINO_ROOT, 'log', 'stdout.log')
+  stderr = File.join(PADRINO_ROOT, 'log', 'stderr.log')
 
   stdout_redirect stdout, stderr
 end
@@ -96,7 +96,7 @@ quiet
 # The default is “tcp://0.0.0.0:9292”.
 #
 if environment == :production
-  socket = File.join(directory, 'tmp', 'sockets', 'puma.sock')
+  socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
 
   bind "unix://#{socket}"
 else
@@ -156,9 +156,9 @@ end
 # to see what the app has available.
 
 if environment == :production
-  ctlsocket = File.join(directory, 'tmp', 'sockets', 'pumactl.sock')
+  ctlsocket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'pumactl.sock')
 
-  token = YAML.load_file(File.join(directory, '.puma.yml'))['token']
+  token = YAML.load_file(File.join(PADRINO_ROOT, '.puma.yml'))['token']
 
   activate_control_app "unix://#{ctlsocket}", { auth_token: token['token'] }
 else
