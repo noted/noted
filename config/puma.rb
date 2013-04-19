@@ -69,7 +69,12 @@ state_path File.join(directory, 'tmp', 'pids', 'puma.state')
 # (“append”) specifies whether the output is appended, the default is
 # “false”.
 #
-# stdout_redirect '/u/apps/lolcat/log/stdout', '/u/apps/lolcat/log/stderr'
+if environment == :production
+  stdout = File.join(directory, 'log', 'stdout.log')
+  stderr = File.join(directory, 'log', 'stderr.log')
+
+  stdout_redirect stdout, stderr
+end
 # stdout_redirect '/u/apps/lolcat/log/stdout', '/u/apps/lolcat/log/stderr', true
 
 # Disable request logging.
