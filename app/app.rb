@@ -3,8 +3,16 @@ module Noted
     register Padrino::Cache
     register Padrino::Helpers
     register Padrino::Rendering
-    register BaristaInitializer
-    register CompassInitializer
+    register Padrino::Sprockets
+
+    asset_paths = [
+      'assets/css',
+      'assets/jsc',
+      'assets/img',
+      'assets/webfonts'
+    ]
+
+    sprockets :url => 'i', :minify => (Padrino.env == :production), :paths => asset_paths
 
     enable :caching
     enable :sessions
