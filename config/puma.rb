@@ -1,7 +1,22 @@
 PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
-PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
+directory = File.expand_path('../..', __FILE__) unless defined?(directory)
 
+require 'fileutils'
 require 'yaml'
+
+# Create log/ and tmp/ if in production.
+if PADRINO_ENV == 'production'
+  directories = [
+    File.join(directory, 'log'),
+    File.join(directory, 'tmp'),
+    File.join(directory, 'tmp', 'pids'),
+    File.join(directory, 'tmp', 'sockets')
+  ]
+
+  directories.each do |d|
+    FileUtils.mkdir(d) unless File.exists?(d)
+  end
+end
 
 # The directory to operate out of.
 #
@@ -24,7 +39,7 @@ directory PADRINO_ROOT
 #
 # The default is “config.ru”.
 #
-rackup File.join(PADRINO_ROOT, 'config.ru')
+rackup File.join(directory, 'config.ru')
 
 # Set the environment in which the rack's app will run.
 #
@@ -37,18 +52,18 @@ environment = PADRINO_ENV.to_sym
 #
 # The default is “false”.
 #
-if PADRINO_ENV == 'production'
+if environment == :production
   daemonize
 end
 
 # Store the pid of the server in the file at “path”.
 #
-pidfile File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.pid')
+pidfile File.join(directory, 'tmp', 'pids', 'puma.pid')
 
 # Use “path” as the file to store the server info state. This is
 # used by “pumactl” to query and control the server.
 #
-state_path File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.state')
+state_path File.join(directory, 'tmp', 'pids', 'puma.state')
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # (“append”) specifies whether the output is appended, the default is
@@ -75,8 +90,8 @@ quiet
 #
 # The default is “tcp://0.0.0.0:9292”.
 #
-if PADRINO_ENV == 'production'
-  socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
+if environment == :production
+  socket = File.join(directory, 'tmp', 'sockets', 'puma.sock')
 
   bind "unix://#{socket}"
 else
@@ -97,8 +112,9 @@ end
 #
 # This can be called multiple times to add code each time.
 #
-#on_restart do
-#end
+# on_restart do
+#   puts "do something"
+# end
 
 # Command to use to restart puma. This should be just how to
 # load puma itself (ie. 'ruby -Ilib bin/puma'), not the arguments
@@ -133,8 +149,16 @@ end
 #
 # Check out https://github.com/puma/puma/blob/master/lib/puma/app/status.rb
 # to see what the app has available.
-#
-activate_control_app 'tcp://0.0.0.0:5100', { no_token: true }
+
+if environment == :production
+  ctlsocket = File.join(directory, 'tmp', 'sockets', 'pumactl.sock')
+
+  token = YAML.load_file(File.join(directory, '.puma.yml'))['token']
+
+  activate_control_app "unix://#{ctlsocket}", { auth_token: token['token'] }
+else
+  activate_control_app 'tcp://0.0.0.0:5100', { no_token: true }
+end
 # activate_control_app 'unix:///var/run/pumactl.sock'
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
 # activate_control_app 'unix:///var/run/pumactl.sock', { no_token: true }
