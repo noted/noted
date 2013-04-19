@@ -1,5 +1,5 @@
 PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
-directory = File.expand_path('../..', __FILE__) unless defined?(directory)
+PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(directory)
 
 require 'fileutils'
 require 'yaml'
