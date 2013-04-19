@@ -26,19 +26,19 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations'
 
-gem 'padrino-assets'
-
 gem 'haml'
 gem 'maruku'
 
-gem 'erubis'
+gem 'padrino-sprockets', require: 'padrino/sprockets'
 
 gem 'sprockets-sass'
 gem 'compass'
 gem 'susy'
-gem 'yui-compressor', require: 'yui/compressor'
 
 gem 'coffee-script'
+
+gem 'jsmin'
+gem 'yui-compressor'
 
 gem 'log_buddy'
 

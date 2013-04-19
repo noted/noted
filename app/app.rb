@@ -3,15 +3,21 @@ module Noted
     register Padrino::Cache
     register Padrino::Helpers
     register Padrino::Rendering
-    register Padrino::Assets
+    register Padrino::Sprockets
+
+    asset_paths = [
+      'assets/css',
+      'assets/jsc',
+      'assets/img',
+      'assets/webfonts'
+    ]
+
+    sprockets :url => 'i', :minify => (Padrino.env == :production), :paths => asset_paths
 
     enable :caching
     enable :sessions
 
     set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
-
-    set :compress_assets, true
-    set :css_compressor, YUI::CssCompressor
 
     configure :development do
       use BetterErrors::Middleware
