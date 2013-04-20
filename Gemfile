@@ -4,7 +4,7 @@ source 'https://rubygems.org'
   gem 'padrino-' + c, '0.11.1'
 end
 
-gem 'puma'
+gem 'puma', '2.0.0.b7'
 
 gem 'rake'
 
@@ -50,7 +50,6 @@ group :development do
 end
 
 group :production do
-  gem 'unicorn'
   gem 'execjs'
   gem 'therubyracer'
   gem 'cijoe', :git => 'https://github.com/nvloff/cijoe.git'

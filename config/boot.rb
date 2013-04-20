@@ -13,7 +13,7 @@ Bundler.require(:default, PADRINO_ENV)
 
 LogBuddy.init({
   :logger => logger,
-  :disabled => ENV["HEROKU"] || PADRINO_ENV == :production
+  :disabled => PADRINO_ENV == :production
 })
 
 I18n.default_locale = :en
