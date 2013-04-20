@@ -14,7 +14,6 @@ module Noted
 
     sprockets :url => 'i', :minify => (Padrino.env == :production), :paths => asset_paths
 
-    enable :caching
     enable :sessions
 
     set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
@@ -23,6 +22,10 @@ module Noted
       use BetterErrors::Middleware
 
       BetterErrors.application_root = PADRINO_ROOT
+    end
+
+    configure :production do
+      enable :caching
     end
 
     MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
