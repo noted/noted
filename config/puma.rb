@@ -96,9 +96,11 @@ quiet
 # The default is “tcp://0.0.0.0:9292”.
 #
 if environment == :production
-  socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
+  #socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
 
-  bind "unix://#{socket}"
+  #bind "unix://#{socket}"
+
+  bind 'tcp://0.0.0.0:80'
 else
   bind 'tcp://0.0.0.0:5000'
 end
