@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-rbenv sudo RACK_ENV='production' bundle exec padrino rake unicorn:start

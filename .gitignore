@@ -8,5 +8,6 @@ vendor/ruby/*
 .sass-cache/*
 
 .DS_Store
+.puma.yml
 .s3.yml
 *.sublime*
