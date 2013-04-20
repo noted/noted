@@ -14,6 +14,7 @@
     %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}
     %link{:href => "/i/application.css", :rel => "stylesheet"}
 
+    %script{:src => "/i/application.js"}
     %script{:src => "//use.typekit.net/rau7fcj.js", :type => "text/javascript"}
     :coffeescript
       try
@@ -81,8 +82,6 @@
             %li
               %a{:href => ""} Imprint
         %p= "Noted fecit #{Time.now.year}. Made in Connecticut."
-
-    %script{:src => "/i/application.js"}
 
 /
   version:     #{NOTED_VERSION}
