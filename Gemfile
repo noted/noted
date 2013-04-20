@@ -29,12 +29,16 @@ gem 'mutations'
 gem 'haml'
 gem 'maruku'
 
-gem 'erubis'
+gem 'padrino-sprockets', require: 'padrino/sprockets'
 
+gem 'sprockets-sass'
 gem 'compass'
 gem 'susy'
 
-gem 'barista'
+gem 'coffee-script'
+
+gem 'jsmin'
+gem 'yui-compressor'
 
 gem 'log_buddy'
 
