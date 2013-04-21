@@ -11,12 +11,13 @@ gem 'rake'
 gem 'bson_ext'
 gem 'mongo_mapper'
 
-gem 'canable'
-gem 'state_machine'
-
 gem 'memcached'
 
 gem 'redis'
+
+gem 'canable'
+gem 'state_machine'
+
 gem 'von'
 
 gem 'bcrypt-ruby'
@@ -26,10 +27,10 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations'
 
+gem 'padrino-sprockets', require: 'padrino/sprockets'
+
 gem 'haml'
 gem 'maruku'
-
-gem 'padrino-sprockets', require: 'padrino/sprockets'
 
 gem 'sprockets-sass'
 gem 'compass'
@@ -40,21 +41,23 @@ gem 'coffee-script'
 gem 'jsmin'
 gem 'yui-compressor'
 
-gem 'log_buddy'
-
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  gem 'log_buddy'
+end
+
+group :development, :production do
+  gem 'execjs'
 end
 
 group :development do
   gem 'foreman'
-  gem 'execjs'
   gem 'pry'
 end
 
 group :production do
-  gem 'execjs'
   gem 'therubyracer'
   gem 'cijoe', :git => 'https://github.com/nvloff/cijoe.git'
 end
@@ -68,7 +71,7 @@ group :test do
   gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
 
-  gem 'spork'
+  gem 'spork', '1.0.0rc3'
   gem 'factory_girl'
   gem 'database_cleaner'
 

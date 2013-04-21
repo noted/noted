@@ -4,6 +4,7 @@ branches:
 services:
   - mongodb
   - redis-server
+  - memcached
 rvm:
   - 1.9.3
   - 2.0.0
