@@ -30,7 +30,7 @@ gem 'mutations'
 gem 'padrino-sprockets', require: 'padrino/sprockets'
 
 gem 'haml'
-gem 'maruku'
+gem 'redcarpet'
 
 gem 'sprockets-sass'
 gem 'compass'

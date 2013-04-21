@@ -92,8 +92,6 @@ GEM
     json (1.7.7)
     libv8 (3.11.8.17)
     log_buddy (0.7.0)
-    maruku (0.6.1)
-      syntax (>= 1.0.0)
     memcached (1.5.0)
     metaclass (0.0.1)
     method_source (0.8.1)
@@ -145,6 +143,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.4)
+    redcarpet (2.2.2)
     redis (3.0.3)
     ref (1.0.4)
     rspec (2.13.0)
@@ -179,7 +178,6 @@ GEM
     susy (1.0.8)
       compass (>= 0.12.2)
       sass (>= 3.2.0)
-    syntax (1.0.0)
     term-ansicolor (1.1.5)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
@@ -231,7 +229,6 @@ DEPENDENCIES
   haml
   jsmin
   log_buddy
-  maruku
   memcached
   mocha
   mongo_mapper
@@ -245,6 +242,7 @@ DEPENDENCIES
   puma (= 2.0.0.b7)
   rack-test
   rake
+  redcarpet
   redis
   rspec
   rubocop
