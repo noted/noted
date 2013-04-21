@@ -1,6 +1,10 @@
 Noted::Web.controllers :projects do
   get :new, :map => "/new" do
-    render 'projects/new'
+    if current_user
+      render 'projects/new'
+    else
+      redirect url(:index)
+    end
   end
 
   post :create do
@@ -42,7 +46,11 @@ Noted::Web.controllers :projects do
     @user = User.find_by_username(params[:user])
     @project = @user.projects.find_by_permalink(params[:project])
 
-    render 'projects/edit'
+    if current_user && @project.updatable_by?(current_user)
+      render 'projects/edit'
+    else
+      redirect @project.url
+    end
   end
 
   patch :update do

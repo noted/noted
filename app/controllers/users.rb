@@ -21,7 +21,11 @@ Noted::Web.controllers :users do
   get :edit, :map => "/settings" do
     @user = current_user
 
-    render 'users/edit'
+    if @user
+      render 'users/edit'
+    else
+      redirect url(:index)
+    end
   end
 
   patch :update do
