@@ -19,7 +19,12 @@ class Markdown
     )
 
     @markdown = str
-    @html = rc.render(@markdown)
+
+    if @markdown
+      @html = rc.render(@markdown)
+    else
+      @html = ""
+    end
   end
 
   def to_s

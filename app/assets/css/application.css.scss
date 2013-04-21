@@ -110,10 +110,6 @@ body > header {
 	nav {
 		font: 0.85em $sans-serif;
 
-		li {
-			//text-shadow: 0 1px 0 rgba(darken($base, 10%), 0.5);
-		}
-
 		section {
 			&:first-child {
 				@include span-columns(10);

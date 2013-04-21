@@ -130,3 +130,8 @@ form.full {
 		@include container;
 	}
 }
+
+button + a {
+	position: relative;
+	top: 1px;
+}

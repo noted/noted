@@ -2,6 +2,10 @@
   %header
     %h3 Sources
   %section
+    - if current_user && @project.updatable_by?(current_user)
+      %header
+        %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}
+          %i.ss-icon plus
     - if @s.blank?
       %p
         - if current_user && @project.updatable_by?(current_user)
@@ -18,18 +22,13 @@
             %aside
               %p= source.updated_at.strftime("%e %b. %Y, %l:%M%P")
             %section
+              %a.btn.view{:href => "#{source.url}/#view"}
+                %i.ss-icon view
               - if current_user && source.updatable_by?(current_user)
-                %a.btn.edit.tooltip{:href => source.url, :title => "Edit"}
-                  %i.ss-icon view
+                %a.btn.edit{:href => "#{source.url}/#edit"}
+                  %i.ss-icon edit
                 - form_tag url(:sources, :destroy), :method => "delete", :class => "inline" do
                   = hidden_field_tag :author, :value => current_user.id
                   = hidden_field_tag :"source[id]", :value => source.id
-                  %button.trash.tooltip{:href => "", :title => "Delete"}
+                  %button.trash{:href => ""}
                     %i.ss-icon trash
-              - else
-                %a.btn.edit.tooltip{:href => source.url, :title => "View"}
-                  %i.ss-icon view
-  %footer
-    - if current_user && @project.updatable_by?(current_user)
-      %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}
-        %i.ss-icon plus
