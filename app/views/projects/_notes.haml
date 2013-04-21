@@ -5,7 +5,7 @@
   %section
     - if @n.blank?
       %p
-        - if current_user
+        - if current_user && @project.updatable_by?(current_user)
           You don't have any notes yet!
         - else
           Nothing to see here, move along...
@@ -19,7 +19,7 @@
             %aside
               %a.btn.view{:href => "#{note.url}/#view"}
                 %i.ss-icon view
-              - if current_user
+              - if current_user && note.updatable_by?(current_user)
                 %a.btn.edit{:href => "#{note.url}/#edit"}
                   %i.ss-icon edit
                 - form_tag url(:notes, :destroy), :method => "delete", :class => "inline" do
@@ -43,6 +43,6 @@
                   %li{:"data-value" => t.text}
                     %a.btn= t.text
   %footer
-    - if current_user
+    - if current_user && @project.updatable_by?(current_user)
       %a.btn.full.subtle{:href => "/notes/new?project=#{@project.id}&author=#{current_user.id}"}
         %i.ss-icon plus

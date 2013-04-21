@@ -1,0 +1,8 @@
+#view
+  %header
+    %h2= note.title
+  .text
+    - if note.body.html.blank?
+      %em.subtle Nothing to see here, move along!
+    - else
+      = safe(note.body.html)

@@ -75,12 +75,12 @@ class User
     self.hash = Password.create(str)
   end
 
-  def updatable_by?(user)
-    user == self || user.staff?
+  def updatable_by?(u)
+    u == self || u.staff?
   end
 
-  def destroyable_by?(user)
-    updatable_by?(user)
+  def destroyable_by?(u)
+    updatable_by?(u)
   end
 
   private

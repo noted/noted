@@ -19,7 +19,7 @@
               %i.ss-icon globe
               %a{:href => @user.website, :target => "_blank"}= format(:url, @user.website)
     %footer
-      - if @user == current_user
+      - if current_user && @user.updatable_by?(current_user)
         %a.btn{:href => url(:users, :edit)}
           %i.ss-icon gear
           %span
