@@ -1,8 +1,9 @@
 require "spec_helper"
 
 describe User do
-  let(:user)  { create(:user) }
-  let(:staff) { create(:user, :staff) }
+  let(:user)     { create(:user) }
+  let(:staff)    { create(:user, :staff) }
+  let(:outsider) { create(:user) }
 
   it { should validate_presence_of :username }
   it { should validate_presence_of :name }
@@ -80,14 +81,14 @@ describe User do
   end
 
   describe "#updatable_by?" do
-    it { user.updatable_by?(staff).should be_true }
-    it { staff.updatable_by?(user).should be_false }
     it { user.updatable_by?(user).should be_true }
+    it { user.updatable_by?(staff).should be_true }
+    it { user.updatable_by?(outsider).should be_false }
   end
 
   describe "#destroyable_by?" do
-    it { user.destroyable_by?(staff).should be_true }
-    it { staff.destroyable_by?(user).should be_false }
     it { user.destroyable_by?(user).should be_true }
+    it { user.destroyable_by?(staff).should be_true }
+    it { user.destroyable_by?(outsider).should be_false }
   end
 end

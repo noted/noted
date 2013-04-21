@@ -3,7 +3,7 @@ class Project
 
   key :title, String
   key :description, Markdown
-  key :collaborators, Array
+  key :collaborator_ids, Array
   key :permalink, String
 
   timestamps!
@@ -20,12 +20,26 @@ class Project
 
   before_save :permalink!
 
-  def add_collaborator(user)
-    self.collaborators << user
+  def collaborators
+    arr = []
+
+    collaborator_ids.each do |id|
+      arr << User.find(id)
+    end
+
+    arr
   end
 
   def url
     "/#{self.user.username}/#{self.permalink}"
+  end
+
+  def updatable_by?(u)
+    u == self.user || u.staff?
+  end
+
+  def destroyable_by?(u)
+    updatable_by?(u)
   end
 
   private

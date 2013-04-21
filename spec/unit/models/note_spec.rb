@@ -1,10 +1,19 @@
 require "spec_helper"
 
 describe Note do
-  let(:note)    { create(:note) }
-  let(:project) { note.project }
-  let(:user)    { project.user }
-  let(:other)   { create(:user) }
+  let(:note)     { create(:note) }
+  let(:project)  { note.project }
+  let(:user)     { project.user }
+  let(:staff)    { create(:user, :staff) }
+  let(:outsider) { create(:user) }
+  let(:collaborator) do
+    u = create(:user)
+
+    project.collaborator_ids << u.id
+    project.save
+
+    u
+  end
 
   it { note.should be_valid }
 
@@ -31,5 +40,26 @@ describe Note do
     end
 
     it { note.tags_str.should eql "foobar,barfoo" }
+  end
+
+  describe "#creatable_by?" do
+    it { note.creatable_by?(user).should be_true }
+    it { note.creatable_by?(collaborator).should be_true }
+    it { note.creatable_by?(outsider).should be_false }
+    it { note.creatable_by?(staff).should be_true }
+  end
+
+  describe "#updatable_by?" do
+    it { note.updatable_by?(user).should be_true }
+    it { note.updatable_by?(collaborator).should be_true }
+    it { note.updatable_by?(outsider).should be_false }
+    it { note.updatable_by?(staff).should be_true }
+  end
+
+  describe "#destroyable_by?" do
+    it { note.destroyable_by?(user).should be_true }
+    it { note.destroyable_by?(collaborator).should be_true }
+    it { note.destroyable_by?(outsider).should be_false }
+    it { note.destroyable_by?(staff).should be_true }
   end
 end

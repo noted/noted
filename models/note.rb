@@ -50,6 +50,18 @@ class Note
     arr.compact.join(",").squish
   end
 
+  def creatable_by?(u)
+    u == self.project.user || self.project.collaborator_ids.include?(u.id) || u.staff?
+  end
+
+  def updatable_by?(u)
+    creatable_by?(u)
+  end
+
+  def destroyable_by?(u)
+    creatable_by?(u)
+  end
+
   private
 
   def permalink!

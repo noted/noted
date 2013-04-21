@@ -4,8 +4,6 @@ require 'digest/md5'
 class User
   include MongoMapper::Document
   include BCrypt
-  include Canable::Ables
-  include Canable::Cans
 
   key :name, String
   key :username, String
@@ -78,7 +76,7 @@ class User
   end
 
   def updatable_by?(user)
-    self == user || user.staff?
+    user == self || user.staff?
   end
 
   def destroyable_by?(user)

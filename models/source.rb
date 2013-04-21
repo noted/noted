@@ -22,7 +22,7 @@ class Source
     Marshal::load(self.binary.to_s)
   end
 
-  def self.options
+  def self.options # Bad.
     [
       ["Book", "book"]
     ]
@@ -30,6 +30,18 @@ class Source
 
   def url
     "#{self.project.url}/sources/#{self.permalink}"
+  end
+
+  def creatable_by?(u)
+    u == self.project.user || self.project.collaborator_ids.include?(u.id) || u.staff?
+  end
+
+  def updatable_by?(u)
+    creatable_by?(u)
+  end
+
+  def destroyable_by?(u)
+    creatable_by?(u)
   end
 
   private
