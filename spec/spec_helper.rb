@@ -12,8 +12,6 @@ Spork.prefork do
     conf.include Capybara::DSL
     conf.include FactoryGirl::Syntax::Methods
 
-    conf.mock_with :mocha
-
     conf.before :suite do
       DatabaseCleaner.strategy = :truncation
       DatabaseCleaner.clean_with(:truncation)

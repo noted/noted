@@ -93,11 +93,8 @@ GEM
     libv8 (3.11.8.17)
     log_buddy (0.7.0)
     memcached (1.5.0)
-    metaclass (0.0.1)
     method_source (0.8.1)
     mime-types (1.23)
-    mocha (0.13.3)
-      metaclass (~> 0.0.1)
     mongo (1.8.5)
       bson (~> 1.8.5)
     mongo_mapper (0.12.0)
@@ -230,7 +227,6 @@ DEPENDENCIES
   jsmin
   log_buddy
   memcached
-  mocha
   mongo_mapper
   mutations
   padrino-cache (= 0.11.1)

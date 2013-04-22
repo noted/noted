@@ -68,7 +68,6 @@ group :test do
   gem 'rspec'
   gem 'shoulda-matchers'
 
-  gem 'mocha', require: 'mocha/api'
   gem 'capybara', require: 'capybara/dsl'
 
   gem 'spork', '1.0.0rc3'
