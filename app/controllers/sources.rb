@@ -23,7 +23,7 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
-      expire("#{s.result.project.id}_sources")
+      expire!("#{s.result.project.id}_sources")
 
       redirect Project.find(params[:project]).url
     else
@@ -53,7 +53,7 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
-      expire("#{s.result.project.id}_sources")
+      expire!("#{s.result.project.id}_sources")
 
       redirect s.result.project.url
     else
@@ -71,7 +71,7 @@ Noted::Web.controllers :sources do
     })
 
     if s.success?
-      expire("#{project.id}_sources")
+      expire!("#{project.id}_sources")
 
       redirect project.url
     else

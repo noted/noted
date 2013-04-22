@@ -14,7 +14,7 @@ Noted::Web.controllers :projects do
     })
 
     if p.success?
-      expire("#{p.result.user.id}_projects")
+      expire!("#{p.result.user.id}_projects")
 
       redirect p.result.url
     else
@@ -60,9 +60,9 @@ Noted::Web.controllers :projects do
     })
 
     if p.success?
-      redirect p.result.url
+      expire!("#{p.result.creator.id}_projects")
 
-      expire("#{p.result.creator.id}_projects")
+      redirect p.result.url
     else
       flash[:error] = p.errors.message
       redirect "#{Project.find(params[:project][:id]).url}/settings"

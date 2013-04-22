@@ -13,7 +13,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      expire("#{n.result.project.id}_notes")
+      expire!("#{n.result.project.id}_notes")
 
       redirect "#{n.result.url}/#edit"
     else
@@ -29,7 +29,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      expire("#{n.result.project.id}_notes")
+      expire!("#{n.result.project.id}_notes")
 
       redirect n.result.url
     else
@@ -65,7 +65,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      expire("#{n.result.project.id}_notes")
+      expire!("#{n.result.project.id}_notes")
 
       redirect n.result.project.url
     else
@@ -83,7 +83,7 @@ Noted::Web.controllers :notes do
     })
 
     if n.success?
-      expire("#{project.id}_notes")
+      expire!("#{project.id}_notes")
 
       redirect project.url
     else
