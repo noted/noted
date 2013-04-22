@@ -28,13 +28,13 @@ Noted::Web.controllers :projects do
     @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
 
     @notes = cache("#{@project.id}_notes", :expires_in => 60) do
-      @n = Note.where(:project_id => @project.id).order("updated_at dsc").all
+      @n = Note.within(@project.id).all
 
       partial 'projects/notes'
     end
 
     @sources = cache("#{@project.id}_sources", :expires_in => 60) do
-      @s = Source.where(:project_id => @project.id).order("updated_at dsc").all
+      @s = Source.within(@project.id).all
 
       partial 'projects/sources'
     end

@@ -7,12 +7,6 @@
       - if current_user && @project.updatable_by?(current_user)
         %a.btn.full.subtle{:href => "/notes/new?project=#{@project.id}&author=#{current_user.id}"}
           %i.ss-icon plus
-    - if @n.blank?
-      %p
-        - if current_user && @project.updatable_by?(current_user)
-          You don't have any notes yet!
-        - else
-          Nothing to see here, move along...
     - @n.each do |note|
       %article.note{:"data-tags" => note.tags_str}
         %header

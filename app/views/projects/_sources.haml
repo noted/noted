@@ -6,12 +6,6 @@
       %header
         %a.btn.full.subtle{:href => "#{@project.url}/sources/new"}
           %i.ss-icon plus
-    - if @s.blank?
-      %p
-        - if current_user && @project.updatable_by?(current_user)
-          You don't have any sources yet!
-        - else
-          Nothing to see here, move along...
     - @s.each do |source|
       %article
         %section

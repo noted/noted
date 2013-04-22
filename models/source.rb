@@ -14,6 +14,8 @@ class Source
 
   after_create :permalink!
 
+  scope :within, lambda { |id| where(:project_id => id).order('updated_at dsc') }
+
   def citation=(obj)
     self.binary = Marshal::dump(obj)
   end

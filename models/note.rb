@@ -18,6 +18,8 @@ class Note
 
   after_create :permalink!
 
+  scope :within, lambda { |id| where(:project_id => id).order('updated_at dsc') }
+
   def url
     "#{self.project.url}/notes/#{self.permalink}"
   end
