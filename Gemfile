@@ -13,7 +13,7 @@ gem 'mongo_mapper', '~> 0.12.0'
 
 gem 'memcached', '~> 1.5.0'
 
-gem 'redis', '~> 3.0.3'
+gem 'redis', '~> 3.0.4'
 
 gem 'canable', '~> 0.3.0'
 gem 'state_machine', '~> 1.2.0'
@@ -54,7 +54,7 @@ end
 
 group :development do
   gem 'foreman', '~> 0.63.0'
-  gem 'pry', '~> 0.9.12'
+  gem 'pry', '~> 0.9.12.1'
 end
 
 group :production do
