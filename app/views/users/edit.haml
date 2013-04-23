@@ -17,7 +17,7 @@
           - if !@user.website.blank?
             %li
               %i.ss-icon globe
-              %a{:href => @user.website, :target => "_blank"}= format(:url, @user.website)
+              %a{:href => @user.website, :target => "_blank"}= format_url(@user.website)
   %section
     %header
       %h3

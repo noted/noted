@@ -6,3 +6,7 @@ HashSyntax:
 
 IfUnlessModifier:
   Enabled: false
+
+LineLength:
+  Enabled: true
+  Max: 90

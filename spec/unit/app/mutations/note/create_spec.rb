@@ -13,5 +13,5 @@ describe Note::Create do
 
   it { note.success?.should be_true }
   it { note.result.should be_an_instance_of Note }
-  it { note.result.title.should eql "Untitled" }
+  it { note.result.title.should eql 'Untitled' }
 end

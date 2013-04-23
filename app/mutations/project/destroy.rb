@@ -9,8 +9,8 @@ class Project
     def execute
       p = Project.find(project[:id])
 
-      p.notes.each   {|n| n.destroy }
-      p.sources.each {|s| s.destroy }
+      p.notes.each   { |n| n.destroy }
+      p.sources.each { |s| s.destroy }
 
       p.destroy
     end

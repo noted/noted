@@ -8,9 +8,9 @@ describe Comment::Create do
     Comment::Create.run({
       :comment => {
         :author => user.id.to_s,
-        :body => "Foo to the bar to the foo.",
+        :body => 'Foo to the bar to the foo.',
         :_id => note.id.to_s,
-        :_type => "Note"
+        :_type => 'Note'
       }
     })
   end

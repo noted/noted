@@ -8,15 +8,15 @@ FactoryGirl.define do
   end
 
   factory(:user) do
-    name "Neil deGrasse Tyson"
-    password "foobar"
+    name 'Neil deGrasse Tyson'
+    password 'foobar'
     username
     email
 
     trait(:staff) do
-      name "Les Grossman"
-      username "les"
-      password "barfoo"
+      name 'Les Grossman'
+      username 'les'
+      password 'barfoo'
       email
 
       after(:create) do |user, evaluator|

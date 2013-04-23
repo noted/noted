@@ -20,6 +20,8 @@ class Project
 
   before_save :permalink!
 
+  scope :given, -> (u, p){ where(:user_id => u, :permalink => p) }
+
   def collaborators
     arr = []
 

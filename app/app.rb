@@ -30,6 +30,6 @@ module Noted
 
     MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
 
-    Dir[Padrino.root("app/mutations/**/*.rb")].each {|f| require f }
+    Dir[Padrino.root('app/mutations/**/*.rb')].each { |f| require f }
   end
 end

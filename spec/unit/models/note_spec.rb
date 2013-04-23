@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe Note do
   let(:note)     { create(:note) }
@@ -17,46 +17,46 @@ describe Note do
 
   it { note.should be_valid }
 
-  describe "#url" do
+  describe '#url' do
     it { note.url.should eql("/#{user.username}/#{project.permalink}/notes/#{note.permalink}") }
   end
 
-  describe "#permalink!" do
+  describe '#permalink!' do
     it { note.permalink.should eql(Base32::Crockford.encode(Von.count('notes').total)) }
   end
 
-  describe "#tags=" do
+  describe '#tags=' do
     before do
-      note.tags = "foo,bar"
+      note.tags = 'foo,bar'
     end
 
-    it { note.tags_str.should eql "foo,bar" }
+    it { note.tags_str.should eql 'foo,bar' }
   end
 
-  describe "#tags_str" do
+  describe '#tags_str' do
     before do
-      note.tags << Tag.new(:text => "foobar")
-      note.tags << Tag.new(:text => "barfoo")
+      note.tags << Tag.new(:text => 'foobar')
+      note.tags << Tag.new(:text => 'barfoo')
     end
 
-    it { note.tags_str.should eql "foobar,barfoo" }
+    it { note.tags_str.should eql 'foobar,barfoo' }
   end
 
-  describe "#creatable_by?" do
+  describe '#creatable_by?' do
     it { note.creatable_by?(user).should be_true }
     it { note.creatable_by?(collaborator).should be_true }
     it { note.creatable_by?(outsider).should be_false }
     it { note.creatable_by?(staff).should be_true }
   end
 
-  describe "#updatable_by?" do
+  describe '#updatable_by?' do
     it { note.updatable_by?(user).should be_true }
     it { note.updatable_by?(collaborator).should be_true }
     it { note.updatable_by?(outsider).should be_false }
     it { note.updatable_by?(staff).should be_true }
   end
 
-  describe "#destroyable_by?" do
+  describe '#destroyable_by?' do
     it { note.destroyable_by?(user).should be_true }
     it { note.destroyable_by?(collaborator).should be_true }
     it { note.destroyable_by?(outsider).should be_false }

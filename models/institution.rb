@@ -8,7 +8,7 @@ class Institution
   userstamps!
 
   belongs_to :user
-  
+
   many :users
 
   after_create :code!

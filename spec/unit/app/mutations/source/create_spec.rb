@@ -6,23 +6,23 @@ describe Source::Create do
 
   let(:attributes) do
     {
-      "type" => "book",
-      "contributors" => {
-        "0" => {
-          "role" => "author",
-          "first" => "J",
-          "middle" => "K",
-          "last" => "Rowling",
-          "suffix" => ""
+      'type' => 'book',
+      'contributors' => {
+        '0' => {
+          'role' => 'author',
+          'first' => 'J',
+          'middle' => 'K',
+          'last' => 'Rowling',
+          'suffix' => ''
         }
       },
-      "title" => "Harry Potter and the Deathly Hallows",
-      "publisher" => "Scholastic",
-      "city" => "New York",
-      "year" => "2008",
-      "volume" => "",
-      "edition" => "",
-      "series" => ""
+      'title' => 'Harry Potter and the Deathly Hallows',
+      'publisher' => 'Scholastic',
+      'city' => 'New York',
+      'year' => '2008',
+      'volume' => '',
+      'edition' => '',
+      'series' => ''
     }
   end
 
@@ -46,5 +46,5 @@ describe Source::Create do
   it { source.result.creator.should eql user }
   it { source.result.project.should eql project }
   it { source.result.citation.should be_an_instance_of Scholar::Citation }
-  it { source.result.citation.html.should eql "Rowling, J. K. <em>Harry Potter and the Deathly Hallows</em>. New York: Scholastic, 2008." }
+  it { source.result.citation.html.should eql 'Rowling, J. K. <em>Harry Potter and the Deathly Hallows</em>. New York: Scholastic, 2008.' }
 end

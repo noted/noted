@@ -1,4 +1,4 @@
-module Gatekeeper
+Noted::Web.helpers do
   def current_user
     User.find_by_hash(session[:noted])
   end
@@ -13,5 +13,3 @@ module Gatekeeper
     session[:noted].nil?
   end
 end
-
-Noted::Web.helpers Gatekeeper

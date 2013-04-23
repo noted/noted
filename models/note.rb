@@ -18,7 +18,7 @@ class Note
 
   after_create :permalink!
 
-  scope :within, lambda { |id| where(:project_id => id).order('updated_at dsc') }
+  scope :within, -> (id){ where(:project_id => id).order('updated_at dsc') }
 
   def url
     "#{self.project.url}/notes/#{self.permalink}"
@@ -34,7 +34,7 @@ class Note
   end
 
   def tags=(str)
-    self.tags.each {|t| t.destroy }
+    self.tags.each { |t| t.destroy }
     self.tags.clear
 
     arr = str.split(",")
@@ -47,9 +47,9 @@ class Note
 
   def tags_str
     arr = []
-    tags.each {|t| arr << t.text }
+    tags.each { |t| arr << t.text }
 
-    arr.compact.join(",").squish
+    arr.compact.join(',').squish
   end
 
   def creatable_by?(u)

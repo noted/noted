@@ -26,8 +26,8 @@ class Source
     end
 
     def attributes!(hash)
-      contributors_raw = hash["contributors"]
-      hash.delete("contributors")
+      contributors_raw = hash['contributors']
+      hash.delete('contributors')
 
       contributors = []
       contributors_raw.each do |k, v|

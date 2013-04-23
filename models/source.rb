@@ -14,7 +14,7 @@ class Source
 
   after_create :permalink!
 
-  scope :within, lambda { |id| where(:project_id => id).order('updated_at dsc') }
+  scope :within, -> (id){ where(:project_id => id).order('updated_at dsc') }
 
   def citation=(obj)
     self.binary = Marshal::dump(obj)
@@ -26,7 +26,7 @@ class Source
 
   def self.options # Bad.
     [
-      ["Book", "book"]
+      ['Book', 'book']
     ]
   end
 

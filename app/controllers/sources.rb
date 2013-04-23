@@ -2,11 +2,11 @@ Noted::Web.controllers :sources do
   before :except => [:create, :update, :destroy] do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
-      @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
+      @project = Project.given(@user.id, params[:project]).first
     end
   end
 
-  get :new, :map => "/:user/:project/sources/new" do
+  get :new, :map => '/:user/:project/sources/new' do
     render 'sources/new'
   end
 
@@ -31,8 +31,11 @@ Noted::Web.controllers :sources do
     end
   end
 
-  get :view, :map => "/:user/:project/sources/:source" do
-    @source = Source.where(:project_id => @project.id, :permalink => params[:source]).first
+  get :view, :map => '/:user/:project/sources/:source' do
+    @source = Source.where(
+      :project_id => @project.id,
+      :permalink => params[:source]
+      ).first # Make scope!
     @citation = @source.citation
 
     render 'sources/view'
@@ -57,7 +60,7 @@ Noted::Web.controllers :sources do
 
       redirect s.result.project.url
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = 'Something has gone awry.'
       redirect Source.find(params[:source][:id]).url
     end
   end

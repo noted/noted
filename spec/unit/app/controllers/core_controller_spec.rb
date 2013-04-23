@@ -1,49 +1,49 @@
 require 'spec_helper'
 
-describe "Core" do
-  describe "GET /" do
+describe 'Core' do
+  describe 'GET /' do
     before do
-      get "/"
+      get '/'
     end
 
     it { response.should be_ok }
   end
 
-  describe "GET /explore" do
+  describe 'GET /explore' do
     before do
-      get "/explore"
+      get '/explore'
     end
 
     it { response.should be_ok }
   end
 
-  describe "GET /features" do
+  describe 'GET /features' do
     before do
-      get "/features"
+      get '/features'
     end
 
     it { response.should be_ok }
   end
 
-  describe "GET /pricing" do
+  describe 'GET /pricing' do
     before do
-      get "/pricing"
+      get '/pricing'
     end
 
     it { response.should be_ok }
   end
 
-  describe "GET /documentation" do
+  describe 'GET /documentation' do
     before do
-      get "/documentation"
+      get '/documentation'
     end
 
     it { response.should be_ok }
   end
 
-  describe "GET /support" do
+  describe 'GET /support' do
     before do
-      get "/support"
+      get '/support'
     end
 
     it { response.should be_ok }

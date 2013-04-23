@@ -9,8 +9,8 @@ describe Note::Update do
       :author => user.id.to_s,
       :note => {
         :id => note.id.to_s,
-        :title => "Alpha Centauri",
-        :body => "Foo to the bar to the foo."
+        :title => 'Alpha Centauri',
+        :body => 'Foo to the bar to the foo.'
       }
     })
   end
@@ -22,5 +22,5 @@ describe Note::Update do
   it { action.success?.should be_true }
   it { action.result.should be_an_instance_of Note }
   it { action.result.updater.should eql user }
-  it { action.result.body.markdown.should eql "Foo to the bar to the foo." }
+  it { action.result.body.markdown.should eql 'Foo to the bar to the foo.' }
 end

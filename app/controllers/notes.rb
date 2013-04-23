@@ -2,7 +2,7 @@ Noted::Web.controllers :notes do
   before do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
-      @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
+      @project = Project.given(@user.id, params[:project]).first
     end
   end
 
@@ -38,8 +38,11 @@ Noted::Web.controllers :notes do
     end
   end
 
-  get :view, :map => "/:user/:project/notes/:note" do
-    @note = Note.where(:project_id => @project.id, :permalink => params[:note]).first
+  get :view, :map => '/:user/:project/notes/:note' do
+    @note = Note.where(
+      :project_id => @project.id,
+      :permalink => params[:note]
+    ).first
 
     @sources = [] # Fix me.
     Source.where(:project_id => @project.id).each do |s|

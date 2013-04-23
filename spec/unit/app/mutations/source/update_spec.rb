@@ -7,23 +7,23 @@ describe Source::Update do
 
   let(:attributes) do
     {
-      "type" => "book",
-      "contributors" => {
-        "0" => {
-          "role" => "author",
-          "first" => "Neil",
-          "middle"=> "",
-          "last" => "deGrasse Tyson",
-          "suffix" => ""
+      'type' => 'book',
+      'contributors' => {
+        '0' => {
+          'role' => 'author',
+          'first' => 'Neil',
+          'middle'=> '',
+          'last' => 'deGrasse Tyson',
+          'suffix' => ''
         }
       },
-      "title" => "The Space Chronicles",
-      "publisher" => "W. W. Norton & Company",
-      "city" => "New York",
-      "year" => "2012",
-      "volume" => "",
-      "edition" => "",
-      "series" => ""
+      'title' => 'The Space Chronicles',
+      'publisher' => 'W. W. Norton & Company',
+      'city' => 'New York',
+      'year' => '2012',
+      'volume' => '',
+      'edition' => '',
+      'series' => ''
     }
   end
 
@@ -47,5 +47,5 @@ describe Source::Update do
   it { source.result.updater.should eql user }
   it { source.result.project.should eql project }
   it { source.result.citation.should be_an_instance_of Scholar::Citation }
-  it { source.result.citation.html.should eql "deGrasse Tyson, Neil. <em>The Space Chronicles</em>. New York: W. W. Norton & Company, 2012." }
+  it { source.result.citation.html.should eql 'deGrasse Tyson, Neil. <em>The Space Chronicles</em>. New York: W. W. Norton & Company, 2012.' }
 end

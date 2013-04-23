@@ -1,77 +1,77 @@
 require 'spec_helper'
 
-describe "Users" do
+describe 'Users' do
   let(:user) { create(:user) }
 
-  describe "GET /join" do
+  describe 'GET /join' do
     before do
-      get "/join"
+      get '/join'
     end
 
     it { response.should be_ok }
   end
 
-  describe "POST /users/create" do
+  describe 'POST /users/create' do
     before do
-      post "/users/create", :user => { :name => "Carl Sagan", :email => "carl@sagan.org", :username => "carlsagan" }, :password => { :password => "foobar", :confirm => "foobar" }
+      post '/users/create', :user => { :name => 'Carl Sagan', :email => 'carl@sagan.org', :username => 'carlsagan' }, :password => { :password => 'foobar', :confirm => 'foobar' }
     end
 
-    describe "redirects" do
-      it "response.should be_redirect (needs sessions)"
-      it "response.location.should (needs session)"
+    describe 'redirects' do
+      it 'response.should be_redirect (needs sessions)'
+      it 'response.location.should (needs session)'
     end
 
-    describe "database" do
-      it { User.find_by_email("carl@sagan.org").should_not be_nil }
+    describe 'database' do
+      it { User.find_by_email('carl@sagan.org').should_not be_nil }
     end
   end
 
-  describe "GET /settings" do
+  describe 'GET /settings' do
     before do
-      #get "/settings"
+      #get '/settings'
     end
 
-    it "response should be ok (needs sessions)"
+    it 'response should be ok (needs sessions)'
   end
 
-  describe "PATCH /users/update" do
+  describe 'PATCH /users/update' do
     before do
-      patch "/users/update", :user => { :id => user.id, :name => "Neil deGrasse Tyson" }
+      patch '/users/update', :user => { :id => user.id, :name => 'Neil deGrasse Tyson' }
 
       user.reload
     end
 
-    describe "redirects" do
+    describe 'redirects' do
       it { response.should be_redirect }
-      it { response.location.should include("/settings") }
+      it { response.location.should include('/settings') }
     end
 
-    describe "database" do
-      it { user.name.should eql("Neil deGrasse Tyson") }
+    describe 'database' do
+      it { user.name.should eql('Neil deGrasse Tyson') }
     end
   end
 
-  describe "DELETE /users/destroy" do
+  describe 'DELETE /users/destroy' do
     before do
-      delete "/users/destroy", :user => { :id => user.id }
+      delete '/users/destroy', :user => { :id => user.id }
     end
 
-    describe "redirects" do
+    describe 'redirects' do
       it { response.should be_redirect }
       it { response.location.should eql("#{site}/") }
     end
 
-    describe "database" do
-      it { User.find_by_name("Neil deGrasse Tyson").should be_nil }
+    describe 'database' do
+      it { User.find_by_name('Neil deGrasse Tyson').should be_nil }
     end
   end
 
-  describe "GET /:username" do
+  describe 'GET /:username' do
     before do
       get "/#{user.username}"
     end
 
-    it "is ok" do
+    it 'is ok' do
       response.should be_ok
     end
   end

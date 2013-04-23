@@ -9,5 +9,5 @@ spec_tasks.each do |folder|
   end
 end
 
-desc "Run complete application spec suite"
+desc 'Run complete application spec suite'
 task 'spec' => spec_tasks.map { |f| "spec:#{f}" }

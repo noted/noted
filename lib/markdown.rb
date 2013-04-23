@@ -23,7 +23,7 @@ class Markdown
     if @markdown
       @html = rc.render(@markdown)
     else
-      @html = ""
+      @html = ''
     end
   end
 

@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory(:institution) do
-    name "Hyden Planetarium"
+    name 'Hyden Planetarium'
 
-    user {|user| user.association(:user)}
+    user { |user| user.association(:user) }
   end
 end

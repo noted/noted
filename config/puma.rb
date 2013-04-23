@@ -24,17 +24,6 @@ end
 #
 directory PADRINO_ROOT
 
-# Use a object or block as the rack application. This allows the
-# config file to be the application itself.
-#
-# app do |env|
-#   puts env
-#
-#   body = 'Hello, World!'
-#
-#   [200, { 'Content-Type' => 'text/plain', 'Content-Length' => body.length.to_s }, [body]]
-# end
-
 # Load “path” as a rackup file.
 #
 # The default is “config.ru”.

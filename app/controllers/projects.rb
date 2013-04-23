@@ -1,5 +1,5 @@
 Noted::Web.controllers :projects do
-  get :new, :map => "/new" do
+  get :new, :map => '/new' do
     if current_user
       render 'projects/new'
     else
@@ -23,9 +23,12 @@ Noted::Web.controllers :projects do
     end
   end
 
-  get :view, :map => "/:user/:project" do
+  get :view, :map => '/:user/:project' do
     @user = User.find_by_username(params[:user])
-    @project = Project.where(:user_id => @user.id, :permalink => params[:project]).first
+    @project = Project.where(
+      :user_id => @user.id,
+      :permalink => params[:project]
+    ).first
 
     @notes = cache("#{@project.id}_notes", :expires_in => 60) do
       @n = Note.within(@project.id).all
@@ -78,7 +81,7 @@ Noted::Web.controllers :projects do
     if p.success?
       redirect "/#{User.find(params[:author]).username}"
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = 'Something has gone awry.'
       redirect Project.find(params[:project][:id]).url
     end
   end

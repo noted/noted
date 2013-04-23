@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'spec_helper'
 
 describe Project do
   let(:project) { create(:project) }
@@ -19,7 +19,7 @@ describe Project do
 
   it { project.should be_valid }
 
-  describe "#collaborators" do
+  describe '#collaborators' do
     before do
       project.collaborator_ids << outsider.id
     end
@@ -27,22 +27,22 @@ describe Project do
     it { project.collaborators.should include(outsider) }
   end
 
-  describe "#url" do
+  describe '#url' do
     it { project.url.should eql("/#{project.user.username}/#{project.permalink}") }
   end
 
-  describe "#permalink!" do
-    it { project.permalink.should eql("the-cosmos") }
+  describe '#permalink!' do
+    it { project.permalink.should eql('the-cosmos') }
   end
 
-  describe "#updatable_by?" do
+  describe '#updatable_by?' do
     it { project.updatable_by?(user).should be_true }
     it { project.updatable_by?(collaborator).should be_false }
     it { project.updatable_by?(outsider).should be_false }
     it { project.updatable_by?(staff).should be_true }
   end
 
-  describe "#destroyable_by?" do
+  describe '#destroyable_by?' do
     it { project.destroyable_by?(user).should be_true }
     it { project.destroyable_by?(collaborator).should be_false }
     it { project.destroyable_by?(outsider).should be_false }

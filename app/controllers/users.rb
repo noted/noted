@@ -1,5 +1,5 @@
 Noted::Web.controllers :users do
-  get :new, :map => "/join" do
+  get :new, :map => '/join' do
     render 'users/new'
   end
 
@@ -18,7 +18,7 @@ Noted::Web.controllers :users do
     end
   end
 
-  get :edit, :map => "/settings" do
+  get :edit, :map => '/settings' do
     @user = current_user
 
     if @user
@@ -34,7 +34,7 @@ Noted::Web.controllers :users do
     })
 
     if u.success?
-      flash[:notice] = "Your profile has been updated."
+      flash[:notice] = 'Your profile has been updated.'
       redirect url(:users, :edit)
     else
       flash[:error] = u.errors.message
@@ -51,15 +51,15 @@ Noted::Web.controllers :users do
       flash[:notice] = "We're sorry to see you go."
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = 'Something has gone awry.'
       redirect url(:users, :edit)
     end
   end
 
-  get :view, :map => "/:user" do
+  get :view, :map => '/:user' do
     @user = User.find_by_username(params[:user])
     @projects = cache("#{@user.id}_projects", :expires_in => 60) do
-      @p = Project.where(:user_id => @user.id).order("updated_at dsc")
+      @p = Project.where(:user_id => @user.id).order('updated_at dsc')
 
       partial 'users/projects'
     end

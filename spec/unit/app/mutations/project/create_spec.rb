@@ -8,8 +8,8 @@ describe Project::Create do
       :user => user.id.to_s,
 
       :project => {
-        :title => "The Cosmos",
-        :description => "Foo to the bar to the foo."
+        :title => 'The Cosmos',
+        :description => 'Foo to the bar to the foo.'
       }
     })
   end

@@ -1,5 +1,5 @@
 Noted::Web.controllers :sessions do
-  get :new, :map => "/login" do
+  get :new, :map => '/login' do
     if current_user
       redirect url(:index)
     else
@@ -17,7 +17,7 @@ Noted::Web.controllers :sessions do
     end
   end
 
-  get :destroy, :map => "/logout" do
+  get :destroy, :map => '/logout' do
     if deauthorize!
       redirect url(:index)
     end

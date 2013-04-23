@@ -4,13 +4,13 @@ describe User::Create do
   let(:user) do
     User::Create.run({
       :user => {
-        :name => "Carl Sagan",
-        :email => "carl@sagan.org",
-        :username => "carl"
+        :name => 'Carl Sagan',
+        :email => 'carl@sagan.org',
+        :username => 'carl'
       },
       :password => {
-          :password => "foobar",
-          :confirm => "foobar"
+          :password => 'foobar',
+          :confirm => 'foobar'
       }
     })
   end

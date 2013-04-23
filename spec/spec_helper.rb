@@ -3,7 +3,7 @@ require 'spork'
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
 Spork.prefork do
-  require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
+  require File.expand_path(File.dirname(__FILE__) + '/../config/boot')
 
   FactoryGirl.find_definitions
 
@@ -39,6 +39,6 @@ Spork.prefork do
   end
 
   def site
-    "http://example.org"
+    'http://example.org'
   end
 end

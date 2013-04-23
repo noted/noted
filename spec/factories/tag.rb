@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory(:tag) do
-    text "foobar"
+    text 'foobar'
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Notes" do
+describe 'Notes' do
   let(:note)    { create(:note) }
   let(:project) { note.project }
   let(:user)    { project.user }
@@ -9,9 +9,9 @@ describe "Notes" do
     get project.url # Set the cache.
   end
 
-  describe "POST /notes/create" do
+  describe 'POST /notes/create' do
     before do
-      post "/notes/create", :project => project.id, :author => user.id
+      post '/notes/create', :project => project.id, :author => user.id
     end
 
     it { response.should be_redirect }
@@ -20,7 +20,7 @@ describe "Notes" do
     it { project.notes.should_not be_blank }
   end
 
-  describe "GET /:user/:project/notes/:note" do
+  describe 'GET /:user/:project/notes/:note' do
     before do
       get note.url
     end
@@ -28,9 +28,9 @@ describe "Notes" do
     it { response.should be_ok }
   end
 
-  describe "PATCH /notes/update" do
+  describe 'PATCH /notes/update' do
     before do
-      patch "/notes/update", :author => user.id, :note => { :id => note.id, :title => "Natural History" }
+      patch '/notes/update', :author => user.id, :note => { :id => note.id, :title => 'Natural History' }
 
       note.reload
     end
@@ -38,19 +38,19 @@ describe "Notes" do
     it { response.should be_redirect }
     it { response.location.should include("/#{user.username}/#{project.permalink}") }
 
-    it { note.title.should eql("Natural History") }
+    it { note.title.should eql('Natural History') }
     it { note.updater.should eql(user) }
   end
 
-  describe "DELETE /notes/destroy" do
+  describe 'DELETE /notes/destroy' do
     let(:id) { note.id }
 
     before do
-      delete "/notes/destroy", :author => user.id, :note => { :id => note.id }
+      delete '/notes/destroy', :author => user.id, :note => { :id => note.id }
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("/#{user.username}/#{project.permalink}")}
+    it { response.location.should include("/#{user.username}/#{project.permalink}") }
 
     it { Note.find(id).should be_nil }
   end
