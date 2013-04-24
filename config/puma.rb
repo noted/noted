@@ -47,12 +47,16 @@ end
 
 # Store the pid of the server in the file at “path”.
 #
-pidfile File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.pid')
+if environment == :production
+  pidfile File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.pid')
+end
 
 # Use “path” as the file to store the server info state. This is
 # used by “pumactl” to query and control the server.
 #
-state_path File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.state')
+if environment == :production
+  state_path File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.state')
+end
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
 # (“append”) specifies whether the output is appended, the default is
@@ -152,8 +156,6 @@ if environment == :production
   token = YAML.load_file(File.join(PADRINO_ROOT, '.puma.yml'))['token']
 
   activate_control_app "unix://#{ctlsocket}", { auth_token: token['token'] }
-else
-  activate_control_app 'tcp://0.0.0.0:5100', { no_token: true }
 end
 # activate_control_app 'unix:///var/run/pumactl.sock'
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
