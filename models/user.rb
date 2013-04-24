@@ -5,6 +5,8 @@ class User
   include MongoMapper::Document
   include BCrypt
 
+  plugin MongoMapper::Plugins::Paranoid
+
   key :name, String
   key :username, String
   key :email, String
