@@ -34,8 +34,9 @@ Noted::Web.controllers :sources do
   get :view, :map => '/:user/:project/sources/:source' do
     @source = Source.where(
       :project_id => @project.id,
-      :permalink => params[:source]
-      ).first # Make scope!
+      :permalink => params[:source],
+      :deleted_at => nil
+    ).first # Make scope!
     @citation = @source.citation
 
     render 'sources/view'
