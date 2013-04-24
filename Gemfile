@@ -58,6 +58,7 @@ group :development do
 end
 
 group :production do
+  gem 'therubyracer', '~> 0.11.4'
   gem 'cijoe', :git => 'https://github.com/nvloff/cijoe.git'
 end
 
