@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/dclausen/mm-paranoid.git
+  revision: 1402c8d07a19f1e267d727084db5fedfb2ecdbd4
+  specs:
+    mm-paranoid (0.2.0)
+      mongo_mapper (>= 0.9.0)
+
+GIT
   remote: https://github.com/noted/scholar.git
   revision: f2d1dc3262335adecad186eb51f18afc17da0b9a
   specs:
@@ -94,8 +101,6 @@ GEM
     memcached (1.5.0)
     method_source (0.8.1)
     mime-types (1.23)
-    mm-paranoid (0.2.0)
-      mongo_mapper (>= 0.9.0)
     mongo (1.8.5)
       bson (~> 1.8.5)
     mongo_mapper (0.12.0)
@@ -224,7 +229,7 @@ DEPENDENCIES
   jsmin (~> 1.0.1)
   log_buddy (~> 0.7.0)
   memcached (~> 1.5.0)
-  mm-paranoid (~> 0.2.0)
+  mm-paranoid!
   mongo_mapper (~> 0.12.0)
   mutations (~> 0.5.12)
   padrino-cache (= 0.11.1)
