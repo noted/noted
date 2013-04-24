@@ -7,14 +7,14 @@
 //= require lib/vendor/jquery.tags
 //= require lib/vendor/jquery.chosen
 //= require lib/vendor/jquery.tipsy
-//= require lib/vendor/ligatures\
+//= require lib/vendor/ligature
 //= require lib/vendor/ss-standard
 //= require lib/vendor/ss-social
 //= require lib/noted.contributors
 //= require lib/noted.tags
 
 $(document).ready ->
-  ligature();
+  ligature(false, $(".text"));
 
   $("#user aside h2").fitText 1.1
 
