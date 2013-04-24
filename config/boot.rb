@@ -11,10 +11,12 @@ require 'bundler/setup'
 
 Bundler.require(:default, PADRINO_ENV)
 
-LogBuddy.init({
-  :logger => logger,
-  :disabled => PADRINO_ENV == :production
-})
+if defined?(LogBuddy)
+  LogBuddy.init({
+    :logger => logger,
+    :disabled => PADRINO_ENV == :production
+  })
+end
 
 I18n.default_locale = :en
 
