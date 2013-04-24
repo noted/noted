@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/dclausen/mm-paranoid.git
-  revision: 1402c8d07a19f1e267d727084db5fedfb2ecdbd4
+  remote: https://github.com/eturk/mm-paranoid.git
+  revision: 95bfc572b856069c2538f0e0a3e5592717ce8ad6
   specs:
     mm-paranoid (0.2.0)
       mongo_mapper (>= 0.9.0)
