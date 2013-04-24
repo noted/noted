@@ -27,7 +27,8 @@ Noted::Web.controllers :projects do
     @user = User.find_by_username(params[:user])
     @project = Project.where(
       :user_id => @user.id,
-      :permalink => params[:project]
+      :permalink => params[:project],
+      :deleted_at => nil
     ).first
 
     @notes = cache("#{@project.id}_notes", :expires_in => 60) do
