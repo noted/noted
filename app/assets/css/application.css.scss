@@ -19,6 +19,7 @@ body {
 	background: $base;
 	color: $text;
 	font: 300 16px/1.5em $sans-serif;
+	text-rendering: optimizeLegibility;
 }
 
 a {

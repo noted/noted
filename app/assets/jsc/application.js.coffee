@@ -14,7 +14,7 @@
 //= require lib/noted.tags
 
 $(document).ready ->
-  ligature(false, $(".text"));
+  ligature($(".text"));
 
   $("#user aside h2").fitText 1.1
 
