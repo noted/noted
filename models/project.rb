@@ -1,6 +1,8 @@
 class Project
   include MongoMapper::Document
 
+  plugin MongoMapper::Plugins::Paranoid
+
   key :title, String
   key :description, Markdown
   key :collaborator_ids, Array

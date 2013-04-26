@@ -1,6 +1,8 @@
 class Source
   include MongoMapper::Document
 
+  plugin MongoMapper::Plugins::Paranoid
+
   key :binary, Binary
   key :permalink, String
 

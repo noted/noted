@@ -1,6 +1,8 @@
 class Note
   include MongoMapper::Document
 
+  plugin MongoMapper::Plugins::Paranoid
+
   key :title, String
   key :body, Markdown
   key :source_ids, Array # Array of Source IDs as strings
