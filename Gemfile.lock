@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/eturk/mm-paranoid.git
+  revision: 95bfc572b856069c2538f0e0a3e5592717ce8ad6
+  specs:
+    mm-paranoid (0.2.0)
+      mongo_mapper (>= 0.9.0)
+
+GIT
   remote: https://github.com/noted/scholar.git
   revision: f2d1dc3262335adecad186eb51f18afc17da0b9a
   specs:
@@ -227,6 +234,7 @@ DEPENDENCIES
   jsmin (~> 1.0.1)
   log_buddy (~> 0.7.0)
   memcached (~> 1.5.0)
+  mm-paranoid!
   mongo_mapper (~> 0.12.0)
   mutations (~> 0.5.12)
   padrino-cache (= 0.11.1)

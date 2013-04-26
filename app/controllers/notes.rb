@@ -41,7 +41,8 @@ Noted::Web.controllers :notes do
   get :view, :map => '/:user/:project/notes/:note' do
     @note = Note.where(
       :project_id => @project.id,
-      :permalink => params[:note]
+      :permalink => params[:note],
+      :deleted_at => nil
     ).first
 
     @sources = [] # Fix me.
