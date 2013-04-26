@@ -4,6 +4,12 @@
 */
 
 form {
+	&.border {
+		border-top: 1px solid $grey;
+		margin-top: 1em;
+		padding-top: 1em;
+	}
+
 	input, textarea, select, .chzn-container-multi .chzn-choices {
 		@include border-radius(1px);
 

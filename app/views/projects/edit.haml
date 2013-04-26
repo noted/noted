@@ -25,7 +25,7 @@
           %td
           %td
             %button.green{:type => "submit"} Save
-    - form_tag url(:projects, :destroy), :method => "delete" do
+    - form_tag url(:projects, :destroy), :class => "border", :method => "delete" do
       = hidden_field_tag :"project[id]", :value => @project.id
       = hidden_field_tag :author, :value => @user.id
       %table
