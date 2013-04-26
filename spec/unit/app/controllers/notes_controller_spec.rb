@@ -52,6 +52,6 @@ describe 'Notes' do
     it { response.should be_redirect }
     it { response.location.should include("/#{user.username}/#{project.permalink}") }
 
-    it { Note.find(id).should be_nil }
+    it { Note.find(id).deleted_at.should_not be_nil }
   end
 end

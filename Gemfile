@@ -15,6 +15,7 @@ gem 'memcached', '~> 1.5.0'
 
 gem 'redis', '~> 3.0.4'
 
+gem 'mm-paranoid', git: 'https://github.com/eturk/mm-paranoid.git'
 gem 'canable', '~> 0.3.0'
 gem 'state_machine', '~> 1.2.0'
 

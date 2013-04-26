@@ -1,6 +1,8 @@
 class Project
   include MongoMapper::Document
 
+  plugin MongoMapper::Plugins::Paranoid
+
   key :title, String
   key :description, Markdown
   key :collaborator_ids, Array
@@ -20,7 +22,7 @@ class Project
 
   before_save :permalink!
 
-  scope :given, -> (u, p){ where(:user_id => u, :permalink => p) }
+  scope :given, -> (u, p){ where(:user_id => u, :permalink => p, :deleted_at => nil) }
 
   def collaborators
     arr = []
