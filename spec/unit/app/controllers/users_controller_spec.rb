@@ -13,18 +13,7 @@ describe 'Users' do
 
   describe 'POST /users/create' do
     before do
-      u = {
-        :name => 'Carl Sagan',
-        :email => 'carl@sagan.org',
-        :username => 'carlsagan'
-      }
-
-      p = {
-        :password => 'foobar',
-        :confirm => 'foobar'
-      }
-
-      post '/users/create', :user => u, :password => p
+      post '/users/create', :user => { :name => 'Carl Sagan', :email => 'carl@sagan.org', :username => 'carlsagan' }, :password => { :password => 'foobar', :confirm => 'foobar' }
     end
 
     describe 'redirects' do

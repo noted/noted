@@ -20,10 +20,7 @@ class Note
 
   after_create :permalink!
 
-  scope :within, -> (id){
-    where(:project_id => id, :deleted_at => nil).
-    order('updated_at dsc')
-  }
+  scope :within, -> (id){ where(:project_id => id, :deleted_at => nil).order('updated_at dsc') }
 
   def url
     "#{self.project.url}/notes/#{self.permalink}"

@@ -30,9 +30,7 @@ describe 'Notes' do
 
   describe 'PATCH /notes/update' do
     before do
-      n = { :id => note.id, :title => 'Natural History' }
-
-      patch '/notes/update', :author => user.id, :note => n
+      patch '/notes/update', :author => user.id, :note => { :id => note.id, :title => 'Natural History' }
 
       note.reload
     end

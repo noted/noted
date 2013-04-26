@@ -18,9 +18,7 @@ describe 'Projects' do
 
   describe 'POST /projects/create' do
     before do
-      p = { :title => 'The Hubble Telescope' }
-
-      post '/projects/create', :user => user.id, :author => user.id, :project => p
+      post '/projects/create', :user => user.id, :author => user.id, :project => { :title => 'The Hubble Telescope' }
     end
 
     it { response.should be_redirect }
@@ -49,18 +47,14 @@ describe 'Projects' do
 
   describe 'PATCH /projects/update' do
     before do
-      p = { :id => project.id, :title => 'Large Hadron Collider' }
-
-      patch '/projects/update', :author => user.id, :project => p
+      patch '/projects/update', :author => user.id, :project => { :id => project.id, :title => 'Large Hadron Collider' }
 
       project.reload
     end
 
     describe 'redirects' do
-      url = "#{project.user.username}/#{project.permalink}"
-
       it { response.should be_redirect }
-      it { response.location.should include(url) }
+      it { response.location.should include("#{project.user.username}/#{project.permalink}") }
     end
 
     describe 'database' do

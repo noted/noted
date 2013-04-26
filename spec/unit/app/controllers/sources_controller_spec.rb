@@ -35,14 +35,7 @@ describe 'Sources' do
         }
       }
 
-      params = {
-        :user => user.id,
-        :project => project.id,
-        :author => user.id,
-        :source => data
-      }
-
-      post '/sources/create', params
+      post '/sources/create', :user => user.id, :project => project.id, :author => user.id, :source => data
     end
 
     it 'response should be redirect (see branch)'
@@ -59,6 +52,8 @@ describe 'Sources' do
 
   describe 'PATCH /sources/update' do
     before do
+      #patch '/sources/update', :id => source.id, :author => user.id, :source => { :data => { :title => 'H2G2' } }
+
       source.reload
     end
 

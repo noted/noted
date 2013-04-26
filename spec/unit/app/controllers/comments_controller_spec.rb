@@ -15,14 +15,7 @@ describe 'Comments' do
 
   describe 'POST /comments/create' do
     before do
-      c = {
-        :_type => 'Note',
-        :_id => note.id.to_s,
-        :body => 'Foobar',
-        :author => user.id.to_s
-      }
-
-      post '/comments/create', :comment => c, :redirect => project.url
+      post '/comments/create', :comment => { :_type => 'Note', :_id => note.id.to_s, :body => 'Foobar', :author => user.id.to_s }, :redirect => project.url
     end
 
     it { response.should be_redirect }
@@ -35,11 +28,7 @@ describe 'Comments' do
     let(:id) { comment.id }
 
     before do
-      c = {
-        :id => comment.id.to_s
-      }
-
-      delete '/comments/destroy', :comment => c, :redirect => project.url
+      delete '/comments/destroy', :comment => { :id => comment.id.to_s }, :redirect => project.url
     end
 
     it { response.should be_redirect }
