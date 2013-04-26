@@ -1,5 +1,5 @@
-PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
-PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
+PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'
+PADRINO_ROOT = File.expand_path('../..', __FILE__)
 
 COMMIT = `git show --pretty=%H`.split[0...1].join(' ')
 BRANCH = `git rev-parse --abbrev-ref HEAD`
