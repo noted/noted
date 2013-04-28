@@ -1,11 +1,11 @@
 Noted::Web.helpers do
   def current_user
-    User.find_by_hash(session[:noted])
+    User.find(session[:noted])
   end
 
   def authorize(user)
     session[:noted] ||= 0
-    session[:noted] = user.hash
+    session[:noted] = user.id
   end
 
   def deauthorize!
