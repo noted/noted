@@ -2,7 +2,7 @@
   %header
     %h2= note.title
   .text
-    - if note.body.html.blank?
+    - if note.body.blank?
       %em.subtle Nothing to see here, move along!
     - else
-      = safe(note.body.html)
+      = safe(note.body)
