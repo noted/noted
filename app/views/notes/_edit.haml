@@ -6,7 +6,7 @@
       %header
         = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
       %section.borderless
-        = find_and_preserve text_area_tag :"note[body]", :class => "redactor text", :value => @note.body.markdown, :placeholder => "Begin writing your note here..."
+        = find_and_preserve text_area_tag :"note[body]", :class => "redactor text", :value => @note.body, :placeholder => "Begin writing your note here..."
       %footer
         = hidden_field_tag :"existing-tags", :value => @note.tags_str
         = text_field_tag :"tags", :class => "tags", :placeholder => "Tags"

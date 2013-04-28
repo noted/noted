@@ -4,7 +4,7 @@ class Note
   plugin MongoMapper::Plugins::Paranoid
 
   key :title, String
-  key :body, Markdown
+  key :body, String
   key :source_ids, Array # Array of Source IDs as strings
   key :permalink, String
 

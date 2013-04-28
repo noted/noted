@@ -31,7 +31,6 @@ gem 'mutations', '~> 0.5.12'
 gem 'padrino-sprockets', '~> 0.0.2', require: 'padrino/sprockets'
 
 gem 'haml', '~> 4.0.2'
-gem 'redcarpet', '~> 2.2.2'
 
 gem 'sprockets-sass', '~> 1.0.0'
 gem 'compass', '~> 0.12.2'

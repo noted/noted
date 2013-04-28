@@ -4,7 +4,7 @@ class Project
   plugin MongoMapper::Plugins::Paranoid
 
   key :title, String
-  key :description, Markdown
+  key :description, String
   key :collaborator_ids, Array
   key :permalink, String
 

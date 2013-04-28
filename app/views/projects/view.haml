@@ -9,7 +9,7 @@
             Description
 
       .text.hidden
-        = safe(@project.description.html)
+        = safe(@project.description)
   %section
     = partial 'partials/flash', :locals => { :flash => flash }
     = @notes
