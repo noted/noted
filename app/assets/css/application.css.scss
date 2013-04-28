@@ -138,6 +138,18 @@ body > header {
 			li {
 				display: inline-block;
 			}
+
+			a.img {
+
+				img {
+				border: 3px solid $blue-grey;
+					@include border-radius(50%);
+
+					max-width: 1.75em;
+					position: relative;
+					top: 0.75em;
+				}
+			}
 		}
 	}
 

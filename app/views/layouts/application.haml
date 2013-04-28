@@ -43,8 +43,8 @@
                   %a.btn.blue.tooltip{:href => url(:projects, :new), :title => "New Project"}
                     %i.ss-icon plus
                 %li
-                  %a.btn.turquoise.tooltip{:href => url(:users, :view, :user => current_user.username), :title => "Profile"}
-                    %i.ss-icon user
+                  %a.img.tooltip{:href => url(:users, :view, :user => current_user.username), :title => "Profile"}
+                    %img{:src => current_user.gravatar}
                 %li
                   %a.btn.yellow{:href => url(:sessions, :destroy)} Logout
           - else
