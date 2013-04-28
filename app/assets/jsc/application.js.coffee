@@ -10,6 +10,7 @@
 //= require lib/vendor/ligature
 //= require lib/vendor/ss-standard
 //= require lib/vendor/ss-social
+//= require lib/vendor/redactor
 //= require lib/noted.contributors
 //= require lib/noted.tags
 
@@ -29,3 +30,5 @@ $(document).ready ->
   $(".tabs").tabs()
 
   $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS
+
+  $(".redactor").redactor()
