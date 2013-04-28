@@ -27,10 +27,10 @@
                     %i.ss-icon trash
         %section
           .inner.text
-            - if note.body.html.blank?
+            - if note.body.blank?
               %em.subtle This note is blank!
             - else
-              = safe(truncate_words(note.body.html, :length => 40))
+              = safe(truncate_words(note.body, :length => 40))
         %footer
           .inner
             %aside
