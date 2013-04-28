@@ -3,7 +3,7 @@ Noted::Web.controllers :sessions do
     if current_user
       redirect url(:index)
     else
-      render 'sessions/new', layout: :sessions
+      render 'sessions/new', :layout => 'sessions'
     end
   end
 
