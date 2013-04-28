@@ -5,8 +5,8 @@
       = hidden_field_tag :author, :value => current_user.id
       %header
         = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
-      %section
-        = find_and_preserve text_area_tag :"note[body]", :id => "redactor", :value => @note.body.markdown, :placeholder => "Begin writing your note here..."
+      %section.borderless
+        = find_and_preserve text_area_tag :"note[body]", :class => "redactor text", :value => @note.body.markdown, :placeholder => "Begin writing your note here..."
       %footer
         = hidden_field_tag :"existing-tags", :value => @note.tags_str
         = text_field_tag :"tags", :class => "tags", :placeholder => "Tags"
