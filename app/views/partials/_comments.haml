@@ -5,7 +5,7 @@
         %img{:src => comment.user.gravatar}
       %section.text
         .inner
-          = safe(comment.html)
+          = safe(comment.body)
           %footer
             %span= safe("<strong>#{current_user.name}</strong> on #{comment.created_at.strftime("%e %b. %Y, %l:%M%P")}")
             - if comment.user == current_user
