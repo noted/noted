@@ -23,7 +23,7 @@
       %aside
         %img{:src => current_user.gravatar}
       %section
-        %p= find_and_preserve text_area_tag :"comment[body]", :placeholder => "Your comment..."
+        %p= find_and_preserve text_area_tag :"comment[body]", :class => "redactor", :placeholder => "Your comment..."
         %footer
           %p= safe("<strong>#{current_user.name}</strong>")
           %button.primary{:type => "submit"}
