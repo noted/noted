@@ -5,7 +5,7 @@ describe Activity do
   let(:note) { create(:note) }
 
   let(:activity) do
-    Activity.new(
+    Activity.create(
       :actor => user,
       :recipient => note,
       :action => 'create'
@@ -32,6 +32,13 @@ describe Activity do
 
     it { activity.actor_id.should eql two.id }
     it { activity.actor.should eql two }
+  end
+
+  describe '#by' do
+    let(:query) { Activity.by(activity.actor_id) }
+
+    it { query.should be_an_instance_of Plucky::Query }
+    it { query.all.should include activity }
   end
 
   describe '#recipient' do

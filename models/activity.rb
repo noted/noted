@@ -12,6 +12,9 @@ class Activity
 
   validates_presence_of :actor_id, :recipient_class, :recipient_id, :action
 
+  scope :by,  -> (a){ where(:actor_id => a) }
+  scope :for, -> (r){ where(:recipient_id => r) }
+
   def actor
     User.find(actor_id)
   end
@@ -29,3 +32,4 @@ class Activity
     self.recipient_id = obj.id
   end
 end
+
