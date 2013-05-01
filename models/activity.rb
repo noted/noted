@@ -10,6 +10,8 @@ class Activity
 
   timestamps!
 
+  validates_presence_of :actor_id, :recipient_class, :recipient_id, :action
+
   def actor
     User.find(actor_id)
   end
