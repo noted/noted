@@ -10,7 +10,7 @@ class Note
 
     def execute
       n = Note.find(note[:id])
-      n.updater = author
+      n.updater = User.find(author)
       n.destroy
     end
   end
