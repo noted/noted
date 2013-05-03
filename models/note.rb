@@ -42,6 +42,14 @@ class Note
     )
   end
 
+  def destroy_activity
+    Activity.create(
+      :actor => self.creator,
+      :recipient => self,
+      :action => 'destroy'
+    )
+  end
+
   def url
     "#{self.project.url}/notes/#{self.permalink}"
   end

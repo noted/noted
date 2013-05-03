@@ -20,7 +20,11 @@ class Activity
   end
 
   def actor=(user)
-    self.actor_id = user.id
+    if user.is_a?(User)
+      self.actor_id = user.id
+    else
+      self.actor_id = user
+    end
   end
 
   def recipient

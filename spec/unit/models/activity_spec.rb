@@ -26,12 +26,23 @@ describe Activity do
   describe '#actor=' do
     let(:two) { create(:user) }
 
-    before do
-      activity.actor = two
+    context 'set with ID' do
+      before do
+        activity.actor = two.id.to_s
+      end
+
+      it { activity.actor_id.should eql two.id }
+      it { activity.actor.should eql two }
     end
 
-    it { activity.actor_id.should eql two.id }
-    it { activity.actor.should eql two }
+    context 'set with User' do
+      before do
+        activity.actor = two
+      end
+
+      it { activity.actor_id.should eql two.id }
+      it { activity.actor.should eql two }
+    end
   end
 
   describe '#by' do
