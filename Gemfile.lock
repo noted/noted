@@ -6,6 +6,13 @@ GIT
       mongo_mapper (>= 0.9.0)
 
 GIT
+  remote: https://github.com/eturk/padrino-sprockets.git
+  revision: 83f7307776657877e4b824bdeb7bc9f91fb40b2b
+  specs:
+    padrino-sprockets (0.0.2)
+      sprockets
+
+GIT
   remote: https://github.com/noted/scholar.git
   revision: f2d1dc3262335adecad186eb51f18afc17da0b9a
   specs:
@@ -95,7 +102,6 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.1)
-    jsmin (1.0.1)
     json (1.7.7)
     libv8 (3.11.8.17)
     log_buddy (0.7.0)
@@ -130,8 +136,6 @@ GEM
     padrino-helpers (0.11.1)
       i18n (~> 0.6)
       padrino-core (= 0.11.1)
-    padrino-sprockets (0.0.2)
-      sprockets
     parallel (0.6.4)
     plucky (0.5.2)
       mongo (~> 1.5)
@@ -200,6 +204,9 @@ GEM
       eventmachine (>= 0.12.8)
       http_parser.rb (~> 0.5.1)
       simple_oauth (~> 0.1.4)
+    uglifier (2.0.1)
+      execjs (>= 0.3.0)
+      multi_json (~> 1.0, >= 1.0.2)
     url_mount (0.2.1)
       rack
     von (0.2.0)
@@ -230,7 +237,6 @@ DEPENDENCIES
   factory_girl (~> 4.2.0)
   foreman (~> 0.63.0)
   haml (~> 4.0.2)
-  jsmin (~> 1.0.1)
   log_buddy (~> 0.7.0)
   memcached (~> 1.5.0)
   mm-paranoid!
@@ -240,7 +246,7 @@ DEPENDENCIES
   padrino-core (= 0.11.1)
   padrino-gen (= 0.11.1)
   padrino-helpers (= 0.11.1)
-  padrino-sprockets (~> 0.0.2)
+  padrino-sprockets!
   pry (~> 0.9.12.1)
   puma (= 2.0.0.b7)
   rack-test (~> 0.6.2)
@@ -255,5 +261,6 @@ DEPENDENCIES
   state_machine (~> 1.2.0)
   susy (~> 1.0.8)
   therubyracer (~> 0.11.4)
+  uglifier (~> 2.0.1)
   von (~> 0.2.0)
   yui-compressor (~> 0.9.6)

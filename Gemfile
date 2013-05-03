@@ -28,7 +28,7 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations', '~> 0.5.12'
 
-gem 'padrino-sprockets', '~> 0.0.2', require: 'padrino/sprockets'
+gem 'padrino-sprockets', git: 'https://github.com/eturk/padrino-sprockets.git', require: 'padrino/sprockets'
 
 gem 'haml', '~> 4.0.2'
 
@@ -38,7 +38,7 @@ gem 'susy', '~> 1.0.8'
 
 gem 'coffee-script', '~> 2.2.0'
 
-gem 'jsmin', '~> 1.0.1'
+gem 'uglifier', '~> 2.0.1'
 gem 'yui-compressor', '~> 0.9.6'
 
 group :development, :test do
