@@ -22,7 +22,35 @@ class Project
 
   before_save :permalink!
 
+  after_create :create_activity
+  after_update :update_activity
+  after_destroy :destroy_activity
+
   scope :given, -> (u, p){ where(:user_id => u, :permalink => p, :deleted_at => nil) }
+
+  def create_activity
+    Activity.create(
+      :actor => self.creator,
+      :recipient => self,
+      :action => 'create'
+    )
+  end
+
+  def update_activity
+    Activity.create(
+      :actor => self.updater,
+      :recipient => self,
+      :action => 'update'
+    )
+  end
+
+  def destroy_activity
+    Activity.create(
+      :actor => self.creator,
+      :recipient => self,
+      :action => 'destroy'
+    )
+  end
 
   def collaborators
     arr = []
