@@ -30,6 +30,7 @@ class Note
     Activity.create(
       :actor => self.creator,
       :recipient => self,
+      :recipient_parent => self.project,
       :action => 'create'
     )
   end
@@ -38,6 +39,7 @@ class Note
     Activity.create(
       :actor => self.updater,
       :recipient => self,
+      :recipient_parent => self.project,
       :action => 'update'
     )
   end
@@ -46,6 +48,7 @@ class Note
     Activity.create(
       :actor => self.creator,
       :recipient => self,
+      :recipient_parent => self.project,
       :action => 'destroy'
     )
   end

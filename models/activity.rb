@@ -6,6 +6,9 @@ class Activity
   key :recipient_class, String
   key :recipient_id, ObjectId
 
+  key :recipient_parent_class, String, :default => 'Project'
+  key :recipient_parent_id, ObjectId
+
   key :action, String
 
   timestamps!
@@ -14,6 +17,12 @@ class Activity
 
   scope :by,  -> (a){ where(:actor_id => a) }
   scope :for, -> (r){ where(:recipient_id => r) }
+  scope :within, -> (p) do
+    where(:$or => [
+      { :recipient_id => p },
+      { :recipient_parent_id => p }
+    ])
+  end
 
   def actor
     User.find(actor_id)
@@ -35,5 +44,12 @@ class Activity
     self.recipient_class = obj.class.to_s
     self.recipient_id = obj.id
   end
-end
 
+  def recipient_parent
+    self.recipient_parent_class.constantize.find(recipient_parent_id)
+  end
+
+  def recipient_parent=(obj)
+    self.recipient_parent_id = obj.id
+  end
+end
