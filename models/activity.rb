@@ -52,4 +52,26 @@ class Activity
   def recipient_parent=(obj)
     self.recipient_parent_id = obj.id
   end
+
+  def to_s
+    case action
+    when 'create'
+      verb = 'created'
+    when 'update'
+      verb = 'updated'
+    when 'destroy'
+      verb = 'destroyed'
+    end
+
+    case recipient_parent_class
+    when 'Project'
+      post = "#{recipient.title}"
+    when 'Note'
+      post = "#{recipient.title}"
+    when 'Source'
+      post = "a Source"
+    end
+
+    "#{actor.name} #{verb} #{post}."
+  end
 end
