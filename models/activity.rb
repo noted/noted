@@ -21,7 +21,7 @@ class Activity
     where(:$or => [
       { :recipient_id => p },
       { :recipient_parent_id => p }
-    ])
+    ]).order('created_at dsc')
   end
 
   def actor

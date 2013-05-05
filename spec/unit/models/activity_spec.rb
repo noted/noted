@@ -64,7 +64,6 @@ describe Activity do
     let(:query) { Activity.within(activity.recipient_parent_id) }
 
     it { query.should be_an_instance_of Plucky::Query }
-    it { query.all.should include Activity }
     it { query.all.size.should be > 1 }
   end
 
