@@ -9,7 +9,8 @@ class Note
       p = Project.find(project)
 
       n = Note.new(
-        :title => 'Untitled'
+        :title => 'Untitled',
+        :creator => User.find(author)
       )
 
       p.notes << n

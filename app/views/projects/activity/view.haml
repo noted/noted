@@ -1,0 +1,4 @@
+#project
+  = partial 'projects/header', :locals => { :project => @project, :user => @user }
+  %ul.activities
+    %p= @activity.sentence

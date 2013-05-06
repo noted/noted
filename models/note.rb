@@ -18,9 +18,40 @@ class Note
   many :comments, :as => :commentable
   many :tags, :as => :taggable
 
-  after_create :permalink!
+  before_create :permalink!
+
+  after_create :create_activity
+  after_update :update_activity
+  after_destroy :destroy_activity
 
   scope :within, -> (id){ where(:project_id => id, :deleted_at => nil).order('updated_at dsc') }
+
+  def create_activity
+    Activity.create(
+      :actor => self.creator,
+      :recipient => self,
+      :recipient_parent => self.project,
+      :action => 'create'
+    )
+  end
+
+  def update_activity
+    Activity.create(
+      :actor => self.updater,
+      :recipient => self,
+      :recipient_parent => self.project,
+      :action => 'update'
+    )
+  end
+
+  def destroy_activity
+    Activity.create(
+      :actor => self.creator,
+      :recipient => self,
+      :recipient_parent => self.project,
+      :action => 'destroy'
+    )
+  end
 
   def url
     "#{self.project.url}/notes/#{self.permalink}"

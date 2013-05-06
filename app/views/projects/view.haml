@@ -7,9 +7,19 @@
           %a.expand
             %i.ss-icon dropdown
             Description
-
       .text.hidden
         = safe(@project.description)
+  .activity
+    .inner
+      %section
+        %p
+          %a{:href => url(:activity, :view, :user => @user.username, :project => @project.permalink, :activity => @activity.permalink)}= @activity.sentence
+        %footer
+          %p{:title => @activity.created_at}= "#{time_ago_in_words(@activity.created_at)} ago"
+      %aside
+        %p
+          %a.btn{:href => url(:activity, :index, :user => @user.username, :project => @project.permalink)} Activity
+
   %section
     = partial 'partials/flash', :locals => { :flash => flash }
     = @notes
