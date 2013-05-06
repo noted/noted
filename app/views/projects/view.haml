@@ -11,7 +11,13 @@
         = safe(@project.description)
   .activity
     .inner
-      %p= @activity
+      %section
+        %p= @activity.sentence
+        %footer
+          %p{:title => @activity.created_at}= "#{time_ago_in_words(@activity.created_at)} ago"
+      %aside
+        %p
+          %a.btn{:href => ""} Activity
 
   %section
     = partial 'partials/flash', :locals => { :flash => flash }

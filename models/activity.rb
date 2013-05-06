@@ -53,7 +53,7 @@ class Activity
     self.recipient_parent_id = obj.id
   end
 
-  def to_s
+  def sentence
     case action
     when 'create'
       verb = 'created'
