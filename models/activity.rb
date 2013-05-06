@@ -11,9 +11,13 @@ class Activity
 
   key :action, String
 
+  key :permalink, String
+
   timestamps!
 
   validates_presence_of :actor_id, :recipient_class, :recipient_id, :action
+
+  before_create :permalink!
 
   scope :by,  -> (a){ where(:actor_id => a) }
   scope :for, -> (r){ where(:recipient_id => r) }
@@ -73,5 +77,11 @@ class Activity
     end
 
     "#{actor.name} #{verb} #{post}."
+  end
+
+  private
+
+  def permalink!
+    self.permalink = Base32::Crockford.encode(Von.increment('activities'))
   end
 end

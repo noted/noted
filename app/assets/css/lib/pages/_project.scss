@@ -96,7 +96,9 @@
 			section {
 				@include span-columns(20);
 
-				color: $dark-grey;
+				a {
+					color: $dark-grey;
+				}
 
 				footer {
 					color: $grey;
