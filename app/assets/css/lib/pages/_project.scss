@@ -53,7 +53,7 @@
 
 	.description {
 		background: lighten($dark-blue-grey, 1%);
-		margin-bottom: 2rem;
+		//margin-bottom: 2rem;
 		padding: 2rem 0;
 
 		.inner {
@@ -80,6 +80,38 @@
 				&.display {
 					display: block;
 					margin-top: 1em;
+				}
+			}
+		}
+	}
+
+	.activity {
+		border-bottom: 2px solid $blue-grey;
+		margin-bottom: 2rem;
+		padding: 1rem 0;
+
+		.inner {
+			@include container;
+
+			section {
+				@include span-columns(20);
+
+				a {
+					color: $dark-grey;
+				}
+
+				footer {
+					color: $grey;
+					font-size: 0.95em;
+				}
+			}
+
+			aside {
+				@include span-columns(4 omega);
+
+				p {
+					display: block;
+					float: right;
 				}
 			}
 		}

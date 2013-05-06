@@ -1,0 +1,18 @@
+/*
+  Noted.
+    file: css/pages/_user.scss
+*/
+
+#project {
+  ul.activities {
+    @include container;
+
+    margin-top: 2em;
+
+    li {
+      & + li {
+        margin-top: 1em;
+      }
+    }
+  }
+}

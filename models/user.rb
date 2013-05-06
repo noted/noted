@@ -5,6 +5,7 @@ class User
   include MongoMapper::Document
   include BCrypt
 
+
   key :name, String
   key :username, String
   key :email, String
@@ -59,6 +60,10 @@ class User
   def self.authenticate(e, p)
     u = first(:email => e) if e.present?
     u && u.password == p ? u : nil
+  end
+
+  def stream
+    Activity.where(:actor_id => self.id)
   end
 
   def gravatar

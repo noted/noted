@@ -31,6 +31,8 @@ Noted::Web.controllers :projects do
       :deleted_at => nil
     ).first
 
+    @activity = Activity.within(@project.id).first
+
     @notes = cache("#{@project.id}_notes", :expires_in => 60) do
       @n = Note.within(@project.id).all
 
