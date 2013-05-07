@@ -11,6 +11,7 @@ class Project
 
         optional do
           string :description, empty: true
+          string :collaborators, empty: true
         end
       end
     end
@@ -21,6 +22,7 @@ class Project
       p.update_attributes(
         :title => project[:title],
         :description => project[:description],
+        :collaborators => project[:collaborators],
 
         :updater => User.find(author)
       )

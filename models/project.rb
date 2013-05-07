@@ -62,12 +62,23 @@ class Project
     arr
   end
 
+  def collaborators=(csv)
+    arr = []
+
+    ids = csv.split(',')
+    ids.each do |id|
+      arr << id
+    end
+
+    self.collaborator_ids = arr
+  end
+
   def url
     "/#{self.user.username}/#{self.permalink}"
   end
 
   def updatable_by?(u)
-    u == self.user || u.staff?
+    u == self.user || self.collaborators.include?(u) || u.staff?
   end
 
   def destroyable_by?(u)
