@@ -1,4 +1,10 @@
 Noted::Web.controllers :users do
+  get :index, :provides => [:json] do
+    @users = User.all
+
+    render 'users/index'
+  end
+
   get :new, :map => '/join' do
     render 'users/new'
   end

@@ -23,6 +23,11 @@
             = find_and_preserve text_area_tag :"project[description]", :class => "redactor", :value => @project.description
         %tr
           %td
+            %label{:for => "project[collaborators]"} Collaborators
+          %td
+            = text_field_tag :"project[collaborators]", :class => "autosuggest"
+        %tr
+          %td
           %td
             %button.green{:type => "submit"} Save
     - form_tag url(:projects, :destroy), :class => "border", :method => "delete" do

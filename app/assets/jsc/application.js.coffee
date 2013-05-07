@@ -7,6 +7,7 @@
 //= require lib/vendor/jquery.tags
 //= require lib/vendor/jquery.chosen
 //= require lib/vendor/jquery.tipsy
+//= require lib/vendor/jquery.autosuggest
 //= require lib/vendor/ligature
 //= require lib/vendor/ss-standard
 //= require lib/vendor/ss-social
@@ -32,3 +33,5 @@ $(document).ready ->
   $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS
 
   $(".redactor").redactor()
+
+  $("input.autosuggest").autoSuggest(data);
