@@ -11,6 +11,8 @@ gem 'rake', '~> 10.0.4'
 gem 'bson_ext', '~> 1.8.5'
 gem 'mongo_mapper', '~> 0.12.0'
 
+gem 'hunt', git: 'https://github.com/says/hunt.git'
+
 gem 'memcached', '~> 1.5.0'
 
 gem 'redis', '~> 3.0.4'
@@ -33,7 +35,6 @@ gem 'mutations', '~> 0.5.12'
 gem 'padrino-sprockets', git: 'https://github.com/eturk/padrino-sprockets.git', require: 'padrino/sprockets'
 
 gem 'haml', '~> 4.0.2'
-gem 'rabl'
 
 gem 'sprockets-sass', '~> 1.0.0'
 gem 'compass', '~> 0.12.2'

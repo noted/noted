@@ -34,4 +34,4 @@ $(document).ready ->
 
   $(".redactor").redactor()
 
-  $("input.autosuggest").autoSuggest(data);
+  $("input.autosuggest").autoSuggest("/api/users/search");

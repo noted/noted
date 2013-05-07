@@ -5,6 +5,7 @@ class User
   include MongoMapper::Document
   include BCrypt
 
+  plugin Hunt
 
   key :name, String
   key :username, String
@@ -54,6 +55,8 @@ class User
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_format_of :username, :with => /\A[a-zA-Z][a-zA-Z0-9_\- \.]+\Z/i
   validate :username_valid?
+
+  searches :username
 
   before_destroy :clean!
 
