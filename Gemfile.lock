@@ -155,6 +155,8 @@ GEM
       slop (~> 3.4)
     puma (2.0.0.b7)
       rack (>= 1.1, < 2.0)
+    rabl (0.8.4)
+      activesupport (>= 2.3.14)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -253,7 +255,7 @@ DEPENDENCIES
   mm-paranoid!
   mongo_mapper (~> 0.12.0)
   mutations (~> 0.5.12)
-  oj
+  oj (~> 2.0.12)
   padrino-cache (= 0.11.1)
   padrino-core (= 0.11.1)
   padrino-gen (= 0.11.1)
@@ -261,6 +263,7 @@ DEPENDENCIES
   padrino-sprockets!
   pry (~> 0.9.12.1)
   puma (= 2.0.0.b7)
+  rabl (~> 0.8.4)
   rack-test (~> 0.6.2)
   rake (~> 10.0.4)
   redis (~> 3.0.4)
