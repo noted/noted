@@ -88,4 +88,22 @@ Noted::Web.controllers :projects do
       redirect Project.find(params[:project][:id]).url
     end
   end
+
+  post :collaborators_add do
+    p = Project.find(params[:project][:id])
+
+    p.collaborator_ids << User.find_by_username(params[:username]).id
+    p.save
+
+    redirect "#{p.url}/settings"
+  end
+
+  patch :collaborators_remove do
+    p = Project.find(params[:project][:id])
+
+    p.collaborator_ids.delete_at(collaborator_ids.index(params[:collaborator][:id]))
+    p.save
+
+    redirect "#{p.url}/settings"
+  end
 end
