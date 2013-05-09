@@ -19,6 +19,8 @@ class Project
       p.updater = u
 
       p.save
+
+      p
     end
   end
 end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Project::AddCollaborator do
+describe Project::RemoveCollaborator do
   let(:project)  { create(:project) }
   let(:user)     { project.user }
   let(:outsider) { create(:user) }
@@ -16,7 +16,7 @@ describe Project::AddCollaborator do
     })
   end
 
-  it { project.success?.should be_true }
-  it { project.result.should be_an_instance_of Project }
-  it { project.result.collaborators.should_not include outsider }
+  it { action.success?.should be_true }
+  it { action.result.should be_an_instance_of Project }
+  it { action.result.collaborators.should_not include outsider }
 end
