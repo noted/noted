@@ -54,8 +54,6 @@ class User
   validates_format_of :username, :with => /\A[a-zA-Z][a-zA-Z0-9_\- \.]+\Z/i
   validate :username_valid?
 
-  searches :username
-
   before_destroy :clean!
 
   def self.authenticate(e, p)
