@@ -11,8 +11,6 @@ gem 'rake', '~> 10.0.4'
 gem 'bson_ext', '~> 1.8.5'
 gem 'mongo_mapper', '~> 0.12.0'
 
-gem 'hunt', git: 'https://github.com/says/hunt.git'
-
 gem 'memcached', '~> 1.5.0'
 
 gem 'redis', '~> 3.0.4'
