@@ -85,6 +85,13 @@
         %p= "Noted fecit #{Time.now.year}. Made in Connecticut."
 
     %script{:src => "/i/application.js"}
+    - if current_user
+      :coffeescript
+        analytics.identify "#{current_user.id}",
+          name: "#{current_user.name}"
+          email: "#{current_user.email}"
+          username: "#{current_user.username}"
+
 /
   version:     #{NOTED_VERSION}
   commit:      #{COMMIT}

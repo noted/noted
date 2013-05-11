@@ -14,6 +14,7 @@
 //= require lib/vendor/redactor
 //= require lib/noted.contributors
 //= require lib/noted.tags
+//= require lib/analytics
 
 $(document).ready ->
   ligature(false, $(".text"));
