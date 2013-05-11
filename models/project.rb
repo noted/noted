@@ -56,7 +56,7 @@ class Project
     result = "<a href='/#{self.creator.username}'>#{self.creator.name}</a>"
 
     self.collaborators.each do |c|
-      result << ", <a href='#{c.username}'>#{c.name}</a>"
+      result << ", <a href='/#{c.username}'>#{c.name}</a>"
     end
 
     result
