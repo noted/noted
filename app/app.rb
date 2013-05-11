@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Noted
   class Web < Padrino::Application
     register Padrino::Cache
