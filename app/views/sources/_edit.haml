@@ -20,6 +20,7 @@
                     = text_field_tag :"book[contributors][#{num}][middle]", :class => "middle", :placeholder => "Q", :maxlength => "1", :value => c[:middle]
                     = text_field_tag :"book[contributors][#{num}][last]", :class => "last", :placeholder => "Sample", :value => c[:last]
                     = text_field_tag :"book[contributors][#{num}][suffix]", :class => "suffix", :placeholder => "Jr", :value => c[:suffix]
+                    %a.remove Remove
               %a.btn.add{:"data-action" => "add-contributor"}
                 %i.ss-icon plus
                 Contributor

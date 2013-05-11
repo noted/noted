@@ -22,6 +22,6 @@ $(document).ready ->
                                   <input class='suffix' placeholder='Jr' name='#{param}[suffix]' type='text' />
                                 </li>")
 
-  $("ul.contributors a.remove").on "click", ->
+  $("ul.contributors li a.remove").on "click", ->
     console.log $(this).parent()
     $(this).parent().remove()
