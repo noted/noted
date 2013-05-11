@@ -46,11 +46,13 @@
         %tr
           %td Creator
           %td
-            %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
+            - if @project.creator
+              %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
         %tr
           %td Updater
           %td
-            %a{:href => url(:users, :view, :id => @project.updater.id)}= @project.updater.username
+            - if @project.updater
+              %a{:href => url(:users, :view, :id => @project.updater.id)}= @project.updater.username
         %tr
           %td Deleted?
           %td
