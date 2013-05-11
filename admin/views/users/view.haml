@@ -1,0 +1,51 @@
+.row
+  %h3 Users
+  %h2= @user.name
+.row
+  .small-3.columns
+    %img{:src => @user.gravatar}
+  .small-9.columns
+    %table
+      %thead
+        %tr
+          %th Key
+          %th Value
+      %tbody
+        %tr
+          %td ID
+          %td
+            %pre= @user.id
+        %tr
+          %td Name
+          %td= @user.name
+        %tr
+          %td Username
+          %td= @user.username
+        %tr
+          %td Created At
+          %td= @user.created_at
+        %tr
+          %td Updated at
+          %td= @user.updated_at
+        %tr
+          %td Role
+          %td= @user.role
+        %tr
+          %td Tier
+          %td= @user.tier
+.row
+  %h4 Projects
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Title
+        %th Actions
+    %tbody
+      - @user.projects.each do |p|
+        %tr
+          %td
+            %pre= p.id
+          %td= p.title
+          %td
+            %a{:href => url(:projects, :view, :id => p.id)} View
