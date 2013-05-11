@@ -8,3 +8,4 @@ end
 
 Padrino.mount('Noted::Web').to('/')
 Padrino.mount('Noted::API', :app_file => Padrino.root('api/app.rb')).to('/api')
+Padrino.mount('Noted::Admin', :app_file => Padrino.root('admin/app.rb')).to('/admin')
