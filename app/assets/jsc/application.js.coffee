@@ -37,5 +37,3 @@ $(document).ready ->
   $(".suggest").autocomplete
     serviceUrl: "/api/users/search.json"
     minChars: 3
-
-  #$("input.suggest").autoSuggest("/api/users/search2")
