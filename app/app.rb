@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Noted
   class Web < Padrino::Application
     register Padrino::Cache
@@ -15,6 +17,12 @@ module Noted
     sprockets :url => 'i', :minify => (Padrino.env == :production), :paths => asset_paths
 
     enable :sessions
+
+    segment = YAML.load_file(Padrino.root('.segment.yml'))
+
+    Analytics.init(
+      :secret => segment['secret']
+    )
 
     set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
 

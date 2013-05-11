@@ -6,6 +6,15 @@ Noted::Web.helpers do
   def authorize(user)
     session[:noted] ||= 0
     session[:noted] = user.id
+
+    Analytics.identify(
+      :user_id => user.id.to_s,
+      :traits => {
+        :name => user.name,
+        :username => user.username,
+        :email => user.email
+      }
+    )
   end
 
   def deauthorize!

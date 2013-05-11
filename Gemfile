@@ -45,6 +45,8 @@ gem 'coffee-script', '~> 2.2.0'
 gem 'uglifier', '~> 2.0.1'
 gem 'yui-compressor', '~> 0.9.6'
 
+gem 'analytics-ruby', '~> 0.3.1'
+
 group :development, :test do
   gem 'better_errors', '~> 0.8.0'
   gem 'binding_of_caller', '~> 0.7.1'
