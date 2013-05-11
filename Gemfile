@@ -38,6 +38,7 @@ gem 'rabl', '~> 0.8.4'
 gem 'sprockets-sass', '~> 1.0.0'
 gem 'compass', '~> 0.12.2'
 gem 'susy', '~> 1.0.8'
+gem 'zurb-foundation'
 
 gem 'coffee-script', '~> 2.2.0'
 
