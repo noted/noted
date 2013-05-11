@@ -1,0 +1,92 @@
+.row
+  %h3 Notes
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li
+      %a{:href => url(:users, :index)} Users
+    %li
+      %a{:href => url(:users, :view, :id => @note.project.user.id)}= @note.project.user.name
+    %li
+      %a{:href => url(:projects, :view, :id => @note.project.id)}= @note.project.title
+    %li.unavailable
+      Notes
+    %li.current
+      %a{:href => url(:notes, :view, :id => @note.id)}= @note.title
+  %h2= @note.title
+.row
+  - if @note.body
+    = safe(@note.body)
+.row
+  %table
+    %thead
+      %tr
+        %th Key
+        %th Value
+    %tbody
+      %tr
+        %td Title
+        %td= @note.title
+      %tr
+        %td Body
+        %td
+          - if @note.body
+            = safe(@note.body)
+      %tr
+        %td Created At
+        %td= @note.created_at
+      %tr
+        %td Updated At
+        %td= @note.updated_at
+      %tr
+        %td Creator
+        %td
+          - if @note.creator
+            = @note.creator.username
+      %tr
+        %td Updater
+        %td
+          - if @note.updater
+            = @note.updater.username
+      %tr
+        %td Deleted?
+        %td
+          - if @note.deleted_at.nil?
+            No
+          - else
+            = "Yes (at #{@note.deleted_at})"
+.row
+  %h4 Activity
+  %table
+    %thead
+      %tr
+        %th Actor
+        %th Recipient
+        %th Action
+        %th Timestamp
+    %tbody
+      - Activity.for(@note.id).all.each do |a|
+        %tr
+          %td= a.actor.username
+          %td
+            - if a.recipient.is_a?(Note) or a.recipient.is_a?(Project)
+              = a.recipient.title
+            - else
+              = a.recipient.citation.html
+          %td= a.action
+          %td= a.created_at
+.row
+  %h4 Comments
+  %table
+    %thead
+      %tr
+        %th ID
+        %th User
+        %th Comment
+    %tbody
+      - @note.comments.each do |c|
+        %tr
+          %td
+            %pre= c.id
+          %td= c.user.username
+          %td= safe(c.body)

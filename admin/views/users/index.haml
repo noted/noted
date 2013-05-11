@@ -1,0 +1,26 @@
+.row
+  %h3 Users
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li.current
+      %a{:href => url(:users, :index)} Users
+.row
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Name
+        %th Username
+        %th Email
+        %th Actions
+    %tbody
+      - @users.each do |u|
+        %tr
+          %td
+            %pre= u.id
+          %td= u.name
+          %td= u.username
+          %td= u.email
+          %td
+            %a{:href => url(:users, :view, :id => u.id)} View
