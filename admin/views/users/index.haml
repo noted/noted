@@ -1,5 +1,10 @@
 .row
   %h3 Users
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li.current
+      %a{:href => url(:users, :index)} Users
 .row
   %table
     %thead

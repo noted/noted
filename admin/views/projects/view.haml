@@ -1,95 +1,127 @@
 .row
   %h3 Projects
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li
+      %a{:href => url(:users, :index)} Users
+    %li
+      %a{:href => url(:users, :view, :id => @project.user.id)}= @project.user.name
+    %li.current
+      %a{:href => url(:projects, :view, :id => @project.id)}= @project.title
   %h2= @project.title
 .row
-  %table
-    %thead
-      %tr
-        %th Key
-        %th Value
-    %tbody
-      %tr
-        %td ID
-        %td
-          %pre= @project.id
-      %tr
-        %td Title
-        %td= @project.title
-      %tr
-        %td Description
-        %td= safe(@project.description)
-      %tr
-        %td Creator
-        %td
-          %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
-      %tr
-        %td Updater
-        %td
-          %a{:href => url(:users, :view, :id => @project.updater.id)}= @project.updater.username
-      %tr
-        %td Collaborators
-        %td
-          %ul
-            %li
-              %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
-            - @project.collaborators.each do |c|
+  .large-6.columns
+    %table
+      %thead
+        %tr
+          %th Key
+          %th Value
+      %tbody
+        %tr
+          %td ID
+          %td
+            %pre= @project.id
+        %tr
+          %td Title
+          %td= @project.title
+        %tr
+          %td Description
+          %td= safe(@project.description)
+        %tr
+          %td Collaborators
+          %td
+            %ul
               %li
-                %a{:href => url(:users, :view, :id => c.id)}= c.username
-      %tr
-        %td Created At
-        %td= @project.created_at
-      %tr
-        %td Updated At
-        %td= @project.updated_at
-.row
-  %h4 Activity
-  %table
-    %thead
-      %tr
-        %th Actor
-        %th Recipient
-        %th Action
-        %th Timestamp
-    %tbody
-      - Activity.within(@project.id).all.each do |a|
+                %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
+              - @project.collaborators.each do |c|
+                %li
+                  %a{:href => url(:users, :view, :id => c.id)}= c.username
         %tr
-          %td= a.actor.username
+          %td Created At
+          %td= @project.created_at
+        %tr
+          %td Updated At
+          %td= @project.updated_at
+        %tr
+          %td Creator
           %td
-            - if a.recipient.is_a?(Note) or a.recipient.is_a?(Project)
-              = a.recipient.title
+            %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
+        %tr
+          %td Updater
+          %td
+            %a{:href => url(:users, :view, :id => @project.updater.id)}= @project.updater.username
+        %tr
+          %td Deleted?
+          %td
+            - if @project.deleted_at.nil?
+              No
             - else
-              = a.recipient.citation.html
-          %td= a.action
-          %td= a.created_at
+              = "Yes (at #{@project.deleted_at})"
+  .large-6.columns
+    %table
+      %thead
+        %tr
+          %th Actor
+          %th Recipient
+          %th Action
+          %th Timestamp
+      %tbody
+        - Activity.within(@project.id).all.each do |a|
+          %tr
+            %td= a.actor.username
+            %td
+              - if a.recipient.is_a?(Note) or a.recipient.is_a?(Project)
+                = a.recipient.title
+              - else
+                = a.recipient.citation.html
+            %td= a.action
+            %td= a.created_at
 .row
-  %h4 Notes
+  .large-6.columns
+    %h4 Notes
+    %table
+      %thead
+        %tr
+          %th ID
+          %th Title
+          %th Actions
+      %tbody
+        - @project.notes.order('updated_at dsc').each do |n|
+          %tr
+            %td
+              %pre= n.id
+            %td= n.title
+            %td
+              %a{:href => url(:notes, :view, :id => n.id)} View
+  .large-6.columns
+    %h4 Sources
+    %table
+      %thead
+        %tr
+          %th ID
+          %th Citation
+          %th Actions
+      %tbody
+        - @project.sources.order('updated_at dsc').each do |s|
+          %tr
+            %td
+              %pre= s.id
+            %td= safe(s.citation.html)
+            %td
+              %a{:href => url(:sources, :view, :id => s.id)} View
+.row
+  %h4 Comments
   %table
     %thead
       %tr
         %th ID
-        %th Title
-        %th Actions
+        %th User
+        %th Comment
     %tbody
-      - @project.notes.order('updated_at dsc').each do |n|
+      - @project.comments.each do |c|
         %tr
           %td
-            %pre= n.id
-          %td= n.title
-          %td
-            %a{:href => url(:notes, :view, :id => n.id)} View
-.row
-  %h4 Sources
-  %table
-    %thead
-      %tr
-        %th ID
-        %th Citation
-        %th Actions
-    %tbody
-      - @project.sources.order('updated_at dsc').each do |s|
-        %tr
-          %td
-            %pre= s.id
-          %td= safe(s.citation.html)
-          %td
-            %a{:href => url(:sources, :view, :id => s.id)} View
+            %pre= c.id
+          %td= c.user.username
+          %td= safe(c.body)

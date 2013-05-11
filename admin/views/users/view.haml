@@ -1,5 +1,12 @@
 .row
   %h3 Users
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li
+      %a{:href => url(:users, :index)} Users
+    %li.current
+      %a{:href => url(:users, :view, :id => @user.id)}= @user.name
   %h2= @user.name
 .row
   .small-3.columns

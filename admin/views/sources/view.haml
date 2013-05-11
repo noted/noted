@@ -6,17 +6,14 @@
     %li
       %a{:href => url(:users, :index)} Users
     %li
-      %a{:href => url(:users, :view, :id => @note.project.user.id)}= @note.project.user.name
+      %a{:href => url(:users, :view, :id => @source.project.user.id)}= @source.project.user.name
     %li
-      %a{:href => url(:projects, :view, :id => @note.project.id)}= @note.project.title
+      %a{:href => url(:projects, :view, :id => @source.project.id)}= @source.project.title
     %li.unavailable
-      Notes
+      Sources
     %li.current
-      %a{:href => url(:notes, :view, :id => @note.id)}= @note.title
-  %h2= @note.title
-.row
-  - if @note.body
-    = safe(@note.body)
+      %a{:href => url(:sources, :view, :id => @source.id)}= @source.citation.raw[:type]
+  %h2= @source.citation.raw[:type].capitalize
 .row
   %table
     %thead
@@ -25,36 +22,35 @@
         %th Value
     %tbody
       %tr
-        %td Title
-        %td= @note.title
-      %tr
-        %td Body
+        %td ID
         %td
-          - if @note.body
-            = safe(@note.body)
+          %pre= @source.id
+      %tr
+        %td Citation
+        %td= safe(@source.citation.html)
       %tr
         %td Created At
-        %td= @note.created_at
+        %td= @source.created_at
       %tr
         %td Updated At
-        %td= @note.updated_at
+        %td= @source.updated_at
       %tr
         %td Creator
         %td
-          - if @note.creator
-            = @note.creator.username
+          - if @source.creator
+            = @source.creator.username
       %tr
         %td Updater
         %td
-          - if @note.updater
-            = @note.updater.username
+          - if @source.updater
+            = @source.updater.username
       %tr
         %td Deleted?
         %td
-          - if @note.deleted_at.nil?
+          - if @source.deleted_at.nil?
             No
           - else
-            = "Yes (at #{@note.deleted_at})"
+            = "Yes (at #{@source.deleted_at})"
 .row
   %h4 Activity
   %table
@@ -65,7 +61,7 @@
         %th Action
         %th Timestamp
     %tbody
-      - Activity.for(@note.id).all.each do |a|
+      - Activity.for(@source.id).all.each do |a|
         %tr
           %td= a.actor.username
           %td
@@ -84,7 +80,7 @@
         %th User
         %th Comment
     %tbody
-      - @note.comments.each do |c|
+      - @source.comments.each do |c|
         %tr
           %td
             %pre= c.id
