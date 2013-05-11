@@ -8,7 +8,7 @@ describe Project do
   let(:collaborator) do
     u = create(:user)
 
-    project.collaborator_ids << u.id
+    project.collaborator_ids << u.id.to_s
     project.save
 
     u

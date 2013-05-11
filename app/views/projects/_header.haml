@@ -3,12 +3,7 @@
     %hgroup
       %h2
         %a{:href => project.url}= project.title
-      %p
-        %em by
-        %a{:href => url(:users, :view, :user => project.creator.username)}= project.creator.name
-        - project.collaborators.each do |c|
-          ,
-          %a{:href => url(:users, :view, :user => c.username)}= c.name
+      %p= safe("<em>by</em> #{project.authors}")
     %aside
       - if current_user && project.updatable_by?(current_user)
         %p
