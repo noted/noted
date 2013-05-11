@@ -98,7 +98,7 @@ class Activity
     Analytics.track(
       :user_id => self.actor.id.to_s,
       :event => event,
-      :properties => self.recipient.to_hash
+      :properties => self.recipient.serializable_hash
     )
   end
 end
