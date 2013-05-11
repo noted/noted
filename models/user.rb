@@ -5,7 +5,6 @@ class User
   include MongoMapper::Document
   include BCrypt
 
-
   key :name, String
   key :username, String
   key :email, String

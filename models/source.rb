@@ -37,7 +37,7 @@ class Source
   end
 
   def creatable_by?(u)
-    u == self.project.user || self.project.collaborator_ids.include?(u.id) || u.staff?
+    self.project.updatable_by?(u)
   end
 
   def updatable_by?(u)

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Project::Update do
-  let(:project) { create(:project) }
-  let(:user)    { project.user }
+  let(:project)  { create(:project) }
+  let(:user)     { project.user }
 
   let(:action) do
     Project::Update.run({

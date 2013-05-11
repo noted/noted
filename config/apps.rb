@@ -7,3 +7,4 @@ Padrino.configure_apps do
 end
 
 Padrino.mount('Noted::Web').to('/')
+Padrino.mount('Noted::API', :app_file => Padrino.root('api/app.rb')).to('/api')

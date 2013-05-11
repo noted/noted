@@ -52,6 +52,16 @@ class Project
     )
   end
 
+  def authors
+    result = "<a href='/#{self.creator.username}'>#{self.creator.name}</a>"
+
+    self.collaborators.each do |c|
+      result << ", <a href='#{c.username}'>#{c.name}</a>"
+    end
+
+    result
+  end
+
   def collaborators
     arr = []
 
@@ -67,7 +77,7 @@ class Project
   end
 
   def updatable_by?(u)
-    u == self.user || u.staff?
+    u == self.user || self.collaborators.include?(u) || u.staff?
   end
 
   def destroyable_by?(u)

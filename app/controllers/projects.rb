@@ -88,4 +88,41 @@ Noted::Web.controllers :projects do
       redirect Project.find(params[:project][:id]).url
     end
   end
+
+  post :collaborators_add do
+    u = User.where(:username => params[:collaborator][:username]).first
+    p = Project::AddCollaborator.run({
+      :project => {
+        :id => params[:project][:id]
+      },
+      :collaborator => {
+        :id => u.id.to_s
+      }
+    })
+
+    if p.success?
+      redirect "#{p.result.url}/settings"
+    else
+      flash[:error] = 'Something went wrong.'
+      redirect "#{p.result.url}/settings"
+    end
+  end
+
+  patch :collaborators_remove do
+    p = Project::RemoveCollaborator.run({
+      :project => {
+        :id => params[:project][:id]
+      },
+      :collaborator => {
+        :id => params[:collaborator][:id]
+      }
+    })
+
+    if p.success?
+      redirect "#{p.result.url}/settings"
+    else
+      flash[:error] = 'Something went wrong.'
+      redirect "#{p.result.url}/settings"
+    end
+  end
 end

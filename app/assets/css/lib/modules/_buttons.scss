@@ -111,6 +111,16 @@ a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choic
 		}
 	}
 
+	&.no-style {
+		background: transparent;
+		color: $red;
+		font-size: 1em;
+		padding: 0;
+		text-shadow: none;
+		text-transform: none;
+		font-weight: normal;
+	}
+
 	i {
 		position: relative;
 		top: 1px;
