@@ -62,17 +62,6 @@ class Project
     arr
   end
 
-  def collaborators=(csv)
-    arr = []
-
-    ids = csv.split(',')
-    ids.each do |id|
-      arr << id
-    end
-
-    self.collaborator_ids = arr
-  end
-
   def url
     "/#{self.user.username}/#{self.permalink}"
   end

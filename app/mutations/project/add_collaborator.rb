@@ -15,8 +15,10 @@ class Project
 
       u = User.find(collaborator[:id])
 
-      p.collaborator_ids << u.id.to_s
-      p.updater = u
+      unless p.collaborator_ids.include?(u.id.to_s) || p.user == u
+        p.collaborator_ids << u.id.to_s
+        p.updater = u
+      end
 
       p.save
 

@@ -27,15 +27,6 @@ describe Project do
     it { project.collaborators.should include(outsider) }
   end
 
-  describe '#collaborators=' do
-    before do
-      project.collaborators = "#{outsider.id},#{staff.id}"
-    end
-
-    it { project.collaborators.should include outsider }
-    it { project.collaborators.should include staff }
-  end
-
   describe '#url' do
     it { project.url.should eql("/#{project.user.username}/#{project.permalink}") }
   end

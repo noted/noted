@@ -26,27 +26,23 @@
           %td
             %button.green{:type => "submit"} Save
 
-    %table
-      %tr
-        %td
-          %label{:for => "collaborators"} Collaborators
-        %td
-          - @project.collaborators.each do |c|
-            - form_tag url(:projects, :collaborators, :remove), :method => "patch" do
-              %li
-                = c.username
-                = hidden_field_tag :"project[id]", :value => @project.id
-                = hidden_field_tag :"collaborator[id]", :value => c.id
-                %button{:type => "submit"}
-                  %i.ss-icon
-                    trash
-          %p
-            - form_tag url(:projects, :collaborators, :add), :method => "post" do
-              = hidden_field_tag :"project[id]", :value => @project.id
-              = text_field_tag :"username"
-              %button{:type => "submit"}
-                %i.ss-icon
-                  plus
+    %h4 Collaborators
+    - @project.collaborators.each do |c|
+      - form_tag url(:projects, :collaborators, :remove), :method => "patch" do
+        %li
+          = c.username
+          = hidden_field_tag :"project[id]", :value => @project.id
+          = hidden_field_tag :"collaborator[id]", :value => c.id
+          %button{:type => "submit"}
+            %i.ss-icon
+              trash
+    %p
+      - form_tag url(:projects, :collaborators, :add), :method => "post" do
+        = hidden_field_tag :"project[id]", :value => @project.id
+        = text_field_tag :"collaborator[username]", :class => "suggest"
+        %button{:type => "submit"}
+          %i.ss-icon
+            plus
 
     - form_tag url(:projects, :destroy), :class => "border", :method => "delete" do
       = hidden_field_tag :"project[id]", :value => @project.id

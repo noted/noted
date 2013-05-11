@@ -8,8 +8,6 @@
 //= require lib/vendor/jquery.chosen
 //= require lib/vendor/jquery.tipsy
 //= require lib/vendor/jquery.autocomplete
-//= require lib/vendor/jquery.autosuggest
-//= require lib/vendor/jquery-ui.autocomplete
 //= require lib/vendor/ligature
 //= require lib/vendor/ss-standard
 //= require lib/vendor/ss-social
@@ -36,44 +34,8 @@ $(document).ready ->
 
   $(".redactor").redactor()
 
-  #$("input.autosuggest").autocomplete({ serviceUrl: '/api/users/search' });
-  #$("input.autosuggest").autoSuggest("/api/users/search2")
+  $(".suggest").autocomplete
+    serviceUrl: "/api/users/search.json"
+    minChars: 3
 
-  split = (val) ->
-    val.split /,\s*/
-  extractLast = (term) ->
-    split(term).pop()
-
-  # don't navigate away from the field on tab when selecting an item
-  $("input.autosuggest").bind("keydown", (event) ->
-    event.preventDefault()  if event.keyCode is $.ui.keyCode.TAB and $(this).data("ui-autocomplete").menu.active
-  ).autocomplete
-    source: (request, response) ->
-      $.getJSON "/api/users/search3.json",
-        term: extractLast(request.term)
-      , response
-
-    search: ->
-
-      # custom minLength
-      term = extractLast(@value)
-      false  if term.length < 2
-
-    focus: ->
-
-      # prevent value inserted on focus
-      #false
-
-    select: (event, ui) ->
-      terms = split(@value)
-
-      # remove the current input
-      terms.pop()
-
-      # add the selected item
-      terms.push ui.item.value
-
-      # add placeholder to get the comma-and-space at the end
-      terms.push ""
-      @value = terms.join(", ")
-      false
+  #$("input.suggest").autoSuggest("/api/users/search2")
