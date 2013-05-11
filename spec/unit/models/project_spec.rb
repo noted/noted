@@ -37,14 +37,14 @@ describe Project do
 
   describe '#updatable_by?' do
     it { project.updatable_by?(user).should be_true }
-    it { project.updatable_by?(collaborator).should be_false }
+    it { project.updatable_by?(collaborator).should be_true }
     it { project.updatable_by?(outsider).should be_false }
     it { project.updatable_by?(staff).should be_true }
   end
 
   describe '#destroyable_by?' do
     it { project.destroyable_by?(user).should be_true }
-    it { project.destroyable_by?(collaborator).should be_false }
+    it { project.destroyable_by?(collaborator).should be_true }
     it { project.destroyable_by?(outsider).should be_false }
     it { project.destroyable_by?(staff).should be_true }
   end

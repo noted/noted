@@ -77,7 +77,7 @@ class Project
   end
 
   def updatable_by?(u)
-    u == self.user || u.staff?
+    u == self.user || self.collaborators.include?(u) || u.staff?
   end
 
   def destroyable_by?(u)
