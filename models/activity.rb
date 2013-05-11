@@ -87,18 +87,12 @@ class Activity
   end
 
   def segment!
-    event = "#{self.action.capitalize} "
-
-    if self.recipient.is_a?(Project) || self.recipient.is_a?(Note)
-      event << self.recipient.title
-    else
-      event << "a #{self.recipient.citation.raw['type'].capitalize}"
+    if action == 'create'
+      Analytics.track(
+        :user_id => self.actor.id.to_s,
+        :event => "Created a #{recipient_class}",
+        :properties => self.recipient.serializable_hash
+      )
     end
-
-    Analytics.track(
-      :user_id => self.actor.id.to_s,
-      :event => event,
-      :properties => self.recipient.serializable_hash
-    )
   end
 end
