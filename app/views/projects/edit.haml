@@ -35,9 +35,10 @@
               %img{:src => c.gravatar}
               %span
                 = c.username
-                = hidden_field_tag :"project[id]", :value => @project.id
-                = hidden_field_tag :"collaborator[id]", :value => c.id
-                %button.no-style{:type => "submit"} Remove
+                - unless current_user == c
+                  = hidden_field_tag :"project[id]", :value => @project.id
+                  = hidden_field_tag :"collaborator[id]", :value => c.id
+                  %button.no-style{:type => "submit"} Remove
       %p
         - form_tag url(:projects, :collaborators, :add), :method => "post" do
           = hidden_field_tag :"project[id]", :value => @project.id
