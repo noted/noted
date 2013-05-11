@@ -18,12 +18,6 @@ module Noted
 
     enable :sessions
 
-    segment = YAML.load_file(Padrino.root('.segment.yml'))
-
-    Analytics.init(
-      :secret => segment['secret']
-    )
-
     set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
 
     configure :development do

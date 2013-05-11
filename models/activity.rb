@@ -18,7 +18,6 @@ class Activity
   validates_presence_of :actor_id, :recipient_class, :recipient_id, :action
 
   before_create :permalink!
-  after_create :segment!
 
   scope :by,  -> (a){ where(:actor_id => a) }
   scope :for, -> (r){ where(:recipient_id => r) }
@@ -84,15 +83,5 @@ class Activity
 
   def permalink!
     self.permalink = Base32::Crockford.encode(Von.increment('activities'))
-  end
-
-  def segment!
-    if action == 'create'
-      Analytics.track(
-        :user_id => self.actor.id.to_s,
-        :event => "Created a #{recipient_class}",
-        :properties => self.recipient.serializable_hash
-      )
-    end
   end
 end
