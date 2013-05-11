@@ -1,0 +1,95 @@
+.row
+  %h3 Projects
+  %h2= @project.title
+.row
+  %table
+    %thead
+      %tr
+        %th Key
+        %th Value
+    %tbody
+      %tr
+        %td ID
+        %td
+          %pre= @project.id
+      %tr
+        %td Title
+        %td= @project.title
+      %tr
+        %td Description
+        %td= safe(@project.description)
+      %tr
+        %td Creator
+        %td
+          %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
+      %tr
+        %td Updater
+        %td
+          %a{:href => url(:users, :view, :id => @project.updater.id)}= @project.updater.username
+      %tr
+        %td Collaborators
+        %td
+          %ul
+            %li
+              %a{:href => url(:users, :view, :id => @project.creator.id)}= @project.creator.username
+            - @project.collaborators.each do |c|
+              %li
+                %a{:href => url(:users, :view, :id => c.id)}= c.username
+      %tr
+        %td Created At
+        %td= @project.created_at
+      %tr
+        %td Updated At
+        %td= @project.updated_at
+.row
+  %h4 Activity
+  %table
+    %thead
+      %tr
+        %th Actor
+        %th Recipient
+        %th Action
+        %th Timestamp
+    %tbody
+      - Activity.within(@project.id).all.each do |a|
+        %tr
+          %td= a.actor.username
+          %td
+            - if a.recipient.is_a?(Note) or a.recipient.is_a?(Project)
+              = a.recipient.title
+            - else
+              = a.recipient.citation.html
+          %td= a.action
+          %td= a.created_at
+.row
+  %h4 Notes
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Title
+        %th Actions
+    %tbody
+      - @project.notes.order('updated_at dsc').each do |n|
+        %tr
+          %td
+            %pre= n.id
+          %td= n.title
+          %td
+            %a{:href => url(:notes, :view, :id => n.id)} View
+.row
+  %h4 Sources
+  %table
+    %thead
+      %tr
+        %th ID
+        %th Citation
+        %th Actions
+    %tbody
+      - @project.sources.order('updated_at dsc').each do |s|
+        %tr
+          %td
+            %pre= s.id
+          %td= safe(s.citation.html)
+          %td
+            %a{:href => url(:sources, :view, :id => s.id)} View
