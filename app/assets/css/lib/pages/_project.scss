@@ -422,4 +422,36 @@
 			}
 		}
 	}
+
+	.collaborators {
+		margin-top: 2em;
+
+		h4 {
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			li {
+				img {
+					@include border-radius(50%);
+
+					margin-right: 0.25rem;
+					width: 3%;
+				}
+
+				span {
+					position: relative;
+					bottom: 0.5em;
+
+					button {
+						font-size: 0.75em;
+					}
+				}
+			}
+		}
+
+		form {
+			margin-top: 1em;
+		}
+	}
 }

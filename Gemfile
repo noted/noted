@@ -24,6 +24,8 @@ gem 'von', '~> 0.2.0'
 gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'base32-crockford', '~> 0.1.0', require: 'base32/crockford'
 
+gem 'oj', '~> 2.0.12'
+
 gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations', '~> 0.5.12'
@@ -31,6 +33,7 @@ gem 'mutations', '~> 0.5.12'
 gem 'padrino-sprockets', git: 'https://github.com/eturk/padrino-sprockets.git', require: 'padrino/sprockets'
 
 gem 'haml', '~> 4.0.2'
+gem 'rabl', '~> 0.8.4'
 
 gem 'sprockets-sass', '~> 1.0.0'
 gem 'compass', '~> 0.12.2'
