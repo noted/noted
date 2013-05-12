@@ -312,6 +312,15 @@
 				}
 			}
 
+			 & > footer {
+				a.btn {
+					display: block;
+					margin: 0.5em auto;
+					text-align: center;
+					width: 90%;
+				}
+			}
+
 			article {
 				@include border-radius(2px);
 
