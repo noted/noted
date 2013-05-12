@@ -1,0 +1,12 @@
+#project
+  = partial 'projects/header', :locals => { :project => @project, :user => @user }
+  %section#source
+    %header
+      %h3 Bibliography
+    %section
+      %ul.bibliography
+        - @sources.each do |s|
+          %li
+            = safe(s.citation.html)
+            %a{:href => s.url}
+              %i.ss-icon view

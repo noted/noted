@@ -94,23 +94,6 @@ section#note {
 			h4 {
 				margin-bottom: 0.5em;
 			}
-
-			ul.bibliography {
-				font-family: $serif;
-
-				li {
-					margin-left: 2em;
-					text-indent: -2em;
-
-					a {
-						color: $grey;
-
-						&:hover {
-							color: $red;
-						}
-					}
-				}
-			}
 		}
 	}
 }

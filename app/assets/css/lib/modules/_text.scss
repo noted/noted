@@ -1,26 +1,26 @@
 /*
-    Noted.
-        file: css/lib/modules/_text.scss
+		Noted.
+				file: css/lib/modules/_text.scss
 */
 
 .text, .redactor_box {
-    font: 16px/1.75em $serif;
+		font: 16px/1.75em $serif;
 
-    h1, h2, h3, h4, h5, h6 {
-    	margin: 1.5em 0;
-    }
+		h1, h2, h3, h4, h5, h6 {
+			margin: 1.5em 0;
+		}
 
-    h1 {
-    	font-size: 1.65em;
-      text-shadow: none;
-    }
+		h1 {
+			font-size: 1.65em;
+			text-shadow: none;
+		}
 
-    h2 {
-    	font-size: 1.5em;
-    }
+		h2 {
+			font-size: 1.5em;
+		}
 
-    p {
-    	margin-bottom: 1.5em;
+		p {
+			margin-bottom: 1.5em;
 	}
 
 	pre {
@@ -47,6 +47,23 @@
 	ul {
 		li {
 			list-style-type: disc;
+		}
+	}
+}
+
+ul.bibliography {
+	font-family: $serif;
+
+	li {
+		margin-left: 2em;
+		text-indent: -2em;
+
+		a {
+			color: $grey;
+
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 }
