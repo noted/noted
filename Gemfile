@@ -38,7 +38,7 @@ gem 'rabl', '~> 0.8.4'
 gem 'sprockets-sass', '~> 1.0.0'
 gem 'compass', '~> 0.12.2'
 gem 'susy', '~> 1.0.8'
-gem 'zurb-foundation'
+gem 'zurb-foundation', '~> 4.1.6'
 
 gem 'coffee-script', '~> 2.2.0'
 
@@ -64,6 +64,7 @@ end
 group :production do
   gem 'therubyracer', '~> 0.11.4'
   gem 'cijoe', :git => 'https://github.com/nvloff/cijoe.git'
+  gem 'sentry-raven', '~> 0.4.6'
 end
 
 group :test do

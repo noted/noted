@@ -167,6 +167,11 @@ GEM
     rubocop (0.5.0)
       term-ansicolor
     sass (3.2.8)
+    sentry-raven (0.4.6)
+      faraday (>= 0.7.6)
+      hashie
+      multi_json (~> 1.0)
+      uuidtools
     shoulda-matchers (2.0.0)
       activesupport (>= 3.0.0)
     simple_oauth (0.1.9)
@@ -212,6 +217,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     url_mount (0.2.1)
       rack
+    uuidtools (2.1.4)
     von (0.2.0)
       activesupport (~> 3.2.11)
       redis (~> 3.0.2)
@@ -262,6 +268,7 @@ DEPENDENCIES
   rspec (~> 2.13.0)
   rubocop (~> 0.5.0)
   scholar!
+  sentry-raven (~> 0.4.6)
   shoulda-matchers (~> 2.0.0)
   spork (~> 1.0.0rc3)
   sprockets-sass (~> 1.0.0)
@@ -271,4 +278,4 @@ DEPENDENCIES
   uglifier (~> 2.0.1)
   von (~> 0.2.0)
   yui-compressor (~> 0.9.6)
-  zurb-foundation
+  zurb-foundation (~> 4.1.6)

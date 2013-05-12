@@ -11,12 +11,17 @@ require 'bundler/setup'
 
 Bundler.require(:default, PADRINO_ENV)
 
+require 'yaml'
+
 if defined?(LogBuddy)
   LogBuddy.init({
     :logger => logger,
     :disabled => PADRINO_ENV == :production
   })
 end
+
+CONFIG = YAML.load_file(Padrino.root('.config.yml'))
+CONFIG ||= nil
 
 I18n.default_locale = :en
 
