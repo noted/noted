@@ -1,0 +1,36 @@
+$("form.note.ajax button").on "click", (e) ->
+  e.preventDefault()
+
+  $("span.status").html("Saving...")
+
+  save()
+
+save = ->
+  $("span.status").html("Saving...")
+
+  console.log "save() called"
+
+  data = {
+    author: $("form.note .author").val()
+    note: {
+      id: $("form.note .id").val()
+      title: $("form.note .title").val()
+      body: $("form.note .body").val()
+      tags: $("form.note input[name='note[tags]']").val()
+      source_ids: $("form.note .sources").val()
+    }
+  }
+
+  $.ajax
+    type: 'PATCH'
+    data: data
+    url: '/api/notes/update.json'
+    error: (err) ->
+      console.log err
+    success: (res) ->
+      $("span.status").html("Saved!")
+
+      setTimeout (->
+        $("span.status").fadeOut()
+        $("span.status").val ""
+      ), 10000

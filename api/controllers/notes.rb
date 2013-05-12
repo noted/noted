@@ -19,13 +19,13 @@ Noted::API.controllers :notes, :provides => :json do
         }
       }.to_json
     else
+      d { n.errors }
+
       halt 400
 
       {
         :status => 400,
-        :errors => [
-          "Something went wrong"
-        ]
+        :errors => n.errors
       }.to_json
     end
   end
