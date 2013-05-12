@@ -96,6 +96,17 @@ section#note {
 			}
 		}
 	}
+
+	#edit {
+		span.status {
+			font-size: 0.85em;
+			margin-right: 0.25em;
+
+			&.error {
+				color: $red;
+			}
+		}
+	}
 }
 
 

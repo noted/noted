@@ -59,10 +59,6 @@ Noted::Web.controllers :notes do
   end
 
   patch :update do
-    if params[:note][:source_ids].nil? # Fix me.
-      params[:note][:source_ids] = []
-    end
-
     n = Note::Update.run({
       :author => params[:author],
       :note => params[:note]
