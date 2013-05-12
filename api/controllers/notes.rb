@@ -19,8 +19,6 @@ Noted::API.controllers :notes, :provides => :json do
         }
       }.to_json
     else
-      d { n.errors }
-
       halt 400
 
       {
