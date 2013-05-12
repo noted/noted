@@ -15,13 +15,14 @@
 //= require lib/noted.contributors
 //= require lib/noted.tags
 //= require lib/analytics
+//= require lib/ajax
 
 $(document).ready ->
   ligature(false, $(".text"));
 
   $("#user aside h2").fitText 1.1
 
-  $("select.chosen").chosen();
+  $("select.chosen").chosen()
 
   $(".description h4 a.expand").on "click", ->
     if $(".description .text").hasClass("hidden")
