@@ -50,6 +50,14 @@ describe 'Sources' do
     it { 'response.should be_ok' }
   end
 
+  describe 'GET /:user/:project/sources/bibliography' do
+    before do
+      get "/#{user.username}/#{project.permalink}/sources/bibliography"
+    end
+
+    it { response.should be_ok }
+  end
+
   describe 'PATCH /sources/update' do
     before do
       #patch '/sources/update', :id => source.id, :author => user.id, :source => { :data => { :title => 'H2G2' } }
