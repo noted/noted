@@ -5,10 +5,12 @@ $("form.note.ajax button").on "click", (e) ->
 
   save()
 
+setInterval (->
+  save()
+), 30000
+
 save = ->
   $("span.status").html("Saving...")
-
-  console.log "save() called"
 
   data = {
     author: $("form.note .author").val()
@@ -27,8 +29,11 @@ save = ->
     url: '/api/notes/update.json'
     error: (err) ->
       console.log err
+
+      $("span.status").addClass "error"
+      $("span.status").html "Failed to save!"
     success: (res) ->
-      $("span.status").html("Saved!")
+      $("span.status").html "Saved!"
 
       setTimeout (->
         $("span.status").fadeOut()
