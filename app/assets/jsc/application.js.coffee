@@ -2,7 +2,6 @@
 //= require lib/vendor/underscore
 //= require lib/vendor/jquery.ui
 //= require lib/vendor/jquery.fittext
-//= require lib/vendor/jquery.autoresize
 //= require lib/vendor/jquery.autogrow
 //= require lib/vendor/jquery.tags
 //= require lib/vendor/jquery.chosen
@@ -34,7 +33,9 @@ $(document).ready ->
 
   $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS
 
-  $(".redactor").redactor()
+  $(".redactor").redactor
+    autoresize: false
+    minHeight: 200
 
   $(".suggest").autocomplete
     serviceUrl: "/api/users/search.json"
