@@ -1,5 +1,9 @@
 Noted::API.controllers :notes, :provides => :json do
   patch :update do
+    if params[:note][:source_ids] == 'null'
+      params[:note][:source_ids] = [] # Fix me!
+    end
+
     n = Note::Update.run({
       :author => params[:author],
       :note => params[:note]
