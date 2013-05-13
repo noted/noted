@@ -11,10 +11,10 @@ describe 'Sources' do
 
   describe 'GET /:user/:project/sources/new' do
     before do
-      get "#{user.username}/#{project.permalink}/sources/new"
+      get "#{user.username}/#{project.permalink}/sources/new", {}, 'rack.session' => { :noted => user.id.to_s }
     end
 
-    it 'response.should be_ok (needs session)'
+    it { response.should be_ok }
   end
 
   describe 'POST /sources/create' do

@@ -10,10 +10,10 @@ describe 'Projects' do
 
   describe 'GET /projects/new' do
     before do
-      #get '/projects/new'
+      get '/new', {}, 'rack.session' => { :noted => user.id.to_s }
     end
 
-    it 'response should be ok (needs sessions)'
+    it { response.should be_ok }
   end
 
   describe 'POST /projects/create' do
@@ -39,10 +39,10 @@ describe 'Projects' do
 
   describe 'GET /:username/:project/settings' do
     before do
-      #get '/#{user.username}/#{project.permalink}/settings'
+      get "/#{user.username}/#{project.permalink}/settings", {}, 'rack.session' => { :noted => user.id.to_s }
     end
 
-    it 'response should be ok (needs session)'
+    it { response.should be_ok }
   end
 
   describe 'PATCH /projects/update' do
