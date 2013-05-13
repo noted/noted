@@ -36,6 +36,7 @@ $(document).ready ->
   $(".redactor").redactor
     autoresize: false
     minHeight: 200
+    source: true
 
   $(".suggest").autocomplete
     serviceUrl: "/api/users/search.json"
