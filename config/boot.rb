@@ -20,8 +20,11 @@ if defined?(LogBuddy)
   })
 end
 
-CONFIG = YAML.load_file(Padrino.root('.config.yml'))
-CONFIG ||= nil
+if File.exists?(Padrino.root('.config.yml'))
+  CONFIG = YAML.load_file(Padrino.root('.config.yml'))
+else
+  CONFIG = nil
+end
 
 I18n.default_locale = :en
 
