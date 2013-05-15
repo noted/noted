@@ -27,6 +27,7 @@ Noted::Web.controllers :sources do
 
       redirect Project.find(params[:project]).url
     else
+      flash[:error] = 'Something has gone awry.'
       redirect Project.find(params[:project]).url
     end
   end
@@ -68,7 +69,7 @@ Noted::Web.controllers :sources do
 
       redirect project.url
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = 'Something has gone awry.'
       redirect project.url
     end
   end

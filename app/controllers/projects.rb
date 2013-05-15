@@ -18,7 +18,7 @@ Noted::Web.controllers :projects do
 
       redirect p.result.url
     else
-      flash[:error] = "Something has gone awry. #{p.errors.message_list}"
+      flash[:error] = 'Something has gone awry.'
       redirect url(:projects, :new)
     end
   end
@@ -55,6 +55,7 @@ Noted::Web.controllers :projects do
     if current_user && @project.updatable_by?(current_user)
       render 'projects/edit'
     else
+      flash[:error] = 'Something has gone awry.'
       redirect @project.url
     end
   end
@@ -70,7 +71,7 @@ Noted::Web.controllers :projects do
 
       redirect p.result.url
     else
-      flash[:error] = p.errors.message
+      flash[:error] = 'Something has gone awry.'
       redirect "#{Project.find(params[:project][:id]).url}/settings"
     end
   end
@@ -121,7 +122,7 @@ Noted::Web.controllers :projects do
     if p.success?
       redirect "#{p.result.url}/settings"
     else
-      flash[:error] = 'Something went wrong.'
+      flash[:error] = 'Something has gone awry.'
       redirect "#{p.result.url}/settings"
     end
   end

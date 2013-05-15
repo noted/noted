@@ -8,7 +8,7 @@ Noted::Web.controllers :comments do
     if comment.success?
       redirect params[:redirect]
     else
-      flash[:error] = comment.error.message_list
+      flash[:error] = 'Something has gone awry.'
       redirect params[:redirect]
     end
   end
@@ -21,7 +21,7 @@ Noted::Web.controllers :comments do
     if c.success?
       redirect params[:redirect]
     else
-      flash[:error] = comment.error.message_list
+      flash[:error] = 'Something has gone awry.'
       redirect params[:redirect]
     end
   end

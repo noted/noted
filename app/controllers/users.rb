@@ -13,7 +13,7 @@ Noted::Web.controllers :users do
       authorize(u.result)
       redirect url(:index)
     else
-      flash[:error] = "Something has gone awry. #{u.errors.message}"
+      flash[:error] = 'Something has gone awry.'
       redirect url(:users, :new)
     end
   end
@@ -34,10 +34,9 @@ Noted::Web.controllers :users do
     })
 
     if u.success?
-      flash[:notice] = 'Your profile has been updated.'
       redirect url(:users, :edit)
     else
-      flash[:error] = u.errors.message
+      flash[:error] = 'Something has gone awry.'
       redirect url(:users, :edit)
     end
   end
@@ -48,7 +47,6 @@ Noted::Web.controllers :users do
     })
 
     if u.success?
-      flash[:notice] = "We're sorry to see you go."
       redirect url(:index)
     else
       flash[:error] = 'Something has gone awry.'
