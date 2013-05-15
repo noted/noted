@@ -5,9 +5,10 @@ $("form.note.ajax button").on "click", (e) ->
 
   save()
 
-setInterval (->
-  save()
-), 30000
+if $("form.note.ajax").length
+  setInterval (->
+    save()
+  ), 30000
 
 save = ->
   $("span.status").html("Saving...")
