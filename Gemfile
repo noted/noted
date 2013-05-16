@@ -4,7 +4,7 @@ source 'https://rubygems.org'
   gem 'padrino-' + c, '0.11.1'
 end
 
-gem 'puma', '2.0.0.b7'
+gem 'puma', '2.0.1'
 
 gem 'rake', '~> 10.0.4'
 
@@ -58,7 +58,7 @@ end
 
 group :development do
   gem 'foreman', '~> 0.63.0'
-  gem 'pry', '~> 0.9.12.1'
+  gem 'pry', '~> 0.9.12.2'
 end
 
 group :production do
@@ -71,14 +71,14 @@ group :test do
   gem 'rack-test', '~> 0.6.2', require: 'rack/test'
 
   gem 'rspec', '~> 2.13.0'
-  gem 'shoulda-matchers', '~> 2.0.0'
+  gem 'shoulda-matchers', '~> 2.1.0'
 
   gem 'capybara', '~> 2.1.0', require: 'capybara/dsl'
 
   gem 'spork', '~> 1.0.0rc3'
   gem 'factory_girl', '~> 4.2.0'
-  gem 'database_cleaner', '~> 0.9.1'
+  gem 'database_cleaner', '~> 1.0.1'
 
-  gem 'rubocop', '~> 0.5.0'
+  gem 'rubocop', '~> 0.7.2'
   gem 'cane', '~> 2.5.2'
 end
