@@ -30,10 +30,12 @@ Noted::Web.controllers :users do
 
   patch :update do
     u = User::Update.run({
-      :user => params[:user]
+      :user => params[:user],
+      :password => params[:password]
     })
 
     if u.success?
+      flash[:notice] = 'Your account has been updated successfully.'
       redirect url(:users, :edit)
     else
       flash[:error] = 'Something has gone awry.'
@@ -47,6 +49,8 @@ Noted::Web.controllers :users do
     })
 
     if u.success?
+      deauthorize!
+
       redirect url(:index)
     else
       flash[:error] = 'Something has gone awry.'

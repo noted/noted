@@ -22,38 +22,83 @@
     %header
       %h3
         Account
-        %span / Settings
+        %span= "/ #{@user.name}"
     = partial "partials/flash", :locals => { :flash => flash }
-    - form_tag url(:users, :update), :method => "patch" do
-      = hidden_field_tag :"user[id]", :value => @user.id
-      %table
-        %tr
-          %td
-            %label{:for => "user[name]"} Name
-          %td
-            = text_field_tag :"user[name]", :placeholder => "Name", :value => @user.name
-        %tr
-          %td
-            %label{:for => "user[username]"} Username
-          %td
-            = text_field_tag :"user[username]", :disabled => true, :placeholder => "Username", :value => @user.username
-        %tr
-          %td
-            %label{:for => "user[email]"} Email
-          %td
-            = email_field_tag :"user[email]", :placeholder => "Email", :value => @user.email
-        %tr
-          %td
-            %label{:for => "user[location]"} Location
-          %td
-            = text_field_tag :"user[location]", :placeholder => "Location", :value => @user.location
-        %tr
-          %td
-            %label{:for => "user[website]"} Website
-          %td
-            = text_field_tag :"user[website]", :placeholder => "Website", :value => @user.website
-        %tr
-          %td
-          %td
-            %button.btn.green{:type => "submit"}
-              Save
+    .tabs
+      %header
+        %ul
+          %li
+            %a{:href => "#profile"}
+              %i.ss-icon user
+              %span Profile
+          %li
+            %a{:href => "#password"}
+              %i.ss-icon key
+              %span Password
+          %li
+            %a{:href => "#destroy"}
+              %i.ss-icon delete
+              %span Delete
+      #profile
+        - form_tag url(:users, :update), :method => "patch" do
+          = hidden_field_tag :"user[id]", :value => @user.id
+          %table
+            %tr
+              %td
+                %label{:for => "user[name]"} Name
+              %td
+                = text_field_tag :"user[name]", :placeholder => "Name", :value => @user.name
+            %tr
+              %td
+                %label{:for => "user[username]"} Username
+              %td
+                = text_field_tag :"user[username]", :disabled => true, :placeholder => "Username", :value => @user.username
+            %tr
+              %td
+                %label{:for => "user[email]"} Email
+              %td
+                = email_field_tag :"user[email]", :placeholder => "Email", :value => @user.email
+            %tr
+              %td
+                %label{:for => "user[location]"} Location
+              %td
+                = text_field_tag :"user[location]", :placeholder => "Location", :value => @user.location
+            %tr
+              %td
+                %label{:for => "user[website]"} Website
+              %td
+                = text_field_tag :"user[website]", :placeholder => "Website", :value => @user.website
+            %tr
+              %td
+              %td
+                %button.btn.turquoise{:type => "submit"}
+                  Save
+      #password
+        - form_tag url(:users, :update), :method => "patch" do
+          = hidden_field_tag :"user[id]", :value => @user.id
+          %table
+            %tr
+              %td
+                %label{:for => "user[password][password]"} Password
+              %td
+                = password_field_tag :"user[password][password]", :placeholder => "Password"
+            %tr
+              %td
+                %label{:for => "user[password][confirm]"} Confirm
+              %td
+                = password_field_tag :"user[password][confirm]", :placeholder => "Confirm"
+            %tr
+              %td
+              %td
+                %button.btn.turquoise{:type => "submit"}
+                  Save
+      #destroy
+        - form_tag url(:users, :destroy), :method => "delete" do
+          = hidden_field_tag :"user[id]", :value => @user.id
+          %table
+            %tr
+              %td
+                %label Delete
+              %td
+                %button.btn.red{:type => "submit"}
+                  Do it.
