@@ -4,6 +4,7 @@ module Noted
   class Web < Padrino::Application
     register Padrino::Cache
     register Padrino::Helpers
+    register Padrino::Mailer
     register Padrino::Rendering
     register Padrino::Sprockets
 
@@ -19,6 +20,15 @@ module Noted
     enable :sessions
 
     set :cache, Padrino::Cache::Store::Memcache.new(::Memcached.new('127.0.0.1:11211', :exception_retry_limit => 1))
+
+    configure :development, :production do
+      set :delivery_method, :smtp => {
+        :address => SMTP['address'],
+        :port => SMTP['port'],
+        :user_name => SMTP['username'],
+        :password => SMTP['password']
+      }
+    end
 
     configure :development do
       use BetterErrors::Middleware
@@ -36,6 +46,10 @@ module Noted
 
         use Raven::Rack
       end
+    end
+
+    configure :test do
+      set :delivery_method, :test
     end
 
     Dir[Padrino.root('app/mutations/**/*.rb')].each { |f| require f }
