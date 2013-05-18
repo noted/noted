@@ -11,4 +11,5 @@ vendor/ruby/*
 .DS_Store
 .puma.yml
 .s3.yml
+.smtp.yml
 *.sublime*

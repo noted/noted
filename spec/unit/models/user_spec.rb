@@ -80,6 +80,11 @@ describe User do
     it { Project.find(:title => 'Foobar').should be_nil }
   end
 
+  describe '#secrets' do
+    it { user.salt.should_not be_nil }
+    it { user.token.should_not be_nil }
+  end
+
   describe '#updatable_by?' do
     it { user.updatable_by?(user).should be_true }
     it { user.updatable_by?(staff).should be_true }

@@ -1,0 +1,11 @@
+- form_tag url(:password, :recover), :method => "post" do
+  = partial 'partials/flash', :locals => { :flash => flash }
+  = hidden_field_tag :"user[id]", :value => @user.id
+  %p Enter a new password.
+  %p= password_field_tag :"password[password]", :placeholder => "New Password"
+  %p= password_field_tag :"password[confirm]", :placeholder => "Confirm"
+  %nav
+    %ul
+      %li
+        %a.btn{:href => url(:index)} Cancel
+      %li= button_tag "Save", :class => "btn primary", :type => "submit"
