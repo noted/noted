@@ -1,15 +1,15 @@
 Noted::Web.controllers :password do
   get :reset do
-    render 'password/reset'
+    render 'password/reset', :layout => 'sessions'
   end
 
   post :reset do
     e = Password::Reset.run({
-      :user => params[:user]
+      :email => params[:email]
     })
 
     if e.success?
-      flash[:notice] = 'Check your email.'
+      flash[:notice] = 'Check your email for instructions.'
       redirect url(:index)
     else
       flash[:error] = 'Something has gone awry.'
@@ -20,7 +20,7 @@ Noted::Web.controllers :password do
   get :recover, :with => :token do
     @user = User.where(:token => params[:token]).first
 
-    render 'password/recover'
+    render 'password/recover', :layout => 'sessions'
   end
 
   post :recover do
