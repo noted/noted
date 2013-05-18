@@ -51,7 +51,5 @@ module Noted
     configure :test do
       set :delivery_method, :test
     end
-
-    Dir[Padrino.root('app/mutations/**/*.rb')].each { |f| require f }
   end
 end
