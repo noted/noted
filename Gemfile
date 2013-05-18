@@ -30,7 +30,9 @@ gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations', '~> 0.5.12'
 
-gem 'padrino-sprockets', git: 'https://github.com/eturk/padrino-sprockets.git', require: 'padrino/sprockets'
+gem 'padrino-sprockets', git: 'https://github.com/nightsailer/padrino-sprockets.git', require: 'padrino/sprockets'
+
+gem 'tilt', '1.3.7'
 
 gem 'haml', '~> 4.0.2'
 gem 'rabl', '~> 0.8.4'

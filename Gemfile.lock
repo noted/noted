@@ -1,20 +1,20 @@
 GIT
   remote: https://github.com/eturk/mm-paranoid.git
-  revision: 95bfc572b856069c2538f0e0a3e5592717ce8ad6
+  revision: 464f8de590c56be026172b6b4f27b41cfde09b74
   specs:
     mm-paranoid (0.2.0)
       mongo_mapper (>= 0.9.0)
 
 GIT
-  remote: https://github.com/eturk/padrino-sprockets.git
-  revision: 83f7307776657877e4b824bdeb7bc9f91fb40b2b
+  remote: https://github.com/nightsailer/padrino-sprockets.git
+  revision: 28c5dd117a63b330356955efd4f513b4413da3a6
   specs:
-    padrino-sprockets (0.0.2)
+    padrino-sprockets (0.0.3)
       sprockets
 
 GIT
   remote: https://github.com/noted/scholar.git
-  revision: f2d1dc3262335adecad186eb51f18afc17da0b9a
+  revision: b167ee9b64bab1ba0b195214734c5a713df3933e
   specs:
     scholar (0.1.1)
       activesupport (~> 3.2.11)
@@ -51,9 +51,9 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
-    bson (1.8.5)
-    bson_ext (1.8.5)
-      bson (~> 1.8.5)
+    bson (1.8.6)
+    bson_ext (1.8.6)
+      bson (~> 1.8.6)
     builder (3.0.4)
     canable (0.3.0)
     cane (2.5.2)
@@ -95,35 +95,37 @@ GEM
     fssm (0.2.10)
     haml (4.0.2)
       tilt
-    hashie (1.2.0)
+    hashie (2.0.5)
     hike (1.2.2)
     http_parser.rb (0.5.3)
     http_router (0.11.0)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
-    json (1.7.7)
     libv8 (3.11.8.17)
     log_buddy (0.7.0)
-    mail (2.5.3)
-      i18n (>= 0.4.0)
+    mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     memcached (1.5.0)
     method_source (0.8.1)
     mime-types (1.23)
-    mongo (1.8.5)
-      bson (~> 1.8.5)
+    mongo (1.8.6)
+      bson (~> 1.8.6)
     mongo_mapper (0.12.0)
       activemodel (~> 3.0)
       activesupport (~> 3.0)
       plucky (~> 0.5.2)
-    multi_json (1.7.2)
+    multi_json (1.7.3)
+    multi_xml (0.5.3)
     multipart-post (1.2.0)
     mutations (0.5.12)
       activesupport
     nokogiri (1.5.9)
-    oj (2.0.12)
+    oj (2.0.13)
     open4 (1.3.0)
     padrino-cache (0.11.1)
       padrino-core (= 0.11.1)
@@ -144,7 +146,7 @@ GEM
     padrino-mailer (0.11.1)
       mail (~> 2.5.3)
       padrino-core (= 0.11.1)
-    parallel (0.6.4)
+    parallel (0.6.5)
     plucky (0.5.2)
       mongo (~> 1.5)
     polyglot (0.3.3)
@@ -175,10 +177,10 @@ GEM
     rspec-mocks (2.13.1)
     rubocop (0.7.2)
       rainbow (>= 1.1.4)
-    sass (3.2.8)
-    sentry-raven (0.4.6)
+    sass (3.2.9)
+    sentry-raven (0.4.8)
       faraday (>= 0.7.6)
-      hashie
+      hashie (>= 1.1.0)
       multi_json (~> 1.0)
       uuidtools
     shoulda-matchers (2.1.0)
@@ -195,7 +197,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-sass (1.0.0)
+    sprockets-sass (1.0.1)
       sprockets (~> 2.0)
       tilt (~> 1.1)
     state_machine (1.2.0)
@@ -207,15 +209,12 @@ GEM
       ref
     thor (0.17.0)
     tilt (1.3.7)
-    tinder (1.9.2)
-      eventmachine (~> 1.0)
-      faraday (~> 0.8)
-      faraday_middleware (~> 0.9)
-      hashie (~> 1.0)
-      json (~> 1.7.5)
-      mime-types (~> 1.19)
-      multi_json (~> 1.5)
-      twitter-stream (~> 0.1)
+    tinder (1.4.1)
+      activesupport
+      eventmachine
+      httparty
+      mime-types
+      twitter-stream
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
@@ -287,6 +286,7 @@ DEPENDENCIES
   state_machine (~> 1.2.0)
   susy (~> 1.0.8)
   therubyracer (~> 0.11.4)
+  tilt (= 1.3.7)
   uglifier (~> 2.0.1)
   von (~> 0.2.0)
   yui-compressor (~> 0.9.6)
