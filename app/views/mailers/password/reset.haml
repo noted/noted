@@ -1,5 +1,5 @@
 %p= "Dear #{user.name},"
 %p We recently recieved a request to reset your password. Click the link below to continue to set a new password.
 %p
-  %a{:href => ""} Foo
+  %a{:href => "/password/reset?token=#{user.token}"} Foo
 %p If this wasn't you, just ignore this message.
