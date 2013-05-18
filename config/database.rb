@@ -11,4 +11,6 @@ Von.configure do |c|
   c.namespace = 'von'
 end
 
-SMTP = YAML.load_file(Padrino.root('.smtp.yml'))[PADRINO_ENV]
+unless PADRINO_ENV == 'test'
+  SMTP = YAML.load_file(Padrino.root('.smtp.yml'))[PADRINO_ENV]
+end
