@@ -1,0 +1,7 @@
+%p= "Dear #{user.name},"
+%p We recently recieved a request to reset your password. Click the link below to continue to set a new password.
+%p
+  %a{:href => "http://beta.getnotedapp.com#{Noted::Web.url(:password, :recover, :token => user.token)}"} Recover your password
+%p If this wasn't you, just ignore this message.
+%p Thanks,
+%p The team at Noted.

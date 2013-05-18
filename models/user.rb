@@ -1,4 +1,5 @@
 require 'bcrypt'
+require 'digest/sha1'
 require 'digest/md5'
 
 class User
@@ -9,6 +10,9 @@ class User
   key :username, String
   key :email, String
   key :hash, String
+
+  key :salt, String
+  key :token, String
 
   key :location, String
   key :website, String
@@ -54,6 +58,7 @@ class User
   validates_format_of :username, :with => /\A[a-zA-Z][a-zA-Z0-9_\- \.]+\Z/i
   validate :username_valid?
 
+  before_create :secrets!
   before_destroy :clean!
 
   def self.authenticate(e, p)
@@ -85,6 +90,13 @@ class User
 
   def destroyable_by?(u)
     updatable_by?(u)
+  end
+
+  def secrets!
+    secret = Digest::SHA1.hexdigest("--#{Time.now.utc}--")
+
+    self.salt = Digest::SHA1.hexdigest("--#{Time.now.utc}--#{secret}--")
+    self.token = Digest::SHA1.hexdigest("--#{self.salt}--#{Time.now.utc}--")
   end
 
   private

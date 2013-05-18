@@ -28,4 +28,9 @@ end
 
 I18n.default_locale = :en
 
+Padrino.after_load do
+  Padrino.require_dependencies("#{Padrino.root}/app/mailers/**/*.rb")
+  Padrino.require_dependencies("#{Padrino.root}/app/mutations/**/*.rb")
+end
+
 Padrino.load!
