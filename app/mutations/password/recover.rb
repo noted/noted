@@ -1,5 +1,5 @@
 class Password
-  class Create < Mutations::Command
+  class Recover < Mutations::Command
     required do
       hash :user do
         string :id

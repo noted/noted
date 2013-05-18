@@ -4,9 +4,7 @@ describe Password::Reset do
   let(:user) { create(:user) }
   let(:action) do
     Password::Reset.run({
-      :user => {
-        :id => user.id.to_s,
-      }
+      :email => user.email
     })
   end
 

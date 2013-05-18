@@ -1,13 +1,11 @@
 class Password
   class Reset < Mutations::Command
     required do
-      hash :user do
-        string :id
-      end
+      string :email
     end
 
     def execute
-      u = User.find(user[:id])
+      u = User.where(:email => email).first
 
       Noted::Web.deliver(:password, :reset, :user => u)
     end
