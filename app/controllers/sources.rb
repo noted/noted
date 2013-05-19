@@ -16,6 +16,8 @@ Noted::Web.controllers :sources do
     attributes = params[type]
     attributes.merge({:type => type.to_sym})
 
+    d { attributes }
+
     s = Source::Create.run({
       :project => params[:project],
       :author => params[:author],
