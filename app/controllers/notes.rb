@@ -17,7 +17,7 @@ Noted::Web.controllers :notes do
 
       redirect "#{n.result.url}/#edit"
     else
-      flash[:error] = n.errors.message_list
+      flash[:error] = 'Something has gone awry.'
       redirect Project.find(params[:project]).url
     end
   end
@@ -33,7 +33,7 @@ Noted::Web.controllers :notes do
 
       redirect n.result.url
     else
-      flash[:error] = n.errors.message_list
+      flash[:error] = 'Something has gone awry.'
       redirect Project.find(params[:project]).url
     end
   end
@@ -59,10 +59,6 @@ Noted::Web.controllers :notes do
   end
 
   patch :update do
-    if params[:note][:source_ids].nil? # Fix me.
-      params[:note][:source_ids] = []
-    end
-
     n = Note::Update.run({
       :author => params[:author],
       :note => params[:note]
@@ -73,7 +69,7 @@ Noted::Web.controllers :notes do
 
       redirect n.result.project.url
     else
-      flash[:error] = n.errors.message_list.to_s
+      flash[:error] = 'Something has gone awry.'
       redirect Note.find(params[:note][:id]).url
     end
   end
@@ -91,7 +87,7 @@ Noted::Web.controllers :notes do
 
       redirect project.url
     else
-      flash[:error] = n.errors.message_list
+      flash[:error] = 'Something has gone awry.'
       redirect project.url
     end
   end

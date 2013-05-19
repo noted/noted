@@ -27,19 +27,9 @@ Noted::Web.controllers :sources do
 
       redirect Project.find(params[:project]).url
     else
+      flash[:error] = 'Something has gone awry.'
       redirect Project.find(params[:project]).url
     end
-  end
-
-  get :view, :map => '/:user/:project/sources/:source' do
-    @source = Source.where(
-      :project_id => @project.id,
-      :permalink => params[:source],
-      :deleted_at => nil
-    ).first # Make scope!
-    @citation = @source.citation
-
-    render 'sources/view'
   end
 
   patch :update do
@@ -81,8 +71,28 @@ Noted::Web.controllers :sources do
 
       redirect project.url
     else
-      flash[:error] = "Something has gone awry."
+      flash[:error] = 'Something has gone awry.'
       redirect project.url
     end
+  end
+
+  get :bibliography, :map => '/:user/:project/sources/bibliography', :priority => :high do
+    @sources = Source.where(
+      :project_id => @project.id,
+      :deleted_at => nil
+    ).all
+
+    render 'sources/bibliography'
+  end
+
+  get :view, :map => '/:user/:project/sources/:source', :priority => :low do
+    @source = Source.where(
+      :project_id => @project.id,
+      :permalink => params[:source],
+      :deleted_at => nil
+    ).first # Make scope!
+    @citation = @source.citation
+
+    render 'sources/view'
   end
 end

@@ -17,8 +17,7 @@ describe 'Users' do
     end
 
     describe 'redirects' do
-      it 'response.should be_redirect (needs sessions)'
-      it 'response.location.should (needs session)'
+      it { response.should be_redirect }
     end
 
     describe 'database' do
@@ -28,10 +27,10 @@ describe 'Users' do
 
   describe 'GET /settings' do
     before do
-      #get '/settings'
+      get '/settings', {}, 'rack.session' => { :noted => user.id.to_s }
     end
 
-    it 'response should be ok (needs sessions)'
+    it { response.should be_ok }
   end
 
   describe 'PATCH /users/update' do

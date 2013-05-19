@@ -2,7 +2,6 @@
 //= require lib/vendor/underscore
 //= require lib/vendor/jquery.ui
 //= require lib/vendor/jquery.fittext
-//= require lib/vendor/jquery.autoresize
 //= require lib/vendor/jquery.autogrow
 //= require lib/vendor/jquery.tags
 //= require lib/vendor/jquery.chosen
@@ -14,13 +13,15 @@
 //= require lib/vendor/redactor
 //= require lib/noted.contributors
 //= require lib/noted.tags
+//= require lib/analytics
+//= require lib/ajax
 
 $(document).ready ->
   ligature(false, $(".text"));
 
   $("#user aside h2").fitText 1.1
 
-  $("select.chosen").chosen();
+  $("select.chosen").chosen()
 
   $(".description h4 a.expand").on "click", ->
     if $(".description .text").hasClass("hidden")
@@ -32,7 +33,10 @@ $(document).ready ->
 
   $(".tooltip").tipsy gravity: $.fn.tipsy.autoNS
 
-  $(".redactor").redactor()
+  $(".redactor").redactor
+    autoresize: false
+    minHeight: 200
+    source: true
 
   $(".suggest").autocomplete
     serviceUrl: "/api/users/search.json"

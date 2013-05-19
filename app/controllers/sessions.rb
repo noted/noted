@@ -12,7 +12,7 @@ Noted::Web.controllers :sessions do
       authorize(u)
       redirect url(:index)
     else
-      flash[:error] = "That isn't the right email or password."
+      flash[:error] = 'Something has gone awry.'
       redirect url(:sessions, :new)
     end
   end

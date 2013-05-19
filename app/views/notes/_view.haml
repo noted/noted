@@ -6,3 +6,14 @@
       %em.subtle Nothing to see here, move along!
     - else
       = safe(note.body)
+
+  %footer
+    - unless note.sources.blank?
+      %h4 Bibliography
+      %ul.bibliography
+        - note.sources.each do |s|
+          %li
+            = safe(s.citation.html)
+            %a{:href => s.url}
+              %i.ss-icon
+                view

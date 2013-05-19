@@ -11,6 +11,8 @@ require 'bundler/setup'
 
 Bundler.require(:default, PADRINO_ENV)
 
+require 'yaml'
+
 if defined?(LogBuddy)
   LogBuddy.init({
     :logger => logger,
@@ -18,6 +20,17 @@ if defined?(LogBuddy)
   })
 end
 
+if File.exists?(Padrino.root('.config.yml'))
+  CONFIG = YAML.load_file(Padrino.root('.config.yml'))
+else
+  CONFIG = nil
+end
+
 I18n.default_locale = :en
+
+Padrino.after_load do
+  Padrino.require_dependencies("#{Padrino.root}/app/mailers/**/*.rb")
+  Padrino.require_dependencies("#{Padrino.root}/app/mutations/**/*.rb")
+end
 
 Padrino.load!

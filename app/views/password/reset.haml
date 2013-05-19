@@ -1,0 +1,9 @@
+- form_tag url(:password, :reset), :method => "post" do
+  = partial 'partials/flash', :locals => { :flash => flash }
+  %p Enter the email address you used when you joined and we'll send you instructions to reset your password.
+  %p= email_field_tag :email, :placeholder => "Email"
+  %nav
+    %ul
+      %li
+        %a.btn{:href => url(:index)} Cancel
+      %li= button_tag "Send", :class => "btn primary", :type => "submit"

@@ -2,9 +2,7 @@ class User
   class Update < Mutations::Command
     required do
       hash :user do
-        required do
-          string :id
-        end
+        string :id
 
         optional do
           string :username
@@ -12,6 +10,11 @@ class User
           string :name
           string :location, empty: true
           string :website, empty: true
+
+          hash :password do
+            string :password, empty: true
+            string :confirm, empty: true
+          end
         end
       end
     end
@@ -20,6 +23,12 @@ class User
       u = User.find(user[:id])
 
       u.update_attributes(user)
+
+      if user[:password] && user[:password][:password] == user[:password][:confirm]
+        u.password = user[:password][:password]
+      end
+
+      u.save
 
       u
     end

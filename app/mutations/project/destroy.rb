@@ -1,6 +1,8 @@
 class Project
   class Destroy < Mutations::Command
     required do
+      string :author
+
       hash :project do
         string :id
       end

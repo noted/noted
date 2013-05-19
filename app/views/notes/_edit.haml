@@ -1,21 +1,22 @@
 #edit
-  - form_tag url(:notes, :update), :method => "patch", :class => "note" do
+  - form_tag url(:notes, :update), :method => "patch", :class => "note ajax" do
     .textbox
-      = hidden_field_tag :"note[id]", :value => @note.id
-      = hidden_field_tag :author, :value => current_user.id
+      = hidden_field_tag :"note[id]", :class => 'id', :value => @note.id
+      = hidden_field_tag :author, :class => 'author', :value => current_user.id
       %header
-        = text_field_tag :"note[title]", :value => @note.title, :placeholder => "Title"
+        = text_field_tag :"note[title]", :class => 'title', :value => @note.title, :placeholder => "Title"
       %section.borderless
-        = find_and_preserve text_area_tag :"note[body]", :class => "redactor text", :value => @note.body, :placeholder => "Begin writing your note here..."
+        = find_and_preserve text_area_tag :"note[body]", :class => "redactor text body", :value => @note.body, :placeholder => "Begin writing your note here..."
       %footer
         = hidden_field_tag :"existing-tags", :value => @note.tags_str
         = text_field_tag :"tags", :class => "tags", :placeholder => "Tags"
     %footer
       %p
-        %select.chosen{:"data-placeholder" => "Attach some sources", :multiple => true, :name => "note[source_ids][]"}
+        %select.chosen{:"data-placeholder" => "Attach some sources", :class => 'sources', :multiple => true, :name => "note[source_ids][]"}
           - @sources.each do |s|
             %option{:value => s[:id], :selected => s[:selected]}= safe(s[:text])
       %p
+        %span.status
         %button.primary{:type => "submit"}
           %i.ss-icon check
         %a.btn.orange{:href => @note.project.url}

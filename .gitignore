@@ -7,7 +7,9 @@ vendor/ruby/*
 .rbx/*
 .sass-cache/*
 
+.config.yml
 .DS_Store
 .puma.yml
 .s3.yml
+.smtp.yml
 *.sublime*
