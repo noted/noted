@@ -20,8 +20,8 @@ $(document).ready ->
                                   <input class='middle' placeholder='Q' maxlength='1' name='#{param}[middle]' type='text' />
                                   <input class='last' placeholder='Sample' name='#{param}[last]' type='text' />
                                   <input class='suffix' placeholder='Jr' name='#{param}[suffix]' type='text' />
+                                  <a class='remove' data-action='remove'><i class='ss-icon'>delete</i></a>
                                 </li>")
 
-  $("ul.contributors li a.remove").on "click", ->
-    console.log $(this).parent()
+  $("a.remove").live "click", ->
     $(this).parent().remove()
