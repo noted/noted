@@ -3,14 +3,14 @@
   %section#note
     = partial 'partials/flash', :locals => { :flash => flash }
     - if current_user && @note.updatable_by?(current_user)
-      .tabs
+      .tabs.note
         %header
           %ul
-            %li
+            %li.view
               %a{:href => "#view"}
                 %i.ss-icon view
                 %span View
-            %li
+            %li.edit
               %a{:href => "#edit"}
                 %i.ss-icon edit
                 %span Edit

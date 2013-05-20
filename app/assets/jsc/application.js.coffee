@@ -38,6 +38,9 @@ $(document).ready ->
     minHeight: 200
     source: true
 
+  $(".tabs.note ul li.view a").on "click", ->
+    $("#view .text").html $(".redactor").getCode()
+
   $(".suggest").autocomplete
     serviceUrl: "/api/users/search.json"
     minChars: 3
