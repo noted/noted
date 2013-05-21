@@ -65,7 +65,7 @@ end
 
 group :production do
   gem 'therubyracer', '~> 0.11.4'
-  gem 'cijoe', :git => 'https://github.com/fredmp/cijoe.git'
+  gem 'cijoe', :git => 'https://github.com/eturk/cijoe.git'
   gem 'sentry-raven', '~> 0.4.6'
 end
 
