@@ -10,6 +10,8 @@ Noted::API.controllers :notes, :provides => :json do
     })
 
     if n.success?
+      expire!("#{n.result.project.id}_notes")
+
       {
         :status => 200,
         :result => {
