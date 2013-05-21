@@ -6,6 +6,16 @@ GIT
       mongo_mapper (>= 0.9.0)
 
 GIT
+  remote: https://github.com/fredmp/cijoe.git
+  revision: 3a46b37c374e86530e368444feb57dcf7ddf4497
+  specs:
+    cijoe (0.9.2)
+      choice
+      json
+      sinatra
+      tinder (>= 1.4.0)
+
+GIT
   remote: https://github.com/nightsailer/padrino-sprockets.git
   revision: 28c5dd117a63b330356955efd4f513b4413da3a6
   specs:
@@ -20,16 +30,6 @@ GIT
       activesupport (~> 3.2.11)
       faraday (~> 0.8.7)
       faraday_middleware (~> 0.9.0)
-
-GIT
-  remote: https://github.com/nvloff/cijoe.git
-  revision: d412e7f28784425ddc9b42c07e8d9a32e41882f6
-  specs:
-    cijoe (0.9.2)
-      choice
-      multi_json
-      sinatra
-      tinder (>= 1.4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -105,6 +105,7 @@ GEM
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
+    json (1.8.0)
     libv8 (3.11.8.17)
     log_buddy (0.7.0)
     mail (2.5.4)
