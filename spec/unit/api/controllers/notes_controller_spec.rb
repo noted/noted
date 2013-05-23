@@ -6,7 +6,15 @@ describe 'Notes (API)' do
 
   describe 'PATCH /api/notes/update.json' do
     before do
-      patch '/api/notes/update.json', :author => user.id, :note => { :id => note.id, :title => 'Natural History' }
+      opts = {
+        :author => user.id,
+        :note => {
+          :id => note.id,
+          :title => 'Natural History'
+        }
+      }
+
+      patch '/api/notes/update.json', opts
     end
 
     let(:body) { JSON.parse(response.body) }

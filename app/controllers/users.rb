@@ -61,7 +61,10 @@ Noted::Web.controllers :users do
   get :view, :map => '/:user', :priority => :low do
     if @user = User.find_by_username(params[:user])
       @projects = cache("#{@user.id}_projects", :expires_in => 60) do
-        @p = Project.where(:user_id => @user.id, :deleted_at => nil).order('updated_at dsc')
+        @p = Project.where(
+          :user_id => @user.id,
+          :deleted_at => nil
+        ).order('updated_at dsc')
 
         partial 'users/projects'
       end

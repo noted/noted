@@ -14,7 +14,7 @@ Noted::Web.controllers :sources do
     type = "#{params[:source][:type]}"
 
     attributes = params[type]
-    attributes.merge({:type => type.to_sym})
+    attributes.merge({ :type => type.to_sym })
 
     s = Source::Create.run({
       :project => params[:project],
@@ -36,7 +36,7 @@ Noted::Web.controllers :sources do
     type = "#{params[:source][:type]}"
 
     attributes = params[type]
-    attributes.merge({:type => type.to_sym})
+    attributes.merge({ :type => type.to_sym })
 
     s = Source::Update.run({
       :author => params[:author],

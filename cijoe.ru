@@ -1,3 +1,6 @@
+#!/usr/bin/env rackup
+# encoding: utf-8
+
 require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
 

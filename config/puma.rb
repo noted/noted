@@ -24,43 +24,43 @@ end
 #
 directory PADRINO_ROOT
 
-# Load “path” as a rackup file.
+# Load "path" as a rackup file.
 #
-# The default is “config.ru”.
+# The default is "config.ru".
 #
 rackup File.join(PADRINO_ROOT, 'config.ru')
 
 # Set the environment in which the rack's app will run.
 #
-# The default is “development”.
+# The default is "development".
 #
 environment = PADRINO_ENV.to_sym
 
 # Daemonize the server into the background. Highly suggest that
-# this be combined with “pidfile” and “stdout_redirect”.
+# this be combined with "pidfile" and "stdout_redirect".
 #
-# The default is “false”.
+# The default is "false".
 #
 if environment == :production
   daemonize
 end
 
-# Store the pid of the server in the file at “path”.
+# Store the pid of the server in the file at "path".
 #
 if environment == :production
   pidfile File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.pid')
 end
 
-# Use “path” as the file to store the server info state. This is
-# used by “pumactl” to query and control the server.
+# Use "path" as the file to store the server info state. This is
+# used by "pumactl" to query and control the server.
 #
 if environment == :production
   state_path File.join(PADRINO_ROOT, 'tmp', 'pids', 'puma.state')
 end
 
 # Redirect STDOUT and STDERR to files specified. The 3rd parameter
-# (“append”) specifies whether the output is appended, the default is
-# “false”.
+# ("append") specifies whether the output is appended, the default is
+# "false".
 #
 if environment == :production
   stdout = File.join(PADRINO_ROOT, 'log', 'stdout.log')
@@ -72,26 +72,26 @@ end
 
 # Disable request logging.
 #
-# The default is “false”. If in development, use Padrino's logger.
+# The default is "false". If in development, use Padrino's logger.
 #
 quiet
 
-# Configure “min” to be the minimum number of threads to use to answer
-# requests and “max” the maximum.
+# Configure "min" to be the minimum number of threads to use to answer
+# requests and "max" the maximum.
 #
-# The default is “0, 16”.
+# The default is "0, 16".
 #
 # threads 0, 16
 
-# Bind the server to “url”. “tcp://”, “unix://” and “ssl://” are the only
+# Bind the server to "url". "tcp://", "unix://" and "ssl://" are the only
 # accepted protocols.
 #
-# The default is “tcp://0.0.0.0:9292”.
+# The default is "tcp://0.0.0.0:9292".
 #
 if environment == :production
-  #socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
+  # socket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'puma.sock')
 
-  #bind "unix://#{socket}"
+  # bind "unix://#{socket}"
 
   bind 'tcp://0.0.0.0:80'
 else
@@ -102,8 +102,8 @@ end
 # bind 'unix:///var/run/puma.sock?umask=0777'
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
 
-# Instead of “bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'” you
-# can also use the “ssl_bind” option.
+# Instead of "bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'" you
+# can also use the "ssl_bind" option.
 #
 # ssl_bind '127.0.0.1', '9292', { key: path_to_key, cert: path_to_cert }
 
@@ -126,7 +126,7 @@ end
 
 # How many worker processes to run.
 #
-# The default is “0”.
+# The default is "0".
 #
 # workers 2
 
@@ -141,7 +141,7 @@ end
 
 # === Puma control rack application ===
 
-# Start the puma control rack application on “url”. This application can
+# Start the puma control rack application on "url". This application can
 # be communicated with to control the main server. Additionally, you can
 # provide an authentication token, so all requests to the control server
 # will need to include that token as a query parameter. This allows for

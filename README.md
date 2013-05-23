@@ -4,7 +4,9 @@
 
 Noted is an academic research assistant and social network.
 
-**Authors** &mdash; [Ethan Turkeltaub](http://ethnt.me), [Earl Procko](http://is.gd/pIAqSy).
+**Author** &mdash; [Ethan Turkeltaub](http://ethnt.me)
+
+**Thanks** &mdash; [Earl Procko](http://is.gd/pIAqSy), [Joshua Warchol](https://github.com/jwarchol), [Sujal Shah](https://github.com/sujal)
 
 <hr />
 
@@ -12,7 +14,7 @@ Noted is an academic research assistant and social network.
 
 Noted requires the following dependencies to run:
 
-* Ruby (MRI 2.0.0-p0; I suggest using rbenv/RVM)
+* Ruby (MRI 2.0.0-p0, I suggest using rbenv/RVM)
 * MongoDB (~ 2.4.1)
 * Redis (~ 1.3.15)
 * Memcached (~ 1.4.5)

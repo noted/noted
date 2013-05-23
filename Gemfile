@@ -82,6 +82,7 @@ group :test do
   gem 'database_cleaner', '~> 1.0.1'
 
   gem 'rubocop', '~> 0.7.2'
-  gem 'cane', '~> 2.5.2'
   gem 'coveralls', '~> 0.6.7'
+
+  gem 'fuubar', '~> 1.1.0'
 end

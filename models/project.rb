@@ -18,7 +18,7 @@ class Project
 
   many :comments, :as => :commentable
 
-  validates_presence_of :title#, :permalink
+  validates_presence_of :title
   before_save :permalink!
 
   after_create :create_activity

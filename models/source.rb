@@ -16,14 +16,17 @@ class Source
 
   after_create :permalink!
 
-  scope :within, -> (id){ where(:project_id => id, :deleted_at => nil).order('updated_at dsc') }
+  scope :within, -> (id) do
+    where(:project_id => id, :deleted_at => nil).
+    order('updated_at dsc')
+  end
 
   def citation=(obj)
-    self.binary = Marshal::dump(obj)
+    self.binary = Marshal.dump(obj)
   end
 
   def citation
-    Marshal::load(self.binary.to_s)
+    Marshal.load(self.binary.to_s)
   end
 
   def self.options # Bad.

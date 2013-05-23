@@ -22,7 +22,7 @@ class Activity
   scope :by,  -> (a){ where(:actor_id => a) }
   scope :for, -> (r){ where(:recipient_id => r) }
   scope :within, -> (p) do
-    where(:$or => [
+    where(:'$or' => [
       { :recipient_id => p },
       { :recipient_parent_id => p }
     ]).order('created_at dsc')

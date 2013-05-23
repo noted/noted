@@ -4,7 +4,7 @@ Noted::API.controllers :users do
 
     users = User.collection.find(:username => Regexp.new(query)).to_a
 
-    hsh = Hash.new
+    hsh = {}
 
     hsh[:query] = query
 

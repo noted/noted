@@ -23,7 +23,6 @@ class Project
         :title => project[:title],
         :description => project[:description],
         :collaborators => project[:collaborators],
-
         :updater => User.find(author)
       )
 
