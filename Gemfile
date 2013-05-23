@@ -83,4 +83,5 @@ group :test do
 
   gem 'rubocop', '~> 0.7.2'
   gem 'cane', '~> 2.5.2'
+  gem 'coveralls', '~> 0.6.7'
 end

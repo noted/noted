@@ -1,6 +1,9 @@
 require 'spork'
+require 'coveralls'
 
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
+
+Coveralls.wear!
 
 Spork.prefork do
   require File.expand_path(File.dirname(__FILE__) + '/../config/boot')
