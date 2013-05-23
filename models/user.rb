@@ -107,18 +107,19 @@ class User
   end
 
   def username_valid?
-    restricted = Set.new([
-      "comments",
-      "noted",
-      "notes",
-      "projects",
-      "sessions",
-      "sources",
-      "users"
-    ])
+    restricted = [
+      'comments',
+      'noted',
+      'notes',
+      'projects',
+      'sessions',
+      'sources',
+      'users',
+      'i'
+    ]
 
     if restricted.include?(self.username)
-      errors.add(:username, "is invalid")
+      errors.add(:username, 'is invalid')
     end
   end
 end

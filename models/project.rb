@@ -19,7 +19,6 @@ class Project
   many :comments, :as => :commentable
 
   validates_presence_of :title#, :permalink
-
   before_save :permalink!
 
   after_create :create_activity
@@ -87,6 +86,18 @@ class Project
   private
 
   def permalink!
-    self.permalink = self.title.parameterize
+    p = self.title.parameterize
+
+    similar = Project.where(
+      :user_id => self.user.id,
+      :permalink => p,
+      :deleted_at => nil
+    ).count
+
+    if similar > 0
+      p = "#{p}-#{similar + 1}"
+    end
+
+    self.permalink = p
   end
 end
