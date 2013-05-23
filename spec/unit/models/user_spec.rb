@@ -72,7 +72,7 @@ describe User do
 
   describe '#clean!' do
     before do
-      user.projects << Project.create(:title => 'Foobar')
+      user.projects << Project.create(:title => 'Foobar', :user_id => user.id)
 
       user.destroy
     end
