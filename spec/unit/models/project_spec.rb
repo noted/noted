@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Project do
-  let(:project) { create(:project) }
-  let(:user)    { project.user }
+  let(:project)  { create(:project) }
+  let(:user)     { project.user }
   let(:outsider) { create(:user) }
   let(:staff)    { create(:user, :staff) }
   let(:collaborator) do
@@ -32,7 +32,7 @@ describe Project do
   end
 
   describe '#permalink!' do
-    it { project.permalink.should eql('the-cosmos') }
+    it { project.permalink.should include('the-cosmos') }
   end
 
   describe '#updatable_by?' do
