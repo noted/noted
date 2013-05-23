@@ -18,6 +18,8 @@ class User
   key :website, String
   key :twitter, String
 
+  key :collaboration_ids, Array
+
   timestamps!
 
   state_machine :role, :initial => :user do
@@ -97,6 +99,16 @@ class User
 
     self.salt = Digest::SHA1.hexdigest("--#{Time.now.utc}--#{secret}--")
     self.token = Digest::SHA1.hexdigest("--#{self.salt}--#{Time.now.utc}--")
+  end
+
+  def collaborations
+    arr = []
+
+    collaboration_ids.each do |id|
+      arr << Project.find(id)
+    end
+
+    arr
   end
 
   private

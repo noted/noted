@@ -19,4 +19,5 @@ describe Project::AddCollaborator do
   it { action.success?.should be_true }
   it { action.result.should be_an_instance_of Project }
   it { action.result.collaborators.should include outsider }
+  it { action.result.collaborators[0].collaboration_ids.should include project.id.to_s }
 end

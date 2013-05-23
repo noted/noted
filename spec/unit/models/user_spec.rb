@@ -4,6 +4,7 @@ describe User do
   let(:user)     { create(:user) }
   let(:staff)    { create(:user, :staff) }
   let(:outsider) { create(:user) }
+  let(:project)  { create(:project) }
 
   it { should validate_presence_of :username }
   it { should validate_presence_of :name }

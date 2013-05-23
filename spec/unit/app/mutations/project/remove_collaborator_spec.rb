@@ -19,4 +19,5 @@ describe Project::RemoveCollaborator do
   it { action.success?.should be_true }
   it { action.result.should be_an_instance_of Project }
   it { action.result.collaborators.should_not include outsider }
+  it { User.find(action.inputs['collaborator']['id']).collaborations.should_not include project }
 end
