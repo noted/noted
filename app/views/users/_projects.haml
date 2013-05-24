@@ -1,21 +1,51 @@
 %section
-  - if @p.blank?
-    .empty
+  %section.owned
+    %header
       - if @user == current_user
-        %p You don't have any projects yet!
-        %p.go
-          %a.btn.primary{:href => url(:projects, :new)} Make a Project
+        %h3 Your Projects
       - else
-        %p Nothing to see here, move along.
-  - @p.each do |project|
-    %article
-      %header
-        .inner
-          %h4
-            %a{:href => project.url}= project.title
-      %section.text
-        .inner
-          = safe(project.description)
-      %footer
-        .inner
-          %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")
+        %h3= "#{@user.name}'s Projects"
+    - if @owned.blank?
+      .empty
+        - if @user == current_user
+          %p You don't have any projects yet!
+          %p.go
+            %a.btn.primary{:href => url(:projects, :new)} Make a Project
+        - else
+          %p Nothing to see here, move along.
+    - @owned.each do |project|
+      %article
+        %header
+          .inner
+            %h4
+              %a{:href => project.url}= project.title
+        %section.text
+          .inner
+            = safe(project.description)
+        %footer
+          .inner
+            %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")
+
+  %section.collaborations
+    %header
+      %h3 Your Collaborations
+    - if @collaborations.blank?
+      .empty
+        - if @user == current_user
+          %p You don't have any projects yet!
+          %p.go
+            %a.btn.primary{:href => url(:projects, :new)} Make a Project
+        - else
+          %p Nothing to see here, move along.
+    - @collaborations.each do |project|
+      %article
+        %header
+          .inner
+            %h4
+              %a{:href => project.url}= project.title
+        %section.text
+          .inner
+            = safe(project.description)
+        %footer
+          .inner
+            %p= project.updated_at.localtime.strftime("%e %B %Y, %H:%M")

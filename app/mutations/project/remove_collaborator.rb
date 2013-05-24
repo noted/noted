@@ -15,6 +15,10 @@ class Project
       p.collaborator_ids.delete(collaborator[:id])
       p.save
 
+      u = User.find(collaborator[:id])
+      u.collaboration_ids.delete(project[:id])
+      u.save
+
       p
     end
   end
