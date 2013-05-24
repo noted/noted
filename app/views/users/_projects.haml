@@ -32,9 +32,7 @@
     - if @collaborations.blank?
       .empty
         - if @user == current_user
-          %p You don't have any projects yet!
-          %p.go
-            %a.btn.primary{:href => url(:projects, :new)} Make a Project
+          %p You're not collaborating on any projects.
         - else
           %p Nothing to see here, move along.
     - @collaborations.each do |project|
