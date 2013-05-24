@@ -47,6 +47,18 @@
 	& > section {
 		@include span-columns(18 omega);
 
+		h3 {
+			font-size: 0.95em;
+			text-transform: uppercase;
+			margin-bottom: 1em;
+		}
+
+		.collaborations {
+			border-top: 1px solid $grey;
+			margin-top: 1.5em;
+			padding-top: 1.5em;
+		}
+
 		& > header {
 			margin-bottom: 1rem;
 		}
@@ -78,15 +90,6 @@
 				color: darken($grey, 5%);
 				font-size: 0.85em;
 				padding: 0.25em 0.65em;
-			}
-		}
-
-		.empty {
-			font-size: 1.25em;
-
-			p.go {
-				font-size: 1rem;
-				margin-top: 1rem;
 			}
 		}
 	}

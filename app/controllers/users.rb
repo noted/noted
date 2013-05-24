@@ -61,10 +61,12 @@ Noted::Web.controllers :users do
   get :view, :map => '/:user', :priority => :low do
     if @user = User.find_by_username(params[:user])
       @projects = cache("#{@user.id}_projects", :expires_in => 60) do
-        @p = Project.where(
+        @owned = Project.where(
           :user_id => @user.id,
           :deleted_at => nil
         ).order('updated_at dsc')
+
+        @collaborations = @user.collaborations
 
         partial 'users/projects'
       end

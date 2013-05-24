@@ -20,6 +20,9 @@ class Project
         p.updater = u
       end
 
+      u.collaboration_ids << p.id.to_s
+      u.save
+
       p.save
 
       p
