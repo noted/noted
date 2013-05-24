@@ -1,8 +1,6 @@
 $("form.note.ajax button").on "click", (e) ->
   e.preventDefault()
 
-  console.log 'Clicked Save'
-
   $("span.status").html("Saving...")
 
   save()
@@ -35,8 +33,10 @@ save = ->
 
       $("span.status").addClass "error"
       $("span.status").html "Failed to save!"
+      $("span.status").fadeIn()
     success: (res) ->
       $("span.status").html "Saved!"
+      $("span.status").fadeIn()
 
       setTimeout (->
         $("span.status").fadeOut()
