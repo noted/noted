@@ -1,0 +1,20 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Creator: Ethan Turkeltaub
+  Site: http://ethnt.me
+  Twitter: ethnt
+  Location: Farmington, CT (USA)
+
+/* THANKS */
+  Earl Procko
+  Sujal Shah: https://twitter.com/sujal
+  Joshua Warchol: https://twitter.com/jwarchol
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery
+  Application: Padrino, MongoDB (via MongoMapper)
+  Software: Sublime Text 2
