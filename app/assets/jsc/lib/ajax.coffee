@@ -1,6 +1,8 @@
 $("form.note.ajax button").on "click", (e) ->
   e.preventDefault()
 
+  console.log 'Clicked "Save"'
+
   $("span.status").html("Saving...")
 
   save()
