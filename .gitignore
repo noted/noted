@@ -12,3 +12,4 @@ vendor/ruby/*
 .puma.yml
 .s3.yml
 *.sublime*
+.smtp.yml
