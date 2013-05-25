@@ -1,0 +1,33 @@
+= MongoMapper
+
+A Ruby Object Mapper for Mongo.
+
+== Install
+
+    $ gem install mongo_mapper
+
+== Contributing
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a future version unintentionally.
+* Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself in another branch so I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Development
+
+    $ gem install bundler (if you don't have it)
+    $ bundle install
+    $ bundle exec rake
+
+== Problems or Questions?
+
+Hit up the google group:
+http://groups.google.com/group/mongomapper
+
+Hop on IRC:
+irc://chat.freenode.net/#mongomapper
+
+== Copyright
+
+See LICENSE for details.

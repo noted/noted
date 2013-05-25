@@ -1,0 +1,10 @@
+*.sw?
+.rake_tasks~
+.DS_Store
+coverage
+rdoc
+pkg
+Gemfile.lock
+coverage/*
+.yardoc/*
+doc/*

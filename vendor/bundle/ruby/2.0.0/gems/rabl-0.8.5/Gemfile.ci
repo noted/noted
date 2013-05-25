@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in rabl.gemspec
+gemspec
+
+gem "rake"
+gem "i18n", '~> 0.6'
+
+platforms :mri_18 do
+  gem 'SystemTimer'
+  gem 'json'
+end
+
+gem 'activesupport', :require => 'active_support'
+gem 'builder'

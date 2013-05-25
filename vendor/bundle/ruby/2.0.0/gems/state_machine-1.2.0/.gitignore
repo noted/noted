@@ -1,0 +1,8 @@
+*.gem
+.bundle/
+.rbx/
+.yardoc/
+coverage/
+/doc/
+test/*.log
+/Gemfile.lock

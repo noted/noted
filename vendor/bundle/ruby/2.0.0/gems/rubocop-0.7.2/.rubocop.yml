@@ -1,0 +1,7 @@
+# This is the configuration used to check the rubocop source code.
+
+inherit_from: config/default.yml
+
+# Avoid methods longer than 30 lines of code
+MethodLength:
+  Max: 30

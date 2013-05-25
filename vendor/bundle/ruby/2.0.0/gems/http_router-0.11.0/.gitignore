@@ -1,0 +1,8 @@
+pkg
+*.gem
+.bundle
+rdoc
+Gemfile.lock
+.rvmrc
+*.rbc
+js/npm-debug.log
