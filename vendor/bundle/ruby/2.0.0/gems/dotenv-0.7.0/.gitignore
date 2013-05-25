@@ -1,7 +1,0 @@
-*.gem
-*.rbc
-.bundle
-.config
-.yardoc
-Gemfile.lock
-tmp

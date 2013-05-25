@@ -1,8 +1,0 @@
-# pack-refs with: peeled 
-a399c65132e9d368de8f2a8011756ac3140031e9 refs/heads/14-website
-88b036b23e9f2ade7eef9db1ff2d6815e4dbfd1a refs/heads/3-inheritance
-b167ee9b64bab1ba0b195214734c5a713df3933e refs/heads/master
-f0d18452294a5912cc84741969f7dc920a5197fd refs/tags/v0.1.0
-^33f6f2c497cd679101be58c767eb1b2bbbd05b02
-b7a33bf71792b8ca1dc83a503b6e4760ae34e3c5 refs/tags/v0.1.1
-^6e69cb8b216d5d346aef14205fecc29c8abcd24d

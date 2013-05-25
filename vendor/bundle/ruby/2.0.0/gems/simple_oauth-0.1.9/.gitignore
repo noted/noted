@@ -1,9 +1,0 @@
-*.rbc
-.bundle
-.DS_Store
-.yardoc
-coverage
-doc
-Gemfile.lock
-pkg
-rdoc
