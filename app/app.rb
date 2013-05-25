@@ -51,5 +51,13 @@ module Noted
     configure :test do
       set :delivery_method, :test
     end
+
+    error 404 do
+      render 'core/404'
+    end
+
+    error 500 do
+      render 'core/500'
+    end
   end
 end

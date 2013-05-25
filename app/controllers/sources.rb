@@ -3,6 +3,10 @@ Noted::Web.controllers :sources do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
       @project = Project.given(@user.id, params[:project]).first
+
+      unless @user && @project
+        halt 404
+      end
     end
   end
 
@@ -80,7 +84,11 @@ Noted::Web.controllers :sources do
       :deleted_at => nil
     ).all
 
-    render 'sources/bibliography'
+    if @sources
+      render 'sources/bibliography'
+    else
+      halt 404
+    end
   end
 
   get :view, :map => '/:user/:project/sources/:source', :priority => :low do
@@ -89,8 +97,13 @@ Noted::Web.controllers :sources do
       :permalink => params[:source],
       :deleted_at => nil
     ).first # Make scope!
-    @citation = @source.citation
 
-    render 'sources/view'
+    if @source
+      @citation = @source.citation
+
+      render 'sources/view'
+    else
+      halt 404
+    end
   end
 end
