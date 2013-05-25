@@ -1,0 +1,9 @@
+.page {
+	@include container;
+
+	margin: 4em auto;
+
+  header {
+    margin-bottom: 1em;
+  }
+}

@@ -24,7 +24,7 @@ Noted::Web.controllers :users do
     if @user
       render 'users/edit'
     else
-      redirect url(:index)
+      halt 404
     end
   end
 
@@ -59,7 +59,9 @@ Noted::Web.controllers :users do
   end
 
   get :view, :map => '/:user', :priority => :low do
-    if @user = User.find_by_username(params[:user])
+    @user = User.find_by_username(params[:user])
+
+    if @user
       @projects = cache("#{@user.id}_projects", :expires_in => 60) do
         @owned = Project.where(
           :user_id => @user.id,
@@ -73,7 +75,7 @@ Noted::Web.controllers :users do
 
       render 'users/view'
     else
-      error_404!
+      halt 404
     end
   end
 end
