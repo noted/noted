@@ -81,6 +81,7 @@ GEM
       rest-client
       simplecov (>= 0.7)
       thor
+    dalli (2.6.3)
     database_cleaner (1.0.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.4)
@@ -120,7 +121,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    memcached (1.5.0)
     method_source (0.8.1)
     mime-types (1.23)
     mongo (1.8.6)
@@ -270,6 +270,7 @@ DEPENDENCIES
   coffee-script (~> 2.2.0)
   compass (~> 0.12.2)
   coveralls (~> 0.6.7)
+  dalli (~> 2.6.3)
   database_cleaner (~> 1.0.1)
   execjs (~> 1.4.0)
   factory_girl (~> 4.2.0)
@@ -277,7 +278,6 @@ DEPENDENCIES
   fuubar (~> 1.1.0)
   haml (~> 4.0.2)
   log_buddy (~> 0.7.0)
-  memcached (~> 1.5.0)
   mm-paranoid!
   mongo_mapper (~> 0.12.0)
   mutations (~> 0.5.12)

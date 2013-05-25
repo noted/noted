@@ -11,7 +11,7 @@ gem 'rake', '~> 10.0.4'
 gem 'bson_ext', '~> 1.8.5'
 gem 'mongo_mapper', '~> 0.12.0'
 
-gem 'memcached', '~> 1.5.0'
+gem 'dalli', '~> 2.6.3'
 
 gem 'redis', '~> 3.0.4'
 
