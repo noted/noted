@@ -1,0 +1,51 @@
+/*
+	Noted.
+		file: css/includes/_vendor.scss
+*/
+
+
+/*
+	Autocomplete
+*/
+
+.autocomplete-suggestions {
+	background: #FFF;
+	border: 1px solid $dark-grey;
+	overflow: auto;
+
+	strong {
+		color: $red;
+		font-weight: normal;
+	}
+}
+
+.autocomplete-suggestion {
+	overflow: hidden;
+	padding: 2px 5px;
+	white-space: nowrap;
+}
+
+.autocomplete-selected {
+	background: lighten($grey, 2%);
+}
+
+
+/*
+	Redactor
+*/
+
+.redactor_editor {
+	i {
+		font-size: 1em !important;
+		font-style: italic;
+	}
+}
+
+
+/*
+	Miscellaneous
+*/
+
+.ui-helper-hidden-accessible {
+	display: none !important;
+}
