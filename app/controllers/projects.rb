@@ -31,21 +31,25 @@ Noted::Web.controllers :projects do
       :deleted_at => nil
     ).first
 
-    @activity = Activity.within(@project.id).first
+    if @user && @project
+      @activity = Activity.within(@project.id).first
 
-    @notes = cache("#{@project.id}_notes", :expires_in => 60) do
-      @n = Note.within(@project.id).all
+      @notes = cache("#{@project.id}_notes", :expires_in => 60) do
+        @n = Note.within(@project.id).all
 
-      partial 'projects/notes'
+        partial 'projects/notes'
+      end
+
+      @sources = cache("#{@project.id}_sources", :expires_in => 60) do
+        @s = Source.within(@project.id).all
+
+        partial 'projects/sources'
+      end
+
+      render 'projects/view'
+    else
+      halt 404
     end
-
-    @sources = cache("#{@project.id}_sources", :expires_in => 60) do
-      @s = Source.within(@project.id).all
-
-      partial 'projects/sources'
-    end
-
-    render 'projects/view'
   end
 
   get :edit, :map => "/:user/:project/settings" do
@@ -55,8 +59,7 @@ Noted::Web.controllers :projects do
     if current_user && @project.updatable_by?(current_user)
       render 'projects/edit'
     else
-      flash[:error] = 'Something has gone awry.'
-      redirect @project.url
+      halt 404
     end
   end
 

@@ -3,6 +3,10 @@ Noted::Web.controllers :notes do
     if params[:user] && params[:project]
       @user = User.find_by_username(params[:user])
       @project = Project.given(@user.id, params[:project]).first
+
+      unless @user && @project
+        halt 404
+      end
     end
   end
 
@@ -45,17 +49,21 @@ Noted::Web.controllers :notes do
       :deleted_at => nil
     ).first
 
-    @sources = [] # Fix me.
-    Source.where(:project_id => @project.id).each do |s|
-      hash = {}
-      hash[:id] = s.id.to_s
-      hash[:text] = s.citation.html
-      hash[:selected] = @note.sources.include?(s)
+    if @note
+      @sources = [] # Fix me.
+      Source.where(:project_id => @project.id).each do |s|
+        hash = {}
+        hash[:id] = s.id.to_s
+        hash[:text] = s.citation.html
+        hash[:selected] = @note.sources.include?(s)
 
-      @sources << hash
+        @sources << hash
+      end
+
+      render 'notes/view'
+    else
+      halt 404
     end
-
-    render 'notes/view'
   end
 
   patch :update do
