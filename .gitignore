@@ -13,3 +13,4 @@ vendor/ruby/*
 .s3.yml
 *.sublime*
 .smtp.yml
+.sentry.yml

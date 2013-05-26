@@ -39,13 +39,11 @@ module Noted
     configure :production do
       enable :caching
 
-      if CONFIG['sentry']['dsn']
-        Raven.configure do |config|
-          config.dsn = CONFIG['sentry']['dsn']
-        end
-
-        use Raven::Rack
+      Raven.configure do |config|
+        config.dsn = SENTRY['dsn']
       end
+
+      use Raven::Rack
     end
 
     configure :test do
