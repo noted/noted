@@ -80,12 +80,16 @@ Noted::Web.controllers :projects do
   end
 
   delete :destroy do
+    creator = User.find(params[:author])
+
     p = Project::Destroy.run({
       :author => params[:author],
       :project => params[:project]
     })
 
     if p.success?
+      expire!("#{creator.id}_projects")
+
       redirect "/#{User.find(params[:author]).username}"
     else
       flash[:error] = 'Something has gone awry.'
