@@ -1,7 +1,10 @@
 require 'yaml'
 
+# MongoMapper
 MongoMapper.setup(YAML.load_file(Padrino.root('.mongo.yml')), PADRINO_ENV, :logger => nil)
+MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
 
+# Von
 Von.configure do |c|
   y = YAML.load_file(Padrino.root('.redis.yml'))
   y = y[PADRINO_ENV]
@@ -11,6 +14,7 @@ Von.configure do |c|
   c.namespace = 'von'
 end
 
+# Load SMTP configuration
 unless PADRINO_ENV == 'test'
   SMTP = YAML.load_file(Padrino.root('.smtp.yml'))[PADRINO_ENV]
 end
