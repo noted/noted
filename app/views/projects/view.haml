@@ -1,14 +1,15 @@
 #project
   = partial 'projects/header', :locals => { :project => @project, :user => @user }
-  .description
-    .inner
-      %header
-        %h4
-          %a.expand
-            %i.ss-icon dropdown
-            Description
-      .text.hidden
-        = safe(@project.description)
+  - unless @project.description.blank?
+    .description
+      .inner
+        %header
+          %h4
+            %a.expand
+              %i.ss-icon dropdown
+              Description
+        .text.hidden
+          = safe(@project.description)
   .activity
     .inner
       %section

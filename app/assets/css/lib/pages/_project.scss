@@ -351,6 +351,12 @@
 							margin-left: 0.5em;
 						}
 
+						&.view {
+							&:hover {
+								color: $purple;
+							}
+						}
+
 						&.edit {
 							&:hover {
 								color: $turquoise;
@@ -388,6 +394,12 @@
 
 						& + a {
 							margin-left: 0.5em;
+						}
+
+						&.view {
+							&:hover {
+								color: $purple;
+							}
 						}
 
 						&.edit {

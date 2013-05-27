@@ -300,6 +300,7 @@ DEPENDENCIES
   scholar!
   sentry-raven (~> 0.4.6)
   shoulda-matchers (~> 2.1.0)
+  simplecov (~> 0.7.1)
   spork (~> 1.0.0rc3)
   sprockets-sass (~> 1.0.0)
   state_machine (~> 1.2.0)

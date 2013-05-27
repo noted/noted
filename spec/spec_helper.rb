@@ -1,11 +1,22 @@
 require 'spork'
-require 'coveralls'
 
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 
-Coveralls.wear!
-
 Spork.prefork do
+  unless ENV['DRB']
+    require 'simplecov'
+    require 'coveralls'
+
+    SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+      SimpleCov::Formatter::HTMLFormatter,
+      Coveralls::SimpleCov::Formatter
+    ]
+
+    SimpleCov.start do
+      add_filter '/vendor/'
+    end
+  end
+
   require File.expand_path(File.dirname(__FILE__) + '/../config/boot')
 
   FactoryGirl.find_definitions
@@ -43,5 +54,19 @@ Spork.prefork do
 
   def site
     'http://example.org'
+  end
+end
+
+Spork.each_run do
+  if ENV['DRB']
+    require 'simplecov'
+    require 'coveralls'
+
+    SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+      SimpleCov::Formatter::HTMLFormatter,
+      Coveralls::SimpleCov::Formatter
+    ]
+
+    SimpleCov.start
   end
 end
