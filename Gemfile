@@ -77,7 +77,7 @@ group :test do
   gem 'rspec', '~> 2.13.0'
   gem 'shoulda-matchers', '~> 2.1.0'
 
-  gem 'capybara', '~> 2.1.0', require: 'capybara/dsl'
+  gem 'capybara', '~> 2.1.0', require: 'capybara/rspec'
 
   gem 'spork', '~> 1.0.0rc3'
   gem 'factory_girl', '~> 4.2.0'
