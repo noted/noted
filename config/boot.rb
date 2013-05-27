@@ -4,7 +4,7 @@ PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 COMMIT = `git show --pretty=%H`.split[0...1].join(' ')
 BRANCH = `git rev-parse --abbrev-ref HEAD`
 
-NOTED_VERSION = '0.1.0ab'
+NOTED_VERSION = '0.1.0b'
 
 require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
