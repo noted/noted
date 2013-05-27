@@ -1,11 +1,11 @@
 Noted::Web.controllers :comments do
   post :create do
-    comment = Comment::Create.run({
+    c = Comment::Create.run({
       :author => params[:author],
       :comment => params[:comment]
     })
 
-    if comment.success?
+    if c.success?
       redirect params[:redirect]
     else
       flash[:error] = 'Something has gone awry.'

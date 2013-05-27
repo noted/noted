@@ -1,13 +1,6 @@
 Noted::Web.controllers :sources do
-  before :except => [:create, :update, :destroy] do
-    if params[:user] && params[:project]
-      @user = User.find_by_username(params[:user])
-      @project = Project.given(@user.id, params[:project]).first
-
-      unless @user && @project
-        halt 404
-      end
-    end
+  before do
+    current_project
   end
 
   get :new, :map => '/:user/:project/sources/new' do

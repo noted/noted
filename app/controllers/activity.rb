@@ -1,17 +1,6 @@
 Noted::Web.controllers :activity do
   before do
-    if params[:user] && params[:project]
-      @user = User.find_by_username(params[:user])
-      @project = Project.where(
-        :user_id => @user.id,
-        :permalink => params[:project],
-        :deleted_at => nil
-      ).first
-
-      unless @user && @project
-        halt 404
-      end
-    end
+    current_project
   end
 
   get :index, :map => '/:user/:project/activity' do
