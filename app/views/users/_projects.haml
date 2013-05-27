@@ -1,10 +1,7 @@
 %section
   %section.owned
     %header
-      - if @user == current_user
-        %h3 Your Projects
-      - else
-        %h3= "#{@user.name}'s Projects"
+      %h3 Projects
     - if @owned.blank?
       .empty
         - if @user == current_user
@@ -28,13 +25,13 @@
 
   %section.collaborations
     %header
-      %h3 Your Collaborations
+      %h3 Collaborations
     - if @collaborations.blank?
       .empty
         - if @user == current_user
           %p You're not collaborating on any projects.
         - else
-          %p Nothing to see here, move along.
+          %p= "#{@user.name} isn't collaborating on any projects."
     - @collaborations.each do |project|
       %article
         %header
