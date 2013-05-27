@@ -14,7 +14,7 @@
         %footer
           .inner
             %aside
-              %p= source.updated_at.strftime("%e %b. %Y, %l:%M%P")
+              %p= time(source.updated_at, "%e %b. %Y, %l:%M%P")
             %section
               %a.btn.view{:href => "#{source.url}/#view"}
                 %i.ss-icon view

@@ -26,6 +26,8 @@ gem 'base32-crockford', '~> 0.1.0', require: 'base32/crockford'
 
 gem 'oj', '~> 2.0.12'
 
+gem 'tzinfo', '~> 0.3.37'
+
 gem 'scholar', git: 'https://github.com/noted/scholar.git'
 
 gem 'mutations', '~> 0.5.12'

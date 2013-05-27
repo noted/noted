@@ -34,7 +34,7 @@
         %footer
           .inner
             %aside
-              %p= note.updated_at.strftime("%e %b. %Y, %l:%M%P")
+              %p= time(note.updated_at, "%e %b. %Y, %l:%M%P")
             %section
               %ul.tags
                 - note.tags.each do |t|

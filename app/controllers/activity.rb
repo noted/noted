@@ -8,7 +8,7 @@ Noted::Web.controllers :activity do
         :deleted_at => nil
       ).first
 
-      unless @user && @@project
+      unless @user && @project
         halt 404
       end
     end

@@ -94,7 +94,9 @@ class Project
       :deleted_at => nil
     ).count
 
-    if similar > 0
+    d { similar }
+
+    if similar > 1
       p = "#{p}-#{similar + 1}"
     end
 

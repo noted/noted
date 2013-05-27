@@ -76,7 +76,7 @@ class Activity
       post = "a Source"
     end
 
-    "#{actor.name} #{verb} #{post}."
+    "#{User.find(self.actor_id).name} #{verb} #{post}."
   end
 
   private
