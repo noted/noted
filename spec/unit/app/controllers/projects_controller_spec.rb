@@ -22,11 +22,11 @@ describe 'Projects' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("/#{user.username}/the-hubble-telescope") }
+    it { response.location.should include "/#{user.username}/the-hubble-telescope" }
 
     it { Project.find_by_title('The Hubble Telescope').should_not be_nil }
-    it { Project.find_by_title('The Hubble Telescope').creator.should eql(user) }
-    it { user.projects.should include(Project.find_by_title('The Hubble Telescope')) }
+    it { Project.find_by_title('The Hubble Telescope').creator.should eql user }
+    it { user.projects.should include Project.find_by_title('The Hubble Telescope') }
   end
 
   describe 'GET /:username/:project' do
@@ -54,12 +54,12 @@ describe 'Projects' do
 
     describe 'redirects' do
       it { response.should be_redirect }
-      it { response.location.should include("#{project.user.username}/#{project.permalink}") }
+      it { response.location.should include "#{project.user.username}/#{project.permalink}" }
     end
 
     describe 'database' do
       it { project.title.should eql('Large Hadron Collider') }
-      it { project.updater.should eql(user) }
+      it { project.updater.should eql user }
     end
   end
 
@@ -69,7 +69,7 @@ describe 'Projects' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("/#{project.user.username}") }
+    it { response.location.should include "/#{project.user.username}" }
     it { Project.find_by_name('The Cosmos').should be_nil }
   end
 end

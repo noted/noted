@@ -6,7 +6,7 @@ describe 'Notes' do
   let(:user)    { project.user }
 
   before do
-    get project.url # Set the cache.
+    get project.url
   end
 
   describe 'POST /notes/create' do
@@ -15,7 +15,7 @@ describe 'Notes' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("#{project.url}") }
+    it { response.location.should include "#{project.url}" }
 
     it { project.notes.should_not be_blank }
   end
@@ -36,10 +36,10 @@ describe 'Notes' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("/#{user.username}/#{project.permalink}") }
+    it { response.location.should include "/#{user.username}/#{project.permalink}" }
 
-    it { note.title.should eql('Natural History') }
-    it { note.updater.should eql(user) }
+    it { note.title.should eql 'Natural History' }
+    it { note.updater.should eql user }
   end
 
   describe 'DELETE /notes/destroy' do
@@ -50,7 +50,7 @@ describe 'Notes' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("/#{user.username}/#{project.permalink}") }
+    it { response.location.should include "/#{user.username}/#{project.permalink}" }
 
     it { Note.find(id).deleted_at.should_not be_nil }
   end

@@ -16,13 +16,9 @@ describe 'Sessions' do
       post '/sessions/create', :user => { :email => user.email, :password => 'foobar' }
     end
 
-    describe 'session' do
-    end
-
-    describe 'redirects' do
-      it { response.should be_redirect }
-      it { response.location.should eql("#{site}/") }
-    end
+    it { response.headers['Set-Cookie'].should_not be_nil }
+    it { response.should be_redirect }
+    it { response.location.should eql "#{site}/" }
   end
 
   describe 'GET /logout' do
@@ -30,12 +26,7 @@ describe 'Sessions' do
       get '/logout'
     end
 
-    describe 'session' do
-    end
-
-    describe 'redirects' do
-      it { response.should be_redirect }
-      it { response.location.should eql("#{site}/") }
-    end
+    it { response.should be_redirect }
+    it { response.location.should eql "#{site}/" }
   end
 end

@@ -38,8 +38,7 @@ describe 'Sources' do
       post '/sources/create', :user => user.id, :project => project.id, :author => user.id, :source => data
     end
 
-    it 'response should be redirect (see branch)'
-    it 'source should be created (see branch)'
+    it 'response.should be_redirect'
   end
 
   describe 'GET /:user/:project/sources/:source' do
@@ -47,7 +46,7 @@ describe 'Sources' do
       #get "/#{user.username}/#{project.permalink}/sources/#{source.permalink}"
     end
 
-    it { 'response.should be_ok' }
+    it 'response.should be_ok'
   end
 
   describe 'GET /:user/:project/sources/bibliography' do
@@ -60,21 +59,40 @@ describe 'Sources' do
 
   describe 'PATCH /sources/update' do
     before do
-      #patch '/sources/update', :id => source.id, :author => user.id, :source => { :data => { :title => 'H2G2' } }
+      data = {
+        :id => source.id.to_s,
+        :book => {
+          :title => 'The Space Chronicles',
+          :contributors => [
+            {
+              :role => :author,
+              :first => 'Neil',
+              :middle => 'deGrasse',
+              :last => 'Tyson'
+            }
+          ],
+          :publisher => 'Random House',
+          :year => '2013'
+        }
+      }
+
+      patch '/sources/update', :author => user.id, :source => data
 
       source.reload
     end
 
-    it 'response should be redirect (see branch)'
-    it 'source should be updated (see branch)'
+    it 'response.should be_redirect'
+    it "Source.find(source.id).citation.attributes['publishers'].should eql 'Random House'"
   end
 
   describe 'DELETE /sources/destroy' do
+    let(:id) { source.id }
+
     before do
-      delete '/sources/destroy', :id => source.id
+      delete '/sources/destroy', :source => { :id => source.id }, :author => user.id
     end
 
-    it 'response should be redirect (see branch)'
-    it 'source should be destroyed (see branch)'
+    it { response.should be_redirect }
+    it { Source.find(id).deleted_at.should_not be_nil }
   end
 end

@@ -19,7 +19,7 @@ describe 'Comments' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include("#{project.url}") }
+    it { response.location.should include "#{project.url}" }
 
     it { note.comments.should_not be_blank }
   end
@@ -32,7 +32,7 @@ describe 'Comments' do
     end
 
     it { response.should be_redirect }
-    it { response.location.should include(project.url) }
+    it { response.location.should include project.url }
 
     it { Comment.find(id).should be_nil }
   end

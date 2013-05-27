@@ -16,13 +16,8 @@ describe 'Users' do
       post '/users/create', :user => { :name => 'Carl Sagan', :email => 'carl@sagan.org', :username => 'carlsagan' }, :password => { :password => 'foobar', :confirm => 'foobar' }
     end
 
-    describe 'redirects' do
-      it { response.should be_redirect }
-    end
-
-    describe 'database' do
-      it { User.find_by_email('carl@sagan.org').should_not be_nil }
-    end
+    it { response.should be_redirect }
+    it { User.find_by_email('carl@sagan.org').should_not be_nil }
   end
 
   describe 'GET /settings' do
@@ -40,14 +35,9 @@ describe 'Users' do
       user.reload
     end
 
-    describe 'redirects' do
-      it { response.should be_redirect }
-      it { response.location.should include('/settings') }
-    end
-
-    describe 'database' do
-      it { user.name.should eql('Neil deGrasse Tyson') }
-    end
+    it { response.should be_redirect }
+    it { response.location.should include '/settings' }
+    it { user.name.should eql('Neil deGrasse Tyson') }
   end
 
   describe 'DELETE /users/destroy' do
@@ -55,14 +45,9 @@ describe 'Users' do
       delete '/users/destroy', :user => { :id => user.id }
     end
 
-    describe 'redirects' do
-      it { response.should be_redirect }
-      it { response.location.should eql("#{site}/") }
-    end
-
-    describe 'database' do
-      it { User.find_by_name('Neil deGrasse Tyson').should be_nil }
-    end
+    it { response.should be_redirect }
+    it { response.location.should eql "#{site}/" }
+    it { User.find_by_name('Neil deGrasse Tyson').should be_nil }
   end
 
   describe 'GET /:username' do
@@ -70,8 +55,6 @@ describe 'Users' do
       get "/#{user.username}"
     end
 
-    it 'is ok' do
-      response.should be_ok
-    end
+    it { response.should be_ok }
   end
 end
