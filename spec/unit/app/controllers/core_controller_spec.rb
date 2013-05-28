@@ -8,4 +8,12 @@ describe 'Core' do
 
     it { response.should be_ok }
   end
+
+  describe 'GET /about' do
+    before do
+      get '/about'
+    end
+
+    it { response.should be_ok }
+  end
 end

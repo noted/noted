@@ -6,4 +6,8 @@ Noted::Web.controllers do
       render 'core/index'
     end
   end
+
+  get :about do
+    render 'core/about'
+  end
 end
