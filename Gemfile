@@ -8,7 +8,7 @@ gem 'puma', '2.0.1'
 
 gem 'rake', '~> 10.0.4'
 
-gem 'bson_ext', '~> 1.8.5'
+gem 'bson_ext', '~> 1.8.6', require: 'bson'
 gem 'mongo_mapper', '~> 0.12.0'
 
 gem 'dalli', '~> 2.6.3'

@@ -264,7 +264,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.1)
   better_errors (~> 0.8.0)
   binding_of_caller (~> 0.7.1)
-  bson_ext (~> 1.8.5)
+  bson_ext (~> 1.8.6)
   canable (~> 0.3.0)
   capybara (~> 2.1.0)
   cijoe!
