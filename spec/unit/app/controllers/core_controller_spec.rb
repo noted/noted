@@ -16,4 +16,12 @@ describe 'Core' do
 
     it { response.should be_ok }
   end
+
+  describe 'GET /support' do
+    before do
+      get '/support'
+    end
+
+    it { response.should be_ok }
+  end
 end

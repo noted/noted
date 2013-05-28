@@ -10,4 +10,8 @@ Noted::Web.controllers do
   get :about do
     render 'core/about'
   end
+
+  get :support do
+    render 'core/support'
+  end
 end
