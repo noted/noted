@@ -1,0 +1,21 @@
+.row
+  %h3 Reports
+  %ul.breadcrumbs
+    %li
+      %a{:href => url(:index)} Home
+    %li.current
+      %a{:href => url(:reports, :index)} Reports
+.row
+  %h4 Counts
+  %table
+    %thead
+      %tr
+        %th Collection
+        %th Count
+    %tbody
+      - @counts.each do |k, v|
+        %tr
+          %td
+            %pre= k.to_s.capitalize
+          %td= v
+

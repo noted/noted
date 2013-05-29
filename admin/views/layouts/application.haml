@@ -21,7 +21,7 @@
           / Title Area
           %li.name
             %h1
-              %a{:href => "#"} Noted.
+              %a{:href => url(:index)} Noted.
           / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
           %li.toggle-topbar.menu-icon
             %a{:href => "#"}
@@ -30,8 +30,10 @@
           / Left Nav Section
           %ul.left
             %li.divider
-            %li.active
+            %li
               %a{:href => url(:users, :index)} Users
+            %li
+              %a{:href => url(:reports, :index)} Reports
             %li.divider
           %ul.right
             %li.divider.hide-for-small

@@ -3,7 +3,7 @@ Noted::Admin.controllers do
     authorize!
   end
 
-  get :index do
+  get :index, :cache => true do
     render 'core/index'
   end
 end
