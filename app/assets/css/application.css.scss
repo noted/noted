@@ -59,6 +59,11 @@ h1 {
 	font-size: 1.25em;
 	text-shadow: 0 1px 0 rgba(darken($red, 10%), 0.2);
 	text-transform: none;
+
+	span {
+		color: lighten($red, 15%);
+		font-size: 0.75em;
+	}
 }
 
 h2 {
