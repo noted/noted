@@ -8,6 +8,8 @@ Noted is an academic research assistant and social network.
 
 **Thanks** &mdash; [Earl Procko](http://is.gd/pIAqSy), [Joshua Warchol](https://github.com/jwarchol), [Sujal Shah](https://github.com/sujal)
 
+**License** &mdash; [Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported License ](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
 <hr />
 
 ## Installation
