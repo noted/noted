@@ -25,7 +25,7 @@ class Activity
     where(:'$or' => [
       { :recipient_id => p },
       { :recipient_parent_id => p }
-    ]).order('created_at dsc')
+    ]).order('created_at dsc').limit(25)
   end
 
   def actor
