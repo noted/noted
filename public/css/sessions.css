@@ -1,0 +1,4020 @@
+@charset "UTF-8";
+/*
+	Noted.
+		file: css/lib/layouts/sessions.scss
+*/
+/*
+	Noted.
+		file: css/lib/_base.scss
+*/
+/* line 17, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/*
+	Noted.
+		file: css/lib/includes/_grid.scss
+*/
+/*
+	Noted.
+		file: css/lib/includes/_colors.scss
+*/
+/*
+	Noted.
+		file: css/lib/includes/_fonts.scss
+*/
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-FONTNAME.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSSocial";
+  src: url("/webfonts/ss-social/ss-social-circle.eot");
+  src: url("/webfonts/ss-social/ss-social-circle.eot?#iefix") format("embedded-opentype"), url("/webfonts/ss-social/ss-social-circle.woff") format("woff"), url("/webfonts/ss-social/ss-social-circle.ttf") format("truetype"), url("/webfonts/ss-social/ss-social-circle.svg#SSSocialCircle") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "SSSocial";
+  src: url("/webfonts/ss-social/ss-social-regular.eot");
+  src: url("/webfonts/ss-social/ss-social-regular.eot?#iefix") format("embedded-opentype"), url("/webfonts/ss-social/ss-social-regular.woff") format("woff"), url("/webfonts/ss-social/ss-social-regular.ttf") format("truetype"), url("/webfonts/ss-social/ss-social-regular.svg#SSSocialRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+/* line 36, ../../app/assets/css/lib/vendor/ss-social.scss */
+html:hover [class^="ss-"] {
+  -ms-zoom: 1; }
+
+/* line 42, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-icon, .ss-icon.ss-social, .ss-icon.ss-social-circle,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"][class*=" ss-social"]:before, [class*=" ss-"][class*=" ss-social"]:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"][class*=" ss-social"].right:after, [class*=" ss-"][class*=" ss-social"].right:after {
+  font-family: "SSSocial";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased; }
+
+/* line 60, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-icon.ss-social-circle,
+[class^="ss-"].ss-social-circle:before, [class*=" ss-"].ss-social-circle:before,
+[class^="ss-"].ss-social-circle.right:after, [class*=" ss-"].ss-social-circle.right:after {
+  font-weight: bold; }
+
+/* line 65, ../../app/assets/css/lib/vendor/ss-social.scss */
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before {
+  display: none;
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-facebook:before, .ss-facebook.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-twitter:before, .ss-twitter.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-linkedin:before, .ss-linkedin.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-googleplus:before, .ss-googleplus.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-appdotnet:before, .ss-appdotnet.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-zerply:before, .ss-zerply.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-reddit:before, .ss-reddit.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-tumblr:before, .ss-tumblr.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-wordpress:before, .ss-wordpress.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-blogger:before, .ss-blogger.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-posterous:before, .ss-posterous.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-youtube:before, .ss-youtube.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-vimeo:before, .ss-vimeo.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-flickr:before, .ss-flickr.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-instagram:before, .ss-instagram.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-fivehundredpx:before, .ss-fivehundredpx.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-pinterest:before, .ss-pinterest.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-svpply:before, .ss-svpply.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-readmill:before, .ss-readmill.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-dropbox:before, .ss-dropbox.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-pinboard:before, .ss-pinboard.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-dribbble:before, .ss-dribbble.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-behance:before, .ss-behance.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-github:before, .ss-github.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-octocat:before, .ss-octocat.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-stackoverflow:before, .ss-stackoverflow.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-paypal:before, .ss-paypal.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-kickstarter:before, .ss-kickstarter.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-foursquare:before, .ss-foursquare.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-yelp:before, .ss-yelp.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-skype:before, .ss-skype.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-rdio:before, .ss-rdio.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-spotify:before, .ss-spotify.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-lastfm:before, .ss-lastfm.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-soundcloud:before, .ss-soundcloud.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉'; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-like:before, .ss-like.right:after {
+  content: '👍'; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-rss:before, .ss-rss.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-share:before, .ss-share.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-apple:before, .ss-apple.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-microsoft:before, .ss-microsoft.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-windows:before, .ss-windows.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-android:before, .ss-android.right:after {
+  content: ''; }
+
+/* line 67, ../../app/assets/css/lib/vendor/ss-social.scss */
+.ss-blackberry:before, .ss-blackberry.right:after {
+  content: ''; }
+
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+*
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="webfonts/ss-standard.css" rel="stylesheet" />
+*/
+@font-face {
+  font-family: "SSStandard";
+  src: url("/webfonts/ss-standard/ss-standard.eot");
+  src: url("/webfonts/ss-standard/ss-standard.eot?#iefix") format("embedded-opentype"), url("/webfonts/ss-standard/ss-standard.woff") format("woff"), url("/webfonts/ss-standard/ss-standard.ttf") format("truetype"), url("/webfonts/ss-standard/ss-standard.svg#SSStandard") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* This triggers a redraw in IE to Fix IE8's :before content rendering. */
+/* line 25, ../../app/assets/css/lib/vendor/ss-standard.scss */
+html:hover [class^="ss-"] {
+  -ms-zoom: 1; }
+
+/* line 31, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-icon, .ss-icon.ss-standard,
+[class^="ss-"]:before, [class*=" ss-"]:before,
+[class^="ss-"].ss-standard:before, [class*=" ss-"].ss-standard:before,
+[class^="ss-"].right:after, [class*=" ss-"].right:after,
+[class^="ss-"].ss-standard.right:after, [class*=" ss-"].ss-standard.right:after {
+  font-family: "SSStandard";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased; }
+
+/* line 48, ../../app/assets/css/lib/vendor/ss-standard.scss */
+[class^="ss-"].right:before,
+[class*=" ss-"].right:before {
+  display: none;
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-cursor:before, .ss-cursor.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-crosshair:before, .ss-crosshair.right:after {
+  content: '⌖'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-search:before, .ss-search.right:after {
+  content: '🔎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-zoomin:before, .ss-zoomin.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-zoomout:before, .ss-zoomout.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-view:before, .ss-view.right:after {
+  content: '👀'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-attach:before, .ss-attach.right:after {
+  content: '📎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-link:before, .ss-link.right:after {
+  content: '🔗'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-move:before, .ss-move.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-write:before, .ss-write.right:after {
+  content: '✎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-writingdisabled:before, .ss-writingdisabled.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-erase:before, .ss-erase.right:after {
+  content: '✐'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-compose:before, .ss-compose.right:after {
+  content: '📝'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-lock:before, .ss-lock.right:after {
+  content: '🔒'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-unlock:before, .ss-unlock.right:after {
+  content: '🔓'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-key:before, .ss-key.right:after {
+  content: '🔑'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-backspace:before, .ss-backspace.right:after {
+  content: '⌫'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-ban:before, .ss-ban.right:after {
+  content: '🚫'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-trash:before, .ss-trash.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-target:before, .ss-target.right:after {
+  content: '◎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-tag:before, .ss-tag.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-bookmark:before, .ss-bookmark.right:after {
+  content: '🔖'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-flag:before, .ss-flag.right:after {
+  content: '⚑'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-like:before, .ss-like.right:after {
+  content: '👍'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-dislike:before, .ss-dislike.right:after {
+  content: '👎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-heart:before, .ss-heart.right:after {
+  content: '♥'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-halfheart:before, .ss-halfheart.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-star:before, .ss-star.right:after {
+  content: '⋆'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-halfstar:before, .ss-halfstar.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-sample:before, .ss-sample.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-crop:before, .ss-crop.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-layers:before, .ss-layers.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-fill:before, .ss-fill.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-stroke:before, .ss-stroke.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-phone:before, .ss-phone.right:after {
+  content: '📞'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-phonedisabled:before, .ss-phonedisabled.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-rss:before, .ss-rss.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-facetime:before, .ss-facetime.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-reply:before, .ss-reply.right:after {
+  content: '↩'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-send:before, .ss-send.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-mail:before, .ss-mail.right:after {
+  content: '✉'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-inbox:before, .ss-inbox.right:after {
+  content: '📥'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-chat:before, .ss-chat.right:after {
+  content: '💬'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-ellipsischat:before, .ss-ellipsischat.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-ellipsis:before, .ss-ellipsis.right:after {
+  content: '…'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-user:before, .ss-user.right:after {
+  content: '👤'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-femaleuser:before, .ss-femaleuser.right:after {
+  content: '👧'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-users:before, .ss-users.right:after {
+  content: '👥'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-cart:before, .ss-cart.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-creditcard:before, .ss-creditcard.right:after {
+  content: '💳'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-dollarsign:before, .ss-dollarsign.right:after {
+  content: '💲'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-barchart:before, .ss-barchart.right:after {
+  content: '📊'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-piechart:before, .ss-piechart.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-box:before, .ss-box.right:after {
+  content: '📦'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-home:before, .ss-home.right:after {
+  content: '⌂'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-buildings:before, .ss-buildings.right:after {
+  content: '🏢'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-warehouse:before, .ss-warehouse.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-globe:before, .ss-globe.right:after {
+  content: '🌎'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-navigate:before, .ss-navigate.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-compass:before, .ss-compass.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-signpost:before, .ss-signpost.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-map:before, .ss-map.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-location:before, .ss-location.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-pin:before, .ss-pin.right:after {
+  content: '📍'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-database:before, .ss-database.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-hdd:before, .ss-hdd.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-music:before, .ss-music.right:after {
+  content: '♫'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-mic:before, .ss-mic.right:after {
+  content: '🎤'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-volume:before, .ss-volume.right:after {
+  content: '🔈'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-lowvolume:before, .ss-lowvolume.right:after {
+  content: '🔉'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-highvolume:before, .ss-highvolume.right:after {
+  content: '🔊'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-airplay:before, .ss-airplay.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-camera:before, .ss-camera.right:after {
+  content: '📷'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-picture:before, .ss-picture.right:after {
+  content: '🌄'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-video:before, .ss-video.right:after {
+  content: '📹'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-play:before, .ss-play.right:after {
+  content: '▶'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-pause:before, .ss-pause.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-stop:before, .ss-stop.right:after {
+  content: '■'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-record:before, .ss-record.right:after {
+  content: '●'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-rewind:before, .ss-rewind.right:after {
+  content: '⏪'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-fastforward:before, .ss-fastforward.right:after {
+  content: '⏩'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-skipback:before, .ss-skipback.right:after {
+  content: '⏮'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-skipforward:before, .ss-skipforward.right:after {
+  content: '⏭'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-eject:before, .ss-eject.right:after {
+  content: '⏏'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-repeat:before, .ss-repeat.right:after {
+  content: '🔁'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-replay:before, .ss-replay.right:after {
+  content: '↺'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-shuffle:before, .ss-shuffle.right:after {
+  content: '🔀'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-book:before, .ss-book.right:after {
+  content: '📕'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-openbook:before, .ss-openbook.right:after {
+  content: '📖'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-notebook:before, .ss-notebook.right:after {
+  content: '📓'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-newspaper:before, .ss-newspaper.right:after {
+  content: '📰'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-grid:before, .ss-grid.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-rows:before, .ss-rows.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-columns:before, .ss-columns.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-thumbnails:before, .ss-thumbnails.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-filter:before, .ss-filter.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-desktop:before, .ss-desktop.right:after {
+  content: '💻'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-laptop:before, .ss-laptop.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-tablet:before, .ss-tablet.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-cell:before, .ss-cell.right:after {
+  content: '📱'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-battery:before, .ss-battery.right:after {
+  content: '🔋'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-highbattery:before, .ss-highbattery.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-mediumbattery:before, .ss-mediumbattery.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-lowbattery:before, .ss-lowbattery.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-emptybattery:before, .ss-emptybattery.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-lightbulb:before, .ss-lightbulb.right:after {
+  content: '💡'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-downloadcloud:before, .ss-downloadcloud.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-download:before, .ss-download.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-uploadcloud:before, .ss-uploadcloud.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-upload:before, .ss-upload.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-fork:before, .ss-fork.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-merge:before, .ss-merge.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-transfer:before, .ss-transfer.right:after {
+  content: '⇆'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-refresh:before, .ss-refresh.right:after {
+  content: '↻'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-sync:before, .ss-sync.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-loading:before, .ss-loading.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-wifi:before, .ss-wifi.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-connection:before, .ss-connection.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-file:before, .ss-file.right:after {
+  content: '📄'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-folder:before, .ss-folder.right:after {
+  content: '📁'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-quote:before, .ss-quote.right:after {
+  content: '“'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-text:before, .ss-text.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-font:before, .ss-font.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-print:before, .ss-print.right:after {
+  content: '⎙'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-fax:before, .ss-fax.right:after {
+  content: '📠'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-list:before, .ss-list.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-layout:before, .ss-layout.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-action:before, .ss-action.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-redirect:before, .ss-redirect.right:after {
+  content: '↪'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-expand:before, .ss-expand.right:after {
+  content: '⤢'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-contract:before, .ss-contract.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-help:before, .ss-help.right:after {
+  content: '❓'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-info:before, .ss-info.right:after {
+  content: 'ℹ'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-alert:before, .ss-alert.right:after {
+  content: '⚠'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-caution:before, .ss-caution.right:after {
+  content: '⛔'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-logout:before, .ss-logout.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-plus:before, .ss-plus.right:after {
+  content: '+'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-hyphen:before, .ss-hyphen.right:after {
+  content: '-'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-check:before, .ss-check.right:after {
+  content: '✓'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-delete:before, .ss-delete.right:after {
+  content: '␡'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-settings:before, .ss-settings.right:after {
+  content: '⚙'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-dashboard:before, .ss-dashboard.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-notifications:before, .ss-notifications.right:after {
+  content: '🔔'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-notificationsdisabled:before, .ss-notificationsdisabled.right:after {
+  content: '🔕'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-clock:before, .ss-clock.right:after {
+  content: '⏲'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-stopwatch:before, .ss-stopwatch.right:after {
+  content: '⏱'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-calendar:before, .ss-calendar.right:after {
+  content: '📅'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-addcalendar:before, .ss-addcalendar.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-removecalendar:before, .ss-removecalendar.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-checkcalendar:before, .ss-checkcalendar.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-deletecalendar:before, .ss-deletecalendar.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-briefcase:before, .ss-briefcase.right:after {
+  content: '💼'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-cloud:before, .ss-cloud.right:after {
+  content: '☁'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-droplet:before, .ss-droplet.right:after {
+  content: '💧'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-flask:before, .ss-flask.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-up:before, .ss-up.right:after {
+  content: '⬆'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-upright:before, .ss-upright.right:after {
+  content: '⬈'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-right:before, .ss-right.right:after {
+  content: '➡'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-downright:before, .ss-downright.right:after {
+  content: '⬊'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-down:before, .ss-down.right:after {
+  content: '⬇'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-downleft:before, .ss-downleft.right:after {
+  content: '⬋'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-left:before, .ss-left.right:after {
+  content: '⬅'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-upleft:before, .ss-upleft.right:after {
+  content: '⬉'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-navigateup:before, .ss-navigateup.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-navigateright:before, .ss-navigateright.right:after {
+  content: '▻'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-navigatedown:before, .ss-navigatedown.right:after {
+  content: ''; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-navigateleft:before, .ss-navigateleft.right:after {
+  content: '◅'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-directup:before, .ss-directup.right:after {
+  content: '▴'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-directright:before, .ss-directright.right:after {
+  content: '▹'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-dropdown:before, .ss-dropdown.right:after {
+  content: '▾'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-directleft:before, .ss-directleft.right:after {
+  content: '◃'; }
+
+/* line 50, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-retweet:before, .ss-retweet.right:after {
+  content: ''; }
+
+/* Legacy classes */
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-volumelow:before, .ss-volumelow.right:after {
+  content: '🔉'; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-volumehigh:before, .ss-volumehigh.right:after {
+  content: '🔊'; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-batteryhigh:before, .ss-batteryhigh.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-batterymedium:before, .ss-batterymedium.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-batterylow:before, .ss-batterylow.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-batteryempty:before, .ss-batteryempty.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-clouddownload:before, .ss-clouddownload.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-cloudupload:before, .ss-cloudupload.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-calendaradd:before, .ss-calendaradd.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-calendarremove:before, .ss-calendarremove.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-calendarcheck:before, .ss-calendarcheck.right:after {
+  content: ''; }
+
+/* line 53, ../../app/assets/css/lib/vendor/ss-standard.scss */
+.ss-calendardelete:before, .ss-calendardelete.right:after {
+  content: ''; }
+
+/*
+	Noted.
+		file: css/lib/includes/_icons.scss
+*/
+/* line 6, ../../app/assets/css/lib/includes/_icons.scss */
+i.ss-icon {
+  font-size: 0.85em;
+  position: relative; }
+  /* line 10, ../../app/assets/css/lib/includes/_icons.scss */
+  i.ss-icon.huge {
+    font-size: 4em; }
+
+/*
+	Noted.
+		file: css/includes/_vendor.scss
+*/
+/*
+	Autocomplete
+*/
+/* line 11, ../../app/assets/css/lib/includes/_vendor.scss */
+.autocomplete-suggestions {
+  background: #FFF;
+  border: 1px solid #bdc3c7;
+  overflow: auto; }
+  /* line 16, ../../app/assets/css/lib/includes/_vendor.scss */
+  .autocomplete-suggestions strong {
+    color: #e74c3c;
+    font-weight: normal; }
+
+/* line 22, ../../app/assets/css/lib/includes/_vendor.scss */
+.autocomplete-suggestion {
+  overflow: hidden;
+  padding: 2px 5px;
+  white-space: nowrap; }
+
+/* line 28, ../../app/assets/css/lib/includes/_vendor.scss */
+.autocomplete-selected {
+  background: #eceff0; }
+
+/*
+	Redactor
+*/
+/* line 38, ../../app/assets/css/lib/includes/_vendor.scss */
+.redactor_editor i {
+  font-size: 1em !important;
+  font-style: italic; }
+
+/*
+	Miscellaneous
+*/
+/* line 49, ../../app/assets/css/lib/includes/_vendor.scss */
+.ui-helper-hidden-accessible {
+  display: none !important; }
+
+/*
+	Noted.
+		file: css/lib/modules/_buttons.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_buttons.scss */
+a.btn, button, input[type="submit"], span.btn, .chzn-container-multi .chzn-choices .search-choice {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #adbabe;
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+  display: inline-block;
+  font: bold 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0.5em 0.75em;
+  text-transform: uppercase;
+  text-shadow: none; }
+  /* line 20, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn:hover, button:hover, input[type="submit"]:hover, span.btn:hover, .chzn-container-multi .chzn-choices .search-choice:hover {
+    background: #9faeb2;
+    color: #fefefe; }
+  /* line 25, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.full, button.full, input[type="submit"].full, span.btn.full, .chzn-container-multi .chzn-choices .search-choice.full {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    a.btn.full:after, button.full:after, input[type="submit"].full:after, span.btn.full:after, .chzn-container-multi .chzn-choices .search-choice.full:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 35, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.subtle, button.subtle, input[type="submit"].subtle, span.btn.subtle, .chzn-container-multi .chzn-choices .search-choice.subtle {
+    background: #e6eaeb; }
+    /* line 38, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.subtle:hover, button.subtle:hover, input[type="submit"].subtle:hover, span.btn.subtle:hover, .chzn-container-multi .chzn-choices .search-choice.subtle:hover {
+      background: #3498db; }
+  /* line 43, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.primary, a.btn.blue, button.primary, button.blue, input[type="submit"].primary, input[type="submit"].blue, span.btn.primary, span.btn.blue, .chzn-container-multi .chzn-choices .search-choice.primary, .chzn-container-multi .chzn-choices .search-choice.blue {
+    background: #3498db; }
+    /* line 46, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.primary:hover, a.btn.blue:hover, button.primary:hover, button.blue:hover, input[type="submit"].primary:hover, input[type="submit"].blue:hover, span.btn.primary:hover, span.btn.blue:hover, .chzn-container-multi .chzn-choices .search-choice.primary:hover, .chzn-container-multi .chzn-choices .search-choice.blue:hover {
+      background: #258cd1; }
+  /* line 51, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.turquoise, button.turquoise, input[type="submit"].turquoise, span.btn.turquoise, .chzn-container-multi .chzn-choices .search-choice.turquoise {
+    background: #1abc9c; }
+    /* line 54, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.turquoise:hover, button.turquoise:hover, input[type="submit"].turquoise:hover, span.btn.turquoise:hover, .chzn-container-multi .chzn-choices .search-choice.turquoise:hover {
+      background: #17a689; }
+  /* line 59, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.orange, button.orange, input[type="submit"].orange, span.btn.orange, .chzn-container-multi .chzn-choices .search-choice.orange {
+    background: #e67e22; }
+    /* line 62, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.orange:hover, button.orange:hover, input[type="submit"].orange:hover, span.btn.orange:hover, .chzn-container-multi .chzn-choices .search-choice.orange:hover {
+      background: #d67118; }
+  /* line 67, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.yellow, button.yellow, input[type="submit"].yellow, span.btn.yellow, .chzn-container-multi .chzn-choices .search-choice.yellow {
+    background: #f1c40f; }
+    /* line 70, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.yellow:hover, button.yellow:hover, input[type="submit"].yellow:hover, span.btn.yellow:hover, .chzn-container-multi .chzn-choices .search-choice.yellow:hover {
+      background: #f39c12; }
+  /* line 75, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.red, button.red, input[type="submit"].red, span.btn.red, .chzn-container-multi .chzn-choices .search-choice.red {
+    background: #e74c3c; }
+    /* line 78, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.red:hover, button.red:hover, input[type="submit"].red:hover, span.btn.red:hover, .chzn-container-multi .chzn-choices .search-choice.red:hover {
+      background: #c0392b; }
+  /* line 83, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.green, button.green, input[type="submit"].green, span.btn.green, .chzn-container-multi .chzn-choices .search-choice.green {
+    background: #2ecc71; }
+    /* line 86, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.green:hover, button.green:hover, input[type="submit"].green:hover, span.btn.green:hover, .chzn-container-multi .chzn-choices .search-choice.green:hover {
+      background: #27ae60; }
+  /* line 91, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.large, button.large, input[type="submit"].large, span.btn.large, .chzn-container-multi .chzn-choices .search-choice.large {
+    font-size: 1em; }
+  /* line 95, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.no-bg, button.no-bg, input[type="submit"].no-bg, span.btn.no-bg, .chzn-container-multi .chzn-choices .search-choice.no-bg {
+    background: transparent;
+    font-size: 1em;
+    padding: 0; }
+    /* line 100, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.no-bg.red, button.no-bg.red, input[type="submit"].no-bg.red, span.btn.no-bg.red, .chzn-container-multi .chzn-choices .search-choice.no-bg.red {
+      color: #e74c3c; }
+      /* line 103, ../../app/assets/css/lib/modules/_buttons.scss */
+      a.btn.no-bg.red:hover, button.no-bg.red:hover, input[type="submit"].no-bg.red:hover, span.btn.no-bg.red:hover, .chzn-container-multi .chzn-choices .search-choice.no-bg.red:hover {
+        color: #c0392b; }
+    /* line 108, ../../app/assets/css/lib/modules/_buttons.scss */
+    a.btn.no-bg i, button.no-bg i, input[type="submit"].no-bg i, span.btn.no-bg i, .chzn-container-multi .chzn-choices .search-choice.no-bg i {
+      position: relative;
+      top: 0; }
+  /* line 114, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn.no-style, button.no-style, input[type="submit"].no-style, span.btn.no-style, .chzn-container-multi .chzn-choices .search-choice.no-style {
+    background: transparent;
+    color: #e74c3c;
+    font-size: 1em;
+    padding: 0;
+    text-shadow: none;
+    text-transform: none;
+    font-weight: normal; }
+  /* line 124, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn i, button i, input[type="submit"] i, span.btn i, .chzn-container-multi .chzn-choices .search-choice i {
+    position: relative;
+    top: 1px; }
+  /* line 129, ../../app/assets/css/lib/modules/_buttons.scss */
+  a.btn span, button span, input[type="submit"] span, span.btn span, .chzn-container-multi .chzn-choices .search-choice span {
+    padding-left: 0.25em; }
+
+/* line 134, ../../app/assets/css/lib/modules/_buttons.scss */
+form.full {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  form.full:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 139, ../../app/assets/css/lib/modules/_buttons.scss */
+  form.full > .full {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    form.full > .full:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+/* line 144, ../../app/assets/css/lib/modules/_buttons.scss */
+button + a {
+  position: relative;
+  top: 1px; }
+
+/*
+	Noted.
+		file: css/lib/modules/_forms.scss
+*/
+/* line 7, ../../app/assets/css/lib/modules/_forms.scss */
+form.border {
+  border-top: 1px solid #e6eaeb;
+  margin-top: 1em;
+  padding-top: 1em; }
+/* line 13, ../../app/assets/css/lib/modules/_forms.scss */
+form input, form textarea, form select, form .chzn-container-multi .chzn-choices {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  background: #fefefe;
+  color: #444444;
+  font: 1em/1em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  outline: none;
+  padding: 0.5em; }
+  /* line 22, ../../app/assets/css/lib/modules/_forms.scss */
+  form input.small, form textarea.small, form select.small, form .chzn-container-multi .chzn-choices.small {
+    width: 1em; }
+/* line 27, ../../app/assets/css/lib/modules/_forms.scss */
+form input[type=text], form input[type=email], form input[type=password], form textarea, form select {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #e6eaeb; }
+  /* line 32, ../../app/assets/css/lib/modules/_forms.scss */
+  form input[type=text]:focus, form input[type=email]:focus, form input[type=password]:focus, form textarea:focus, form select:focus {
+    border: 2px solid #cad2d4; }
+/* line 37, ../../app/assets/css/lib/modules/_forms.scss */
+form table {
+  width: 100%; }
+  /* line 41, ../../app/assets/css/lib/modules/_forms.scss */
+  form table tr td {
+    padding: 0.25em 0.5em; }
+    /* line 44, ../../app/assets/css/lib/modules/_forms.scss */
+    form table tr td:first-child {
+      font-weight: bold;
+      width: 10%;
+      text-align: right; }
+  /* line 52, ../../app/assets/css/lib/modules/_forms.scss */
+  form table input {
+    width: 11.75em; }
+    /* line 55, ../../app/assets/css/lib/modules/_forms.scss */
+    form table input.large {
+      width: 25em; }
+/* line 64, ../../app/assets/css/lib/modules/_forms.scss */
+form textarea {
+  color: #444444;
+  font: 13px/2em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
+  line-height: 2rem; }
+/* line 70, ../../app/assets/css/lib/modules/_forms.scss */
+form.inline {
+  display: inline; }
+
+/*
+	Noted.
+		file: css/lib/modules/_flash.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_flash.scss */
+.flash {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #e6eaeb;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 1.75em;
+  padding: 0.75em; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .flash:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 15, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.error {
+    background-color: #f29f97; }
+  /* line 19, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.notice {
+    background-color: #2ecc71;
+    color: #eff1f2; }
+  /* line 24, ../../app/assets/css/lib/modules/_flash.scss */
+  .flash.warning {
+    background: #f1c40f;
+    border: 1px solid #f39c12; }
+
+/*
+		Noted.
+				file: css/lib/modules/_text.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_text.scss */
+.text, .redactor_box {
+  font: 16px/1.75em "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif; }
+  /* line 9, ../../app/assets/css/lib/modules/_text.scss */
+  .text h1, .text h2, .text h3, .text h4, .text h5, .text h6, .redactor_box h1, .redactor_box h2, .redactor_box h3, .redactor_box h4, .redactor_box h5, .redactor_box h6 {
+    margin: 1.5em 0; }
+  /* line 13, ../../app/assets/css/lib/modules/_text.scss */
+  .text h1, .redactor_box h1 {
+    font-size: 1.65em;
+    text-shadow: none; }
+  /* line 18, ../../app/assets/css/lib/modules/_text.scss */
+  .text h2, .redactor_box h2 {
+    font-size: 1.5em; }
+  /* line 22, ../../app/assets/css/lib/modules/_text.scss */
+  .text p, .redactor_box p {
+    margin-bottom: 1.5em; }
+  /* line 26, ../../app/assets/css/lib/modules/_text.scss */
+  .text pre, .redactor_box pre {
+    background: #e6eaeb;
+    font: 0.75em "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
+    padding: 1em; }
+  /* line 32, ../../app/assets/css/lib/modules/_text.scss */
+  .text ol, .text ul, .redactor_box ol, .redactor_box ul {
+    margin-bottom: 1.5em; }
+    /* line 35, ../../app/assets/css/lib/modules/_text.scss */
+    .text ol li, .text ul li, .redactor_box ol li, .redactor_box ul li {
+      margin-left: 1.5em;
+      padding-left: 0.5em; }
+  /* line 42, ../../app/assets/css/lib/modules/_text.scss */
+  .text ol li, .redactor_box ol li {
+    list-style-type: decimal; }
+  /* line 48, ../../app/assets/css/lib/modules/_text.scss */
+  .text ul li, .redactor_box ul li {
+    list-style-type: disc; }
+
+/* line 54, ../../app/assets/css/lib/modules/_text.scss */
+ul.bibliography {
+  font-family: "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif; }
+  /* line 57, ../../app/assets/css/lib/modules/_text.scss */
+  ul.bibliography li {
+    margin-left: 2em;
+    text-indent: -2em; }
+    /* line 61, ../../app/assets/css/lib/modules/_text.scss */
+    ul.bibliography li a {
+      color: #e6eaeb; }
+      /* line 64, ../../app/assets/css/lib/modules/_text.scss */
+      ul.bibliography li a:hover {
+        color: #e74c3c; }
+
+/*
+	Noted.
+		file: lib/modules/_comments.scss
+*/
+/* line 6, ../../app/assets/css/lib/modules/_comments.scss */
+footer.comments {
+  border-top: 2px solid #e6eaeb;
+  margin-top: 4em;
+  padding-top: 4em; }
+  /* line 11, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
+  /* line 15, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form, footer.comments article {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    footer.comments form:after, footer.comments article:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 18, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form aside, footer.comments article aside {
+      width: 11.76471%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 4.20168%; }
+    /* line 23, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form section, footer.comments article section {
+      width: 83.19328%;
+      float: right;
+      margin-right: 0;
+      *margin-left: -0.5em;
+      display: inline; }
+  /* line 28, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments article {
+    margin-bottom: 2em; }
+    /* line 31, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments article section {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      background: #eceff0; }
+      /* line 36, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section footer {
+        margin-top: 1em; }
+        /* line 39, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer span, footer.comments article section footer form {
+          display: inline-block; }
+        /* line 43, ../../app/assets/css/lib/modules/_comments.scss */
+        footer.comments article section footer form {
+          font-size: 0.75em;
+          float: right;
+          text-align: right; }
+      /* line 50, ../../app/assets/css/lib/modules/_comments.scss */
+      footer.comments article section .inner {
+        padding: 1em; }
+  /* line 57, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form textarea {
+    width: 98%; }
+  /* line 62, ../../app/assets/css/lib/modules/_comments.scss */
+  footer.comments form section footer {
+    margin-top: 0.5em; }
+    /* line 65, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form section footer * {
+      display: inline-block; }
+    /* line 69, ../../app/assets/css/lib/modules/_comments.scss */
+    footer.comments form section footer button {
+      float: right; }
+
+/* line 2, ../../app/assets/css/lib/modules/_tabs.scss */
+.tabs > header {
+  margin-bottom: 3em; }
+  /* line 5, ../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs > header ul, .tabs > header p {
+    display: inline-block; }
+  /* line 10, ../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs > header ul li {
+    display: inline-block;
+    margin: 0; }
+    /* line 15, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li:first-child a {
+      -moz-border-radius-topleft: 3px;
+      -webkit-border-top-left-radius: 3px;
+      border-top-left-radius: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      border-bottom-left-radius: 3px; }
+    /* line 22, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li:last-child a {
+      -moz-border-radius-topright: 3px;
+      -webkit-border-top-right-radius: 3px;
+      border-top-right-radius: 3px;
+      -moz-border-radius-bottomright: 3px;
+      -webkit-border-bottom-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+    /* line 29, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li.ui-state-active a {
+      background: #f1c40f; }
+      /* line 32, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li.ui-state-active a:hover {
+        background: #f39c12; }
+      /* line 36, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li.ui-state-active a span {
+        display: inline-block; }
+    /* line 42, ../../app/assets/css/lib/modules/_tabs.scss */
+    .tabs > header ul li a {
+      background: #adbabe;
+      border: none;
+      color: #fefefe;
+      cursor: pointer;
+      display: block;
+      font: bold 0.85em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+      margin: 0;
+      outline: none;
+      padding: 0.5em 0.75em;
+      text-transform: uppercase;
+      text-shadow: none; }
+      /* line 55, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a:hover {
+        background: #9faeb2;
+        color: #fefefe; }
+      /* line 60, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a i {
+        position: relative;
+        top: 1px; }
+      /* line 65, ../../app/assets/css/lib/modules/_tabs.scss */
+      .tabs > header ul li a span {
+        display: none; }
+  /* line 72, ../../app/assets/css/lib/modules/_tabs.scss */
+  .tabs > header p {
+    margin-left: 0.5em; }
+
+/*
+	Noted.
+		file: css/pages/_index.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_index.scss */
+#index .hero {
+  background: #e0ebe8;
+  color: #2c3e50;
+  padding: 4em 0;
+  margin-bottom: 4em; }
+  /* line 14, ../../app/assets/css/lib/pages/_index.scss */
+  #index .hero header {
+    margin-bottom: 2em; }
+    /* line 17, ../../app/assets/css/lib/pages/_index.scss */
+    #index .hero header h2 {
+      margin-bottom: 0.75em; }
+  /* line 22, ../../app/assets/css/lib/pages/_index.scss */
+  #index .hero .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #index .hero .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+/* line 28, ../../app/assets/css/lib/pages/_index.scss */
+#index .information h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em; }
+/* line 33, ../../app/assets/css/lib/pages/_index.scss */
+#index .information header {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e6eaeb;
+  margin-bottom: 4em;
+  padding-bottom: 4em;
+  text-align: center; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #index .information header:after {
+    content: "";
+    display: table;
+    clear: both; }
+/* line 42, ../../app/assets/css/lib/pages/_index.scss */
+#index .information section {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #index .information section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 45, ../../app/assets/css/lib/pages/_index.scss */
+  #index .information section .paragraph {
+    width: 70.58824%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+  /* line 49, ../../app/assets/css/lib/pages/_index.scss */
+  #index .information section aside {
+    width: 24.36975%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline; }
+    /* line 52, ../../app/assets/css/lib/pages/_index.scss */
+    #index .information section aside a {
+      font-size: 1.25em;
+      padding-bottom: 0.85em;
+      padding-top: 0.85em;
+      text-align: center;
+      width: 100%;
+      vertical-align: center; }
+
+/*
+	Noted.
+		file: css/pages/_user.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_user.scss */
+#user {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #user:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 11, ../../app/assets/css/lib/pages/_user.scss */
+  #user > aside {
+    width: 20.16807%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline;
+    font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+    /* line 17, ../../app/assets/css/lib/pages/_user.scss */
+    #user > aside figure img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    /* line 22, ../../app/assets/css/lib/pages/_user.scss */
+    #user > aside h2 {
+      border-top: 1px solid #e6eaeb;
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding-top: 1rem; }
+    /* line 29, ../../app/assets/css/lib/pages/_user.scss */
+    #user > aside hgroup {
+      margin-top: 1em; }
+      /* line 32, ../../app/assets/css/lib/pages/_user.scss */
+      #user > aside hgroup ul {
+        margin-bottom: 1em;
+        font-size: 0.85rem; }
+        /* line 37, ../../app/assets/css/lib/pages/_user.scss */
+        #user > aside hgroup ul li i {
+          margin-right: 2px;
+          position: relative;
+          top: 2px; }
+  /* line 47, ../../app/assets/css/lib/pages/_user.scss */
+  #user > section {
+    width: 74.78992%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline; }
+    /* line 50, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section h3 {
+      font-size: 0.95em;
+      text-transform: uppercase;
+      margin-bottom: 1em; }
+    /* line 56, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section .collaborations {
+      border-top: 1px solid #e6eaeb;
+      margin-top: 1.5em;
+      padding-top: 1.5em; }
+    /* line 62, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section > header {
+      margin-bottom: 1rem; }
+    /* line 66, ../../app/assets/css/lib/pages/_user.scss */
+    #user > section article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #e6eaeb; }
+      /* line 71, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article + article {
+        margin-top: 1.5em; }
+      /* line 75, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article header {
+        background: #e6eaeb; }
+        /* line 78, ../../app/assets/css/lib/pages/_user.scss */
+        #user > section article header .inner {
+          padding: 0.5em 0.65em; }
+      /* line 83, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 88, ../../app/assets/css/lib/pages/_user.scss */
+      #user > section article footer {
+        border-top: 1px solid #e6eaeb;
+        color: #d8dee0;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
+  /* line 97, ../../app/assets/css/lib/pages/_user.scss */
+  #user .go {
+    margin-top: 1em; }
+
+/*
+	Noted.
+		file: css/pages/_join.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_join.scss */
+#join {
+  margin-top: 3em;
+  text-align: center; }
+  /* line 10, ../../app/assets/css/lib/pages/_join.scss */
+  #join header {
+    margin-bottom: 2em; }
+    /* line 13, ../../app/assets/css/lib/pages/_join.scss */
+    #join header h2 {
+      margin-bottom: 0.5em; }
+  /* line 20, ../../app/assets/css/lib/pages/_join.scss */
+  #join section input[type=text], #join section input[type=email], #join section input[type=password] {
+    width: 35%; }
+  /* line 25, ../../app/assets/css/lib/pages/_join.scss */
+  #join section footer {
+    margin-top: 1em; }
+  /* line 30, ../../app/assets/css/lib/pages/_join.scss */
+  #join .flash {
+    margin: 0 auto 1em; }
+
+/*
+	Noted.
+		file: css/lib/pages/_new-project.scss
+*/
+/* line 6, ../../app/assets/css/lib/pages/_new-project.scss */
+#new-project {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4em auto; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #new-project:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 12, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project header h2 {
+    margin-bottom: 1rem; }
+  /* line 17, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project input[type=text] {
+    margin-bottom: 0.5em;
+    width: 45%; }
+  /* line 22, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project textarea {
+    height: 6rem;
+    width: 65%; }
+  /* line 27, ../../app/assets/css/lib/pages/_new-project.scss */
+  #new-project footer {
+    margin-top: 0.5em; }
+
+/*
+	Noted.
+		file: css/pages/_user.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_project.scss */
+#project > header {
+  background: #f3f7f8;
+  border-bottom: 5px solid #edf2f4; }
+  /* line 11, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3em 0; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > header .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 17, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header hgroup {
+    width: 74.78992%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 25, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup img {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      border: 3px solid #e6eaeb;
+      max-width: 4%; }
+      /* line 31, ../../app/assets/css/lib/pages/_project.scss */
+      #project > header hgroup img:hover {
+        border: 3px solid #dbe0e2; }
+    /* line 36, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header hgroup p {
+      font-family: "ff-meta-serif-web-pro", utopia-std, adelle, Georgia, Times New Roman, serif;
+      margin-top: 0.5em; }
+  /* line 42, ../../app/assets/css/lib/pages/_project.scss */
+  #project > header aside {
+    width: 24.36975%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline;
+    text-align: right; }
+    /* line 47, ../../app/assets/css/lib/pages/_project.scss */
+    #project > header aside p {
+      position: relative;
+      bottom: 3px; }
+/* line 54, ../../app/assets/css/lib/pages/_project.scss */
+#project .description {
+  background: #edf2f4;
+  padding: 2rem 0; }
+  /* line 59, ../../app/assets/css/lib/pages/_project.scss */
+  #project .description .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project .description .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 62, ../../app/assets/css/lib/pages/_project.scss */
+    #project .description .inner i.ss-icon {
+      font-size: 0.75em;
+      margin-right: 0.25em;
+      position: relative; }
+    /* line 68, ../../app/assets/css/lib/pages/_project.scss */
+    #project .description .inner a:hover {
+      cursor: pointer; }
+    /* line 72, ../../app/assets/css/lib/pages/_project.scss */
+    #project .description .inner .text {
+      width: 74.78992%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline;
+      padding-right: 25.21008%; }
+      /* line 76, ../../app/assets/css/lib/pages/_project.scss */
+      #project .description .inner .text.hidden {
+        display: none; }
+      /* line 80, ../../app/assets/css/lib/pages/_project.scss */
+      #project .description .inner .text.display {
+        display: block;
+        margin-top: 1em; }
+/* line 88, ../../app/assets/css/lib/pages/_project.scss */
+#project .activity {
+  border-bottom: 2px solid #edf2f4;
+  margin-bottom: 2rem;
+  padding: 1rem 0; }
+  /* line 93, ../../app/assets/css/lib/pages/_project.scss */
+  #project .activity .inner {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project .activity .inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 96, ../../app/assets/css/lib/pages/_project.scss */
+    #project .activity .inner section {
+      width: 83.19328%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+      /* line 99, ../../app/assets/css/lib/pages/_project.scss */
+      #project .activity .inner section a {
+        color: #bdc3c7; }
+      /* line 103, ../../app/assets/css/lib/pages/_project.scss */
+      #project .activity .inner section footer {
+        color: #e6eaeb;
+        font-size: 0.95em; }
+    /* line 109, ../../app/assets/css/lib/pages/_project.scss */
+    #project .activity .inner aside {
+      width: 15.96639%;
+      float: right;
+      margin-right: 0;
+      *margin-left: -0.5em;
+      display: inline; }
+      /* line 112, ../../app/assets/css/lib/pages/_project.scss */
+      #project .activity .inner aside p {
+        display: block;
+        float: right; }
+/* line 120, ../../app/assets/css/lib/pages/_project.scss */
+#project > section {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 6em;
+  margin-top: 5em; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #project > section:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 126, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section h3 {
+    margin-bottom: 1em; }
+  /* line 131, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section table input {
+    width: 65%; }
+  /* line 135, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section table textarea {
+    height: 10em;
+    width: 95%; }
+  /* line 144, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section form:last-child p {
+    margin-bottom: 0.5em; }
+  /* line 150, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section .notes header, #project > section .sources header {
+    *zoom: 1;
+    max-width: 59.5em;
+    _width: 59.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding: 0; }
+    /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    #project > section .notes header:after, #project > section .sources header:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 156, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header hgroup, #project > section .sources header hgroup {
+      width: 83.19328%;
+      float: left;
+      margin-right: 0.84034%;
+      display: inline; }
+    /* line 160, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header aside, #project > section .sources header aside {
+      width: 15.96639%;
+      float: right;
+      margin-right: 0;
+      *margin-left: -0.5em;
+      display: inline;
+      font-size: 0.85rem;
+      text-align: right; }
+  /* line 169, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section .notes > section > header, #project > section .sources > section > header {
+    margin-bottom: 1em; }
+  /* line 175, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section .notes {
+    width: 57.98319%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+    /* line 179, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header h3, #project > section .notes header ul {
+      display: inline-block;
+      float: left; }
+    /* line 184, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header h3 {
+      padding-right: 0.5em; }
+    /* line 188, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes header ul {
+      font-size: 0.75em; }
+      /* line 191, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes header ul li {
+        display: inline-block;
+        padding-left: 0.25em; }
+    /* line 198, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .notes article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #e6eaeb; }
+      /* line 203, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article + article {
+        margin-top: 1.5em; }
+      /* line 207, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article header {
+        background: #e6eaeb; }
+        /* line 210, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header .inner {
+          padding: 0.5em 0.65em; }
+        /* line 214, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header hgroup {
+          padding-bottom: 0.5em; }
+        /* line 218, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article header a.btn, #project > section .notes article header button {
+          background: transparent;
+          color: #d8dee0;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 224, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn + a, #project > section .notes article header button + a {
+            margin-left: 0.5em; }
+          /* line 229, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.view:hover, #project > section .notes article header button.view:hover {
+            color: #9b59b6; }
+          /* line 235, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.edit:hover, #project > section .notes article header button.edit:hover {
+            color: #1abc9c; }
+          /* line 241, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article header a.btn.trash:hover, #project > section .notes article header button.trash:hover {
+            color: #e74c3c; }
+      /* line 248, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 253, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .notes article footer {
+        border-top: 1px solid #e6eaeb;
+        color: #d8dee0;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
+        /* line 259, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer .inner {
+          overflow: hidden;
+          *zoom: 1; }
+        /* line 263, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer aside {
+          float: left; }
+        /* line 267, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .notes article footer section {
+          font-size: 0.85em;
+          float: right;
+          margin: 0;
+          padding-right: 0;
+          text-align: right; }
+          /* line 275, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .notes article footer section ul li {
+            display: inline-block; }
+  /* line 292, ../../app/assets/css/lib/pages/_project.scss */
+  #project > section .sources {
+    width: 32.77311%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline; }
+    /* line 296, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header h3, #project > section .sources header ul {
+      display: inline-block;
+      float: left; }
+    /* line 301, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header h3 {
+      padding-right: 0.5em; }
+    /* line 305, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources header ul {
+      font-size: 0.75em; }
+      /* line 308, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources header ul li {
+        display: inline-block;
+        padding-left: 0.25em; }
+    /* line 316, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources > footer a.btn {
+      display: block;
+      margin: 0.5em auto;
+      text-align: center;
+      width: 90%; }
+    /* line 324, ../../app/assets/css/lib/pages/_project.scss */
+    #project > section .sources article {
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+      border: 2px solid #e6eaeb; }
+      /* line 329, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article + article {
+        margin-top: 1.5em; }
+      /* line 333, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article header {
+        background: #e6eaeb; }
+        /* line 336, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header .inner {
+          padding: 0.5em 0.65em; }
+        /* line 340, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header hgroup {
+          padding-bottom: 0.5em; }
+        /* line 344, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article header a.btn, #project > section .sources article header button {
+          background: transparent;
+          color: #d8dee0;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 350, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn + a, #project > section .sources article header button + a {
+            margin-left: 0.5em; }
+          /* line 355, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn.view:hover, #project > section .sources article header button.view:hover {
+            color: #9b59b6; }
+          /* line 361, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn.edit:hover, #project > section .sources article header button.edit:hover {
+            color: #1abc9c; }
+          /* line 367, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article header a.btn.trash:hover, #project > section .sources article header button.trash:hover {
+            color: #e74c3c; }
+      /* line 374, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article section {
+        margin: 1em 0;
+        padding: 0 0.65em; }
+      /* line 379, ../../app/assets/css/lib/pages/_project.scss */
+      #project > section .sources article footer {
+        border-top: 1px solid #e6eaeb;
+        color: #d8dee0;
+        font-size: 0.85em;
+        padding: 0.25em 0.65em; }
+        /* line 385, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer .inner {
+          overflow: hidden;
+          *zoom: 1; }
+        /* line 389, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer a.btn, #project > section .sources article footer button {
+          background: transparent;
+          color: #d8dee0;
+          font-size: 1.05rem;
+          padding: 0; }
+          /* line 395, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn + a, #project > section .sources article footer button + a {
+            margin-left: 0.5em; }
+          /* line 400, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn.view:hover, #project > section .sources article footer button.view:hover {
+            color: #9b59b6; }
+          /* line 406, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn.edit:hover, #project > section .sources article footer button.edit:hover {
+            color: #1abc9c; }
+          /* line 412, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer a.btn.trash:hover, #project > section .sources article footer button.trash:hover {
+            color: #e74c3c; }
+        /* line 418, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer aside {
+          float: left; }
+        /* line 422, ../../app/assets/css/lib/pages/_project.scss */
+        #project > section .sources article footer section {
+          font-size: 0.85em;
+          float: right;
+          margin: 0;
+          text-align: right; }
+          /* line 429, ../../app/assets/css/lib/pages/_project.scss */
+          #project > section .sources article footer section ul li {
+            display: inline-block; }
+/* line 447, ../../app/assets/css/lib/pages/_project.scss */
+#project .collaborators {
+  margin-top: 2em; }
+  /* line 450, ../../app/assets/css/lib/pages/_project.scss */
+  #project .collaborators h4 {
+    margin-bottom: 1rem; }
+  /* line 456, ../../app/assets/css/lib/pages/_project.scss */
+  #project .collaborators ul li img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 0.25rem;
+    width: 3%; }
+  /* line 463, ../../app/assets/css/lib/pages/_project.scss */
+  #project .collaborators ul li span {
+    position: relative;
+    bottom: 0.5em; }
+    /* line 467, ../../app/assets/css/lib/pages/_project.scss */
+    #project .collaborators ul li span button {
+      font-size: 0.75em; }
+  /* line 474, ../../app/assets/css/lib/pages/_project.scss */
+  #project .collaborators form {
+    margin-top: 1em; }
+
+/*
+	Noted.
+		file: css/pages/_note.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_note.scss */
+section#note .textbox {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #e6eaeb;
+  padding: 0; }
+  /* line 13, ../../app/assets/css/lib/pages/_note.scss */
+  section#note .textbox input, section#note .textbox textarea {
+    border: none;
+    margin: 0;
+    padding: 0; }
+  /* line 19, ../../app/assets/css/lib/pages/_note.scss */
+  section#note .textbox header {
+    border-bottom: 2px solid #e6eaeb; }
+    /* line 22, ../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox header input {
+      padding: 1rem;
+      width: 95%; }
+  /* line 29, ../../app/assets/css/lib/pages/_note.scss */
+  section#note .textbox section textarea {
+    padding: 1rem;
+    width: 95%;
+    max-width: 95%;
+    min-height: 20em; }
+  /* line 37, ../../app/assets/css/lib/pages/_note.scss */
+  section#note .textbox footer {
+    border-top: 2px solid #e6eaeb;
+    padding: 0.5em;
+    cursor: text; }
+    /* line 42, ../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer * {
+      display: inline-block; }
+    /* line 46, ../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer span.btn {
+      font-size: 0.75em; }
+      /* line 49, ../../app/assets/css/lib/pages/_note.scss */
+      section#note .textbox footer span.btn a:hover {
+        color: #e74c3c; }
+    /* line 54, ../../app/assets/css/lib/pages/_note.scss */
+    section#note .textbox footer input {
+      width: 25%; }
+/* line 60, ../../app/assets/css/lib/pages/_note.scss */
+section#note footer {
+  margin-top: 1em; }
+  /* line 64, ../../app/assets/css/lib/pages/_note.scss */
+  section#note footer p:first-child {
+    margin-bottom: 1em; }
+    /* line 67, ../../app/assets/css/lib/pages/_note.scss */
+    section#note footer p:first-child select {
+      width: 100%; }
+  /* line 72, ../../app/assets/css/lib/pages/_note.scss */
+  section#note footer p:last-child {
+    text-align: right; }
+  /* line 77, ../../app/assets/css/lib/pages/_note.scss */
+  section#note footer a.btn {
+    position: relative;
+    top: 1px; }
+/* line 87, ../../app/assets/css/lib/pages/_note.scss */
+section#note #view header {
+  margin-bottom: 1em; }
+/* line 91, ../../app/assets/css/lib/pages/_note.scss */
+section#note #view footer {
+  margin-top: 4em; }
+  /* line 94, ../../app/assets/css/lib/pages/_note.scss */
+  section#note #view footer h4 {
+    margin-bottom: 0.5em; }
+/* line 101, ../../app/assets/css/lib/pages/_note.scss */
+section#note #edit span.status {
+  font-size: 0.85em;
+  margin-right: 0.25em; }
+  /* line 105, ../../app/assets/css/lib/pages/_note.scss */
+  section#note #edit span.status.error {
+    color: #e74c3c; }
+
+/*
+	Noted.
+		file: css/pages/_source.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_source.scss */
+section#source > article {
+  border-bottom: 2px solid #e0ebe8;
+  padding-bottom: 2em;
+  margin-bottom: 2em; }
+/* line 13, ../../app/assets/css/lib/pages/_source.scss */
+section#source form.manual {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  section#source form.manual:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 16, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual > aside {
+    width: 15.96639%;
+    float: left;
+    margin-right: 0.84034%;
+    display: inline; }
+  /* line 20, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual > section {
+    width: 83.19328%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -0.5em;
+    display: inline; }
+  /* line 26, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table tr.border {
+    border-bottom: 2px solid #e6eaeb; }
+    /* line 29, ../../app/assets/css/lib/pages/_source.scss */
+    section#source form.manual table tr.border td {
+      padding-bottom: 1em; }
+    /* line 34, ../../app/assets/css/lib/pages/_source.scss */
+    section#source form.manual table tr.border + tr td {
+      padding-top: 1em; }
+  /* line 41, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table a.btn[data-action] {
+    font-size: 0.65em;
+    margin-top: 0.5em; }
+  /* line 47, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table input.full {
+    width: 92.5%; }
+  /* line 51, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual table input.third {
+    width: 28.4%; }
+  /* line 58, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors select {
+    width: 16%; }
+  /* line 63, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.first {
+    width: 25%; }
+  /* line 67, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.middle {
+    width: 5%; }
+  /* line 71, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.last {
+    width: 30%; }
+  /* line 75, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors input.suffix {
+    width: 5%; }
+  /* line 80, ../../app/assets/css/lib/pages/_source.scss */
+  section#source form.manual ul.contributors a {
+    font-size: 0.5em;
+    margin-left: 0.25em; }
+
+/*
+  Noted.
+    file: css/pages/_user.scss
+*/
+/* line 7, ../../app/assets/css/lib/pages/_activity.scss */
+#project ul.activities {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #project ul.activities:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 13, ../../app/assets/css/lib/pages/_activity.scss */
+  #project ul.activities li + li {
+    margin-top: 1em; }
+
+/* line 1, ../../app/assets/css/lib/pages/_page.scss */
+.page {
+  *zoom: 1;
+  max-width: 59.5em;
+  _width: 59.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 4em auto; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 6, ../../app/assets/css/lib/pages/_page.scss */
+  .page header {
+    margin-bottom: 1em; }
+
+/* @group Base */
+/* line 2, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container {
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  *display: inline; }
+
+/* line 9, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-drop {
+  background: #fff;
+  border: 1px solid #e6eaeb;
+  border-top: 0;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  /*-webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15);
+  -moz-box-shadow   : 0 4px 5px rgba(0,0,0,.15);
+  box-shadow        : 0 4px 5px rgba(0,0,0,.15);*/
+  z-index: 1010; }
+
+/* @end */
+/* @group Single Chosen */
+/* line 24, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single {
+  background-color: #ffffff;
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+  background-image: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-image: linear-gradient(#ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #aaaaaa;
+  -webkit-box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 23px;
+  line-height: 24px;
+  padding: 0.5em;
+  color: #444444;
+  text-decoration: none; }
+
+/* line 52, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-default {
+  color: #999; }
+
+/* line 55, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single span {
+  margin-right: 26px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* line 64, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single abbr {
+  display: block;
+  position: absolute;
+  right: 26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  font-size: 1px;
+  background: url("/img/chosen-sprite.png") -42px 1px no-repeat; }
+
+/* line 74, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single abbr:hover {
+  background-position: -42px -10px; }
+
+/* line 77, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single.chzn-disabled .chzn-single abbr:hover {
+  background-position: -42px -10px; }
+
+/* line 80, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px; }
+
+/* line 88, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-single div b {
+  background: url("/img/chosen-sprite.png") no-repeat 0px 2px;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* line 94, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-search {
+  padding: 3px 4px;
+  position: relative;
+  margin: 0;
+  white-space: nowrap;
+  z-index: 1010; }
+
+/* line 101, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-search input {
+  background: white url("/img/chosen-sprite.png") no-repeat 100% -20px;
+  background: url("/img/chosen-sprite.png") no-repeat 100% -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
+  background: url("/img/chosen-sprite.png") no-repeat 100% -20px, -webkit-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat 100% -20px, -moz-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat 100% -20px, -o-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat 100% -20px, linear-gradient(#eeeeee 1%, #ffffff 15%);
+  margin: 1px 0;
+  padding: 4px 20px 4px 5px;
+  outline: 0;
+  border: 1px solid #aaa;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1em; }
+
+/* line 115, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single .chzn-drop {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+
+/* @end */
+/* line 125, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single-nosearch .chzn-search input {
+  position: absolute;
+  left: -9000px; }
+
+/* @group Multi Chosen */
+/* line 131, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices {
+  /*background-color: #fff;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: linear-gradient(#eeeeee 1%, #ffffff 15%);*/
+  border: 2px solid #e6eaeb;
+  margin: 0;
+  padding: 0;
+  cursor: text;
+  overflow: hidden;
+  height: auto !important;
+  height: 1%;
+  position: relative; }
+
+/* line 147, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices li {
+  float: left;
+  list-style: none; }
+
+/* line 151, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-field {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0; }
+
+/* line 156, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-field input {
+  color: #666;
+  background: transparent !important;
+  border: 0 !important;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  height: 15px;
+  padding: 5px;
+  margin: 1px 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+/* line 170, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-field .default {
+  color: #999; }
+
+/* line 173, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice {
+  /*-webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  background-color: #e4e4e4;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  -moz-box-shadow   : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
+  box-shadow        : 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);*/
+  padding-right: 20px;
+  margin: 3px 0 3px 5px;
+  position: relative;
+  cursor: default; }
+
+/* line 198, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice.search-choice-disabled {
+  background-color: #e4e4e4;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -ms-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  color: #666;
+  border: 1px solid #cccccc;
+  padding-right: 5px; }
+
+/* line 211, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice-focus {
+  background: #d4d4d4; }
+
+/* line 214, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+  display: block;
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  font-size: 1px;
+  background: url("/img/chosen-sprite.png") -42px 1px no-repeat; }
+
+/* line 224, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {
+  background-position: -42px -10px; }
+
+/* line 227, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {
+  background-position: -42px -10px; }
+
+/* @end */
+/* @group Results */
+/* line 233, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results {
+  margin: 0 4px 4px 0;
+  max-height: 240px;
+  padding: 0 0 0 4px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/* line 242, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-results {
+  margin: -1px 0 0;
+  padding: 0; }
+
+/* line 246, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results li {
+  display: none;
+  line-height: 15px;
+  padding: 5px 6px;
+  margin: 0;
+  list-style: none; }
+
+/* line 253, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .active-result {
+  cursor: pointer;
+  display: list-item; }
+
+/* line 257, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .highlighted {
+  /*background-color: #3875d7;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
+  background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+  color: #fff;*/ }
+
+/* line 267, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results li em {
+  background: #feffde;
+  font-style: normal; }
+
+/* line 271, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .highlighted em {
+  background: transparent; }
+
+/* line 274, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .no-results {
+  background: #f4f4f4;
+  display: list-item; }
+
+/* line 278, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .group-result {
+  cursor: default;
+  color: #999;
+  font-weight: bold; }
+
+/* line 283, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results .group-option {
+  padding-left: 15px; }
+
+/* line 286, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-multi .chzn-drop .result-selected {
+  display: none; }
+
+/* line 289, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results-scroll {
+  background: white;
+  margin: 0 4px;
+  position: absolute;
+  text-align: center;
+  width: 321px;
+  /* This should by dynamic with js */
+  z-index: 1; }
+
+/* line 297, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results-scroll span {
+  display: inline-block;
+  height: 17px;
+  text-indent: -5000px;
+  width: 9px; }
+
+/* line 303, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results-scroll-down {
+  bottom: 0; }
+
+/* line 306, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results-scroll-down span {
+  background: url("/img/chosen-sprite.png") no-repeat -4px -3px; }
+
+/* line 309, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container .chzn-results-scroll-up span {
+  background: url("/img/chosen-sprite.png") no-repeat -22px -3px; }
+
+/* @end */
+/* @group Active  */
+/* line 315, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-single {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #5897fb; }
+
+/* line 321, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-single-with-drop {
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+  -moz-box-shadow: 0 1px 0 #fff inset;
+  box-shadow: 0 1px 0 #fff inset;
+  background-color: #eee;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #eeeeee), color-stop(80%, white));
+  background-image: -webkit-linear-gradient(top, #eeeeee 20%, white 80%);
+  background-image: -moz-linear-gradient(top, #eeeeee 20%, white 80%);
+  background-image: -o-linear-gradient(top, #eeeeee 20%, white 80%);
+  background-image: linear-gradient(#eeeeee 20%, #ffffff 80%);
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+/* line 340, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-single-with-drop div {
+  background: transparent;
+  border-left: none; }
+
+/* line 344, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-single-with-drop div b {
+  background-position: -18px 2px; }
+
+/* line 347, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-choices {
+  /*-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  border: 1px solid #5897fb;*/ }
+
+/* line 353, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-active .chzn-choices .search-field input {
+  color: #111 !important; }
+
+/* @end */
+/* @group Disabled Support */
+/* line 359, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-disabled {
+  cursor: default;
+  opacity: 0.5 !important; }
+
+/* line 363, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-disabled .chzn-single {
+  cursor: default; }
+
+/* line 366, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-disabled .chzn-choices .search-choice .search-choice-close {
+  cursor: default; }
+
+/* @group Right to Left */
+/* line 371, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl {
+  text-align: right; }
+
+/* line 372, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-single {
+  padding: 0 8px 0 0;
+  overflow: visible; }
+
+/* line 373, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-single span {
+  margin-left: 26px;
+  margin-right: 0;
+  direction: rtl; }
+
+/* line 375, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-single div {
+  left: 3px;
+  right: auto; }
+
+/* line 376, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-single abbr {
+  left: 26px;
+  right: auto; }
+
+/* line 380, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-choices .search-field input {
+  direction: rtl; }
+
+/* line 381, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-choices li {
+  float: right; }
+
+/* line 382, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-choices .search-choice {
+  padding: 3px 5px 3px 19px;
+  margin: 3px 5px 3px 0; }
+
+/* line 383, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-choices .search-choice .search-choice-close {
+  left: 4px;
+  right: auto; }
+
+/* line 384, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl.chzn-container-single .chzn-results {
+  margin: 0 0 4px 4px;
+  padding: 0 4px 0 0; }
+
+/* line 385, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-results .group-option {
+  padding-left: 0;
+  padding-right: 15px; }
+
+/* line 386, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl.chzn-container-active .chzn-single-with-drop div {
+  border-right: none; }
+
+/* line 387, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-rtl .chzn-search input {
+  background: white url("/img/chosen-sprite.png") no-repeat -30px -20px;
+  background: url("/img/chosen-sprite.png") no-repeat -30px -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
+  background: url("/img/chosen-sprite.png") no-repeat -30px -20px, -webkit-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat -30px -20px, -moz-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat -30px -20px, -o-linear-gradient(top, #eeeeee 1%, white 15%);
+  background: url("/img/chosen-sprite.png") no-repeat -30px -20px, linear-gradient(#eeeeee 1%, #ffffff 15%);
+  padding: 4px 5px 4px 20px;
+  direction: rtl; }
+
+/* line 397, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single.chzn-rtl .chzn-single div b {
+  background-position: 6px 2px; }
+
+/* line 400, ../../app/assets/css/lib/vendor/chosen.scss */
+.chzn-container-single.chzn-rtl .chzn-single-with-drop div b {
+  background-position: -12px 2px; }
+
+/* @end */
+/* @group Retina compatibility */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+  /* line 407, ../../app/assets/css/lib/vendor/chosen.scss */
+  .chzn-rtl .chzn-search input, .chzn-container-single .chzn-single abbr, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-search input, .chzn-container-multi .chzn-choices .search-choice .search-choice-close, .chzn-container .chzn-results-scroll-down span, .chzn-container .chzn-results-scroll-up span {
+    background-image: url("/img/chosen-sprite@2x.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: 52px 37px !important; } }
+/* @end */
+/* line 1, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy {
+  font: 12px "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: absolute;
+  padding: 5px;
+  z-index: 100000; }
+
+/* line 2, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-inner {
+  background-color: #000;
+  color: #FFF;
+  max-width: 200px;
+  padding: 5px 8px 4px 8px;
+  text-align: center; }
+
+/* Rounded corners */
+/* line 5, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-inner {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+
+/* Uncomment for shadow */
+/*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+/* line 10, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: 5px solid #000; }
+
+/* Rules to colour arrows */
+/* line 13, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-n {
+  border-bottom-color: #000; }
+
+/* line 14, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-s {
+  border-top-color: #000; }
+
+/* line 15, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-e {
+  border-left-color: #000; }
+
+/* line 16, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-arrow-w {
+  border-right-color: #000; }
+
+/* line 18, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-n .tipsy-arrow {
+  top: 0px;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 19, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-nw .tipsy-arrow {
+  top: 0;
+  left: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 20, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-ne .tipsy-arrow {
+  top: 0;
+  right: 10px;
+  border-bottom-style: solid;
+  border-top: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 21, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-s .tipsy-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 22, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-sw .tipsy-arrow {
+  bottom: 0;
+  left: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 23, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-se .tipsy-arrow {
+  bottom: 0;
+  right: 10px;
+  border-top-style: solid;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent; }
+
+/* line 24, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-e .tipsy-arrow {
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-left-style: solid;
+  border-right: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+/* line 25, ../../app/assets/css/lib/vendor/tipsy.scss */
+.tipsy-w .tipsy-arrow {
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  border-right-style: solid;
+  border-left: none;
+  border-top-color: transparent;
+  border-bottom-color: transparent; }
+
+/* line 1, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_box {
+  position: relative;
+  border: 2px solid #e6eaeb;
+  overflow: visible; }
+
+/* line 8, ../../app/assets/css/lib/vendor/redactor.scss */
+.borderless .redactor_box {
+  border: none; }
+
+/* line 12, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_box, .redactor_box textarea {
+  background-color: #fff; }
+
+/* line 16, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_air {
+  position: absolute;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  z-index: 2; }
+
+/*
+	Fullscreen
+*/
+/* line 26, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_box_fullscreen {
+  left: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 2000; }
+
+/* line 35, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_box textarea {
+  font-family: "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace;
+  font-size: 13px;
+  overflow: auto;
+  resize: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  z-index: 1004;
+  outline: none;
+  border: none;
+  width: 100%; }
+
+/* line 64, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor,
+.redactor_editor:focus,
+.redactor_editor div,
+.redactor_editor p,
+.redactor_editor ul,
+.redactor_editor ol,
+.redactor_editor table,
+.redactor_editor dl,
+.redactor_editor blockquote,
+.redactor_editor pre,
+.redactor_editor h1,
+.redactor_editor h2,
+.redactor_editor h3,
+.redactor_editor h4,
+.redactor_editor h5 {
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+/* line 69, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor code,
+.redactor_editor pre {
+  font-family: "source-code-pro", Monaco, Anonymous Pro, Courier New, Courier, monospace; }
+
+/* line 82, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor,
+.redactor_editor:focus,
+.redactor_editor div,
+.redactor_editor p,
+.redactor_editor ul,
+.redactor_editor ol,
+.redactor_editor table,
+.redactor_editor dl,
+.redactor_editor blockquote,
+.redactor_editor pre {
+  font-size: 15px !important;
+  line-height: 1.45em !important; }
+
+/* line 87, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor, .redactor_editor:focus {
+  position: relative;
+  outline: none;
+  box-shadow: none !important;
+  padding: 15px !important;
+  margin: 0 !important;
+  background: none;
+  background: #fff !important;
+  overflow: auto;
+  white-space: normal; }
+
+/* line 98, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor a {
+  color: #15c !important;
+  text-decoration: underline !important; }
+
+/* line 106, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor object,
+.redactor_editor embed,
+.redactor_editor video,
+.redactor_editor img {
+  width: auto;
+  max-width: 100%; }
+
+/* line 111, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor video,
+.redactor_editor img {
+  height: auto; }
+
+/* line 122, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor div,
+.redactor_editor p,
+.redactor_editor ul,
+.redactor_editor ol,
+.redactor_editor table,
+.redactor_editor dl,
+.redactor_editor blockquote,
+.redactor_editor pre {
+  box-shadow: none !important;
+  background: none !important;
+  margin: 0 !important;
+  margin-bottom: 15px !important;
+  border: none; }
+
+/* line 131, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor iframe,
+.redactor_editor object,
+.redactor_editor hr {
+  margin-bottom: 15px !important; }
+
+/* line 134, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor blockquote {
+  margin-left: 3em !important;
+  font-style: italic !important;
+  color: #777; }
+
+/* line 140, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor ul,
+.redactor_editor ol {
+  padding-left: 2em !important; }
+
+/* line 146, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor ul ul,
+.redactor_editor ol ol,
+.redactor_editor ul ol,
+.redactor_editor ol ul {
+  border: none;
+  margin: 2px !important;
+  padding: 0 !important;
+  padding-left: 2em !important; }
+
+/* line 152, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor dl dt {
+  font-weight: bold; }
+
+/* line 153, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor dd {
+  margin-left: 1em; }
+
+/* line 155, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor table {
+  border-collapse: collapse;
+  font-size: 1em !important; }
+
+/* line 159, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor table td {
+  border: 1px solid #ddd;
+  padding: 5px !important;
+  vertical-align: top; }
+
+/* line 164, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor table thead td {
+  border-bottom: 2px solid #000 !important;
+  font-weight: bold !important; }
+
+/* line 168, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor code {
+  background-color: #d8d7d7 !important; }
+
+/* line 171, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor pre {
+  font-size: 90% !important;
+  background: #f8f8f8 !important;
+  border: 1px solid #ddd !important;
+  border-radius: 3px !important;
+  padding: 1em !important;
+  white-space: pre;
+  overflow: auto; }
+
+/* line 180, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc; }
+
+/* line 191, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h1,
+.redactor_editor h2,
+.redactor_editor h3,
+.redactor_editor h4,
+.redactor_editor h5 {
+  color: #000;
+  background: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: bold; }
+
+/* line 199, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h1 {
+  font-size: 36px !important;
+  line-height: 40px !important;
+  margin-bottom: 10px !important; }
+
+/* line 204, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h2 {
+  font-size: 30px !important;
+  line-height: 38px !important;
+  margin-bottom: 15px !important; }
+
+/* line 209, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h3 {
+  font-size: 24px !important;
+  line-height: 30px !important;
+  margin-bottom: 10px !important; }
+
+/* line 214, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h4 {
+  font-size: 18px !important;
+  line-height: 24px !important;
+  margin-bottom: 10px !important; }
+
+/* line 219, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor h5 {
+  font-size: 1em !important;
+  margin-bottom: 10px !important; }
+
+/* line 224, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor.redactor_editor_wym {
+  background: #f6f6f6 !important;
+  padding: 5px 15px !important; }
+
+/* line 240, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor_wym div,
+.redactor_editor_wym p,
+.redactor_editor_wym ul,
+.redactor_editor_wym ol,
+.redactor_editor_wym table,
+.redactor_editor_wym dl,
+.redactor_editor_wym pre,
+.redactor_editor_wym h1,
+.redactor_editor_wym h2,
+.redactor_editor_wym h3,
+.redactor_editor_wym h4,
+.redactor_editor_wym h5,
+.redactor_editor_wym blockquote {
+  background-color: #fff !important;
+  border: 1px solid #e4e4e4 !important;
+  padding: 10px !important;
+  margin: 10px 0 !important; }
+
+/* line 247, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_editor_wym ul,
+.redactor_editor_wym ol {
+  padding-left: 2em !important; }
+
+/*
+	TOOLBAR
+*/
+/* line 255, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar {
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 2px !important;
+  line-height: 0 !important;
+  list-style: none !important;
+  font-size: 0;
+  background: #e6eaeb;
+  /*background: #f1f1f1;
+  background: -moz-linear-gradient(top,  #f1f1f1 0%, #e2e2e2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(100%,#e2e2e2));
+  background: -webkit-linear-gradient(top,  #f1f1f1 0%,#e2e2e2 100%);
+  background: -o-linear-gradient(top,  #f1f1f1 0%,#e2e2e2 100%);
+  background: -ms-linear-gradient(top,  #f1f1f1 0%,#e2e2e2 100%);
+  background: linear-gradient(to bottom,  #f1f1f1 0%,#e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#e2e2e2',GradientType=0 );*/
+  overflow: hidden !important;
+  height: 32px !important;
+  /*border-bottom: 1px solid #bbb;*/ }
+
+/* line 279, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_air .redactor_toolbar {
+  padding-right: 2px !important; }
+
+/* line 282, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li {
+  float: left !important;
+  margin: 0 !important;
+  padding: 3px 1px;
+  padding-right: 0;
+  list-style: none !important;
+  outline: none; }
+
+/* line 290, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li.redactor_separator {
+  float: left;
+  height: 34px;
+  border-left: 1px solid #d3d3d3;
+  border-right: 1px solid #f1f1f1;
+  padding: 0;
+  margin: 0 2px 0 3px !important; }
+
+/* line 298, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li a {
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+  * border: 1px solid #eee;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  cursor: pointer;
+  zoom: 1;
+  outline: none;
+  text-decoration: none; }
+
+/* line 311, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li.redactor_btn_right {
+  float: none;
+  float: right !important; }
+
+/* line 315, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li a {
+  display: block;
+  text-indent: -9999px;
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  background-position: 0; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 329, ../../app/assets/css/lib/vendor/redactor.scss */
+  .redactor_toolbar li a {
+    background-image: url(data:image/png;base64,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);
+    background-size: auto 25px; } }
+/* line 336, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li a:hover {
+  border-color: #98a6ba;
+  background-color: #dde4ef;
+  outline: none; }
+
+/* line 341, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_toolbar li a:active, .redactor_toolbar li a.redactor_act {
+  border-color: #b5b5b5;
+  background-color: #ddd;
+  outline: none; }
+
+/*
+	BUTTONS
+	step 25px
+*/
+/* line 352, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_html {
+  background-position: 0px; }
+
+/* line 353, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_formatting {
+  background-position: -25px; }
+
+/* line 354, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_bold {
+  background-position: -50px; }
+
+/* line 355, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_italic {
+  background-position: -75px; }
+
+/* line 356, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_deleted {
+  background-position: -500px; }
+
+/* line 357, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_unorderedlist {
+  background-position: -100px; }
+
+/* line 358, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_orderedlist {
+  background-position: -125px; }
+
+/* line 359, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_outdent {
+  background-position: -150px; }
+
+/* line 360, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_indent {
+  background-position: -175px; }
+
+/* line 361, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_image {
+  background-position: -200px; }
+
+/* line 362, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_video {
+  background-position: -225px; }
+
+/* line 363, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_file {
+  background-position: -250px; }
+
+/* line 364, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_table {
+  background-position: -275px; }
+
+/* line 365, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_link {
+  background-position: -300px; }
+
+/* line 366, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_fontcolor {
+  background-position: -325px; }
+
+/* line 367, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_backcolor {
+  background-position: -350px; }
+
+/* line 368, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_alignleft {
+  background-position: -375px; }
+
+/* line 369, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_aligncenter {
+  background-position: -400px; }
+
+/* line 370, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_alignright {
+  background-position: -425px; }
+
+/* line 371, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_justify {
+  background-position: -450px; }
+
+/* line 372, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_horizontalrule {
+  background-position: -475px; }
+
+/* line 373, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_underline {
+  background-position: -525px; }
+
+/* line 375, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_fullscreen {
+  background-position: -550px; }
+
+/* line 376, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_normalscreen {
+  background-position: -575px; }
+
+/* line 377, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_clips {
+  background-position: -600px; }
+
+/* line 379, ../../app/assets/css/lib/vendor/redactor.scss */
+body .redactor_toolbar li a.redactor_btn_alignment {
+  background-position: -625px; }
+
+/*
+	Toolbar classes
+*/
+/* line 384, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_blockquote {
+  font-style: italic;
+  color: #666 !important;
+  padding-left: 10px; }
+
+/* line 389, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_pre {
+  font-family: monospace, sans-serif; }
+
+/* line 392, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_h1, .redactor_format_h2, .redactor_format_h3, .redactor_format_h4 {
+  font-weight: bold; }
+
+/* line 395, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_h1 {
+  font-size: 30px;
+  line-height: 36px; }
+
+/* line 399, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_h2 {
+  font-size: 24px;
+  line-height: 36px; }
+
+/* line 403, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_h3 {
+  font-size: 20px;
+  line-height: 30px; }
+
+/* line 407, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_format_h4 {
+  font-size: 16px;
+  line-height: 26px; }
+
+/*
+	DROPDOWN
+*/
+/* line 415, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropdown {
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  top: 28px;
+  left: 0;
+  z-index: 2004;
+  position: absolute;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  -webkit-box-shadow: 0 2px 4px #ccc;
+  -moz-box-shadow: 0 2px 4px #ccc;
+  box-shadow: 0 2px 4px #ccc;
+  line-height: 21px;
+  padding: 10px; }
+
+/* line 431, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_separator_drop {
+  border-top: 1px solid #ddd;
+  padding: 0 !important;
+  line-height: 0;
+  font-size: 0; }
+
+/* line 437, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropdown a {
+  display: block;
+  color: #000;
+  padding: 3px 5px;
+  text-decoration: none; }
+
+/* line 443, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropdown a:hover {
+  color: #444 !important;
+  text-decoration: none;
+  background-color: #dde4ef; }
+
+/* ColorPicker */
+/* line 450, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_color_link {
+  padding: 0 !important;
+  width: 15px !important;
+  height: 15px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset !important;
+  border-radius: 4px !important;
+  float: left !important;
+  border: 2px solid #fff !important;
+  font-size: 0; }
+
+/* line 460, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_color_none {
+  font-size: 11px; }
+
+/* MODAL */
+/* line 467, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_overlay {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.50;
+  background-color: #333 !important; }
+
+/* line 483, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal {
+  background: #f7f7f7;
+  background: -moz-linear-gradient(top, #f7f7f7 0%, #e2e2e2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #e2e2e2));
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #e2e2e2 100%);
+  background: -o-linear-gradient(top, #f7f7f7 0%, #e2e2e2 100%);
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #e2e2e2 100%);
+  background: linear-gradient(to bottom, #f7f7f7 0%, #e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#e2e2e2',GradientType=0 );
+  text-shadow: 0 1px 0 #fff;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 5px 60px #000;
+  border-radius: 3px;
+  z-index: 50001;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 12px !important;
+  color: #000; }
+
+/* line 504, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_header {
+  padding: 11px 30px 0 15px;
+  font-size: 12px;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold; }
+
+/* line 510, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_content {
+  padding: 20px 30px; }
+
+/* line 514, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: #777;
+  cursor: pointer; }
+
+/* line 524, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_close:hover {
+  color: #000; }
+
+/* line 527, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal label {
+  margin: 10px 0 3px 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  display: block !important; }
+
+/* line 533, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal textarea {
+  margin-top: 4px;
+  display: block; }
+
+/* line 537, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_input {
+  width: 99%;
+  font-size: 14px; }
+
+/* line 541, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_modal_box {
+  height: 350px;
+  overflow: auto;
+  margin-bottom: 10px; }
+
+/* line 546, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_image_box {
+  height: 270px;
+  overflow: auto;
+  margin-bottom: 10px; }
+
+/* line 551, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_image_box_select {
+  display: block;
+  width: 200px;
+  margin-bottom: 15px; }
+
+/* line 556, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_image_box img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  max-width: 100px; }
+
+/* line 562, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_tabs {
+  margin-bottom: 18px; }
+
+/* line 565, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_tabs a {
+  display: inline-block;
+  border: 1px solid #d2d2d2;
+  padding: 4px 14px;
+  font-size: 12px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  line-height: 1;
+  border-radius: 10px;
+  margin-right: 5px; }
+
+/* line 577, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_tabs a:hover, #redactor_tabs a.redactor_tabs_act {
+  background-color: #ddd;
+  padding: 5px 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) inset;
+  border: none;
+  text-shadow: 0 1px 0 #eee;
+  color: #777 !important;
+  text-decoration: none !important; }
+
+/* line 586, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal_footer {
+  padding: 9px 30px 20px 30px;
+  border-radius: 0 0 3px 3px;
+  text-align: right; }
+
+/* line 593, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal input[type="radio"],
+#redactor_modal input[type="checkbox"] {
+  position: relative;
+  top: -1px; }
+
+/* line 600, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal input[type="text"],
+#redactor_modal input[type="password"],
+#redactor_modal input[type="email"],
+#redactor_modal textarea {
+  position: relative;
+  z-index: 2;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  height: 23px;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 1px 2px;
+  background-color: white;
+  color: #333;
+  font-size: 13px;
+  line-height: 1;
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  -webkit-transition: border 0.3s ease-in;
+  -moz-transition: border 0.3s ease-in;
+  -ms-transition: border 0.3s ease-in;
+  -o-transition: border 0.3s ease-in;
+  transition: border 0.3s ease-in; }
+
+/* line 620, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal textarea {
+  line-height: 1.4em; }
+
+/* line 624, ../../app/assets/css/lib/vendor/redactor.scss */
+#redactor_modal input:focus,
+#redactor_modal textarea:focus {
+  outline: none;
+  border-color: #5ca9e4;
+  box-shadow: 0 0 0 2px rgba(70, 161, 231, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset; }
+
+/* line 630, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_modal_btn {
+  margin-left: 8px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 6px 16px 5px 16px;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, white, #e1e1e1);
+  background-image: -ms-linear-gradient(top, white, #e1e1e1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e1e1e1));
+  background-image: -webkit-linear-gradient(top, white, #e1e1e1);
+  background-image: -o-linear-gradient(top, white, #e1e1e1);
+  background-image: linear-gradient(top, #ffffff, #e1e1e1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e1e1e1', GradientType=0);
+  border: 1px solid #ccc;
+  border-bottom-color: #aaa;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0px #ffffff;
+  color: #000; }
+
+/* line 658, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_modal_btn:hover {
+  color: #555; }
+
+/* line 661, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_modal_btn:hover {
+  filter: none;
+  background: none;
+  background: #f3f3f3;
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 0.8);
+  text-decoration: none; }
+
+/* Drag and Drop Area */
+/* line 671, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_droparea {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 5px; }
+
+/* line 677, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_droparea .redactor_dropareabox {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  width: 99%;
+  background-color: #fff;
+  padding: 60px 0;
+  border: 2px dashed #bbb; }
+
+/* line 686, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_droparea .redactor_dropareabox, .redactor_dropalternative {
+  color: #555;
+  font-size: 12px; }
+
+/* line 690, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropalternative {
+  margin: 4px 0 2px 0; }
+
+/* line 693, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropareabox.hover {
+  background: #efe3b8;
+  border-color: #aaa; }
+
+/* line 697, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropareabox.error {
+  background: #f7e5e5;
+  border-color: #dcc3c3; }
+
+/* line 701, ../../app/assets/css/lib/vendor/redactor.scss */
+.redactor_dropareabox.drop {
+  background: #f4f4ee;
+  border-color: #e0e5d6; }
+
+/*
+	= Appendix
+		I. Universal
+*/
+/*
+	I. Universal
+*/
+/* line 23, ../../app/assets/css/sessions.scss */
+body {
+  background: #f4f6f6;
+  color: #444444;
+  font: 300 16px/1.5em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+/* line 29, ../../app/assets/css/sessions.scss */
+a {
+  color: #f4f6f6;
+  text-decoration: none; }
+  /* line 33, ../../app/assets/css/sessions.scss */
+  a:hover {
+    color: #e6eaeb; }
+
+/* line 39, ../../app/assets/css/sessions.scss */
+form input[type="email"], form input[type="password"] {
+  background: #f1f4f4;
+  border: none;
+  width: 65%; }
+  /* line 44, ../../app/assets/css/sessions.scss */
+  form input[type="email"]:focus, form input[type="password"]:focus {
+    background: #fefefe;
+    border: none; }
+/* line 50, ../../app/assets/css/sessions.scss */
+form nav {
+  margin: 0 auto;
+  width: 45%; }
+  /* line 54, ../../app/assets/css/sessions.scss */
+  form nav li {
+    display: inline-block; }
+    /* line 57, ../../app/assets/css/sessions.scss */
+    form nav li:first-child {
+      float: left; }
+    /* line 61, ../../app/assets/css/sessions.scss */
+    form nav li:last-child {
+      float: right; }
+
+/* line 68, ../../app/assets/css/sessions.scss */
+h1 {
+  font: bold 1.25em "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-shadow: 0 2px 0 rgba(214, 44, 26, 0.5); }
+
+/* line 73, ../../app/assets/css/sessions.scss */
+#contain {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  *zoom: 1;
+  max-width: 29.75em;
+  _width: 29.75em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  margin-left: auto;
+  margin-right: auto;
+  background: #e0ebe8;
+  margin-top: 4em;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle; }
+  /* line 38, ../../../../../.rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #contain:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 84, ../../app/assets/css/sessions.scss */
+p + p {
+  margin-top: 1em; }
+
+/*
+	III. Header
+*/
+/* line 92, ../../app/assets/css/sessions.scss */
+header {
+  background: #e74c3c;
+  padding: 1.5em; }
+
+/*
+	IV. Main
+*/
+/* line 103, ../../app/assets/css/sessions.scss */
+#main {
+  margin: 3em 0; }
+  /* line 107, ../../app/assets/css/sessions.scss */
+  #main form input:first-child {
+    margin-bottom: 0.5em; }
+  /* line 111, ../../app/assets/css/sessions.scss */
+  #main form nav {
+    overflow: hidden;
+    *zoom: 1;
+    margin-top: 1.5em; }

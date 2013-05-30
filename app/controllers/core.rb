@@ -11,6 +11,10 @@ Noted::Web.controllers do
     render 'core/about'
   end
 
+  get :roadmap do
+    render 'core/roadmap'
+  end
+
   get :support do
     render 'core/support'
   end
