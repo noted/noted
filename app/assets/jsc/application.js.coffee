@@ -17,6 +17,8 @@
 //= require lib/ajax
 
 $(document).ready ->
+  console.log "Hi there. Looks like you're poking around Noted. If you're interested, check out the project on GitHub. https://github.com/noted/noted"
+
   ligature(false, $(".text"));
 
   $("#user aside h2").fitText 1.1
