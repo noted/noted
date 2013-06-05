@@ -1,3 +1,10 @@
+AllCops:
+  Includes:
+    - Rakefile
+    - config.ru
+  Excludes:
+    - vendor/**
+
 Encoding:
   Enabled: false
 
