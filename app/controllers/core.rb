@@ -11,6 +11,10 @@ Noted::Web.controllers do
     render 'core/about'
   end
 
+  get :blog do
+    redirect 'http://blog.getnotedapp.com'
+  end
+
   get :roadmap do
     render 'core/roadmap'
   end

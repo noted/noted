@@ -29,17 +29,17 @@
             %a{:href => url(:index)} Noted.
             %span beta
         %nav
+          %section
+            %ul
+              %li
+                %a.tooltip{:href => "", :title => "Coming soon!"} Explore
+              %li
+                %a{:href => url(:blog)} Blog
+              %li
+                %a{:href => url(:roadmap)} Roadmap
+              %li
+                %a{:href => url(:support)} Help
           - if current_user
-            %section
-              %ul
-                %li
-                  %a.tooltip{:href => "", :title => "Coming soon!"} Explore
-                %li
-                  %a.tooltip{:href => "", :title => "Coming soon!"} Blog
-                %li
-                  %a{:href => url(:roadmap)} Roadmap
-                %li
-                  %a{:href => url(:support)} Help
             %section
               %ul
                 %li
@@ -51,14 +51,6 @@
                 %li
                   %a.btn.yellow{:href => url(:sessions, :destroy)} Logout
           - else
-            %section
-              %ul
-                %li
-                  %a.tooltip{:href => "", :title => "Coming soon!"} Explore
-                %li
-                  %a.tooltip{:href => "", :title => "Coming soon!"} Blog
-                %li
-                  %a{:href => url(:support)} Help
             %section
               %ul
                 %li
@@ -82,7 +74,7 @@
             %li
               %a{:href => url(:support)} Support
             %li
-              %a.tooltip{:href => "", :title => "Coming soon!"} Blog
+              %a{:href => url(:blog)} Blog
             %li
               %a.tooltip{:href => "", :title => "Coming soon!"} Imprint
         %p= "Noted fecit #{Time.now.year}. Made in Connecticut."
