@@ -10,6 +10,8 @@ Noted is an academic research assistant and social network.
 
 **License** &mdash; [Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported License ](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
+**Version** &mdash; `0.1.0b`
+
 <hr />
 
 ## Installation
