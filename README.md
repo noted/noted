@@ -29,6 +29,8 @@ Install Bundler system-wide, then run:
 $ bundle install
 ```
 
+## Usage
+
 To start a development server, run:
 
 ```
