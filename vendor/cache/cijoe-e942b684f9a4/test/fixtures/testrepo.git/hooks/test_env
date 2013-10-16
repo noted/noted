@@ -1,3 +1,0 @@
-echo $test
-echo $AUTHOR
-export test=foo
