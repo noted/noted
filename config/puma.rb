@@ -150,13 +150,13 @@ end
 # Check out https://github.com/puma/puma/blob/master/lib/puma/app/status.rb
 # to see what the app has available.
 
-if environment == :production
-  ctlsocket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'pumactl.sock')
+# if environment == :production
+#   ctlsocket = File.join(PADRINO_ROOT, 'tmp', 'sockets', 'pumactl.sock')
 
-  token = YAML.load_file(File.join(PADRINO_ROOT, '.puma.yml'))['token']
+#   token = YAML.load_file(File.join(PADRINO_ROOT, '.puma.yml'))['token']
 
-  activate_control_app "unix://#{ctlsocket}", { auth_token: token['token'] }
-end
+#   activate_control_app "unix://#{ctlsocket}", { auth_token: token['token'] }
+# end
 # activate_control_app 'unix:///var/run/pumactl.sock'
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
 # activate_control_app 'unix:///var/run/pumactl.sock', { no_token: true }
