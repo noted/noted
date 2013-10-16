@@ -19,7 +19,6 @@ module Noted
 
     enable :sessions
 
-    set :cache, Padrino::Cache::Store::Memcache.new(::Dalli::Client.new('127.0.0.1:11211', :exception_retry_limit => 1))
 
     configure :development, :production do
       set :delivery_method, :smtp => {
@@ -34,10 +33,14 @@ module Noted
       use BetterErrors::Middleware
 
       BetterErrors.application_root = PADRINO_ROOT
+
+      set :cache, Padrino::Cache::Store::Memcache.new(::Dalli::Client.new('127.0.0.1:11211', :exception_retry_limit => 1))
     end
 
     configure :production do
       enable :caching
+
+      set :cache, Padrino::Cache::Store::Memcache.new(::Dalli::Client.new(ENV['MEMCACHIER_SERVERS'].split(','), { :username => ENV['MEMCACHIER_USERNAME'], :password => ENV['MEMCACHIER_PASSWORD']}))
 
       Raven.configure do |config|
         config.dsn = SENTRY['dsn']

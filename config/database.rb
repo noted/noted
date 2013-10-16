@@ -6,10 +6,16 @@ MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
 
 # Von
 Von.configure do |c|
-  y = YAML.load_file(Padrino.root('.redis.yml'))
-  y = y[PADRINO_ENV]
+  if PADRINO_ENV == 'production'
+    uri = URI.parse(ENV['REDISTOGO_URL'])
 
-  c.redis = { :host => y[:host], :port => y[:port], :db => y[:db] }
+    c.redis = { :host => uri.host, :port => uri.port, :password => uri.password }
+  else
+    y = YAML.load_file(Padrino.root('.redis.yml'))
+    y = y[PADRINO_ENV]
+
+    c.redis = { :host => y[:host], :port => y[:port], :db => y[:db] }
+  end
 
   c.namespace = 'von'
 end
