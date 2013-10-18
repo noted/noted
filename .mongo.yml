@@ -10,6 +10,3 @@ development:
 test:
   <<: *defaults
   database: noted_test
-
-production:
-  uri: <%= ENV['MONGOHQ_URI'] %>

@@ -1,7 +1,12 @@
 require 'yaml'
 
 # MongoMapper
-MongoMapper.setup(YAML.load_file(Padrino.root('.mongo.yml')), PADRINO_ENV, :logger => nil)
+if PADRINO_ENV = 'production'
+  MongoMapper.setup({'production' => {'uri' => ENV['MONGODB_URI']}}, 'production')
+else
+  MongoMapper.setup(YAML.load_file(Padrino.root('.mongo.yml')), PADRINO_ENV, :logger => nil)
+end
+
 MongoMapper::Document.plugin(MongoMapper::Plugins::IdentityMap)
 
 # Von
