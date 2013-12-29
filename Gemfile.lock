@@ -29,6 +29,7 @@ GEM
     arel (4.0.1)
     ast (1.1.0)
     atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -45,7 +46,14 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     connection_pool (1.2.0)
+    database_cleaner (1.2.0)
     debug_inspector (0.0.2)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
     erubis (2.7.0)
@@ -79,6 +87,7 @@ GEM
     multi_json (1.8.2)
     optionable (0.2.0)
     origin (1.1.0)
+    orm_adapter (0.5.0)
     parser (2.0.0)
       ast (~> 1.1)
       slop (~> 3.4, >= 3.4.5)
@@ -159,6 +168,8 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -167,6 +178,8 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  database_cleaner
+  devise
   factory_girl_rails
   foreman
   mongoid (= 4.0.0.alpha1)

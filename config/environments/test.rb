@@ -33,4 +33,7 @@ Noted::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # Shut i18n up.
+  config.i18n.enforce_available_locales = false
 end

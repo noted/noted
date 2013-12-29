@@ -33,4 +33,6 @@ group :test do
 
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+
+  gem 'database_cleaner'
 end
