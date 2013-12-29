@@ -7,6 +7,8 @@ gem 'mongoid', '4.0.0.alpha1'
 
 gem 'turbolinks'
 
+gem 'devise'
+
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'coffee-rails', '~> 4.0.0'
