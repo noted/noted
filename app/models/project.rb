@@ -9,6 +9,8 @@ class Project
 
   belongs_to :user
 
+  has_many :notes
+
   before_create :permalink!
 
   private
