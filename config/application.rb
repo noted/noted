@@ -22,9 +22,5 @@ module Noted
 
     # HACK: Add Mutations in lib/noted.
     config.paths.add 'lib/noted', glob: '**/*.rb'
-
-    Dir[File.join(Rails.root, 'lib', 'noted', '**', '*.rb')].each do |file|
-      require file
-    end
   end
 end
