@@ -7,6 +7,8 @@ gem 'mongoid', '4.0.0.alpha1'
 
 gem 'turbolinks'
 
+gem 'mutations'
+
 gem 'devise'
 
 gem 'citeproc-ruby'

@@ -19,5 +19,12 @@ module Noted
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # HACK: Add Mutations in lib/noted.
+    config.paths.add 'lib/noted', glob: '**/*.rb'
+
+    Dir[File.join(Rails.root, 'lib', 'noted', '**', '*.rb')].each do |file|
+      require file
+    end
   end
 end
