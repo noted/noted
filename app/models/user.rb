@@ -1,6 +1,8 @@
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Canable::Ables
+  include Canable::Cans
 
   field :name,     type: String
   field :email,    type: String
@@ -29,4 +31,16 @@ class User
   validates_uniqueness_of :email, :username
 
   has_many :projects
+
+  def viewable_by?(u)
+    true
+  end
+
+  def updatable_by?(u)
+    self == u
+  end
+
+  def destroyable_by?(u)
+    self == u
+  end
 end

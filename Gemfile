@@ -9,6 +9,7 @@ gem 'turbolinks'
 
 gem 'mutations'
 
+gem 'canable'
 gem 'devise'
 
 gem 'citeproc-ruby'

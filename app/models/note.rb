@@ -8,4 +8,16 @@ class Note
   validates_presence_of :title
 
   belongs_to :project
+
+  def viewable_by?(u)
+    true
+  end
+
+  def updatable_by?(u)
+    self.project.user == u
+  end
+
+  def destroyable_by?(u)
+    self.project.user == u
+  end
 end

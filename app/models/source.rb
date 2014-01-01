@@ -11,6 +11,18 @@ class Source
 
   before_save :citation!
 
+  def viewable_by?(u)
+    true
+  end
+
+  def updatable_by?(u)
+    self.project.user == u
+  end
+
+  def destroyable_by?(u)
+    self.project.user == u
+  end
+
   private
 
   def citation!

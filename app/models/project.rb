@@ -14,6 +14,18 @@ class Project
 
   before_create :permalink!
 
+  def viewable_by?(u)
+    true
+  end
+
+  def updatable_by?(u)
+    self.user == u
+  end
+
+  def destroyable_by?(u)
+    self.user == u
+  end
+
   private
 
   def permalink!

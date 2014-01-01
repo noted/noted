@@ -37,6 +37,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bson (2.0.0)
     builder (3.1.4)
+    canable (0.3.0)
     citeproc-ruby (0.0.6)
       logging (~> 1.5)
       nokogiri (~> 1.5)
@@ -189,6 +190,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  canable
   citeproc-ruby
   coffee-rails (~> 4.0.0)
   database_cleaner
