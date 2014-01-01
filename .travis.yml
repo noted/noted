@@ -1,0 +1,11 @@
+branches:
+  only:
+    - master
+services:
+  - mongodb
+rvm:
+  - 2.0.0
+script: bundle exec rspec spec
+notifications:
+  email:
+    - ethan.turkeltaub@gmail.com
