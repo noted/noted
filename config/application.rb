@@ -22,5 +22,12 @@ module Noted
 
     # HACK: Add Mutations in lib/noted.
     config.paths.add 'lib/noted', glob: '**/*.rb'
+
+    config.assets.paths << "#{Rails.root}/app/assets/css"
+    config.assets.paths << "#{Rails.root}/app/assets/img"
+    config.assets.paths << "#{Rails.root}/app/assets/jsc"
+    config.assets.paths << "#{Rails.root}/app/assets/webfonts"
+
+    config.compass.require 'susy'
   end
 end

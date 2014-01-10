@@ -1,0 +1,23 @@
+.container
+  %header
+  = form_for(resource, :html => { :class => "grid-form" }, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+    %fieldset
+      %legend Join
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = f.label :email
+          = f.email_field :email
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = f.label :name
+          = f.text_field :name
+      %div{'data-row-span' => '2'}
+        %div{'data-field-span' => '1'}
+          = f.label :password
+          = f.password_field :password
+        %div{'data-field-span' => '1'}
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation
+      %footer
+        = f.submit "Join", :class => "green filled"

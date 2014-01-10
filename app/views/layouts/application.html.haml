@@ -1,0 +1,56 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+
+    %title Noted — Research together.
+
+    %meta{content: "Noted.", name: "description"}/
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+
+    = stylesheet_link_tag "application"
+
+    %script{src: "//use.typekit.net/jha3mxj.js"}
+    :javascript
+      try {
+        Typekit.load();
+      } catch(e) {}
+  %body
+    %header#header
+      .navbar
+        %aside
+          %h1= link_to "Noted", root_path
+        %nav.primary
+          %ul
+            %li
+              %a{href: "#"} Features
+            %li
+              %a{href: "#"} Documentation
+            %li
+              %a{href: "#"} Support
+        %nav.secondary
+          %ul
+            %li
+              = link_to "Join", "", class: "btn green"
+            %li
+              = link_to "Login", "", class: "btn"
+    %main
+      = yield
+    %footer#footer
+      .container
+        %nav
+          %ul
+            %li
+              %a{href: "#"} About
+            %li
+              %a{href: "#"} Documentation
+            %li
+              %a{href: "#"} Support
+            %li
+              %a{href: "#"} Contact
+        %p
+          %a{href: "#"} Noted
+          fecit 2013.
+
+    = javascript_include_tag "application"

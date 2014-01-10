@@ -1,0 +1,289 @@
+/*
+
+		file: css/src/application.scss
+*/
+
+@import "lib/base";
+
+
+/*
+	= Contents
+		I. Universal
+*/
+
+/*
+	I. Universal
+*/
+
+body {
+	background: $base;
+	color: $text;
+	font: 300 100%/1.75em $serif;
+}
+
+a {
+	color: $red;
+	text-decoration: none;
+
+	&:hover {
+		color: $dark-red;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $sans-serif;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 1.5vw;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3, h4, h5, h6 {
+	margin-top: 1em;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+p + p {
+	margin-top: 1.75rem;
+}
+
+ol, ul {
+	margin-bottom: 1.75rem;
+
+	li {
+		margin-left: 3rem;
+		padding-left: 0.5rem;
+	}
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+strong {
+	font-weight: 600;
+}
+
+ul li {
+	list-style-type: disc;
+}
+
+
+/*
+	II. Header
+*/
+
+header#header {
+	border-bottom: 1px solid $light-grey;
+
+	.navbar {
+		@include container;
+
+		font-family: $sans-serif;
+		margin-bottom: 1em;
+		margin-top: 1em;
+
+		aside {
+			@include span-columns(4, 24);
+		}
+
+		nav.primary {
+			@include span-columns(12, 24);
+		}
+
+		nav.secondary {
+			@include span-columns(8 omega, 24);
+
+			ul {
+				float: right;
+			}
+		}
+	}
+
+	h1 a {
+		color: $text;
+
+		&:hover {
+			color: darken($text, 10%);
+		}
+	}
+
+	nav {
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 1.75rem;
+		text-transform: uppercase;
+
+		a {
+			color: lighten($text, 10%);
+
+			&:hover {
+				color: $dark-red;
+			}
+		}
+
+		ul {
+			margin: 0;
+		}
+
+		li {
+			display: inline-block;
+
+			& + li {
+				margin-left: 1em;
+			}
+		}
+	}
+}
+
+
+/*
+	III. Main
+*/
+
+main {
+	padding: 3rem 0;
+
+	#features {
+		section {
+			@include container;
+
+			& + section {
+				margin-top: 4rem;
+			}
+
+			&.hero {
+				border-bottom: 1px solid $light-grey;
+				padding-bottom: 5rem;
+				margin-bottom: 5rem;
+				margin-top: 2rem;
+				text-align: center;
+
+				h2 {
+					font-size: 3em;
+					font-weight: 700;
+					margin-bottom: 0;
+					letter-spacing: 3px;
+					text-transform: uppercase;
+				}
+
+				p {
+					margin: 2rem 0;
+				}
+
+				nav {
+					li {
+						display: inline-block;
+
+						& + li {
+							margin-left: 1rem;
+						}
+					}
+				}
+			}
+
+			h3 {
+				margin-top: 0;
+			}
+
+			i {
+				font-size: 5rem;
+				line-height: 5rem;
+			}
+
+			&.left {
+				@include container;
+
+				aside {
+					@include prefix(4);
+					@include span-columns(4);
+				}
+
+				.content {
+					@include omega;
+					@include suffix(4);
+					@include span-columns(11);
+				}
+			}
+
+			&.right {
+				.content {
+					@include prefix(4);
+					@include span-columns(11);
+				}
+
+				aside {
+					@include omega;
+					@include suffix(4);
+					@include span-columns(4);
+
+					i {
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+	IV. Footer
+*/
+
+footer#footer {
+	background: $light-grey;
+	color: $grey;
+	margin-top: 6rem;
+
+	a {
+		color: $dark-grey;
+
+		&:hover {
+			color: $dark-red;
+		}
+	}
+
+	.container {
+		@include container;
+
+		padding: 3em 0;
+	}
+
+	p {
+		font-family: $sans-serif;
+	}
+
+	nav {
+		font: 400 0.75rem/1.75rem $sans-serif;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+
+		li {
+			display: inline-block;
+
+			& + li {
+				margin-left: 1em;
+			}
+		}
+	}
+}

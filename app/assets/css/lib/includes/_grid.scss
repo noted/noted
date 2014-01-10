@@ -1,0 +1,14 @@
+@import "compass/layout";
+@import "susy";
+
+$total-columns: 24;
+$column-width: 2em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+$mobile-small: 240px;
+$mobile-large: 320px;
+$tablet-small: 480px;
+$tablet-large: 768px;
+$screen-small: 1024px;
+$screen-large: 1280px;
