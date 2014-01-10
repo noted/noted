@@ -9,6 +9,10 @@ class Note
 
   belongs_to :project
 
+  def creatable_by?(u)
+    self.project.user == u
+  end
+
   def viewable_by?(u)
     true
   end

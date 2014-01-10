@@ -9,7 +9,7 @@ FactoryGirl.define do
     'title' => 'Poetry, Tales, and Selected Essays',
     'type' => 'book',
     'issued' => {
-      'date-parts'=> [ [ 1996 ] ]
+      'date-parts' => [ [ 1996 ] ]
     },
     'editor' => [
       {

@@ -15,6 +15,10 @@ class Source
     true
   end
 
+  def creatable_by?(u)
+    self.project.user == u
+  end
+
   def updatable_by?(u)
     self.project.user == u
   end
