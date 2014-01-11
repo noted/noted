@@ -10,6 +10,10 @@ Noted::Application.routes.draw do
     get '/join'   => 'devise/registrations#new'
   end
 
+  resources :projects do
+    get '/:username/:permalink' => 'projects#show'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

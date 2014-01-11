@@ -3,7 +3,7 @@ class NotedController < ActionController::Base
 
   def index
     if current_user
-      render 'noted/dashboard'
+      render 'projects/index'
     else
       render 'noted/index'
     end

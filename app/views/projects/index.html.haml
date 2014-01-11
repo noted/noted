@@ -1,0 +1,6 @@
+%section.projects
+  - if current_user.projects.blank?
+    %p To begin, create your first project.
+  - current_user.projects.each do |project|
+    %article
+      %h2= project.title
