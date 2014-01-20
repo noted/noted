@@ -22,6 +22,7 @@ module Noted
 
     # HACK: Add Mutations in lib/noted.
     config.paths.add 'lib/noted', glob: '**/*.rb'
+    config.autoload_paths += %W(#{config.root}/lib)
 
     config.assets.paths << "#{Rails.root}/app/assets/css"
     config.assets.paths << "#{Rails.root}/app/assets/img"

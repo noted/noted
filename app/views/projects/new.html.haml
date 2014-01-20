@@ -1,1 +1,17 @@
-= render :partial => 'projects/form'
+/ = render :partial => 'projects/form'
+= form_tag projects_path, method: :post, class: 'grid-form' do |f|
+  %legend New Project
+  %div{'data-row-span' => '1'}
+    %div{'data-field-span' => '1'}
+      = label_tag :title
+      = text_field_tag :title
+  %div{'data-row-span' => '1'}
+    %div{'data-field-span' => '1'}
+      = label_tag :summary
+      = text_area_tag :summary
+  %div{'data-row-span' => '1'}
+    %div{'data-field-span' => '1'}
+      = label_tag :permalink
+      = text_field_tag :permalink
+  %footer
+    = submit_tag "Create", :class => "green filled"

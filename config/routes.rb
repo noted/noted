@@ -1,6 +1,8 @@
 Noted::Application.routes.draw do
   root 'noted#index'
 
+  get '/new' => 'projects#new'
+
   devise_for :users
 
   devise_scope :user do
@@ -10,9 +12,18 @@ Noted::Application.routes.draw do
     get '/join'   => 'devise/registrations#new'
   end
 
-  resources :projects do
-    get '/:username/:permalink' => 'projects#show'
-  end
+  get '/:user' => 'projects#index'#, as: 'projects'
+
+  get '/:user/:project' => 'projects#show'#, as: 'projects'
+
+  get '/:user/:project/notes' => 'notes#index'
+  get '/:user/:project/notes/:note' => 'notes#show'
+  get '/:user/:project/sources' => 'sources#index'
+  get '/:user/:project/sources/:source' => 'sources#show'
+
+  resources :projects, only: [:create, :update, :destroy]
+  resources :notes, only: [:create, :update, :destroy]
+  resources :sources, only: [:create, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

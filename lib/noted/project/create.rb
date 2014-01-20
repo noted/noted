@@ -3,6 +3,7 @@ class ProjectCreate < Mutations::Command
     model :current_user, class: User
     hash  :project do
       string :title
+      string :summary
     end
   end
 

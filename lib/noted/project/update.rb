@@ -4,6 +4,7 @@ class ProjectUpdate < Mutations::Command
     hash  :project do
       string :id
       string :title
+      string :summary
     end
   end
 

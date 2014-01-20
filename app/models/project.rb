@@ -3,6 +3,7 @@ class Project
   include Mongoid::Timestamps
 
   field :title,     type: String
+  field :summary,   type: String
   field :permalink, type: String
 
   validates_presence_of :title

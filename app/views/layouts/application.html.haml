@@ -21,20 +21,25 @@
       .navbar
         %aside
           %h1= link_to "Noted", root_path
-        %nav.primary
-          %ul
-            %li
-              %a{href: "#"} Features
-            %li
-              %a{href: "#"} Documentation
-            %li
-              %a{href: "#"} Support
-        %nav.secondary
-          %ul
-            %li
-              = link_to "Join", "", class: "btn green"
-            %li
-              = link_to "Login", "", class: "btn"
+        - if current_user
+          %nav.primary
+          %nav.secondary
+            %ul
+              %li= link_to "New Project", new_path, class: "btn"
+              %li= link_to "Logout", logout_path, class: "btn"
+        - else
+          %nav.primary
+            %ul
+              %li
+                %a{href: "#"} Features
+              %li
+                %a{href: "#"} Documentation
+              %li
+                %a{href: "#"} Support
+          %nav.secondary
+            %ul
+              %li= link_to "Join", join_path, class: "btn green"
+              %li= link_to "Login", login_path, class: "btn"
     %main
       = yield
     %footer#footer

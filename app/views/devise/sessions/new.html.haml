@@ -1,6 +1,8 @@
 .container
   = form_for(resource, :html => { :class => "grid-form" }, :as => resource_name, :url => session_path(resource_name)) do |f|
     = devise_error_messages!
+    = flash[:notice]
+    = flash[:alert]
     %fieldset
       %legend Login
       %div{'data-row-span' => '2'}
@@ -17,17 +19,17 @@
           = f.label :remember_me
         %p
           = f.submit "Login", :class => "filled"
-  /   %div
-  /     = f.label :email
-  /     %br/
-  /     = f.email_field :email, :autofocus => true
-  /   %div
-  /     = f.label :password
-  /     %br/
-  /     = f.password_field :password
-  /   - if devise_mapping.rememberable?
-  /     %div
-  /       = f.check_box :remember_me
-  /       = f.label :remember_me
-  /   %div= f.submit "Sign in"
+    / %div
+    /   = f.label :email
+    /   %br/
+    /   = f.email_field :email, :autofocus => true
+    / %div
+    /   = f.label :password
+    /   %br/
+    /   = f.password_field :password
+    / - if devise_mapping.rememberable?
+    /   %div
+    /     = f.check_box :remember_me
+    /     = f.label :remember_me
+    / %div= f.submit "Sign in"
 
