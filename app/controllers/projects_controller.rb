@@ -14,12 +14,12 @@ class ProjectsController < ActionController::Base
       project: params[:project]
     )
 
-    redirect_to project_path(username: @project.result.user.username, project: @project.permalink)
+    redirect_to @project.result.path
   end
 
   def show
     @user = User.where(username: params[:user]).first
-    @project = Project.where(user_id: @user.id, permalink: params[:project]).first
+    @project = Project.where(user_id: current_user.id, permalink: params[:project]).first
   end
 
   def update

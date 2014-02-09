@@ -1,1 +1,20 @@
-%h2= @project.title
+.container
+  %header
+    %h2= @project.title
+    %ul
+      - @project.collaborators.each do |user|
+        %li= user.name
+    %p= @project.summary
+  %section
+    %section
+      %header
+        %h3= link_to "Sources", @project.path("/sources")
+        = link_to "New", @project.path("/sources/new"), class: "btn"
+      - @project.sources.each do |source|
+        = render :partial => "sources/source", object: source
+    %section
+      %header
+        %h3= link_to "Notes", @project.path("/notes")
+        = link_to "New", @project.path("/notes/new"), class: "btn"
+      - @project.notes.each do |note|
+        = render :partial => "notes/note", object: note

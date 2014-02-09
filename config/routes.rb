@@ -12,13 +12,16 @@ Noted::Application.routes.draw do
     get '/join'   => 'devise/registrations#new'
   end
 
-  get '/:user' => 'projects#index'#, as: 'projects'
+  get '/:user' => 'users#show'#, as: 'projects'
 
   get '/:user/:project' => 'projects#show'#, as: 'projects'
 
   get '/:user/:project/notes' => 'notes#index'
+  get '/:user/:project/notes/new' => 'notes#new'
   get '/:user/:project/notes/:note' => 'notes#show'
+
   get '/:user/:project/sources' => 'sources#index'
+  get '/:user/:project/sources/new' => 'sources#new'
   get '/:user/:project/sources/:source' => 'sources#show'
 
   resources :projects, only: [:create, :update, :destroy]

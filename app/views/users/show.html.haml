@@ -1,0 +1,8 @@
+%header.container
+  %h3 Projects
+  = link_to "New", new_path, class: "btn"
+%section.projects
+  - if @projects.blank?
+    %p To begin, create your first project.
+  - @projects.each do |project|
+    = render :partial => 'projects/project', object: project

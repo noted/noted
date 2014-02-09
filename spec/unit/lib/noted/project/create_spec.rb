@@ -6,7 +6,8 @@ describe ProjectCreate do
     ProjectCreate.run({
       current_user: user,
       project: {
-        title: 'The Cosmos'
+        title: 'The Cosmos',
+        summary: nil
       }
     })
   end

@@ -1,0 +1,16 @@
+.container
+  = form_tag notes_path, method: :post, class: 'grid-form' do |f|
+    %fieldset
+      %legend New Note
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = label_tag 'note[title]', 'Title'
+          = text_field_tag 'note[title]'
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = label_tag 'note[text]', 'Text'
+          = text_area_tag 'note[text]'
+      %footer
+        = hidden_field_tag :user, params[:user]
+        = hidden_field_tag :project, params[:project]
+        = submit_tag "Create", :class => "green filled"

@@ -5,6 +5,7 @@ class Project
   field :title,     type: String
   field :summary,   type: String
   field :permalink, type: String
+  field :collaborator_ids, type: Array, default: []
 
   validates_presence_of :title
 
@@ -25,6 +26,20 @@ class Project
 
   def destroyable_by?(u)
     self.user == u
+  end
+
+  def path(additions = nil)
+    "/#{self.user.username}/#{self.permalink}#{additions}"
+  end
+
+  def collaborators
+    arr = []
+
+    self.collaborator_ids.each do |id|
+      arr << User.find(id)
+    end
+
+    arr
   end
 
   private

@@ -4,7 +4,7 @@ class NoteCreate < Mutations::Command
     model :project
     hash  :note do
       string :title
-      string :text
+      string :text, emptys: true, nils: true
     end
   end
 

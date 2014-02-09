@@ -2,9 +2,6 @@
   %h3 Projects
   = link_to "New", new_path, class: "btn"
 %section.projects
-  - if current_user.projects.blank?
-    %p To begin, create your first project.
   - current_user.projects.each do |project|
     %article.container
-      %h2= link_to project.title, project
-      %p= project.summary
+      = render :partial => 'projects/project', object: project

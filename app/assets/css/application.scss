@@ -30,7 +30,7 @@ a {
 	}
 }
 
-em {
+em, i {
 	font-style: italic;
 }
 
@@ -79,12 +79,16 @@ ol li {
 	list-style-type: decimal;
 }
 
-strong {
+strong, b {
 	font-weight: 600;
 }
 
 ul li {
 	list-style-type: disc;
+}
+
+u {
+	text-decoration: underline;
 }
 
 
@@ -277,6 +281,11 @@ footer#footer {
 		font: 400 0.75rem/1.75rem $sans-serif;
 		margin-bottom: 0.5rem;
 		text-transform: uppercase;
+
+		ul li {
+			margin-left: 0;
+			padding-left: 0;
+		}
 
 		li {
 			display: inline-block;

@@ -38,6 +38,8 @@ group :development do
 
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  gem 'log_buddy'
 end
 
 group :test do

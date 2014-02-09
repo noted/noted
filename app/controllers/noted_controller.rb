@@ -5,7 +5,9 @@ class NotedController < ActionController::Base
     if current_user
       render 'projects/index'
     else
-      render 'noted/index'
+      @projects = Project.where(user_id: current_user.id).all
+
+      render 'users/show'
     end
   end
 end

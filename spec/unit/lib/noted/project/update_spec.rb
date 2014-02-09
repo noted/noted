@@ -9,7 +9,8 @@ describe ProjectUpdate do
       current_user: user,
       project: {
         id: project.id.to_s,
-        title: 'Our Universe'
+        title: 'Our Universe',
+        summary: ''
       }
     })
   end
