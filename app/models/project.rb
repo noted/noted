@@ -7,6 +7,8 @@ class Project
   field :permalink, type: String
   field :collaborator_ids, type: Array, default: []
 
+  # TO-DO: validate presence of permalink, and uniqueness in context of
+  #   the rest of the user's project's permalinks
   validates_presence_of :title
 
   belongs_to :user

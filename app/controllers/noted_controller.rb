@@ -3,11 +3,13 @@ class NotedController < ActionController::Base
 
   def index
     if current_user
-      render 'projects/index'
-    else
       @projects = Project.where(user_id: current_user.id).all
 
-      render 'users/show'
+      d { current_user }
+
+      render 'projects/index'
+    else
+      render 'noted/index'
     end
   end
 end

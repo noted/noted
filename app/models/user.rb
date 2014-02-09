@@ -32,8 +32,6 @@ class User
 
   has_many :projects
 
-  has_and_belongs_to_many :projects
-
   def viewable_by?(u)
     true
   end
