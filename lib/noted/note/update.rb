@@ -4,7 +4,7 @@ class NoteUpdate < Mutations::Command
     hash  :note do
       string :id
       string :title
-      string :text
+      string :text, empty: true, nils: true
     end
   end
 

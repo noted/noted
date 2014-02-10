@@ -25,6 +25,12 @@ class NotesController < ActionController::Base
   end
 
   def update
+    @note = NoteUpdate.run(
+      current_user: current_user,
+      note: params[:note]
+    )
+
+    redirect_to current_project.path("/notes/#{@note.result.id}")
   end
 
   def destroy
@@ -35,6 +41,5 @@ class NotesController < ActionController::Base
   def current_project
     @user = User.where(username: params[:user]).first
     @project = Project.where(user_id: current_user.id, permalink: params[:project]).first
-    @project
   end
 end

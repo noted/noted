@@ -1,10 +1,5 @@
+= render :partial => "projects/header", locals: { project: @project }
 .container
-  %header
-    %h2= @project.title
-    %ul
-      - @project.collaborators.each do |user|
-        %li= user.name
-    %p= @project.summary
   %section
     %section
       %header
