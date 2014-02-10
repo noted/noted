@@ -30,6 +30,8 @@ end
 
 group :development, :test do
   gem 'rubocop'
+
+  gem 'log_buddy'
 end
 
 group :development do
@@ -38,8 +40,6 @@ group :development do
 
   gem 'better_errors'
   gem 'binding_of_caller'
-
-  gem 'log_buddy'
 end
 
 group :test do

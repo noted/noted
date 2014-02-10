@@ -27,4 +27,14 @@ describe Project do
     it { expect(project.destroyable_by?(user)).to eql true }
     it { expect(project.destroyable_by?(outsider)).to eql false }
   end
+
+  describe '#path' do
+    context 'without arguments' do
+      it { expect(project.path).to eql "/#{user.username}/#{project.permalink}" }
+    end
+
+    context 'with arguments' do
+      it { expect(project.path('/foobar')).to eql "/#{user.username}/#{project.permalink}/foobar" }
+    end
+  end
 end
