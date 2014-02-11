@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SourceDestroy do
   let(:source) { create :source }
-  let(:user)   { source.project.user }
+  let(:user)   { source.project.owner }
   let(:action) do
     SourceDestroy.run({
       current_user: user,

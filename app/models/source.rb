@@ -16,15 +16,15 @@ class Source
   end
 
   def creatable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 
   def updatable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 
   def destroyable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 
   private

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SourceUpdate do
   let(:source) { create :source }
-  let(:user)   { source.project.user }
+  let(:user)   { source.project.owner }
   let(:action) do
     SourceUpdate.run({
       current_user: user,

@@ -10,7 +10,7 @@ class Note
   belongs_to :project
 
   def creatable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 
   def viewable_by?(u)
@@ -18,10 +18,10 @@ class Note
   end
 
   def updatable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 
   def destroyable_by?(u)
-    self.project.user == u
+    self.project.owner == u
   end
 end

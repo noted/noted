@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Note do
   let(:note)     { create :note }
-  let(:user)     { note.project.user }
+  let(:user)     { note.project.owner }
   let(:outsider) { create :user }
 
   it { expect(note).to be_valid }

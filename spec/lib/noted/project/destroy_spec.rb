@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ProjectDestroy do
   let(:project) { create :project }
-  let(:user)    { project.user }
+  let(:user)    { project.owner }
   let(:action) do
     ProjectDestroy.run({
       current_user: user,

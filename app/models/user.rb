@@ -30,7 +30,7 @@ class User
   validates_presence_of :name, :email, :username
   validates_uniqueness_of :email, :username
 
-  has_many :projects
+  has_and_belongs_to_many :projects
 
   def viewable_by?(u)
     true

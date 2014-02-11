@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Source do
   let(:source)   { create :source }
-  let(:user)     { source.project.user }
+  let(:user)     { source.project.owner }
   let(:outsider) { create :user }
 
   it { expect(source).to be_valid }

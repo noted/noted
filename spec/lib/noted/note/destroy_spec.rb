@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe NoteDestroy do
   let(:note) { create :note }
-  let(:user) { note.project.user }
+  let(:user) { note.project.owner }
   let(:action) do
     NoteDestroy.run({
       current_user: user,

@@ -2,6 +2,6 @@ FactoryGirl.define do
   factory :project do
     title 'The Cosmos'
 
-    user
+    owner { create(:user) }
   end
 end

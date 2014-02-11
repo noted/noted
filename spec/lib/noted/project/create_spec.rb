@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe ProjectCreate do
-  let(:user) { create :user }
+  let(:owner) { create :user }
   let(:action) do
     ProjectCreate.run({
-      current_user: user,
+      current_user: owner,
       project: {
         title: 'The Cosmos',
         summary: nil
@@ -18,7 +18,8 @@ describe ProjectCreate do
 
   it 'returns a Project with correct attributes' do
     expect(action.result).to be_an_instance_of Project
-    expect(action.result.user).to eql user
+    expect(action.result.owner).to eql owner
     expect(action.result.title).to eql 'The Cosmos'
+    expect(action.result.users).to include owner
   end
 end

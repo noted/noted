@@ -9,9 +9,9 @@ class ProjectCreate < Mutations::Command
 
   def execute
     p = Project.new(self.project)
-    p.user = current_user
+    p.owner = current_user
 
-    p.collaborator_ids << current_user.id
+    p.users << current_user
 
     p.save
 
