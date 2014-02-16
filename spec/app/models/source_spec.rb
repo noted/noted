@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe Source do
-  let(:source)   { create :source }
-  let(:user)     { source.project.owner }
-  let(:outsider) { create :user }
+  let(:source)       { create :source }
+  let(:owner)        { source.project.owner }
+  let(:collaborator) { source.project.users.last }
+  let(:outsider)     { create :user }
 
   it { expect(source).to be_valid }
 
@@ -15,18 +16,27 @@ describe Source do
     it { expect(source.citation).to eql citation }
   end
 
+  describe '#creatable_by?' do
+    it { expect(source.creatable_by?(owner)).to eql true }
+    it { expect(source.creatable_by?(collaborator)).to eql true }
+    it { expect(source.creatable_by?(outsider)).to eql false }
+  end
+
   describe '#viewable_by?' do
-    it { expect(source.viewable_by?(user)).to eql true }
+    it { expect(source.viewable_by?(owner)).to eql true }
+    it { expect(source.viewable_by?(collaborator)).to eql true }
     it { expect(source.viewable_by?(outsider)).to eql true }
   end
 
   describe '#updatable_by?' do
-    it { expect(source.updatable_by?(user)).to eql true }
+    it { expect(source.updatable_by?(owner)).to eql true }
+    it { expect(source.updatable_by?(collaborator)).to eql true }
     it { expect(source.updatable_by?(outsider)).to eql false }
   end
 
   describe '#destroyable_by' do
-    it { expect(source.destroyable_by?(user)).to eql true }
+    it { expect(source.destroyable_by?(owner)).to eql true }
+    it { expect(source.destroyable_by?(collaborator)).to eql true }
     it { expect(source.destroyable_by?(outsider)).to eql false }
   end
 end

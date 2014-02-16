@@ -12,7 +12,7 @@ class UsersController < ActionController::Base
 
   def show
     @user = User.where(username: params[:user]).first
-    @projects = Project.where(user_id: @user.id).all
+    @projects = Project.where(owner_id: @user.id).all
   end
 
   def update

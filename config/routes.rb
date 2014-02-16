@@ -1,6 +1,8 @@
 Noted::Application.routes.draw do
   root 'noted#index'
 
+  get '/ui' => 'noted#ui'
+
   get '/new' => 'projects#new'
 
   devise_for :users
@@ -15,6 +17,7 @@ Noted::Application.routes.draw do
   get '/:user' => 'users#show'#, as: 'projects'
 
   get '/:user/:project' => 'projects#show'#, as: 'projects'
+  get '/:user/:project/settings' => 'projects#edit'
 
   get '/:user/:project/notes' => 'notes#index'
   get '/:user/:project/notes/new' => 'notes#new'

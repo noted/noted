@@ -18,8 +18,9 @@ class ProjectsController < ActionController::Base
   end
 
   def show
-    @user = User.where(username: params[:user]).first
-    @project = Project.where(user_id: current_user.id, permalink: params[:project]).first
+  end
+
+  def edit
   end
 
   def update
@@ -27,4 +28,5 @@ class ProjectsController < ActionController::Base
 
   def destroy
   end
+
 end

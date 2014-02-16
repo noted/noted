@@ -42,6 +42,14 @@ class Project
     self.owner_id = u.id
   end
 
+  def collaborators(links = false)
+    if links
+      self.users.collect { |u| "<a href='/#{u.username}'>#{u.name}</a>" }.join(', ')
+    else
+      self.users.collect { |u| u.name }.join(', ')
+    end
+  end
+
   private
 
   def permalink!

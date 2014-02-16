@@ -1,2 +1,7 @@
-%h2= link_to project.title, project.path
-%p= project.summary
+%article.project
+  %a.block{:href => project.path}
+    %header.info
+      %h3= project.title
+      %h4= project.collaborators
+    %section.summary
+      %p= project.summary

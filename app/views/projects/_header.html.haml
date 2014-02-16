@@ -1,4 +1,5 @@
 %header.project
   .container
     %h2= link_to project.title, project.path
-    %p= project.summary
+    %p.collaborators= project.collaborators(true).html_safe
+    %p.summary= project.summary

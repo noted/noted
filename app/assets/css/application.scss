@@ -30,8 +30,32 @@ a {
 	}
 }
 
+blockquote {
+	border-left: 5px solid $light-grey;
+	padding-left: 1em;
+
+	cite {
+		&:before {
+			content: '\2014'
+		}
+
+		font-style: italic;
+	}
+}
+
 em, i {
 	font-style: italic;
+}
+
+figure {
+	&.avatar {
+		text-align: center;
+
+		img {
+			border-radius: 50%;
+			max-width: 50%;
+		}
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,8 +86,12 @@ h3 {
 	font-size: 1.25em;
 }
 
+img {
+	max-width: 100%;
+}
+
 p + p {
-	margin-top: 1.75rem;
+	margin-top: 1.5rem;
 }
 
 ol, ul {
@@ -166,6 +194,10 @@ header#header {
 
 main {
 	padding: 2rem 0;
+
+	& > header {
+		border-bottom: 1px solid $light-grey;
+	}
 
 	#features {
 		section {

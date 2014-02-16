@@ -1,7 +1,6 @@
-%header.container
-  %h3 Projects
-  = link_to "New", new_path, class: "btn"
+%header.page-header.container
+  %h2 Projects
 %section.projects
-  - current_user.projects.each do |project|
-    %article.container
+  - @projects.each do |project|
+    %article
       = render :partial => 'projects/project', object: project

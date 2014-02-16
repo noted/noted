@@ -1,9 +1,10 @@
 require 'spec_helper'
 
 describe Project do
-  let(:project)  { create :project }
-  let(:owner)    { project.owner }
-  let(:outsider) { create :user }
+  let(:project)      { create :project }
+  let(:owner)        { project.owner }
+  let(:collaborator) { project.users.last }
+  let(:outsider)     { create :user }
 
   it { expect(project).to be_valid }
 
@@ -15,16 +16,19 @@ describe Project do
 
   describe '#viewable_by?' do
     it { expect(project.viewable_by?(owner)).to eql true }
+    it { expect(project.viewable_by?(collaborator)).to eql true }
     it { expect(project.viewable_by?(outsider)).to eql true }
   end
 
   describe '#updatable_by?' do
     it { expect(project.updatable_by?(owner)).to eql true }
+    it { expect(project.updatable_by?(collaborator)).to eql false }
     it { expect(project.updatable_by?(outsider)).to eql false }
   end
 
   describe '#destroyable_by' do
     it { expect(project.destroyable_by?(owner)).to eql true }
+    it { expect(project.destroyable_by?(collaborator)).to eql false }
     it { expect(project.destroyable_by?(outsider)).to eql false }
   end
 

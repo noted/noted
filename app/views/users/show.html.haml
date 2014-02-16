@@ -1,8 +1,19 @@
-%header.container
-  %h3 Project
-  = link_to "New", new_path, class: "btn"
-%section.projects
-  - if @projects.blank?
-    %p To begin, create your first project.
-  - @projects.each do |project|
-    = render :partial => 'projects/project', object: project
+.user
+  %aside
+    / %figure.avatar
+    /   %img{:src => @user.gravatar}
+    %h2= @user.name
+    %p.biography= @user.biography
+    %nav.personal
+      %ul
+        %li
+          %i.ss-icon location
+          %span= @user.location
+        - @user.social.each do |service, link|
+          %li
+            %i.ss-icon.ss-social= service
+            %span= link
+  %section
+    - @projects.each do |project|
+      %article
+        = render :partial => 'projects/project', object: project

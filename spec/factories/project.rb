@@ -3,5 +3,10 @@ FactoryGirl.define do
     title 'The Cosmos'
 
     owner { create(:user) }
+
+    before(:create) do |project, evaluator|
+      project.users << project.owner
+      project.users << create(:user)
+    end
   end
 end

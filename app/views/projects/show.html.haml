@@ -1,15 +1,15 @@
-= render :partial => "projects/header", locals: { project: @project }
+= render :partial => "projects/header", locals: { project: current_project }
 .container
-  %section
-    %section
+  %section.project-children
+    %section.notes
       %header
         %h3 Sources
-        = link_to "New", @project.path("/sources/new"), class: "btn"
-      - @project.sources.each do |source|
+        = link_to "New", current_project.path("/sources/new"), class: "btn"
+      - current_project.sources.each do |source|
         = render :partial => "sources/source", object: source
-    %section
+    %section.sources
       %header
         %h3 Notes
-        = link_to "New", @project.path("/notes/new"), class: "btn"
-      - @project.notes.each do |note|
+        = link_to "New", current_project.path("/notes/new"), class: "btn"
+      - current_project.notes.each do |note|
         = render :partial => "notes/note", object: note

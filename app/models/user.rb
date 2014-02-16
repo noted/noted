@@ -1,12 +1,17 @@
+require 'digest/md5'
+
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
   include Canable::Ables
   include Canable::Cans
 
-  field :name,     type: String
-  field :email,    type: String
-  field :username, type: String
+  field :name,      type: String
+  field :email,     type: String
+  field :username,  type: String
+  field :biography, type: String
+  field :location,  type: String
+  field :social,    type: Hash, default: { twitter: '' }
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
@@ -42,5 +47,9 @@ class User
 
   def destroyable_by?(u)
     self == u
+  end
+
+  def gravatar
+    "//gravatar.com/avatar/#{Digest::MD5.hexdigest(self.email)}?s=500"
   end
 end
