@@ -16,7 +16,7 @@ section.project-children {
 
 	padding: 0;
 
-	section {
+	& > section {
 		@include span-columns(12, 24);
 
 		&:last-child {

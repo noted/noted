@@ -11,8 +11,9 @@
           %span= @user.location
         - @user.social.each do |service, link|
           %li
-            %i.ss-icon.ss-social= service
-            %span= link
+            %i.ss-icon.ss-social-regular= service
+            - if service == 'twitter'
+              %span= link_to "@#{link}", "https://twitter.com/#{link}"
   %section
     - @projects.each do |project|
       %article
