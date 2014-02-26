@@ -1,0 +1,59 @@
+/*
+	Noted.
+		file: css/modules/_source.scss
+*/
+
+article.source {
+	@include border-radius(1px);
+	@include leading-border(1px, 0);
+	@include trailing-border(1px, 0);
+
+	border-color: $light-grey;
+	border-left: 1px solid $light-grey;
+	border-right: 1px solid $light-grey;
+
+	header, section, footer {
+		padding: 0 rhythm(0.25);
+	}
+
+	header {
+		background: $light-grey;
+		padding: rhythm(0.25);
+	}
+
+	section {
+		margin: rhythm(0.25) 0;
+	}
+
+	footer {
+		@include clearfix;
+		@include leading-border(1px, 0);
+
+		border-color: $light-grey;
+		color: $grey;
+		font-family: $sans-serif;
+		margin-top: rhythm(0.25);
+		padding: rhythm(0.25) rhythm(0.25) rhythm(0.0625);
+
+		ul {
+			@include adjust-font-size-to(18px);
+
+			float: left;
+
+			li {
+				display: inline-block;
+				margin: 0;
+			}
+
+			img {
+				max-width: 18px;
+			}
+		}
+
+		p {
+			@include adjust-font-size-to(12px);
+
+			float: right;
+		}
+	}
+}

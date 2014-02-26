@@ -1,0 +1,41 @@
+/*
+	Noted.
+		file: css/modules/_file.scss
+*/
+
+article.file {
+	@include leading-border(1px, 0);
+
+	&:last-child {
+		@include trailing-border(1px, 0);
+	}
+
+	border-color: $light-grey;
+	border-left: 1px solid $light-grey;
+	border-right: 1px solid $light-grey;
+	padding-left: rhythm(0.25);
+	padding-right: rhythm(0.25);
+	font-family: $sans-serif;
+
+	a {
+		color: $text;
+		display: block;
+
+		&:hover {
+			span {
+				color: $dark-grey;
+			}
+		}
+	}
+
+	i {
+		@include adjust-font-size-to(12px);
+
+		position: relative;
+		top: 1px;
+	}
+
+	span {
+		@include adjust-font-size-to(14px);
+	}
+}

@@ -33,6 +33,10 @@ a {
 	}
 }
 
+em {
+	font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $sans-serif;
 	font-weight: 600;
@@ -47,8 +51,16 @@ h2 {
 	@include adjust-font-size-to(18px);
 }
 
+h3 {
+	@include adjust-font-size-to(24px);
+}
+
 img {
 	max-width: 100%;
+}
+
+strong {
+	font-weight: 600;
 }
 
 
@@ -111,16 +123,21 @@ header#header {
 	nav {
 		@include adjust-font-size-to(14px);
 
-		&.primary {
-			// @include span-columns(9, $total-columns);
-		}
-
 		&.secondary {
-			// @include span-columns(12 omega, $total-columns);
-
 			ul {
 				float: right;
 			}
 		}
 	}
+}
+
+
+/*
+	III. Main
+*/
+
+main#main .content {
+	@include container($total-columns, $break);
+
+	margin-top: rhythm(2);
 }

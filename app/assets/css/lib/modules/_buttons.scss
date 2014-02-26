@@ -8,13 +8,16 @@ a.btn {
 	@include border-radius(1px);
 
 	background: $grey;
+	color: $base;
+	font-family: $sans-serif;
 	font-weight: 600;
-	margin: rhythm(0.25, 14px) 0;
-	padding: rhythm(0.25, 14px) rhythm(0.5, 14px);
+	margin: rhythm(0.25, 16px) 0;
+	padding: rhythm(0.25, 16px) rhythm(0.5, 16px);
 	text-transform: uppercase;
 
 	&:hover {
 		background: darken($grey, 5%);
+		color: $base;
 	}
 
 	&.blue {

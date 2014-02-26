@@ -24,13 +24,14 @@ header.project-header {
 			padding: rhythm(1) 0;
 
 			&.active {
-				font-weight: 600;
-
 				@include trailing-border(2px, 0.5);
+
+				border-color: $dark-grey;
+				font-weight: 600;
 			}
 
 			&.project {
-				padding: rhythm(1);
+				padding: rhythm(1) 0;
 
 				p {
 					@include adjust-font-size-to(14px);
@@ -72,6 +73,35 @@ header.project-header {
 						@include adjust-font-size-to(14px);
 					}
 				}
+			}
+		}
+	}
+}
+
+.dashboard {
+	.elements {
+		@include container($total-columns, $break);
+
+		padding: 0;
+
+		section {
+			& > header {
+				@include trailing-border(1px, 0.25);
+
+				border-color: $grey;
+				margin-bottom: rhythm(0.5);
+			}
+
+			&.notes {
+				@include span-columns(12, $total-columns);
+			}
+
+			&.sources {
+				@include span-columns(6, $total-columns);
+			}
+
+			&.files {
+				@include span-columns(6 omega, $total-columns);
 			}
 		}
 	}
