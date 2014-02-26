@@ -5,11 +5,10 @@
 @import "includes/grid";
 @import "includes/colors";
 
+@import "modules/avatars";
 @import "modules/buttons";
-@import "modules/grid";
 
-@import "pages/projects";
-@import "pages/users";
+@import "pages/project";
 
 @import "vendor/gridforms";
 @import "vendor/ss-social-regular";

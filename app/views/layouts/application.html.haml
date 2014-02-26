@@ -1,4 +1,5 @@
 !!!
+/ %html.debug{lang: "en"}
 %html{lang: "en"}
   %head
     %meta{charset: "utf-8"}/
@@ -18,44 +19,40 @@
       } catch(e) {}
   %body
     %header#header
-      .navbar
+      .inner
         %aside
-          %h1= link_to "Noted", root_path
-        - if current_user
-          %nav.primary
-          %nav.secondary
-            %ul
-              %li= link_to "New Project", new_path, class: "btn"
-              %li= link_to "Logout", logout_path, class: "btn"
-        - else
-          %nav.primary
-            %ul
-              %li
-                %a{href: "#"} Features
-              %li
-                %a{href: "#"} Documentation
-              %li
-                %a{href: "#"} Support
-          %nav.secondary
-            %ul
-              %li= link_to "Join", join_path, class: "btn green"
-              %li= link_to "Login", login_path, class: "btn"
-    %main
-      = yield
-    %footer#footer
-      .container
-        %nav
           %ul
-            %li
-              %a{href: "#"} About
-            %li
-              %a{href: "#"} Documentation
-            %li
-              %a{href: "#"} Support
-            %li
-              %a{href: "#"} Contact
-        %p
-          %a{href: "#"} Noted
-          fecit 2013.
+            %li.brand
+              = link_to "Noted", root_url
+        %nav.primary
+          %ul
+            %li= link_to "Features", ""
+            %li= link_to "Pricing", ""
+            %li= link_to "Support", ""
+        %nav.secondary
+          %ul
+            %li.btn= link_to "Login", "", class: "btn"
+            %li.btn= link_to "Join", "", class: "btn blue"
+
+    %main#main
+      %header.project-header
+        .inner
+          %aside
+            %ul
+              %li.project
+                %h2= link_to "The Cosmos", ""
+                %p= "<a href=''>Neil deGrasse Tyson</a>, <a href=''>Bill Nye</a>".html_safe
+          %nav
+            %ul
+              %li.active
+                %span= link_to "Dashboard", ""
+              %li
+                %span= link_to "Notes", ""
+              %li
+                %span= link_to "Sources", ""
+              %li
+                %span= link_to "Files", ""
+              %li
+                %span= link_to "Settings", ""
 
     = javascript_include_tag "application"

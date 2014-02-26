@@ -1,6 +1,6 @@
 /*
-
-		file: css/src/application.scss
+	Noted.
+		file: css/application.scss
 */
 
 @import "lib/base";
@@ -15,10 +15,13 @@
 	I. Universal
 */
 
+html.debug {
+	@include debug-vertical-alignment;
+}
+
 body {
-	background: $base;
-	color: $text;
-	font: 300 100%/1.75em $serif;
+	font-family: $serif;
+	font-weight: 300;
 }
 
 a {
@@ -30,93 +33,22 @@ a {
 	}
 }
 
-blockquote {
-	border-left: 5px solid $light-grey;
-	padding-left: 1em;
-
-	cite {
-		&:before {
-			content: '\2014'
-		}
-
-		font-style: italic;
-	}
-}
-
-em, i {
-	font-style: italic;
-}
-
-figure {
-	&.avatar {
-		text-align: center;
-
-		img {
-			border-radius: 50%;
-			max-width: 50%;
-		}
-	}
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: $sans-serif;
-	text-transform: uppercase;
+	font-weight: 600;
 }
 
-h1 {
-	font-size: 1.5vw;
+h1, .brand {
 	font-weight: 700;
-	letter-spacing: 2px;
-}
-
-h2, h3, h4, h5, h6 {
-	font-weight: 700;
-	margin-bottom: 0.5rem;
+	letter-spacing: 0.5px;
 }
 
 h2 {
-	font-size: 1.5em;
-}
-
-h3, h4, h5, h6 {
-	margin-top: 1em;
-}
-
-h3 {
-	font-size: 1.25em;
+	@include adjust-font-size-to(18px);
 }
 
 img {
 	max-width: 100%;
-}
-
-p + p {
-	margin-top: 1.5rem;
-}
-
-ol, ul {
-	margin-bottom: 1.75rem;
-
-	li {
-		margin-left: 3rem;
-		padding-left: 0.5rem;
-	}
-}
-
-ol li {
-	list-style-type: decimal;
-}
-
-strong, b {
-	font-weight: 600;
-}
-
-ul li {
-	list-style-type: disc;
-}
-
-u {
-	text-decoration: underline;
 }
 
 
@@ -125,205 +57,69 @@ u {
 */
 
 header#header {
-	border-bottom: 1px solid $light-grey;
+	background: $red;
+	font-family: $sans-serif;
 
-	.navbar {
-		@include container;
+	.inner {
+		// @include container($total-columns, $break);
+		@include clearfix;
+	}
 
-		font-family: $sans-serif;
-		margin-bottom: 1em;
-		margin-top: 1em;
+	aside, nav {
+		display: inline-block;
+	}
 
-		aside {
-			@include span-columns(4, 24);
+	aside, nav.primary {
+		float: left;
+	}
+
+	nav.primary {
+		margin-left: rhythm(0.5);
+	}
+
+	nav.secondary {
+		float: right;
+		margin-right: rhythm(0.5);
+	}
+
+	a {
+		color: $base;
+		display: block;
+
+		&.btn {
+			margin: 0;
+		}
+	}
+
+	li {
+		display: inline-block;
+		padding: rhythm(0.5);
+
+		&.brand {
+			background: $dark-red;
 		}
 
-		nav.primary {
-			@include span-columns(12, 24);
+		&.btn {
+			padding: rhythm(0.375, 14px) 0 rhythm(0.25, 14px) rhythm(0.25, 14px);
+
+			& + .btn {
+				margin-left: 0;
+			}
+		}
+	}
+
+	nav {
+		@include adjust-font-size-to(14px);
+
+		&.primary {
+			// @include span-columns(9, $total-columns);
 		}
 
-		nav.secondary {
-			@include span-columns(8 omega, 24);
+		&.secondary {
+			// @include span-columns(12 omega, $total-columns);
 
 			ul {
 				float: right;
-			}
-		}
-	}
-
-	h1 a {
-		color: $text;
-
-		&:hover {
-			color: darken($text, 10%);
-		}
-	}
-
-	nav {
-		font-size: 0.75rem;
-		font-weight: 400;
-		line-height: 1.75rem;
-		text-transform: uppercase;
-
-		a {
-			color: lighten($text, 10%);
-
-			&:hover {
-				color: $dark-red;
-			}
-		}
-
-		ul {
-			margin: 0;
-		}
-
-		li {
-			display: inline-block;
-
-			& + li {
-				margin-left: 1em;
-			}
-		}
-	}
-}
-
-
-/*
-	III. Main
-*/
-
-main {
-	padding: 2rem 0;
-
-	& > header {
-		border-bottom: 1px solid $light-grey;
-	}
-
-	#features {
-		section {
-			@include container;
-
-			& + section {
-				margin-top: 4rem;
-			}
-
-			&.hero {
-				border-bottom: 1px solid $light-grey;
-				padding-bottom: 5rem;
-				margin-bottom: 5rem;
-				margin-top: 2rem;
-				text-align: center;
-
-				h2 {
-					font-size: 3em;
-					font-weight: 700;
-					margin-bottom: 0;
-					letter-spacing: 3px;
-					text-transform: uppercase;
-				}
-
-				p {
-					margin: 2rem 0;
-				}
-
-				nav {
-					li {
-						display: inline-block;
-
-						& + li {
-							margin-left: 1rem;
-						}
-					}
-				}
-			}
-
-			h3 {
-				margin-top: 0;
-			}
-
-			i {
-				font-size: 5rem;
-				line-height: 5rem;
-			}
-
-			&.left {
-				@include container;
-
-				aside {
-					@include prefix(4);
-					@include span-columns(4);
-				}
-
-				.content {
-					@include omega;
-					@include suffix(4);
-					@include span-columns(11);
-				}
-			}
-
-			&.right {
-				.content {
-					@include prefix(4);
-					@include span-columns(11);
-				}
-
-				aside {
-					@include omega;
-					@include suffix(4);
-					@include span-columns(4);
-
-					i {
-						float: right;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-/*
-	IV. Footer
-*/
-
-footer#footer {
-	background: $light-grey;
-	color: $grey;
-	margin-top: 6rem;
-
-	a {
-		color: $dark-grey;
-
-		&:hover {
-			color: $dark-red;
-		}
-	}
-
-	.container {
-		@include container;
-
-		padding: 3em 0;
-	}
-
-	p {
-		font-family: $sans-serif;
-	}
-
-	nav {
-		font: 400 0.75rem/1.75rem $sans-serif;
-		margin-bottom: 0.5rem;
-		text-transform: uppercase;
-
-		ul li {
-			margin-left: 0;
-			padding-left: 0;
-		}
-
-		li {
-			display: inline-block;
-
-			& + li {
-				margin-left: 1em;
 			}
 		}
 	}

@@ -1,68 +1,27 @@
 /*
 	Noted.
-		file: css/lib/modules/_buttons.scss
+		file: css/modules/_buttons.scss
 */
 
-@mixin colored-button($color_name, $color) {
-	&.#{$color_name} {
-		$dark_color: darken($color, 10%);
+a.btn {
+	@include adjust-font-size-to(14px);
+	@include border-radius(1px);
 
-		border-color: $color;
-		color: $color !important;
-
-		&:hover {
-			border-color: $dark_color;
-			color: $dark_color !important;
-		}
-
-		&.filled {
-			background: $color;
-			color: $base !important;
-
-			&:hover {
-				background: $dark_color;
-				border-color: $dark_color;
-			}
-		}
-	}
-}
-
-a.btn, button, input[type="submit"] {
-	@include border-radius(2px);
-
-	background: transparent;
-	border: 2px solid darken($light-grey, 5%);
-	color: darken($grey, 5%) !important;
-	font-family: $sans-serif;
-	font-size: 0.75rem;
+	background: $grey;
 	font-weight: 600;
-	padding: 0.5em 1em;
-	text-decoration: none;
+	margin: rhythm(0.25, 14px) 0;
+	padding: rhythm(0.25, 14px) rhythm(0.5, 14px);
 	text-transform: uppercase;
 
 	&:hover {
-		border: 2px solid $grey;
-		color: $dark-grey;
-		cursor: pointer;
+		background: darken($grey, 5%);
 	}
 
-	&.big {
-		font-size: 1.125rem;
-		font-weight: 400;
-		letter-spacing: 2px;
-	}
-
-	&.filled {
-		background: darken($light-grey, 5%);
-		color: $base !important;
+	&.blue {
+		background: $blue;
 
 		&:hover {
-			background: $grey;
+			background: darken($blue, 5%);
 		}
 	}
-
-	@include colored-button(green, $green);
-	@include colored-button(red, $red);
-	@include colored-button(blue, $blue);
 }
-

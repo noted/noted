@@ -1,0 +1,78 @@
+/*
+	Noted.
+		file: css/pages/_project.scss
+*/
+
+header.project-header {
+	@include trailing-border(1px, 0);
+
+	border-color: $light-grey;
+	font-family: $sans-serif;
+
+	a {
+		color: $text;
+
+		&:hover {
+			color: $dark-grey;
+		}
+	}
+
+	.inner {
+		@include container($total-columns, $break);
+
+		li {
+			padding: rhythm(1) 0;
+
+			&.active {
+				font-weight: 600;
+
+				@include trailing-border(2px, 0.5);
+			}
+
+			&.project {
+				padding: rhythm(1);
+
+				p {
+					@include adjust-font-size-to(14px);
+
+					color: $dark-grey;
+					font-family: $serif;
+					font-style: italic;
+
+					a {
+						color: $grey;
+
+						&:hover {
+							color: $dark-grey;
+						}
+					}
+
+				}
+			}
+		}
+
+		aside {
+			@include span-columns(12, $total-columns);
+		}
+
+		nav {
+			@include span-columns(12 omega, $total-columns);
+
+			ul {
+				float: right;
+
+				li {
+					display: inline-block;
+
+					& + li {
+						padding-left: rhythm(1);
+					}
+
+					span {
+						@include adjust-font-size-to(14px);
+					}
+				}
+			}
+		}
+	}
+}

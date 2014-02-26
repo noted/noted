@@ -1,2 +1,27 @@
-$serif: "adobe-caslon-pro", Times New Roman, Times, serif;
-$sans-serif: "europa", Helvetica Neue, Helvetica, Arial, sans-serif;
+// Vertical rhythm
+@import "compass/typography/vertical_rhythm";
+
+$base-font-size: 16px;
+$base-light-height: 28px;
+
+@include establish-baseline;
+
+// Fonts
+$serif: "calluna", Times New Roman, Times, serif;
+// $sans-serif: "europa", Helvetica Neue, Helvetica, Arial, sans-serif;
+// $sans-serif: "adelle-sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+// $sans-serif: "ff-dagny-web-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+// $sans-serif: "freight-sans-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
+// $sans-serif: "open-sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+$sans-serif: "proxima-nova", Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}

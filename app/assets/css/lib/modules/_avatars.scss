@@ -1,0 +1,8 @@
+/*
+	Noted.
+		file: css/modules/_avatars.scss
+*/
+
+figure.avatar img, img.avatar {
+	@include border-radius(50%);
+}
