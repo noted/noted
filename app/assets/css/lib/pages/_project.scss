@@ -23,7 +23,7 @@ header.project-header {
 		li {
 			padding: rhythm(1) 0;
 
-			&.active {
+			&.true {
 				@include trailing-border(2px, 0.5);
 
 				border-color: $dark-grey;
@@ -66,7 +66,7 @@ header.project-header {
 					display: inline-block;
 
 					& + li {
-						padding-left: rhythm(1);
+						margin-left: rhythm(1);
 					}
 
 					span {

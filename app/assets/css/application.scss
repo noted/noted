@@ -151,8 +151,14 @@ main#main .content {
 footer#footer {
 	background: $light-grey;
 	color: $grey;
+	font-family: $sans-serif;
+	padding: rhythm(1) 0;
 
 	a {
 		color: $dark-grey;
+	}
+
+	.inner {
+		@include container($total-columns, $break);
 	}
 }

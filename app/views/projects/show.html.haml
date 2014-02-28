@@ -1,15 +1,33 @@
-= render :partial => "projects/header", locals: { project: current_project }
-.container
-  %section.project-children
+= render :partial => "projects/header", locals: { project: current_project, section: :dashboard }
+.content.dashboard
+  %header.content-header
+    %h3 Dashboard
+
+  .elements
     %section.notes
       %header
-        %h3 Sources
-        = link_to "New", current_project.path("/sources/new"), class: "btn"
-      - current_project.sources.each do |source|
-        = render :partial => "sources/source", object: source
-    %section.sources
-      %header
-        %h3 Notes
-        = link_to "New", current_project.path("/notes/new"), class: "btn"
+        %h4 Notes
       - current_project.notes.each do |note|
         = render :partial => "notes/note", object: note
+
+    %section.sources
+      %header
+        %h4 Sources
+      - current_project.sources.each do |source|
+        = render :partial => "sources/source", object: source
+
+    %section.files
+      %header
+        %h4 Files
+      %article.file
+        %a{href: ""}
+          %i.ss-icon document
+          %span document.docx
+      %article.file
+        %a{href: ""}
+          %i.ss-icon document
+          %span document.docx
+      %article.file
+        %a{href: ""}
+          %i.ss-icon audio
+          %span file.mp3

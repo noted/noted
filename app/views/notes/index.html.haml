@@ -1,9 +1,1 @@
-.container
-  %header
-    %h3 Notes
-    = link_to "New", current_project.path("/notes/new")
-  %section
-    - @notes.each do |note|
-      %article
-        %h4= link_to note.title, current_project.path("/notes/#{note.id}")
-        = note.text
+= render :partial => "projects/header", locals: { project: current_project, section: :notes }

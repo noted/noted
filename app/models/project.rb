@@ -44,7 +44,7 @@ class Project
 
   def collaborators(links = false)
     if links
-      self.users.collect { |u| "<a href='/#{u.username}'>#{u.name}</a>" }.join(', ')
+      self.users.collect { |u| "<a href='/#{u.username}'>#{u.name}</a>" }.join(', ').html_safe
     else
       self.users.collect { |u| u.name }.join(', ')
     end

@@ -1,5 +1,19 @@
-%header.project
-  .container
-    %h2= link_to project.title, project.path
-    %p.collaborators= project.collaborators(true).html_safe
-    %p.summary= project.summary
+%header.project-header
+  .inner
+    %aside
+      %ul
+        %li.project
+          %h2= link_to project.title, project.path
+          %p= project.collaborators(true)
+    %nav
+      %ul
+        %li{class: section == :dashboard}
+          %span= link_to "Dashboard", project.path
+        %li{class: section == :notes}
+          %span= link_to "Notes", project.path("/notes")
+        %li{class: section == :sources}
+          %span= link_to "Sources", project.path("/sources")
+        %li{class: section == :files}
+          %span= link_to "Files", project.path("/files")
+        %li{class: section == :settings}
+          %span= link_to "Settings", project.path("/settings")
