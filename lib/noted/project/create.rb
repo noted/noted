@@ -4,6 +4,7 @@ class ProjectCreate < Mutations::Command
     hash  :project do
       string :title
       string :summary, empty: true, nils: true
+      string :citation_style, empty: true, nils: true
     end
   end
 

@@ -2,10 +2,11 @@ class Project
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :title,     type: String
-  field :summary,   type: String
-  field :permalink, type: String
-  field :owner_id,  type: BSON::ObjectId
+  field :title,          type: String
+  field :summary,        type: String
+  field :permalink,      type: String
+  field :owner_id,       type: BSON::ObjectId
+  field :citation_style, type: String, default: 'modern-language-association'
 
   # TO-DO: validate presence of permalink, and uniqueness in context of
   #   the rest of the user's project's permalinks

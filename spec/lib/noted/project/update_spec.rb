@@ -10,7 +10,8 @@ describe ProjectUpdate do
       project: {
         id: project.id.to_s,
         title: 'Our Universe',
-        summary: ''
+        summary: '',
+        citation_style: project.citation_style
       }
     })
   end

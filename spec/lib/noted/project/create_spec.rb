@@ -7,7 +7,8 @@ describe ProjectCreate do
       current_user: owner,
       project: {
         title: 'The Cosmos',
-        summary: nil
+        summary: nil,
+        citation_style: nil
       }
     })
   end

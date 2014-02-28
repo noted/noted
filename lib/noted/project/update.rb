@@ -5,6 +5,7 @@ class ProjectUpdate < Mutations::Command
       string :id
       string :title
       string :summary, empty: true, nils: true
+      string :citation_style
     end
   end
 
