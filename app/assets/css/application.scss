@@ -139,5 +139,20 @@ header#header {
 main#main .content {
 	@include container($total-columns, $break);
 
+	margin-bottom: rhythm(2);
 	margin-top: rhythm(2);
+}
+
+
+/*
+	IV. Footer
+*/
+
+footer#footer {
+	background: $light-grey;
+	color: $grey;
+
+	a {
+		color: $dark-grey;
+	}
 }

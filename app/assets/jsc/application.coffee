@@ -7,3 +7,6 @@
 
 $("div[data-field-span]").on "click", ->
   $(@).find("input").focus()
+
+$("[rel=tipsy]").tipsy
+  gravity: 's'

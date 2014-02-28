@@ -35,6 +35,14 @@ article.source {
 		margin-top: rhythm(0.25);
 		padding: rhythm(0.25) rhythm(0.25) rhythm(0.0625);
 
+		a {
+			color: $grey;
+
+			&:hover {
+				color: $dark-grey;
+			}
+		}
+
 		ul {
 			@include adjust-font-size-to(18px);
 
@@ -55,5 +63,9 @@ article.source {
 
 			float: right;
 		}
+	}
+
+	& + article.source {
+		margin-top: rhythm(0.25);
 	}
 }

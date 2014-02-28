@@ -71,12 +71,26 @@
               %footer
                 %ul.contributors
                   %li
-                    %a{href: ""}
+                    %a{href: "", rel: "tipsy", title: "Neil deGrasse Tyson"}
                       %img.avatar{src: "http://www-tc.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
                   %li
-                    %a{href: ""}
+                    %a{href: "", rel: "tipsy", title: "Bill Nye"}
                       %img.avatar{src: "http://static.squarespace.com/static/51411c53e4b0d6e2ee875cd6/t/524ed8b7e4b00044d63966c1/1380899025221/Bill_Nye_Science_Guy.JPG?format=500w"}
-                %p.meta Posted on 25 February
+                %p.meta <a href="">25 February 2014 at 3:58pm</a>
+            %article.note
+              %header
+                %h5= link_to "The Milky Way", ""
+              %section
+                %p Corpus callosum cosmic fugue. Concept of the number one, descended from astronomers. Colonies citizens of distant epochs descended from astronomers birth another world vanquish the impossible globular star cluster made in the interiors of collapsing stars, colonies made in the interiors of collapsing stars.
+              %footer
+                %ul.contributors
+                  %li
+                    %a{href: "", rel: "tipsy", title: "Neil deGrasse Tyson"}
+                      %img.avatar{src: "http://www-tc.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
+                  %li
+                    %a{href: "", rel: "tipsy", title: "Bill Nye"}
+                      %img.avatar{src: "http://static.squarespace.com/static/51411c53e4b0d6e2ee875cd6/t/524ed8b7e4b00044d63966c1/1380899025221/Bill_Nye_Science_Guy.JPG?format=500w"}
+                %p.meta <a href="">25 February 2014 at 3:58pm</a>
 
           %section.sources
             %header
@@ -87,12 +101,25 @@
               %footer
                 %ul.contributors
                   %li
-                    %a{href: ""}
+                    %a{href: "", rel: "tipsy", title: "Neil deGrasse Tyson"}
                       %img.avatar{src: "http://www-tc.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
                   %li
-                    %a{href: ""}
+                    %a{href: "", rel: "tipsy", title: "Bill Nye"}
                       %img.avatar{src: "http://static.squarespace.com/static/51411c53e4b0d6e2ee875cd6/t/524ed8b7e4b00044d63966c1/1380899025221/Bill_Nye_Science_Guy.JPG?format=500w"}
-                %p.meta Posted on 25 February
+                %p.meta <a href="">25 February 2014 at 3:58pm</a>
+
+            %article.source
+              %section
+                %p Adams, Douglas. <em>The Salmon of Doubt</em>. London: William Heinemann, 2002. Print.
+              %footer
+                %ul.contributors
+                  %li
+                    %a{href: "", rel: "tipsy", title: "Neil deGrasse Tyson"}
+                      %img.avatar{src: "http://www-tc.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
+                  %li
+                    %a{href: "", rel: "tipsy", title: "Bill Nye"}
+                      %img.avatar{src: "http://static.squarespace.com/static/51411c53e4b0d6e2ee875cd6/t/524ed8b7e4b00044d63966c1/1380899025221/Bill_Nye_Science_Guy.JPG?format=500w"}
+                %p.meta <a href="">25 February 2014 at 3:58pm</a>
 
           %section.files
             %header
@@ -109,5 +136,8 @@
               %a{href: ""}
                 %i.ss-icon audio
                 %span file.mp3
+
+    %footer#footer
+      %p= "<a href=''>Noted</a> &copy; #{Time.now.year}".html_safe
 
     = javascript_include_tag "application"
