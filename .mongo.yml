@@ -10,3 +10,6 @@ development:
 test:
   <<: *defaults
   database: noted_test
+
+production:
+  uri: <%= MONGOHQ_URL %>
