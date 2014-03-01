@@ -14,6 +14,9 @@ class ProjectCreate < Mutations::Command
 
     p.users << current_user
 
+    p.creator = current_user
+    p.updater = current_user
+
     p.save
 
     return p

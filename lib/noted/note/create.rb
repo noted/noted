@@ -12,7 +12,10 @@ class NoteCreate < Mutations::Command
     n = Note.new(self.note)
     n.project = project
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_create?(n)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_create?(n)
+
+    n.creator = current_user
+    n.updater = current_user
 
     n.save
 

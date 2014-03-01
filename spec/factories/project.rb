@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :project do
     title 'The Cosmos'
+    permalink 'the-cosmos'
 
     owner { create(:user) }
 

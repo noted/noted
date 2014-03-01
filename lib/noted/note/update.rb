@@ -11,9 +11,10 @@ class NoteUpdate < Mutations::Command
   def execute
     n = Note.find(self.note['id'])
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(n)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(n)
 
     n.update_attributes(self.note)
+    n.updater = current_user
     n.save
 
     return n

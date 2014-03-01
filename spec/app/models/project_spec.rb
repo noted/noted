@@ -9,8 +9,14 @@ describe Project do
   it { expect(project).to be_valid }
 
   it { expect(project).to validate_presence_of :title }
+  it { expect(project).to validate_uniqueness_of :permalink }
 
   describe '#permalink!' do
+    before do
+      project.permalink = nil
+      project.save
+    end
+
     it { expect(project.permalink).to include 'the-cosmos' }
   end
 

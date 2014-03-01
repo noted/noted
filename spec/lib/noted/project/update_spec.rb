@@ -23,5 +23,6 @@ describe ProjectUpdate do
   it 'returns a Project with correct attributes' do
     expect(action.result).to be_an_instance_of Project
     expect(action.result.title).to eql 'Our Universe'
+    expect(action.result.updater).to eql user
   end
 end

@@ -9,8 +9,9 @@ class NoteDestroy < Mutations::Command
   def execute
     n = Note.find(self.note['id'])
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_destroy?(n)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_destroy?(n)
 
+    n.updater = current_user
     n.destroy
 
     return nil

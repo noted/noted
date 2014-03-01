@@ -11,7 +11,10 @@ class SourceCreate < Mutations::Command
     s = Source.new(self.source)
     s.project = self.project
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_create?(s)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_create?(s)
+
+    s.creator = current_user
+    s.updater = current_user
 
     s.save
 

@@ -12,9 +12,12 @@ class ProjectUpdate < Mutations::Command
   def execute
     p = Project.find(self.project['id'])
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(p)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(p)
 
     p.update_attributes(self.project)
+
+    p.updater = current_user
+
     p.save
 
     return p

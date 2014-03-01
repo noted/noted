@@ -17,4 +17,6 @@ describe NoteCreate do
   it { expect(action.success?).to eql true }
   it { expect(action.result).to be_an_instance_of Note }
   it { expect(action.result.title).to eql 'Foobar' }
+  it { expect(action.result.creator).to eql user }
+  it { expect(action.result.updater).to eql user }
 end

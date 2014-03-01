@@ -10,9 +10,12 @@ class SourceUpdate < Mutations::Command
   def execute
     s = Source.find(self.source['id'])
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(s)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_update?(s)
 
     s.update_attributes(self.source)
+
+    s.updater = current_user
+
     s.save
 
     return s

@@ -22,5 +22,7 @@ describe ProjectCreate do
     expect(action.result.owner).to eql owner
     expect(action.result.title).to eql 'The Cosmos'
     expect(action.result.users).to include owner
+    expect(action.result.creator).to eql owner
+    expect(action.result.updater).to eql owner
   end
 end

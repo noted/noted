@@ -9,7 +9,9 @@ class SourceDestroy < Mutations::Command
   def execute
     s = Source.find(self.source['id'])
 
-    add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_destroy?(s)
+    return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_destroy?(s)
+
+    s.updater = current_user
 
     s.destroy
 

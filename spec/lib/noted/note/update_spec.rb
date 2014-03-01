@@ -18,4 +18,5 @@ describe NoteUpdate do
   it { expect(action.result).to be_an_instance_of Note }
   it { expect(action.result.title).to eql 'Foobar' }
   it { expect(action.result.text).to eql '**Foobar, _barfoo_.**' }
+  it { expect(action.result.updater).to eql user }
 end
