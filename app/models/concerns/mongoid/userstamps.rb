@@ -3,8 +3,8 @@ module Mongoid
     extend ActiveSupport::Concern
 
     included do
-      field :created_by, ::BSON::ObjectId
-      field :updated_by, ::BSON::ObjectId
+      field :created_by, type: BSON::ObjectId
+      field :updated_by, type: BSON::ObjectId
     end
 
     def creator

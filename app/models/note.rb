@@ -3,6 +3,7 @@ class Note
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
+  include PublicActivity::Model
 
   field :title, type: String, default: 'Untitled'
   field :text,  type: String
@@ -11,11 +12,13 @@ class Note
 
   belongs_to :project
 
+  tracked
+
   track_history on: [:title, :text],
-                modifier_field: modifier,
+                modifier_field: :updater,
                 version_field: :version,
                 track_create: true,
-                track_update: true
+                track_update: true,
                 track_destroy: true
 
   def creatable_by?(u)

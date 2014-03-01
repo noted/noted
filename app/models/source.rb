@@ -5,6 +5,7 @@ class Source
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
+  include PublicActivity::Model
 
   field :information, type: Hash
   field :citation,    type: String
@@ -13,11 +14,13 @@ class Source
 
   before_save :citation!
 
+  tracked
+
   track_history on: [:information, :citation],
-                modifier_field: modifier,
+                modifier_field: :updater,
                 version_field: :version,
                 track_create: true,
-                track_update: true
+                track_update: true,
                 track_destroy: true
 
   def creatable_by?(u)

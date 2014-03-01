@@ -3,6 +3,7 @@ class Project
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
+  include PublicActivity::Model
 
   field :title,          type: String
   field :summary,        type: String
@@ -21,11 +22,13 @@ class Project
 
   before_create :permalink!
 
+  tracked
+
   track_history on: [:title, :summary, :citation_style],
-                modifier_field: modifier,
+                modifier_field: :updater,
                 version_field: :version,
                 track_create: true,
-                track_update: true
+                track_update: true,
                 track_destroy: true
 
   def viewable_by?(u)
