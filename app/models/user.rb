@@ -33,8 +33,9 @@ class User
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
 
-  validates_presence_of :name, :email, :username
-  validates_uniqueness_of :email, :username
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: true
 
   has_and_belongs_to_many :projects
 

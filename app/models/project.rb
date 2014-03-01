@@ -13,8 +13,7 @@ class Project
 
   # TO-DO: validate presence of permalink, and uniqueness in context of
   #   the rest of the user's project's permalinks
-  validates_presence_of :title
-  validates :permalink, presence: true, uniqueness: { conditions: -> { where(owner_id: self.owner_id) } }
+  validates :title, presence: true
 
   has_and_belongs_to_many :users
 

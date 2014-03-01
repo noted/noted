@@ -8,7 +8,7 @@ class Note
   field :title, type: String, default: 'Untitled'
   field :text,  type: String
 
-  validates_presence_of :title
+  validates :title, presence: true
 
   belongs_to :project
 
