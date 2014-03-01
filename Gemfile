@@ -12,6 +12,9 @@ gem 'mutations'
 gem 'canable'
 gem 'devise'
 
+gem 'mongoid-history'
+gem 'public_activity'
+
 gem 'citeproc-ruby'
 
 gem 'haml-rails'

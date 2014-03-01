@@ -67,6 +67,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    easy_diff (0.0.2)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.3.0)
@@ -108,6 +109,10 @@ GEM
       moped (~> 2.0.beta4)
       origin (~> 1.0)
       tzinfo (~> 0.3.37)
+    mongoid-history (0.4.1)
+      activesupport
+      easy_diff
+      mongoid (>= 3.0)
     moped (2.0.0.beta4)
       bson (~> 2.0)
       connection_pool (~> 1.2)
@@ -131,6 +136,11 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    public_activity (1.4.1)
+      actionpack (>= 3.0.0)
+      activerecord (>= 3.0)
+      i18n (>= 0.5.0)
+      railties (>= 3.0.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -226,8 +236,10 @@ DEPENDENCIES
   jquery-rails
   log_buddy
   mongoid (= 4.0.0.alpha1)
+  mongoid-history
   mutations
   pry-rails
+  public_activity
   rails (= 4.0.2)
   rspec-rails (= 3.0.0.beta1)
   rubocop

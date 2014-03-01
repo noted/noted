@@ -3,6 +3,7 @@ require 'digest/md5'
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Userstamps
   include Canable::Ables
   include Canable::Cans
 

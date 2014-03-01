@@ -1,6 +1,8 @@
 class Project
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Userstamps
+  include Mongoid::History::Trackable
 
   field :title,          type: String
   field :summary,        type: String
@@ -18,6 +20,13 @@ class Project
   has_many :sources
 
   before_create :permalink!
+
+  track_history on: [:title, :summary, :citation_style],
+                modifier_field: modifier,
+                version_field: :version,
+                track_create: true,
+                track_update: true
+                track_destroy: true
 
   def viewable_by?(u)
     true
