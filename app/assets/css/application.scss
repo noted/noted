@@ -20,8 +20,11 @@ html.debug {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: $serif;
 	font-weight: 300;
+	min-height: 100vh;
 }
 
 a {
@@ -135,6 +138,10 @@ header#header {
 /*
 	III. Main
 */
+
+main {
+	flex: 1;
+}
 
 main#main .content {
 	@include container($total-columns, $break);

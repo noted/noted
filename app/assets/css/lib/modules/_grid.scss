@@ -1,0 +1,18 @@
+/*
+  Noted.
+    file: css/lib/modules/_grid.scss
+*/
+
+@for $i from 1 through 24 {
+  .col-#{$i} {
+    @include span-columns($i, $total-columns);
+  }
+
+  .suffix-#{$i} {
+    @include suffix($i, $total-columns);
+  }
+}
+
+.omega {
+  @include omega;
+}

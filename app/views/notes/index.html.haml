@@ -1,1 +1,21 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :notes }
+.content
+  %header.content-header
+    %h3 Notes
+
+    %nav
+      = link_to "New", current_project.path("/notes/new"), class: "btn"
+
+  .elements
+    %aside.nav.col-5.suffix-1
+      %section
+        %form
+          %input{type: 'text', placeholder: 'Search...'}
+
+      %section
+        %header
+          %h4 Filter
+        tags
+    .col-18.omega
+      - @notes.each do |note|
+        = render :partial => "notes/note", object: note

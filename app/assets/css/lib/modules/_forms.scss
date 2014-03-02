@@ -1,0 +1,33 @@
+/*
+  Noted.
+    file: css/lib/modules/_form.scss
+*/
+
+form {
+  input[type=text] {
+    @include adjust-font-size-to(14px);
+
+    border: 2px solid $light-grey;
+    display: box;
+    font-family: $sans-serif;
+    outline: none;
+    padding: rhythm(0.25);
+    width: 95%;
+
+    &:focus {
+      border-color: $grey;
+    }
+  }
+
+  footer {
+    @include clearfix;
+
+    .submit {
+      float: left;
+    }
+
+    .actions {
+      float: right;
+    }
+  }
+}

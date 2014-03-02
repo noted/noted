@@ -78,13 +78,42 @@ header.project-header {
 	}
 }
 
-.dashboard {
+.content {
+	.content-header {
+		@include clearfix;
+		@include trailing-border(1px, 0);
+
+		border-color: lighten($light-grey, 2%);
+		margin-bottom: rhythm(1);
+
+		h3, nav {
+			display: inline-block;
+		}
+
+		h3 {
+			float: left;
+		}
+
+		nav {
+			float: right;
+			margin-top: rhythm(0.5);
+		}
+	}
+
 	.elements {
 		@include container($total-columns, $break);
 
 		padding: 0;
 
-		section {
+		aside.nav {
+			h4 {
+				@include trailing-border(1px, 0);
+
+				margin-top: rhythm(1);
+			}
+		}
+
+		& > section {
 			& > header {
 				@include trailing-border(1px, 0.25);
 
@@ -93,15 +122,15 @@ header.project-header {
 			}
 
 			&.notes {
-				@include span-columns(12, $total-columns);
+				// @include span-columns(12, $total-columns);
 			}
 
 			&.sources {
-				@include span-columns(6, $total-columns);
+				// @include span-columns(6, $total-columns);
 			}
 
 			&.files {
-				@include span-columns(6 omega, $total-columns);
+				// @include span-columns(6 omega, $total-columns);
 			}
 		}
 	}

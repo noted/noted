@@ -3,11 +3,12 @@
 		file: css/modules/_buttons.scss
 */
 
-a.btn {
+a.btn, button, input[type=submit] {
 	@include adjust-font-size-to(14px);
 	@include border-radius(1px);
 
 	background: $grey;
+	border: none;
 	color: $base;
 	font-family: $sans-serif;
 	font-weight: 600;
@@ -18,6 +19,7 @@ a.btn {
 	&:hover {
 		background: darken($grey, 5%);
 		color: $base;
+		cursor: pointer;
 	}
 
 	&.blue {
@@ -25,6 +27,14 @@ a.btn {
 
 		&:hover {
 			background: darken($blue, 5%);
+		}
+	}
+
+	&.red {
+		background: $red;
+
+		&:hover {
+			background: darken($red, 5%);
 		}
 	}
 }

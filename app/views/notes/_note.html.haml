@@ -1,14 +1,19 @@
 %article.note
   %header
     %h5= link_to note.title, note.project.path("/notes/#{note.id}")
+    %ul.tags
+      %li
+        %a{href: ""}
+          %span foobar
+      %li
+        %a{href: ""}
+          %span barfoo
   %section
-    = note.text
+    = truncate(note.text, length: 150, separator: ' ')
   %footer
     %ul.contributors
-      %li
-        %a{href: "", rel: "tipsy", title: "Neil deGrasse Tyson"}
-          %img.avatar{src: "http://www-tc.pbs.org/wgbh/nova/sciencenow/about/images/abou-tyson2.jpg"}
-      %li
-        %a{href: "", rel: "tipsy", title: "Bill Nye"}
-          %img.avatar{src: "http://static.squarespace.com/static/51411c53e4b0d6e2ee875cd6/t/524ed8b7e4b00044d63966c1/1380899025221/Bill_Nye_Science_Guy.JPG?format=500w"}
-    %p.meta <a href="">25 February 2014 at 3:58pm</a>
+      - note.authors.each do |user|
+        %li
+          %a{href: "/#{user.username}", rel: "tipsy", title: user.name}
+            %img.avatar{src: user.gravatar}
+    %p.meta= "<a href='#{note.path}'>#{note.updated_at.strftime('%e %B %Y at %l:%M%P')}</a>".html_safe

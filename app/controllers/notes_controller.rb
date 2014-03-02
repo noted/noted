@@ -2,7 +2,7 @@ class NotesController < ActionController::Base
   layout 'application'
 
   def index
-    @notes = current_project.notes.all
+    @notes = current_project.notes.sort
   end
 
   def new

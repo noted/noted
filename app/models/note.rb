@@ -36,4 +36,12 @@ class Note
   def destroyable_by?(u)
     self.creatable_by?(u)
   end
+
+  def authors
+    self.history_tracks.collect { |t| t.modifier }.uniq
+  end
+
+  def path
+    self.project.path("/notes/#{self.id}")
+  end
 end

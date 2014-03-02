@@ -26,15 +26,23 @@
               = link_to "Noted", root_url
         %nav.primary
           %ul
-            %li= link_to "Features", ""
-            %li= link_to "Pricing", ""
-            %li= link_to "Support", ""
+            - if current_user
+              %li= link_to "Explore", ""
+              %li= link_to "Help", ""
+            - else
+              %li= link_to "Features", ""
+              %li= link_to "Pricing", ""
+              %li= link_to "Support", ""
         %nav.secondary
           %ul
-            %li.btn= link_to "Login", login_path, class: "btn"
-            %li.btn= link_to "Join", join_path, class: "btn blue"
+            - if current_user
+              %li.btn= link_to "Logout", logout_path, class: "btn"
+            - else
+              %li.btn= link_to "Login", login_path, class: "btn"
+              %li.btn= link_to "Join", join_path, class: "btn blue"
 
-    %main#main= yield
+    %main#main
+      = yield
 
     %footer#footer
       .inner

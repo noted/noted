@@ -17,9 +17,44 @@ article.note {
 	}
 
 	header {
+		@include clearfix;
+
 		background: $light-grey;
 		margin-bottom: rhythm(0.25);
 		padding: rhythm(0.25);
+
+		h5, ul.tags {
+			display: inline-block;
+		}
+
+		h5 {
+			float: left;
+		}
+
+		ul.tags {
+			@include adjust-font-size-to(12px);
+
+			float: right;
+			font-family: $sans-serif;
+
+			a {
+				color: $grey;
+
+				&:hover {
+					color: $dark-grey;
+				}
+			}
+
+			li {
+				display: inline;
+
+				span {
+					&:before {
+						content: "#";
+					}
+				}
+			}
+		}
 	}
 
 	footer {

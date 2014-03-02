@@ -1,5 +1,5 @@
-= render :partial => "projects/header", locals: { project: current_project }
-.container
+= render :partial => "projects/header", locals: { project: current_project, section: :notes }
+.content
   = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form' do |f|
     %fieldset
       %legend
@@ -15,4 +15,7 @@
         = hidden_field_tag :user, params[:user]
         = hidden_field_tag :project, params[:project]
         = hidden_field_tag 'note[id]', current_note.id
-        = submit_tag "Save", :class => "green filled"
+        .submit
+          = submit_tag "Save", :class => "green"
+        .actions
+          = submit_tag "Delete", :class => "red"
