@@ -1,7 +1,12 @@
 %article.project
-  %a.block{:href => project.path}
-    %header.info
-      %h3= project.title
-      %h4= project.collaborators
-    %section.summary
-      %p= project.summary
+  %header
+    %h5= link_to project.title, project.path
+  %section
+    = truncate(project.summary, length: 150, separator: ' ')
+  %footer
+    %ul.contributors
+      - project.users.each do |user|
+        %li
+          %a{href: "/#{user.username}", rel: "tipsy", title: user.name}
+            %img.avatar{src: user.gravatar}
+    %p.meta= "<a href='#{project.path}'>#{project.updated_at.strftime('%e %B %Y at %l:%M%P')}</a>".html_safe

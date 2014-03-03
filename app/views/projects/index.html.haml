@@ -1,6 +1,11 @@
-%header.page-header.container
-  %h2 Projects
-%section.projects
-  - @projects.each do |project|
-    %article
-      = render :partial => 'projects/project', object: project
+.content
+  %header.content-header
+    %h3 Projects
+
+    %nav
+      = link_to "New", new_path, class: "btn"
+
+  .elements
+    .col-24.omega
+      - @projects.each do |project|
+        = render :partial => 'projects/project', object: project

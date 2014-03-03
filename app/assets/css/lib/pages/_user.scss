@@ -1,0 +1,16 @@
+/*
+  Noted.
+    file: css/lib/pages/_user.scss
+*/
+
+aside {
+  ul.social li {
+    @include adjust-font-size-to(14px);
+
+    font-family: $sans-serif;
+
+    i {
+      @include adjust-font-size-to(14px);
+    }
+  }
+}
