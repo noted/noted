@@ -1,4 +1,4 @@
-.container
+.content
   = form_for(resource, :html => { :class => "grid-form" }, :as => resource_name, :url => session_path(resource_name)) do |f|
     = devise_error_messages!
     = flash[:notice]
@@ -32,4 +32,3 @@
     /     = f.check_box :remember_me
     /     = f.label :remember_me
     / %div= f.submit "Sign in"
-

@@ -1,0 +1,100 @@
+/*
+  Noted.
+    file: css/modules/_project.scss
+*/
+
+article.project {
+  @include border-radius(1px);
+  @include leading-border(1px, 0);
+  @include trailing-border(1px, 0);
+
+  border-color: $light-grey;
+  border-left: 1px solid $light-grey;
+  border-right: 1px solid $light-grey;
+  margin-bottom: rhythm(0.25);
+
+  header, section, footer {
+    padding: 0 rhythm(0.25);
+  }
+
+  header {
+    @include clearfix;
+
+    background: $light-grey;
+    margin-bottom: rhythm(0.25);
+    padding: rhythm(0.25);
+
+    h5, ul.tags {
+      display: inline-block;
+    }
+
+    h5 {
+      float: left;
+    }
+
+    ul.tags {
+      @include adjust-font-size-to(12px);
+
+      float: right;
+      font-family: $sans-serif;
+
+      a {
+        color: $grey;
+
+        &:hover {
+          color: $dark-grey;
+        }
+      }
+
+      li {
+        display: inline;
+
+        span {
+          &:before {
+            content: "#";
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    @include clearfix;
+    @include leading-border(1px, 0);
+
+    border-color: $light-grey;
+    color: $grey;
+    font-family: $sans-serif;
+    margin-top: rhythm(0.25);
+    padding: rhythm(0.25) rhythm(0.25) rhythm(0.0625);
+
+    a {
+      color: $grey;
+
+      &:hover {
+        color: $dark-grey;
+      }
+    }
+
+    ul {
+      @include adjust-font-size-to(18px);
+
+      float: left;
+
+      li {
+        display: inline-block;
+        margin: 0;
+      }
+
+      img {
+        max-width: 18px;
+      }
+    }
+
+    p {
+      @include adjust-font-size-to(12px);
+
+      float: right;
+    }
+  }
+}
