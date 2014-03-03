@@ -25,6 +25,8 @@ gem 'citeproc-ruby'
 
 gem 'haml-rails'
 
+gem 'asset_sync'
+
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails'
 gem 'susy'
@@ -33,7 +35,6 @@ gem 'jquery-rails'
 
 group :assets do
   gem 'coffee-rails', '~> 4.0.0'
-
   gem 'uglifier', '>= 1.3.0'
 end
 
