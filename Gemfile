@@ -17,6 +17,8 @@ gem 'devise'
 gem 'mongoid-history'
 gem 'public_activity'
 
+gem 'rails_admin'
+
 gem 'citeproc-ruby'
 
 gem 'haml-rails'
