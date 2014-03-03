@@ -4,9 +4,10 @@ RailsAdmin.config do |config|
 
   # == Devise ==
   config.authenticate_with do
-    warden.authenticate! scope: :admin
+    redirect_to '/' unless current_user.admin == true
   end
-  config.current_user_method(&:current_admin)
+
+  config.current_user_method { current_user }
 
 
   ## == Cancan ==
