@@ -1,20 +1,26 @@
-.user
-  %aside
-    / %figure.avatar
-    /   %img{:src => @user.gravatar}
-    %h2= @user.name
-    %p.biography= @user.biography
-    %nav.personal
-      %ul
-        %li
-          %i.ss-icon location
-          %span= @user.location
-        - @user.social.each do |service, link|
+.content
+  %aside.col-5.suffix-1
+    %figure.avatar
+      %img.avatar{src: @user.gravatar}
+    %h3= @user.name
+    %nav
+      %ul.social
+        - @user.social.each do |site, value|
+          - if value != ''
+            %li
+              - if site == 'twitter'
+                %i.ss-icon.ss-social-regular= site
+              - else
+                %i.ss-icon= site
+              %span
+                - if site == 'twitter'
+                  = link_to "@#{value}", "https://twitter.com/#{value}"
+                - else
+                  = value
+        - if @user.admin == true
           %li
-            %i.ss-icon.ss-social-regular= service
-            - if service == 'twitter'
-              %span= link_to "@#{link}", "https://twitter.com/#{link}"
-  %section
+            %i.ss-icon star
+            %span Staff
+  %section.col-18.omega
     - @projects.each do |project|
-      %article
-        = render :partial => 'projects/project', object: project
+      = render :partial => 'projects/project', object: project

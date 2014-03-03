@@ -8,5 +8,4 @@
   .elements
     .col-24.omega
       - @projects.each do |project|
-        %article
-          = render :partial => 'projects/project', object: project
+        = render :partial => 'projects/project', object: project
