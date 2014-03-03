@@ -4,7 +4,11 @@ RailsAdmin.config do |config|
 
   # == Devise ==
   config.authenticate_with do
-    redirect_to '/' unless current_user.admin == true
+    if current_user
+      redirect_to '/' unless current_user.admin == true
+    else
+      redirect_to '/login'
+    end
   end
 
   config.current_user_method { current_user }
