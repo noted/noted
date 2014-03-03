@@ -1,4 +1,6 @@
 Noted::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   root 'noted#index'
 
   get '/ui' => 'noted#ui'

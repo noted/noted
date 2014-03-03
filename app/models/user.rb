@@ -13,6 +13,7 @@ class User
   field :biography, type: String
   field :location,  type: String
   field :social,    type: Hash, default: { twitter: '' }
+  field :admin,     type: Boolean, default: false
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
@@ -53,5 +54,9 @@ class User
 
   def gravatar
     "//gravatar.com/avatar/#{Digest::MD5.hexdigest(self.email)}?s=500"
+  end
+
+  def current_admin
+    self.admin == true
   end
 end
