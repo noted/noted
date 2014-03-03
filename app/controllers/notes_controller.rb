@@ -34,6 +34,14 @@ class NotesController < ActionController::Base
   end
 
   def destroy
+    @note = NoteDestroy.run(
+      current_user: current_user,
+      note: {
+        id: params[:id]
+      }
+    )
+
+    redirect_to current_project.path("/notes")
   end
 
   protected

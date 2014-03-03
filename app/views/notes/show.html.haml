@@ -18,4 +18,5 @@
         .submit
           = submit_tag "Save", :class => "green"
         .actions
-          = submit_tag "Delete", :class => "red"
+  = form_tag note_path(id: current_note.id), method: :delete do |f|
+    = submit_tag "Delete", :class => "red"
