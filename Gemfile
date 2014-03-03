@@ -47,6 +47,10 @@ group :development do
   gem 'binding_of_caller'
 end
 
+group :production do
+  gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
+end
+
 group :test do
   gem 'rspec-rails', '3.0.0.beta1'
 
