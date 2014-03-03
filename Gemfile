@@ -5,6 +5,8 @@ gem 'rails', '4.0.2'
 
 gem 'mongoid', '4.0.0.alpha1'
 
+gem 'puma'
+
 gem 'turbolinks'
 
 gem 'mutations'
