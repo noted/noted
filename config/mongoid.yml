@@ -78,4 +78,8 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      hosts:
+        - <%= ENV['MONGODB_HOST'] %>:<%= ENV['MONGODB_PORT'] %>
+      database: <%= ENV['MONGODB_DATABASE'] %>
+      username: <%= ENV['MONGODB_USERNAME'] %>
+      password: <%= ENV['MONGODB_PASSWORD'] %>
