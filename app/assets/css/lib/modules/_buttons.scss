@@ -37,4 +37,10 @@ a.btn, button, input[type=submit] {
 			background: darken($red, 5%);
 		}
 	}
+
+	i {
+		@include adjust-font-size-to(12px);
+
+		font-weight: normal;
+	}
 }
