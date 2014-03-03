@@ -41,9 +41,12 @@ group :development, :test do
   gem 'log_buddy'
 end
 
+group :development, :production do
+  gem 'pry-rails'
+end
+
 group :development do
   gem 'foreman'
-  gem 'pry-rails'
 
   gem 'better_errors'
   gem 'binding_of_caller'
