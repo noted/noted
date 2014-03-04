@@ -1,9 +1,12 @@
-%h2 Forgot your password?
-= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div= f.submit "Send me reset password instructions"
-= render "devise/shared/links"
+.content
+  = form_for(resource, :html => { :class => "grid-form", method: :post }, :as => resource_name, :url => password_path(resource_name)) do |f|
+    = devise_error_messages!
+    %fieldset
+      %legend Forgot your password?
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = f.label :email
+          = f.email_field :email
+      %footer
+        = f.submit "Send me reset password instructions"
+        = render "devise/shared/links"
