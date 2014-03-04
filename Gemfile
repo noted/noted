@@ -19,6 +19,8 @@ gem 'devise'
 gem 'mongoid-history'
 gem 'public_activity'
 
+gem 'aws-ses', require: 'aws/ses'
+
 gem 'rails_admin'
 
 gem 'citeproc-ruby'
