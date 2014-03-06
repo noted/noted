@@ -2,7 +2,7 @@
 #   file: application.coffee
 
 #= require jquery
-#= require_tree ./lib/vendor
+#= require_tree ./lib
 #= require_self
 
 $("div[data-field-span]").on "click", ->
