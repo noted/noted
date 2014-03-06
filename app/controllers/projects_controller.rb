@@ -31,6 +31,12 @@ class ProjectsController < ActionController::Base
   end
 
   def update
+    @project = ProjectUpdate.run(
+      current_user: current_user,
+      project: params[:project]
+    )
+
+    redirect_to @project.result.path('/settings')
   end
 
   def destroy

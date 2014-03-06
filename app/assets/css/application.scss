@@ -63,6 +63,13 @@ img {
 	max-width: 100%;
 }
 
+p {
+	&.empty {
+		color: $grey;
+		font-style: italic;
+	}
+}
+
 strong {
 	font-weight: 600;
 }

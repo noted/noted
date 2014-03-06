@@ -1,5 +1,5 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :settings }
-.container
+.content
   = form_tag project_path(id: current_project.id), method: :patch, class: 'grid-form' do |f|
     %fieldset
       %legend
@@ -11,5 +11,10 @@
         %div{'data-field-span' => '1'}
           = label_tag 'project[summary]', 'Summary'
           = text_area_tag 'project[summary]', current_project.summary
+      %div{'data-row-span' => '1'}
+        %div{'data-field-span' => '1'}
+          = label_tag 'project[citation_style]', 'Citation Style'
+          = select_tag 'project[citation_style]', Project.style_options(current_project)
       %footer
-        = submit_tag "Create", :class => "green filled"
+        = hidden_field_tag 'project[id]', current_project.id
+        = submit_tag "Save", :class => "green filled"

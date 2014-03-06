@@ -1,4 +1,4 @@
-.container
+.content
   = form_tag projects_path, method: :post, class: 'grid-form' do |f|
     %fieldset
       %legend New Project
@@ -13,6 +13,6 @@
       %div{'data-row-span' => '1'}
         %div{'data-field-span' => '1'}
           = label_tag 'project[citation_style]', 'Citation Style'
-          = select_tag 'project[citation_style]', options_for_select(['Modern Language Association'])
+          = select_tag 'project[citation_style]', Project.style_options
       %footer
         = submit_tag "Create", :class => "green filled"

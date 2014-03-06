@@ -7,5 +7,8 @@
 
   .elements
     .col-24.omega
-      - @projects.each do |project|
-        = render :partial => 'projects/project', object: project
+      - if @projects.empty?
+        %p.empty No projects yet! <a href="/new">Why not make one?</a>
+      - else
+        - @projects.each do |project|
+          = render :partial => 'projects/project', object: project
