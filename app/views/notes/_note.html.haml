@@ -9,7 +9,10 @@
         %a{href: ""}
           %span barfoo
   %section
-    = truncate(note.text, length: 150, separator: ' ')
+    - if note.text.blank?
+      %p.empty This note is blank.
+    - else
+      = truncate(note.text, length: 150, separator: ' ')
   %footer
     %ul.contributors
       - note.authors.each do |user|

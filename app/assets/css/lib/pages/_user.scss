@@ -14,3 +14,10 @@ aside {
     }
   }
 }
+
+section {
+  p.empty {
+    color: $grey;
+    font-style: italic;
+  }
+}

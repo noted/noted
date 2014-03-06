@@ -1,0 +1,29 @@
+/*
+  Noted.
+    file: css/lib/modules/_content-header.scss
+*/
+
+.content-header {
+  @include clearfix;
+  @include trailing-border(1px, 0);
+
+  border-color: lighten($light-grey, 2%);
+  margin-bottom: rhythm(1);
+
+  h3, nav {
+    display: inline-block;
+  }
+
+  h3 {
+    float: left;
+  }
+
+  nav {
+    float: right;
+    margin-top: rhythm(0.5);
+  }
+
+  &.borderless {
+    border-bottom: 0;
+  }
+}

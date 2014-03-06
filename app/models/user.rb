@@ -59,4 +59,8 @@ class User
   def current_admin
     self.admin == true
   end
+
+  def all_projects
+    Project.any_in(user_ids: [self.id])
+  end
 end

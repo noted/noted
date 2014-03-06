@@ -79,27 +79,6 @@ header.project-header {
 }
 
 .content {
-	.content-header {
-		@include clearfix;
-		@include trailing-border(1px, 0);
-
-		border-color: lighten($light-grey, 2%);
-		margin-bottom: rhythm(1);
-
-		h3, nav {
-			display: inline-block;
-		}
-
-		h3 {
-			float: left;
-		}
-
-		nav {
-			float: right;
-			margin-top: rhythm(0.5);
-		}
-	}
-
 	.elements {
 		@include container($total-columns, $break);
 

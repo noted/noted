@@ -3,7 +3,7 @@ class NotedController < ActionController::Base
 
   def index
     if current_user
-      @projects = Project.where(owner_id: current_user.id).all
+      @projects = current_user.all_projects.sort('updated_at desc')
 
       render 'projects/index'
     else

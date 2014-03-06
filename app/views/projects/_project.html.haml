@@ -1,12 +1,4 @@
 %article.project
-  %header
-    %h5= link_to project.title, project.path
-  %section
-    = truncate(project.summary, length: 150, separator: ' ')
-  %footer
-    %ul.contributors
-      - project.users.each do |user|
-        %li
-          %a{href: "/#{user.username}", rel: "tipsy", title: user.name}
-            %img.avatar{src: user.gravatar}
-    %p.meta= "<a href='#{project.path}'>#{project.updated_at.strftime('%e %B %Y at %l:%M%P')}</a>".html_safe
+  %h4= link_to project.title, project.path
+  %p.collaborators= project.collaborators(true)
+  %p.summary= truncate(project.summary, length: 150, separator: ' ')
