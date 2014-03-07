@@ -56,6 +56,9 @@ GEM
       debug_inspector (>= 0.0.1)
     bson (2.2.1)
     builder (3.1.4)
+    cache_digests (0.3.1)
+      actionpack (>= 3.2)
+      thread_safe
     canable (0.3.0)
     chunky_png (1.3.0)
     citeproc (1.0.0)
@@ -304,6 +307,7 @@ DEPENDENCIES
   aws-ses
   better_errors
   binding_of_caller
+  cache_digests
   canable
   citeproc-ruby
   coffee-rails (~> 4.0.0)

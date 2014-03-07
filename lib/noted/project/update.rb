@@ -20,6 +20,8 @@ class ProjectUpdate < Mutations::Command
 
     p.save
 
+    ActionController::Base.new.expire_fragment(p)
+
     return p
   end
 end

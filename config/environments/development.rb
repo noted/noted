@@ -27,6 +27,9 @@ Noted::Application.configure do
 
   # Shut i18n up.
   config.i18n.enforce_available_locales = false
+
+  # Caching development.
+  config.action_controller.perform_caching = true
 end
 
 Rails.application.routes.default_url_options[:host] = 'noted.dev'

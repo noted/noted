@@ -17,6 +17,8 @@ class NoteUpdate < Mutations::Command
     n.updater = current_user
     n.save
 
+    ActionController::Base.new.expire_fragment(n)
+
     return n
   end
 end

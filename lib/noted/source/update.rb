@@ -18,6 +18,8 @@ class SourceUpdate < Mutations::Command
 
     s.save
 
+    ActionController::Base.new.expire_fragment(p)
+
     return s
   end
 end

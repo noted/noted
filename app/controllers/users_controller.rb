@@ -12,7 +12,7 @@ class UsersController < ActionController::Base
 
   def show
     @user = User.where(username: params[:user]).first
-    @projects = @user.all_projects
+    @projects = @user.all_projects.sort('updated_at desc')
   end
 
   def update

@@ -7,8 +7,10 @@
 
   .elements
     .col-24.omega
-      - if @projects.empty?
-        %p.empty No projects yet! <a href="/new">Why not make one?</a>
-      - else
-        - @projects.each do |project|
-          = render :partial => 'projects/project', object: project
+      - cache @projects do
+        - if @projects.empty?
+          %p.empty No projects yet! <a href="/new">Why not make one?</a>
+        - else
+          - @projects.each do |project|
+            - cache project do
+              = render :partial => 'projects/project', object: project
