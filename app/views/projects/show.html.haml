@@ -7,19 +7,17 @@
     %section.notes{class: @spans[:notes]}
       %header
         %h4 Notes
-      - cache @notes do
-        - if @notes.blank?
-          %p.empty= "No notes yet! <a href='#{@project.path('/notes/new')}'>Make one?</a>".html_safe
-        - @notes.each do |note|
-          - cache note do
-            = render :partial => "notes/note", object: note
+      - if @notes.blank?
+        %p.empty= "No notes yet! <a href='#{@project.path('/notes/new')}'>Make one?</a>".html_safe
+      - @notes.each do |note|
+        - cache note do
+          = render :partial => "notes/note", object: note
 
     %section.sources{class: @spans[:sources]}
       %header
         %h4 Sources
-      - cache @sources do
-        - if @sources.blank?
-          %p.empty= "No sources yet! <a href='#{@project.path('/sources/new')}'>Make one?</a>".html_safe
-        - @sources.each do |source|
-          - cache source do
-            = render :partial => "sources/source", object: source
+      - if @sources.blank?
+        %p.empty= "No sources yet! <a href='#{@project.path('/sources/new')}'>Make one?</a>".html_safe
+      - @sources.each do |source|
+        - cache source do
+          = render :partial => "sources/source", object: source
