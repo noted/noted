@@ -10,9 +10,11 @@ gem 'mongoid', '4.0.0.alpha1'
 gem 'puma'
 
 gem 'turbolinks'
-gem 'cache_digests'
 
 gem 'mutations'
+
+gem 'cache_digests'
+gem 'dalli'
 
 gem 'canable'
 gem 'devise'

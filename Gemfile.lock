@@ -83,6 +83,7 @@ GEM
     connection_pool (1.2.0)
     csl (1.2.0)
       namae (~> 0.7)
+    dalli (2.7.0)
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     devise (3.2.3)
@@ -312,6 +313,7 @@ DEPENDENCIES
   citeproc-ruby
   coffee-rails (~> 4.0.0)
   compass-rails
+  dalli
   database_cleaner
   devise
   factory_girl_rails
