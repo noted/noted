@@ -22,8 +22,10 @@
             %i.ss-icon star
             %span Staff
   %section.col-18.omega
-    - if @projects.empty?
-      %p.empty This user doesn't have any projects!
-    - else
-      - @projects.each do |project|
-        = render :partial => 'projects/project', object: project
+    - cache @projects do
+      - if @projects.empty?
+        %p.empty This user doesn't have any projects!
+      - else
+        - @projects.each do |project|
+          - cache project do
+            = render :partial => 'projects/project', object: project
