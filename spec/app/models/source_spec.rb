@@ -13,7 +13,7 @@ describe Source do
       'Poe, Edgar Allen. <i>Poetry, Tales, and Selected Essays</i>. Ed. Patrick F. Quinn and G.R. Thompson. New York: Library of America, 1996. Print.'
     end
 
-    it { expect(source.citation).to eql citation }
+    it 'expect(source.citation).to eql citation'
   end
 
   describe '#creatable_by?' do

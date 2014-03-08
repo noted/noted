@@ -11,8 +11,6 @@ class Project
   field :owner_id,       type: BSON::ObjectId
   field :citation_style, type: String, default: 'modern-language-association'
 
-  # TO-DO: validate presence of permalink, and uniqueness in context of
-  #   the rest of the user's project's permalinks
   validates :title, presence: true
 
   has_and_belongs_to_many :users
@@ -85,7 +83,18 @@ class Project
 
   def permalink!
     if permalink.blank?
-      self.permalink = self.title.parameterize
+      p = self.title.parameterize
+
+      similar = Project.where(
+        owner_id: self.owner_id,
+        permalink: /#{Regexp.quote(p)}/
+      ).count
+
+      if similar > 1
+        p = "#{p}-#{similar + 1}"
+      end
+
+      self.permalink = p
     end
   end
 end

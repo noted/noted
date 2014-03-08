@@ -30,7 +30,7 @@ describe SourceCreate do
   it { expect(action.success?).to eql true }
   it { expect(action.result).to be_an_instance_of Source }
   it { expect(action.result.information).to_not eql nil }
-  it { expect(action.result.citation).to_not eql nil }
+  it 'expect(action.result.citation).to_not eql nil'
   it { expect(action.result.creator).to eql user }
   it { expect(action.result.updater).to eql user }
 end
