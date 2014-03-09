@@ -1,22 +1,21 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :notes }
-.content
-  = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form' do |f|
-    %fieldset
-      %legend
-      %div{'data-row-span' => '1'}
-        %div{'data-field-span' => '1'}
-          = label_tag 'note[title]', 'Title'
-          = text_field_tag 'note[title]', current_note.title
-      %div{'data-row-span' => '1'}
-        %div{'data-field-span' => '1'}
-          = label_tag 'note[text]', 'Text'
-          = text_area_tag 'note[text]', current_note.text
-      %footer
-        = hidden_field_tag :user, params[:user]
-        = hidden_field_tag :project, params[:project]
-        = hidden_field_tag 'note[id]', current_note.id
-        .submit
-          = submit_tag "Save", :class => "green"
-        .actions
-  = form_tag note_path(id: current_note.id), method: :delete do |f|
-    = submit_tag "Delete", :class => "red"
+= form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note' do |f|
+  %fieldset
+    %div{'data-row-span' => '1'}
+      %div{'data-field-span' => '1'}
+        .container.paddingless
+          / = label_tag 'note[title]', 'Title'
+          .col-22
+            = text_field_tag 'note[title]', current_note.title
+          .col-2.omega
+            = submit_tag "Save", :class => "small submit"
+    %div.textbox-row{'data-row-span' => '1'}
+      %div.textbox{'data-field-span' => '1'}
+        .container
+          = text_area_tag 'note[text]', current_note.text, class: 'redactor'
+    %footer
+      = hidden_field_tag :user, params[:user]
+      = hidden_field_tag :project, params[:project]
+      = hidden_field_tag 'note[id]', current_note.id
+      .submit
+      .actions

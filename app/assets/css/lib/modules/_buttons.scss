@@ -22,6 +22,12 @@ a.btn, button, input[type=submit] {
 		cursor: pointer;
 	}
 
+	&.small {
+		@include adjust-font-size-to(12px);
+
+		margin: 0;
+	}
+
 	&.blue {
 		background: $blue;
 

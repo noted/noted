@@ -16,3 +16,11 @@
 .omega {
   @include omega;
 }
+
+.container {
+  @include container;
+
+  &.paddingless {
+    padding: 0;
+  }
+}

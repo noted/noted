@@ -6,7 +6,10 @@
 #= require_self
 
 $("div[data-field-span]").on "click", ->
-  $(@).find("input").focus()
+  $(@).find("input[type=text]").focus()
 
 $("[rel=tipsy]").tipsy
   gravity: 's'
+
+$(".redactor").redactor
+  autoresize: false

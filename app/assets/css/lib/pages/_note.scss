@@ -1,0 +1,39 @@
+/*
+  Noted.
+    file: css/lib/pages/_note.scss
+*/
+
+
+form.note {
+
+  input.submit {
+    float: right;
+  }
+
+  .textbox {
+    .container {
+      padding: 0 !important;
+    }
+
+  }
+
+  .textbox-row {
+    border-bottom: 0;
+  }
+
+  .redactor_redactor, textarea {
+    // background-color: lighten($light-grey, 3%);
+    border-left: 2px solid $light-grey;
+    border-right: 2px solid $light-grey;
+    border-bottom: 2px solid $light-grey;
+    padding: rhythm(0.5);
+    font-family: $serif !important;
+    min-height: rhythm(10);
+  }
+
+  [data-field-span] {
+    &:hover {
+      background: $base !important;
+    }
+  }
+}

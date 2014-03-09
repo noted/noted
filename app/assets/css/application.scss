@@ -37,7 +37,7 @@ a {
 	}
 }
 
-em {
+em, i {
 	font-style: italic;
 }
 
@@ -63,6 +63,17 @@ img {
 	max-width: 100%;
 }
 
+ol, ul {
+	li {
+		margin-left: rhythm(1);
+		padding-left: rhythm(0.25);
+	}
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
 p {
 	&.empty {
 		color: $grey;
@@ -70,8 +81,12 @@ p {
 	}
 }
 
-strong {
+strong, b {
 	font-weight: 600;
+}
+
+ul li {
+	list-style-type: disc;
 }
 
 
@@ -117,6 +132,7 @@ header#header {
 	li {
 		display: inline-block;
 		padding: rhythm(0.5);
+		margin: 0;
 
 		&.brand {
 			background: $dark-red;

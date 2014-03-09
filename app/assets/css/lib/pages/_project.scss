@@ -20,8 +20,14 @@ header.project-header {
 	.inner {
 		@include container($total-columns, $break);
 
+		ul {
+			margin-left: 0;
+		}
+
 		li {
+			list-style-type: none;
 			padding: rhythm(1) 0;
+			margin: 0;
 
 			&.true {
 				@include trailing-border(2px, 0.5);
