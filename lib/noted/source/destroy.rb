@@ -13,6 +13,9 @@ class SourceDestroy < Mutations::Command
 
     s.updater = current_user
 
+    s.project.updater = current_user
+    s.project.updated_at = Time.now
+
     s.destroy
 
     return nil

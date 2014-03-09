@@ -12,7 +12,8 @@
     - if note.text.blank?
       %p.empty This note is blank.
     - else
-      = truncate(note.text.html_safe, length: 150, separator: ' ')
+      / = truncate(note.text.html_safe, length: 150, separator: ' ').html_safe
+      = note.text.html_safe
   %footer
     %ul.contributors
       - note.authors.each do |user|

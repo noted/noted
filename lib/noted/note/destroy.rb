@@ -12,6 +12,10 @@ class NoteDestroy < Mutations::Command
     return add_error(:current_user, :unauthorized, 'not authorized') unless current_user.can_destroy?(n)
 
     n.updater = current_user
+
+    n.project.updater = current_user
+    n.project.updated_at = Time.now
+
     n.destroy
 
     return nil

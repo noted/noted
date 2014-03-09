@@ -8,6 +8,9 @@ aside {
     @include adjust-font-size-to(14px);
 
     font-family: $sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
     i {
       @include adjust-font-size-to(14px);

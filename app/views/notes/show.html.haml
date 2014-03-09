@@ -1,21 +1,23 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :notes }
-= form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note' do |f|
-  %fieldset
-    %div{'data-row-span' => '1'}
-      %div{'data-field-span' => '1'}
-        .container.paddingless
-          / = label_tag 'note[title]', 'Title'
-          .col-22
-            = text_field_tag 'note[title]', current_note.title
-          .col-2.omega
-            = submit_tag "Save", :class => "small submit"
-    %div.textbox-row{'data-row-span' => '1'}
-      %div.textbox{'data-field-span' => '1'}
-        .container
-          = text_area_tag 'note[text]', current_note.text, class: 'redactor'
-    %footer
+.note-show
+  - if current_user && current_user.can_update?(current_project)
+    = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note' do |f|
       = hidden_field_tag :user, params[:user]
       = hidden_field_tag :project, params[:project]
       = hidden_field_tag 'note[id]', current_note.id
-      .submit
-      .actions
+      %fieldset
+        %div{'data-row-span' => '1'}
+          %div{'data-field-span' => '1'}
+            .container.paddingless
+              .col-22
+                = text_field_tag 'note[title]', current_note.title
+              .col-2.omega
+                = submit_tag "Save", class: "small submit"
+        .editable#editable{'data-placeholder' => 'Your body text...'}= current_note.text.html_safe
+        = text_area_tag 'note[text]', nil, class: 'hidden text', id: 'text'
+
+  - else
+    .content
+      %header.content-header
+        %h3= current_note.title
+      .text= current_note.text.html_safe

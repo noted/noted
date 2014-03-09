@@ -15,6 +15,10 @@ class NoteUpdate < Mutations::Command
 
     n.update_attributes(self.note)
     n.updater = current_user
+    
+    n.project.updater = current_user
+    n.project.updated_at = Time.now
+
     n.save
 
     ActionController::Base.new.expire_fragment(n)
