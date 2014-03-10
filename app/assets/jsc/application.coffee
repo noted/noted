@@ -9,28 +9,25 @@ $("div[data-field-span]").on "click", ->
   $(@).find("input[type=text]").focus()
 
 $("[rel=tipsy]").tipsy
-  gravity: 's'
-
-$(".redactor").redactor
-  autoresize: false
+  gravity: "s"
 
 editor = new MediumEditor(".editable",
   buttons: [
-    'bold',
-    'italic',
-    'underline',
-    'anchor',
-    'header1',
-    'header2',
-    'quote',
-    'unorderedlist',
-    'orderedlist'
+    "bold",
+    "italic",
+    "underline",
+    "anchor",
+    "header1",
+    "header2",
+    "quote",
+    "unorderedlist",
+    "orderedlist"
   ],
   buttonLabels:
-    unorderedlist: '<i class="ss-icon">list</i>'
-    anchor: '<i class="ss-icon">link</i>'
-    quote: '<i class="ss-icon">quote</i>'
+    unorderedlist: "<i class='ss-icon'>list</i>"
+    anchor: "<i class='ss-icon'>link</i>"
+    quote: "<i class='ss-icon'>quote</i>"
 )
 
 $(".editable").on "input", ->
-  $('.text').html($('.editable').html())
+  $(".text").html($(".editable").html())
