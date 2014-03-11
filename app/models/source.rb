@@ -5,6 +5,8 @@ class Source
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
+  include Mongoid::TaggableWithContext
+  include Mongoid::TaggableWithContext::AggregationStrategy::RealTime
   include PublicActivity::Model
 
   field :information, type: Hash
