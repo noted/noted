@@ -13,8 +13,12 @@
                 = text_field_tag 'note[title]', current_note.title
               .col-2.omega
                 = submit_tag "Save", class: "small submit"
+        %div{'data-row-span' => '1'}
+          %div{'data-field-span' => '1'}
+            .container.paddingless
+              = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize', placeholder: 'Tags'
         .editable#editable{'data-placeholder' => 'Your body text...'}= current_note.text.html_safe
-        = text_area_tag 'note[text]', nil, class: 'hidden text', id: 'text'
+        = text_area_tag 'note[text]', current_note.text, class: 'hidden text', id: 'text'
 
   - else
     .content

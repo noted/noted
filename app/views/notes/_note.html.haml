@@ -1,18 +1,15 @@
-%article.note
+%article.note{'data-tags' => note.tags}
   %header
     %h5= link_to note.title, note.project.path("/notes/#{note.id}")
     %ul.tags
-      %li
-        %a{href: ""}
-          %span foobar
-      %li
-        %a{href: ""}
-          %span barfoo
+      - note.tags.each do |tag|
+        %li
+          %a{href: ""}
+            %span= tag
   %section
     - if note.text.blank?
       %p.empty This note is blank.
     - else
-      / = truncate(note.text.html_safe, length: 150, separator: ' ').html_safe
       = note.text.html_safe
   %footer
     %ul.contributors

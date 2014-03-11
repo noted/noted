@@ -5,7 +5,7 @@ class NoteUpdate < Mutations::Command
       string :id
       string :title
       string :text, empty: true, nils: true
-      string :tags
+      string :tags, empty: true, nils: true
     end
   end
 
