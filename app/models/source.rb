@@ -25,6 +25,8 @@ class Source
                 track_update: true,
                 track_destroy: true
 
+  taggable :tags, separator: ','
+
   def creatable_by?(u)
     self.project.users.include?(u)
   end

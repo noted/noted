@@ -4,6 +4,7 @@ class SourceUpdate < Mutations::Command
     hash  :source do
       string :id
       model :information, class: Hash
+      string :tags
     end
   end
 
