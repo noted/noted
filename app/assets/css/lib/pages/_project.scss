@@ -60,10 +60,26 @@ header.project-header {
 
 		aside {
 			@include span-columns(12, $total-columns);
+
+			@media (max-width: $tablet-small) {
+				@include span-columns(24 omega, $total-columns);
+
+				li.project {
+					padding-bottom: 0;
+				}
+			}
 		}
 
 		nav {
 			@include span-columns(12 omega, $total-columns);
+
+			@media (max-width: $tablet-small) {
+				@include span-columns(24 omega, $total-columns);
+
+				ul {
+					float: left !important;
+				}
+			}
 
 			ul {
 				float: right;

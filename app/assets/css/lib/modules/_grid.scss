@@ -6,6 +6,12 @@
 @for $i from 1 through 24 {
   .col-#{$i} {
     @include span-columns($i, $total-columns);
+
+    @media (max-width: $tablet-small) {
+      @include span-columns(24, $total-columns);
+
+      margin-bottom: 2em;
+    }
   }
 
   .suffix-#{$i} {

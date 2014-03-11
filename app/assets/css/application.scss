@@ -100,8 +100,29 @@ header#header {
 	font-family: $sans-serif;
 
 	.inner {
-		// @include container($total-columns, $break);
 		@include clearfix;
+	}
+
+	@media (max-width: $tablet-small) {
+		aside {
+			display: block;
+			width: 100%;
+
+			li.brand {
+				margin-left: 0;
+				padding-left: 0;
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		nav.primary {
+			margin-left: 0;
+
+			li:first-child {
+				padding-left: 0;
+			}
+		}
 	}
 
 	aside, nav {
