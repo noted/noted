@@ -2,10 +2,11 @@
   %header
     %h5= link_to note.title, note.project.path("/notes/#{note.id}")
     %ul.tags
-      - note.tags.each do |tag|
-        %li
-          %a{href: ""}
-            %span= tag
+      - if note.tags
+        - note.tags.each do |tag|
+          %li
+            %a{href: ""}
+              %span= tag
   %section
     - if note.text.blank?
       %p.empty This note is blank.

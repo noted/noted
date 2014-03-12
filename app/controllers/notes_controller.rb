@@ -2,7 +2,6 @@ class NotesController < ActionController::Base
   layout 'application'
 
   def index
-    # @notes = current_project.notes.sort
     @notes = Note.where(project_id: current_project.id)
   end
 
