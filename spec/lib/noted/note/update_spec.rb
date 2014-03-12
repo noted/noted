@@ -9,7 +9,8 @@ describe NoteUpdate do
       note: {
         id: note.id.to_s,
         title: 'Foobar',
-        text: '**Foobar, _barfoo_.**'
+        text: '**Foobar, _barfoo_.**',
+        tags: 'foo,bar'
       }
     })
   end
@@ -19,4 +20,5 @@ describe NoteUpdate do
   it { expect(action.result.title).to eql 'Foobar' }
   it { expect(action.result.text).to eql '**Foobar, _barfoo_.**' }
   it { expect(action.result.updater).to eql user }
+  it { expect(action.result.tags).to eql ['foo', 'bar'] }
 end

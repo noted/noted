@@ -5,6 +5,7 @@ class NoteUpdate < Mutations::Command
       string :id
       string :title
       string :text, empty: true, nils: true
+      string :tags, empty: true, nils: true
     end
   end
 
@@ -15,7 +16,7 @@ class NoteUpdate < Mutations::Command
 
     n.update_attributes(self.note)
     n.updater = current_user
-    
+
     n.project.updater = current_user
     n.project.updated_at = Time.now
 

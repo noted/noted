@@ -1,0 +1,32 @@
+/*
+  Noted.
+    file: css/lib/modules/_tag.scss
+*/
+
+ul.tags.filter {
+  li.tag {
+    @include adjust-font-size-to(14px);
+
+    background: $light-grey;
+    display: block;
+    font-family: $sans-serif;
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: rhythm(0.25);
+
+    a {
+      display: block;
+      padding: rhythm(0.25);
+    }
+
+    span.name {
+      &:before {
+        content: '#';
+      }
+    }
+
+    &[data-selected=true] {
+      background: green;
+    }
+  }
+}

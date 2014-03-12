@@ -26,6 +26,10 @@ form.note {
     border-bottom: 0;
   }
 
+  [data-row-span] {
+    border-color: $grey;
+  }
+
   [data-field-span]:hover {
     background: $base !important;
   }
@@ -37,7 +41,7 @@ form.note {
   outline: none;
   padding: 0;
   font-family: $serif;
-  height: 100%;
+  height: 15em;
   margin-top: rhythm(1);
 }
 

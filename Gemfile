@@ -22,6 +22,8 @@ gem 'devise'
 gem 'mongoid-history'
 gem 'public_activity'
 
+gem 'mongoid_taggable_with_context'
+
 gem 'aws-ses', require: 'aws/ses'
 
 gem 'rails_admin'
@@ -63,7 +65,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  
+
   gem 'bugsnag'
 end
 

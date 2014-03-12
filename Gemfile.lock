@@ -151,6 +151,8 @@ GEM
       activesupport
       easy_diff
       mongoid (>= 3.0)
+    mongoid_taggable_with_context (1.1.4)
+      mongoid (>= 3.0.0)
     moped (2.0.0.beta6)
       bson (~> 2.2)
       connection_pool (~> 1.2)
@@ -317,6 +319,7 @@ DEPENDENCIES
   log_buddy
   mongoid (= 4.0.0.alpha1)
   mongoid-history
+  mongoid_taggable_with_context
   mutations
   pry-rails
   public_activity

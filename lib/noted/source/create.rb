@@ -4,6 +4,7 @@ class SourceCreate < Mutations::Command
     model :project
     hash  :source do
       model :information, class: Hash
+      string :tags
     end
   end
 

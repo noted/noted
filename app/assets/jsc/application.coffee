@@ -31,3 +31,11 @@ editor = new MediumEditor(".editable",
 
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
+
+$(".selectize").selectize
+  delimiter: ','
+  persist: false
+  openOnFocus: false
+  create: (input) ->
+    value: input
+    text: input
