@@ -21,5 +21,5 @@
               %a{href: "#"}
                 %span.name= tag[0]
     .col-18.omega.notes
-      - @notes.sort.each do |note|
+      - @notes.sort('updated_at desc').each do |note|
         = render :partial => "notes/note", object: note
