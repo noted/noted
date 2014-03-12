@@ -20,6 +20,6 @@
             %li.tag{'data-value' => tag[0], 'data-selected' => false}
               %a{href: "#"}
                 %span.name= tag[0]
-    .col-18.omega
+    .col-18.omega.notes
       - @notes.sort.each do |note|
         = render :partial => "notes/note", object: note
