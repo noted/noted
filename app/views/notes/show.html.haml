@@ -1,4 +1,5 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :notes }
+= content_for(:title, "#{current_note.title} · Notes · #{current_project.title}")
 .note-show
   - if current_user && current_user.can_update?(current_project)
     = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note' do |f|

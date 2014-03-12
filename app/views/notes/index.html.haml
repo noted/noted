@@ -1,4 +1,5 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :notes }
+= content_for(:title, "Notes · #{current_project.title}")
 .content
   %header.content-header
     %h3 Notes

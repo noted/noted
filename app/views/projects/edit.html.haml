@@ -1,4 +1,5 @@
 = render :partial => "projects/header", locals: { project: current_project, section: :settings }
+= content_for(:title, "Settings · #{current_project.title}")
 .content
   = form_tag project_path(id: current_project.id), method: :patch, class: 'grid-form' do |f|
     %fieldset

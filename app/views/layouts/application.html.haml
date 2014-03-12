@@ -5,7 +5,12 @@
     %meta{charset: "utf-8"}/
     %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
 
-    %title Noted — Research together.
+    - if !yield(:title).blank?
+      %title= "#{yield(:title)}".html_safe
+    - elsif current_project
+      %title= "#{current_project.title}".html_safe
+    - else
+      %title Noted · Research together
 
     %meta{content: "Noted.", name: "description"}/
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
