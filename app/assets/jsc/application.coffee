@@ -21,7 +21,9 @@ editor = new MediumEditor(".editable",
     "header2",
     "quote",
     "unorderedlist",
-    "orderedlist"
+    "orderedlist",
+    "outdent",
+    "indent"
   ],
   buttonLabels:
     unorderedlist: "<i class='ss-icon'>list</i>"

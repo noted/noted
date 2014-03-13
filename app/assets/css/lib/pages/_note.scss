@@ -80,6 +80,13 @@ form.note {
     @include adjust-font-size-to(24px);
   }
 
+  ul, ol {
+    ul, ol {
+      margin-left: rhythm(1);
+      margin-top: 0;
+    }
+  }
+
   table {
     width: 100%;
 
