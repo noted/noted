@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   helper :all
 
   def peek_enabled?
-    if Rails.env == 'production' && (current_user && !current_user.admin?)
-      false
+    if current_user && current_user.admin?
+      true
     end
   end
 
