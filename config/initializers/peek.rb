@@ -1,4 +1,8 @@
-require 'peek'
+module Peek
+  def self.enabled?
+    true
+  end
+end
 
 Peek.into Peek::Views::Dalli
 Peek.into Peek::Views::Git, :nwo => 'noted/noted'

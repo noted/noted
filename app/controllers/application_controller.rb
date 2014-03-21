@@ -5,12 +5,14 @@ class ApplicationController < ActionController::Base
 
   helper :all
 
-  def after_sign_in_path_for(resource)
-    root_path
+  def peek_enabled?
+    if Rails.env == 'production' && (current_user && !current_user.admin?)
+      false
+    end
   end
 
-  def peek_enabled?
-    current_user.admin?
+  def after_sign_in_path_for(resource)
+    root_path
   end
 
   protected
