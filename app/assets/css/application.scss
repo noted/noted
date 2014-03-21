@@ -1,3 +1,10 @@
+//= require peek
+//= require peek/views/performance_bar
+//= require peek/views/rblineprof
+//= require peek/views/rblineprof/pygments
+
+//= require_self
+
 /*
 	Noted.
 		file: css/application.scss
@@ -214,4 +221,24 @@ footer#footer {
 	.inner {
 		@include container($total-columns, $break);
 	}
+}
+
+/*
+	V. Peek
+*/
+
+#peek {
+	font-family: $sans-serif;
+	font-weight: 300 !important;
+}
+
+#peek-view-rblineprof {
+	margin-left: 25px;
+}
+
+#moped_queries_log {
+	@include border-radius(3px);
+	@include box-shadow(2px 2px 2px rgba($text, 0.9));
+
+	padding: 10px;
 }

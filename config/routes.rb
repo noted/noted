@@ -1,5 +1,6 @@
 Noted::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount Peek::Railtie => '/peek'
 
   root 'noted#index'
 

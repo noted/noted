@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  def peek_enabled?
+    current_user.admin?
+  end
+
   protected
 
   # Devise needs to be configured to whitelist parameters.

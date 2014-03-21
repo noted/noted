@@ -28,6 +28,16 @@ gem 'aws-ses', require: 'aws/ses'
 
 gem 'rails_admin'
 
+gem 'peek'
+gem 'peek-dalli'
+gem 'peek-gc'
+gem 'peek-git'
+gem 'peek-moped'
+gem 'peek-performance_bar'
+gem 'peek-rblineprof'
+
+gem 'pygments.rb', require: nil
+
 gem 'citeproc-ruby'
 
 gem 'haml-rails'

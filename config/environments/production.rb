@@ -87,7 +87,7 @@ Noted::Application.configure do
   config.action_mailer.delivery_method = :ses
 
   # Use Memcached
-  config.cache_store = :mem_cache_store, ENV['MEMCACHE_SERVERS']
+  config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS']
 end
 
 Rails.application.routes.default_url_options[:host] = 'getnoted.org'
