@@ -54,6 +54,8 @@ gem 'jquery-rails'
 group :assets do
   gem 'coffee-rails', '~> 4.0.0'
   gem 'uglifier', '>= 1.3.0'
+
+  gem 'rails-assets-underscore', '~> 1.6.0'
 end
 
 group :development, :test do
