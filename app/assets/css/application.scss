@@ -26,13 +26,16 @@ html.debug {
 	@include debug-vertical-alignment;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
 	font-family: $serif;
 	font-weight: 300;
-	min-height: 100vh;
-	height: 100%;
+	// min-height: 100vh;
 }
 
 a {
@@ -57,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
 h1, .brand {
 	font-weight: 700;
 	letter-spacing: 0.5px;
+
+	span {
+		color: lighten($dark-red, 10%);
+	}
 }
 
 h2 {
@@ -104,6 +111,7 @@ ul li {
 
 header#header {
 	background: $red;
+	z-index: 1;
 	font-family: $sans-serif;
 
 	.inner {
@@ -141,7 +149,7 @@ header#header {
 	}
 
 	nav.primary {
-		margin-left: rhythm(0.5);
+		margin-left: rhythm(0.25);
 	}
 
 	nav.secondary {
@@ -193,13 +201,12 @@ header#header {
 */
 
 main {
-	flex: 1;
 }
 
 main#main .content {
 	@include container($total-columns, $break);
 
-	margin-bottom: rhythm(2);
+	// margin-bottom: rhythm(4);
 	margin-top: rhythm(2);
 }
 
@@ -212,14 +219,15 @@ footer#footer {
 	background: $light-grey;
 	color: $grey;
 	font-family: $sans-serif;
-	padding: rhythm(1) 0;
+	// padding: rhythm(1) 0 ;
 
 	a {
 		color: $dark-grey;
 	}
 
-	.inner {
-		@include container($total-columns, $break);
+	p {
+		border-color: darken($light-grey, 5%);
+		vertical-align: center;
 	}
 }
 

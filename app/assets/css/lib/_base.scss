@@ -1,5 +1,6 @@
 @import "compass";
 @import "compass/reset";
+@import "compass/layout/sticky-footer";
 
 @import "includes/fonts";
 @import "includes/grid";
@@ -16,6 +17,7 @@
 @import "modules/source";
 @import "modules/tag";
 
+@import "pages/index";
 @import "pages/note";
 @import "pages/project";
 @import "pages/user";
@@ -26,3 +28,5 @@
 @import "vendor/ss-social-regular";
 @import "vendor/ss-standard";
 @import "vendor/tipsy";
+
+@include sticky-footer(rhythm(3), 'main', 'footer.root_footer', 'footer#footer')

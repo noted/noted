@@ -29,7 +29,7 @@
         %aside
           %ul
             %li.brand
-              = link_to "Noted", root_url
+              = link_to "Noted <span>&alpha;</span>".html_safe, root_url
         %nav.primary
           %ul
             - if current_user
@@ -50,9 +50,10 @@
 
     %main#main
       = yield
+      %footer.root_footer
 
     %footer#footer
-      .inner
+      .container
         %p= "<a href=''>Noted</a> &copy; #{Time.now.year}".html_safe
 
     = javascript_include_tag "application"
