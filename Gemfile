@@ -51,12 +51,12 @@ gem 'susy'
 
 gem 'jquery-rails'
 
-group :assets do
-  gem 'coffee-rails', '~> 4.0.0'
-  gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 
-  gem 'rails-assets-underscore', '~> 1.6.0'
-end
+gem 'rails-assets-medium-editor', '~> 1.7.3'
+gem 'rails-assets-selectize', '~> 0.9.0'
+gem 'rails-assets-unison', '~> 0.6.0'
 
 group :development, :test do
   gem 'rubocop'

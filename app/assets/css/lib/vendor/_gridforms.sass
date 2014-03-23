@@ -49,7 +49,7 @@
 
 =grid-form($max-columns: 12, $font-size-large: 18px, $legend-color: lighten(#333, 5%), $field-padding: 8px, $label-font-size: 10px, $grid-border-color: #333, $label-color: #333, $field-focus-color: darken(#FFFDED, 5%))
 
-    font-family: $sans-serif
+    font-family: 'proxima-nova'
 
     // Sacrifice compatibility with IE7 and below to use the border-box model
     *, *:before, *:after
@@ -60,7 +60,8 @@
     // Fields cannot be spaced away from the grid (clear out margins/padding)
     // Field font sizes need to be applied here
     input[type="text"], input[type="email"], textarea, select
-        font-family: $serif
+        // font-family: $serif
+        font-family: 'calluna'
         font-size: $font-size-large
         padding: 0
         margin: 0
@@ -136,10 +137,10 @@
         margin-top: 0.5rem
 
         a
-            color: $text
+            color: #333
 
             &:hover
-                color: $dark-red
+                color: #c0392b
 
         p + p
             margin-top: 0

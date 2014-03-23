@@ -1,5 +1,27 @@
+/*
+  Noted
+    fiLe: css/lib/_base.scss
+*/
+
+/*
+  = Appendix
+    I. Compass
+    II. Noted
+    III. Vendor
+*/
+
+
+/*
+  I. Compass
+*/
+
 @import "compass";
 @import "compass/reset";
+
+
+/*
+  II. Noted
+*/
 
 @import "includes/fonts";
 @import "includes/grid";
@@ -20,9 +42,7 @@
 @import "pages/project";
 @import "pages/user";
 
-@import "vendor/gridforms";
-@import "vendor/medium-editor";
-@import "vendor/selectize";
-@import "vendor/ss-social-regular";
-@import "vendor/ss-standard";
-@import "vendor/tipsy";
+
+/*
+  III. Vendor
+*/

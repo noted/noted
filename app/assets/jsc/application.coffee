@@ -5,12 +5,15 @@
 
 #= require jquery
 #= require jquery_ujs
-#= require underscore
 
 #= require peek
 #= require peek/views/dalli
 #= require peek/views/performance_bar
 #= require peek/views/rblineprof
+
+#= require medium-editor
+#= require selectize
+#= require unison
 
 #= require_tree ./lib
 
