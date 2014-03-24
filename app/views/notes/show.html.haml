@@ -11,14 +11,15 @@
           %div{'data-field-span' => '1'}
             .container.paddingless
               .col-22
-                = text_field_tag 'note[title]', current_note.title
+                = text_field_tag 'note[title]', current_note.title, placeholder: 'Title.', tabindex: '1'
               .col-2.omega
+                %span.message
                 = submit_tag "Save", class: "small submit"
         %div{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
-              = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize', placeholder: 'Tags'
-        .editable#editable.note-text{'data-placeholder' => 'Your body text...'}= current_note.text.html_safe
+              = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
+        .editable#editable.note-text{'data-placeholder' => 'Your body text. Highlight text to format.', tabindex: '3'}= current_note.text.html_safe
         = text_area_tag 'note[text]', current_note.text, class: 'hidden text', id: 'text'
 
   - else

@@ -34,6 +34,7 @@ editor = new MediumEditor(".editable",
     unorderedlist: "<i class='ss-icon'>list</i>"
     anchor: "<i class='ss-icon'>link</i>"
     quote: "<i class='ss-icon'>quote</i>"
+  placeholder: "Your body text..."
 )
 
 $(".editable").on "input", ->
@@ -46,6 +47,3 @@ $(".selectize").selectize
   create: (input) ->
     value: input
     text: input
-
-$("a.flash-hide").on "click", ->
-  $(".flash").hide()
