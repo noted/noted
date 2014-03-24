@@ -108,3 +108,21 @@ form.note {
     margin-left: 2px;
     color: #5c5c5c;
 }
+
+.col-4 {
+  span, input {
+    display: inline-block;
+    float: right;
+  }
+
+  span {
+    @include adjust-font-size-to(14px);
+
+    padding-right: rhythm(0.5);
+    padding-top: rhythm(0.25);
+
+    &.fail {
+      color: $red;
+    }
+  }
+}

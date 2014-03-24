@@ -29,8 +29,13 @@ class NotesController < ActionController::Base
       current_user: current_user,
       note: params[:note]
     )
+    if params[:ajax] == "true"
+      result = { success: true }.to_json
 
-    redirect_to current_project.path("/notes/#{@note.result.id}")
+      render json: result
+    else
+      redirect_to current_project.path("/notes/#{@note.result.id}")
+    end
   end
 
   def destroy

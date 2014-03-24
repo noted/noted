@@ -10,6 +10,8 @@
 #= require_tree ./lib
 #= require_self
 
+root = exports ? this
+
 $("div[data-field-span]").on "click", ->
   $(@).find("input[type=text]").focus()
 
@@ -40,10 +42,12 @@ editor = new MediumEditor(".editable",
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
 
-$(".selectize").selectize
+tags = $(".selectize").selectize
   delimiter: ','
   persist: false
   openOnFocus: false
   create: (input) ->
     value: input
     text: input
+  onChange: (val) ->
+    root.save()
