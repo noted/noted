@@ -29,7 +29,7 @@
         %aside
           %ul
             %li.brand
-              = link_to "Noted", root_url
+              = link_to "Noted <span>&alpha;</span>".html_safe, root_url
         %nav.primary
           %ul
             - if current_user
@@ -49,10 +49,13 @@
               %li.btn= link_to "Join", join_path, class: "btn blue"
 
     %main#main
+      = render :partial => 'noted/flash', locals: { flash: flash }
+
       = yield
+      %footer.root_footer
 
     %footer#footer
-      .inner
+      .container
         %p= "<a href=''>Noted</a> &copy; #{Time.now.year}".html_safe
 
     = javascript_include_tag "application"

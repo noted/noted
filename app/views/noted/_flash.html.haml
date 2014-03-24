@@ -1,0 +1,24 @@
+- if flash[:notice]
+  .flash.notice
+    .container
+      %section
+        %p= flash[:notice]
+      %aside
+        %a.flash-hide
+          %i.ss-icon close
+- if flash[:warning]
+  .flash.warning
+    .container
+      %section
+        %p= flash[:warning]
+      %aside
+        %a.flash-hide
+          %i.ss-icon close
+- if flash[:alert]
+  .flash.alert
+    .container
+      %section
+        %p= flash[:alert]
+      %aside
+        %a.flash-hide
+          %i.ss-icon close

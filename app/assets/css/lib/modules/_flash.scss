@@ -1,0 +1,46 @@
+/*
+  Noted
+    file: css/lib/modules/_flash.scss
+*/
+
+.flash {
+  font-family: $sans-serif;
+  padding: rhythm(1) 0;
+
+  a {
+    @include adjust-font-size-to(12px);
+
+    color: $text !important;
+    line-height: 12px;
+    padding-top: rhythm(0.5);
+
+    &:hover {
+      color: $dark-grey;
+      cursor: pointer;
+    }
+  }
+
+  &.notice {
+    background: $green;
+  }
+
+  &.warning {
+    background: $yellow;
+  }
+
+  &.alert {
+    background: $orange;
+  }
+
+  section {
+    @include span-columns(22, $break);
+  }
+
+  aside {
+    @include span-columns(2 omega, $break);
+
+    a {
+      float: right;
+    }
+  }
+}

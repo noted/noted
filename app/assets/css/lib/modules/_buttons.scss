@@ -13,6 +13,7 @@ a.btn, button, input[type=submit] {
 	font-family: $sans-serif;
 	font-weight: 600;
 	margin: rhythm(0.25, 16px) 0;
+	outline: none;
 	padding: rhythm(0.25, 16px) rhythm(0.5, 16px);
 	text-transform: uppercase;
 

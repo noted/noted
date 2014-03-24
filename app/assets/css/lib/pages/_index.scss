@@ -1,0 +1,76 @@
+/*
+  Noted.
+    file: css/lib/pages/_index.scss
+*/
+
+.index {
+  .hero {
+    background: image-url('index-2.jpg');
+    height: 100%;
+    padding: rhythm(4);
+    text-align: center;
+
+    h2 {
+      @include adjust-font-size-to(48px);
+
+      color: $base;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    p {
+      @include adjust-font-size-to(18px);
+
+      color: $light-grey;
+      margin-top: rhythm(1);
+    }
+
+    ul {
+      @include adjust-font-size-to(18px);
+
+      margin-top: rhythm(2);
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .feature {
+    &.go {
+      padding: rhythm(2);
+
+      section {
+        @include span-columns(17, $break);
+        @include suffix(1);
+      }
+
+      aside {
+        @include span-columns(6 omega, $break);
+
+        a {
+          @include adjust-font-size-to(24px);
+
+          display: block;
+          margin: 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+
+    &.info {
+      .container {
+        @include trailing-border(1px, 0);
+
+        border-color: $light-grey;
+        padding-bottom: rhythm(2);
+        padding-top: rhythm(2);
+        text-align: center;
+      }
+    }
+  }
+}
