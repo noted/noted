@@ -35,3 +35,6 @@ $('.note-text, .note-title, .selectize-input input').on "keyup", (e) ->
   clearTimeout timer  if timer
   timer = setTimeout(root.save, 400)
   return
+
+$('.note-submit').on "click", ->
+  save()

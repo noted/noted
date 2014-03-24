@@ -2,7 +2,7 @@
 = content_for(:title, "#{current_note.title} · Notes · #{current_project.title}")
 .note-show
   - if current_user && current_user.can_update?(current_project)
-    = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note' do |f|
+    = form_tag note_path(id: current_note.id), method: :patch, class: 'grid-form note', remote: true do |f|
       = hidden_field_tag :current_user, current_user.id, class: 'current_user'
       = hidden_field_tag :user, params[:user]
       = hidden_field_tag :project, params[:project]
@@ -20,7 +20,7 @@
           %div{'data-field-span' => '1'}
             .container.paddingless
               = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
-        .editable#editable.note-text{'data-placeholder' => 'Your body text. Highlight text to format.', tabindex: '3'}= current_note.text.html_safe
+        .editable#editable.note-text{tabindex: '3'}= current_note.text.html_safe
         = text_area_tag 'note[text]', current_note.text, class: 'hidden text', id: 'text'
 
   - else
