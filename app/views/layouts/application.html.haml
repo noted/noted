@@ -49,6 +49,8 @@
               %li.btn= link_to "Join", join_path, class: "btn blue"
 
     %main#main
+      = render :partial => 'noted/flash', locals: { flash: flash }
+
       = yield
       %footer.root_footer
 

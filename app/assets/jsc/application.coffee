@@ -46,3 +46,6 @@ $(".selectize").selectize
   create: (input) ->
     value: input
     text: input
+
+$("a.flash-hide").on "click", ->
+  $(".flash").hide()

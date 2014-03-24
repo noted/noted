@@ -11,6 +11,7 @@
 @import "modules/content-header";
 @import "modules/file";
 @import "modules/forms";
+@import "modules/flash";
 @import "modules/grid";
 @import "modules/note";
 @import "modules/project";
@@ -28,5 +29,3 @@
 @import "vendor/ss-social-regular";
 @import "vendor/ss-standard";
 @import "vendor/tipsy";
-
-@include sticky-footer(rhythm(3), 'main', 'footer.root_footer', 'footer#footer')

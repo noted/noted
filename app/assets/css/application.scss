@@ -111,8 +111,8 @@ ul li {
 
 header#header {
 	background: $red;
-	z-index: 1;
 	font-family: $sans-serif;
+	z-index: 1000;
 
 	.inner {
 		@include clearfix;
@@ -206,7 +206,6 @@ main {
 main#main .content {
 	@include container($total-columns, $break);
 
-	// margin-bottom: rhythm(4);
 	margin-top: rhythm(2);
 }
 
@@ -216,10 +215,12 @@ main#main .content {
 */
 
 footer#footer {
-	background: $light-grey;
+	@include leading-border(1px, 1);
+
+	border-color: $light-grey;
 	color: $grey;
 	font-family: $sans-serif;
-	// padding: rhythm(1) 0 ;
+	margin: rhythm(4) 0 rhythm(1);
 
 	a {
 		color: $dark-grey;
