@@ -11,9 +11,9 @@
         %div{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
-              .col-20
+              %section.col-20.title-container
                 = text_field_tag 'note[title]', current_note.title, class: 'note-title', placeholder: 'Title.', tabindex: '1'
-              .col-4.omega
+              .col-4.omega.note-actions
                 = submit_tag "Save", class: "small submit"
                 %span.message
         %div{'data-row-span' => '1'}

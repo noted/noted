@@ -21,20 +21,27 @@ root.save = ->
     data: data
     url: "/notes/#{data.note.id}"
     error: (err) ->
-      $('span.message').addClass 'fail'
-      $('span.message').html 'Failed to save!'
+      $("span.message").addClass "fail"
+      $("span.message").fadeIn()
+      $("span.message").html "Failed to save!"
 
       console.log err
     success: (res) ->
-      $('span.message').html 'Saved!'
+      $("span.message").html "Saved!"
+      $("span.message").fadeIn()
+
+      setTimeout (->
+        $("span.message").fadeOut()
+        $("span.message").val ""
+      ), 3000
 
   return
 
 timer = 0
-$('.note-text, .note-title, .selectize-input input').on "keyup", (e) ->
+$(".note-text, .note-title, .selectize-input input").on "keyup", (e) ->
   clearTimeout timer  if timer
   timer = setTimeout(root.save, 400)
   return
 
-$('.note-submit').on "click", ->
+$(".note-submit").on "click", ->
   save()
