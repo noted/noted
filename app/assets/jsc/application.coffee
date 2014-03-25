@@ -10,6 +10,8 @@
 #= require_tree ./lib
 #= require_self
 
+root = exports ? this
+
 $("div[data-field-span]").on "click", ->
   $(@).find("input[type=text]").focus()
 
@@ -34,18 +36,18 @@ editor = new MediumEditor(".editable",
     unorderedlist: "<i class='ss-icon'>list</i>"
     anchor: "<i class='ss-icon'>link</i>"
     quote: "<i class='ss-icon'>quote</i>"
+  placeholder: "Your body text..."
 )
 
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
 
-$(".selectize").selectize
+tags = $(".selectize").selectize
   delimiter: ','
   persist: false
   openOnFocus: false
   create: (input) ->
     value: input
     text: input
-
-$("a.flash-hide").on "click", ->
-  $(".flash").hide()
+  onChange: (val) ->
+    root.save()

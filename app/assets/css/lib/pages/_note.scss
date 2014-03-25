@@ -101,3 +101,22 @@ form.note {
     }
   }
 }
+
+.note-actions {
+  span, input {
+    display: inline-block;
+    float: right;
+  }
+
+  span {
+    @include adjust-font-size-to(14px);
+
+    color: $grey;
+    padding-right: rhythm(0.5);
+    padding-top: rhythm(0.25);
+
+    &.fail {
+      color: $red;
+    }
+  }
+}
