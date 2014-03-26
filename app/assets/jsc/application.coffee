@@ -42,6 +42,9 @@ editor = new MediumEditor(".editable",
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
 
+if $(".editable").html() == "<p><br></p>"
+  $(".editable").html("")
+
 tags = $(".selectize").selectize
   delimiter: ','
   persist: false

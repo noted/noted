@@ -20,7 +20,7 @@
           %div{'data-field-span' => '1'}
             .container.paddingless
               = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
-        .editable#editable.note-text{tabindex: '3'}= current_note.text.html_safe
+        .editable#editable.note-text{'data-placeholder' => 'Your text. Highlight to format.', tabindex: '3'}= current_note.text.html_safe
         = text_area_tag 'note[text]', current_note.text, class: 'hidden text', id: 'text'
 
   - else
