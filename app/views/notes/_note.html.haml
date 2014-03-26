@@ -1,4 +1,4 @@
-%article.note{'data-tags' => note.tags}
+%article.note{'data-tags' => note.tags.join(',')}
   %header
     %h5= link_to note.title, note.project.path("/notes/#{note.id}")
     %ul.tags
