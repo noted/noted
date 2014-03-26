@@ -8,7 +8,7 @@
       = hidden_field_tag :project, params[:project]
       = hidden_field_tag 'note[id]', current_note.id, class: 'note-id'
       %fieldset
-        %div{'data-row-span' => '1'}
+        %div.title-row{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
               %section.col-20.title-container
@@ -16,7 +16,7 @@
               .col-4.omega.note-actions
                 = submit_tag "Save", class: "small submit"
                 %span.message
-        %div{'data-row-span' => '1'}
+        %div.tags-row{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
               = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'

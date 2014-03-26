@@ -26,7 +26,11 @@ form.note {
     border-bottom: 0;
   }
 
-  [data-row-span] {
+  .title-row {
+    border-color: $light-grey;
+  }
+
+  .tags-row {
     border-color: $grey;
   }
 
