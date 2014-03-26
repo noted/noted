@@ -8,6 +8,9 @@ $(document).ready ->
 $(".tag").on "click", ->
   filter_toggle($(@))
 
+$ ->
+  $(window).hashchange ->
+    refresh_view()
 
 # Call on click of tag, add or remove filter
 filter_toggle = (e) ->

@@ -5,8 +5,7 @@
       - if note.tags
         - note.tags.each do |tag|
           %li
-            %a{href: ""}
-              %span= tag
+            %span= tag
   %section
     - if note.text.blank?
       %p.empty This note is blank.

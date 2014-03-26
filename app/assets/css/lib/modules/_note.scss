@@ -34,6 +34,7 @@ article.note {
 		ul.tags {
 			@include adjust-font-size-to(12px);
 
+			color: $grey;
 			float: right;
 			font-family: $sans-serif;
 
