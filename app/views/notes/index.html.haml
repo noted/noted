@@ -13,15 +13,15 @@
         %form
           %input{type: 'text', placeholder: 'Search...'}
 
-      - if @notes.tags
+      - unless @tags.empty?
         %section
           %header
             %h4 Filter
           %ul.tags.filter
-            - @notes.tags_with_weight.each do |tag|
-              %li.tag{'data-value' => tag[0], 'data-selected' => false}
+            - Note.tags_for(current_project).each do |tag|
+              %li.tag{'data-value' => tag, 'data-selected' => false}
                 %a
-                  %span.name= tag[0]
+                  %span.name= tag
     .col-18.omega.notes
       - @notes.sort('updated_at desc').each do |note|
         = render :partial => "notes/note", object: note

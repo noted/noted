@@ -22,7 +22,8 @@ gem 'devise'
 gem 'mongoid-history'
 gem 'public_activity'
 
-gem 'mongoid_taggable_with_context'
+# gem 'mongoid_taggable_with_context'
+gem 'mongoid-tags-arent-hard'
 
 gem 'aws-ses', require: 'aws/ses'
 

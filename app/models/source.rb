@@ -5,8 +5,7 @@ class Source
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
-  include Mongoid::TaggableWithContext
-  include Mongoid::TaggableWithContext::AggregationStrategy::RealTime
+  include Mongoid::TagsArentHard
   include PublicActivity::Model
 
   field :information, type: Hash
@@ -25,7 +24,7 @@ class Source
                 track_update: true,
                 track_destroy: true
 
-  taggable :tags, separator: ','
+  taggable_with :tags, separator: ','
 
   def creatable_by?(u)
     self.project.users.include?(u)

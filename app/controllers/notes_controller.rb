@@ -3,6 +3,7 @@ class NotesController < ActionController::Base
 
   def index
     @notes = Note.where(project_id: current_project.id)
+    @tags  = Note.tags_for(current_project)
   end
 
   def new

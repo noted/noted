@@ -152,7 +152,7 @@ GEM
       activesupport
       easy_diff
       mongoid (>= 3.0)
-    mongoid_taggable_with_context (1.1.4)
+    mongoid-tags-arent-hard (1.1.5)
       mongoid (>= 3.0.0)
     moped (2.0.0.beta6)
       bson (~> 2.2)
@@ -347,7 +347,7 @@ DEPENDENCIES
   log_buddy
   mongoid (= 4.0.0.alpha1)
   mongoid-history
-  mongoid_taggable_with_context
+  mongoid-tags-arent-hard
   mutations
   peek
   peek-dalli

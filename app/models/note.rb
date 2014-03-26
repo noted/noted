@@ -3,8 +3,7 @@ class Note
   include Mongoid::Timestamps
   include Mongoid::Userstamps
   include Mongoid::History::Trackable
-  include Mongoid::TaggableWithContext
-  include Mongoid::TaggableWithContext::AggregationStrategy::RealTime
+  include Mongoid::TagsArentHard
   include PublicActivity::Model
 
   field :title, type: String, default: 'Untitled'
@@ -23,7 +22,7 @@ class Note
                 track_update: true,
                 track_destroy: true
 
-  taggable :tags, separator: ','
+  taggable_with :tags, separator: ','
 
   def creatable_by?(u)
     self.project.users.include?(u)
@@ -47,5 +46,13 @@ class Note
 
   def path
     self.project.path("/notes/#{self.id}")
+  end
+
+  def self.tags_for(project)
+    self.where(project_id: project.id).all_tags
+  end
+
+  def tags_string
+    self.tags.join(',')
   end
 end
