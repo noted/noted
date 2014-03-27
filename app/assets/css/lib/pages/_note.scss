@@ -45,8 +45,9 @@ form.note {
   outline: none;
   padding: 0;
   font-family: $serif;
-  height: 15em;
+  min-height: 15em;
   margin-top: rhythm(1);
+  margin-bottom: rhythm(2);
 }
 
 .text {
@@ -121,6 +122,27 @@ form.note {
 
     &.fail {
       color: $red;
+    }
+  }
+}
+
+nav.note-secondary-actions {
+  position: fixed;
+  bottom: rhythm(1);
+  right: rhythm(1);
+
+  a.help {
+    @include adjust-font-size-to(12px);
+  }
+
+  ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    & + li {
+      margin-left: rhythm(0.5);
     }
   }
 }

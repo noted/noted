@@ -54,9 +54,10 @@
       = yield
       %footer.root_footer
 
-    %footer#footer
-      .container
-        %p= "<a href=''>Noted</a> &copy; #{Time.now.year}".html_safe
+    - unless @footer == false
+      %footer#footer
+        .container
+          %p= "<a href=''>Noted</a> &copy; #{Time.now.year}".html_safe
 
     = javascript_include_tag "application"
 

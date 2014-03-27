@@ -28,3 +28,20 @@
       %header.content-header
         %h3= current_note.title
       .text= current_note.text.html_safe
+
+%nav.note-secondary-actions
+  %ul
+    %li
+      %a.btn.pale.circle.help{href: "#", 'data-reveal-id' => 'help'}
+        ?
+    %li
+      = form_tag note_path(id: current_note.id), method: :delete do |f|
+        = hidden_field_tag :project, current_project.id
+        = submit_tag "Delete", class: "btn red small"
+
+#help.reveal-modal
+  %h1 Note formatting help
+  %p Simply select text that you want to format.
+  %video{autoplay: true, muted: true}
+    %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.mp4', type: 'video/mp4'}
+    %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.webm', type: 'video/webm'}

@@ -60,6 +60,57 @@ article.note {
 		}
 	}
 
+	section {
+		p + p {
+			margin-top: rhythm(0.5);
+		}
+
+		blockquote, ul, ol, table {
+			margin: rhythm(0.75) 0;
+		}
+
+		blockquote {
+			border-left: 3px solid $light-grey;
+			color: $dark-grey;
+			font-style: italic;
+			padding-left: rhythm(0.5);
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin-top: rhythm(1, $base-font-size);
+			margin-bottom: 0;
+		}
+
+		h1 {
+			@include adjust-font-size-to(28px);
+		}
+
+		h2 {
+			@include adjust-font-size-to(24px);
+		}
+
+		ul, ol {
+			ul, ol {
+				margin-left: rhythm(1);
+				margin-top: 0;
+			}
+		}
+
+		table {
+			width: 100%;
+
+			td {
+				@include leading-border(1px, 0);
+				@include trailing-border(1px, 0);
+
+				border-color: $grey;
+				border-left: 1px solid $grey;
+				border-right: 1px solid $grey;
+				padding: rhythm(0.25);
+			}
+		}
+}
+
 	footer {
 		@include clearfix;
 		@include leading-border(1px, 0);

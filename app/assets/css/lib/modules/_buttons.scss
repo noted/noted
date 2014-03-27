@@ -45,9 +45,22 @@ a.btn, button, input[type=submit] {
 		}
 	}
 
+	&.pale {
+		background: $light-grey;
+
+		&:hover {
+			background: darken($light-grey, 5%);
+		}
+	}
+
+	&.circle {
+		@include border-radius(50%);
+	}
+
 	i {
 		@include adjust-font-size-to(12px);
 
 		font-weight: normal;
 	}
+
 }
