@@ -8,7 +8,7 @@
       = hidden_field_tag :project, params[:project]
       = hidden_field_tag 'note[id]', current_note.id, class: 'note-id'
       %fieldset
-        %div{'data-row-span' => '1'}
+        %div.title-row{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
               %section.col-20.title-container
@@ -16,11 +16,11 @@
               .col-4.omega.note-actions
                 = submit_tag "Save", class: "small submit"
                 %span.message
-        %div{'data-row-span' => '1'}
+        %div.tags-row{'data-row-span' => '1'}
           %div{'data-field-span' => '1'}
             .container.paddingless
               = text_field_tag 'note[tags]', current_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
-        .editable#editable.note-text{tabindex: '3'}= current_note.text.html_safe
+        .editable#editable.note-text{'data-placeholder' => 'Your text. Highlight to format.', tabindex: '3'}= current_note.text.html_safe
         = text_area_tag 'note[text]', current_note.text, class: 'hidden text', id: 'text'
 
   - else
@@ -28,3 +28,20 @@
       %header.content-header
         %h3= current_note.title
       .text= current_note.text.html_safe
+
+%nav.note-secondary-actions
+  %ul
+    %li
+      %a.btn.pale.circle.help{href: "#", 'data-reveal-id' => 'help'}
+        ?
+    %li
+      = form_tag note_path(id: current_note.id), method: :delete do |f|
+        = hidden_field_tag :project, current_project.id
+        = submit_tag "Delete", class: "btn red small"
+
+#help.reveal-modal
+  %h1 Note formatting help
+  %p Simply select text that you want to format.
+  %video{autoplay: true, muted: true}
+    %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.mp4', type: 'video/mp4'}
+    %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.webm', type: 'video/webm'}

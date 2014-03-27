@@ -23,6 +23,7 @@ class NotesController < ActionController::Base
   end
 
   def show
+    @footer = false
   end
 
   def update
@@ -47,13 +48,15 @@ class NotesController < ActionController::Base
       }
     )
 
-    redirect_to current_project.path("/notes")
+    project = Project.find(params[:project])
+
+    redirect_to project.path("/notes")
   end
 
   protected
 
   def current_project
     @user = User.where(username: params[:user]).first
-    @project = Project.where(owner_id: current_user.id, permalink: params[:project]).first
+    @project = Project.where(owner_id: @user.id, permalink: params[:project]).first
   end
 end

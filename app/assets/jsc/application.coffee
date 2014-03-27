@@ -42,6 +42,9 @@ editor = new MediumEditor(".editable",
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
 
+if $(".editable").html() == "<p><br></p>"
+  $(".editable").html("")
+
 tags = $(".selectize").selectize
   delimiter: ','
   persist: false
@@ -51,3 +54,14 @@ tags = $(".selectize").selectize
     text: input
   onChange: (val) ->
     root.save()
+
+$(document).ready ->
+  move_nav()
+
+window.onresize = ->
+  move_nav()
+
+move_nav = ->
+  right = $(window).width() - ($(".editable").offset().left + $(".editable").width())
+
+  $("nav.note-secondary-actions").css('right', right)
