@@ -21,12 +21,11 @@ gem 'devise'
 gem 'mongoid-history'
 gem 'public_activity'
 
-# gem 'mongoid_taggable_with_context'
 gem 'mongoid-tags-arent-hard'
 
 gem 'aws-ses', require: 'aws/ses'
 
-gem 'rails_admin'
+gem 'rails_admin', github: 'eturk/rails_admin'
 
 gem 'peek'
 gem 'peek-dalli'

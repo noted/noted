@@ -12,7 +12,7 @@ class User
   field :username,  type: String
   field :biography, type: String
   field :location,  type: String
-  field :social,    type: Hash, default: { twitter: '' }
+  field :social,    type: Hash,    default: { twitter: '' }
   field :admin,     type: Boolean, default: false
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
