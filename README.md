@@ -1,6 +1,6 @@
 # Noted.
 
-[![Build Status](https://travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted)
+[![Build Status](https://travis-ci.org/noted/noted.png?branch=master)](https://travis-ci.org/noted/noted) [![Code Climate](https://codeclimate.com/github/noted/noted.png)](https://codeclimate.com/github/noted/noted)
 
 Noted is an academic research assistant.
 

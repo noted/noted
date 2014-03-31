@@ -9,3 +9,6 @@ script: bundle exec rspec spec
 notifications:
   email:
     - ethan.turkeltaub@gmail.com
+env:
+  global:
+    - secure: "mXayHTweGM2sHeSyLqCmrFxnJ4IYIu8/4z1A9icuYB9lPIoGkAO13D2nVUODLagKczRqINjKIkTLnp+AV3lHy2T3UVBD3hi5Xs6qAJ3hdKmqLU8+maDUWnwYoHnAsA7xDkyfvt8vTBlml6jNEmVf9+/ZcEBqS1LekLGTCiJ7+xU="
