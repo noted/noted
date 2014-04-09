@@ -39,6 +39,9 @@ editor = new MediumEditor(".editable",
   placeholder: "Your body text..."
 )
 
+$("a.flash-hide").on "click", ->
+  $(".flash").hide()
+
 $(".editable").on "input", ->
   $(".text").html($(".editable").html())
 
@@ -62,6 +65,7 @@ window.onresize = ->
   move_nav()
 
 move_nav = ->
-  right = $(window).width() - ($(".editable").offset().left + $(".editable").width())
+  if $(".editable").length > 0
+    right = $(window).width() - ($(".editable").offset().left + $(".editable").width())
 
-  $("nav.note-secondary-actions").css('right', right)
+    $("nav.note-secondary-actions").css('right', right)

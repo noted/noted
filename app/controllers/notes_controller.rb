@@ -1,22 +1,22 @@
-class NotesController < ActionController::Base
-  layout 'application'
+class NotesController < ApplicationController
+  before_filter :view_project?
 
   def index
-    @notes = Note.where(project_id: current_project.id)
-    @tags  = Note.tags_for(current_project)
+    @notes = Note.where(project_id: @view_project.id)
+    @tags  = Note.tags_for(@view_project)
   end
 
   def new
     @note = NoteCreate.run(
       current_user: current_user,
-      project: current_project,
+      project: @view_project,
       note: {
         title: 'Untitled',
         text: ''
       }
     )
 
-    redirect_to current_project.path("/notes/#{@note.result.id}")
+    redirect_to @view_project.path("/notes/#{@note.result.id}")
   end
 
   def create
@@ -36,7 +36,7 @@ class NotesController < ActionController::Base
 
       render json: result
     else
-      redirect_to current_project.path("/notes/#{@note.result.id}")
+      redirect_to @view_project.path("/notes/#{@note.result.id}")
     end
   end
 
@@ -55,7 +55,7 @@ class NotesController < ActionController::Base
 
   protected
 
-  def current_project
+  def @view_project
     @user = User.where(username: params[:user]).first
     @project = Project.where(owner_id: @user.id, permalink: params[:project]).first
   end

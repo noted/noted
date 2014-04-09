@@ -1,5 +1,5 @@
-class UsersController < ActionController::Base
-  layout 'application'
+class UsersController < ApplicationController
+  before_filter :view_user?
 
   def index
   end
@@ -11,24 +11,12 @@ class UsersController < ActionController::Base
   end
 
   def show
-    @user = User.where(username: params[:user]).first
-
-    if @user
-      @projects = @user.all_projects.sort('updated_at desc')
-    else
-      not_found
-    end
+    @projects = view_user.all_projects.sort('updated_at desc')
   end
 
   def update
   end
 
   def destroy
-  end
-
-  protected
-
-  def not_found
-    render 'errors/404', status: 404
   end
 end

@@ -1,4 +1,4 @@
-= render :partial => "projects/header", locals: { project: current_project, section: :dashboard }
+= render :partial => "projects/header", locals: { project: @view_project, section: :dashboard }
 .content.dashboard
   %header.content-header
     %h3 Dashboard
@@ -8,7 +8,7 @@
       %header
         %h4 Notes
       - if @notes.blank?
-        %p.empty= "No notes yet! <a href='#{@project.path('/notes/new')}'>Make one?</a>".html_safe
+        %p.empty= "No notes yet! <a href='#{@view_project.path('/notes/new')}'>Make one?</a>".html_safe
       - @notes.each do |note|
         - cache note do
           = render :partial => "notes/note", object: note
@@ -17,7 +17,7 @@
       %header
         %h4 Sources
       - if @sources.blank?
-        %p.empty= "No sources yet! <a href='#{@project.path('/sources/new')}'>Make one?</a>".html_safe
+        %p.empty= "No sources yet! <a href='#{@view_project.path('/sources/new')}'>Make one?</a>".html_safe
       - @sources.each do |source|
         - cache source do
           = render :partial => "sources/source", object: source

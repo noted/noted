@@ -1,9 +1,34 @@
 class ApplicationController < ActionController::Base
+  helper :all
+
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-  helper :all
+  helper_method :view_user, :view_project, :view_user?, :view_project?,
+                :peek_enabled?, :not_implemented, :not_found
+
+  def view_user
+    @view_user = User.where(username: params[:user]).first
+    @view_user
+  end
+
+  def view_project
+    @view_project = Project.where(owner_id: view_user, permalink: params[:project]).first
+    @view_project
+  end
+
+  def view_user?
+    if view_user.nil?
+      not_found
+    end
+  end
+
+  def view_project?
+    if view_project.nil?
+      not_found
+    end
+  end
 
   def peek_enabled?
     if current_user && current_user.admin?
@@ -13,6 +38,16 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     root_path
+  end
+
+  def not_implemented
+    if Rails.env == 'production'
+      render 'errors/501', status: 501
+    end
+  end
+
+  def not_found
+    render 'errors/404', status: 404
   end
 
   protected

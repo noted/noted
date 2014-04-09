@@ -7,8 +7,8 @@
 
     - if !yield(:title).blank?
       %title= "#{yield(:title)}".html_safe
-    - elsif current_project
-      %title= "#{current_project.title}".html_safe
+    - elsif @view_project
+      %title= "#{@view_project.title}".html_safe
     - else
       %title Noted · Research together
 
@@ -23,7 +23,7 @@
         Typekit.load();
       } catch(e) {}
   %body
-    / = render 'peek/bar'
+    = render 'peek/bar'
     %header#header
       .inner
         %aside

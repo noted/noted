@@ -1,11 +1,11 @@
-= render :partial => "projects/header", locals: { project: current_project, section: :notes }
-= content_for(:title, "Notes · #{current_project.title}")
+= render :partial => "projects/header", locals: { project: @view_project, section: :notes }
+= content_for(:title, "Notes · #{@view_project.title}")
 .content
   %header.content-header
     %h3 Notes
 
     %nav
-      = link_to "New", current_project.path("/notes/new"), class: "btn"
+      = link_to "New", @view_project.path("/notes/new"), class: "btn"
 
   .elements
     %aside.nav.col-5.suffix-1
@@ -18,7 +18,7 @@
           %header
             %h4 Filter
           %ul.tags.filter
-            - Note.tags_for(current_project).each do |tag|
+            - Note.tags_for(@view_project).each do |tag|
               %li.tag{'data-value' => tag, 'data-selected' => false}
                 %a
                   %span.name= tag

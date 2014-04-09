@@ -1,12 +1,12 @@
-= content_for(:title, "#{@user.username} (#{@user.name})")
+= content_for(:title, "#{view_user.username} (#{view_user.name})")
 .content
   %aside.col-5.suffix-1
     %figure.avatar
-      %img.avatar{src: @user.gravatar}
-    %h3= @user.name
+      %img.avatar{src: view_user.gravatar}
+    %h3= view_user.name
     %nav
       %ul.social
-        - @user.social.each do |site, value|
+        - view_user.social.each do |site, value|
           - if value != ''
             %li
               - if site == 'twitter'
@@ -18,7 +18,7 @@
                   = link_to "@#{value}", "https://twitter.com/#{value}"
                 - else
                   = value
-        - if @user.admin == true
+        - if view_user.admin == true
           %li
             %i.ss-icon star
             %span Staff

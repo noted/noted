@@ -1,6 +1,4 @@
-class NotedController < ActionController::Base
-  layout 'application'
-
+class NotedController < ApplicationController
   def index
     if current_user
       @projects = current_user.all_projects.sort('updated_at desc')

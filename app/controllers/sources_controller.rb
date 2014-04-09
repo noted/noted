@@ -1,5 +1,5 @@
-class SourcesController < ActionController::Base
-  layout 'application'
+class SourcesController < ApplicationController
+  before_filter :view_project?
 
   def index
     not_implemented
@@ -19,13 +19,5 @@ class SourcesController < ActionController::Base
   end
 
   def destroy
-  end
-
-  protected
-
-  def not_implemented
-    if Rails.env == 'production'
-      render 'errors/501', status: 501
-    end
   end
 end
