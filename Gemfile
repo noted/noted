@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.0'
 
-gem 'mongoid', '4.0.0.alpha1'
+gem 'mongoid', '4.0.0.beta1'
 
 gem 'puma'
 
@@ -81,6 +81,7 @@ end
 group :test do
   gem 'rspec-rails', '3.0.0.beta1'
 
+  gem 'minitest' # https://github.com/thoughtbot/shoulda-matchers/issues/408
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
 
