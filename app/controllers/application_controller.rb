@@ -15,7 +15,12 @@ class ApplicationController < ActionController::Base
   end
 
   def view_project
-    @view_project = Project.where(owner_id: view_user.id, permalink: params[:project]).first
+    if view_user.nil?
+      @view_project = nil
+    else
+      @view_project = Project.where(owner_id: view_user.id, permalink: params[:project]).first
+    end
+
     @view_project
   end
 

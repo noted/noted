@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_filter :view_project?
+  before_filter :view_project?, only: [:index, :new, :show]
 
   def index
     @notes = Note.where(project_id: @view_project.id)

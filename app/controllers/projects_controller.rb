@@ -1,10 +1,7 @@
 class ProjectsController < ApplicationController
-  before_filter :view_project?
+  before_filter :view_project?, only: [:show, :edit]
 
   layout 'application'
-
-  def index
-  end
 
   def new
     @project = Project.new

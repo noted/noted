@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :view_user?
+  before_filter :view_user?, only: [:show]
 
   def index
   end
