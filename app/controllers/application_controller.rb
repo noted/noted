@@ -5,8 +5,9 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :view_user, :view_project, :view_user?, :view_project?,
-                :peek_enabled?, :not_implemented, :not_found
+  helper_method :view_user, :view_project, :view_note, :view_user?,
+                :view_project?, :view_note?, :peek_enabled?, :not_implemented,
+                :not_found
 
   def view_user
     @view_user = User.where(username: params[:user]).first
@@ -14,8 +15,13 @@ class ApplicationController < ActionController::Base
   end
 
   def view_project
-    @view_project = Project.where(owner_id: view_user, permalink: params[:project]).first
+    @view_project = Project.where(owner_id: view_user.id, permalink: params[:project]).first
     @view_project
+  end
+
+  def view_note
+    @view_note = Note.find(params[:note])
+    @view_note
   end
 
   def view_user?
@@ -26,6 +32,12 @@ class ApplicationController < ActionController::Base
 
   def view_project?
     if view_project.nil?
+      not_found
+    end
+  end
+
+  def view_note?
+    if view_note.nil?
       not_found
     end
   end

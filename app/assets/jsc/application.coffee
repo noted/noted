@@ -7,6 +7,7 @@
 #= require peek/views/dalli
 #= require peek/views/performance_bar
 #= require peek/views/rblineprof
+#= turbolinks
 #= require_tree ./lib
 #= require_self
 
