@@ -81,7 +81,7 @@ end
 group :test do
   gem 'rspec-rails', '3.0.0.beta1'
 
-  gem 'minitest' # https://github.com/thoughtbot/shoulda-matchers/issues/408
+  gem 'minitest' # thoughtbot/shoulda-matchers#408
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
 
