@@ -1,6 +1,8 @@
 class NotesController < ApplicationController
   before_filter :view_project?, only: [:index, :new, :show]
 
+  skip_before_filter :verify_authenticity_token, only: [:update]
+
   def index
     @notes = Note.where(project_id: @view_project.id)
     @tags  = Note.tags_for(@view_project)
