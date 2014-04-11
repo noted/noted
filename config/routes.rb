@@ -11,10 +11,11 @@ Noted::Application.routes.draw do
   devise_for :users
 
   devise_scope :user do
-    get '/login'  => 'devise/sessions#new'
-    get '/logout' => 'devise/sessions#destroy'
+    get '/login'   => 'devise/sessions#new'
+    get '/logout'  => 'devise/sessions#destroy'
 
-    get '/join'   => 'devise/registrations#new'
+    get '/join'    => 'devise/registrations#new'
+    get '/account' => 'devise/registrations#edit'
   end
 
   get '/:user' => 'users#show'#, as: 'projects'

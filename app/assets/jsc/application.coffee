@@ -60,11 +60,12 @@ tags = $(".selectize").selectize
     root.save()
 
 $("a.dropdown-trigger").on "click", ->
-  active = $("li.dropdown").hasClass("dropdown-active");
+  active = $("li.dropdown").hasClass("active")
 
   if active
-    $("li.dropdown").addClass("dropdown-active");
+    $("li.dropdown").removeClass("active")
   else
+    $("li.dropdown").addClass("active")
 
 $(document).ready ->
   move_nav()

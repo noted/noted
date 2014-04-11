@@ -14,6 +14,9 @@ class UsersController < ApplicationController
     @projects = view_user.all_projects.sort('updated_at desc')
   end
 
+  def edit
+  end
+
   def update
   end
 
