@@ -212,8 +212,8 @@ header#header {
 		}
 
 		li.dropdown {
-			padding-bottom: rhythm(0.55) !important;
-			padding-top: rhythm(0.65) !important;
+			padding: 0 !important;
+			position: relative;
 
 			&.active {
 				background: $dark-red;
@@ -223,9 +223,9 @@ header#header {
 				}
 			}
 
-			position: relative;
-
 			a.dropdown-trigger {
+				padding: rhythm(0.55) rhythm(0.5) rhythm(0.65);
+
 				display: block;
 
 				i, img {
@@ -246,22 +246,21 @@ header#header {
 
 			ul {
 				background: $text;
-				position: absolute;
 				display: none;
 				left: auto;
-				right: 0;
 				min-width: 160px;
-				z-index: 1000;
-				margin-top: rhythm(0.55);
+				position: absolute;
+				right: 0;
 				text-align: right;
+				z-index: 2000;
 
 				li {
-					float: left;
 					display: block !important;
-					width: 100%;
+					float: left;
+					padding: 0.5em !important;
 					position: relative;
 					right: rhythm(1);
-					padding: 0.5em !important;
+					width: 100%;
 				}
 			}
 		}
@@ -273,10 +272,6 @@ header#header {
 /*
 	III. Main
 */
-
-main {
-	// z-index: -20;
-}
 
 main#main .content {
 	@include container($total-columns, $break);
