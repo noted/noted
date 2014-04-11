@@ -42,12 +42,12 @@
         %nav.secondary
           %ul.contains-dropdown
             - if current_user
-              %li.btn= link_to '<i class="ss-icon">plus</i>'.html_safe, new_path, class: "btn blue"
               %li.dropdown
                 %a.dropdown-trigger{href: "#"}
                   %i.ss-icon dropdown
                   = image_tag current_user.gravatar, class: "avatar"
                 %ul.dropdown-menu
+                  %li= link_to "New Project", new_path
                   %li= link_to "Account", account_path
                   %li= link_to "Logout", logout_path
             - else

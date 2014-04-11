@@ -10,22 +10,22 @@
       = hidden_field_tag 'note[id]', view_note.id, class: 'note-id'
 
       %header
-        %h3
-          = text_field_tag :title, view_note.title, class: 'note-title', placeholder: 'Title of note'
-        %ul.meta
-          %li
+        %section
+          %h3
+            = text_field_tag :title, view_note.title, class: 'note-title', placeholder: 'Title of note'
+          = submit_tag "Save", class: "small submit"
+        .details
+          .time
             %i.ss-icon clock
             %span= view_note.updated_at_formatted
+          .people
+            %ul.collaborators
+              - view_note.all_modifiers.each do |u|
+                %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}"
 
-          %li
-            %i.ss-icon tag
-            %span
-              %ul.tags
-                - view_note.tags.each do |tag|
-                  %li= tag
-          %li
-            %i.ss-icon users
-            %span
-              %ul.collaborators
-                - view_note.all_modifiers.each do |u|
-                  %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}"
+        .tags
+          %i.ss-icon tags
+          %span= text_field_tag 'note[tags]', view_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
+
+      .editable#editable.note-text{'data-placeholder' => 'Your text. Highlight to format.', tabindex: '3'}= view_note.text.html_safe
+      = text_area_tag 'note[text]', view_note.text, class: 'hidden text', id: 'text'
