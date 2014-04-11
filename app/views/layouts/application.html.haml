@@ -23,7 +23,7 @@
         Typekit.load();
       } catch(e) {}
   %body
-    = render 'peek/bar'
+    -# = render 'peek/bar'
     %header#header
       .inner
         %aside
@@ -40,10 +40,16 @@
               %li= link_to "Pricing", ""
               %li= link_to "Support", ""
         %nav.secondary
-          %ul
+          %ul.contains-dropdown
             - if current_user
-              %li.btn= link_to "<i class='ss-icon'>plus</i>".html_safe, new_path, class: "btn blue"
-              %li.btn= link_to "Logout", logout_path, class: "btn"
+              %li.btn= link_to '<i class="ss-icon">plus</i>'.html_safe, new_path, class: "btn blue"
+              %li.dropdown
+                %a.dropdown-trigger{href: "#"}
+                  %i.ss-icon dropdown
+                  = image_tag current_user.gravatar, class: "avatar"
+                %ul.dropdown-menu
+                  %li= link_to "Account", account_path
+                  %li= link_to "Logout", logout_path
             - else
               %li.btn= link_to "Login", login_path, class: "btn"
               %li.btn= link_to "Join", join_path, class: "btn blue"
