@@ -16,7 +16,7 @@ class ProjectUpdate < Mutations::Command
 
     p.update_attributes(self.project)
 
-    p.updater = current_user
+    p.updated_by = current_user
 
     p.save
 

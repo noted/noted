@@ -3,150 +3,63 @@
     file: css/lib/pages/_note.scss
 */
 
-header h3 {
-  margin-top: 0 !important;
-}
-
-form.note {
-  input.submit {
-    float: right;
-  }
-
-  textarea.hidden {
-    display: none;
-  }
-
-  .textbox {
-    .container {
-      padding: 0 !important;
-    }
-  }
-
-  .textbox-row {
-    border-bottom: 0;
-  }
-
-  .title-row {
-    border-color: $light-grey;
-  }
-
-  .tags-row {
-    border-color: $grey;
-  }
-
-  [data-field-span]:hover {
-    background: $base !important;
-  }
-}
-
-.editable {
-  @include container;
-
-  outline: none;
-  padding: 0;
-  font-family: $serif;
-  min-height: 15em;
-  margin-top: rhythm(1);
-  margin-bottom: rhythm(2);
-}
-
-.text {
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-.note-text {
-  p + p {
-    margin-top: rhythm(0.5);
-  }
-
-  blockquote, ul, ol, table {
-    margin: rhythm(0.75) 0;
-  }
-
-  blockquote {
-    border-left: 3px solid $light-grey;
-    color: $dark-grey;
-    font-style: italic;
-    padding-left: rhythm(0.5);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: rhythm(1, $base-font-size);
-    margin-bottom: 0;
-  }
-
-  h1 {
-    @include adjust-font-size-to(28px);
-  }
-
-  h2 {
-    @include adjust-font-size-to(24px);
-  }
-
-  ul, ol {
-    ul, ol {
-      margin-left: rhythm(1);
-      margin-top: 0;
-    }
-  }
-
-  table {
-    width: 100%;
-
-    td {
-      @include leading-border(1px, 0);
-      @include trailing-border(1px, 0);
-
-      border-color: $grey;
-      border-left: 1px solid $grey;
-      border-right: 1px solid $grey;
-      padding: rhythm(0.25);
-    }
-  }
-}
-
-.note-actions {
-  span, input {
-    display: inline-block;
-    float: right;
-  }
-
-  span {
-    @include adjust-font-size-to(14px);
-
-    color: $grey;
-    padding-right: rhythm(0.5);
-    padding-top: rhythm(0.25);
-
-    &.fail {
-      color: $red;
-    }
-  }
-}
-
-nav.note-secondary-actions {
-  position: fixed;
-  bottom: rhythm(1);
-  right: rhythm(1);
-
-  a.help {
-    @include adjust-font-size-to(12px);
-  }
-
-  ul li {
-    display: inline-block;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-
-    & + li {
-      margin-left: rhythm(0.5);
-    }
-  }
-}
-
 .note-show {
-  margin-bottom: 4em;
+  header {
+    @include container;
+    @include trailing-border(1px, 1);
+
+    border-color: $light-grey;
+    padding-left: 0;
+    padding-right: 0;
+
+    h3 {
+      input {
+        border-bottom: 1px dotted $light-grey !important;
+        padding: 0;
+      }
+    }
+
+    ul.meta {
+      color: $grey;
+
+      li {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        i, span {
+          display: inline-block;
+        }
+
+        i {
+          @include adjust-font-size-to(10px);
+        }
+
+        span {
+          @include adjust-font-size-to(14px);
+
+          ul.tags {
+            li {
+              display: inline-block;
+
+              &:before {
+                content: '#';
+              }
+            }
+          }
+
+          ul.collaborators {
+            li {
+              display: inline-block;
+
+              img {
+                max-height: rhythm(0.75, 14px);
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

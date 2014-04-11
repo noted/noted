@@ -1,5 +1,6 @@
 = render :partial => "projects/header", locals: { project: @view_project, section: :notes }
 = content_for(:title, "#{view_note.title} · Notes · #{@view_project.title}")
+
 .note-show
   - if current_user && current_user.can_update?(@view_project)
     = form_tag note_path(id: view_note.id), method: :patch, class: 'grid-form note', remote: true do |f|
@@ -7,42 +8,24 @@
       = hidden_field_tag :user, params[:user]
       = hidden_field_tag :project, params[:project]
       = hidden_field_tag 'note[id]', view_note.id, class: 'note-id'
-      %fieldset
-        %div.title-row{'data-row-span' => '1'}
-          %div{'data-field-span' => '1'}
-            .container.paddingless
-              %section.col-20.title-container
-                = text_field_tag 'note[title]', view_note.title, class: 'note-title', placeholder: 'Title.', tabindex: '1'
-              .col-4.omega.note-actions
-                = submit_tag "Save", class: "small submit"
-                %span.message
-        %div.tags-row{'data-row-span' => '1'}
-          %div{'data-field-span' => '1'}
-            .container.paddingless
-              = text_field_tag 'note[tags]', view_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
-        .editable#editable.note-text{'data-placeholder' => 'Your text. Highlight to format.', tabindex: '3'}= view_note.text.html_safe
-        = text_area_tag 'note[text]', view_note.text, class: 'hidden text', id: 'text'
 
-  - else
-    .content
-      %header.content-header
-        %h3= view_note.title
-      .text= view_note.text.html_safe
+      %header
+        %h3
+          = text_field_tag :title, view_note.title, class: 'note-title', placeholder: 'Title of note'
+        %ul.meta
+          %li
+            %i.ss-icon clock
+            %span= view_note.updated_at_formatted
 
-- if current_user && current_user.can_update?(@view_project)
-  %nav.note-secondary-actions
-    %ul
-      %li
-        %a.btn.pale.circle.help{href: "#", 'data-reveal-id' => 'help'}
-          ?
-      %li
-        = form_tag note_path(id: view_note.id), method: :delete do |f|
-          = hidden_field_tag :project, @view_project.id
-          = submit_tag "Delete", class: "btn red small"
-
-  #help.reveal-modal
-    %h1 Note formatting help
-    %p Simply select text that you want to format.
-    %video{autoplay: true, muted: true}
-      %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.mp4', type: 'video/mp4'}
-      %source{src: 'http://zippy.gfycat.com/ClutteredIllfatedDogwoodtwigborer.webm', type: 'video/webm'}
+          %li
+            %i.ss-icon tag
+            %span
+              %ul.tags
+                - view_note.tags.each do |tag|
+                  %li= tag
+          %li
+            %i.ss-icon users
+            %span
+              %ul.collaborators
+                - view_note.all_modifiers.each do |u|
+                  %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}"

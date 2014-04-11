@@ -55,4 +55,13 @@ class Note
   def tags_string
     self.tags.join(',')
   end
+
+  def updated_at_formatted
+    self.updated_at.strftime('%e %B %Y, %l:%M%P')
+  end
+
+  def all_modifiers
+    ids = self.history_tracks.collect { |t| t.modifier_id }.uniq
+    ids.collect { |id| User.find(id) }
+  end
 end
