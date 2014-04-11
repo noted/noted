@@ -112,7 +112,7 @@ ul li {
 header#header {
 	background: $red;
 	font-family: $sans-serif;
-	z-index: 1000;
+	z-index: 90;
 
 	.inner {
 		@include clearfix;
@@ -182,6 +182,30 @@ header#header {
 				margin-left: 0;
 			}
 		}
+
+		&.dropdown { // nav.secondary > ul > li.dropdown
+			float: left;
+			position: relative;
+
+			a.dropdown-trigger { // nav.secondary > ul > li.dropdown > a.dropdown-trigger
+				display: block;
+
+				i, img {
+					display: inline-block;
+				}
+
+				i {
+					@include adjust-font-size-to(10px);
+
+					margin-right: 0.25em;
+				}
+
+				img {
+					height: rhythm(1);
+					vertical-align: middle;
+				}
+			}
+		}
 	}
 
 	nav {
@@ -201,6 +225,7 @@ header#header {
 */
 
 main {
+	z-index: -20;
 }
 
 main#main .content {
