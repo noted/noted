@@ -52,7 +52,7 @@ class Note
     self.where(project_id: project.id).all_tags
   end
 
-  def tags_string
+  def tags_string(link = false)
     self.tags.join(',')
   end
 

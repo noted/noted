@@ -3,7 +3,7 @@
 
 .note-show
   - if current_user && current_user.can_update?(@view_project)
-    = form_tag note_path(id: view_note.id), method: :patch, class: 'grid-form note', remote: true do |f|
+    = form_tag note_path(id: view_note.id), method: :patch, class: 'note', remote: true do |f|
       = hidden_field_tag :current_user, current_user.id, class: 'current_user'
       = hidden_field_tag :user, params[:user]
       = hidden_field_tag :project, params[:project]
@@ -13,7 +13,9 @@
         %section
           %h3
             = text_field_tag :title, view_note.title, class: 'note-title', placeholder: 'Title of note'
-          = submit_tag "Save", class: "small submit"
+          .actions
+            %span.message
+            = submit_tag "Save", class: "small submit note-submit"
         .details
           .time
             %i.ss-icon clock
@@ -21,7 +23,7 @@
           .people
             %ul.collaborators
               - view_note.all_modifiers.each do |u|
-                %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}"
+                %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}", rel: "tipsy", title: u.name
 
         .tags
           %i.ss-icon tags
@@ -29,3 +31,22 @@
 
       .editable#editable.note-text{'data-placeholder' => 'Your text. Highlight to format.', tabindex: '3'}= view_note.text.html_safe
       = text_area_tag 'note[text]', view_note.text, class: 'hidden text', id: 'text'
+  - else
+    %header
+      %section
+        %h3= view_note.title
+      .details
+        .time
+          %i.ss-icon clock
+          %span= view_note.updated_at_formatted
+        .people
+          %ul.collaborators
+            - view_note.all_modifiers.each do |u|
+              %li= link_to image_tag(u.gravatar, class: 'avatar'), "/#{u.username}", rel: "tipsy", title: u.name
+
+      .tags
+        %i.ss-icon tags
+        -# %span= text_field_tag 'note[tags]', view_note.tags_string, class: 'selectize note-tags', placeholder: 'Type a tag name, then hit comma.', tabindex: '2'
+        %span= view_note.tags_string
+
+    .note-text= view_note.text.html_safe
