@@ -3,43 +3,159 @@
     file: css/lib/pages/_note.scss
 */
 
-header h3 {
-  margin-top: 0 !important;
-}
+.note-show {
+  margin-top: 4em;
 
-form.note {
-  input.submit {
-    float: right;
+  header {
+    @include container;
+    @include trailing-border(1px, 1);
+
+    border-color: $light-grey;
+    padding-left: 0;
+    padding-right: 0;
+
+    section {
+      // border-bottom: 1px dotted $light-grey !important;
+      @include clearfix;
+
+      h3, .actions {
+        display: inline-block;
+      }
+
+      .actions {
+        float: right;
+        margin-top: rhythm(0.25);
+
+        span {
+          @include adjust-font-size-to(14px);
+
+          color: $grey;
+          margin-right: rhythm(0.25);
+        }
+      }
+
+      h3 {
+        input {
+          @include adjust-font-size-to(24px);
+
+          border: none;
+          font-size: 24px !important;
+          font-family: $sans-serif !important;
+          font-weight: 600;
+          padding: 0;
+        }
+      }
+    }
+
+    .details {
+      margin-top: rhythm(0.25);
+    }
+
+    .time, .people {
+      display: inline-block;
+    }
+
+    .time, .tags {
+      color: $grey;
+
+      i, span {
+        display: inline-block;
+      }
+
+      i {
+        @include adjust-font-size-to(10px);
+      }
+
+      span {
+        @include adjust-font-size-to(14px);
+      }
+    }
+
+    .people {
+      float: right;
+
+      ul.collaborators {
+        li {
+          display: inline-block;
+
+          img {
+            max-height: rhythm(0.75, 14px);
+            vertical-align: top;
+          }
+        }
+      }
+    }
+
+
+    ul.meta {
+      color: $grey;
+      margin-top: rhythm(0.5);
+
+      li {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        i, span {
+          display: inline-block;
+        }
+
+        i {
+          @include adjust-font-size-to(10px);
+        }
+
+        span {
+          @include adjust-font-size-to(14px);
+
+          input {
+            @include adjust-font-size-to(14px);
+
+            padding: 0;
+
+            &.note-tags {
+              margin-top: 5px;
+
+
+            }
+          }
+
+          ul.tags {
+            li {
+              display: inline-block;
+
+              &:before {
+                content: '#';
+              }
+            }
+          }
+
+          ul.collaborators {
+            li {
+              display: inline-block;
+
+              img {
+                max-height: rhythm(0.75, 14px);
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   textarea.hidden {
     display: none;
   }
 
-  .textbox {
-    .container {
-      padding: 0 !important;
-    }
-  }
+  .selectize-control {
+    @include adjust-font-size-to(14px);
 
-  .textbox-row {
-    border-bottom: 0;
-  }
-
-  .title-row {
-    border-color: $light-grey;
-  }
-
-  .tags-row {
-    border-color: $grey;
-  }
-
-  [data-field-span]:hover {
-    background: $base !important;
+    top: 4px;
   }
 }
 
-.editable {
+.note-text {
   @include container;
 
   outline: none;
@@ -105,48 +221,4 @@ form.note {
       padding: rhythm(0.25);
     }
   }
-}
-
-.note-actions {
-  span, input {
-    display: inline-block;
-    float: right;
-  }
-
-  span {
-    @include adjust-font-size-to(14px);
-
-    color: $grey;
-    padding-right: rhythm(0.5);
-    padding-top: rhythm(0.25);
-
-    &.fail {
-      color: $red;
-    }
-  }
-}
-
-nav.note-secondary-actions {
-  position: fixed;
-  bottom: rhythm(1);
-  right: rhythm(1);
-
-  a.help {
-    @include adjust-font-size-to(12px);
-  }
-
-  ul li {
-    display: inline-block;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-
-    & + li {
-      margin-left: rhythm(0.5);
-    }
-  }
-}
-
-.note-show {
-  margin-bottom: 4em;
 }

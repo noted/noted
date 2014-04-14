@@ -52,7 +52,16 @@ class Note
     self.where(project_id: project.id).all_tags
   end
 
-  def tags_string
+  def tags_string(link = false)
     self.tags.join(',')
+  end
+
+  def updated_at_formatted
+    self.updated_at.strftime('%e %B %Y, %l:%M%P')
+  end
+
+  def all_modifiers
+    ids = self.history_tracks.collect { |t| t.modifier_id }.uniq
+    ids.collect { |id| User.find(id) }
   end
 end

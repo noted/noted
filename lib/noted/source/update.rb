@@ -17,7 +17,7 @@ class SourceUpdate < Mutations::Command
 
     s.updater = current_user
 
-    s.project.updater = current_user
+    s.project.updated_by = current_user
     s.project.updated_at = Time.now
 
 
