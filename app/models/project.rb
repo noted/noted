@@ -61,24 +61,6 @@ class Project
     end
   end
 
-  def self.style_options(view_project = nil)
-    values = [
-      ['modern-language-assocation', 'Modern Language Association'],
-      ['apa', 'American Psychological Association']
-    ]
-
-    html = ''
-    values.each do |value|
-      if view_project && view_project.citation_style == value[0]
-        html << "<option value='#{value[0]}' selected='selected'>#{value[1]}</option>"
-      else
-        html << "<option value='#{value[0]}'>#{value[1]}</option>"
-      end
-    end
-
-    html.html_safe
-  end
-
   private
 
   def permalink!

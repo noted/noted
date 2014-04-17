@@ -15,7 +15,7 @@
       %div{'data-row-span' => '1'}
         %div{'data-field-span' => '1'}
           = label_tag 'project[citation_style]', 'Citation Style'
-          = select_tag 'project[citation_style]', Project.style_options(@view_project)
+          = select_tag 'project[citation_style]', Rails.configuration.style_options.html_safe, class: "chosen"
       %footer
         = hidden_field_tag 'project[id]', @view_project.id
         = submit_tag "Save", :class => "green filled"

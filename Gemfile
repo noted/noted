@@ -37,7 +37,7 @@ gem 'peek-rblineprof'
 
 gem 'pygments.rb', require: nil
 
-gem 'citeproc-ruby'
+gem 'scholar', github: 'noted/scholar', branch: 'refactor'
 
 gem 'haml-rails'
 

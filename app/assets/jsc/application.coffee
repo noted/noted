@@ -59,6 +59,8 @@ tags = $(".selectize").selectize
   onChange: (val) ->
     root.save()
 
+$(".chosen").chosen()
+
 $("a.dropdown-trigger").on "click", ->
   active = $("li.dropdown").hasClass("active")
 
