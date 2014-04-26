@@ -40,6 +40,20 @@ class CitationStyle
 
       return options
     end
+
+    def seed!
+      CSL::Style.ls.each do |shortname|
+        existing = CitationStyle.where(shortname: shortname).first
+
+        if existing.nil?
+          style = CitationStyle.new(
+            shortname: shortname
+          )
+
+          style.save
+        end
+      end
+    end
   end
 
   private
