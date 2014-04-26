@@ -1,3 +1,0 @@
-[submodule "vendor/citation-styles"]
-	path = vendor/citation-styles
-	url = https://github.com/citation-style-language/styles.git
