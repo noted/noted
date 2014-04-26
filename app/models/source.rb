@@ -45,7 +45,7 @@ class Source
   private
 
   def citation!
-    style = File.open(File.join(Rails.root, 'vendor', 'citation-styles', "#{self.project.citation_style}.csl")).read
+    style = self.project.citation_style.csl
 
     self.citation = CiteProc.process(self.information, style: style, format: :html)
   end

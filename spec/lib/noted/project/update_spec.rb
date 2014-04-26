@@ -11,7 +11,7 @@ describe ProjectUpdate do
         id: project.id.to_s,
         title: 'Our Universe',
         summary: '',
-        citation_style: project.citation_style
+        citation_style_id: project.citation_style.id.to_s
       }
     })
   end

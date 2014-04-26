@@ -5,7 +5,7 @@ class ProjectUpdate < Mutations::Command
       string :id
       string :title
       string :summary, empty: true, nils: true
-      string :citation_style
+      string :citation_style_id
     end
   end
 
@@ -16,7 +16,7 @@ class ProjectUpdate < Mutations::Command
 
     p.update_attributes(self.project)
 
-    p.updated_by = current_user
+    p.updater = current_user
 
     p.save
 

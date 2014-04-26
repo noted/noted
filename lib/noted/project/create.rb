@@ -4,12 +4,12 @@ class ProjectCreate < Mutations::Command
     hash  :project do
       string :title
       string :summary, empty: true, nils: true
-      string :citation_style, empty: true, nils: true
+      string :citation_style_id, empty: true, nils: true
     end
   end
 
   def execute
-    p = Project.new(self.project)
+    p = Project.new(project)
     p.owner = current_user
 
     p.users << current_user

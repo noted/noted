@@ -5,11 +5,11 @@ class Project
   include Mongoid::History::Trackable
   include PublicActivity::Model
 
-  field :title,          type: String
-  field :summary,        type: String
-  field :permalink,      type: String
-  field :owner_id,       type: BSON::ObjectId
-  field :citation_style, type: String, default: 'modern-language-association'
+  field :title,             type: String
+  field :summary,           type: String
+  field :permalink,         type: String
+  field :owner_id,          type: BSON::ObjectId
+  field :citation_style_id, type: BSON::ObjectId
 
   validates :title, presence: true
 
@@ -51,6 +51,14 @@ class Project
 
   def owner=(u)
     self.owner_id = u.id
+  end
+
+  def citation_style
+    CitationStyle.find(self.citation_style_id)
+  end
+
+  def citation_style=(c)
+    self.citation_style_id = c.id
   end
 
   def collaborators(links = false)

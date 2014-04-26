@@ -18,23 +18,24 @@ class CitationStyle
       styles_hash = {}
       self.all.order('title asc').each do |style|
         unless style.title.nil?
-          styles_hash[style.shortname] = style.title
+          styles_hash[style.id.to_s] = style.title
         end
       end
 
       styles_hash
     end
 
+    # selected should be a CitationStyle
     def html_options(selected = nil)
       # Use Rails because it preloads the style options.
       styles = Rails.configuration.style_options
       options = ''
 
-      styles.each do |shortname, title|
-        if shortname == selected
-          options << "<option selected='selected' value='#{shortname}'>#{title}</option>"
+      styles.each do |id, title|
+        if !selected.nil? && id == selected.id.to_s
+          options << "<option selected='selected' value='#{id}'>#{title}</option>"
         else
-          options << "<option value='#{shortname}'>#{title}</option>"
+          options << "<option value='#{id}'>#{title}</option>"
         end
       end
 
