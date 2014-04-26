@@ -5,7 +5,7 @@
       - if note.tags
         - note.tags.each do |tag|
           %li
-            %span= tag
+            %span= link_to tag, note.project.path("/notes#filters=#{tag.to_s}")
   %section
     - if note.text.blank?
       %p.empty This note is blank.
