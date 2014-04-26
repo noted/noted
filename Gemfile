@@ -10,6 +10,8 @@ gem 'puma'
 
 gem 'turbolinks'
 
+gem 'rack-offline'
+
 gem 'mutations'
 
 gem 'cache_digests'

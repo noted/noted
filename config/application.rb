@@ -32,5 +32,8 @@ module Noted
     config.compass.require 'susy'
 
     config.action_controller.include_all_helpers = true
+
+    # Disable timestamps at the end of assets for offline browsing.
+    ENV['RAILS_ASSET_ID'] = ''
   end
 end

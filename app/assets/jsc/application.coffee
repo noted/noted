@@ -13,6 +13,9 @@
 
 root = exports ? this
 
+$(window.applicationCache).bind "error", ->
+  alert("Could not load application manifest!")
+
 $("div[data-field-span]").on "click", ->
   $(@).find("input[type=text]").focus()
 
