@@ -14,8 +14,8 @@
           = text_area_tag 'project[summary]', @view_project.summary
       %div{'data-row-span' => '1'}
         %div{'data-field-span' => '1'}
-          = label_tag 'project[citation_style]', 'Citation Style'
-          = select_tag 'project[citation_style]', CitationStyle.html_options(@view_project.citation_style).html_safe, class: "chosen"
+          = label_tag 'project[citation_style_id]', 'Citation Style'
+          = select_tag 'project[citation_style_id]', CitationStyle.html_options(@view_project.citation_style).html_safe, class: "chosen"
       %footer
         = hidden_field_tag 'project[id]', @view_project.id
         = submit_tag "Save", :class => "green filled"
