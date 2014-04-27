@@ -5,7 +5,7 @@ class Note
   include Mongoid::History::Trackable
   include Mongoid::TagsArentHard
   include PublicActivity::Model
-  include Mongoid::Elasticsearch
+  include Mongoid::Search
 
   field :title, type: String, default: 'Untitled'
   field :text,  type: String
@@ -25,7 +25,9 @@ class Note
 
   taggable_with :tags, separator: ','
 
-  elasticsearch!
+  # elasticsearch!
+
+  search_in :title, :text
 
   def creatable_by?(u)
     self.project.users.include?(u)

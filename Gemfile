@@ -17,7 +17,7 @@ gem 'mutations'
 gem 'cache_digests'
 gem 'dalli'
 
-gem 'mongoid-elasticsearch'
+gem 'mongoid_search'
 
 gem 'canable'
 gem 'devise'
