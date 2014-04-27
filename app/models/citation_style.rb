@@ -58,7 +58,7 @@ class CitationStyle
           end
         else
           if Rails.env == 'production'
-            "#{style.shortname} exists"
+            "#{existing.shortname} exists"
           end
         end
       end
