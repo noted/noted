@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_filter :view_project?, only: [:index, :new, :show]
+  before_filter :view_project?, only: [:index, :new, :show, :search]
 
   skip_before_filter :verify_authenticity_token, only: [:update]
 
@@ -53,5 +53,24 @@ class NotesController < ApplicationController
     project = Project.find(params[:project])
 
     redirect_to project.path("/notes")
+  end
+
+  def search
+    search = NoteSearch.run({
+      current_user: current_user,
+      project: @view_project,
+      query: params[:query]
+    })
+
+    results = {
+      query: params[:query],
+      results: []
+    }
+
+    search.result.to_a.each do |note|
+      results[:results] << note.id.to_s
+    end
+
+    render json: results.to_json
   end
 end

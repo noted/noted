@@ -27,6 +27,7 @@ Noted::Application.routes.draw do
 
   get '/:user/:project/notes' => 'notes#index'
   get '/:user/:project/notes/new' => 'notes#new'
+  get '/:user/:project/notes/search' => 'notes#search'
   get '/:user/:project/notes/:note' => 'notes#show'
 
   get '/:user/:project/sources' => 'sources#index'
