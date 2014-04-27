@@ -21,4 +21,5 @@ describe NoteUpdate do
   it { expect(action.result.text).to eql '**Foobar, _barfoo_.**' }
   it { expect(action.result.updater).to eql user }
   it { expect(action.result.tags).to eql ['foo', 'bar'] }
+  it { expect(action.result.updated_at.to_s).to eql action.result.project.updated_at.to_s }
 end

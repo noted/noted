@@ -20,7 +20,6 @@ class SourceUpdate < Mutations::Command
     s.project.updated_by = current_user
     s.project.updated_at = Time.now
 
-
     s.save
 
     ActionController::Base.new.expire_fragment(p)

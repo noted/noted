@@ -45,8 +45,8 @@ class Source
   private
 
   def citation!
-    style = self.project.citation_style.csl
+    style = self.project.citation_style
 
-    self.citation = CiteProc.process(self.information, style: style, format: :html)
+    self.citation = CiteProc.process(self.information, style: style.shortname, format: :html)
   end
 end
