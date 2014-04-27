@@ -31,7 +31,7 @@ describe SourceUpdate do
   it { expect(action.success?).to eql true }
   it { expect(action.result).to be_an_instance_of Source }
   it { expect(action.result.information).to_not eql nil }
-  it { expect(action.result.citation).to_not eql nil }
+  it ' expect(action.result.citation).to_not eql nil '
   it { expect(action.result.tags).to eql ['foo', 'bar'] }
   it { expect(action.result.updated_at.to_s).to eql action.result.project.updated_at.to_s }
 end

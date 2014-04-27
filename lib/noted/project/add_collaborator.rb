@@ -1,4 +1,4 @@
-class ProjectAddCollaborator < Mutations::Command
+class ProjectAddCollaborator < NotedMutation
   required do
     model :current_user, class: User
     model :project
@@ -14,6 +14,8 @@ class ProjectAddCollaborator < Mutations::Command
 
     project.users << u
     project.save
+
+    mongoid_errors!(project)
 
     return project
   end

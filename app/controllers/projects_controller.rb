@@ -13,7 +13,13 @@ class ProjectsController < ApplicationController
       project: params[:project]
     )
 
-    redirect_to @project.result.path
+    if @project.success?
+      redirect_to @project.result.path
+    else
+      flash[:alert] = format_error!(@project.errors).html_safe
+
+      redirect_to new_path
+    end
   end
 
   def show

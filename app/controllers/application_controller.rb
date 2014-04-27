@@ -22,6 +22,23 @@ class ApplicationController < ActionController::Base
     root_path
   end
 
+  def format_error!(errors)
+    hsh = errors.message.first[1]
+
+    d { hsh }
+
+    html = '<ul>'
+    hsh.each do |field, message|
+      html << "<li>#{message}</li>"
+    end
+
+    html = html << '</ul>'
+
+    d { html }
+
+    html
+  end
+
   protected
 
   # Devise needs to be configured to whitelist parameters.

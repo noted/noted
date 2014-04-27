@@ -1,4 +1,4 @@
-class SourceUpdate < Mutations::Command
+class SourceUpdate < NotedMutation
   required do
     model :current_user, class: User
     hash  :source do
@@ -21,6 +21,8 @@ class SourceUpdate < Mutations::Command
     s.project.updated_at = Time.now
 
     s.save
+
+    mongoid_errors!(s)
 
     ActionController::Base.new.expire_fragment(p)
 
