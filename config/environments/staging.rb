@@ -21,23 +21,22 @@ Noted::Application.configure do
   # Eager load in production
   config.eager_load = true
 
-
   # See everything in the log (default is :info)
   # config.log_level = :debug
 
-  # Use a different logger for distributed setups
-  # config.logger = SyslogLogger.new
-
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
+  config.cache_store = :dalli_store, ENV['MEMCACHE_SERVERS']
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
-  config.action_controller.asset_host = "http://ssets-staging.workwork.co"
+  config.assets.enabled = true
+  config.assets.initialize_on_precompile = true
+  config.action_controller.asset_host = "//#{ENV['CLOUDFRONT_HOST']}"
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
   config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :yui
+  # config.assets.css_compressor = :sass
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
