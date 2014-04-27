@@ -75,6 +75,11 @@ test:
         max_retries: 1
         retry_interval: 0
 
+staging:
+  sessions:
+    default:
+      uri: <%= ENV['MONGO_URL'] %>
+
 production:
   sessions:
     default:
