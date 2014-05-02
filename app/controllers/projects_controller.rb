@@ -16,9 +16,7 @@ class ProjectsController < ApplicationController
     if @project.success?
       redirect_to @project.result.path
     else
-      flash[:alert] = format_error!(@project.errors).html_safe
-
-      redirect_to new_path
+      redirect_to new_path, alert: format_error!(@project.errors).html_safe
     end
   end
 

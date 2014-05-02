@@ -3,10 +3,10 @@ class NotedMutation < Mutations::Command
     return if obj.nil?
 
     if obj.errors.any?
-      obj.error.each do |field, message|
+      obj.errors.each do |field, message|
         klass = obj.class.name.downcase
 
-        self.add_error("#{klass}.#{field}", :validation_error, message)
+        self.add_error("#{klass}.#{field}", :validation_error, "#{field.capitalize} #{message}")
       end
     end
   end
