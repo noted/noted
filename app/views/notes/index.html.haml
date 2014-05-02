@@ -8,11 +8,8 @@
       = link_to "New", @view_project.path("/notes/new"), class: "btn"
 
   .elements
+  
     %aside.nav.col-5.suffix-1
-      %section
-        %form
-          %input{type: 'text', placeholder: 'Search...'}
-
       - unless @tags.empty?
         %section
           %header

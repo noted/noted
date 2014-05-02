@@ -110,7 +110,9 @@ header.project-header {
 			h4 {
 				@include trailing-border(1px, 0);
 
-				margin-top: rhythm(1);
+				// margin-top: rhythm(1);
+				margin-top: rhythm(0.25);
+				padding-bottom: rhythm(0.25);
 			}
 		}
 
