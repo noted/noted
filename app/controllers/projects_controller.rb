@@ -39,7 +39,13 @@ class ProjectsController < ApplicationController
       project: params[:project]
     )
 
-    redirect_to @project.result.path('/settings')
+    if @project.success?
+      redirect_to @project.result.path('/settings')
+    else
+      project = Project.find(params[:project][:id])
+
+      redirect_to project.path('/settings')
+    end
   end
 
   def destroy
