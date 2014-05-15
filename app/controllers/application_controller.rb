@@ -27,7 +27,9 @@ class ApplicationController < ActionController::Base
 
     html = '<ul>'
     hsh.each do |field, message|
-      html << "<li>#{message}</li>"
+      unless html.include?("<li>#{message}</li>")
+        html << "<li>#{message}</li>"
+      end
     end
 
     html = html << '</ul>'
@@ -36,9 +38,10 @@ class ApplicationController < ActionController::Base
   end
 
   def devise_error_messages!
-    return "" if resource.errors.empty?
+    return '' if resource.errors.empty?
 
-    messages = resource.errors.full_messages.map { |msg| "<li>#{msg}</li>" }.join
+    full_messages = resource.errors.full_messages.uniq
+    messages = full_messages.map { |msg| "<li>#{msg}</li>" }.join
 
     html = <<-HTML
     <div class="flash alert">
