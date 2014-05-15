@@ -31,6 +31,10 @@
 
           color: $grey;
           margin-right: rhythm(0.25);
+
+          &.fail {
+            color: $red;
+          }
         }
       }
 

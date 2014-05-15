@@ -20,20 +20,23 @@ root.save = ->
     type: "PATCH"
     data: data
     url: "/notes/#{data.note.id}"
+    statusCode:
+      200: ->
+        $("span.message").html "Saved!"
+        $("span.message").fadeIn()
+
+        setTimeout (->
+          $("span.message").fadeOut()
+          $("span.message").val ""
+        ), 3000
+      500: ->
+        $("span.message").addClass "fail"
+        $("span.message").fadeIn()
+        $("span.message").html "Failed to save!"
     error: (err) ->
       $("span.message").addClass "fail"
       $("span.message").fadeIn()
       $("span.message").html "Failed to save!"
-
-      console.log err
-    success: (res) ->
-      $("span.message").html "Saved!"
-      $("span.message").fadeIn()
-
-      setTimeout (->
-        $("span.message").fadeOut()
-        $("span.message").val ""
-      ), 3000
 
   return
 
