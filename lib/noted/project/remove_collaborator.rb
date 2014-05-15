@@ -1,4 +1,4 @@
-class ProjectRemoveCollaborator < Mutations::Command
+class ProjectRemoveCollaborator < NotedMutation
   required do
     model :current_user, class: User
     model :project
@@ -14,6 +14,8 @@ class ProjectRemoveCollaborator < Mutations::Command
 
     project.users.delete(u)
     project.save
+
+    mongoid_errors!(project)
 
     return project
   end

@@ -1,4 +1,4 @@
-class SourceCreate < Mutations::Command
+class SourceCreate < NotedMutation
   required do
     model :current_user, class: User
     model :project
@@ -18,6 +18,8 @@ class SourceCreate < Mutations::Command
     s.updater = current_user
 
     s.save
+
+    mongoid_errors!(s)
 
     return s
   end

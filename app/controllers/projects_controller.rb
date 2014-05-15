@@ -13,7 +13,11 @@ class ProjectsController < ApplicationController
       project: params[:project]
     )
 
-    redirect_to @project.result.path
+    if @project.success?
+      redirect_to @project.result.path
+    else
+      redirect_to new_path, alert: format_error!(@project.errors).html_safe
+    end
   end
 
   def show
@@ -35,7 +39,13 @@ class ProjectsController < ApplicationController
       project: params[:project]
     )
 
-    redirect_to @project.result.path('/settings')
+    if @project.success?
+      redirect_to @project.result.path('/settings')
+    else
+      project = Project.find(params[:project][:id])
+
+      redirect_to project.path('/settings')
+    end
   end
 
   def destroy

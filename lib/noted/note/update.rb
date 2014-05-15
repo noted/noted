@@ -1,4 +1,4 @@
-class NoteUpdate < Mutations::Command
+class NoteUpdate < NotedMutation
   required do
     model :current_user, class: User
     hash  :note do
@@ -21,6 +21,8 @@ class NoteUpdate < Mutations::Command
     n.project.updated_at = Time.now
 
     n.save
+
+    mongoid_errors!(n)
 
     ActionController::Base.new.expire_fragment(n)
 

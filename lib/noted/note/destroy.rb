@@ -1,4 +1,4 @@
-class NoteDestroy < Mutations::Command
+class NoteDestroy < NotedMutation
   required do
     model :current_user, class: User
     hash  :note do
@@ -17,6 +17,8 @@ class NoteDestroy < Mutations::Command
     n.project.updated_at = Time.now
 
     n.destroy
+
+    mongoid_errors!(n)
 
     return nil
   end

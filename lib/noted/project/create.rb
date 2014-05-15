@@ -1,4 +1,4 @@
-class ProjectCreate < Mutations::Command
+class ProjectCreate < NotedMutation
   required do
     model :current_user, class: User
     hash  :project do
@@ -18,6 +18,8 @@ class ProjectCreate < Mutations::Command
     p.updater = current_user
 
     p.save
+
+    mongoid_errors!(p)
 
     return p
   end
