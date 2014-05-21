@@ -10,6 +10,15 @@ describe Project do
 
   it { expect(project).to validate_presence_of :title }
 
+  describe '#valid_permalink?' do
+    before do
+      project.permalink = project.permalink
+      project.save
+    end
+
+    it { expect(project.errors.messages.keys).to include :permalink  }
+  end
+
   describe '#permalink!' do
     before do
       project.permalink = nil

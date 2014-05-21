@@ -13,6 +13,8 @@ class Project
 
   validates :title, presence: true
 
+  validate :valid_permalink?
+
   has_and_belongs_to_many :users
 
   has_many :notes
@@ -85,6 +87,14 @@ class Project
       end
 
       self.permalink = p
+    end
+  end
+
+  def valid_permalink?
+    conflict = self.class.where(owner_id: owner_id, permalink: permalink).first
+
+    if conflict && conflict == self
+      errors.add(:permalink, 'Permalink must be unique among the owner\'s projects.')
     end
   end
 end
