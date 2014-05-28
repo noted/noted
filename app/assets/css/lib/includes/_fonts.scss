@@ -7,7 +7,9 @@ $base-light-height: 28px;
 @include establish-baseline;
 
 // Fonts
-$serif: "calluna", Times New Roman, Times, serif;
+// $serif: "calluna", Times New Roman, Times, serif;
+$serif: "kepler-std", Times New Roman, Times, serif;
+// $serif: "source-serif-pro", Times New Roman, Times, serif;
 // $sans-serif: "europa", Helvetica Neue, Helvetica, Arial, sans-serif;
 // $sans-serif: "adelle-sans", Helvetica Neue, Helvetica, Arial, sans-serif;
 // $sans-serif: "ff-dagny-web-pro", Helvetica Neue, Helvetica, Arial, sans-serif;
